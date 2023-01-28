@@ -1,0 +1,59 @@
+<style>
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* GENERAL THEME                                                                                                      */
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+html,
+body {
+	background: url('{{ORIGIN_URL}}/js/assets/images/cloud.png') #B9D5EC bottom fixed;
+	background-size: cover;
+	height: 100%;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* AMI THEME                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#ami_top_menu {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#ami_main_content {
+	height: calc(100% - 60px);
+	margin: 0;
+	padding: 8px 16px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+</style>
+
+<div role="alert" id="ami_alert_content" style="top: 70px;"></div>
+
+<nav class="navbar navbar-light navbar-expand-lg bg-light" id="ami_top_menu">
+
+	<div class="container-fluid mx-3 px-0">
+
+		<a class="navbar-brand py-0" href="{{HOME_URL}}">
+			<img src="{{LOGO_URL}}" alt="Logo" style="height: 38px;" />
+		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#FCE61AFD_012B_2816_B9FD_C737908FAF72">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="FCE61AFD_012B_2816_B9FD_C737908FAF72">
+
+			<ul class="navbar-nav me-xxxx" id="ami_main_menu_content"></ul>
+			<ul class="navbar-nav ms-auto" id="ami_ext_menu_content"></ul>
+			<ul class="navbar-nav me-xxxx" id="ami_login_menu_content"></ul>
+
+		</div>
+
+	</div>
+
+</nav>
+
+<div role="main" id="ami_main_content"></div>
