@@ -1,0 +1,112 @@
+{
+    "adder": {
+        "breadcrumb": [],
+        "file": "subapps/Adder/AdderApp.min.js",
+        "instance": "adderApp"
+    },
+    "adminDashboard": {
+        "breadcrumb": [
+            "Admin",
+            "<a href=\"{{WEBAPP_URL}}?subapp=adminDashboard\">Admin Dashboard</a>"
+        ],
+        "file": "subapps/AdminDashboard/AdminDashboardApp.min.js",
+        "instance": "adminDashboardApp"
+    },
+    "bookmarkEditor": {
+        "breadcrumb": [
+            "User",
+            "<a href=\"{{WEBAPP_URL}}?subapp=bookmarkEditor\">Bookmark Editor</a>"
+        ],
+        "file": "subapps/BookmarkEditor/BookmarkEditorApp.min.js",
+        "instance": "bookmarkEditorApp"
+    },
+    "command": {
+        "breadcrumb": [
+            "Tools",
+            "<a href=\"{{WEBAPP_URL}}?subapp=command\">Command</a>"
+        ],
+        "file": "subapps/Command/CommandApp.min.js",
+        "instance": "commandApp"
+    },
+    "document": {
+        "file": "subapps/Document/DocumentApp.min.js",
+        "instance": "documentApp"
+    },
+    "elementInfoViewer": {
+        "breadcrumb": [
+            "Metadata",
+            "<a href=\"{{WEBAPP_URL}}?subapp=elementInfoViewer\">Element Info Viewer</a>"
+        ],
+        "file": "subapps/ElementInfoViewer/ElementInfoViewerApp.min.js",
+        "instance": "elementInfoViewerApp"
+    },
+    "emergency": {
+        "breadcrumb": [
+            "Tools",
+            "<a href=\"{{WEBAPP_URL}}?subapp=emergency\">Emergency</a>"
+        ],
+        "file": "subapps/Emergency/EmergencyApp.min.js",
+        "instance": "emergencyApp"
+    },
+    "resetPassword": {
+        "breadcrumb": [
+            "User",
+            "<a href=\"{{WEBAPP_URL}}?subapp=resetPassword\">Reset Password</a>"
+        ],
+        "file": "subapps/ResetPassword/ResetPasswordApp.min.js",
+        "instance": "resetPasswordApp"
+    },
+    "schemaViewer": {
+        "breadcrumb": [],
+        "file": "subapps/SchemaViewer/SchemaViewerApp.min.js",
+        "instance": "schemaViewerApp"
+    },
+    "search": {
+        "breadcrumb": [
+            "Metadata",
+            "<a href=\"{{WEBAPP_URL}}?subapp=search\">Search</a>"
+        ],
+        "file": "subapps/Search/SearchApp.min.js",
+        "instance": "searchApp"
+    },
+    "searchModeler": {
+        "breadcrumb": [
+            "Metadata",
+            "<a href=\"{{WEBAPP_URL}}?subapp=searchModeler\">Search Modeler</a>"
+        ],
+        "file": "subapps/SearchModeler/SearchModelerApp.min.js",
+        "instance": "searchModelerApp"
+    },
+    "simpleSearch": {
+        "breadcrumb": [
+            "Metadata",
+            "<a href=\"{{WEBAPP_URL}}?subapp=simpleSearch\">Simple Search</a>"
+        ],
+        "file": "subapps/SimpleSearch/SimpleSearchApp.min.js",
+        "instance": "simpleSearchApp"
+    },
+    "tableViewer": {
+        "breadcrumb": [
+            "Metadata",
+            "<a href=\"{{WEBAPP_URL}}?subapp=tableViewer\">Table Viewer</a>"
+        ],
+        "file": "subapps/TableViewer/TableViewerApp.min.js",
+        "instance": "tableViewerApp"
+    },
+    "taskMonitoring": {
+        "breadcrumb": [
+            "Admin",
+            "<a href=\"{{WEBAPP_URL}}?subapp=taskMonitoring\">Task Monitoring</a>"
+        ],
+        "file": "subapps/TaskMonitoring/TaskMonitoringApp.min.js",
+        "instance": "taskMonitoringApp"
+    },
+    "userDashboard": {
+        "breadcrumb": [
+            "User",
+            "<a href=\"{{WEBAPP_URL}}?subapp=userDashboard\">User Dashboard</a>"
+        ],
+        "file": "subapps/UserDashboard/UserDashboardApp.min.js",
+        "instance": "userDashboardApp"
+    }
+}

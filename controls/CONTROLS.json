@@ -1,0 +1,82 @@
+{
+    "accordion": {
+        "clazz": "AccordionCtrl",
+        "file": "controls/Accordion/AccordionCtrl.min.js"
+    },
+    "adder": {
+        "clazz": "AdderCtrl",
+        "file": "controls/Adder/AdderCtrl.min.js"
+    },
+    "bookmarkBox": {
+        "clazz": "BookmarkBoxCtrl",
+        "file": "controls/BookmarkBox/BookmarkBoxCtrl.min.js"
+    },
+    "confirmBox": {
+        "clazz": "ConfirmBoxCtrl",
+        "file": "controls/ConfirmBox/ConfirmBoxCtrl.min.js"
+    },
+    "dashboardBox": {
+        "clazz": "DashboardBoxCtrl",
+        "file": "controls/DashboardBox/DashboardBoxCtrl.min.js"
+    },
+    "dataTable": {
+        "clazz": "DataTableCtrl",
+        "file": "controls/DataTable/DataTableCtrl.min.js"
+    },
+    "diffBox": {
+        "clazz": "DiffBoxCtrl",
+        "file": "controls/DiffBox/DiffBoxCtrl.min.js"
+    },
+    "editBox": {
+        "clazz": "EditBoxCtrl",
+        "file": "controls/EditBox/EditBoxCtrl.min.js"
+    },
+    "elementInfo": {
+        "clazz": "ElementInfoCtrl",
+        "file": "controls/ElementInfo/ElementInfoCtrl.min.js"
+    },
+    "fieldEditor": {
+        "clazz": "FieldEditorCtrl",
+        "file": "controls/FieldEditor/FieldEditorCtrl.min.js"
+    },
+    "graph": {
+        "clazz": "GraphCtrl",
+        "file": "controls/Graph/GraphCtrl.min.js"
+    },
+    "mediaViewer": {
+        "clazz": "MediaViewerCtrl",
+        "file": "controls/MediaViewer/MediaViewerCtrl.min.js"
+    },
+    "messageBox": {
+        "clazz": "MessageBoxCtrl",
+        "file": "controls/MessageBox/MessageBoxCtrl.min.js"
+    },
+    "schema": {
+        "clazz": "SchemaCtrl",
+        "file": "controls/Schema/SchemaCtrl.min.js"
+    },
+    "search": {
+        "clazz": "SearchCtrl",
+        "file": "controls/Search/SearchCtrl.min.js"
+    },
+    "simpleSearch": {
+        "clazz": "SimpleSearchCtrl",
+        "file": "controls/SimpleSearch/SimpleSearchCtrl.min.js"
+    },
+    "tab": {
+        "clazz": "TabCtrl",
+        "file": "controls/Tab/TabCtrl.min.js"
+    },
+    "table": {
+        "clazz": "TableCtrl",
+        "file": "controls/Table/TableCtrl.min.js"
+    },
+    "textBox": {
+        "clazz": "TextBoxCtrl",
+        "file": "controls/TextBox/TextBoxCtrl.min.js"
+    },
+    "unitEditor": {
+        "clazz": "UnitEditorCtrl",
+        "file": "controls/UnitEditor/UnitEditorCtrl.min.js"
+    }
+}

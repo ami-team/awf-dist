@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+		<title>SSO</title>
+
+	</head>
+	<body>
+
+		<script>
+			/*--------------------------------------------------------------------------------------------------------*/
+
+			function _parseSearchString(search)
+			{
+				var result = {};
+
+				search.substring(1).split('&').forEach((param) => {
+
+					var parts = param.split('=');
+
+					/**/ if(parts.length === 1)
+					{
+						result[decodeURIComponent(parts[0]).toLowerCase()] = /*--------*/ '' /*--------*/;
+					}
+					else if(parts.length === 2)
+					{
+						result[decodeURIComponent(parts[0]).toLowerCase()] = decodeURIComponent(parts[1]);
+					}
+				});
+
+				return result;
+			}
+
+			/*--------------------------------------------------------------------------------------------------------*/
+
+			var args = _parseSearchString(window.location.search);
+
+			/*--------------------------------------------------------------------------------------------------------*/
+
+			var oidc_code = args['code'] || '';
+
+			if(oidc_code)
+			{
+				window.opener.postMessage({oidc_code: oidc_code}, window.location.origin);
+
+				window.close();
+			}
+
+			/*--------------------------------------------------------------------------------------------------------*/
+		</script>
+
+	</body>
+</html>
