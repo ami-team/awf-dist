@@ -1,0 +1,29 @@
+{
+	"root": true,
+
+	"extends": "plugin:eslint-plugin-ami/default",
+
+	"parser": "@babel/eslint-parser",
+
+	"parserOptions": {
+		"requireConfigFile": false,
+		"sourceType": "module"
+	},
+
+	"ignorePatterns": ["**/*.min.js"],
+
+	"plugins": [
+		"ami"
+	],
+
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+
+	"rules": {
+		"no-unused-vars": 0,
+		"no-console": 0
+	}
+}
