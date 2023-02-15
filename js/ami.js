@@ -33233,7 +33233,7 @@ class AMIWebApp {
               data3 += '<div id="ami_alert_content"></div>';
             }
             if ($('#ami_login_menu_content').length === 0) {
-              data3 += '<div id="ami_login_menu_content"></div>';
+              data3 += '<ul id="ami_login_menu_content"></ul>';
             }
             $.ajax({
               url: lockerURL,
@@ -33243,7 +33243,7 @@ class AMIWebApp {
             }).done(data4 => {
               $('body').prepend(data3 + data4).promise().done(() => {
                 lock();
-                js_AMIAuth.init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, bookmarksAllowed, dashboardsAllowed).done(() => {
+                js_AMIAuth.init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, false, false).done(() => {
                   unlock();
                 }).fail(message => {
                   error(message);
