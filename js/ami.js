@@ -32696,9 +32696,9 @@ function loadSubApp(subapp, userdata, options) {
         _internal_always(_currentSubappInstance.onExit(userdata), () => {
           _currentSubappInstance = window[descr.instance];
           _currentUserdata = userdata;
+          js_AMIWebApp.args.subapp = subapp;
+          js_AMIWebApp.args.userdata = userdata;
           _internal_then(_currentSubappInstance.onReady(userdata), () => {
-            js_AMIWebApp.args.subapp = subapp;
-            js_AMIWebApp.args.userdata = userdata;
             const promise = js_AMIAuth.isAuthenticated() ? triggerLogin() : triggerLogout();
             promise.then(() => {
               js_AMIRouter.appendHistoryEntry({
