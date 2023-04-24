@@ -1409,6 +1409,12 @@ amiTwig.stdlib = {
   'filter_split': function (s, sep, max) {
     return this.isString(s) ? s.split(sep, max) : [];
   },
+  'filter_format_number': function (x) {
+    return parseFloat(x);
+  },
+  'filter_format_decimal_number': function (x) {
+    return parseInt(x);
+  },
   'filter_abs': function (x) {
     return Math.abs(x);
   },
@@ -1669,9 +1675,9 @@ amiTwig.expr.interpreter = {
 })(this, function () {
   return function () {
     var __webpack_modules__ = {
-      686: function (__unused_webpack_module, __webpack_exports__, __nested_webpack_require_481__) {
+      686: function (__unused_webpack_module, __nested_webpack_exports__, __nested_webpack_require_481__) {
         "use strict";
-        __nested_webpack_require_481__.d(__webpack_exports__, {
+        __nested_webpack_require_481__.d(__nested_webpack_exports__, {
           "default": function () {
             return clipboard;
           }
@@ -6802,13 +6808,13 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(1738), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(8819), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(1275), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(6353), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-display: block;\n  font-family: \"bootstrap-icons\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"woff2\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff\");\n}\n\n.bi::before,\n[class^=\"bi-\"]::before,\n[class*=\" bi-\"]::before {\n  display: inline-block;\n  font-family: bootstrap-icons !important;\n  font-style: normal;\n  font-weight: normal !important;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  vertical-align: -.125em;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.bi-123::before { content: \"\\f67f\"; }\n.bi-alarm-fill::before { content: \"\\f101\"; }\n.bi-alarm::before { content: \"\\f102\"; }\n.bi-align-bottom::before { content: \"\\f103\"; }\n.bi-align-center::before { content: \"\\f104\"; }\n.bi-align-end::before { content: \"\\f105\"; }\n.bi-align-middle::before { content: \"\\f106\"; }\n.bi-align-start::before { content: \"\\f107\"; }\n.bi-align-top::before { content: \"\\f108\"; }\n.bi-alt::before { content: \"\\f109\"; }\n.bi-app-indicator::before { content: \"\\f10a\"; }\n.bi-app::before { content: \"\\f10b\"; }\n.bi-archive-fill::before { content: \"\\f10c\"; }\n.bi-archive::before { content: \"\\f10d\"; }\n.bi-arrow-90deg-down::before { content: \"\\f10e\"; }\n.bi-arrow-90deg-left::before { content: \"\\f10f\"; }\n.bi-arrow-90deg-right::before { content: \"\\f110\"; }\n.bi-arrow-90deg-up::before { content: \"\\f111\"; }\n.bi-arrow-bar-down::before { content: \"\\f112\"; }\n.bi-arrow-bar-left::before { content: \"\\f113\"; }\n.bi-arrow-bar-right::before { content: \"\\f114\"; }\n.bi-arrow-bar-up::before { content: \"\\f115\"; }\n.bi-arrow-clockwise::before { content: \"\\f116\"; }\n.bi-arrow-counterclockwise::before { content: \"\\f117\"; }\n.bi-arrow-down-circle-fill::before { content: \"\\f118\"; }\n.bi-arrow-down-circle::before { content: \"\\f119\"; }\n.bi-arrow-down-left-circle-fill::before { content: \"\\f11a\"; }\n.bi-arrow-down-left-circle::before { content: \"\\f11b\"; }\n.bi-arrow-down-left-square-fill::before { content: \"\\f11c\"; }\n.bi-arrow-down-left-square::before { content: \"\\f11d\"; }\n.bi-arrow-down-left::before { content: \"\\f11e\"; }\n.bi-arrow-down-right-circle-fill::before { content: \"\\f11f\"; }\n.bi-arrow-down-right-circle::before { content: \"\\f120\"; }\n.bi-arrow-down-right-square-fill::before { content: \"\\f121\"; }\n.bi-arrow-down-right-square::before { content: \"\\f122\"; }\n.bi-arrow-down-right::before { content: \"\\f123\"; }\n.bi-arrow-down-short::before { content: \"\\f124\"; }\n.bi-arrow-down-square-fill::before { content: \"\\f125\"; }\n.bi-arrow-down-square::before { content: \"\\f126\"; }\n.bi-arrow-down-up::before { content: \"\\f127\"; }\n.bi-arrow-down::before { content: \"\\f128\"; }\n.bi-arrow-left-circle-fill::before { content: \"\\f129\"; }\n.bi-arrow-left-circle::before { content: \"\\f12a\"; }\n.bi-arrow-left-right::before { content: \"\\f12b\"; }\n.bi-arrow-left-short::before { content: \"\\f12c\"; }\n.bi-arrow-left-square-fill::before { content: \"\\f12d\"; }\n.bi-arrow-left-square::before { content: \"\\f12e\"; }\n.bi-arrow-left::before { content: \"\\f12f\"; }\n.bi-arrow-repeat::before { content: \"\\f130\"; }\n.bi-arrow-return-left::before { content: \"\\f131\"; }\n.bi-arrow-return-right::before { content: \"\\f132\"; }\n.bi-arrow-right-circle-fill::before { content: \"\\f133\"; }\n.bi-arrow-right-circle::before { content: \"\\f134\"; }\n.bi-arrow-right-short::before { content: \"\\f135\"; }\n.bi-arrow-right-square-fill::before { content: \"\\f136\"; }\n.bi-arrow-right-square::before { content: \"\\f137\"; }\n.bi-arrow-right::before { content: \"\\f138\"; }\n.bi-arrow-up-circle-fill::before { content: \"\\f139\"; }\n.bi-arrow-up-circle::before { content: \"\\f13a\"; }\n.bi-arrow-up-left-circle-fill::before { content: \"\\f13b\"; }\n.bi-arrow-up-left-circle::before { content: \"\\f13c\"; }\n.bi-arrow-up-left-square-fill::before { content: \"\\f13d\"; }\n.bi-arrow-up-left-square::before { content: \"\\f13e\"; }\n.bi-arrow-up-left::before { content: \"\\f13f\"; }\n.bi-arrow-up-right-circle-fill::before { content: \"\\f140\"; }\n.bi-arrow-up-right-circle::before { content: \"\\f141\"; }\n.bi-arrow-up-right-square-fill::before { content: \"\\f142\"; }\n.bi-arrow-up-right-square::before { content: \"\\f143\"; }\n.bi-arrow-up-right::before { content: \"\\f144\"; }\n.bi-arrow-up-short::before { content: \"\\f145\"; }\n.bi-arrow-up-square-fill::before { content: \"\\f146\"; }\n.bi-arrow-up-square::before { content: \"\\f147\"; }\n.bi-arrow-up::before { content: \"\\f148\"; }\n.bi-arrows-angle-contract::before { content: \"\\f149\"; }\n.bi-arrows-angle-expand::before { content: \"\\f14a\"; }\n.bi-arrows-collapse::before { content: \"\\f14b\"; }\n.bi-arrows-expand::before { content: \"\\f14c\"; }\n.bi-arrows-fullscreen::before { content: \"\\f14d\"; }\n.bi-arrows-move::before { content: \"\\f14e\"; }\n.bi-aspect-ratio-fill::before { content: \"\\f14f\"; }\n.bi-aspect-ratio::before { content: \"\\f150\"; }\n.bi-asterisk::before { content: \"\\f151\"; }\n.bi-at::before { content: \"\\f152\"; }\n.bi-award-fill::before { content: \"\\f153\"; }\n.bi-award::before { content: \"\\f154\"; }\n.bi-back::before { content: \"\\f155\"; }\n.bi-backspace-fill::before { content: \"\\f156\"; }\n.bi-backspace-reverse-fill::before { content: \"\\f157\"; }\n.bi-backspace-reverse::before { content: \"\\f158\"; }\n.bi-backspace::before { content: \"\\f159\"; }\n.bi-badge-3d-fill::before { content: \"\\f15a\"; }\n.bi-badge-3d::before { content: \"\\f15b\"; }\n.bi-badge-4k-fill::before { content: \"\\f15c\"; }\n.bi-badge-4k::before { content: \"\\f15d\"; }\n.bi-badge-8k-fill::before { content: \"\\f15e\"; }\n.bi-badge-8k::before { content: \"\\f15f\"; }\n.bi-badge-ad-fill::before { content: \"\\f160\"; }\n.bi-badge-ad::before { content: \"\\f161\"; }\n.bi-badge-ar-fill::before { content: \"\\f162\"; }\n.bi-badge-ar::before { content: \"\\f163\"; }\n.bi-badge-cc-fill::before { content: \"\\f164\"; }\n.bi-badge-cc::before { content: \"\\f165\"; }\n.bi-badge-hd-fill::before { content: \"\\f166\"; }\n.bi-badge-hd::before { content: \"\\f167\"; }\n.bi-badge-tm-fill::before { content: \"\\f168\"; }\n.bi-badge-tm::before { content: \"\\f169\"; }\n.bi-badge-vo-fill::before { content: \"\\f16a\"; }\n.bi-badge-vo::before { content: \"\\f16b\"; }\n.bi-badge-vr-fill::before { content: \"\\f16c\"; }\n.bi-badge-vr::before { content: \"\\f16d\"; }\n.bi-badge-wc-fill::before { content: \"\\f16e\"; }\n.bi-badge-wc::before { content: \"\\f16f\"; }\n.bi-bag-check-fill::before { content: \"\\f170\"; }\n.bi-bag-check::before { content: \"\\f171\"; }\n.bi-bag-dash-fill::before { content: \"\\f172\"; }\n.bi-bag-dash::before { content: \"\\f173\"; }\n.bi-bag-fill::before { content: \"\\f174\"; }\n.bi-bag-plus-fill::before { content: \"\\f175\"; }\n.bi-bag-plus::before { content: \"\\f176\"; }\n.bi-bag-x-fill::before { content: \"\\f177\"; }\n.bi-bag-x::before { content: \"\\f178\"; }\n.bi-bag::before { content: \"\\f179\"; }\n.bi-bar-chart-fill::before { content: \"\\f17a\"; }\n.bi-bar-chart-line-fill::before { content: \"\\f17b\"; }\n.bi-bar-chart-line::before { content: \"\\f17c\"; }\n.bi-bar-chart-steps::before { content: \"\\f17d\"; }\n.bi-bar-chart::before { content: \"\\f17e\"; }\n.bi-basket-fill::before { content: \"\\f17f\"; }\n.bi-basket::before { content: \"\\f180\"; }\n.bi-basket2-fill::before { content: \"\\f181\"; }\n.bi-basket2::before { content: \"\\f182\"; }\n.bi-basket3-fill::before { content: \"\\f183\"; }\n.bi-basket3::before { content: \"\\f184\"; }\n.bi-battery-charging::before { content: \"\\f185\"; }\n.bi-battery-full::before { content: \"\\f186\"; }\n.bi-battery-half::before { content: \"\\f187\"; }\n.bi-battery::before { content: \"\\f188\"; }\n.bi-bell-fill::before { content: \"\\f189\"; }\n.bi-bell::before { content: \"\\f18a\"; }\n.bi-bezier::before { content: \"\\f18b\"; }\n.bi-bezier2::before { content: \"\\f18c\"; }\n.bi-bicycle::before { content: \"\\f18d\"; }\n.bi-binoculars-fill::before { content: \"\\f18e\"; }\n.bi-binoculars::before { content: \"\\f18f\"; }\n.bi-blockquote-left::before { content: \"\\f190\"; }\n.bi-blockquote-right::before { content: \"\\f191\"; }\n.bi-book-fill::before { content: \"\\f192\"; }\n.bi-book-half::before { content: \"\\f193\"; }\n.bi-book::before { content: \"\\f194\"; }\n.bi-bookmark-check-fill::before { content: \"\\f195\"; }\n.bi-bookmark-check::before { content: \"\\f196\"; }\n.bi-bookmark-dash-fill::before { content: \"\\f197\"; }\n.bi-bookmark-dash::before { content: \"\\f198\"; }\n.bi-bookmark-fill::before { content: \"\\f199\"; }\n.bi-bookmark-heart-fill::before { content: \"\\f19a\"; }\n.bi-bookmark-heart::before { content: \"\\f19b\"; }\n.bi-bookmark-plus-fill::before { content: \"\\f19c\"; }\n.bi-bookmark-plus::before { content: \"\\f19d\"; }\n.bi-bookmark-star-fill::before { content: \"\\f19e\"; }\n.bi-bookmark-star::before { content: \"\\f19f\"; }\n.bi-bookmark-x-fill::before { content: \"\\f1a0\"; }\n.bi-bookmark-x::before { content: \"\\f1a1\"; }\n.bi-bookmark::before { content: \"\\f1a2\"; }\n.bi-bookmarks-fill::before { content: \"\\f1a3\"; }\n.bi-bookmarks::before { content: \"\\f1a4\"; }\n.bi-bookshelf::before { content: \"\\f1a5\"; }\n.bi-bootstrap-fill::before { content: \"\\f1a6\"; }\n.bi-bootstrap-reboot::before { content: \"\\f1a7\"; }\n.bi-bootstrap::before { content: \"\\f1a8\"; }\n.bi-border-all::before { content: \"\\f1a9\"; }\n.bi-border-bottom::before { content: \"\\f1aa\"; }\n.bi-border-center::before { content: \"\\f1ab\"; }\n.bi-border-inner::before { content: \"\\f1ac\"; }\n.bi-border-left::before { content: \"\\f1ad\"; }\n.bi-border-middle::before { content: \"\\f1ae\"; }\n.bi-border-outer::before { content: \"\\f1af\"; }\n.bi-border-right::before { content: \"\\f1b0\"; }\n.bi-border-style::before { content: \"\\f1b1\"; }\n.bi-border-top::before { content: \"\\f1b2\"; }\n.bi-border-width::before { content: \"\\f1b3\"; }\n.bi-border::before { content: \"\\f1b4\"; }\n.bi-bounding-box-circles::before { content: \"\\f1b5\"; }\n.bi-bounding-box::before { content: \"\\f1b6\"; }\n.bi-box-arrow-down-left::before { content: \"\\f1b7\"; }\n.bi-box-arrow-down-right::before { content: \"\\f1b8\"; }\n.bi-box-arrow-down::before { content: \"\\f1b9\"; }\n.bi-box-arrow-in-down-left::before { content: \"\\f1ba\"; }\n.bi-box-arrow-in-down-right::before { content: \"\\f1bb\"; }\n.bi-box-arrow-in-down::before { content: \"\\f1bc\"; }\n.bi-box-arrow-in-left::before { content: \"\\f1bd\"; }\n.bi-box-arrow-in-right::before { content: \"\\f1be\"; }\n.bi-box-arrow-in-up-left::before { content: \"\\f1bf\"; }\n.bi-box-arrow-in-up-right::before { content: \"\\f1c0\"; }\n.bi-box-arrow-in-up::before { content: \"\\f1c1\"; }\n.bi-box-arrow-left::before { content: \"\\f1c2\"; }\n.bi-box-arrow-right::before { content: \"\\f1c3\"; }\n.bi-box-arrow-up-left::before { content: \"\\f1c4\"; }\n.bi-box-arrow-up-right::before { content: \"\\f1c5\"; }\n.bi-box-arrow-up::before { content: \"\\f1c6\"; }\n.bi-box-seam::before { content: \"\\f1c7\"; }\n.bi-box::before { content: \"\\f1c8\"; }\n.bi-braces::before { content: \"\\f1c9\"; }\n.bi-bricks::before { content: \"\\f1ca\"; }\n.bi-briefcase-fill::before { content: \"\\f1cb\"; }\n.bi-briefcase::before { content: \"\\f1cc\"; }\n.bi-brightness-alt-high-fill::before { content: \"\\f1cd\"; }\n.bi-brightness-alt-high::before { content: \"\\f1ce\"; }\n.bi-brightness-alt-low-fill::before { content: \"\\f1cf\"; }\n.bi-brightness-alt-low::before { content: \"\\f1d0\"; }\n.bi-brightness-high-fill::before { content: \"\\f1d1\"; }\n.bi-brightness-high::before { content: \"\\f1d2\"; }\n.bi-brightness-low-fill::before { content: \"\\f1d3\"; }\n.bi-brightness-low::before { content: \"\\f1d4\"; }\n.bi-broadcast-pin::before { content: \"\\f1d5\"; }\n.bi-broadcast::before { content: \"\\f1d6\"; }\n.bi-brush-fill::before { content: \"\\f1d7\"; }\n.bi-brush::before { content: \"\\f1d8\"; }\n.bi-bucket-fill::before { content: \"\\f1d9\"; }\n.bi-bucket::before { content: \"\\f1da\"; }\n.bi-bug-fill::before { content: \"\\f1db\"; }\n.bi-bug::before { content: \"\\f1dc\"; }\n.bi-building::before { content: \"\\f1dd\"; }\n.bi-bullseye::before { content: \"\\f1de\"; }\n.bi-calculator-fill::before { content: \"\\f1df\"; }\n.bi-calculator::before { content: \"\\f1e0\"; }\n.bi-calendar-check-fill::before { content: \"\\f1e1\"; }\n.bi-calendar-check::before { content: \"\\f1e2\"; }\n.bi-calendar-date-fill::before { content: \"\\f1e3\"; }\n.bi-calendar-date::before { content: \"\\f1e4\"; }\n.bi-calendar-day-fill::before { content: \"\\f1e5\"; }\n.bi-calendar-day::before { content: \"\\f1e6\"; }\n.bi-calendar-event-fill::before { content: \"\\f1e7\"; }\n.bi-calendar-event::before { content: \"\\f1e8\"; }\n.bi-calendar-fill::before { content: \"\\f1e9\"; }\n.bi-calendar-minus-fill::before { content: \"\\f1ea\"; }\n.bi-calendar-minus::before { content: \"\\f1eb\"; }\n.bi-calendar-month-fill::before { content: \"\\f1ec\"; }\n.bi-calendar-month::before { content: \"\\f1ed\"; }\n.bi-calendar-plus-fill::before { content: \"\\f1ee\"; }\n.bi-calendar-plus::before { content: \"\\f1ef\"; }\n.bi-calendar-range-fill::before { content: \"\\f1f0\"; }\n.bi-calendar-range::before { content: \"\\f1f1\"; }\n.bi-calendar-week-fill::before { content: \"\\f1f2\"; }\n.bi-calendar-week::before { content: \"\\f1f3\"; }\n.bi-calendar-x-fill::before { content: \"\\f1f4\"; }\n.bi-calendar-x::before { content: \"\\f1f5\"; }\n.bi-calendar::before { content: \"\\f1f6\"; }\n.bi-calendar2-check-fill::before { content: \"\\f1f7\"; }\n.bi-calendar2-check::before { content: \"\\f1f8\"; }\n.bi-calendar2-date-fill::before { content: \"\\f1f9\"; }\n.bi-calendar2-date::before { content: \"\\f1fa\"; }\n.bi-calendar2-day-fill::before { content: \"\\f1fb\"; }\n.bi-calendar2-day::before { content: \"\\f1fc\"; }\n.bi-calendar2-event-fill::before { content: \"\\f1fd\"; }\n.bi-calendar2-event::before { content: \"\\f1fe\"; }\n.bi-calendar2-fill::before { content: \"\\f1ff\"; }\n.bi-calendar2-minus-fill::before { content: \"\\f200\"; }\n.bi-calendar2-minus::before { content: \"\\f201\"; }\n.bi-calendar2-month-fill::before { content: \"\\f202\"; }\n.bi-calendar2-month::before { content: \"\\f203\"; }\n.bi-calendar2-plus-fill::before { content: \"\\f204\"; }\n.bi-calendar2-plus::before { content: \"\\f205\"; }\n.bi-calendar2-range-fill::before { content: \"\\f206\"; }\n.bi-calendar2-range::before { content: \"\\f207\"; }\n.bi-calendar2-week-fill::before { content: \"\\f208\"; }\n.bi-calendar2-week::before { content: \"\\f209\"; }\n.bi-calendar2-x-fill::before { content: \"\\f20a\"; }\n.bi-calendar2-x::before { content: \"\\f20b\"; }\n.bi-calendar2::before { content: \"\\f20c\"; }\n.bi-calendar3-event-fill::before { content: \"\\f20d\"; }\n.bi-calendar3-event::before { content: \"\\f20e\"; }\n.bi-calendar3-fill::before { content: \"\\f20f\"; }\n.bi-calendar3-range-fill::before { content: \"\\f210\"; }\n.bi-calendar3-range::before { content: \"\\f211\"; }\n.bi-calendar3-week-fill::before { content: \"\\f212\"; }\n.bi-calendar3-week::before { content: \"\\f213\"; }\n.bi-calendar3::before { content: \"\\f214\"; }\n.bi-calendar4-event::before { content: \"\\f215\"; }\n.bi-calendar4-range::before { content: \"\\f216\"; }\n.bi-calendar4-week::before { content: \"\\f217\"; }\n.bi-calendar4::before { content: \"\\f218\"; }\n.bi-camera-fill::before { content: \"\\f219\"; }\n.bi-camera-reels-fill::before { content: \"\\f21a\"; }\n.bi-camera-reels::before { content: \"\\f21b\"; }\n.bi-camera-video-fill::before { content: \"\\f21c\"; }\n.bi-camera-video-off-fill::before { content: \"\\f21d\"; }\n.bi-camera-video-off::before { content: \"\\f21e\"; }\n.bi-camera-video::before { content: \"\\f21f\"; }\n.bi-camera::before { content: \"\\f220\"; }\n.bi-camera2::before { content: \"\\f221\"; }\n.bi-capslock-fill::before { content: \"\\f222\"; }\n.bi-capslock::before { content: \"\\f223\"; }\n.bi-card-checklist::before { content: \"\\f224\"; }\n.bi-card-heading::before { content: \"\\f225\"; }\n.bi-card-image::before { content: \"\\f226\"; }\n.bi-card-list::before { content: \"\\f227\"; }\n.bi-card-text::before { content: \"\\f228\"; }\n.bi-caret-down-fill::before { content: \"\\f229\"; }\n.bi-caret-down-square-fill::before { content: \"\\f22a\"; }\n.bi-caret-down-square::before { content: \"\\f22b\"; }\n.bi-caret-down::before { content: \"\\f22c\"; }\n.bi-caret-left-fill::before { content: \"\\f22d\"; }\n.bi-caret-left-square-fill::before { content: \"\\f22e\"; }\n.bi-caret-left-square::before { content: \"\\f22f\"; }\n.bi-caret-left::before { content: \"\\f230\"; }\n.bi-caret-right-fill::before { content: \"\\f231\"; }\n.bi-caret-right-square-fill::before { content: \"\\f232\"; }\n.bi-caret-right-square::before { content: \"\\f233\"; }\n.bi-caret-right::before { content: \"\\f234\"; }\n.bi-caret-up-fill::before { content: \"\\f235\"; }\n.bi-caret-up-square-fill::before { content: \"\\f236\"; }\n.bi-caret-up-square::before { content: \"\\f237\"; }\n.bi-caret-up::before { content: \"\\f238\"; }\n.bi-cart-check-fill::before { content: \"\\f239\"; }\n.bi-cart-check::before { content: \"\\f23a\"; }\n.bi-cart-dash-fill::before { content: \"\\f23b\"; }\n.bi-cart-dash::before { content: \"\\f23c\"; }\n.bi-cart-fill::before { content: \"\\f23d\"; }\n.bi-cart-plus-fill::before { content: \"\\f23e\"; }\n.bi-cart-plus::before { content: \"\\f23f\"; }\n.bi-cart-x-fill::before { content: \"\\f240\"; }\n.bi-cart-x::before { content: \"\\f241\"; }\n.bi-cart::before { content: \"\\f242\"; }\n.bi-cart2::before { content: \"\\f243\"; }\n.bi-cart3::before { content: \"\\f244\"; }\n.bi-cart4::before { content: \"\\f245\"; }\n.bi-cash-stack::before { content: \"\\f246\"; }\n.bi-cash::before { content: \"\\f247\"; }\n.bi-cast::before { content: \"\\f248\"; }\n.bi-chat-dots-fill::before { content: \"\\f249\"; }\n.bi-chat-dots::before { content: \"\\f24a\"; }\n.bi-chat-fill::before { content: \"\\f24b\"; }\n.bi-chat-left-dots-fill::before { content: \"\\f24c\"; }\n.bi-chat-left-dots::before { content: \"\\f24d\"; }\n.bi-chat-left-fill::before { content: \"\\f24e\"; }\n.bi-chat-left-quote-fill::before { content: \"\\f24f\"; }\n.bi-chat-left-quote::before { content: \"\\f250\"; }\n.bi-chat-left-text-fill::before { content: \"\\f251\"; }\n.bi-chat-left-text::before { content: \"\\f252\"; }\n.bi-chat-left::before { content: \"\\f253\"; }\n.bi-chat-quote-fill::before { content: \"\\f254\"; }\n.bi-chat-quote::before { content: \"\\f255\"; }\n.bi-chat-right-dots-fill::before { content: \"\\f256\"; }\n.bi-chat-right-dots::before { content: \"\\f257\"; }\n.bi-chat-right-fill::before { content: \"\\f258\"; }\n.bi-chat-right-quote-fill::before { content: \"\\f259\"; }\n.bi-chat-right-quote::before { content: \"\\f25a\"; }\n.bi-chat-right-text-fill::before { content: \"\\f25b\"; }\n.bi-chat-right-text::before { content: \"\\f25c\"; }\n.bi-chat-right::before { content: \"\\f25d\"; }\n.bi-chat-square-dots-fill::before { content: \"\\f25e\"; }\n.bi-chat-square-dots::before { content: \"\\f25f\"; }\n.bi-chat-square-fill::before { content: \"\\f260\"; }\n.bi-chat-square-quote-fill::before { content: \"\\f261\"; }\n.bi-chat-square-quote::before { content: \"\\f262\"; }\n.bi-chat-square-text-fill::before { content: \"\\f263\"; }\n.bi-chat-square-text::before { content: \"\\f264\"; }\n.bi-chat-square::before { content: \"\\f265\"; }\n.bi-chat-text-fill::before { content: \"\\f266\"; }\n.bi-chat-text::before { content: \"\\f267\"; }\n.bi-chat::before { content: \"\\f268\"; }\n.bi-check-all::before { content: \"\\f269\"; }\n.bi-check-circle-fill::before { content: \"\\f26a\"; }\n.bi-check-circle::before { content: \"\\f26b\"; }\n.bi-check-square-fill::before { content: \"\\f26c\"; }\n.bi-check-square::before { content: \"\\f26d\"; }\n.bi-check::before { content: \"\\f26e\"; }\n.bi-check2-all::before { content: \"\\f26f\"; }\n.bi-check2-circle::before { content: \"\\f270\"; }\n.bi-check2-square::before { content: \"\\f271\"; }\n.bi-check2::before { content: \"\\f272\"; }\n.bi-chevron-bar-contract::before { content: \"\\f273\"; }\n.bi-chevron-bar-down::before { content: \"\\f274\"; }\n.bi-chevron-bar-expand::before { content: \"\\f275\"; }\n.bi-chevron-bar-left::before { content: \"\\f276\"; }\n.bi-chevron-bar-right::before { content: \"\\f277\"; }\n.bi-chevron-bar-up::before { content: \"\\f278\"; }\n.bi-chevron-compact-down::before { content: \"\\f279\"; }\n.bi-chevron-compact-left::before { content: \"\\f27a\"; }\n.bi-chevron-compact-right::before { content: \"\\f27b\"; }\n.bi-chevron-compact-up::before { content: \"\\f27c\"; }\n.bi-chevron-contract::before { content: \"\\f27d\"; }\n.bi-chevron-double-down::before { content: \"\\f27e\"; }\n.bi-chevron-double-left::before { content: \"\\f27f\"; }\n.bi-chevron-double-right::before { content: \"\\f280\"; }\n.bi-chevron-double-up::before { content: \"\\f281\"; }\n.bi-chevron-down::before { content: \"\\f282\"; }\n.bi-chevron-expand::before { content: \"\\f283\"; }\n.bi-chevron-left::before { content: \"\\f284\"; }\n.bi-chevron-right::before { content: \"\\f285\"; }\n.bi-chevron-up::before { content: \"\\f286\"; }\n.bi-circle-fill::before { content: \"\\f287\"; }\n.bi-circle-half::before { content: \"\\f288\"; }\n.bi-circle-square::before { content: \"\\f289\"; }\n.bi-circle::before { content: \"\\f28a\"; }\n.bi-clipboard-check::before { content: \"\\f28b\"; }\n.bi-clipboard-data::before { content: \"\\f28c\"; }\n.bi-clipboard-minus::before { content: \"\\f28d\"; }\n.bi-clipboard-plus::before { content: \"\\f28e\"; }\n.bi-clipboard-x::before { content: \"\\f28f\"; }\n.bi-clipboard::before { content: \"\\f290\"; }\n.bi-clock-fill::before { content: \"\\f291\"; }\n.bi-clock-history::before { content: \"\\f292\"; }\n.bi-clock::before { content: \"\\f293\"; }\n.bi-cloud-arrow-down-fill::before { content: \"\\f294\"; }\n.bi-cloud-arrow-down::before { content: \"\\f295\"; }\n.bi-cloud-arrow-up-fill::before { content: \"\\f296\"; }\n.bi-cloud-arrow-up::before { content: \"\\f297\"; }\n.bi-cloud-check-fill::before { content: \"\\f298\"; }\n.bi-cloud-check::before { content: \"\\f299\"; }\n.bi-cloud-download-fill::before { content: \"\\f29a\"; }\n.bi-cloud-download::before { content: \"\\f29b\"; }\n.bi-cloud-drizzle-fill::before { content: \"\\f29c\"; }\n.bi-cloud-drizzle::before { content: \"\\f29d\"; }\n.bi-cloud-fill::before { content: \"\\f29e\"; }\n.bi-cloud-fog-fill::before { content: \"\\f29f\"; }\n.bi-cloud-fog::before { content: \"\\f2a0\"; }\n.bi-cloud-fog2-fill::before { content: \"\\f2a1\"; }\n.bi-cloud-fog2::before { content: \"\\f2a2\"; }\n.bi-cloud-hail-fill::before { content: \"\\f2a3\"; }\n.bi-cloud-hail::before { content: \"\\f2a4\"; }\n.bi-cloud-haze-1::before { content: \"\\f2a5\"; }\n.bi-cloud-haze-fill::before { content: \"\\f2a6\"; }\n.bi-cloud-haze::before { content: \"\\f2a7\"; }\n.bi-cloud-haze2-fill::before { content: \"\\f2a8\"; }\n.bi-cloud-lightning-fill::before { content: \"\\f2a9\"; }\n.bi-cloud-lightning-rain-fill::before { content: \"\\f2aa\"; }\n.bi-cloud-lightning-rain::before { content: \"\\f2ab\"; }\n.bi-cloud-lightning::before { content: \"\\f2ac\"; }\n.bi-cloud-minus-fill::before { content: \"\\f2ad\"; }\n.bi-cloud-minus::before { content: \"\\f2ae\"; }\n.bi-cloud-moon-fill::before { content: \"\\f2af\"; }\n.bi-cloud-moon::before { content: \"\\f2b0\"; }\n.bi-cloud-plus-fill::before { content: \"\\f2b1\"; }\n.bi-cloud-plus::before { content: \"\\f2b2\"; }\n.bi-cloud-rain-fill::before { content: \"\\f2b3\"; }\n.bi-cloud-rain-heavy-fill::before { content: \"\\f2b4\"; }\n.bi-cloud-rain-heavy::before { content: \"\\f2b5\"; }\n.bi-cloud-rain::before { content: \"\\f2b6\"; }\n.bi-cloud-slash-fill::before { content: \"\\f2b7\"; }\n.bi-cloud-slash::before { content: \"\\f2b8\"; }\n.bi-cloud-sleet-fill::before { content: \"\\f2b9\"; }\n.bi-cloud-sleet::before { content: \"\\f2ba\"; }\n.bi-cloud-snow-fill::before { content: \"\\f2bb\"; }\n.bi-cloud-snow::before { content: \"\\f2bc\"; }\n.bi-cloud-sun-fill::before { content: \"\\f2bd\"; }\n.bi-cloud-sun::before { content: \"\\f2be\"; }\n.bi-cloud-upload-fill::before { content: \"\\f2bf\"; }\n.bi-cloud-upload::before { content: \"\\f2c0\"; }\n.bi-cloud::before { content: \"\\f2c1\"; }\n.bi-clouds-fill::before { content: \"\\f2c2\"; }\n.bi-clouds::before { content: \"\\f2c3\"; }\n.bi-cloudy-fill::before { content: \"\\f2c4\"; }\n.bi-cloudy::before { content: \"\\f2c5\"; }\n.bi-code-slash::before { content: \"\\f2c6\"; }\n.bi-code-square::before { content: \"\\f2c7\"; }\n.bi-code::before { content: \"\\f2c8\"; }\n.bi-collection-fill::before { content: \"\\f2c9\"; }\n.bi-collection-play-fill::before { content: \"\\f2ca\"; }\n.bi-collection-play::before { content: \"\\f2cb\"; }\n.bi-collection::before { content: \"\\f2cc\"; }\n.bi-columns-gap::before { content: \"\\f2cd\"; }\n.bi-columns::before { content: \"\\f2ce\"; }\n.bi-command::before { content: \"\\f2cf\"; }\n.bi-compass-fill::before { content: \"\\f2d0\"; }\n.bi-compass::before { content: \"\\f2d1\"; }\n.bi-cone-striped::before { content: \"\\f2d2\"; }\n.bi-cone::before { content: \"\\f2d3\"; }\n.bi-controller::before { content: \"\\f2d4\"; }\n.bi-cpu-fill::before { content: \"\\f2d5\"; }\n.bi-cpu::before { content: \"\\f2d6\"; }\n.bi-credit-card-2-back-fill::before { content: \"\\f2d7\"; }\n.bi-credit-card-2-back::before { content: \"\\f2d8\"; }\n.bi-credit-card-2-front-fill::before { content: \"\\f2d9\"; }\n.bi-credit-card-2-front::before { content: \"\\f2da\"; }\n.bi-credit-card-fill::before { content: \"\\f2db\"; }\n.bi-credit-card::before { content: \"\\f2dc\"; }\n.bi-crop::before { content: \"\\f2dd\"; }\n.bi-cup-fill::before { content: \"\\f2de\"; }\n.bi-cup-straw::before { content: \"\\f2df\"; }\n.bi-cup::before { content: \"\\f2e0\"; }\n.bi-cursor-fill::before { content: \"\\f2e1\"; }\n.bi-cursor-text::before { content: \"\\f2e2\"; }\n.bi-cursor::before { content: \"\\f2e3\"; }\n.bi-dash-circle-dotted::before { content: \"\\f2e4\"; }\n.bi-dash-circle-fill::before { content: \"\\f2e5\"; }\n.bi-dash-circle::before { content: \"\\f2e6\"; }\n.bi-dash-square-dotted::before { content: \"\\f2e7\"; }\n.bi-dash-square-fill::before { content: \"\\f2e8\"; }\n.bi-dash-square::before { content: \"\\f2e9\"; }\n.bi-dash::before { content: \"\\f2ea\"; }\n.bi-diagram-2-fill::before { content: \"\\f2eb\"; }\n.bi-diagram-2::before { content: \"\\f2ec\"; }\n.bi-diagram-3-fill::before { content: \"\\f2ed\"; }\n.bi-diagram-3::before { content: \"\\f2ee\"; }\n.bi-diamond-fill::before { content: \"\\f2ef\"; }\n.bi-diamond-half::before { content: \"\\f2f0\"; }\n.bi-diamond::before { content: \"\\f2f1\"; }\n.bi-dice-1-fill::before { content: \"\\f2f2\"; }\n.bi-dice-1::before { content: \"\\f2f3\"; }\n.bi-dice-2-fill::before { content: \"\\f2f4\"; }\n.bi-dice-2::before { content: \"\\f2f5\"; }\n.bi-dice-3-fill::before { content: \"\\f2f6\"; }\n.bi-dice-3::before { content: \"\\f2f7\"; }\n.bi-dice-4-fill::before { content: \"\\f2f8\"; }\n.bi-dice-4::before { content: \"\\f2f9\"; }\n.bi-dice-5-fill::before { content: \"\\f2fa\"; }\n.bi-dice-5::before { content: \"\\f2fb\"; }\n.bi-dice-6-fill::before { content: \"\\f2fc\"; }\n.bi-dice-6::before { content: \"\\f2fd\"; }\n.bi-disc-fill::before { content: \"\\f2fe\"; }\n.bi-disc::before { content: \"\\f2ff\"; }\n.bi-discord::before { content: \"\\f300\"; }\n.bi-display-fill::before { content: \"\\f301\"; }\n.bi-display::before { content: \"\\f302\"; }\n.bi-distribute-horizontal::before { content: \"\\f303\"; }\n.bi-distribute-vertical::before { content: \"\\f304\"; }\n.bi-door-closed-fill::before { content: \"\\f305\"; }\n.bi-door-closed::before { content: \"\\f306\"; }\n.bi-door-open-fill::before { content: \"\\f307\"; }\n.bi-door-open::before { content: \"\\f308\"; }\n.bi-dot::before { content: \"\\f309\"; }\n.bi-download::before { content: \"\\f30a\"; }\n.bi-droplet-fill::before { content: \"\\f30b\"; }\n.bi-droplet-half::before { content: \"\\f30c\"; }\n.bi-droplet::before { content: \"\\f30d\"; }\n.bi-earbuds::before { content: \"\\f30e\"; }\n.bi-easel-fill::before { content: \"\\f30f\"; }\n.bi-easel::before { content: \"\\f310\"; }\n.bi-egg-fill::before { content: \"\\f311\"; }\n.bi-egg-fried::before { content: \"\\f312\"; }\n.bi-egg::before { content: \"\\f313\"; }\n.bi-eject-fill::before { content: \"\\f314\"; }\n.bi-eject::before { content: \"\\f315\"; }\n.bi-emoji-angry-fill::before { content: \"\\f316\"; }\n.bi-emoji-angry::before { content: \"\\f317\"; }\n.bi-emoji-dizzy-fill::before { content: \"\\f318\"; }\n.bi-emoji-dizzy::before { content: \"\\f319\"; }\n.bi-emoji-expressionless-fill::before { content: \"\\f31a\"; }\n.bi-emoji-expressionless::before { content: \"\\f31b\"; }\n.bi-emoji-frown-fill::before { content: \"\\f31c\"; }\n.bi-emoji-frown::before { content: \"\\f31d\"; }\n.bi-emoji-heart-eyes-fill::before { content: \"\\f31e\"; }\n.bi-emoji-heart-eyes::before { content: \"\\f31f\"; }\n.bi-emoji-laughing-fill::before { content: \"\\f320\"; }\n.bi-emoji-laughing::before { content: \"\\f321\"; }\n.bi-emoji-neutral-fill::before { content: \"\\f322\"; }\n.bi-emoji-neutral::before { content: \"\\f323\"; }\n.bi-emoji-smile-fill::before { content: \"\\f324\"; }\n.bi-emoji-smile-upside-down-fill::before { content: \"\\f325\"; }\n.bi-emoji-smile-upside-down::before { content: \"\\f326\"; }\n.bi-emoji-smile::before { content: \"\\f327\"; }\n.bi-emoji-sunglasses-fill::before { content: \"\\f328\"; }\n.bi-emoji-sunglasses::before { content: \"\\f329\"; }\n.bi-emoji-wink-fill::before { content: \"\\f32a\"; }\n.bi-emoji-wink::before { content: \"\\f32b\"; }\n.bi-envelope-fill::before { content: \"\\f32c\"; }\n.bi-envelope-open-fill::before { content: \"\\f32d\"; }\n.bi-envelope-open::before { content: \"\\f32e\"; }\n.bi-envelope::before { content: \"\\f32f\"; }\n.bi-eraser-fill::before { content: \"\\f330\"; }\n.bi-eraser::before { content: \"\\f331\"; }\n.bi-exclamation-circle-fill::before { content: \"\\f332\"; }\n.bi-exclamation-circle::before { content: \"\\f333\"; }\n.bi-exclamation-diamond-fill::before { content: \"\\f334\"; }\n.bi-exclamation-diamond::before { content: \"\\f335\"; }\n.bi-exclamation-octagon-fill::before { content: \"\\f336\"; }\n.bi-exclamation-octagon::before { content: \"\\f337\"; }\n.bi-exclamation-square-fill::before { content: \"\\f338\"; }\n.bi-exclamation-square::before { content: \"\\f339\"; }\n.bi-exclamation-triangle-fill::before { content: \"\\f33a\"; }\n.bi-exclamation-triangle::before { content: \"\\f33b\"; }\n.bi-exclamation::before { content: \"\\f33c\"; }\n.bi-exclude::before { content: \"\\f33d\"; }\n.bi-eye-fill::before { content: \"\\f33e\"; }\n.bi-eye-slash-fill::before { content: \"\\f33f\"; }\n.bi-eye-slash::before { content: \"\\f340\"; }\n.bi-eye::before { content: \"\\f341\"; }\n.bi-eyedropper::before { content: \"\\f342\"; }\n.bi-eyeglasses::before { content: \"\\f343\"; }\n.bi-facebook::before { content: \"\\f344\"; }\n.bi-file-arrow-down-fill::before { content: \"\\f345\"; }\n.bi-file-arrow-down::before { content: \"\\f346\"; }\n.bi-file-arrow-up-fill::before { content: \"\\f347\"; }\n.bi-file-arrow-up::before { content: \"\\f348\"; }\n.bi-file-bar-graph-fill::before { content: \"\\f349\"; }\n.bi-file-bar-graph::before { content: \"\\f34a\"; }\n.bi-file-binary-fill::before { content: \"\\f34b\"; }\n.bi-file-binary::before { content: \"\\f34c\"; }\n.bi-file-break-fill::before { content: \"\\f34d\"; }\n.bi-file-break::before { content: \"\\f34e\"; }\n.bi-file-check-fill::before { content: \"\\f34f\"; }\n.bi-file-check::before { content: \"\\f350\"; }\n.bi-file-code-fill::before { content: \"\\f351\"; }\n.bi-file-code::before { content: \"\\f352\"; }\n.bi-file-diff-fill::before { content: \"\\f353\"; }\n.bi-file-diff::before { content: \"\\f354\"; }\n.bi-file-earmark-arrow-down-fill::before { content: \"\\f355\"; }\n.bi-file-earmark-arrow-down::before { content: \"\\f356\"; }\n.bi-file-earmark-arrow-up-fill::before { content: \"\\f357\"; }\n.bi-file-earmark-arrow-up::before { content: \"\\f358\"; }\n.bi-file-earmark-bar-graph-fill::before { content: \"\\f359\"; }\n.bi-file-earmark-bar-graph::before { content: \"\\f35a\"; }\n.bi-file-earmark-binary-fill::before { content: \"\\f35b\"; }\n.bi-file-earmark-binary::before { content: \"\\f35c\"; }\n.bi-file-earmark-break-fill::before { content: \"\\f35d\"; }\n.bi-file-earmark-break::before { content: \"\\f35e\"; }\n.bi-file-earmark-check-fill::before { content: \"\\f35f\"; }\n.bi-file-earmark-check::before { content: \"\\f360\"; }\n.bi-file-earmark-code-fill::before { content: \"\\f361\"; }\n.bi-file-earmark-code::before { content: \"\\f362\"; }\n.bi-file-earmark-diff-fill::before { content: \"\\f363\"; }\n.bi-file-earmark-diff::before { content: \"\\f364\"; }\n.bi-file-earmark-easel-fill::before { content: \"\\f365\"; }\n.bi-file-earmark-easel::before { content: \"\\f366\"; }\n.bi-file-earmark-excel-fill::before { content: \"\\f367\"; }\n.bi-file-earmark-excel::before { content: \"\\f368\"; }\n.bi-file-earmark-fill::before { content: \"\\f369\"; }\n.bi-file-earmark-font-fill::before { content: \"\\f36a\"; }\n.bi-file-earmark-font::before { content: \"\\f36b\"; }\n.bi-file-earmark-image-fill::before { content: \"\\f36c\"; }\n.bi-file-earmark-image::before { content: \"\\f36d\"; }\n.bi-file-earmark-lock-fill::before { content: \"\\f36e\"; }\n.bi-file-earmark-lock::before { content: \"\\f36f\"; }\n.bi-file-earmark-lock2-fill::before { content: \"\\f370\"; }\n.bi-file-earmark-lock2::before { content: \"\\f371\"; }\n.bi-file-earmark-medical-fill::before { content: \"\\f372\"; }\n.bi-file-earmark-medical::before { content: \"\\f373\"; }\n.bi-file-earmark-minus-fill::before { content: \"\\f374\"; }\n.bi-file-earmark-minus::before { content: \"\\f375\"; }\n.bi-file-earmark-music-fill::before { content: \"\\f376\"; }\n.bi-file-earmark-music::before { content: \"\\f377\"; }\n.bi-file-earmark-person-fill::before { content: \"\\f378\"; }\n.bi-file-earmark-person::before { content: \"\\f379\"; }\n.bi-file-earmark-play-fill::before { content: \"\\f37a\"; }\n.bi-file-earmark-play::before { content: \"\\f37b\"; }\n.bi-file-earmark-plus-fill::before { content: \"\\f37c\"; }\n.bi-file-earmark-plus::before { content: \"\\f37d\"; }\n.bi-file-earmark-post-fill::before { content: \"\\f37e\"; }\n.bi-file-earmark-post::before { content: \"\\f37f\"; }\n.bi-file-earmark-ppt-fill::before { content: \"\\f380\"; }\n.bi-file-earmark-ppt::before { content: \"\\f381\"; }\n.bi-file-earmark-richtext-fill::before { content: \"\\f382\"; }\n.bi-file-earmark-richtext::before { content: \"\\f383\"; }\n.bi-file-earmark-ruled-fill::before { content: \"\\f384\"; }\n.bi-file-earmark-ruled::before { content: \"\\f385\"; }\n.bi-file-earmark-slides-fill::before { content: \"\\f386\"; }\n.bi-file-earmark-slides::before { content: \"\\f387\"; }\n.bi-file-earmark-spreadsheet-fill::before { content: \"\\f388\"; }\n.bi-file-earmark-spreadsheet::before { content: \"\\f389\"; }\n.bi-file-earmark-text-fill::before { content: \"\\f38a\"; }\n.bi-file-earmark-text::before { content: \"\\f38b\"; }\n.bi-file-earmark-word-fill::before { content: \"\\f38c\"; }\n.bi-file-earmark-word::before { content: \"\\f38d\"; }\n.bi-file-earmark-x-fill::before { content: \"\\f38e\"; }\n.bi-file-earmark-x::before { content: \"\\f38f\"; }\n.bi-file-earmark-zip-fill::before { content: \"\\f390\"; }\n.bi-file-earmark-zip::before { content: \"\\f391\"; }\n.bi-file-earmark::before { content: \"\\f392\"; }\n.bi-file-easel-fill::before { content: \"\\f393\"; }\n.bi-file-easel::before { content: \"\\f394\"; }\n.bi-file-excel-fill::before { content: \"\\f395\"; }\n.bi-file-excel::before { content: \"\\f396\"; }\n.bi-file-fill::before { content: \"\\f397\"; }\n.bi-file-font-fill::before { content: \"\\f398\"; }\n.bi-file-font::before { content: \"\\f399\"; }\n.bi-file-image-fill::before { content: \"\\f39a\"; }\n.bi-file-image::before { content: \"\\f39b\"; }\n.bi-file-lock-fill::before { content: \"\\f39c\"; }\n.bi-file-lock::before { content: \"\\f39d\"; }\n.bi-file-lock2-fill::before { content: \"\\f39e\"; }\n.bi-file-lock2::before { content: \"\\f39f\"; }\n.bi-file-medical-fill::before { content: \"\\f3a0\"; }\n.bi-file-medical::before { content: \"\\f3a1\"; }\n.bi-file-minus-fill::before { content: \"\\f3a2\"; }\n.bi-file-minus::before { content: \"\\f3a3\"; }\n.bi-file-music-fill::before { content: \"\\f3a4\"; }\n.bi-file-music::before { content: \"\\f3a5\"; }\n.bi-file-person-fill::before { content: \"\\f3a6\"; }\n.bi-file-person::before { content: \"\\f3a7\"; }\n.bi-file-play-fill::before { content: \"\\f3a8\"; }\n.bi-file-play::before { content: \"\\f3a9\"; }\n.bi-file-plus-fill::before { content: \"\\f3aa\"; }\n.bi-file-plus::before { content: \"\\f3ab\"; }\n.bi-file-post-fill::before { content: \"\\f3ac\"; }\n.bi-file-post::before { content: \"\\f3ad\"; }\n.bi-file-ppt-fill::before { content: \"\\f3ae\"; }\n.bi-file-ppt::before { content: \"\\f3af\"; }\n.bi-file-richtext-fill::before { content: \"\\f3b0\"; }\n.bi-file-richtext::before { content: \"\\f3b1\"; }\n.bi-file-ruled-fill::before { content: \"\\f3b2\"; }\n.bi-file-ruled::before { content: \"\\f3b3\"; }\n.bi-file-slides-fill::before { content: \"\\f3b4\"; }\n.bi-file-slides::before { content: \"\\f3b5\"; }\n.bi-file-spreadsheet-fill::before { content: \"\\f3b6\"; }\n.bi-file-spreadsheet::before { content: \"\\f3b7\"; }\n.bi-file-text-fill::before { content: \"\\f3b8\"; }\n.bi-file-text::before { content: \"\\f3b9\"; }\n.bi-file-word-fill::before { content: \"\\f3ba\"; }\n.bi-file-word::before { content: \"\\f3bb\"; }\n.bi-file-x-fill::before { content: \"\\f3bc\"; }\n.bi-file-x::before { content: \"\\f3bd\"; }\n.bi-file-zip-fill::before { content: \"\\f3be\"; }\n.bi-file-zip::before { content: \"\\f3bf\"; }\n.bi-file::before { content: \"\\f3c0\"; }\n.bi-files-alt::before { content: \"\\f3c1\"; }\n.bi-files::before { content: \"\\f3c2\"; }\n.bi-film::before { content: \"\\f3c3\"; }\n.bi-filter-circle-fill::before { content: \"\\f3c4\"; }\n.bi-filter-circle::before { content: \"\\f3c5\"; }\n.bi-filter-left::before { content: \"\\f3c6\"; }\n.bi-filter-right::before { content: \"\\f3c7\"; }\n.bi-filter-square-fill::before { content: \"\\f3c8\"; }\n.bi-filter-square::before { content: \"\\f3c9\"; }\n.bi-filter::before { content: \"\\f3ca\"; }\n.bi-flag-fill::before { content: \"\\f3cb\"; }\n.bi-flag::before { content: \"\\f3cc\"; }\n.bi-flower1::before { content: \"\\f3cd\"; }\n.bi-flower2::before { content: \"\\f3ce\"; }\n.bi-flower3::before { content: \"\\f3cf\"; }\n.bi-folder-check::before { content: \"\\f3d0\"; }\n.bi-folder-fill::before { content: \"\\f3d1\"; }\n.bi-folder-minus::before { content: \"\\f3d2\"; }\n.bi-folder-plus::before { content: \"\\f3d3\"; }\n.bi-folder-symlink-fill::before { content: \"\\f3d4\"; }\n.bi-folder-symlink::before { content: \"\\f3d5\"; }\n.bi-folder-x::before { content: \"\\f3d6\"; }\n.bi-folder::before { content: \"\\f3d7\"; }\n.bi-folder2-open::before { content: \"\\f3d8\"; }\n.bi-folder2::before { content: \"\\f3d9\"; }\n.bi-fonts::before { content: \"\\f3da\"; }\n.bi-forward-fill::before { content: \"\\f3db\"; }\n.bi-forward::before { content: \"\\f3dc\"; }\n.bi-front::before { content: \"\\f3dd\"; }\n.bi-fullscreen-exit::before { content: \"\\f3de\"; }\n.bi-fullscreen::before { content: \"\\f3df\"; }\n.bi-funnel-fill::before { content: \"\\f3e0\"; }\n.bi-funnel::before { content: \"\\f3e1\"; }\n.bi-gear-fill::before { content: \"\\f3e2\"; }\n.bi-gear-wide-connected::before { content: \"\\f3e3\"; }\n.bi-gear-wide::before { content: \"\\f3e4\"; }\n.bi-gear::before { content: \"\\f3e5\"; }\n.bi-gem::before { content: \"\\f3e6\"; }\n.bi-geo-alt-fill::before { content: \"\\f3e7\"; }\n.bi-geo-alt::before { content: \"\\f3e8\"; }\n.bi-geo-fill::before { content: \"\\f3e9\"; }\n.bi-geo::before { content: \"\\f3ea\"; }\n.bi-gift-fill::before { content: \"\\f3eb\"; }\n.bi-gift::before { content: \"\\f3ec\"; }\n.bi-github::before { content: \"\\f3ed\"; }\n.bi-globe::before { content: \"\\f3ee\"; }\n.bi-globe2::before { content: \"\\f3ef\"; }\n.bi-google::before { content: \"\\f3f0\"; }\n.bi-graph-down::before { content: \"\\f3f1\"; }\n.bi-graph-up::before { content: \"\\f3f2\"; }\n.bi-grid-1x2-fill::before { content: \"\\f3f3\"; }\n.bi-grid-1x2::before { content: \"\\f3f4\"; }\n.bi-grid-3x2-gap-fill::before { content: \"\\f3f5\"; }\n.bi-grid-3x2-gap::before { content: \"\\f3f6\"; }\n.bi-grid-3x2::before { content: \"\\f3f7\"; }\n.bi-grid-3x3-gap-fill::before { content: \"\\f3f8\"; }\n.bi-grid-3x3-gap::before { content: \"\\f3f9\"; }\n.bi-grid-3x3::before { content: \"\\f3fa\"; }\n.bi-grid-fill::before { content: \"\\f3fb\"; }\n.bi-grid::before { content: \"\\f3fc\"; }\n.bi-grip-horizontal::before { content: \"\\f3fd\"; }\n.bi-grip-vertical::before { content: \"\\f3fe\"; }\n.bi-hammer::before { content: \"\\f3ff\"; }\n.bi-hand-index-fill::before { content: \"\\f400\"; }\n.bi-hand-index-thumb-fill::before { content: \"\\f401\"; }\n.bi-hand-index-thumb::before { content: \"\\f402\"; }\n.bi-hand-index::before { content: \"\\f403\"; }\n.bi-hand-thumbs-down-fill::before { content: \"\\f404\"; }\n.bi-hand-thumbs-down::before { content: \"\\f405\"; }\n.bi-hand-thumbs-up-fill::before { content: \"\\f406\"; }\n.bi-hand-thumbs-up::before { content: \"\\f407\"; }\n.bi-handbag-fill::before { content: \"\\f408\"; }\n.bi-handbag::before { content: \"\\f409\"; }\n.bi-hash::before { content: \"\\f40a\"; }\n.bi-hdd-fill::before { content: \"\\f40b\"; }\n.bi-hdd-network-fill::before { content: \"\\f40c\"; }\n.bi-hdd-network::before { content: \"\\f40d\"; }\n.bi-hdd-rack-fill::before { content: \"\\f40e\"; }\n.bi-hdd-rack::before { content: \"\\f40f\"; }\n.bi-hdd-stack-fill::before { content: \"\\f410\"; }\n.bi-hdd-stack::before { content: \"\\f411\"; }\n.bi-hdd::before { content: \"\\f412\"; }\n.bi-headphones::before { content: \"\\f413\"; }\n.bi-headset::before { content: \"\\f414\"; }\n.bi-heart-fill::before { content: \"\\f415\"; }\n.bi-heart-half::before { content: \"\\f416\"; }\n.bi-heart::before { content: \"\\f417\"; }\n.bi-heptagon-fill::before { content: \"\\f418\"; }\n.bi-heptagon-half::before { content: \"\\f419\"; }\n.bi-heptagon::before { content: \"\\f41a\"; }\n.bi-hexagon-fill::before { content: \"\\f41b\"; }\n.bi-hexagon-half::before { content: \"\\f41c\"; }\n.bi-hexagon::before { content: \"\\f41d\"; }\n.bi-hourglass-bottom::before { content: \"\\f41e\"; }\n.bi-hourglass-split::before { content: \"\\f41f\"; }\n.bi-hourglass-top::before { content: \"\\f420\"; }\n.bi-hourglass::before { content: \"\\f421\"; }\n.bi-house-door-fill::before { content: \"\\f422\"; }\n.bi-house-door::before { content: \"\\f423\"; }\n.bi-house-fill::before { content: \"\\f424\"; }\n.bi-house::before { content: \"\\f425\"; }\n.bi-hr::before { content: \"\\f426\"; }\n.bi-hurricane::before { content: \"\\f427\"; }\n.bi-image-alt::before { content: \"\\f428\"; }\n.bi-image-fill::before { content: \"\\f429\"; }\n.bi-image::before { content: \"\\f42a\"; }\n.bi-images::before { content: \"\\f42b\"; }\n.bi-inbox-fill::before { content: \"\\f42c\"; }\n.bi-inbox::before { content: \"\\f42d\"; }\n.bi-inboxes-fill::before { content: \"\\f42e\"; }\n.bi-inboxes::before { content: \"\\f42f\"; }\n.bi-info-circle-fill::before { content: \"\\f430\"; }\n.bi-info-circle::before { content: \"\\f431\"; }\n.bi-info-square-fill::before { content: \"\\f432\"; }\n.bi-info-square::before { content: \"\\f433\"; }\n.bi-info::before { content: \"\\f434\"; }\n.bi-input-cursor-text::before { content: \"\\f435\"; }\n.bi-input-cursor::before { content: \"\\f436\"; }\n.bi-instagram::before { content: \"\\f437\"; }\n.bi-intersect::before { content: \"\\f438\"; }\n.bi-journal-album::before { content: \"\\f439\"; }\n.bi-journal-arrow-down::before { content: \"\\f43a\"; }\n.bi-journal-arrow-up::before { content: \"\\f43b\"; }\n.bi-journal-bookmark-fill::before { content: \"\\f43c\"; }\n.bi-journal-bookmark::before { content: \"\\f43d\"; }\n.bi-journal-check::before { content: \"\\f43e\"; }\n.bi-journal-code::before { content: \"\\f43f\"; }\n.bi-journal-medical::before { content: \"\\f440\"; }\n.bi-journal-minus::before { content: \"\\f441\"; }\n.bi-journal-plus::before { content: \"\\f442\"; }\n.bi-journal-richtext::before { content: \"\\f443\"; }\n.bi-journal-text::before { content: \"\\f444\"; }\n.bi-journal-x::before { content: \"\\f445\"; }\n.bi-journal::before { content: \"\\f446\"; }\n.bi-journals::before { content: \"\\f447\"; }\n.bi-joystick::before { content: \"\\f448\"; }\n.bi-justify-left::before { content: \"\\f449\"; }\n.bi-justify-right::before { content: \"\\f44a\"; }\n.bi-justify::before { content: \"\\f44b\"; }\n.bi-kanban-fill::before { content: \"\\f44c\"; }\n.bi-kanban::before { content: \"\\f44d\"; }\n.bi-key-fill::before { content: \"\\f44e\"; }\n.bi-key::before { content: \"\\f44f\"; }\n.bi-keyboard-fill::before { content: \"\\f450\"; }\n.bi-keyboard::before { content: \"\\f451\"; }\n.bi-ladder::before { content: \"\\f452\"; }\n.bi-lamp-fill::before { content: \"\\f453\"; }\n.bi-lamp::before { content: \"\\f454\"; }\n.bi-laptop-fill::before { content: \"\\f455\"; }\n.bi-laptop::before { content: \"\\f456\"; }\n.bi-layer-backward::before { content: \"\\f457\"; }\n.bi-layer-forward::before { content: \"\\f458\"; }\n.bi-layers-fill::before { content: \"\\f459\"; }\n.bi-layers-half::before { content: \"\\f45a\"; }\n.bi-layers::before { content: \"\\f45b\"; }\n.bi-layout-sidebar-inset-reverse::before { content: \"\\f45c\"; }\n.bi-layout-sidebar-inset::before { content: \"\\f45d\"; }\n.bi-layout-sidebar-reverse::before { content: \"\\f45e\"; }\n.bi-layout-sidebar::before { content: \"\\f45f\"; }\n.bi-layout-split::before { content: \"\\f460\"; }\n.bi-layout-text-sidebar-reverse::before { content: \"\\f461\"; }\n.bi-layout-text-sidebar::before { content: \"\\f462\"; }\n.bi-layout-text-window-reverse::before { content: \"\\f463\"; }\n.bi-layout-text-window::before { content: \"\\f464\"; }\n.bi-layout-three-columns::before { content: \"\\f465\"; }\n.bi-layout-wtf::before { content: \"\\f466\"; }\n.bi-life-preserver::before { content: \"\\f467\"; }\n.bi-lightbulb-fill::before { content: \"\\f468\"; }\n.bi-lightbulb-off-fill::before { content: \"\\f469\"; }\n.bi-lightbulb-off::before { content: \"\\f46a\"; }\n.bi-lightbulb::before { content: \"\\f46b\"; }\n.bi-lightning-charge-fill::before { content: \"\\f46c\"; }\n.bi-lightning-charge::before { content: \"\\f46d\"; }\n.bi-lightning-fill::before { content: \"\\f46e\"; }\n.bi-lightning::before { content: \"\\f46f\"; }\n.bi-link-45deg::before { content: \"\\f470\"; }\n.bi-link::before { content: \"\\f471\"; }\n.bi-linkedin::before { content: \"\\f472\"; }\n.bi-list-check::before { content: \"\\f473\"; }\n.bi-list-nested::before { content: \"\\f474\"; }\n.bi-list-ol::before { content: \"\\f475\"; }\n.bi-list-stars::before { content: \"\\f476\"; }\n.bi-list-task::before { content: \"\\f477\"; }\n.bi-list-ul::before { content: \"\\f478\"; }\n.bi-list::before { content: \"\\f479\"; }\n.bi-lock-fill::before { content: \"\\f47a\"; }\n.bi-lock::before { content: \"\\f47b\"; }\n.bi-mailbox::before { content: \"\\f47c\"; }\n.bi-mailbox2::before { content: \"\\f47d\"; }\n.bi-map-fill::before { content: \"\\f47e\"; }\n.bi-map::before { content: \"\\f47f\"; }\n.bi-markdown-fill::before { content: \"\\f480\"; }\n.bi-markdown::before { content: \"\\f481\"; }\n.bi-mask::before { content: \"\\f482\"; }\n.bi-megaphone-fill::before { content: \"\\f483\"; }\n.bi-megaphone::before { content: \"\\f484\"; }\n.bi-menu-app-fill::before { content: \"\\f485\"; }\n.bi-menu-app::before { content: \"\\f486\"; }\n.bi-menu-button-fill::before { content: \"\\f487\"; }\n.bi-menu-button-wide-fill::before { content: \"\\f488\"; }\n.bi-menu-button-wide::before { content: \"\\f489\"; }\n.bi-menu-button::before { content: \"\\f48a\"; }\n.bi-menu-down::before { content: \"\\f48b\"; }\n.bi-menu-up::before { content: \"\\f48c\"; }\n.bi-mic-fill::before { content: \"\\f48d\"; }\n.bi-mic-mute-fill::before { content: \"\\f48e\"; }\n.bi-mic-mute::before { content: \"\\f48f\"; }\n.bi-mic::before { content: \"\\f490\"; }\n.bi-minecart-loaded::before { content: \"\\f491\"; }\n.bi-minecart::before { content: \"\\f492\"; }\n.bi-moisture::before { content: \"\\f493\"; }\n.bi-moon-fill::before { content: \"\\f494\"; }\n.bi-moon-stars-fill::before { content: \"\\f495\"; }\n.bi-moon-stars::before { content: \"\\f496\"; }\n.bi-moon::before { content: \"\\f497\"; }\n.bi-mouse-fill::before { content: \"\\f498\"; }\n.bi-mouse::before { content: \"\\f499\"; }\n.bi-mouse2-fill::before { content: \"\\f49a\"; }\n.bi-mouse2::before { content: \"\\f49b\"; }\n.bi-mouse3-fill::before { content: \"\\f49c\"; }\n.bi-mouse3::before { content: \"\\f49d\"; }\n.bi-music-note-beamed::before { content: \"\\f49e\"; }\n.bi-music-note-list::before { content: \"\\f49f\"; }\n.bi-music-note::before { content: \"\\f4a0\"; }\n.bi-music-player-fill::before { content: \"\\f4a1\"; }\n.bi-music-player::before { content: \"\\f4a2\"; }\n.bi-newspaper::before { content: \"\\f4a3\"; }\n.bi-node-minus-fill::before { content: \"\\f4a4\"; }\n.bi-node-minus::before { content: \"\\f4a5\"; }\n.bi-node-plus-fill::before { content: \"\\f4a6\"; }\n.bi-node-plus::before { content: \"\\f4a7\"; }\n.bi-nut-fill::before { content: \"\\f4a8\"; }\n.bi-nut::before { content: \"\\f4a9\"; }\n.bi-octagon-fill::before { content: \"\\f4aa\"; }\n.bi-octagon-half::before { content: \"\\f4ab\"; }\n.bi-octagon::before { content: \"\\f4ac\"; }\n.bi-option::before { content: \"\\f4ad\"; }\n.bi-outlet::before { content: \"\\f4ae\"; }\n.bi-paint-bucket::before { content: \"\\f4af\"; }\n.bi-palette-fill::before { content: \"\\f4b0\"; }\n.bi-palette::before { content: \"\\f4b1\"; }\n.bi-palette2::before { content: \"\\f4b2\"; }\n.bi-paperclip::before { content: \"\\f4b3\"; }\n.bi-paragraph::before { content: \"\\f4b4\"; }\n.bi-patch-check-fill::before { content: \"\\f4b5\"; }\n.bi-patch-check::before { content: \"\\f4b6\"; }\n.bi-patch-exclamation-fill::before { content: \"\\f4b7\"; }\n.bi-patch-exclamation::before { content: \"\\f4b8\"; }\n.bi-patch-minus-fill::before { content: \"\\f4b9\"; }\n.bi-patch-minus::before { content: \"\\f4ba\"; }\n.bi-patch-plus-fill::before { content: \"\\f4bb\"; }\n.bi-patch-plus::before { content: \"\\f4bc\"; }\n.bi-patch-question-fill::before { content: \"\\f4bd\"; }\n.bi-patch-question::before { content: \"\\f4be\"; }\n.bi-pause-btn-fill::before { content: \"\\f4bf\"; }\n.bi-pause-btn::before { content: \"\\f4c0\"; }\n.bi-pause-circle-fill::before { content: \"\\f4c1\"; }\n.bi-pause-circle::before { content: \"\\f4c2\"; }\n.bi-pause-fill::before { content: \"\\f4c3\"; }\n.bi-pause::before { content: \"\\f4c4\"; }\n.bi-peace-fill::before { content: \"\\f4c5\"; }\n.bi-peace::before { content: \"\\f4c6\"; }\n.bi-pen-fill::before { content: \"\\f4c7\"; }\n.bi-pen::before { content: \"\\f4c8\"; }\n.bi-pencil-fill::before { content: \"\\f4c9\"; }\n.bi-pencil-square::before { content: \"\\f4ca\"; }\n.bi-pencil::before { content: \"\\f4cb\"; }\n.bi-pentagon-fill::before { content: \"\\f4cc\"; }\n.bi-pentagon-half::before { content: \"\\f4cd\"; }\n.bi-pentagon::before { content: \"\\f4ce\"; }\n.bi-people-fill::before { content: \"\\f4cf\"; }\n.bi-people::before { content: \"\\f4d0\"; }\n.bi-percent::before { content: \"\\f4d1\"; }\n.bi-person-badge-fill::before { content: \"\\f4d2\"; }\n.bi-person-badge::before { content: \"\\f4d3\"; }\n.bi-person-bounding-box::before { content: \"\\f4d4\"; }\n.bi-person-check-fill::before { content: \"\\f4d5\"; }\n.bi-person-check::before { content: \"\\f4d6\"; }\n.bi-person-circle::before { content: \"\\f4d7\"; }\n.bi-person-dash-fill::before { content: \"\\f4d8\"; }\n.bi-person-dash::before { content: \"\\f4d9\"; }\n.bi-person-fill::before { content: \"\\f4da\"; }\n.bi-person-lines-fill::before { content: \"\\f4db\"; }\n.bi-person-plus-fill::before { content: \"\\f4dc\"; }\n.bi-person-plus::before { content: \"\\f4dd\"; }\n.bi-person-square::before { content: \"\\f4de\"; }\n.bi-person-x-fill::before { content: \"\\f4df\"; }\n.bi-person-x::before { content: \"\\f4e0\"; }\n.bi-person::before { content: \"\\f4e1\"; }\n.bi-phone-fill::before { content: \"\\f4e2\"; }\n.bi-phone-landscape-fill::before { content: \"\\f4e3\"; }\n.bi-phone-landscape::before { content: \"\\f4e4\"; }\n.bi-phone-vibrate-fill::before { content: \"\\f4e5\"; }\n.bi-phone-vibrate::before { content: \"\\f4e6\"; }\n.bi-phone::before { content: \"\\f4e7\"; }\n.bi-pie-chart-fill::before { content: \"\\f4e8\"; }\n.bi-pie-chart::before { content: \"\\f4e9\"; }\n.bi-pin-angle-fill::before { content: \"\\f4ea\"; }\n.bi-pin-angle::before { content: \"\\f4eb\"; }\n.bi-pin-fill::before { content: \"\\f4ec\"; }\n.bi-pin::before { content: \"\\f4ed\"; }\n.bi-pip-fill::before { content: \"\\f4ee\"; }\n.bi-pip::before { content: \"\\f4ef\"; }\n.bi-play-btn-fill::before { content: \"\\f4f0\"; }\n.bi-play-btn::before { content: \"\\f4f1\"; }\n.bi-play-circle-fill::before { content: \"\\f4f2\"; }\n.bi-play-circle::before { content: \"\\f4f3\"; }\n.bi-play-fill::before { content: \"\\f4f4\"; }\n.bi-play::before { content: \"\\f4f5\"; }\n.bi-plug-fill::before { content: \"\\f4f6\"; }\n.bi-plug::before { content: \"\\f4f7\"; }\n.bi-plus-circle-dotted::before { content: \"\\f4f8\"; }\n.bi-plus-circle-fill::before { content: \"\\f4f9\"; }\n.bi-plus-circle::before { content: \"\\f4fa\"; }\n.bi-plus-square-dotted::before { content: \"\\f4fb\"; }\n.bi-plus-square-fill::before { content: \"\\f4fc\"; }\n.bi-plus-square::before { content: \"\\f4fd\"; }\n.bi-plus::before { content: \"\\f4fe\"; }\n.bi-power::before { content: \"\\f4ff\"; }\n.bi-printer-fill::before { content: \"\\f500\"; }\n.bi-printer::before { content: \"\\f501\"; }\n.bi-puzzle-fill::before { content: \"\\f502\"; }\n.bi-puzzle::before { content: \"\\f503\"; }\n.bi-question-circle-fill::before { content: \"\\f504\"; }\n.bi-question-circle::before { content: \"\\f505\"; }\n.bi-question-diamond-fill::before { content: \"\\f506\"; }\n.bi-question-diamond::before { content: \"\\f507\"; }\n.bi-question-octagon-fill::before { content: \"\\f508\"; }\n.bi-question-octagon::before { content: \"\\f509\"; }\n.bi-question-square-fill::before { content: \"\\f50a\"; }\n.bi-question-square::before { content: \"\\f50b\"; }\n.bi-question::before { content: \"\\f50c\"; }\n.bi-rainbow::before { content: \"\\f50d\"; }\n.bi-receipt-cutoff::before { content: \"\\f50e\"; }\n.bi-receipt::before { content: \"\\f50f\"; }\n.bi-reception-0::before { content: \"\\f510\"; }\n.bi-reception-1::before { content: \"\\f511\"; }\n.bi-reception-2::before { content: \"\\f512\"; }\n.bi-reception-3::before { content: \"\\f513\"; }\n.bi-reception-4::before { content: \"\\f514\"; }\n.bi-record-btn-fill::before { content: \"\\f515\"; }\n.bi-record-btn::before { content: \"\\f516\"; }\n.bi-record-circle-fill::before { content: \"\\f517\"; }\n.bi-record-circle::before { content: \"\\f518\"; }\n.bi-record-fill::before { content: \"\\f519\"; }\n.bi-record::before { content: \"\\f51a\"; }\n.bi-record2-fill::before { content: \"\\f51b\"; }\n.bi-record2::before { content: \"\\f51c\"; }\n.bi-reply-all-fill::before { content: \"\\f51d\"; }\n.bi-reply-all::before { content: \"\\f51e\"; }\n.bi-reply-fill::before { content: \"\\f51f\"; }\n.bi-reply::before { content: \"\\f520\"; }\n.bi-rss-fill::before { content: \"\\f521\"; }\n.bi-rss::before { content: \"\\f522\"; }\n.bi-rulers::before { content: \"\\f523\"; }\n.bi-save-fill::before { content: \"\\f524\"; }\n.bi-save::before { content: \"\\f525\"; }\n.bi-save2-fill::before { content: \"\\f526\"; }\n.bi-save2::before { content: \"\\f527\"; }\n.bi-scissors::before { content: \"\\f528\"; }\n.bi-screwdriver::before { content: \"\\f529\"; }\n.bi-search::before { content: \"\\f52a\"; }\n.bi-segmented-nav::before { content: \"\\f52b\"; }\n.bi-server::before { content: \"\\f52c\"; }\n.bi-share-fill::before { content: \"\\f52d\"; }\n.bi-share::before { content: \"\\f52e\"; }\n.bi-shield-check::before { content: \"\\f52f\"; }\n.bi-shield-exclamation::before { content: \"\\f530\"; }\n.bi-shield-fill-check::before { content: \"\\f531\"; }\n.bi-shield-fill-exclamation::before { content: \"\\f532\"; }\n.bi-shield-fill-minus::before { content: \"\\f533\"; }\n.bi-shield-fill-plus::before { content: \"\\f534\"; }\n.bi-shield-fill-x::before { content: \"\\f535\"; }\n.bi-shield-fill::before { content: \"\\f536\"; }\n.bi-shield-lock-fill::before { content: \"\\f537\"; }\n.bi-shield-lock::before { content: \"\\f538\"; }\n.bi-shield-minus::before { content: \"\\f539\"; }\n.bi-shield-plus::before { content: \"\\f53a\"; }\n.bi-shield-shaded::before { content: \"\\f53b\"; }\n.bi-shield-slash-fill::before { content: \"\\f53c\"; }\n.bi-shield-slash::before { content: \"\\f53d\"; }\n.bi-shield-x::before { content: \"\\f53e\"; }\n.bi-shield::before { content: \"\\f53f\"; }\n.bi-shift-fill::before { content: \"\\f540\"; }\n.bi-shift::before { content: \"\\f541\"; }\n.bi-shop-window::before { content: \"\\f542\"; }\n.bi-shop::before { content: \"\\f543\"; }\n.bi-shuffle::before { content: \"\\f544\"; }\n.bi-signpost-2-fill::before { content: \"\\f545\"; }\n.bi-signpost-2::before { content: \"\\f546\"; }\n.bi-signpost-fill::before { content: \"\\f547\"; }\n.bi-signpost-split-fill::before { content: \"\\f548\"; }\n.bi-signpost-split::before { content: \"\\f549\"; }\n.bi-signpost::before { content: \"\\f54a\"; }\n.bi-sim-fill::before { content: \"\\f54b\"; }\n.bi-sim::before { content: \"\\f54c\"; }\n.bi-skip-backward-btn-fill::before { content: \"\\f54d\"; }\n.bi-skip-backward-btn::before { content: \"\\f54e\"; }\n.bi-skip-backward-circle-fill::before { content: \"\\f54f\"; }\n.bi-skip-backward-circle::before { content: \"\\f550\"; }\n.bi-skip-backward-fill::before { content: \"\\f551\"; }\n.bi-skip-backward::before { content: \"\\f552\"; }\n.bi-skip-end-btn-fill::before { content: \"\\f553\"; }\n.bi-skip-end-btn::before { content: \"\\f554\"; }\n.bi-skip-end-circle-fill::before { content: \"\\f555\"; }\n.bi-skip-end-circle::before { content: \"\\f556\"; }\n.bi-skip-end-fill::before { content: \"\\f557\"; }\n.bi-skip-end::before { content: \"\\f558\"; }\n.bi-skip-forward-btn-fill::before { content: \"\\f559\"; }\n.bi-skip-forward-btn::before { content: \"\\f55a\"; }\n.bi-skip-forward-circle-fill::before { content: \"\\f55b\"; }\n.bi-skip-forward-circle::before { content: \"\\f55c\"; }\n.bi-skip-forward-fill::before { content: \"\\f55d\"; }\n.bi-skip-forward::before { content: \"\\f55e\"; }\n.bi-skip-start-btn-fill::before { content: \"\\f55f\"; }\n.bi-skip-start-btn::before { content: \"\\f560\"; }\n.bi-skip-start-circle-fill::before { content: \"\\f561\"; }\n.bi-skip-start-circle::before { content: \"\\f562\"; }\n.bi-skip-start-fill::before { content: \"\\f563\"; }\n.bi-skip-start::before { content: \"\\f564\"; }\n.bi-slack::before { content: \"\\f565\"; }\n.bi-slash-circle-fill::before { content: \"\\f566\"; }\n.bi-slash-circle::before { content: \"\\f567\"; }\n.bi-slash-square-fill::before { content: \"\\f568\"; }\n.bi-slash-square::before { content: \"\\f569\"; }\n.bi-slash::before { content: \"\\f56a\"; }\n.bi-sliders::before { content: \"\\f56b\"; }\n.bi-smartwatch::before { content: \"\\f56c\"; }\n.bi-snow::before { content: \"\\f56d\"; }\n.bi-snow2::before { content: \"\\f56e\"; }\n.bi-snow3::before { content: \"\\f56f\"; }\n.bi-sort-alpha-down-alt::before { content: \"\\f570\"; }\n.bi-sort-alpha-down::before { content: \"\\f571\"; }\n.bi-sort-alpha-up-alt::before { content: \"\\f572\"; }\n.bi-sort-alpha-up::before { content: \"\\f573\"; }\n.bi-sort-down-alt::before { content: \"\\f574\"; }\n.bi-sort-down::before { content: \"\\f575\"; }\n.bi-sort-numeric-down-alt::before { content: \"\\f576\"; }\n.bi-sort-numeric-down::before { content: \"\\f577\"; }\n.bi-sort-numeric-up-alt::before { content: \"\\f578\"; }\n.bi-sort-numeric-up::before { content: \"\\f579\"; }\n.bi-sort-up-alt::before { content: \"\\f57a\"; }\n.bi-sort-up::before { content: \"\\f57b\"; }\n.bi-soundwave::before { content: \"\\f57c\"; }\n.bi-speaker-fill::before { content: \"\\f57d\"; }\n.bi-speaker::before { content: \"\\f57e\"; }\n.bi-speedometer::before { content: \"\\f57f\"; }\n.bi-speedometer2::before { content: \"\\f580\"; }\n.bi-spellcheck::before { content: \"\\f581\"; }\n.bi-square-fill::before { content: \"\\f582\"; }\n.bi-square-half::before { content: \"\\f583\"; }\n.bi-square::before { content: \"\\f584\"; }\n.bi-stack::before { content: \"\\f585\"; }\n.bi-star-fill::before { content: \"\\f586\"; }\n.bi-star-half::before { content: \"\\f587\"; }\n.bi-star::before { content: \"\\f588\"; }\n.bi-stars::before { content: \"\\f589\"; }\n.bi-stickies-fill::before { content: \"\\f58a\"; }\n.bi-stickies::before { content: \"\\f58b\"; }\n.bi-sticky-fill::before { content: \"\\f58c\"; }\n.bi-sticky::before { content: \"\\f58d\"; }\n.bi-stop-btn-fill::before { content: \"\\f58e\"; }\n.bi-stop-btn::before { content: \"\\f58f\"; }\n.bi-stop-circle-fill::before { content: \"\\f590\"; }\n.bi-stop-circle::before { content: \"\\f591\"; }\n.bi-stop-fill::before { content: \"\\f592\"; }\n.bi-stop::before { content: \"\\f593\"; }\n.bi-stoplights-fill::before { content: \"\\f594\"; }\n.bi-stoplights::before { content: \"\\f595\"; }\n.bi-stopwatch-fill::before { content: \"\\f596\"; }\n.bi-stopwatch::before { content: \"\\f597\"; }\n.bi-subtract::before { content: \"\\f598\"; }\n.bi-suit-club-fill::before { content: \"\\f599\"; }\n.bi-suit-club::before { content: \"\\f59a\"; }\n.bi-suit-diamond-fill::before { content: \"\\f59b\"; }\n.bi-suit-diamond::before { content: \"\\f59c\"; }\n.bi-suit-heart-fill::before { content: \"\\f59d\"; }\n.bi-suit-heart::before { content: \"\\f59e\"; }\n.bi-suit-spade-fill::before { content: \"\\f59f\"; }\n.bi-suit-spade::before { content: \"\\f5a0\"; }\n.bi-sun-fill::before { content: \"\\f5a1\"; }\n.bi-sun::before { content: \"\\f5a2\"; }\n.bi-sunglasses::before { content: \"\\f5a3\"; }\n.bi-sunrise-fill::before { content: \"\\f5a4\"; }\n.bi-sunrise::before { content: \"\\f5a5\"; }\n.bi-sunset-fill::before { content: \"\\f5a6\"; }\n.bi-sunset::before { content: \"\\f5a7\"; }\n.bi-symmetry-horizontal::before { content: \"\\f5a8\"; }\n.bi-symmetry-vertical::before { content: \"\\f5a9\"; }\n.bi-table::before { content: \"\\f5aa\"; }\n.bi-tablet-fill::before { content: \"\\f5ab\"; }\n.bi-tablet-landscape-fill::before { content: \"\\f5ac\"; }\n.bi-tablet-landscape::before { content: \"\\f5ad\"; }\n.bi-tablet::before { content: \"\\f5ae\"; }\n.bi-tag-fill::before { content: \"\\f5af\"; }\n.bi-tag::before { content: \"\\f5b0\"; }\n.bi-tags-fill::before { content: \"\\f5b1\"; }\n.bi-tags::before { content: \"\\f5b2\"; }\n.bi-telegram::before { content: \"\\f5b3\"; }\n.bi-telephone-fill::before { content: \"\\f5b4\"; }\n.bi-telephone-forward-fill::before { content: \"\\f5b5\"; }\n.bi-telephone-forward::before { content: \"\\f5b6\"; }\n.bi-telephone-inbound-fill::before { content: \"\\f5b7\"; }\n.bi-telephone-inbound::before { content: \"\\f5b8\"; }\n.bi-telephone-minus-fill::before { content: \"\\f5b9\"; }\n.bi-telephone-minus::before { content: \"\\f5ba\"; }\n.bi-telephone-outbound-fill::before { content: \"\\f5bb\"; }\n.bi-telephone-outbound::before { content: \"\\f5bc\"; }\n.bi-telephone-plus-fill::before { content: \"\\f5bd\"; }\n.bi-telephone-plus::before { content: \"\\f5be\"; }\n.bi-telephone-x-fill::before { content: \"\\f5bf\"; }\n.bi-telephone-x::before { content: \"\\f5c0\"; }\n.bi-telephone::before { content: \"\\f5c1\"; }\n.bi-terminal-fill::before { content: \"\\f5c2\"; }\n.bi-terminal::before { content: \"\\f5c3\"; }\n.bi-text-center::before { content: \"\\f5c4\"; }\n.bi-text-indent-left::before { content: \"\\f5c5\"; }\n.bi-text-indent-right::before { content: \"\\f5c6\"; }\n.bi-text-left::before { content: \"\\f5c7\"; }\n.bi-text-paragraph::before { content: \"\\f5c8\"; }\n.bi-text-right::before { content: \"\\f5c9\"; }\n.bi-textarea-resize::before { content: \"\\f5ca\"; }\n.bi-textarea-t::before { content: \"\\f5cb\"; }\n.bi-textarea::before { content: \"\\f5cc\"; }\n.bi-thermometer-half::before { content: \"\\f5cd\"; }\n.bi-thermometer-high::before { content: \"\\f5ce\"; }\n.bi-thermometer-low::before { content: \"\\f5cf\"; }\n.bi-thermometer-snow::before { content: \"\\f5d0\"; }\n.bi-thermometer-sun::before { content: \"\\f5d1\"; }\n.bi-thermometer::before { content: \"\\f5d2\"; }\n.bi-three-dots-vertical::before { content: \"\\f5d3\"; }\n.bi-three-dots::before { content: \"\\f5d4\"; }\n.bi-toggle-off::before { content: \"\\f5d5\"; }\n.bi-toggle-on::before { content: \"\\f5d6\"; }\n.bi-toggle2-off::before { content: \"\\f5d7\"; }\n.bi-toggle2-on::before { content: \"\\f5d8\"; }\n.bi-toggles::before { content: \"\\f5d9\"; }\n.bi-toggles2::before { content: \"\\f5da\"; }\n.bi-tools::before { content: \"\\f5db\"; }\n.bi-tornado::before { content: \"\\f5dc\"; }\n.bi-trash-fill::before { content: \"\\f5dd\"; }\n.bi-trash::before { content: \"\\f5de\"; }\n.bi-trash2-fill::before { content: \"\\f5df\"; }\n.bi-trash2::before { content: \"\\f5e0\"; }\n.bi-tree-fill::before { content: \"\\f5e1\"; }\n.bi-tree::before { content: \"\\f5e2\"; }\n.bi-triangle-fill::before { content: \"\\f5e3\"; }\n.bi-triangle-half::before { content: \"\\f5e4\"; }\n.bi-triangle::before { content: \"\\f5e5\"; }\n.bi-trophy-fill::before { content: \"\\f5e6\"; }\n.bi-trophy::before { content: \"\\f5e7\"; }\n.bi-tropical-storm::before { content: \"\\f5e8\"; }\n.bi-truck-flatbed::before { content: \"\\f5e9\"; }\n.bi-truck::before { content: \"\\f5ea\"; }\n.bi-tsunami::before { content: \"\\f5eb\"; }\n.bi-tv-fill::before { content: \"\\f5ec\"; }\n.bi-tv::before { content: \"\\f5ed\"; }\n.bi-twitch::before { content: \"\\f5ee\"; }\n.bi-twitter::before { content: \"\\f5ef\"; }\n.bi-type-bold::before { content: \"\\f5f0\"; }\n.bi-type-h1::before { content: \"\\f5f1\"; }\n.bi-type-h2::before { content: \"\\f5f2\"; }\n.bi-type-h3::before { content: \"\\f5f3\"; }\n.bi-type-italic::before { content: \"\\f5f4\"; }\n.bi-type-strikethrough::before { content: \"\\f5f5\"; }\n.bi-type-underline::before { content: \"\\f5f6\"; }\n.bi-type::before { content: \"\\f5f7\"; }\n.bi-ui-checks-grid::before { content: \"\\f5f8\"; }\n.bi-ui-checks::before { content: \"\\f5f9\"; }\n.bi-ui-radios-grid::before { content: \"\\f5fa\"; }\n.bi-ui-radios::before { content: \"\\f5fb\"; }\n.bi-umbrella-fill::before { content: \"\\f5fc\"; }\n.bi-umbrella::before { content: \"\\f5fd\"; }\n.bi-union::before { content: \"\\f5fe\"; }\n.bi-unlock-fill::before { content: \"\\f5ff\"; }\n.bi-unlock::before { content: \"\\f600\"; }\n.bi-upc-scan::before { content: \"\\f601\"; }\n.bi-upc::before { content: \"\\f602\"; }\n.bi-upload::before { content: \"\\f603\"; }\n.bi-vector-pen::before { content: \"\\f604\"; }\n.bi-view-list::before { content: \"\\f605\"; }\n.bi-view-stacked::before { content: \"\\f606\"; }\n.bi-vinyl-fill::before { content: \"\\f607\"; }\n.bi-vinyl::before { content: \"\\f608\"; }\n.bi-voicemail::before { content: \"\\f609\"; }\n.bi-volume-down-fill::before { content: \"\\f60a\"; }\n.bi-volume-down::before { content: \"\\f60b\"; }\n.bi-volume-mute-fill::before { content: \"\\f60c\"; }\n.bi-volume-mute::before { content: \"\\f60d\"; }\n.bi-volume-off-fill::before { content: \"\\f60e\"; }\n.bi-volume-off::before { content: \"\\f60f\"; }\n.bi-volume-up-fill::before { content: \"\\f610\"; }\n.bi-volume-up::before { content: \"\\f611\"; }\n.bi-vr::before { content: \"\\f612\"; }\n.bi-wallet-fill::before { content: \"\\f613\"; }\n.bi-wallet::before { content: \"\\f614\"; }\n.bi-wallet2::before { content: \"\\f615\"; }\n.bi-watch::before { content: \"\\f616\"; }\n.bi-water::before { content: \"\\f617\"; }\n.bi-whatsapp::before { content: \"\\f618\"; }\n.bi-wifi-1::before { content: \"\\f619\"; }\n.bi-wifi-2::before { content: \"\\f61a\"; }\n.bi-wifi-off::before { content: \"\\f61b\"; }\n.bi-wifi::before { content: \"\\f61c\"; }\n.bi-wind::before { content: \"\\f61d\"; }\n.bi-window-dock::before { content: \"\\f61e\"; }\n.bi-window-sidebar::before { content: \"\\f61f\"; }\n.bi-window::before { content: \"\\f620\"; }\n.bi-wrench::before { content: \"\\f621\"; }\n.bi-x-circle-fill::before { content: \"\\f622\"; }\n.bi-x-circle::before { content: \"\\f623\"; }\n.bi-x-diamond-fill::before { content: \"\\f624\"; }\n.bi-x-diamond::before { content: \"\\f625\"; }\n.bi-x-octagon-fill::before { content: \"\\f626\"; }\n.bi-x-octagon::before { content: \"\\f627\"; }\n.bi-x-square-fill::before { content: \"\\f628\"; }\n.bi-x-square::before { content: \"\\f629\"; }\n.bi-x::before { content: \"\\f62a\"; }\n.bi-youtube::before { content: \"\\f62b\"; }\n.bi-zoom-in::before { content: \"\\f62c\"; }\n.bi-zoom-out::before { content: \"\\f62d\"; }\n.bi-bank::before { content: \"\\f62e\"; }\n.bi-bank2::before { content: \"\\f62f\"; }\n.bi-bell-slash-fill::before { content: \"\\f630\"; }\n.bi-bell-slash::before { content: \"\\f631\"; }\n.bi-cash-coin::before { content: \"\\f632\"; }\n.bi-check-lg::before { content: \"\\f633\"; }\n.bi-coin::before { content: \"\\f634\"; }\n.bi-currency-bitcoin::before { content: \"\\f635\"; }\n.bi-currency-dollar::before { content: \"\\f636\"; }\n.bi-currency-euro::before { content: \"\\f637\"; }\n.bi-currency-exchange::before { content: \"\\f638\"; }\n.bi-currency-pound::before { content: \"\\f639\"; }\n.bi-currency-yen::before { content: \"\\f63a\"; }\n.bi-dash-lg::before { content: \"\\f63b\"; }\n.bi-exclamation-lg::before { content: \"\\f63c\"; }\n.bi-file-earmark-pdf-fill::before { content: \"\\f63d\"; }\n.bi-file-earmark-pdf::before { content: \"\\f63e\"; }\n.bi-file-pdf-fill::before { content: \"\\f63f\"; }\n.bi-file-pdf::before { content: \"\\f640\"; }\n.bi-gender-ambiguous::before { content: \"\\f641\"; }\n.bi-gender-female::before { content: \"\\f642\"; }\n.bi-gender-male::before { content: \"\\f643\"; }\n.bi-gender-trans::before { content: \"\\f644\"; }\n.bi-headset-vr::before { content: \"\\f645\"; }\n.bi-info-lg::before { content: \"\\f646\"; }\n.bi-mastodon::before { content: \"\\f647\"; }\n.bi-messenger::before { content: \"\\f648\"; }\n.bi-piggy-bank-fill::before { content: \"\\f649\"; }\n.bi-piggy-bank::before { content: \"\\f64a\"; }\n.bi-pin-map-fill::before { content: \"\\f64b\"; }\n.bi-pin-map::before { content: \"\\f64c\"; }\n.bi-plus-lg::before { content: \"\\f64d\"; }\n.bi-question-lg::before { content: \"\\f64e\"; }\n.bi-recycle::before { content: \"\\f64f\"; }\n.bi-reddit::before { content: \"\\f650\"; }\n.bi-safe-fill::before { content: \"\\f651\"; }\n.bi-safe2-fill::before { content: \"\\f652\"; }\n.bi-safe2::before { content: \"\\f653\"; }\n.bi-sd-card-fill::before { content: \"\\f654\"; }\n.bi-sd-card::before { content: \"\\f655\"; }\n.bi-skype::before { content: \"\\f656\"; }\n.bi-slash-lg::before { content: \"\\f657\"; }\n.bi-translate::before { content: \"\\f658\"; }\n.bi-x-lg::before { content: \"\\f659\"; }\n.bi-safe::before { content: \"\\f65a\"; }\n.bi-apple::before { content: \"\\f65b\"; }\n.bi-microsoft::before { content: \"\\f65d\"; }\n.bi-windows::before { content: \"\\f65e\"; }\n.bi-behance::before { content: \"\\f65c\"; }\n.bi-dribbble::before { content: \"\\f65f\"; }\n.bi-line::before { content: \"\\f660\"; }\n.bi-medium::before { content: \"\\f661\"; }\n.bi-paypal::before { content: \"\\f662\"; }\n.bi-pinterest::before { content: \"\\f663\"; }\n.bi-signal::before { content: \"\\f664\"; }\n.bi-snapchat::before { content: \"\\f665\"; }\n.bi-spotify::before { content: \"\\f666\"; }\n.bi-stack-overflow::before { content: \"\\f667\"; }\n.bi-strava::before { content: \"\\f668\"; }\n.bi-wordpress::before { content: \"\\f669\"; }\n.bi-vimeo::before { content: \"\\f66a\"; }\n.bi-activity::before { content: \"\\f66b\"; }\n.bi-easel2-fill::before { content: \"\\f66c\"; }\n.bi-easel2::before { content: \"\\f66d\"; }\n.bi-easel3-fill::before { content: \"\\f66e\"; }\n.bi-easel3::before { content: \"\\f66f\"; }\n.bi-fan::before { content: \"\\f670\"; }\n.bi-fingerprint::before { content: \"\\f671\"; }\n.bi-graph-down-arrow::before { content: \"\\f672\"; }\n.bi-graph-up-arrow::before { content: \"\\f673\"; }\n.bi-hypnotize::before { content: \"\\f674\"; }\n.bi-magic::before { content: \"\\f675\"; }\n.bi-person-rolodex::before { content: \"\\f676\"; }\n.bi-person-video::before { content: \"\\f677\"; }\n.bi-person-video2::before { content: \"\\f678\"; }\n.bi-person-video3::before { content: \"\\f679\"; }\n.bi-person-workspace::before { content: \"\\f67a\"; }\n.bi-radioactive::before { content: \"\\f67b\"; }\n.bi-webcam-fill::before { content: \"\\f67c\"; }\n.bi-webcam::before { content: \"\\f67d\"; }\n.bi-yin-yang::before { content: \"\\f67e\"; }\n.bi-bandaid-fill::before { content: \"\\f680\"; }\n.bi-bandaid::before { content: \"\\f681\"; }\n.bi-bluetooth::before { content: \"\\f682\"; }\n.bi-body-text::before { content: \"\\f683\"; }\n.bi-boombox::before { content: \"\\f684\"; }\n.bi-boxes::before { content: \"\\f685\"; }\n.bi-dpad-fill::before { content: \"\\f686\"; }\n.bi-dpad::before { content: \"\\f687\"; }\n.bi-ear-fill::before { content: \"\\f688\"; }\n.bi-ear::before { content: \"\\f689\"; }\n.bi-envelope-check-1::before { content: \"\\f68a\"; }\n.bi-envelope-check-fill::before { content: \"\\f68b\"; }\n.bi-envelope-check::before { content: \"\\f68c\"; }\n.bi-envelope-dash-1::before { content: \"\\f68d\"; }\n.bi-envelope-dash-fill::before { content: \"\\f68e\"; }\n.bi-envelope-dash::before { content: \"\\f68f\"; }\n.bi-envelope-exclamation-1::before { content: \"\\f690\"; }\n.bi-envelope-exclamation-fill::before { content: \"\\f691\"; }\n.bi-envelope-exclamation::before { content: \"\\f692\"; }\n.bi-envelope-plus-fill::before { content: \"\\f693\"; }\n.bi-envelope-plus::before { content: \"\\f694\"; }\n.bi-envelope-slash-1::before { content: \"\\f695\"; }\n.bi-envelope-slash-fill::before { content: \"\\f696\"; }\n.bi-envelope-slash::before { content: \"\\f697\"; }\n.bi-envelope-x-1::before { content: \"\\f698\"; }\n.bi-envelope-x-fill::before { content: \"\\f699\"; }\n.bi-envelope-x::before { content: \"\\f69a\"; }\n.bi-explicit-fill::before { content: \"\\f69b\"; }\n.bi-explicit::before { content: \"\\f69c\"; }\n.bi-git::before { content: \"\\f69d\"; }\n.bi-infinity::before { content: \"\\f69e\"; }\n.bi-list-columns-reverse::before { content: \"\\f69f\"; }\n.bi-list-columns::before { content: \"\\f6a0\"; }\n.bi-meta::before { content: \"\\f6a1\"; }\n.bi-mortorboard-fill::before { content: \"\\f6a2\"; }\n.bi-mortorboard::before { content: \"\\f6a3\"; }\n.bi-nintendo-switch::before { content: \"\\f6a4\"; }\n.bi-pc-display-horizontal::before { content: \"\\f6a5\"; }\n.bi-pc-display::before { content: \"\\f6a6\"; }\n.bi-pc-horizontal::before { content: \"\\f6a7\"; }\n.bi-pc::before { content: \"\\f6a8\"; }\n.bi-playstation::before { content: \"\\f6a9\"; }\n.bi-plus-slash-minus::before { content: \"\\f6aa\"; }\n.bi-projector-fill::before { content: \"\\f6ab\"; }\n.bi-projector::before { content: \"\\f6ac\"; }\n.bi-qr-code-scan::before { content: \"\\f6ad\"; }\n.bi-qr-code::before { content: \"\\f6ae\"; }\n.bi-quora::before { content: \"\\f6af\"; }\n.bi-quote::before { content: \"\\f6b0\"; }\n.bi-robot::before { content: \"\\f6b1\"; }\n.bi-send-check-fill::before { content: \"\\f6b2\"; }\n.bi-send-check::before { content: \"\\f6b3\"; }\n.bi-send-dash-fill::before { content: \"\\f6b4\"; }\n.bi-send-dash::before { content: \"\\f6b5\"; }\n.bi-send-exclamation-1::before { content: \"\\f6b6\"; }\n.bi-send-exclamation-fill::before { content: \"\\f6b7\"; }\n.bi-send-exclamation::before { content: \"\\f6b8\"; }\n.bi-send-fill::before { content: \"\\f6b9\"; }\n.bi-send-plus-fill::before { content: \"\\f6ba\"; }\n.bi-send-plus::before { content: \"\\f6bb\"; }\n.bi-send-slash-fill::before { content: \"\\f6bc\"; }\n.bi-send-slash::before { content: \"\\f6bd\"; }\n.bi-send-x-fill::before { content: \"\\f6be\"; }\n.bi-send-x::before { content: \"\\f6bf\"; }\n.bi-send::before { content: \"\\f6c0\"; }\n.bi-steam::before { content: \"\\f6c1\"; }\n.bi-terminal-dash-1::before { content: \"\\f6c2\"; }\n.bi-terminal-dash::before { content: \"\\f6c3\"; }\n.bi-terminal-plus::before { content: \"\\f6c4\"; }\n.bi-terminal-split::before { content: \"\\f6c5\"; }\n.bi-ticket-detailed-fill::before { content: \"\\f6c6\"; }\n.bi-ticket-detailed::before { content: \"\\f6c7\"; }\n.bi-ticket-fill::before { content: \"\\f6c8\"; }\n.bi-ticket-perforated-fill::before { content: \"\\f6c9\"; }\n.bi-ticket-perforated::before { content: \"\\f6ca\"; }\n.bi-ticket::before { content: \"\\f6cb\"; }\n.bi-tiktok::before { content: \"\\f6cc\"; }\n.bi-window-dash::before { content: \"\\f6cd\"; }\n.bi-window-desktop::before { content: \"\\f6ce\"; }\n.bi-window-fullscreen::before { content: \"\\f6cf\"; }\n.bi-window-plus::before { content: \"\\f6d0\"; }\n.bi-window-split::before { content: \"\\f6d1\"; }\n.bi-window-stack::before { content: \"\\f6d2\"; }\n.bi-window-x::before { content: \"\\f6d3\"; }\n.bi-xbox::before { content: \"\\f6d4\"; }\n.bi-ethernet::before { content: \"\\f6d5\"; }\n.bi-hdmi-fill::before { content: \"\\f6d6\"; }\n.bi-hdmi::before { content: \"\\f6d7\"; }\n.bi-usb-c-fill::before { content: \"\\f6d8\"; }\n.bi-usb-c::before { content: \"\\f6d9\"; }\n.bi-usb-fill::before { content: \"\\f6da\"; }\n.bi-usb-plug-fill::before { content: \"\\f6db\"; }\n.bi-usb-plug::before { content: \"\\f6dc\"; }\n.bi-usb-symbol::before { content: \"\\f6dd\"; }\n.bi-usb::before { content: \"\\f6de\"; }\n.bi-boombox-fill::before { content: \"\\f6df\"; }\n.bi-displayport-1::before { content: \"\\f6e0\"; }\n.bi-displayport::before { content: \"\\f6e1\"; }\n.bi-gpu-card::before { content: \"\\f6e2\"; }\n.bi-memory::before { content: \"\\f6e3\"; }\n.bi-modem-fill::before { content: \"\\f6e4\"; }\n.bi-modem::before { content: \"\\f6e5\"; }\n.bi-motherboard-fill::before { content: \"\\f6e6\"; }\n.bi-motherboard::before { content: \"\\f6e7\"; }\n.bi-optical-audio-fill::before { content: \"\\f6e8\"; }\n.bi-optical-audio::before { content: \"\\f6e9\"; }\n.bi-pci-card::before { content: \"\\f6ea\"; }\n.bi-router-fill::before { content: \"\\f6eb\"; }\n.bi-router::before { content: \"\\f6ec\"; }\n.bi-ssd-fill::before { content: \"\\f6ed\"; }\n.bi-ssd::before { content: \"\\f6ee\"; }\n.bi-thunderbolt-fill::before { content: \"\\f6ef\"; }\n.bi-thunderbolt::before { content: \"\\f6f0\"; }\n.bi-usb-drive-fill::before { content: \"\\f6f1\"; }\n.bi-usb-drive::before { content: \"\\f6f2\"; }\n.bi-usb-micro-fill::before { content: \"\\f6f3\"; }\n.bi-usb-micro::before { content: \"\\f6f4\"; }\n.bi-usb-mini-fill::before { content: \"\\f6f5\"; }\n.bi-usb-mini::before { content: \"\\f6f6\"; }\n.bi-cloud-haze2::before { content: \"\\f6f7\"; }\n.bi-device-hdd-fill::before { content: \"\\f6f8\"; }\n.bi-device-hdd::before { content: \"\\f6f9\"; }\n.bi-device-ssd-fill::before { content: \"\\f6fa\"; }\n.bi-device-ssd::before { content: \"\\f6fb\"; }\n.bi-displayport-fill::before { content: \"\\f6fc\"; }\n.bi-mortarboard-fill::before { content: \"\\f6fd\"; }\n.bi-mortarboard::before { content: \"\\f6fe\"; }\n.bi-terminal-x::before { content: \"\\f6ff\"; }\n.bi-arrow-through-heart-fill::before { content: \"\\f700\"; }\n.bi-arrow-through-heart::before { content: \"\\f701\"; }\n.bi-badge-sd-fill::before { content: \"\\f702\"; }\n.bi-badge-sd::before { content: \"\\f703\"; }\n.bi-bag-heart-fill::before { content: \"\\f704\"; }\n.bi-bag-heart::before { content: \"\\f705\"; }\n.bi-balloon-fill::before { content: \"\\f706\"; }\n.bi-balloon-heart-fill::before { content: \"\\f707\"; }\n.bi-balloon-heart::before { content: \"\\f708\"; }\n.bi-balloon::before { content: \"\\f709\"; }\n.bi-box2-fill::before { content: \"\\f70a\"; }\n.bi-box2-heart-fill::before { content: \"\\f70b\"; }\n.bi-box2-heart::before { content: \"\\f70c\"; }\n.bi-box2::before { content: \"\\f70d\"; }\n.bi-braces-asterisk::before { content: \"\\f70e\"; }\n.bi-calendar-heart-fill::before { content: \"\\f70f\"; }\n.bi-calendar-heart::before { content: \"\\f710\"; }\n.bi-calendar2-heart-fill::before { content: \"\\f711\"; }\n.bi-calendar2-heart::before { content: \"\\f712\"; }\n.bi-chat-heart-fill::before { content: \"\\f713\"; }\n.bi-chat-heart::before { content: \"\\f714\"; }\n.bi-chat-left-heart-fill::before { content: \"\\f715\"; }\n.bi-chat-left-heart::before { content: \"\\f716\"; }\n.bi-chat-right-heart-fill::before { content: \"\\f717\"; }\n.bi-chat-right-heart::before { content: \"\\f718\"; }\n.bi-chat-square-heart-fill::before { content: \"\\f719\"; }\n.bi-chat-square-heart::before { content: \"\\f71a\"; }\n.bi-clipboard-check-fill::before { content: \"\\f71b\"; }\n.bi-clipboard-data-fill::before { content: \"\\f71c\"; }\n.bi-clipboard-fill::before { content: \"\\f71d\"; }\n.bi-clipboard-heart-fill::before { content: \"\\f71e\"; }\n.bi-clipboard-heart::before { content: \"\\f71f\"; }\n.bi-clipboard-minus-fill::before { content: \"\\f720\"; }\n.bi-clipboard-plus-fill::before { content: \"\\f721\"; }\n.bi-clipboard-pulse::before { content: \"\\f722\"; }\n.bi-clipboard-x-fill::before { content: \"\\f723\"; }\n.bi-clipboard2-check-fill::before { content: \"\\f724\"; }\n.bi-clipboard2-check::before { content: \"\\f725\"; }\n.bi-clipboard2-data-fill::before { content: \"\\f726\"; }\n.bi-clipboard2-data::before { content: \"\\f727\"; }\n.bi-clipboard2-fill::before { content: \"\\f728\"; }\n.bi-clipboard2-heart-fill::before { content: \"\\f729\"; }\n.bi-clipboard2-heart::before { content: \"\\f72a\"; }\n.bi-clipboard2-minus-fill::before { content: \"\\f72b\"; }\n.bi-clipboard2-minus::before { content: \"\\f72c\"; }\n.bi-clipboard2-plus-fill::before { content: \"\\f72d\"; }\n.bi-clipboard2-plus::before { content: \"\\f72e\"; }\n.bi-clipboard2-pulse-fill::before { content: \"\\f72f\"; }\n.bi-clipboard2-pulse::before { content: \"\\f730\"; }\n.bi-clipboard2-x-fill::before { content: \"\\f731\"; }\n.bi-clipboard2-x::before { content: \"\\f732\"; }\n.bi-clipboard2::before { content: \"\\f733\"; }\n.bi-emoji-kiss-fill::before { content: \"\\f734\"; }\n.bi-emoji-kiss::before { content: \"\\f735\"; }\n.bi-envelope-heart-fill::before { content: \"\\f736\"; }\n.bi-envelope-heart::before { content: \"\\f737\"; }\n.bi-envelope-open-heart-fill::before { content: \"\\f738\"; }\n.bi-envelope-open-heart::before { content: \"\\f739\"; }\n.bi-envelope-paper-fill::before { content: \"\\f73a\"; }\n.bi-envelope-paper-heart-fill::before { content: \"\\f73b\"; }\n.bi-envelope-paper-heart::before { content: \"\\f73c\"; }\n.bi-envelope-paper::before { content: \"\\f73d\"; }\n.bi-filetype-aac::before { content: \"\\f73e\"; }\n.bi-filetype-ai::before { content: \"\\f73f\"; }\n.bi-filetype-bmp::before { content: \"\\f740\"; }\n.bi-filetype-cs::before { content: \"\\f741\"; }\n.bi-filetype-css::before { content: \"\\f742\"; }\n.bi-filetype-csv::before { content: \"\\f743\"; }\n.bi-filetype-doc::before { content: \"\\f744\"; }\n.bi-filetype-docx::before { content: \"\\f745\"; }\n.bi-filetype-exe::before { content: \"\\f746\"; }\n.bi-filetype-gif::before { content: \"\\f747\"; }\n.bi-filetype-heic::before { content: \"\\f748\"; }\n.bi-filetype-html::before { content: \"\\f749\"; }\n.bi-filetype-java::before { content: \"\\f74a\"; }\n.bi-filetype-jpg::before { content: \"\\f74b\"; }\n.bi-filetype-js::before { content: \"\\f74c\"; }\n.bi-filetype-jsx::before { content: \"\\f74d\"; }\n.bi-filetype-key::before { content: \"\\f74e\"; }\n.bi-filetype-m4p::before { content: \"\\f74f\"; }\n.bi-filetype-md::before { content: \"\\f750\"; }\n.bi-filetype-mdx::before { content: \"\\f751\"; }\n.bi-filetype-mov::before { content: \"\\f752\"; }\n.bi-filetype-mp3::before { content: \"\\f753\"; }\n.bi-filetype-mp4::before { content: \"\\f754\"; }\n.bi-filetype-otf::before { content: \"\\f755\"; }\n.bi-filetype-pdf::before { content: \"\\f756\"; }\n.bi-filetype-php::before { content: \"\\f757\"; }\n.bi-filetype-png::before { content: \"\\f758\"; }\n.bi-filetype-ppt-1::before { content: \"\\f759\"; }\n.bi-filetype-ppt::before { content: \"\\f75a\"; }\n.bi-filetype-psd::before { content: \"\\f75b\"; }\n.bi-filetype-py::before { content: \"\\f75c\"; }\n.bi-filetype-raw::before { content: \"\\f75d\"; }\n.bi-filetype-rb::before { content: \"\\f75e\"; }\n.bi-filetype-sass::before { content: \"\\f75f\"; }\n.bi-filetype-scss::before { content: \"\\f760\"; }\n.bi-filetype-sh::before { content: \"\\f761\"; }\n.bi-filetype-svg::before { content: \"\\f762\"; }\n.bi-filetype-tiff::before { content: \"\\f763\"; }\n.bi-filetype-tsx::before { content: \"\\f764\"; }\n.bi-filetype-ttf::before { content: \"\\f765\"; }\n.bi-filetype-txt::before { content: \"\\f766\"; }\n.bi-filetype-wav::before { content: \"\\f767\"; }\n.bi-filetype-woff::before { content: \"\\f768\"; }\n.bi-filetype-xls-1::before { content: \"\\f769\"; }\n.bi-filetype-xls::before { content: \"\\f76a\"; }\n.bi-filetype-xml::before { content: \"\\f76b\"; }\n.bi-filetype-yml::before { content: \"\\f76c\"; }\n.bi-heart-arrow::before { content: \"\\f76d\"; }\n.bi-heart-pulse-fill::before { content: \"\\f76e\"; }\n.bi-heart-pulse::before { content: \"\\f76f\"; }\n.bi-heartbreak-fill::before { content: \"\\f770\"; }\n.bi-heartbreak::before { content: \"\\f771\"; }\n.bi-hearts::before { content: \"\\f772\"; }\n.bi-hospital-fill::before { content: \"\\f773\"; }\n.bi-hospital::before { content: \"\\f774\"; }\n.bi-house-heart-fill::before { content: \"\\f775\"; }\n.bi-house-heart::before { content: \"\\f776\"; }\n.bi-incognito::before { content: \"\\f777\"; }\n.bi-magnet-fill::before { content: \"\\f778\"; }\n.bi-magnet::before { content: \"\\f779\"; }\n.bi-person-heart::before { content: \"\\f77a\"; }\n.bi-person-hearts::before { content: \"\\f77b\"; }\n.bi-phone-flip::before { content: \"\\f77c\"; }\n.bi-plugin::before { content: \"\\f77d\"; }\n.bi-postage-fill::before { content: \"\\f77e\"; }\n.bi-postage-heart-fill::before { content: \"\\f77f\"; }\n.bi-postage-heart::before { content: \"\\f780\"; }\n.bi-postage::before { content: \"\\f781\"; }\n.bi-postcard-fill::before { content: \"\\f782\"; }\n.bi-postcard-heart-fill::before { content: \"\\f783\"; }\n.bi-postcard-heart::before { content: \"\\f784\"; }\n.bi-postcard::before { content: \"\\f785\"; }\n.bi-search-heart-fill::before { content: \"\\f786\"; }\n.bi-search-heart::before { content: \"\\f787\"; }\n.bi-sliders2-vertical::before { content: \"\\f788\"; }\n.bi-sliders2::before { content: \"\\f789\"; }\n.bi-trash3-fill::before { content: \"\\f78a\"; }\n.bi-trash3::before { content: \"\\f78b\"; }\n.bi-valentine::before { content: \"\\f78c\"; }\n.bi-valentine2::before { content: \"\\f78d\"; }\n.bi-wrench-adjustable-circle-fill::before { content: \"\\f78e\"; }\n.bi-wrench-adjustable-circle::before { content: \"\\f78f\"; }\n.bi-wrench-adjustable::before { content: \"\\f790\"; }\n.bi-filetype-json::before { content: \"\\f791\"; }\n.bi-filetype-pptx::before { content: \"\\f792\"; }\n.bi-filetype-xlsx::before { content: \"\\f793\"; }\n.bi-1-circle-1::before { content: \"\\f794\"; }\n.bi-1-circle-fill-1::before { content: \"\\f795\"; }\n.bi-1-circle-fill::before { content: \"\\f796\"; }\n.bi-1-circle::before { content: \"\\f797\"; }\n.bi-1-square-fill::before { content: \"\\f798\"; }\n.bi-1-square::before { content: \"\\f799\"; }\n.bi-2-circle-1::before { content: \"\\f79a\"; }\n.bi-2-circle-fill-1::before { content: \"\\f79b\"; }\n.bi-2-circle-fill::before { content: \"\\f79c\"; }\n.bi-2-circle::before { content: \"\\f79d\"; }\n.bi-2-square-fill::before { content: \"\\f79e\"; }\n.bi-2-square::before { content: \"\\f79f\"; }\n.bi-3-circle-1::before { content: \"\\f7a0\"; }\n.bi-3-circle-fill-1::before { content: \"\\f7a1\"; }\n.bi-3-circle-fill::before { content: \"\\f7a2\"; }\n.bi-3-circle::before { content: \"\\f7a3\"; }\n.bi-3-square-fill::before { content: \"\\f7a4\"; }\n.bi-3-square::before { content: \"\\f7a5\"; }\n.bi-4-circle-1::before { content: \"\\f7a6\"; }\n.bi-4-circle-fill-1::before { content: \"\\f7a7\"; }\n.bi-4-circle-fill::before { content: \"\\f7a8\"; }\n.bi-4-circle::before { content: \"\\f7a9\"; }\n.bi-4-square-fill::before { content: \"\\f7aa\"; }\n.bi-4-square::before { content: \"\\f7ab\"; }\n.bi-5-circle-1::before { content: \"\\f7ac\"; }\n.bi-5-circle-fill-1::before { content: \"\\f7ad\"; }\n.bi-5-circle-fill::before { content: \"\\f7ae\"; }\n.bi-5-circle::before { content: \"\\f7af\"; }\n.bi-5-square-fill::before { content: \"\\f7b0\"; }\n.bi-5-square::before { content: \"\\f7b1\"; }\n.bi-6-circle-1::before { content: \"\\f7b2\"; }\n.bi-6-circle-fill-1::before { content: \"\\f7b3\"; }\n.bi-6-circle-fill::before { content: \"\\f7b4\"; }\n.bi-6-circle::before { content: \"\\f7b5\"; }\n.bi-6-square-fill::before { content: \"\\f7b6\"; }\n.bi-6-square::before { content: \"\\f7b7\"; }\n.bi-7-circle-1::before { content: \"\\f7b8\"; }\n.bi-7-circle-fill-1::before { content: \"\\f7b9\"; }\n.bi-7-circle-fill::before { content: \"\\f7ba\"; }\n.bi-7-circle::before { content: \"\\f7bb\"; }\n.bi-7-square-fill::before { content: \"\\f7bc\"; }\n.bi-7-square::before { content: \"\\f7bd\"; }\n.bi-8-circle-1::before { content: \"\\f7be\"; }\n.bi-8-circle-fill-1::before { content: \"\\f7bf\"; }\n.bi-8-circle-fill::before { content: \"\\f7c0\"; }\n.bi-8-circle::before { content: \"\\f7c1\"; }\n.bi-8-square-fill::before { content: \"\\f7c2\"; }\n.bi-8-square::before { content: \"\\f7c3\"; }\n.bi-9-circle-1::before { content: \"\\f7c4\"; }\n.bi-9-circle-fill-1::before { content: \"\\f7c5\"; }\n.bi-9-circle-fill::before { content: \"\\f7c6\"; }\n.bi-9-circle::before { content: \"\\f7c7\"; }\n.bi-9-square-fill::before { content: \"\\f7c8\"; }\n.bi-9-square::before { content: \"\\f7c9\"; }\n.bi-airplane-engines-fill::before { content: \"\\f7ca\"; }\n.bi-airplane-engines::before { content: \"\\f7cb\"; }\n.bi-airplane-fill::before { content: \"\\f7cc\"; }\n.bi-airplane::before { content: \"\\f7cd\"; }\n.bi-alexa::before { content: \"\\f7ce\"; }\n.bi-alipay::before { content: \"\\f7cf\"; }\n.bi-android::before { content: \"\\f7d0\"; }\n.bi-android2::before { content: \"\\f7d1\"; }\n.bi-box-fill::before { content: \"\\f7d2\"; }\n.bi-box-seam-fill::before { content: \"\\f7d3\"; }\n.bi-browser-chrome::before { content: \"\\f7d4\"; }\n.bi-browser-edge::before { content: \"\\f7d5\"; }\n.bi-browser-firefox::before { content: \"\\f7d6\"; }\n.bi-browser-safari::before { content: \"\\f7d7\"; }\n.bi-c-circle-1::before { content: \"\\f7d8\"; }\n.bi-c-circle-fill-1::before { content: \"\\f7d9\"; }\n.bi-c-circle-fill::before { content: \"\\f7da\"; }\n.bi-c-circle::before { content: \"\\f7db\"; }\n.bi-c-square-fill::before { content: \"\\f7dc\"; }\n.bi-c-square::before { content: \"\\f7dd\"; }\n.bi-capsule-pill::before { content: \"\\f7de\"; }\n.bi-capsule::before { content: \"\\f7df\"; }\n.bi-car-front-fill::before { content: \"\\f7e0\"; }\n.bi-car-front::before { content: \"\\f7e1\"; }\n.bi-cassette-fill::before { content: \"\\f7e2\"; }\n.bi-cassette::before { content: \"\\f7e3\"; }\n.bi-cc-circle-1::before { content: \"\\f7e4\"; }\n.bi-cc-circle-fill-1::before { content: \"\\f7e5\"; }\n.bi-cc-circle-fill::before { content: \"\\f7e6\"; }\n.bi-cc-circle::before { content: \"\\f7e7\"; }\n.bi-cc-square-fill::before { content: \"\\f7e8\"; }\n.bi-cc-square::before { content: \"\\f7e9\"; }\n.bi-cup-hot-fill::before { content: \"\\f7ea\"; }\n.bi-cup-hot::before { content: \"\\f7eb\"; }\n.bi-currency-rupee::before { content: \"\\f7ec\"; }\n.bi-dropbox::before { content: \"\\f7ed\"; }\n.bi-escape::before { content: \"\\f7ee\"; }\n.bi-fast-forward-btn-fill::before { content: \"\\f7ef\"; }\n.bi-fast-forward-btn::before { content: \"\\f7f0\"; }\n.bi-fast-forward-circle-fill::before { content: \"\\f7f1\"; }\n.bi-fast-forward-circle::before { content: \"\\f7f2\"; }\n.bi-fast-forward-fill::before { content: \"\\f7f3\"; }\n.bi-fast-forward::before { content: \"\\f7f4\"; }\n.bi-filetype-sql::before { content: \"\\f7f5\"; }\n.bi-fire::before { content: \"\\f7f6\"; }\n.bi-google-play::before { content: \"\\f7f7\"; }\n.bi-h-circle-1::before { content: \"\\f7f8\"; }\n.bi-h-circle-fill-1::before { content: \"\\f7f9\"; }\n.bi-h-circle-fill::before { content: \"\\f7fa\"; }\n.bi-h-circle::before { content: \"\\f7fb\"; }\n.bi-h-square-fill::before { content: \"\\f7fc\"; }\n.bi-h-square::before { content: \"\\f7fd\"; }\n.bi-indent::before { content: \"\\f7fe\"; }\n.bi-lungs-fill::before { content: \"\\f7ff\"; }\n.bi-lungs::before { content: \"\\f800\"; }\n.bi-microsoft-teams::before { content: \"\\f801\"; }\n.bi-p-circle-1::before { content: \"\\f802\"; }\n.bi-p-circle-fill-1::before { content: \"\\f803\"; }\n.bi-p-circle-fill::before { content: \"\\f804\"; }\n.bi-p-circle::before { content: \"\\f805\"; }\n.bi-p-square-fill::before { content: \"\\f806\"; }\n.bi-p-square::before { content: \"\\f807\"; }\n.bi-pass-fill::before { content: \"\\f808\"; }\n.bi-pass::before { content: \"\\f809\"; }\n.bi-prescription::before { content: \"\\f80a\"; }\n.bi-prescription2::before { content: \"\\f80b\"; }\n.bi-r-circle-1::before { content: \"\\f80c\"; }\n.bi-r-circle-fill-1::before { content: \"\\f80d\"; }\n.bi-r-circle-fill::before { content: \"\\f80e\"; }\n.bi-r-circle::before { content: \"\\f80f\"; }\n.bi-r-square-fill::before { content: \"\\f810\"; }\n.bi-r-square::before { content: \"\\f811\"; }\n.bi-repeat-1::before { content: \"\\f812\"; }\n.bi-repeat::before { content: \"\\f813\"; }\n.bi-rewind-btn-fill::before { content: \"\\f814\"; }\n.bi-rewind-btn::before { content: \"\\f815\"; }\n.bi-rewind-circle-fill::before { content: \"\\f816\"; }\n.bi-rewind-circle::before { content: \"\\f817\"; }\n.bi-rewind-fill::before { content: \"\\f818\"; }\n.bi-rewind::before { content: \"\\f819\"; }\n.bi-train-freight-front-fill::before { content: \"\\f81a\"; }\n.bi-train-freight-front::before { content: \"\\f81b\"; }\n.bi-train-front-fill::before { content: \"\\f81c\"; }\n.bi-train-front::before { content: \"\\f81d\"; }\n.bi-train-lightrail-front-fill::before { content: \"\\f81e\"; }\n.bi-train-lightrail-front::before { content: \"\\f81f\"; }\n.bi-truck-front-fill::before { content: \"\\f820\"; }\n.bi-truck-front::before { content: \"\\f821\"; }\n.bi-ubuntu::before { content: \"\\f822\"; }\n.bi-unindent::before { content: \"\\f823\"; }\n.bi-unity::before { content: \"\\f824\"; }\n.bi-universal-access-circle::before { content: \"\\f825\"; }\n.bi-universal-access::before { content: \"\\f826\"; }\n.bi-virus::before { content: \"\\f827\"; }\n.bi-virus2::before { content: \"\\f828\"; }\n.bi-wechat::before { content: \"\\f829\"; }\n.bi-yelp::before { content: \"\\f82a\"; }\n.bi-sign-stop-fill::before { content: \"\\f82b\"; }\n.bi-sign-stop-lights-fill::before { content: \"\\f82c\"; }\n.bi-sign-stop-lights::before { content: \"\\f82d\"; }\n.bi-sign-stop::before { content: \"\\f82e\"; }\n.bi-sign-turn-left-fill::before { content: \"\\f82f\"; }\n.bi-sign-turn-left::before { content: \"\\f830\"; }\n.bi-sign-turn-right-fill::before { content: \"\\f831\"; }\n.bi-sign-turn-right::before { content: \"\\f832\"; }\n.bi-sign-turn-slight-left-fill::before { content: \"\\f833\"; }\n.bi-sign-turn-slight-left::before { content: \"\\f834\"; }\n.bi-sign-turn-slight-right-fill::before { content: \"\\f835\"; }\n.bi-sign-turn-slight-right::before { content: \"\\f836\"; }\n.bi-sign-yield-fill::before { content: \"\\f837\"; }\n.bi-sign-yield::before { content: \"\\f838\"; }\n.bi-ev-station-fill::before { content: \"\\f839\"; }\n.bi-ev-station::before { content: \"\\f83a\"; }\n.bi-fuel-pump-diesel-fill::before { content: \"\\f83b\"; }\n.bi-fuel-pump-diesel::before { content: \"\\f83c\"; }\n.bi-fuel-pump-fill::before { content: \"\\f83d\"; }\n.bi-fuel-pump::before { content: \"\\f83e\"; }\n.bi-0-circle-fill::before { content: \"\\f83f\"; }\n.bi-0-circle::before { content: \"\\f840\"; }\n.bi-0-square-fill::before { content: \"\\f841\"; }\n.bi-0-square::before { content: \"\\f842\"; }\n.bi-rocket-fill::before { content: \"\\f843\"; }\n.bi-rocket-takeoff-fill::before { content: \"\\f844\"; }\n.bi-rocket-takeoff::before { content: \"\\f845\"; }\n.bi-rocket::before { content: \"\\f846\"; }\n.bi-stripe::before { content: \"\\f847\"; }\n.bi-subscript::before { content: \"\\f848\"; }\n.bi-superscript::before { content: \"\\f849\"; }\n.bi-trello::before { content: \"\\f84a\"; }\n.bi-envelope-at-fill::before { content: \"\\f84b\"; }\n.bi-envelope-at::before { content: \"\\f84c\"; }\n.bi-regex::before { content: \"\\f84d\"; }\n.bi-text-wrap::before { content: \"\\f84e\"; }\n.bi-sign-dead-end-fill::before { content: \"\\f84f\"; }\n.bi-sign-dead-end::before { content: \"\\f850\"; }\n.bi-sign-do-not-enter-fill::before { content: \"\\f851\"; }\n.bi-sign-do-not-enter::before { content: \"\\f852\"; }\n.bi-sign-intersection-fill::before { content: \"\\f853\"; }\n.bi-sign-intersection-side-fill::before { content: \"\\f854\"; }\n.bi-sign-intersection-side::before { content: \"\\f855\"; }\n.bi-sign-intersection-t-fill::before { content: \"\\f856\"; }\n.bi-sign-intersection-t::before { content: \"\\f857\"; }\n.bi-sign-intersection-y-fill::before { content: \"\\f858\"; }\n.bi-sign-intersection-y::before { content: \"\\f859\"; }\n.bi-sign-intersection::before { content: \"\\f85a\"; }\n.bi-sign-merge-left-fill::before { content: \"\\f85b\"; }\n.bi-sign-merge-left::before { content: \"\\f85c\"; }\n.bi-sign-merge-right-fill::before { content: \"\\f85d\"; }\n.bi-sign-merge-right::before { content: \"\\f85e\"; }\n.bi-sign-no-left-turn-fill::before { content: \"\\f85f\"; }\n.bi-sign-no-left-turn::before { content: \"\\f860\"; }\n.bi-sign-no-parking-fill::before { content: \"\\f861\"; }\n.bi-sign-no-parking::before { content: \"\\f862\"; }\n.bi-sign-no-right-turn-fill::before { content: \"\\f863\"; }\n.bi-sign-no-right-turn::before { content: \"\\f864\"; }\n.bi-sign-railroad-fill::before { content: \"\\f865\"; }\n.bi-sign-railroad::before { content: \"\\f866\"; }\n.bi-building-add::before { content: \"\\f867\"; }\n.bi-building-check::before { content: \"\\f868\"; }\n.bi-building-dash::before { content: \"\\f869\"; }\n.bi-building-down::before { content: \"\\f86a\"; }\n.bi-building-exclamation::before { content: \"\\f86b\"; }\n.bi-building-fill-add::before { content: \"\\f86c\"; }\n.bi-building-fill-check::before { content: \"\\f86d\"; }\n.bi-building-fill-dash::before { content: \"\\f86e\"; }\n.bi-building-fill-down::before { content: \"\\f86f\"; }\n.bi-building-fill-exclamation::before { content: \"\\f870\"; }\n.bi-building-fill-gear::before { content: \"\\f871\"; }\n.bi-building-fill-lock::before { content: \"\\f872\"; }\n.bi-building-fill-slash::before { content: \"\\f873\"; }\n.bi-building-fill-up::before { content: \"\\f874\"; }\n.bi-building-fill-x::before { content: \"\\f875\"; }\n.bi-building-fill::before { content: \"\\f876\"; }\n.bi-building-gear::before { content: \"\\f877\"; }\n.bi-building-lock::before { content: \"\\f878\"; }\n.bi-building-slash::before { content: \"\\f879\"; }\n.bi-building-up::before { content: \"\\f87a\"; }\n.bi-building-x::before { content: \"\\f87b\"; }\n.bi-buildings-fill::before { content: \"\\f87c\"; }\n.bi-buildings::before { content: \"\\f87d\"; }\n.bi-bus-front-fill::before { content: \"\\f87e\"; }\n.bi-bus-front::before { content: \"\\f87f\"; }\n.bi-ev-front-fill::before { content: \"\\f880\"; }\n.bi-ev-front::before { content: \"\\f881\"; }\n.bi-globe-americas::before { content: \"\\f882\"; }\n.bi-globe-asia-australia::before { content: \"\\f883\"; }\n.bi-globe-central-south-asia::before { content: \"\\f884\"; }\n.bi-globe-europe-africa::before { content: \"\\f885\"; }\n.bi-house-add-fill::before { content: \"\\f886\"; }\n.bi-house-add::before { content: \"\\f887\"; }\n.bi-house-check-fill::before { content: \"\\f888\"; }\n.bi-house-check::before { content: \"\\f889\"; }\n.bi-house-dash-fill::before { content: \"\\f88a\"; }\n.bi-house-dash::before { content: \"\\f88b\"; }\n.bi-house-down-fill::before { content: \"\\f88c\"; }\n.bi-house-down::before { content: \"\\f88d\"; }\n.bi-house-exclamation-fill::before { content: \"\\f88e\"; }\n.bi-house-exclamation::before { content: \"\\f88f\"; }\n.bi-house-gear-fill::before { content: \"\\f890\"; }\n.bi-house-gear::before { content: \"\\f891\"; }\n.bi-house-lock-fill::before { content: \"\\f892\"; }\n.bi-house-lock::before { content: \"\\f893\"; }\n.bi-house-slash-fill::before { content: \"\\f894\"; }\n.bi-house-slash::before { content: \"\\f895\"; }\n.bi-house-up-fill::before { content: \"\\f896\"; }\n.bi-house-up::before { content: \"\\f897\"; }\n.bi-house-x-fill::before { content: \"\\f898\"; }\n.bi-house-x::before { content: \"\\f899\"; }\n.bi-person-add::before { content: \"\\f89a\"; }\n.bi-person-down::before { content: \"\\f89b\"; }\n.bi-person-exclamation::before { content: \"\\f89c\"; }\n.bi-person-fill-add::before { content: \"\\f89d\"; }\n.bi-person-fill-check::before { content: \"\\f89e\"; }\n.bi-person-fill-dash::before { content: \"\\f89f\"; }\n.bi-person-fill-down::before { content: \"\\f8a0\"; }\n.bi-person-fill-exclamation::before { content: \"\\f8a1\"; }\n.bi-person-fill-gear::before { content: \"\\f8a2\"; }\n.bi-person-fill-lock::before { content: \"\\f8a3\"; }\n.bi-person-fill-slash::before { content: \"\\f8a4\"; }\n.bi-person-fill-up::before { content: \"\\f8a5\"; }\n.bi-person-fill-x::before { content: \"\\f8a6\"; }\n.bi-person-gear::before { content: \"\\f8a7\"; }\n.bi-person-lock::before { content: \"\\f8a8\"; }\n.bi-person-slash::before { content: \"\\f8a9\"; }\n.bi-person-up::before { content: \"\\f8aa\"; }\n.bi-scooter::before { content: \"\\f8ab\"; }\n.bi-taxi-front-fill::before { content: \"\\f8ac\"; }\n.bi-taxi-front::before { content: \"\\f8ad\"; }\n.bi-amd::before { content: \"\\f8ae\"; }\n.bi-database-add::before { content: \"\\f8af\"; }\n.bi-database-check::before { content: \"\\f8b0\"; }\n.bi-database-dash::before { content: \"\\f8b1\"; }\n.bi-database-down::before { content: \"\\f8b2\"; }\n.bi-database-exclamation::before { content: \"\\f8b3\"; }\n.bi-database-fill-add::before { content: \"\\f8b4\"; }\n.bi-database-fill-check::before { content: \"\\f8b5\"; }\n.bi-database-fill-dash::before { content: \"\\f8b6\"; }\n.bi-database-fill-down::before { content: \"\\f8b7\"; }\n.bi-database-fill-exclamation::before { content: \"\\f8b8\"; }\n.bi-database-fill-gear::before { content: \"\\f8b9\"; }\n.bi-database-fill-lock::before { content: \"\\f8ba\"; }\n.bi-database-fill-slash::before { content: \"\\f8bb\"; }\n.bi-database-fill-up::before { content: \"\\f8bc\"; }\n.bi-database-fill-x::before { content: \"\\f8bd\"; }\n.bi-database-fill::before { content: \"\\f8be\"; }\n.bi-database-gear::before { content: \"\\f8bf\"; }\n.bi-database-lock::before { content: \"\\f8c0\"; }\n.bi-database-slash::before { content: \"\\f8c1\"; }\n.bi-database-up::before { content: \"\\f8c2\"; }\n.bi-database-x::before { content: \"\\f8c3\"; }\n.bi-database::before { content: \"\\f8c4\"; }\n.bi-houses-fill::before { content: \"\\f8c5\"; }\n.bi-houses::before { content: \"\\f8c6\"; }\n.bi-nvidia::before { content: \"\\f8c7\"; }\n.bi-person-vcard-fill::before { content: \"\\f8c8\"; }\n.bi-person-vcard::before { content: \"\\f8c9\"; }\n.bi-sina-weibo::before { content: \"\\f8ca\"; }\n.bi-tencent-qq::before { content: \"\\f8cb\"; }\n.bi-wikipedia::before { content: \"\\f8cc\"; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*!\n * Bootstrap Icons (https://icons.getbootstrap.com/)\n * Copyright 2019-2023 The Bootstrap Authors\n * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE.md)\n */\n\n@font-face {\n  font-display: block;\n  font-family: \"bootstrap-icons\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"woff2\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff\");\n}\n\n.bi::before,\n[class^=\"bi-\"]::before,\n[class*=\" bi-\"]::before {\n  display: inline-block;\n  font-family: bootstrap-icons !important;\n  font-style: normal;\n  font-weight: normal !important;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  vertical-align: -.125em;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.bi-123::before { content: \"\\f67f\"; }\n.bi-alarm-fill::before { content: \"\\f101\"; }\n.bi-alarm::before { content: \"\\f102\"; }\n.bi-align-bottom::before { content: \"\\f103\"; }\n.bi-align-center::before { content: \"\\f104\"; }\n.bi-align-end::before { content: \"\\f105\"; }\n.bi-align-middle::before { content: \"\\f106\"; }\n.bi-align-start::before { content: \"\\f107\"; }\n.bi-align-top::before { content: \"\\f108\"; }\n.bi-alt::before { content: \"\\f109\"; }\n.bi-app-indicator::before { content: \"\\f10a\"; }\n.bi-app::before { content: \"\\f10b\"; }\n.bi-archive-fill::before { content: \"\\f10c\"; }\n.bi-archive::before { content: \"\\f10d\"; }\n.bi-arrow-90deg-down::before { content: \"\\f10e\"; }\n.bi-arrow-90deg-left::before { content: \"\\f10f\"; }\n.bi-arrow-90deg-right::before { content: \"\\f110\"; }\n.bi-arrow-90deg-up::before { content: \"\\f111\"; }\n.bi-arrow-bar-down::before { content: \"\\f112\"; }\n.bi-arrow-bar-left::before { content: \"\\f113\"; }\n.bi-arrow-bar-right::before { content: \"\\f114\"; }\n.bi-arrow-bar-up::before { content: \"\\f115\"; }\n.bi-arrow-clockwise::before { content: \"\\f116\"; }\n.bi-arrow-counterclockwise::before { content: \"\\f117\"; }\n.bi-arrow-down-circle-fill::before { content: \"\\f118\"; }\n.bi-arrow-down-circle::before { content: \"\\f119\"; }\n.bi-arrow-down-left-circle-fill::before { content: \"\\f11a\"; }\n.bi-arrow-down-left-circle::before { content: \"\\f11b\"; }\n.bi-arrow-down-left-square-fill::before { content: \"\\f11c\"; }\n.bi-arrow-down-left-square::before { content: \"\\f11d\"; }\n.bi-arrow-down-left::before { content: \"\\f11e\"; }\n.bi-arrow-down-right-circle-fill::before { content: \"\\f11f\"; }\n.bi-arrow-down-right-circle::before { content: \"\\f120\"; }\n.bi-arrow-down-right-square-fill::before { content: \"\\f121\"; }\n.bi-arrow-down-right-square::before { content: \"\\f122\"; }\n.bi-arrow-down-right::before { content: \"\\f123\"; }\n.bi-arrow-down-short::before { content: \"\\f124\"; }\n.bi-arrow-down-square-fill::before { content: \"\\f125\"; }\n.bi-arrow-down-square::before { content: \"\\f126\"; }\n.bi-arrow-down-up::before { content: \"\\f127\"; }\n.bi-arrow-down::before { content: \"\\f128\"; }\n.bi-arrow-left-circle-fill::before { content: \"\\f129\"; }\n.bi-arrow-left-circle::before { content: \"\\f12a\"; }\n.bi-arrow-left-right::before { content: \"\\f12b\"; }\n.bi-arrow-left-short::before { content: \"\\f12c\"; }\n.bi-arrow-left-square-fill::before { content: \"\\f12d\"; }\n.bi-arrow-left-square::before { content: \"\\f12e\"; }\n.bi-arrow-left::before { content: \"\\f12f\"; }\n.bi-arrow-repeat::before { content: \"\\f130\"; }\n.bi-arrow-return-left::before { content: \"\\f131\"; }\n.bi-arrow-return-right::before { content: \"\\f132\"; }\n.bi-arrow-right-circle-fill::before { content: \"\\f133\"; }\n.bi-arrow-right-circle::before { content: \"\\f134\"; }\n.bi-arrow-right-short::before { content: \"\\f135\"; }\n.bi-arrow-right-square-fill::before { content: \"\\f136\"; }\n.bi-arrow-right-square::before { content: \"\\f137\"; }\n.bi-arrow-right::before { content: \"\\f138\"; }\n.bi-arrow-up-circle-fill::before { content: \"\\f139\"; }\n.bi-arrow-up-circle::before { content: \"\\f13a\"; }\n.bi-arrow-up-left-circle-fill::before { content: \"\\f13b\"; }\n.bi-arrow-up-left-circle::before { content: \"\\f13c\"; }\n.bi-arrow-up-left-square-fill::before { content: \"\\f13d\"; }\n.bi-arrow-up-left-square::before { content: \"\\f13e\"; }\n.bi-arrow-up-left::before { content: \"\\f13f\"; }\n.bi-arrow-up-right-circle-fill::before { content: \"\\f140\"; }\n.bi-arrow-up-right-circle::before { content: \"\\f141\"; }\n.bi-arrow-up-right-square-fill::before { content: \"\\f142\"; }\n.bi-arrow-up-right-square::before { content: \"\\f143\"; }\n.bi-arrow-up-right::before { content: \"\\f144\"; }\n.bi-arrow-up-short::before { content: \"\\f145\"; }\n.bi-arrow-up-square-fill::before { content: \"\\f146\"; }\n.bi-arrow-up-square::before { content: \"\\f147\"; }\n.bi-arrow-up::before { content: \"\\f148\"; }\n.bi-arrows-angle-contract::before { content: \"\\f149\"; }\n.bi-arrows-angle-expand::before { content: \"\\f14a\"; }\n.bi-arrows-collapse::before { content: \"\\f14b\"; }\n.bi-arrows-expand::before { content: \"\\f14c\"; }\n.bi-arrows-fullscreen::before { content: \"\\f14d\"; }\n.bi-arrows-move::before { content: \"\\f14e\"; }\n.bi-aspect-ratio-fill::before { content: \"\\f14f\"; }\n.bi-aspect-ratio::before { content: \"\\f150\"; }\n.bi-asterisk::before { content: \"\\f151\"; }\n.bi-at::before { content: \"\\f152\"; }\n.bi-award-fill::before { content: \"\\f153\"; }\n.bi-award::before { content: \"\\f154\"; }\n.bi-back::before { content: \"\\f155\"; }\n.bi-backspace-fill::before { content: \"\\f156\"; }\n.bi-backspace-reverse-fill::before { content: \"\\f157\"; }\n.bi-backspace-reverse::before { content: \"\\f158\"; }\n.bi-backspace::before { content: \"\\f159\"; }\n.bi-badge-3d-fill::before { content: \"\\f15a\"; }\n.bi-badge-3d::before { content: \"\\f15b\"; }\n.bi-badge-4k-fill::before { content: \"\\f15c\"; }\n.bi-badge-4k::before { content: \"\\f15d\"; }\n.bi-badge-8k-fill::before { content: \"\\f15e\"; }\n.bi-badge-8k::before { content: \"\\f15f\"; }\n.bi-badge-ad-fill::before { content: \"\\f160\"; }\n.bi-badge-ad::before { content: \"\\f161\"; }\n.bi-badge-ar-fill::before { content: \"\\f162\"; }\n.bi-badge-ar::before { content: \"\\f163\"; }\n.bi-badge-cc-fill::before { content: \"\\f164\"; }\n.bi-badge-cc::before { content: \"\\f165\"; }\n.bi-badge-hd-fill::before { content: \"\\f166\"; }\n.bi-badge-hd::before { content: \"\\f167\"; }\n.bi-badge-tm-fill::before { content: \"\\f168\"; }\n.bi-badge-tm::before { content: \"\\f169\"; }\n.bi-badge-vo-fill::before { content: \"\\f16a\"; }\n.bi-badge-vo::before { content: \"\\f16b\"; }\n.bi-badge-vr-fill::before { content: \"\\f16c\"; }\n.bi-badge-vr::before { content: \"\\f16d\"; }\n.bi-badge-wc-fill::before { content: \"\\f16e\"; }\n.bi-badge-wc::before { content: \"\\f16f\"; }\n.bi-bag-check-fill::before { content: \"\\f170\"; }\n.bi-bag-check::before { content: \"\\f171\"; }\n.bi-bag-dash-fill::before { content: \"\\f172\"; }\n.bi-bag-dash::before { content: \"\\f173\"; }\n.bi-bag-fill::before { content: \"\\f174\"; }\n.bi-bag-plus-fill::before { content: \"\\f175\"; }\n.bi-bag-plus::before { content: \"\\f176\"; }\n.bi-bag-x-fill::before { content: \"\\f177\"; }\n.bi-bag-x::before { content: \"\\f178\"; }\n.bi-bag::before { content: \"\\f179\"; }\n.bi-bar-chart-fill::before { content: \"\\f17a\"; }\n.bi-bar-chart-line-fill::before { content: \"\\f17b\"; }\n.bi-bar-chart-line::before { content: \"\\f17c\"; }\n.bi-bar-chart-steps::before { content: \"\\f17d\"; }\n.bi-bar-chart::before { content: \"\\f17e\"; }\n.bi-basket-fill::before { content: \"\\f17f\"; }\n.bi-basket::before { content: \"\\f180\"; }\n.bi-basket2-fill::before { content: \"\\f181\"; }\n.bi-basket2::before { content: \"\\f182\"; }\n.bi-basket3-fill::before { content: \"\\f183\"; }\n.bi-basket3::before { content: \"\\f184\"; }\n.bi-battery-charging::before { content: \"\\f185\"; }\n.bi-battery-full::before { content: \"\\f186\"; }\n.bi-battery-half::before { content: \"\\f187\"; }\n.bi-battery::before { content: \"\\f188\"; }\n.bi-bell-fill::before { content: \"\\f189\"; }\n.bi-bell::before { content: \"\\f18a\"; }\n.bi-bezier::before { content: \"\\f18b\"; }\n.bi-bezier2::before { content: \"\\f18c\"; }\n.bi-bicycle::before { content: \"\\f18d\"; }\n.bi-binoculars-fill::before { content: \"\\f18e\"; }\n.bi-binoculars::before { content: \"\\f18f\"; }\n.bi-blockquote-left::before { content: \"\\f190\"; }\n.bi-blockquote-right::before { content: \"\\f191\"; }\n.bi-book-fill::before { content: \"\\f192\"; }\n.bi-book-half::before { content: \"\\f193\"; }\n.bi-book::before { content: \"\\f194\"; }\n.bi-bookmark-check-fill::before { content: \"\\f195\"; }\n.bi-bookmark-check::before { content: \"\\f196\"; }\n.bi-bookmark-dash-fill::before { content: \"\\f197\"; }\n.bi-bookmark-dash::before { content: \"\\f198\"; }\n.bi-bookmark-fill::before { content: \"\\f199\"; }\n.bi-bookmark-heart-fill::before { content: \"\\f19a\"; }\n.bi-bookmark-heart::before { content: \"\\f19b\"; }\n.bi-bookmark-plus-fill::before { content: \"\\f19c\"; }\n.bi-bookmark-plus::before { content: \"\\f19d\"; }\n.bi-bookmark-star-fill::before { content: \"\\f19e\"; }\n.bi-bookmark-star::before { content: \"\\f19f\"; }\n.bi-bookmark-x-fill::before { content: \"\\f1a0\"; }\n.bi-bookmark-x::before { content: \"\\f1a1\"; }\n.bi-bookmark::before { content: \"\\f1a2\"; }\n.bi-bookmarks-fill::before { content: \"\\f1a3\"; }\n.bi-bookmarks::before { content: \"\\f1a4\"; }\n.bi-bookshelf::before { content: \"\\f1a5\"; }\n.bi-bootstrap-fill::before { content: \"\\f1a6\"; }\n.bi-bootstrap-reboot::before { content: \"\\f1a7\"; }\n.bi-bootstrap::before { content: \"\\f1a8\"; }\n.bi-border-all::before { content: \"\\f1a9\"; }\n.bi-border-bottom::before { content: \"\\f1aa\"; }\n.bi-border-center::before { content: \"\\f1ab\"; }\n.bi-border-inner::before { content: \"\\f1ac\"; }\n.bi-border-left::before { content: \"\\f1ad\"; }\n.bi-border-middle::before { content: \"\\f1ae\"; }\n.bi-border-outer::before { content: \"\\f1af\"; }\n.bi-border-right::before { content: \"\\f1b0\"; }\n.bi-border-style::before { content: \"\\f1b1\"; }\n.bi-border-top::before { content: \"\\f1b2\"; }\n.bi-border-width::before { content: \"\\f1b3\"; }\n.bi-border::before { content: \"\\f1b4\"; }\n.bi-bounding-box-circles::before { content: \"\\f1b5\"; }\n.bi-bounding-box::before { content: \"\\f1b6\"; }\n.bi-box-arrow-down-left::before { content: \"\\f1b7\"; }\n.bi-box-arrow-down-right::before { content: \"\\f1b8\"; }\n.bi-box-arrow-down::before { content: \"\\f1b9\"; }\n.bi-box-arrow-in-down-left::before { content: \"\\f1ba\"; }\n.bi-box-arrow-in-down-right::before { content: \"\\f1bb\"; }\n.bi-box-arrow-in-down::before { content: \"\\f1bc\"; }\n.bi-box-arrow-in-left::before { content: \"\\f1bd\"; }\n.bi-box-arrow-in-right::before { content: \"\\f1be\"; }\n.bi-box-arrow-in-up-left::before { content: \"\\f1bf\"; }\n.bi-box-arrow-in-up-right::before { content: \"\\f1c0\"; }\n.bi-box-arrow-in-up::before { content: \"\\f1c1\"; }\n.bi-box-arrow-left::before { content: \"\\f1c2\"; }\n.bi-box-arrow-right::before { content: \"\\f1c3\"; }\n.bi-box-arrow-up-left::before { content: \"\\f1c4\"; }\n.bi-box-arrow-up-right::before { content: \"\\f1c5\"; }\n.bi-box-arrow-up::before { content: \"\\f1c6\"; }\n.bi-box-seam::before { content: \"\\f1c7\"; }\n.bi-box::before { content: \"\\f1c8\"; }\n.bi-braces::before { content: \"\\f1c9\"; }\n.bi-bricks::before { content: \"\\f1ca\"; }\n.bi-briefcase-fill::before { content: \"\\f1cb\"; }\n.bi-briefcase::before { content: \"\\f1cc\"; }\n.bi-brightness-alt-high-fill::before { content: \"\\f1cd\"; }\n.bi-brightness-alt-high::before { content: \"\\f1ce\"; }\n.bi-brightness-alt-low-fill::before { content: \"\\f1cf\"; }\n.bi-brightness-alt-low::before { content: \"\\f1d0\"; }\n.bi-brightness-high-fill::before { content: \"\\f1d1\"; }\n.bi-brightness-high::before { content: \"\\f1d2\"; }\n.bi-brightness-low-fill::before { content: \"\\f1d3\"; }\n.bi-brightness-low::before { content: \"\\f1d4\"; }\n.bi-broadcast-pin::before { content: \"\\f1d5\"; }\n.bi-broadcast::before { content: \"\\f1d6\"; }\n.bi-brush-fill::before { content: \"\\f1d7\"; }\n.bi-brush::before { content: \"\\f1d8\"; }\n.bi-bucket-fill::before { content: \"\\f1d9\"; }\n.bi-bucket::before { content: \"\\f1da\"; }\n.bi-bug-fill::before { content: \"\\f1db\"; }\n.bi-bug::before { content: \"\\f1dc\"; }\n.bi-building::before { content: \"\\f1dd\"; }\n.bi-bullseye::before { content: \"\\f1de\"; }\n.bi-calculator-fill::before { content: \"\\f1df\"; }\n.bi-calculator::before { content: \"\\f1e0\"; }\n.bi-calendar-check-fill::before { content: \"\\f1e1\"; }\n.bi-calendar-check::before { content: \"\\f1e2\"; }\n.bi-calendar-date-fill::before { content: \"\\f1e3\"; }\n.bi-calendar-date::before { content: \"\\f1e4\"; }\n.bi-calendar-day-fill::before { content: \"\\f1e5\"; }\n.bi-calendar-day::before { content: \"\\f1e6\"; }\n.bi-calendar-event-fill::before { content: \"\\f1e7\"; }\n.bi-calendar-event::before { content: \"\\f1e8\"; }\n.bi-calendar-fill::before { content: \"\\f1e9\"; }\n.bi-calendar-minus-fill::before { content: \"\\f1ea\"; }\n.bi-calendar-minus::before { content: \"\\f1eb\"; }\n.bi-calendar-month-fill::before { content: \"\\f1ec\"; }\n.bi-calendar-month::before { content: \"\\f1ed\"; }\n.bi-calendar-plus-fill::before { content: \"\\f1ee\"; }\n.bi-calendar-plus::before { content: \"\\f1ef\"; }\n.bi-calendar-range-fill::before { content: \"\\f1f0\"; }\n.bi-calendar-range::before { content: \"\\f1f1\"; }\n.bi-calendar-week-fill::before { content: \"\\f1f2\"; }\n.bi-calendar-week::before { content: \"\\f1f3\"; }\n.bi-calendar-x-fill::before { content: \"\\f1f4\"; }\n.bi-calendar-x::before { content: \"\\f1f5\"; }\n.bi-calendar::before { content: \"\\f1f6\"; }\n.bi-calendar2-check-fill::before { content: \"\\f1f7\"; }\n.bi-calendar2-check::before { content: \"\\f1f8\"; }\n.bi-calendar2-date-fill::before { content: \"\\f1f9\"; }\n.bi-calendar2-date::before { content: \"\\f1fa\"; }\n.bi-calendar2-day-fill::before { content: \"\\f1fb\"; }\n.bi-calendar2-day::before { content: \"\\f1fc\"; }\n.bi-calendar2-event-fill::before { content: \"\\f1fd\"; }\n.bi-calendar2-event::before { content: \"\\f1fe\"; }\n.bi-calendar2-fill::before { content: \"\\f1ff\"; }\n.bi-calendar2-minus-fill::before { content: \"\\f200\"; }\n.bi-calendar2-minus::before { content: \"\\f201\"; }\n.bi-calendar2-month-fill::before { content: \"\\f202\"; }\n.bi-calendar2-month::before { content: \"\\f203\"; }\n.bi-calendar2-plus-fill::before { content: \"\\f204\"; }\n.bi-calendar2-plus::before { content: \"\\f205\"; }\n.bi-calendar2-range-fill::before { content: \"\\f206\"; }\n.bi-calendar2-range::before { content: \"\\f207\"; }\n.bi-calendar2-week-fill::before { content: \"\\f208\"; }\n.bi-calendar2-week::before { content: \"\\f209\"; }\n.bi-calendar2-x-fill::before { content: \"\\f20a\"; }\n.bi-calendar2-x::before { content: \"\\f20b\"; }\n.bi-calendar2::before { content: \"\\f20c\"; }\n.bi-calendar3-event-fill::before { content: \"\\f20d\"; }\n.bi-calendar3-event::before { content: \"\\f20e\"; }\n.bi-calendar3-fill::before { content: \"\\f20f\"; }\n.bi-calendar3-range-fill::before { content: \"\\f210\"; }\n.bi-calendar3-range::before { content: \"\\f211\"; }\n.bi-calendar3-week-fill::before { content: \"\\f212\"; }\n.bi-calendar3-week::before { content: \"\\f213\"; }\n.bi-calendar3::before { content: \"\\f214\"; }\n.bi-calendar4-event::before { content: \"\\f215\"; }\n.bi-calendar4-range::before { content: \"\\f216\"; }\n.bi-calendar4-week::before { content: \"\\f217\"; }\n.bi-calendar4::before { content: \"\\f218\"; }\n.bi-camera-fill::before { content: \"\\f219\"; }\n.bi-camera-reels-fill::before { content: \"\\f21a\"; }\n.bi-camera-reels::before { content: \"\\f21b\"; }\n.bi-camera-video-fill::before { content: \"\\f21c\"; }\n.bi-camera-video-off-fill::before { content: \"\\f21d\"; }\n.bi-camera-video-off::before { content: \"\\f21e\"; }\n.bi-camera-video::before { content: \"\\f21f\"; }\n.bi-camera::before { content: \"\\f220\"; }\n.bi-camera2::before { content: \"\\f221\"; }\n.bi-capslock-fill::before { content: \"\\f222\"; }\n.bi-capslock::before { content: \"\\f223\"; }\n.bi-card-checklist::before { content: \"\\f224\"; }\n.bi-card-heading::before { content: \"\\f225\"; }\n.bi-card-image::before { content: \"\\f226\"; }\n.bi-card-list::before { content: \"\\f227\"; }\n.bi-card-text::before { content: \"\\f228\"; }\n.bi-caret-down-fill::before { content: \"\\f229\"; }\n.bi-caret-down-square-fill::before { content: \"\\f22a\"; }\n.bi-caret-down-square::before { content: \"\\f22b\"; }\n.bi-caret-down::before { content: \"\\f22c\"; }\n.bi-caret-left-fill::before { content: \"\\f22d\"; }\n.bi-caret-left-square-fill::before { content: \"\\f22e\"; }\n.bi-caret-left-square::before { content: \"\\f22f\"; }\n.bi-caret-left::before { content: \"\\f230\"; }\n.bi-caret-right-fill::before { content: \"\\f231\"; }\n.bi-caret-right-square-fill::before { content: \"\\f232\"; }\n.bi-caret-right-square::before { content: \"\\f233\"; }\n.bi-caret-right::before { content: \"\\f234\"; }\n.bi-caret-up-fill::before { content: \"\\f235\"; }\n.bi-caret-up-square-fill::before { content: \"\\f236\"; }\n.bi-caret-up-square::before { content: \"\\f237\"; }\n.bi-caret-up::before { content: \"\\f238\"; }\n.bi-cart-check-fill::before { content: \"\\f239\"; }\n.bi-cart-check::before { content: \"\\f23a\"; }\n.bi-cart-dash-fill::before { content: \"\\f23b\"; }\n.bi-cart-dash::before { content: \"\\f23c\"; }\n.bi-cart-fill::before { content: \"\\f23d\"; }\n.bi-cart-plus-fill::before { content: \"\\f23e\"; }\n.bi-cart-plus::before { content: \"\\f23f\"; }\n.bi-cart-x-fill::before { content: \"\\f240\"; }\n.bi-cart-x::before { content: \"\\f241\"; }\n.bi-cart::before { content: \"\\f242\"; }\n.bi-cart2::before { content: \"\\f243\"; }\n.bi-cart3::before { content: \"\\f244\"; }\n.bi-cart4::before { content: \"\\f245\"; }\n.bi-cash-stack::before { content: \"\\f246\"; }\n.bi-cash::before { content: \"\\f247\"; }\n.bi-cast::before { content: \"\\f248\"; }\n.bi-chat-dots-fill::before { content: \"\\f249\"; }\n.bi-chat-dots::before { content: \"\\f24a\"; }\n.bi-chat-fill::before { content: \"\\f24b\"; }\n.bi-chat-left-dots-fill::before { content: \"\\f24c\"; }\n.bi-chat-left-dots::before { content: \"\\f24d\"; }\n.bi-chat-left-fill::before { content: \"\\f24e\"; }\n.bi-chat-left-quote-fill::before { content: \"\\f24f\"; }\n.bi-chat-left-quote::before { content: \"\\f250\"; }\n.bi-chat-left-text-fill::before { content: \"\\f251\"; }\n.bi-chat-left-text::before { content: \"\\f252\"; }\n.bi-chat-left::before { content: \"\\f253\"; }\n.bi-chat-quote-fill::before { content: \"\\f254\"; }\n.bi-chat-quote::before { content: \"\\f255\"; }\n.bi-chat-right-dots-fill::before { content: \"\\f256\"; }\n.bi-chat-right-dots::before { content: \"\\f257\"; }\n.bi-chat-right-fill::before { content: \"\\f258\"; }\n.bi-chat-right-quote-fill::before { content: \"\\f259\"; }\n.bi-chat-right-quote::before { content: \"\\f25a\"; }\n.bi-chat-right-text-fill::before { content: \"\\f25b\"; }\n.bi-chat-right-text::before { content: \"\\f25c\"; }\n.bi-chat-right::before { content: \"\\f25d\"; }\n.bi-chat-square-dots-fill::before { content: \"\\f25e\"; }\n.bi-chat-square-dots::before { content: \"\\f25f\"; }\n.bi-chat-square-fill::before { content: \"\\f260\"; }\n.bi-chat-square-quote-fill::before { content: \"\\f261\"; }\n.bi-chat-square-quote::before { content: \"\\f262\"; }\n.bi-chat-square-text-fill::before { content: \"\\f263\"; }\n.bi-chat-square-text::before { content: \"\\f264\"; }\n.bi-chat-square::before { content: \"\\f265\"; }\n.bi-chat-text-fill::before { content: \"\\f266\"; }\n.bi-chat-text::before { content: \"\\f267\"; }\n.bi-chat::before { content: \"\\f268\"; }\n.bi-check-all::before { content: \"\\f269\"; }\n.bi-check-circle-fill::before { content: \"\\f26a\"; }\n.bi-check-circle::before { content: \"\\f26b\"; }\n.bi-check-square-fill::before { content: \"\\f26c\"; }\n.bi-check-square::before { content: \"\\f26d\"; }\n.bi-check::before { content: \"\\f26e\"; }\n.bi-check2-all::before { content: \"\\f26f\"; }\n.bi-check2-circle::before { content: \"\\f270\"; }\n.bi-check2-square::before { content: \"\\f271\"; }\n.bi-check2::before { content: \"\\f272\"; }\n.bi-chevron-bar-contract::before { content: \"\\f273\"; }\n.bi-chevron-bar-down::before { content: \"\\f274\"; }\n.bi-chevron-bar-expand::before { content: \"\\f275\"; }\n.bi-chevron-bar-left::before { content: \"\\f276\"; }\n.bi-chevron-bar-right::before { content: \"\\f277\"; }\n.bi-chevron-bar-up::before { content: \"\\f278\"; }\n.bi-chevron-compact-down::before { content: \"\\f279\"; }\n.bi-chevron-compact-left::before { content: \"\\f27a\"; }\n.bi-chevron-compact-right::before { content: \"\\f27b\"; }\n.bi-chevron-compact-up::before { content: \"\\f27c\"; }\n.bi-chevron-contract::before { content: \"\\f27d\"; }\n.bi-chevron-double-down::before { content: \"\\f27e\"; }\n.bi-chevron-double-left::before { content: \"\\f27f\"; }\n.bi-chevron-double-right::before { content: \"\\f280\"; }\n.bi-chevron-double-up::before { content: \"\\f281\"; }\n.bi-chevron-down::before { content: \"\\f282\"; }\n.bi-chevron-expand::before { content: \"\\f283\"; }\n.bi-chevron-left::before { content: \"\\f284\"; }\n.bi-chevron-right::before { content: \"\\f285\"; }\n.bi-chevron-up::before { content: \"\\f286\"; }\n.bi-circle-fill::before { content: \"\\f287\"; }\n.bi-circle-half::before { content: \"\\f288\"; }\n.bi-circle-square::before { content: \"\\f289\"; }\n.bi-circle::before { content: \"\\f28a\"; }\n.bi-clipboard-check::before { content: \"\\f28b\"; }\n.bi-clipboard-data::before { content: \"\\f28c\"; }\n.bi-clipboard-minus::before { content: \"\\f28d\"; }\n.bi-clipboard-plus::before { content: \"\\f28e\"; }\n.bi-clipboard-x::before { content: \"\\f28f\"; }\n.bi-clipboard::before { content: \"\\f290\"; }\n.bi-clock-fill::before { content: \"\\f291\"; }\n.bi-clock-history::before { content: \"\\f292\"; }\n.bi-clock::before { content: \"\\f293\"; }\n.bi-cloud-arrow-down-fill::before { content: \"\\f294\"; }\n.bi-cloud-arrow-down::before { content: \"\\f295\"; }\n.bi-cloud-arrow-up-fill::before { content: \"\\f296\"; }\n.bi-cloud-arrow-up::before { content: \"\\f297\"; }\n.bi-cloud-check-fill::before { content: \"\\f298\"; }\n.bi-cloud-check::before { content: \"\\f299\"; }\n.bi-cloud-download-fill::before { content: \"\\f29a\"; }\n.bi-cloud-download::before { content: \"\\f29b\"; }\n.bi-cloud-drizzle-fill::before { content: \"\\f29c\"; }\n.bi-cloud-drizzle::before { content: \"\\f29d\"; }\n.bi-cloud-fill::before { content: \"\\f29e\"; }\n.bi-cloud-fog-fill::before { content: \"\\f29f\"; }\n.bi-cloud-fog::before { content: \"\\f2a0\"; }\n.bi-cloud-fog2-fill::before { content: \"\\f2a1\"; }\n.bi-cloud-fog2::before { content: \"\\f2a2\"; }\n.bi-cloud-hail-fill::before { content: \"\\f2a3\"; }\n.bi-cloud-hail::before { content: \"\\f2a4\"; }\n.bi-cloud-haze-fill::before { content: \"\\f2a6\"; }\n.bi-cloud-haze::before { content: \"\\f2a7\"; }\n.bi-cloud-haze2-fill::before { content: \"\\f2a8\"; }\n.bi-cloud-lightning-fill::before { content: \"\\f2a9\"; }\n.bi-cloud-lightning-rain-fill::before { content: \"\\f2aa\"; }\n.bi-cloud-lightning-rain::before { content: \"\\f2ab\"; }\n.bi-cloud-lightning::before { content: \"\\f2ac\"; }\n.bi-cloud-minus-fill::before { content: \"\\f2ad\"; }\n.bi-cloud-minus::before { content: \"\\f2ae\"; }\n.bi-cloud-moon-fill::before { content: \"\\f2af\"; }\n.bi-cloud-moon::before { content: \"\\f2b0\"; }\n.bi-cloud-plus-fill::before { content: \"\\f2b1\"; }\n.bi-cloud-plus::before { content: \"\\f2b2\"; }\n.bi-cloud-rain-fill::before { content: \"\\f2b3\"; }\n.bi-cloud-rain-heavy-fill::before { content: \"\\f2b4\"; }\n.bi-cloud-rain-heavy::before { content: \"\\f2b5\"; }\n.bi-cloud-rain::before { content: \"\\f2b6\"; }\n.bi-cloud-slash-fill::before { content: \"\\f2b7\"; }\n.bi-cloud-slash::before { content: \"\\f2b8\"; }\n.bi-cloud-sleet-fill::before { content: \"\\f2b9\"; }\n.bi-cloud-sleet::before { content: \"\\f2ba\"; }\n.bi-cloud-snow-fill::before { content: \"\\f2bb\"; }\n.bi-cloud-snow::before { content: \"\\f2bc\"; }\n.bi-cloud-sun-fill::before { content: \"\\f2bd\"; }\n.bi-cloud-sun::before { content: \"\\f2be\"; }\n.bi-cloud-upload-fill::before { content: \"\\f2bf\"; }\n.bi-cloud-upload::before { content: \"\\f2c0\"; }\n.bi-cloud::before { content: \"\\f2c1\"; }\n.bi-clouds-fill::before { content: \"\\f2c2\"; }\n.bi-clouds::before { content: \"\\f2c3\"; }\n.bi-cloudy-fill::before { content: \"\\f2c4\"; }\n.bi-cloudy::before { content: \"\\f2c5\"; }\n.bi-code-slash::before { content: \"\\f2c6\"; }\n.bi-code-square::before { content: \"\\f2c7\"; }\n.bi-code::before { content: \"\\f2c8\"; }\n.bi-collection-fill::before { content: \"\\f2c9\"; }\n.bi-collection-play-fill::before { content: \"\\f2ca\"; }\n.bi-collection-play::before { content: \"\\f2cb\"; }\n.bi-collection::before { content: \"\\f2cc\"; }\n.bi-columns-gap::before { content: \"\\f2cd\"; }\n.bi-columns::before { content: \"\\f2ce\"; }\n.bi-command::before { content: \"\\f2cf\"; }\n.bi-compass-fill::before { content: \"\\f2d0\"; }\n.bi-compass::before { content: \"\\f2d1\"; }\n.bi-cone-striped::before { content: \"\\f2d2\"; }\n.bi-cone::before { content: \"\\f2d3\"; }\n.bi-controller::before { content: \"\\f2d4\"; }\n.bi-cpu-fill::before { content: \"\\f2d5\"; }\n.bi-cpu::before { content: \"\\f2d6\"; }\n.bi-credit-card-2-back-fill::before { content: \"\\f2d7\"; }\n.bi-credit-card-2-back::before { content: \"\\f2d8\"; }\n.bi-credit-card-2-front-fill::before { content: \"\\f2d9\"; }\n.bi-credit-card-2-front::before { content: \"\\f2da\"; }\n.bi-credit-card-fill::before { content: \"\\f2db\"; }\n.bi-credit-card::before { content: \"\\f2dc\"; }\n.bi-crop::before { content: \"\\f2dd\"; }\n.bi-cup-fill::before { content: \"\\f2de\"; }\n.bi-cup-straw::before { content: \"\\f2df\"; }\n.bi-cup::before { content: \"\\f2e0\"; }\n.bi-cursor-fill::before { content: \"\\f2e1\"; }\n.bi-cursor-text::before { content: \"\\f2e2\"; }\n.bi-cursor::before { content: \"\\f2e3\"; }\n.bi-dash-circle-dotted::before { content: \"\\f2e4\"; }\n.bi-dash-circle-fill::before { content: \"\\f2e5\"; }\n.bi-dash-circle::before { content: \"\\f2e6\"; }\n.bi-dash-square-dotted::before { content: \"\\f2e7\"; }\n.bi-dash-square-fill::before { content: \"\\f2e8\"; }\n.bi-dash-square::before { content: \"\\f2e9\"; }\n.bi-dash::before { content: \"\\f2ea\"; }\n.bi-diagram-2-fill::before { content: \"\\f2eb\"; }\n.bi-diagram-2::before { content: \"\\f2ec\"; }\n.bi-diagram-3-fill::before { content: \"\\f2ed\"; }\n.bi-diagram-3::before { content: \"\\f2ee\"; }\n.bi-diamond-fill::before { content: \"\\f2ef\"; }\n.bi-diamond-half::before { content: \"\\f2f0\"; }\n.bi-diamond::before { content: \"\\f2f1\"; }\n.bi-dice-1-fill::before { content: \"\\f2f2\"; }\n.bi-dice-1::before { content: \"\\f2f3\"; }\n.bi-dice-2-fill::before { content: \"\\f2f4\"; }\n.bi-dice-2::before { content: \"\\f2f5\"; }\n.bi-dice-3-fill::before { content: \"\\f2f6\"; }\n.bi-dice-3::before { content: \"\\f2f7\"; }\n.bi-dice-4-fill::before { content: \"\\f2f8\"; }\n.bi-dice-4::before { content: \"\\f2f9\"; }\n.bi-dice-5-fill::before { content: \"\\f2fa\"; }\n.bi-dice-5::before { content: \"\\f2fb\"; }\n.bi-dice-6-fill::before { content: \"\\f2fc\"; }\n.bi-dice-6::before { content: \"\\f2fd\"; }\n.bi-disc-fill::before { content: \"\\f2fe\"; }\n.bi-disc::before { content: \"\\f2ff\"; }\n.bi-discord::before { content: \"\\f300\"; }\n.bi-display-fill::before { content: \"\\f301\"; }\n.bi-display::before { content: \"\\f302\"; }\n.bi-distribute-horizontal::before { content: \"\\f303\"; }\n.bi-distribute-vertical::before { content: \"\\f304\"; }\n.bi-door-closed-fill::before { content: \"\\f305\"; }\n.bi-door-closed::before { content: \"\\f306\"; }\n.bi-door-open-fill::before { content: \"\\f307\"; }\n.bi-door-open::before { content: \"\\f308\"; }\n.bi-dot::before { content: \"\\f309\"; }\n.bi-download::before { content: \"\\f30a\"; }\n.bi-droplet-fill::before { content: \"\\f30b\"; }\n.bi-droplet-half::before { content: \"\\f30c\"; }\n.bi-droplet::before { content: \"\\f30d\"; }\n.bi-earbuds::before { content: \"\\f30e\"; }\n.bi-easel-fill::before { content: \"\\f30f\"; }\n.bi-easel::before { content: \"\\f310\"; }\n.bi-egg-fill::before { content: \"\\f311\"; }\n.bi-egg-fried::before { content: \"\\f312\"; }\n.bi-egg::before { content: \"\\f313\"; }\n.bi-eject-fill::before { content: \"\\f314\"; }\n.bi-eject::before { content: \"\\f315\"; }\n.bi-emoji-angry-fill::before { content: \"\\f316\"; }\n.bi-emoji-angry::before { content: \"\\f317\"; }\n.bi-emoji-dizzy-fill::before { content: \"\\f318\"; }\n.bi-emoji-dizzy::before { content: \"\\f319\"; }\n.bi-emoji-expressionless-fill::before { content: \"\\f31a\"; }\n.bi-emoji-expressionless::before { content: \"\\f31b\"; }\n.bi-emoji-frown-fill::before { content: \"\\f31c\"; }\n.bi-emoji-frown::before { content: \"\\f31d\"; }\n.bi-emoji-heart-eyes-fill::before { content: \"\\f31e\"; }\n.bi-emoji-heart-eyes::before { content: \"\\f31f\"; }\n.bi-emoji-laughing-fill::before { content: \"\\f320\"; }\n.bi-emoji-laughing::before { content: \"\\f321\"; }\n.bi-emoji-neutral-fill::before { content: \"\\f322\"; }\n.bi-emoji-neutral::before { content: \"\\f323\"; }\n.bi-emoji-smile-fill::before { content: \"\\f324\"; }\n.bi-emoji-smile-upside-down-fill::before { content: \"\\f325\"; }\n.bi-emoji-smile-upside-down::before { content: \"\\f326\"; }\n.bi-emoji-smile::before { content: \"\\f327\"; }\n.bi-emoji-sunglasses-fill::before { content: \"\\f328\"; }\n.bi-emoji-sunglasses::before { content: \"\\f329\"; }\n.bi-emoji-wink-fill::before { content: \"\\f32a\"; }\n.bi-emoji-wink::before { content: \"\\f32b\"; }\n.bi-envelope-fill::before { content: \"\\f32c\"; }\n.bi-envelope-open-fill::before { content: \"\\f32d\"; }\n.bi-envelope-open::before { content: \"\\f32e\"; }\n.bi-envelope::before { content: \"\\f32f\"; }\n.bi-eraser-fill::before { content: \"\\f330\"; }\n.bi-eraser::before { content: \"\\f331\"; }\n.bi-exclamation-circle-fill::before { content: \"\\f332\"; }\n.bi-exclamation-circle::before { content: \"\\f333\"; }\n.bi-exclamation-diamond-fill::before { content: \"\\f334\"; }\n.bi-exclamation-diamond::before { content: \"\\f335\"; }\n.bi-exclamation-octagon-fill::before { content: \"\\f336\"; }\n.bi-exclamation-octagon::before { content: \"\\f337\"; }\n.bi-exclamation-square-fill::before { content: \"\\f338\"; }\n.bi-exclamation-square::before { content: \"\\f339\"; }\n.bi-exclamation-triangle-fill::before { content: \"\\f33a\"; }\n.bi-exclamation-triangle::before { content: \"\\f33b\"; }\n.bi-exclamation::before { content: \"\\f33c\"; }\n.bi-exclude::before { content: \"\\f33d\"; }\n.bi-eye-fill::before { content: \"\\f33e\"; }\n.bi-eye-slash-fill::before { content: \"\\f33f\"; }\n.bi-eye-slash::before { content: \"\\f340\"; }\n.bi-eye::before { content: \"\\f341\"; }\n.bi-eyedropper::before { content: \"\\f342\"; }\n.bi-eyeglasses::before { content: \"\\f343\"; }\n.bi-facebook::before { content: \"\\f344\"; }\n.bi-file-arrow-down-fill::before { content: \"\\f345\"; }\n.bi-file-arrow-down::before { content: \"\\f346\"; }\n.bi-file-arrow-up-fill::before { content: \"\\f347\"; }\n.bi-file-arrow-up::before { content: \"\\f348\"; }\n.bi-file-bar-graph-fill::before { content: \"\\f349\"; }\n.bi-file-bar-graph::before { content: \"\\f34a\"; }\n.bi-file-binary-fill::before { content: \"\\f34b\"; }\n.bi-file-binary::before { content: \"\\f34c\"; }\n.bi-file-break-fill::before { content: \"\\f34d\"; }\n.bi-file-break::before { content: \"\\f34e\"; }\n.bi-file-check-fill::before { content: \"\\f34f\"; }\n.bi-file-check::before { content: \"\\f350\"; }\n.bi-file-code-fill::before { content: \"\\f351\"; }\n.bi-file-code::before { content: \"\\f352\"; }\n.bi-file-diff-fill::before { content: \"\\f353\"; }\n.bi-file-diff::before { content: \"\\f354\"; }\n.bi-file-earmark-arrow-down-fill::before { content: \"\\f355\"; }\n.bi-file-earmark-arrow-down::before { content: \"\\f356\"; }\n.bi-file-earmark-arrow-up-fill::before { content: \"\\f357\"; }\n.bi-file-earmark-arrow-up::before { content: \"\\f358\"; }\n.bi-file-earmark-bar-graph-fill::before { content: \"\\f359\"; }\n.bi-file-earmark-bar-graph::before { content: \"\\f35a\"; }\n.bi-file-earmark-binary-fill::before { content: \"\\f35b\"; }\n.bi-file-earmark-binary::before { content: \"\\f35c\"; }\n.bi-file-earmark-break-fill::before { content: \"\\f35d\"; }\n.bi-file-earmark-break::before { content: \"\\f35e\"; }\n.bi-file-earmark-check-fill::before { content: \"\\f35f\"; }\n.bi-file-earmark-check::before { content: \"\\f360\"; }\n.bi-file-earmark-code-fill::before { content: \"\\f361\"; }\n.bi-file-earmark-code::before { content: \"\\f362\"; }\n.bi-file-earmark-diff-fill::before { content: \"\\f363\"; }\n.bi-file-earmark-diff::before { content: \"\\f364\"; }\n.bi-file-earmark-easel-fill::before { content: \"\\f365\"; }\n.bi-file-earmark-easel::before { content: \"\\f366\"; }\n.bi-file-earmark-excel-fill::before { content: \"\\f367\"; }\n.bi-file-earmark-excel::before { content: \"\\f368\"; }\n.bi-file-earmark-fill::before { content: \"\\f369\"; }\n.bi-file-earmark-font-fill::before { content: \"\\f36a\"; }\n.bi-file-earmark-font::before { content: \"\\f36b\"; }\n.bi-file-earmark-image-fill::before { content: \"\\f36c\"; }\n.bi-file-earmark-image::before { content: \"\\f36d\"; }\n.bi-file-earmark-lock-fill::before { content: \"\\f36e\"; }\n.bi-file-earmark-lock::before { content: \"\\f36f\"; }\n.bi-file-earmark-lock2-fill::before { content: \"\\f370\"; }\n.bi-file-earmark-lock2::before { content: \"\\f371\"; }\n.bi-file-earmark-medical-fill::before { content: \"\\f372\"; }\n.bi-file-earmark-medical::before { content: \"\\f373\"; }\n.bi-file-earmark-minus-fill::before { content: \"\\f374\"; }\n.bi-file-earmark-minus::before { content: \"\\f375\"; }\n.bi-file-earmark-music-fill::before { content: \"\\f376\"; }\n.bi-file-earmark-music::before { content: \"\\f377\"; }\n.bi-file-earmark-person-fill::before { content: \"\\f378\"; }\n.bi-file-earmark-person::before { content: \"\\f379\"; }\n.bi-file-earmark-play-fill::before { content: \"\\f37a\"; }\n.bi-file-earmark-play::before { content: \"\\f37b\"; }\n.bi-file-earmark-plus-fill::before { content: \"\\f37c\"; }\n.bi-file-earmark-plus::before { content: \"\\f37d\"; }\n.bi-file-earmark-post-fill::before { content: \"\\f37e\"; }\n.bi-file-earmark-post::before { content: \"\\f37f\"; }\n.bi-file-earmark-ppt-fill::before { content: \"\\f380\"; }\n.bi-file-earmark-ppt::before { content: \"\\f381\"; }\n.bi-file-earmark-richtext-fill::before { content: \"\\f382\"; }\n.bi-file-earmark-richtext::before { content: \"\\f383\"; }\n.bi-file-earmark-ruled-fill::before { content: \"\\f384\"; }\n.bi-file-earmark-ruled::before { content: \"\\f385\"; }\n.bi-file-earmark-slides-fill::before { content: \"\\f386\"; }\n.bi-file-earmark-slides::before { content: \"\\f387\"; }\n.bi-file-earmark-spreadsheet-fill::before { content: \"\\f388\"; }\n.bi-file-earmark-spreadsheet::before { content: \"\\f389\"; }\n.bi-file-earmark-text-fill::before { content: \"\\f38a\"; }\n.bi-file-earmark-text::before { content: \"\\f38b\"; }\n.bi-file-earmark-word-fill::before { content: \"\\f38c\"; }\n.bi-file-earmark-word::before { content: \"\\f38d\"; }\n.bi-file-earmark-x-fill::before { content: \"\\f38e\"; }\n.bi-file-earmark-x::before { content: \"\\f38f\"; }\n.bi-file-earmark-zip-fill::before { content: \"\\f390\"; }\n.bi-file-earmark-zip::before { content: \"\\f391\"; }\n.bi-file-earmark::before { content: \"\\f392\"; }\n.bi-file-easel-fill::before { content: \"\\f393\"; }\n.bi-file-easel::before { content: \"\\f394\"; }\n.bi-file-excel-fill::before { content: \"\\f395\"; }\n.bi-file-excel::before { content: \"\\f396\"; }\n.bi-file-fill::before { content: \"\\f397\"; }\n.bi-file-font-fill::before { content: \"\\f398\"; }\n.bi-file-font::before { content: \"\\f399\"; }\n.bi-file-image-fill::before { content: \"\\f39a\"; }\n.bi-file-image::before { content: \"\\f39b\"; }\n.bi-file-lock-fill::before { content: \"\\f39c\"; }\n.bi-file-lock::before { content: \"\\f39d\"; }\n.bi-file-lock2-fill::before { content: \"\\f39e\"; }\n.bi-file-lock2::before { content: \"\\f39f\"; }\n.bi-file-medical-fill::before { content: \"\\f3a0\"; }\n.bi-file-medical::before { content: \"\\f3a1\"; }\n.bi-file-minus-fill::before { content: \"\\f3a2\"; }\n.bi-file-minus::before { content: \"\\f3a3\"; }\n.bi-file-music-fill::before { content: \"\\f3a4\"; }\n.bi-file-music::before { content: \"\\f3a5\"; }\n.bi-file-person-fill::before { content: \"\\f3a6\"; }\n.bi-file-person::before { content: \"\\f3a7\"; }\n.bi-file-play-fill::before { content: \"\\f3a8\"; }\n.bi-file-play::before { content: \"\\f3a9\"; }\n.bi-file-plus-fill::before { content: \"\\f3aa\"; }\n.bi-file-plus::before { content: \"\\f3ab\"; }\n.bi-file-post-fill::before { content: \"\\f3ac\"; }\n.bi-file-post::before { content: \"\\f3ad\"; }\n.bi-file-ppt-fill::before { content: \"\\f3ae\"; }\n.bi-file-ppt::before { content: \"\\f3af\"; }\n.bi-file-richtext-fill::before { content: \"\\f3b0\"; }\n.bi-file-richtext::before { content: \"\\f3b1\"; }\n.bi-file-ruled-fill::before { content: \"\\f3b2\"; }\n.bi-file-ruled::before { content: \"\\f3b3\"; }\n.bi-file-slides-fill::before { content: \"\\f3b4\"; }\n.bi-file-slides::before { content: \"\\f3b5\"; }\n.bi-file-spreadsheet-fill::before { content: \"\\f3b6\"; }\n.bi-file-spreadsheet::before { content: \"\\f3b7\"; }\n.bi-file-text-fill::before { content: \"\\f3b8\"; }\n.bi-file-text::before { content: \"\\f3b9\"; }\n.bi-file-word-fill::before { content: \"\\f3ba\"; }\n.bi-file-word::before { content: \"\\f3bb\"; }\n.bi-file-x-fill::before { content: \"\\f3bc\"; }\n.bi-file-x::before { content: \"\\f3bd\"; }\n.bi-file-zip-fill::before { content: \"\\f3be\"; }\n.bi-file-zip::before { content: \"\\f3bf\"; }\n.bi-file::before { content: \"\\f3c0\"; }\n.bi-files-alt::before { content: \"\\f3c1\"; }\n.bi-files::before { content: \"\\f3c2\"; }\n.bi-film::before { content: \"\\f3c3\"; }\n.bi-filter-circle-fill::before { content: \"\\f3c4\"; }\n.bi-filter-circle::before { content: \"\\f3c5\"; }\n.bi-filter-left::before { content: \"\\f3c6\"; }\n.bi-filter-right::before { content: \"\\f3c7\"; }\n.bi-filter-square-fill::before { content: \"\\f3c8\"; }\n.bi-filter-square::before { content: \"\\f3c9\"; }\n.bi-filter::before { content: \"\\f3ca\"; }\n.bi-flag-fill::before { content: \"\\f3cb\"; }\n.bi-flag::before { content: \"\\f3cc\"; }\n.bi-flower1::before { content: \"\\f3cd\"; }\n.bi-flower2::before { content: \"\\f3ce\"; }\n.bi-flower3::before { content: \"\\f3cf\"; }\n.bi-folder-check::before { content: \"\\f3d0\"; }\n.bi-folder-fill::before { content: \"\\f3d1\"; }\n.bi-folder-minus::before { content: \"\\f3d2\"; }\n.bi-folder-plus::before { content: \"\\f3d3\"; }\n.bi-folder-symlink-fill::before { content: \"\\f3d4\"; }\n.bi-folder-symlink::before { content: \"\\f3d5\"; }\n.bi-folder-x::before { content: \"\\f3d6\"; }\n.bi-folder::before { content: \"\\f3d7\"; }\n.bi-folder2-open::before { content: \"\\f3d8\"; }\n.bi-folder2::before { content: \"\\f3d9\"; }\n.bi-fonts::before { content: \"\\f3da\"; }\n.bi-forward-fill::before { content: \"\\f3db\"; }\n.bi-forward::before { content: \"\\f3dc\"; }\n.bi-front::before { content: \"\\f3dd\"; }\n.bi-fullscreen-exit::before { content: \"\\f3de\"; }\n.bi-fullscreen::before { content: \"\\f3df\"; }\n.bi-funnel-fill::before { content: \"\\f3e0\"; }\n.bi-funnel::before { content: \"\\f3e1\"; }\n.bi-gear-fill::before { content: \"\\f3e2\"; }\n.bi-gear-wide-connected::before { content: \"\\f3e3\"; }\n.bi-gear-wide::before { content: \"\\f3e4\"; }\n.bi-gear::before { content: \"\\f3e5\"; }\n.bi-gem::before { content: \"\\f3e6\"; }\n.bi-geo-alt-fill::before { content: \"\\f3e7\"; }\n.bi-geo-alt::before { content: \"\\f3e8\"; }\n.bi-geo-fill::before { content: \"\\f3e9\"; }\n.bi-geo::before { content: \"\\f3ea\"; }\n.bi-gift-fill::before { content: \"\\f3eb\"; }\n.bi-gift::before { content: \"\\f3ec\"; }\n.bi-github::before { content: \"\\f3ed\"; }\n.bi-globe::before { content: \"\\f3ee\"; }\n.bi-globe2::before { content: \"\\f3ef\"; }\n.bi-google::before { content: \"\\f3f0\"; }\n.bi-graph-down::before { content: \"\\f3f1\"; }\n.bi-graph-up::before { content: \"\\f3f2\"; }\n.bi-grid-1x2-fill::before { content: \"\\f3f3\"; }\n.bi-grid-1x2::before { content: \"\\f3f4\"; }\n.bi-grid-3x2-gap-fill::before { content: \"\\f3f5\"; }\n.bi-grid-3x2-gap::before { content: \"\\f3f6\"; }\n.bi-grid-3x2::before { content: \"\\f3f7\"; }\n.bi-grid-3x3-gap-fill::before { content: \"\\f3f8\"; }\n.bi-grid-3x3-gap::before { content: \"\\f3f9\"; }\n.bi-grid-3x3::before { content: \"\\f3fa\"; }\n.bi-grid-fill::before { content: \"\\f3fb\"; }\n.bi-grid::before { content: \"\\f3fc\"; }\n.bi-grip-horizontal::before { content: \"\\f3fd\"; }\n.bi-grip-vertical::before { content: \"\\f3fe\"; }\n.bi-hammer::before { content: \"\\f3ff\"; }\n.bi-hand-index-fill::before { content: \"\\f400\"; }\n.bi-hand-index-thumb-fill::before { content: \"\\f401\"; }\n.bi-hand-index-thumb::before { content: \"\\f402\"; }\n.bi-hand-index::before { content: \"\\f403\"; }\n.bi-hand-thumbs-down-fill::before { content: \"\\f404\"; }\n.bi-hand-thumbs-down::before { content: \"\\f405\"; }\n.bi-hand-thumbs-up-fill::before { content: \"\\f406\"; }\n.bi-hand-thumbs-up::before { content: \"\\f407\"; }\n.bi-handbag-fill::before { content: \"\\f408\"; }\n.bi-handbag::before { content: \"\\f409\"; }\n.bi-hash::before { content: \"\\f40a\"; }\n.bi-hdd-fill::before { content: \"\\f40b\"; }\n.bi-hdd-network-fill::before { content: \"\\f40c\"; }\n.bi-hdd-network::before { content: \"\\f40d\"; }\n.bi-hdd-rack-fill::before { content: \"\\f40e\"; }\n.bi-hdd-rack::before { content: \"\\f40f\"; }\n.bi-hdd-stack-fill::before { content: \"\\f410\"; }\n.bi-hdd-stack::before { content: \"\\f411\"; }\n.bi-hdd::before { content: \"\\f412\"; }\n.bi-headphones::before { content: \"\\f413\"; }\n.bi-headset::before { content: \"\\f414\"; }\n.bi-heart-fill::before { content: \"\\f415\"; }\n.bi-heart-half::before { content: \"\\f416\"; }\n.bi-heart::before { content: \"\\f417\"; }\n.bi-heptagon-fill::before { content: \"\\f418\"; }\n.bi-heptagon-half::before { content: \"\\f419\"; }\n.bi-heptagon::before { content: \"\\f41a\"; }\n.bi-hexagon-fill::before { content: \"\\f41b\"; }\n.bi-hexagon-half::before { content: \"\\f41c\"; }\n.bi-hexagon::before { content: \"\\f41d\"; }\n.bi-hourglass-bottom::before { content: \"\\f41e\"; }\n.bi-hourglass-split::before { content: \"\\f41f\"; }\n.bi-hourglass-top::before { content: \"\\f420\"; }\n.bi-hourglass::before { content: \"\\f421\"; }\n.bi-house-door-fill::before { content: \"\\f422\"; }\n.bi-house-door::before { content: \"\\f423\"; }\n.bi-house-fill::before { content: \"\\f424\"; }\n.bi-house::before { content: \"\\f425\"; }\n.bi-hr::before { content: \"\\f426\"; }\n.bi-hurricane::before { content: \"\\f427\"; }\n.bi-image-alt::before { content: \"\\f428\"; }\n.bi-image-fill::before { content: \"\\f429\"; }\n.bi-image::before { content: \"\\f42a\"; }\n.bi-images::before { content: \"\\f42b\"; }\n.bi-inbox-fill::before { content: \"\\f42c\"; }\n.bi-inbox::before { content: \"\\f42d\"; }\n.bi-inboxes-fill::before { content: \"\\f42e\"; }\n.bi-inboxes::before { content: \"\\f42f\"; }\n.bi-info-circle-fill::before { content: \"\\f430\"; }\n.bi-info-circle::before { content: \"\\f431\"; }\n.bi-info-square-fill::before { content: \"\\f432\"; }\n.bi-info-square::before { content: \"\\f433\"; }\n.bi-info::before { content: \"\\f434\"; }\n.bi-input-cursor-text::before { content: \"\\f435\"; }\n.bi-input-cursor::before { content: \"\\f436\"; }\n.bi-instagram::before { content: \"\\f437\"; }\n.bi-intersect::before { content: \"\\f438\"; }\n.bi-journal-album::before { content: \"\\f439\"; }\n.bi-journal-arrow-down::before { content: \"\\f43a\"; }\n.bi-journal-arrow-up::before { content: \"\\f43b\"; }\n.bi-journal-bookmark-fill::before { content: \"\\f43c\"; }\n.bi-journal-bookmark::before { content: \"\\f43d\"; }\n.bi-journal-check::before { content: \"\\f43e\"; }\n.bi-journal-code::before { content: \"\\f43f\"; }\n.bi-journal-medical::before { content: \"\\f440\"; }\n.bi-journal-minus::before { content: \"\\f441\"; }\n.bi-journal-plus::before { content: \"\\f442\"; }\n.bi-journal-richtext::before { content: \"\\f443\"; }\n.bi-journal-text::before { content: \"\\f444\"; }\n.bi-journal-x::before { content: \"\\f445\"; }\n.bi-journal::before { content: \"\\f446\"; }\n.bi-journals::before { content: \"\\f447\"; }\n.bi-joystick::before { content: \"\\f448\"; }\n.bi-justify-left::before { content: \"\\f449\"; }\n.bi-justify-right::before { content: \"\\f44a\"; }\n.bi-justify::before { content: \"\\f44b\"; }\n.bi-kanban-fill::before { content: \"\\f44c\"; }\n.bi-kanban::before { content: \"\\f44d\"; }\n.bi-key-fill::before { content: \"\\f44e\"; }\n.bi-key::before { content: \"\\f44f\"; }\n.bi-keyboard-fill::before { content: \"\\f450\"; }\n.bi-keyboard::before { content: \"\\f451\"; }\n.bi-ladder::before { content: \"\\f452\"; }\n.bi-lamp-fill::before { content: \"\\f453\"; }\n.bi-lamp::before { content: \"\\f454\"; }\n.bi-laptop-fill::before { content: \"\\f455\"; }\n.bi-laptop::before { content: \"\\f456\"; }\n.bi-layer-backward::before { content: \"\\f457\"; }\n.bi-layer-forward::before { content: \"\\f458\"; }\n.bi-layers-fill::before { content: \"\\f459\"; }\n.bi-layers-half::before { content: \"\\f45a\"; }\n.bi-layers::before { content: \"\\f45b\"; }\n.bi-layout-sidebar-inset-reverse::before { content: \"\\f45c\"; }\n.bi-layout-sidebar-inset::before { content: \"\\f45d\"; }\n.bi-layout-sidebar-reverse::before { content: \"\\f45e\"; }\n.bi-layout-sidebar::before { content: \"\\f45f\"; }\n.bi-layout-split::before { content: \"\\f460\"; }\n.bi-layout-text-sidebar-reverse::before { content: \"\\f461\"; }\n.bi-layout-text-sidebar::before { content: \"\\f462\"; }\n.bi-layout-text-window-reverse::before { content: \"\\f463\"; }\n.bi-layout-text-window::before { content: \"\\f464\"; }\n.bi-layout-three-columns::before { content: \"\\f465\"; }\n.bi-layout-wtf::before { content: \"\\f466\"; }\n.bi-life-preserver::before { content: \"\\f467\"; }\n.bi-lightbulb-fill::before { content: \"\\f468\"; }\n.bi-lightbulb-off-fill::before { content: \"\\f469\"; }\n.bi-lightbulb-off::before { content: \"\\f46a\"; }\n.bi-lightbulb::before { content: \"\\f46b\"; }\n.bi-lightning-charge-fill::before { content: \"\\f46c\"; }\n.bi-lightning-charge::before { content: \"\\f46d\"; }\n.bi-lightning-fill::before { content: \"\\f46e\"; }\n.bi-lightning::before { content: \"\\f46f\"; }\n.bi-link-45deg::before { content: \"\\f470\"; }\n.bi-link::before { content: \"\\f471\"; }\n.bi-linkedin::before { content: \"\\f472\"; }\n.bi-list-check::before { content: \"\\f473\"; }\n.bi-list-nested::before { content: \"\\f474\"; }\n.bi-list-ol::before { content: \"\\f475\"; }\n.bi-list-stars::before { content: \"\\f476\"; }\n.bi-list-task::before { content: \"\\f477\"; }\n.bi-list-ul::before { content: \"\\f478\"; }\n.bi-list::before { content: \"\\f479\"; }\n.bi-lock-fill::before { content: \"\\f47a\"; }\n.bi-lock::before { content: \"\\f47b\"; }\n.bi-mailbox::before { content: \"\\f47c\"; }\n.bi-mailbox2::before { content: \"\\f47d\"; }\n.bi-map-fill::before { content: \"\\f47e\"; }\n.bi-map::before { content: \"\\f47f\"; }\n.bi-markdown-fill::before { content: \"\\f480\"; }\n.bi-markdown::before { content: \"\\f481\"; }\n.bi-mask::before { content: \"\\f482\"; }\n.bi-megaphone-fill::before { content: \"\\f483\"; }\n.bi-megaphone::before { content: \"\\f484\"; }\n.bi-menu-app-fill::before { content: \"\\f485\"; }\n.bi-menu-app::before { content: \"\\f486\"; }\n.bi-menu-button-fill::before { content: \"\\f487\"; }\n.bi-menu-button-wide-fill::before { content: \"\\f488\"; }\n.bi-menu-button-wide::before { content: \"\\f489\"; }\n.bi-menu-button::before { content: \"\\f48a\"; }\n.bi-menu-down::before { content: \"\\f48b\"; }\n.bi-menu-up::before { content: \"\\f48c\"; }\n.bi-mic-fill::before { content: \"\\f48d\"; }\n.bi-mic-mute-fill::before { content: \"\\f48e\"; }\n.bi-mic-mute::before { content: \"\\f48f\"; }\n.bi-mic::before { content: \"\\f490\"; }\n.bi-minecart-loaded::before { content: \"\\f491\"; }\n.bi-minecart::before { content: \"\\f492\"; }\n.bi-moisture::before { content: \"\\f493\"; }\n.bi-moon-fill::before { content: \"\\f494\"; }\n.bi-moon-stars-fill::before { content: \"\\f495\"; }\n.bi-moon-stars::before { content: \"\\f496\"; }\n.bi-moon::before { content: \"\\f497\"; }\n.bi-mouse-fill::before { content: \"\\f498\"; }\n.bi-mouse::before { content: \"\\f499\"; }\n.bi-mouse2-fill::before { content: \"\\f49a\"; }\n.bi-mouse2::before { content: \"\\f49b\"; }\n.bi-mouse3-fill::before { content: \"\\f49c\"; }\n.bi-mouse3::before { content: \"\\f49d\"; }\n.bi-music-note-beamed::before { content: \"\\f49e\"; }\n.bi-music-note-list::before { content: \"\\f49f\"; }\n.bi-music-note::before { content: \"\\f4a0\"; }\n.bi-music-player-fill::before { content: \"\\f4a1\"; }\n.bi-music-player::before { content: \"\\f4a2\"; }\n.bi-newspaper::before { content: \"\\f4a3\"; }\n.bi-node-minus-fill::before { content: \"\\f4a4\"; }\n.bi-node-minus::before { content: \"\\f4a5\"; }\n.bi-node-plus-fill::before { content: \"\\f4a6\"; }\n.bi-node-plus::before { content: \"\\f4a7\"; }\n.bi-nut-fill::before { content: \"\\f4a8\"; }\n.bi-nut::before { content: \"\\f4a9\"; }\n.bi-octagon-fill::before { content: \"\\f4aa\"; }\n.bi-octagon-half::before { content: \"\\f4ab\"; }\n.bi-octagon::before { content: \"\\f4ac\"; }\n.bi-option::before { content: \"\\f4ad\"; }\n.bi-outlet::before { content: \"\\f4ae\"; }\n.bi-paint-bucket::before { content: \"\\f4af\"; }\n.bi-palette-fill::before { content: \"\\f4b0\"; }\n.bi-palette::before { content: \"\\f4b1\"; }\n.bi-palette2::before { content: \"\\f4b2\"; }\n.bi-paperclip::before { content: \"\\f4b3\"; }\n.bi-paragraph::before { content: \"\\f4b4\"; }\n.bi-patch-check-fill::before { content: \"\\f4b5\"; }\n.bi-patch-check::before { content: \"\\f4b6\"; }\n.bi-patch-exclamation-fill::before { content: \"\\f4b7\"; }\n.bi-patch-exclamation::before { content: \"\\f4b8\"; }\n.bi-patch-minus-fill::before { content: \"\\f4b9\"; }\n.bi-patch-minus::before { content: \"\\f4ba\"; }\n.bi-patch-plus-fill::before { content: \"\\f4bb\"; }\n.bi-patch-plus::before { content: \"\\f4bc\"; }\n.bi-patch-question-fill::before { content: \"\\f4bd\"; }\n.bi-patch-question::before { content: \"\\f4be\"; }\n.bi-pause-btn-fill::before { content: \"\\f4bf\"; }\n.bi-pause-btn::before { content: \"\\f4c0\"; }\n.bi-pause-circle-fill::before { content: \"\\f4c1\"; }\n.bi-pause-circle::before { content: \"\\f4c2\"; }\n.bi-pause-fill::before { content: \"\\f4c3\"; }\n.bi-pause::before { content: \"\\f4c4\"; }\n.bi-peace-fill::before { content: \"\\f4c5\"; }\n.bi-peace::before { content: \"\\f4c6\"; }\n.bi-pen-fill::before { content: \"\\f4c7\"; }\n.bi-pen::before { content: \"\\f4c8\"; }\n.bi-pencil-fill::before { content: \"\\f4c9\"; }\n.bi-pencil-square::before { content: \"\\f4ca\"; }\n.bi-pencil::before { content: \"\\f4cb\"; }\n.bi-pentagon-fill::before { content: \"\\f4cc\"; }\n.bi-pentagon-half::before { content: \"\\f4cd\"; }\n.bi-pentagon::before { content: \"\\f4ce\"; }\n.bi-people-fill::before { content: \"\\f4cf\"; }\n.bi-people::before { content: \"\\f4d0\"; }\n.bi-percent::before { content: \"\\f4d1\"; }\n.bi-person-badge-fill::before { content: \"\\f4d2\"; }\n.bi-person-badge::before { content: \"\\f4d3\"; }\n.bi-person-bounding-box::before { content: \"\\f4d4\"; }\n.bi-person-check-fill::before { content: \"\\f4d5\"; }\n.bi-person-check::before { content: \"\\f4d6\"; }\n.bi-person-circle::before { content: \"\\f4d7\"; }\n.bi-person-dash-fill::before { content: \"\\f4d8\"; }\n.bi-person-dash::before { content: \"\\f4d9\"; }\n.bi-person-fill::before { content: \"\\f4da\"; }\n.bi-person-lines-fill::before { content: \"\\f4db\"; }\n.bi-person-plus-fill::before { content: \"\\f4dc\"; }\n.bi-person-plus::before { content: \"\\f4dd\"; }\n.bi-person-square::before { content: \"\\f4de\"; }\n.bi-person-x-fill::before { content: \"\\f4df\"; }\n.bi-person-x::before { content: \"\\f4e0\"; }\n.bi-person::before { content: \"\\f4e1\"; }\n.bi-phone-fill::before { content: \"\\f4e2\"; }\n.bi-phone-landscape-fill::before { content: \"\\f4e3\"; }\n.bi-phone-landscape::before { content: \"\\f4e4\"; }\n.bi-phone-vibrate-fill::before { content: \"\\f4e5\"; }\n.bi-phone-vibrate::before { content: \"\\f4e6\"; }\n.bi-phone::before { content: \"\\f4e7\"; }\n.bi-pie-chart-fill::before { content: \"\\f4e8\"; }\n.bi-pie-chart::before { content: \"\\f4e9\"; }\n.bi-pin-angle-fill::before { content: \"\\f4ea\"; }\n.bi-pin-angle::before { content: \"\\f4eb\"; }\n.bi-pin-fill::before { content: \"\\f4ec\"; }\n.bi-pin::before { content: \"\\f4ed\"; }\n.bi-pip-fill::before { content: \"\\f4ee\"; }\n.bi-pip::before { content: \"\\f4ef\"; }\n.bi-play-btn-fill::before { content: \"\\f4f0\"; }\n.bi-play-btn::before { content: \"\\f4f1\"; }\n.bi-play-circle-fill::before { content: \"\\f4f2\"; }\n.bi-play-circle::before { content: \"\\f4f3\"; }\n.bi-play-fill::before { content: \"\\f4f4\"; }\n.bi-play::before { content: \"\\f4f5\"; }\n.bi-plug-fill::before { content: \"\\f4f6\"; }\n.bi-plug::before { content: \"\\f4f7\"; }\n.bi-plus-circle-dotted::before { content: \"\\f4f8\"; }\n.bi-plus-circle-fill::before { content: \"\\f4f9\"; }\n.bi-plus-circle::before { content: \"\\f4fa\"; }\n.bi-plus-square-dotted::before { content: \"\\f4fb\"; }\n.bi-plus-square-fill::before { content: \"\\f4fc\"; }\n.bi-plus-square::before { content: \"\\f4fd\"; }\n.bi-plus::before { content: \"\\f4fe\"; }\n.bi-power::before { content: \"\\f4ff\"; }\n.bi-printer-fill::before { content: \"\\f500\"; }\n.bi-printer::before { content: \"\\f501\"; }\n.bi-puzzle-fill::before { content: \"\\f502\"; }\n.bi-puzzle::before { content: \"\\f503\"; }\n.bi-question-circle-fill::before { content: \"\\f504\"; }\n.bi-question-circle::before { content: \"\\f505\"; }\n.bi-question-diamond-fill::before { content: \"\\f506\"; }\n.bi-question-diamond::before { content: \"\\f507\"; }\n.bi-question-octagon-fill::before { content: \"\\f508\"; }\n.bi-question-octagon::before { content: \"\\f509\"; }\n.bi-question-square-fill::before { content: \"\\f50a\"; }\n.bi-question-square::before { content: \"\\f50b\"; }\n.bi-question::before { content: \"\\f50c\"; }\n.bi-rainbow::before { content: \"\\f50d\"; }\n.bi-receipt-cutoff::before { content: \"\\f50e\"; }\n.bi-receipt::before { content: \"\\f50f\"; }\n.bi-reception-0::before { content: \"\\f510\"; }\n.bi-reception-1::before { content: \"\\f511\"; }\n.bi-reception-2::before { content: \"\\f512\"; }\n.bi-reception-3::before { content: \"\\f513\"; }\n.bi-reception-4::before { content: \"\\f514\"; }\n.bi-record-btn-fill::before { content: \"\\f515\"; }\n.bi-record-btn::before { content: \"\\f516\"; }\n.bi-record-circle-fill::before { content: \"\\f517\"; }\n.bi-record-circle::before { content: \"\\f518\"; }\n.bi-record-fill::before { content: \"\\f519\"; }\n.bi-record::before { content: \"\\f51a\"; }\n.bi-record2-fill::before { content: \"\\f51b\"; }\n.bi-record2::before { content: \"\\f51c\"; }\n.bi-reply-all-fill::before { content: \"\\f51d\"; }\n.bi-reply-all::before { content: \"\\f51e\"; }\n.bi-reply-fill::before { content: \"\\f51f\"; }\n.bi-reply::before { content: \"\\f520\"; }\n.bi-rss-fill::before { content: \"\\f521\"; }\n.bi-rss::before { content: \"\\f522\"; }\n.bi-rulers::before { content: \"\\f523\"; }\n.bi-save-fill::before { content: \"\\f524\"; }\n.bi-save::before { content: \"\\f525\"; }\n.bi-save2-fill::before { content: \"\\f526\"; }\n.bi-save2::before { content: \"\\f527\"; }\n.bi-scissors::before { content: \"\\f528\"; }\n.bi-screwdriver::before { content: \"\\f529\"; }\n.bi-search::before { content: \"\\f52a\"; }\n.bi-segmented-nav::before { content: \"\\f52b\"; }\n.bi-server::before { content: \"\\f52c\"; }\n.bi-share-fill::before { content: \"\\f52d\"; }\n.bi-share::before { content: \"\\f52e\"; }\n.bi-shield-check::before { content: \"\\f52f\"; }\n.bi-shield-exclamation::before { content: \"\\f530\"; }\n.bi-shield-fill-check::before { content: \"\\f531\"; }\n.bi-shield-fill-exclamation::before { content: \"\\f532\"; }\n.bi-shield-fill-minus::before { content: \"\\f533\"; }\n.bi-shield-fill-plus::before { content: \"\\f534\"; }\n.bi-shield-fill-x::before { content: \"\\f535\"; }\n.bi-shield-fill::before { content: \"\\f536\"; }\n.bi-shield-lock-fill::before { content: \"\\f537\"; }\n.bi-shield-lock::before { content: \"\\f538\"; }\n.bi-shield-minus::before { content: \"\\f539\"; }\n.bi-shield-plus::before { content: \"\\f53a\"; }\n.bi-shield-shaded::before { content: \"\\f53b\"; }\n.bi-shield-slash-fill::before { content: \"\\f53c\"; }\n.bi-shield-slash::before { content: \"\\f53d\"; }\n.bi-shield-x::before { content: \"\\f53e\"; }\n.bi-shield::before { content: \"\\f53f\"; }\n.bi-shift-fill::before { content: \"\\f540\"; }\n.bi-shift::before { content: \"\\f541\"; }\n.bi-shop-window::before { content: \"\\f542\"; }\n.bi-shop::before { content: \"\\f543\"; }\n.bi-shuffle::before { content: \"\\f544\"; }\n.bi-signpost-2-fill::before { content: \"\\f545\"; }\n.bi-signpost-2::before { content: \"\\f546\"; }\n.bi-signpost-fill::before { content: \"\\f547\"; }\n.bi-signpost-split-fill::before { content: \"\\f548\"; }\n.bi-signpost-split::before { content: \"\\f549\"; }\n.bi-signpost::before { content: \"\\f54a\"; }\n.bi-sim-fill::before { content: \"\\f54b\"; }\n.bi-sim::before { content: \"\\f54c\"; }\n.bi-skip-backward-btn-fill::before { content: \"\\f54d\"; }\n.bi-skip-backward-btn::before { content: \"\\f54e\"; }\n.bi-skip-backward-circle-fill::before { content: \"\\f54f\"; }\n.bi-skip-backward-circle::before { content: \"\\f550\"; }\n.bi-skip-backward-fill::before { content: \"\\f551\"; }\n.bi-skip-backward::before { content: \"\\f552\"; }\n.bi-skip-end-btn-fill::before { content: \"\\f553\"; }\n.bi-skip-end-btn::before { content: \"\\f554\"; }\n.bi-skip-end-circle-fill::before { content: \"\\f555\"; }\n.bi-skip-end-circle::before { content: \"\\f556\"; }\n.bi-skip-end-fill::before { content: \"\\f557\"; }\n.bi-skip-end::before { content: \"\\f558\"; }\n.bi-skip-forward-btn-fill::before { content: \"\\f559\"; }\n.bi-skip-forward-btn::before { content: \"\\f55a\"; }\n.bi-skip-forward-circle-fill::before { content: \"\\f55b\"; }\n.bi-skip-forward-circle::before { content: \"\\f55c\"; }\n.bi-skip-forward-fill::before { content: \"\\f55d\"; }\n.bi-skip-forward::before { content: \"\\f55e\"; }\n.bi-skip-start-btn-fill::before { content: \"\\f55f\"; }\n.bi-skip-start-btn::before { content: \"\\f560\"; }\n.bi-skip-start-circle-fill::before { content: \"\\f561\"; }\n.bi-skip-start-circle::before { content: \"\\f562\"; }\n.bi-skip-start-fill::before { content: \"\\f563\"; }\n.bi-skip-start::before { content: \"\\f564\"; }\n.bi-slack::before { content: \"\\f565\"; }\n.bi-slash-circle-fill::before { content: \"\\f566\"; }\n.bi-slash-circle::before { content: \"\\f567\"; }\n.bi-slash-square-fill::before { content: \"\\f568\"; }\n.bi-slash-square::before { content: \"\\f569\"; }\n.bi-slash::before { content: \"\\f56a\"; }\n.bi-sliders::before { content: \"\\f56b\"; }\n.bi-smartwatch::before { content: \"\\f56c\"; }\n.bi-snow::before { content: \"\\f56d\"; }\n.bi-snow2::before { content: \"\\f56e\"; }\n.bi-snow3::before { content: \"\\f56f\"; }\n.bi-sort-alpha-down-alt::before { content: \"\\f570\"; }\n.bi-sort-alpha-down::before { content: \"\\f571\"; }\n.bi-sort-alpha-up-alt::before { content: \"\\f572\"; }\n.bi-sort-alpha-up::before { content: \"\\f573\"; }\n.bi-sort-down-alt::before { content: \"\\f574\"; }\n.bi-sort-down::before { content: \"\\f575\"; }\n.bi-sort-numeric-down-alt::before { content: \"\\f576\"; }\n.bi-sort-numeric-down::before { content: \"\\f577\"; }\n.bi-sort-numeric-up-alt::before { content: \"\\f578\"; }\n.bi-sort-numeric-up::before { content: \"\\f579\"; }\n.bi-sort-up-alt::before { content: \"\\f57a\"; }\n.bi-sort-up::before { content: \"\\f57b\"; }\n.bi-soundwave::before { content: \"\\f57c\"; }\n.bi-speaker-fill::before { content: \"\\f57d\"; }\n.bi-speaker::before { content: \"\\f57e\"; }\n.bi-speedometer::before { content: \"\\f57f\"; }\n.bi-speedometer2::before { content: \"\\f580\"; }\n.bi-spellcheck::before { content: \"\\f581\"; }\n.bi-square-fill::before { content: \"\\f582\"; }\n.bi-square-half::before { content: \"\\f583\"; }\n.bi-square::before { content: \"\\f584\"; }\n.bi-stack::before { content: \"\\f585\"; }\n.bi-star-fill::before { content: \"\\f586\"; }\n.bi-star-half::before { content: \"\\f587\"; }\n.bi-star::before { content: \"\\f588\"; }\n.bi-stars::before { content: \"\\f589\"; }\n.bi-stickies-fill::before { content: \"\\f58a\"; }\n.bi-stickies::before { content: \"\\f58b\"; }\n.bi-sticky-fill::before { content: \"\\f58c\"; }\n.bi-sticky::before { content: \"\\f58d\"; }\n.bi-stop-btn-fill::before { content: \"\\f58e\"; }\n.bi-stop-btn::before { content: \"\\f58f\"; }\n.bi-stop-circle-fill::before { content: \"\\f590\"; }\n.bi-stop-circle::before { content: \"\\f591\"; }\n.bi-stop-fill::before { content: \"\\f592\"; }\n.bi-stop::before { content: \"\\f593\"; }\n.bi-stoplights-fill::before { content: \"\\f594\"; }\n.bi-stoplights::before { content: \"\\f595\"; }\n.bi-stopwatch-fill::before { content: \"\\f596\"; }\n.bi-stopwatch::before { content: \"\\f597\"; }\n.bi-subtract::before { content: \"\\f598\"; }\n.bi-suit-club-fill::before { content: \"\\f599\"; }\n.bi-suit-club::before { content: \"\\f59a\"; }\n.bi-suit-diamond-fill::before { content: \"\\f59b\"; }\n.bi-suit-diamond::before { content: \"\\f59c\"; }\n.bi-suit-heart-fill::before { content: \"\\f59d\"; }\n.bi-suit-heart::before { content: \"\\f59e\"; }\n.bi-suit-spade-fill::before { content: \"\\f59f\"; }\n.bi-suit-spade::before { content: \"\\f5a0\"; }\n.bi-sun-fill::before { content: \"\\f5a1\"; }\n.bi-sun::before { content: \"\\f5a2\"; }\n.bi-sunglasses::before { content: \"\\f5a3\"; }\n.bi-sunrise-fill::before { content: \"\\f5a4\"; }\n.bi-sunrise::before { content: \"\\f5a5\"; }\n.bi-sunset-fill::before { content: \"\\f5a6\"; }\n.bi-sunset::before { content: \"\\f5a7\"; }\n.bi-symmetry-horizontal::before { content: \"\\f5a8\"; }\n.bi-symmetry-vertical::before { content: \"\\f5a9\"; }\n.bi-table::before { content: \"\\f5aa\"; }\n.bi-tablet-fill::before { content: \"\\f5ab\"; }\n.bi-tablet-landscape-fill::before { content: \"\\f5ac\"; }\n.bi-tablet-landscape::before { content: \"\\f5ad\"; }\n.bi-tablet::before { content: \"\\f5ae\"; }\n.bi-tag-fill::before { content: \"\\f5af\"; }\n.bi-tag::before { content: \"\\f5b0\"; }\n.bi-tags-fill::before { content: \"\\f5b1\"; }\n.bi-tags::before { content: \"\\f5b2\"; }\n.bi-telegram::before { content: \"\\f5b3\"; }\n.bi-telephone-fill::before { content: \"\\f5b4\"; }\n.bi-telephone-forward-fill::before { content: \"\\f5b5\"; }\n.bi-telephone-forward::before { content: \"\\f5b6\"; }\n.bi-telephone-inbound-fill::before { content: \"\\f5b7\"; }\n.bi-telephone-inbound::before { content: \"\\f5b8\"; }\n.bi-telephone-minus-fill::before { content: \"\\f5b9\"; }\n.bi-telephone-minus::before { content: \"\\f5ba\"; }\n.bi-telephone-outbound-fill::before { content: \"\\f5bb\"; }\n.bi-telephone-outbound::before { content: \"\\f5bc\"; }\n.bi-telephone-plus-fill::before { content: \"\\f5bd\"; }\n.bi-telephone-plus::before { content: \"\\f5be\"; }\n.bi-telephone-x-fill::before { content: \"\\f5bf\"; }\n.bi-telephone-x::before { content: \"\\f5c0\"; }\n.bi-telephone::before { content: \"\\f5c1\"; }\n.bi-terminal-fill::before { content: \"\\f5c2\"; }\n.bi-terminal::before { content: \"\\f5c3\"; }\n.bi-text-center::before { content: \"\\f5c4\"; }\n.bi-text-indent-left::before { content: \"\\f5c5\"; }\n.bi-text-indent-right::before { content: \"\\f5c6\"; }\n.bi-text-left::before { content: \"\\f5c7\"; }\n.bi-text-paragraph::before { content: \"\\f5c8\"; }\n.bi-text-right::before { content: \"\\f5c9\"; }\n.bi-textarea-resize::before { content: \"\\f5ca\"; }\n.bi-textarea-t::before { content: \"\\f5cb\"; }\n.bi-textarea::before { content: \"\\f5cc\"; }\n.bi-thermometer-half::before { content: \"\\f5cd\"; }\n.bi-thermometer-high::before { content: \"\\f5ce\"; }\n.bi-thermometer-low::before { content: \"\\f5cf\"; }\n.bi-thermometer-snow::before { content: \"\\f5d0\"; }\n.bi-thermometer-sun::before { content: \"\\f5d1\"; }\n.bi-thermometer::before { content: \"\\f5d2\"; }\n.bi-three-dots-vertical::before { content: \"\\f5d3\"; }\n.bi-three-dots::before { content: \"\\f5d4\"; }\n.bi-toggle-off::before { content: \"\\f5d5\"; }\n.bi-toggle-on::before { content: \"\\f5d6\"; }\n.bi-toggle2-off::before { content: \"\\f5d7\"; }\n.bi-toggle2-on::before { content: \"\\f5d8\"; }\n.bi-toggles::before { content: \"\\f5d9\"; }\n.bi-toggles2::before { content: \"\\f5da\"; }\n.bi-tools::before { content: \"\\f5db\"; }\n.bi-tornado::before { content: \"\\f5dc\"; }\n.bi-trash-fill::before { content: \"\\f5dd\"; }\n.bi-trash::before { content: \"\\f5de\"; }\n.bi-trash2-fill::before { content: \"\\f5df\"; }\n.bi-trash2::before { content: \"\\f5e0\"; }\n.bi-tree-fill::before { content: \"\\f5e1\"; }\n.bi-tree::before { content: \"\\f5e2\"; }\n.bi-triangle-fill::before { content: \"\\f5e3\"; }\n.bi-triangle-half::before { content: \"\\f5e4\"; }\n.bi-triangle::before { content: \"\\f5e5\"; }\n.bi-trophy-fill::before { content: \"\\f5e6\"; }\n.bi-trophy::before { content: \"\\f5e7\"; }\n.bi-tropical-storm::before { content: \"\\f5e8\"; }\n.bi-truck-flatbed::before { content: \"\\f5e9\"; }\n.bi-truck::before { content: \"\\f5ea\"; }\n.bi-tsunami::before { content: \"\\f5eb\"; }\n.bi-tv-fill::before { content: \"\\f5ec\"; }\n.bi-tv::before { content: \"\\f5ed\"; }\n.bi-twitch::before { content: \"\\f5ee\"; }\n.bi-twitter::before { content: \"\\f5ef\"; }\n.bi-type-bold::before { content: \"\\f5f0\"; }\n.bi-type-h1::before { content: \"\\f5f1\"; }\n.bi-type-h2::before { content: \"\\f5f2\"; }\n.bi-type-h3::before { content: \"\\f5f3\"; }\n.bi-type-italic::before { content: \"\\f5f4\"; }\n.bi-type-strikethrough::before { content: \"\\f5f5\"; }\n.bi-type-underline::before { content: \"\\f5f6\"; }\n.bi-type::before { content: \"\\f5f7\"; }\n.bi-ui-checks-grid::before { content: \"\\f5f8\"; }\n.bi-ui-checks::before { content: \"\\f5f9\"; }\n.bi-ui-radios-grid::before { content: \"\\f5fa\"; }\n.bi-ui-radios::before { content: \"\\f5fb\"; }\n.bi-umbrella-fill::before { content: \"\\f5fc\"; }\n.bi-umbrella::before { content: \"\\f5fd\"; }\n.bi-union::before { content: \"\\f5fe\"; }\n.bi-unlock-fill::before { content: \"\\f5ff\"; }\n.bi-unlock::before { content: \"\\f600\"; }\n.bi-upc-scan::before { content: \"\\f601\"; }\n.bi-upc::before { content: \"\\f602\"; }\n.bi-upload::before { content: \"\\f603\"; }\n.bi-vector-pen::before { content: \"\\f604\"; }\n.bi-view-list::before { content: \"\\f605\"; }\n.bi-view-stacked::before { content: \"\\f606\"; }\n.bi-vinyl-fill::before { content: \"\\f607\"; }\n.bi-vinyl::before { content: \"\\f608\"; }\n.bi-voicemail::before { content: \"\\f609\"; }\n.bi-volume-down-fill::before { content: \"\\f60a\"; }\n.bi-volume-down::before { content: \"\\f60b\"; }\n.bi-volume-mute-fill::before { content: \"\\f60c\"; }\n.bi-volume-mute::before { content: \"\\f60d\"; }\n.bi-volume-off-fill::before { content: \"\\f60e\"; }\n.bi-volume-off::before { content: \"\\f60f\"; }\n.bi-volume-up-fill::before { content: \"\\f610\"; }\n.bi-volume-up::before { content: \"\\f611\"; }\n.bi-vr::before { content: \"\\f612\"; }\n.bi-wallet-fill::before { content: \"\\f613\"; }\n.bi-wallet::before { content: \"\\f614\"; }\n.bi-wallet2::before { content: \"\\f615\"; }\n.bi-watch::before { content: \"\\f616\"; }\n.bi-water::before { content: \"\\f617\"; }\n.bi-whatsapp::before { content: \"\\f618\"; }\n.bi-wifi-1::before { content: \"\\f619\"; }\n.bi-wifi-2::before { content: \"\\f61a\"; }\n.bi-wifi-off::before { content: \"\\f61b\"; }\n.bi-wifi::before { content: \"\\f61c\"; }\n.bi-wind::before { content: \"\\f61d\"; }\n.bi-window-dock::before { content: \"\\f61e\"; }\n.bi-window-sidebar::before { content: \"\\f61f\"; }\n.bi-window::before { content: \"\\f620\"; }\n.bi-wrench::before { content: \"\\f621\"; }\n.bi-x-circle-fill::before { content: \"\\f622\"; }\n.bi-x-circle::before { content: \"\\f623\"; }\n.bi-x-diamond-fill::before { content: \"\\f624\"; }\n.bi-x-diamond::before { content: \"\\f625\"; }\n.bi-x-octagon-fill::before { content: \"\\f626\"; }\n.bi-x-octagon::before { content: \"\\f627\"; }\n.bi-x-square-fill::before { content: \"\\f628\"; }\n.bi-x-square::before { content: \"\\f629\"; }\n.bi-x::before { content: \"\\f62a\"; }\n.bi-youtube::before { content: \"\\f62b\"; }\n.bi-zoom-in::before { content: \"\\f62c\"; }\n.bi-zoom-out::before { content: \"\\f62d\"; }\n.bi-bank::before { content: \"\\f62e\"; }\n.bi-bank2::before { content: \"\\f62f\"; }\n.bi-bell-slash-fill::before { content: \"\\f630\"; }\n.bi-bell-slash::before { content: \"\\f631\"; }\n.bi-cash-coin::before { content: \"\\f632\"; }\n.bi-check-lg::before { content: \"\\f633\"; }\n.bi-coin::before { content: \"\\f634\"; }\n.bi-currency-bitcoin::before { content: \"\\f635\"; }\n.bi-currency-dollar::before { content: \"\\f636\"; }\n.bi-currency-euro::before { content: \"\\f637\"; }\n.bi-currency-exchange::before { content: \"\\f638\"; }\n.bi-currency-pound::before { content: \"\\f639\"; }\n.bi-currency-yen::before { content: \"\\f63a\"; }\n.bi-dash-lg::before { content: \"\\f63b\"; }\n.bi-exclamation-lg::before { content: \"\\f63c\"; }\n.bi-file-earmark-pdf-fill::before { content: \"\\f63d\"; }\n.bi-file-earmark-pdf::before { content: \"\\f63e\"; }\n.bi-file-pdf-fill::before { content: \"\\f63f\"; }\n.bi-file-pdf::before { content: \"\\f640\"; }\n.bi-gender-ambiguous::before { content: \"\\f641\"; }\n.bi-gender-female::before { content: \"\\f642\"; }\n.bi-gender-male::before { content: \"\\f643\"; }\n.bi-gender-trans::before { content: \"\\f644\"; }\n.bi-headset-vr::before { content: \"\\f645\"; }\n.bi-info-lg::before { content: \"\\f646\"; }\n.bi-mastodon::before { content: \"\\f647\"; }\n.bi-messenger::before { content: \"\\f648\"; }\n.bi-piggy-bank-fill::before { content: \"\\f649\"; }\n.bi-piggy-bank::before { content: \"\\f64a\"; }\n.bi-pin-map-fill::before { content: \"\\f64b\"; }\n.bi-pin-map::before { content: \"\\f64c\"; }\n.bi-plus-lg::before { content: \"\\f64d\"; }\n.bi-question-lg::before { content: \"\\f64e\"; }\n.bi-recycle::before { content: \"\\f64f\"; }\n.bi-reddit::before { content: \"\\f650\"; }\n.bi-safe-fill::before { content: \"\\f651\"; }\n.bi-safe2-fill::before { content: \"\\f652\"; }\n.bi-safe2::before { content: \"\\f653\"; }\n.bi-sd-card-fill::before { content: \"\\f654\"; }\n.bi-sd-card::before { content: \"\\f655\"; }\n.bi-skype::before { content: \"\\f656\"; }\n.bi-slash-lg::before { content: \"\\f657\"; }\n.bi-translate::before { content: \"\\f658\"; }\n.bi-x-lg::before { content: \"\\f659\"; }\n.bi-safe::before { content: \"\\f65a\"; }\n.bi-apple::before { content: \"\\f65b\"; }\n.bi-microsoft::before { content: \"\\f65d\"; }\n.bi-windows::before { content: \"\\f65e\"; }\n.bi-behance::before { content: \"\\f65c\"; }\n.bi-dribbble::before { content: \"\\f65f\"; }\n.bi-line::before { content: \"\\f660\"; }\n.bi-medium::before { content: \"\\f661\"; }\n.bi-paypal::before { content: \"\\f662\"; }\n.bi-pinterest::before { content: \"\\f663\"; }\n.bi-signal::before { content: \"\\f664\"; }\n.bi-snapchat::before { content: \"\\f665\"; }\n.bi-spotify::before { content: \"\\f666\"; }\n.bi-stack-overflow::before { content: \"\\f667\"; }\n.bi-strava::before { content: \"\\f668\"; }\n.bi-wordpress::before { content: \"\\f669\"; }\n.bi-vimeo::before { content: \"\\f66a\"; }\n.bi-activity::before { content: \"\\f66b\"; }\n.bi-easel2-fill::before { content: \"\\f66c\"; }\n.bi-easel2::before { content: \"\\f66d\"; }\n.bi-easel3-fill::before { content: \"\\f66e\"; }\n.bi-easel3::before { content: \"\\f66f\"; }\n.bi-fan::before { content: \"\\f670\"; }\n.bi-fingerprint::before { content: \"\\f671\"; }\n.bi-graph-down-arrow::before { content: \"\\f672\"; }\n.bi-graph-up-arrow::before { content: \"\\f673\"; }\n.bi-hypnotize::before { content: \"\\f674\"; }\n.bi-magic::before { content: \"\\f675\"; }\n.bi-person-rolodex::before { content: \"\\f676\"; }\n.bi-person-video::before { content: \"\\f677\"; }\n.bi-person-video2::before { content: \"\\f678\"; }\n.bi-person-video3::before { content: \"\\f679\"; }\n.bi-person-workspace::before { content: \"\\f67a\"; }\n.bi-radioactive::before { content: \"\\f67b\"; }\n.bi-webcam-fill::before { content: \"\\f67c\"; }\n.bi-webcam::before { content: \"\\f67d\"; }\n.bi-yin-yang::before { content: \"\\f67e\"; }\n.bi-bandaid-fill::before { content: \"\\f680\"; }\n.bi-bandaid::before { content: \"\\f681\"; }\n.bi-bluetooth::before { content: \"\\f682\"; }\n.bi-body-text::before { content: \"\\f683\"; }\n.bi-boombox::before { content: \"\\f684\"; }\n.bi-boxes::before { content: \"\\f685\"; }\n.bi-dpad-fill::before { content: \"\\f686\"; }\n.bi-dpad::before { content: \"\\f687\"; }\n.bi-ear-fill::before { content: \"\\f688\"; }\n.bi-ear::before { content: \"\\f689\"; }\n.bi-envelope-check-fill::before { content: \"\\f68b\"; }\n.bi-envelope-check::before { content: \"\\f68c\"; }\n.bi-envelope-dash-fill::before { content: \"\\f68e\"; }\n.bi-envelope-dash::before { content: \"\\f68f\"; }\n.bi-envelope-exclamation-fill::before { content: \"\\f691\"; }\n.bi-envelope-exclamation::before { content: \"\\f692\"; }\n.bi-envelope-plus-fill::before { content: \"\\f693\"; }\n.bi-envelope-plus::before { content: \"\\f694\"; }\n.bi-envelope-slash-fill::before { content: \"\\f696\"; }\n.bi-envelope-slash::before { content: \"\\f697\"; }\n.bi-envelope-x-fill::before { content: \"\\f699\"; }\n.bi-envelope-x::before { content: \"\\f69a\"; }\n.bi-explicit-fill::before { content: \"\\f69b\"; }\n.bi-explicit::before { content: \"\\f69c\"; }\n.bi-git::before { content: \"\\f69d\"; }\n.bi-infinity::before { content: \"\\f69e\"; }\n.bi-list-columns-reverse::before { content: \"\\f69f\"; }\n.bi-list-columns::before { content: \"\\f6a0\"; }\n.bi-meta::before { content: \"\\f6a1\"; }\n.bi-nintendo-switch::before { content: \"\\f6a4\"; }\n.bi-pc-display-horizontal::before { content: \"\\f6a5\"; }\n.bi-pc-display::before { content: \"\\f6a6\"; }\n.bi-pc-horizontal::before { content: \"\\f6a7\"; }\n.bi-pc::before { content: \"\\f6a8\"; }\n.bi-playstation::before { content: \"\\f6a9\"; }\n.bi-plus-slash-minus::before { content: \"\\f6aa\"; }\n.bi-projector-fill::before { content: \"\\f6ab\"; }\n.bi-projector::before { content: \"\\f6ac\"; }\n.bi-qr-code-scan::before { content: \"\\f6ad\"; }\n.bi-qr-code::before { content: \"\\f6ae\"; }\n.bi-quora::before { content: \"\\f6af\"; }\n.bi-quote::before { content: \"\\f6b0\"; }\n.bi-robot::before { content: \"\\f6b1\"; }\n.bi-send-check-fill::before { content: \"\\f6b2\"; }\n.bi-send-check::before { content: \"\\f6b3\"; }\n.bi-send-dash-fill::before { content: \"\\f6b4\"; }\n.bi-send-dash::before { content: \"\\f6b5\"; }\n.bi-send-exclamation-fill::before { content: \"\\f6b7\"; }\n.bi-send-exclamation::before { content: \"\\f6b8\"; }\n.bi-send-fill::before { content: \"\\f6b9\"; }\n.bi-send-plus-fill::before { content: \"\\f6ba\"; }\n.bi-send-plus::before { content: \"\\f6bb\"; }\n.bi-send-slash-fill::before { content: \"\\f6bc\"; }\n.bi-send-slash::before { content: \"\\f6bd\"; }\n.bi-send-x-fill::before { content: \"\\f6be\"; }\n.bi-send-x::before { content: \"\\f6bf\"; }\n.bi-send::before { content: \"\\f6c0\"; }\n.bi-steam::before { content: \"\\f6c1\"; }\n.bi-terminal-dash::before { content: \"\\f6c3\"; }\n.bi-terminal-plus::before { content: \"\\f6c4\"; }\n.bi-terminal-split::before { content: \"\\f6c5\"; }\n.bi-ticket-detailed-fill::before { content: \"\\f6c6\"; }\n.bi-ticket-detailed::before { content: \"\\f6c7\"; }\n.bi-ticket-fill::before { content: \"\\f6c8\"; }\n.bi-ticket-perforated-fill::before { content: \"\\f6c9\"; }\n.bi-ticket-perforated::before { content: \"\\f6ca\"; }\n.bi-ticket::before { content: \"\\f6cb\"; }\n.bi-tiktok::before { content: \"\\f6cc\"; }\n.bi-window-dash::before { content: \"\\f6cd\"; }\n.bi-window-desktop::before { content: \"\\f6ce\"; }\n.bi-window-fullscreen::before { content: \"\\f6cf\"; }\n.bi-window-plus::before { content: \"\\f6d0\"; }\n.bi-window-split::before { content: \"\\f6d1\"; }\n.bi-window-stack::before { content: \"\\f6d2\"; }\n.bi-window-x::before { content: \"\\f6d3\"; }\n.bi-xbox::before { content: \"\\f6d4\"; }\n.bi-ethernet::before { content: \"\\f6d5\"; }\n.bi-hdmi-fill::before { content: \"\\f6d6\"; }\n.bi-hdmi::before { content: \"\\f6d7\"; }\n.bi-usb-c-fill::before { content: \"\\f6d8\"; }\n.bi-usb-c::before { content: \"\\f6d9\"; }\n.bi-usb-fill::before { content: \"\\f6da\"; }\n.bi-usb-plug-fill::before { content: \"\\f6db\"; }\n.bi-usb-plug::before { content: \"\\f6dc\"; }\n.bi-usb-symbol::before { content: \"\\f6dd\"; }\n.bi-usb::before { content: \"\\f6de\"; }\n.bi-boombox-fill::before { content: \"\\f6df\"; }\n.bi-displayport::before { content: \"\\f6e1\"; }\n.bi-gpu-card::before { content: \"\\f6e2\"; }\n.bi-memory::before { content: \"\\f6e3\"; }\n.bi-modem-fill::before { content: \"\\f6e4\"; }\n.bi-modem::before { content: \"\\f6e5\"; }\n.bi-motherboard-fill::before { content: \"\\f6e6\"; }\n.bi-motherboard::before { content: \"\\f6e7\"; }\n.bi-optical-audio-fill::before { content: \"\\f6e8\"; }\n.bi-optical-audio::before { content: \"\\f6e9\"; }\n.bi-pci-card::before { content: \"\\f6ea\"; }\n.bi-router-fill::before { content: \"\\f6eb\"; }\n.bi-router::before { content: \"\\f6ec\"; }\n.bi-thunderbolt-fill::before { content: \"\\f6ef\"; }\n.bi-thunderbolt::before { content: \"\\f6f0\"; }\n.bi-usb-drive-fill::before { content: \"\\f6f1\"; }\n.bi-usb-drive::before { content: \"\\f6f2\"; }\n.bi-usb-micro-fill::before { content: \"\\f6f3\"; }\n.bi-usb-micro::before { content: \"\\f6f4\"; }\n.bi-usb-mini-fill::before { content: \"\\f6f5\"; }\n.bi-usb-mini::before { content: \"\\f6f6\"; }\n.bi-cloud-haze2::before { content: \"\\f6f7\"; }\n.bi-device-hdd-fill::before { content: \"\\f6f8\"; }\n.bi-device-hdd::before { content: \"\\f6f9\"; }\n.bi-device-ssd-fill::before { content: \"\\f6fa\"; }\n.bi-device-ssd::before { content: \"\\f6fb\"; }\n.bi-displayport-fill::before { content: \"\\f6fc\"; }\n.bi-mortarboard-fill::before { content: \"\\f6fd\"; }\n.bi-mortarboard::before { content: \"\\f6fe\"; }\n.bi-terminal-x::before { content: \"\\f6ff\"; }\n.bi-arrow-through-heart-fill::before { content: \"\\f700\"; }\n.bi-arrow-through-heart::before { content: \"\\f701\"; }\n.bi-badge-sd-fill::before { content: \"\\f702\"; }\n.bi-badge-sd::before { content: \"\\f703\"; }\n.bi-bag-heart-fill::before { content: \"\\f704\"; }\n.bi-bag-heart::before { content: \"\\f705\"; }\n.bi-balloon-fill::before { content: \"\\f706\"; }\n.bi-balloon-heart-fill::before { content: \"\\f707\"; }\n.bi-balloon-heart::before { content: \"\\f708\"; }\n.bi-balloon::before { content: \"\\f709\"; }\n.bi-box2-fill::before { content: \"\\f70a\"; }\n.bi-box2-heart-fill::before { content: \"\\f70b\"; }\n.bi-box2-heart::before { content: \"\\f70c\"; }\n.bi-box2::before { content: \"\\f70d\"; }\n.bi-braces-asterisk::before { content: \"\\f70e\"; }\n.bi-calendar-heart-fill::before { content: \"\\f70f\"; }\n.bi-calendar-heart::before { content: \"\\f710\"; }\n.bi-calendar2-heart-fill::before { content: \"\\f711\"; }\n.bi-calendar2-heart::before { content: \"\\f712\"; }\n.bi-chat-heart-fill::before { content: \"\\f713\"; }\n.bi-chat-heart::before { content: \"\\f714\"; }\n.bi-chat-left-heart-fill::before { content: \"\\f715\"; }\n.bi-chat-left-heart::before { content: \"\\f716\"; }\n.bi-chat-right-heart-fill::before { content: \"\\f717\"; }\n.bi-chat-right-heart::before { content: \"\\f718\"; }\n.bi-chat-square-heart-fill::before { content: \"\\f719\"; }\n.bi-chat-square-heart::before { content: \"\\f71a\"; }\n.bi-clipboard-check-fill::before { content: \"\\f71b\"; }\n.bi-clipboard-data-fill::before { content: \"\\f71c\"; }\n.bi-clipboard-fill::before { content: \"\\f71d\"; }\n.bi-clipboard-heart-fill::before { content: \"\\f71e\"; }\n.bi-clipboard-heart::before { content: \"\\f71f\"; }\n.bi-clipboard-minus-fill::before { content: \"\\f720\"; }\n.bi-clipboard-plus-fill::before { content: \"\\f721\"; }\n.bi-clipboard-pulse::before { content: \"\\f722\"; }\n.bi-clipboard-x-fill::before { content: \"\\f723\"; }\n.bi-clipboard2-check-fill::before { content: \"\\f724\"; }\n.bi-clipboard2-check::before { content: \"\\f725\"; }\n.bi-clipboard2-data-fill::before { content: \"\\f726\"; }\n.bi-clipboard2-data::before { content: \"\\f727\"; }\n.bi-clipboard2-fill::before { content: \"\\f728\"; }\n.bi-clipboard2-heart-fill::before { content: \"\\f729\"; }\n.bi-clipboard2-heart::before { content: \"\\f72a\"; }\n.bi-clipboard2-minus-fill::before { content: \"\\f72b\"; }\n.bi-clipboard2-minus::before { content: \"\\f72c\"; }\n.bi-clipboard2-plus-fill::before { content: \"\\f72d\"; }\n.bi-clipboard2-plus::before { content: \"\\f72e\"; }\n.bi-clipboard2-pulse-fill::before { content: \"\\f72f\"; }\n.bi-clipboard2-pulse::before { content: \"\\f730\"; }\n.bi-clipboard2-x-fill::before { content: \"\\f731\"; }\n.bi-clipboard2-x::before { content: \"\\f732\"; }\n.bi-clipboard2::before { content: \"\\f733\"; }\n.bi-emoji-kiss-fill::before { content: \"\\f734\"; }\n.bi-emoji-kiss::before { content: \"\\f735\"; }\n.bi-envelope-heart-fill::before { content: \"\\f736\"; }\n.bi-envelope-heart::before { content: \"\\f737\"; }\n.bi-envelope-open-heart-fill::before { content: \"\\f738\"; }\n.bi-envelope-open-heart::before { content: \"\\f739\"; }\n.bi-envelope-paper-fill::before { content: \"\\f73a\"; }\n.bi-envelope-paper-heart-fill::before { content: \"\\f73b\"; }\n.bi-envelope-paper-heart::before { content: \"\\f73c\"; }\n.bi-envelope-paper::before { content: \"\\f73d\"; }\n.bi-filetype-aac::before { content: \"\\f73e\"; }\n.bi-filetype-ai::before { content: \"\\f73f\"; }\n.bi-filetype-bmp::before { content: \"\\f740\"; }\n.bi-filetype-cs::before { content: \"\\f741\"; }\n.bi-filetype-css::before { content: \"\\f742\"; }\n.bi-filetype-csv::before { content: \"\\f743\"; }\n.bi-filetype-doc::before { content: \"\\f744\"; }\n.bi-filetype-docx::before { content: \"\\f745\"; }\n.bi-filetype-exe::before { content: \"\\f746\"; }\n.bi-filetype-gif::before { content: \"\\f747\"; }\n.bi-filetype-heic::before { content: \"\\f748\"; }\n.bi-filetype-html::before { content: \"\\f749\"; }\n.bi-filetype-java::before { content: \"\\f74a\"; }\n.bi-filetype-jpg::before { content: \"\\f74b\"; }\n.bi-filetype-js::before { content: \"\\f74c\"; }\n.bi-filetype-jsx::before { content: \"\\f74d\"; }\n.bi-filetype-key::before { content: \"\\f74e\"; }\n.bi-filetype-m4p::before { content: \"\\f74f\"; }\n.bi-filetype-md::before { content: \"\\f750\"; }\n.bi-filetype-mdx::before { content: \"\\f751\"; }\n.bi-filetype-mov::before { content: \"\\f752\"; }\n.bi-filetype-mp3::before { content: \"\\f753\"; }\n.bi-filetype-mp4::before { content: \"\\f754\"; }\n.bi-filetype-otf::before { content: \"\\f755\"; }\n.bi-filetype-pdf::before { content: \"\\f756\"; }\n.bi-filetype-php::before { content: \"\\f757\"; }\n.bi-filetype-png::before { content: \"\\f758\"; }\n.bi-filetype-ppt::before { content: \"\\f75a\"; }\n.bi-filetype-psd::before { content: \"\\f75b\"; }\n.bi-filetype-py::before { content: \"\\f75c\"; }\n.bi-filetype-raw::before { content: \"\\f75d\"; }\n.bi-filetype-rb::before { content: \"\\f75e\"; }\n.bi-filetype-sass::before { content: \"\\f75f\"; }\n.bi-filetype-scss::before { content: \"\\f760\"; }\n.bi-filetype-sh::before { content: \"\\f761\"; }\n.bi-filetype-svg::before { content: \"\\f762\"; }\n.bi-filetype-tiff::before { content: \"\\f763\"; }\n.bi-filetype-tsx::before { content: \"\\f764\"; }\n.bi-filetype-ttf::before { content: \"\\f765\"; }\n.bi-filetype-txt::before { content: \"\\f766\"; }\n.bi-filetype-wav::before { content: \"\\f767\"; }\n.bi-filetype-woff::before { content: \"\\f768\"; }\n.bi-filetype-xls::before { content: \"\\f76a\"; }\n.bi-filetype-xml::before { content: \"\\f76b\"; }\n.bi-filetype-yml::before { content: \"\\f76c\"; }\n.bi-heart-arrow::before { content: \"\\f76d\"; }\n.bi-heart-pulse-fill::before { content: \"\\f76e\"; }\n.bi-heart-pulse::before { content: \"\\f76f\"; }\n.bi-heartbreak-fill::before { content: \"\\f770\"; }\n.bi-heartbreak::before { content: \"\\f771\"; }\n.bi-hearts::before { content: \"\\f772\"; }\n.bi-hospital-fill::before { content: \"\\f773\"; }\n.bi-hospital::before { content: \"\\f774\"; }\n.bi-house-heart-fill::before { content: \"\\f775\"; }\n.bi-house-heart::before { content: \"\\f776\"; }\n.bi-incognito::before { content: \"\\f777\"; }\n.bi-magnet-fill::before { content: \"\\f778\"; }\n.bi-magnet::before { content: \"\\f779\"; }\n.bi-person-heart::before { content: \"\\f77a\"; }\n.bi-person-hearts::before { content: \"\\f77b\"; }\n.bi-phone-flip::before { content: \"\\f77c\"; }\n.bi-plugin::before { content: \"\\f77d\"; }\n.bi-postage-fill::before { content: \"\\f77e\"; }\n.bi-postage-heart-fill::before { content: \"\\f77f\"; }\n.bi-postage-heart::before { content: \"\\f780\"; }\n.bi-postage::before { content: \"\\f781\"; }\n.bi-postcard-fill::before { content: \"\\f782\"; }\n.bi-postcard-heart-fill::before { content: \"\\f783\"; }\n.bi-postcard-heart::before { content: \"\\f784\"; }\n.bi-postcard::before { content: \"\\f785\"; }\n.bi-search-heart-fill::before { content: \"\\f786\"; }\n.bi-search-heart::before { content: \"\\f787\"; }\n.bi-sliders2-vertical::before { content: \"\\f788\"; }\n.bi-sliders2::before { content: \"\\f789\"; }\n.bi-trash3-fill::before { content: \"\\f78a\"; }\n.bi-trash3::before { content: \"\\f78b\"; }\n.bi-valentine::before { content: \"\\f78c\"; }\n.bi-valentine2::before { content: \"\\f78d\"; }\n.bi-wrench-adjustable-circle-fill::before { content: \"\\f78e\"; }\n.bi-wrench-adjustable-circle::before { content: \"\\f78f\"; }\n.bi-wrench-adjustable::before { content: \"\\f790\"; }\n.bi-filetype-json::before { content: \"\\f791\"; }\n.bi-filetype-pptx::before { content: \"\\f792\"; }\n.bi-filetype-xlsx::before { content: \"\\f793\"; }\n.bi-1-circle-fill::before { content: \"\\f796\"; }\n.bi-1-circle::before { content: \"\\f797\"; }\n.bi-1-square-fill::before { content: \"\\f798\"; }\n.bi-1-square::before { content: \"\\f799\"; }\n.bi-2-circle-fill::before { content: \"\\f79c\"; }\n.bi-2-circle::before { content: \"\\f79d\"; }\n.bi-2-square-fill::before { content: \"\\f79e\"; }\n.bi-2-square::before { content: \"\\f79f\"; }\n.bi-3-circle-fill::before { content: \"\\f7a2\"; }\n.bi-3-circle::before { content: \"\\f7a3\"; }\n.bi-3-square-fill::before { content: \"\\f7a4\"; }\n.bi-3-square::before { content: \"\\f7a5\"; }\n.bi-4-circle-fill::before { content: \"\\f7a8\"; }\n.bi-4-circle::before { content: \"\\f7a9\"; }\n.bi-4-square-fill::before { content: \"\\f7aa\"; }\n.bi-4-square::before { content: \"\\f7ab\"; }\n.bi-5-circle-fill::before { content: \"\\f7ae\"; }\n.bi-5-circle::before { content: \"\\f7af\"; }\n.bi-5-square-fill::before { content: \"\\f7b0\"; }\n.bi-5-square::before { content: \"\\f7b1\"; }\n.bi-6-circle-fill::before { content: \"\\f7b4\"; }\n.bi-6-circle::before { content: \"\\f7b5\"; }\n.bi-6-square-fill::before { content: \"\\f7b6\"; }\n.bi-6-square::before { content: \"\\f7b7\"; }\n.bi-7-circle-fill::before { content: \"\\f7ba\"; }\n.bi-7-circle::before { content: \"\\f7bb\"; }\n.bi-7-square-fill::before { content: \"\\f7bc\"; }\n.bi-7-square::before { content: \"\\f7bd\"; }\n.bi-8-circle-fill::before { content: \"\\f7c0\"; }\n.bi-8-circle::before { content: \"\\f7c1\"; }\n.bi-8-square-fill::before { content: \"\\f7c2\"; }\n.bi-8-square::before { content: \"\\f7c3\"; }\n.bi-9-circle-fill::before { content: \"\\f7c6\"; }\n.bi-9-circle::before { content: \"\\f7c7\"; }\n.bi-9-square-fill::before { content: \"\\f7c8\"; }\n.bi-9-square::before { content: \"\\f7c9\"; }\n.bi-airplane-engines-fill::before { content: \"\\f7ca\"; }\n.bi-airplane-engines::before { content: \"\\f7cb\"; }\n.bi-airplane-fill::before { content: \"\\f7cc\"; }\n.bi-airplane::before { content: \"\\f7cd\"; }\n.bi-alexa::before { content: \"\\f7ce\"; }\n.bi-alipay::before { content: \"\\f7cf\"; }\n.bi-android::before { content: \"\\f7d0\"; }\n.bi-android2::before { content: \"\\f7d1\"; }\n.bi-box-fill::before { content: \"\\f7d2\"; }\n.bi-box-seam-fill::before { content: \"\\f7d3\"; }\n.bi-browser-chrome::before { content: \"\\f7d4\"; }\n.bi-browser-edge::before { content: \"\\f7d5\"; }\n.bi-browser-firefox::before { content: \"\\f7d6\"; }\n.bi-browser-safari::before { content: \"\\f7d7\"; }\n.bi-c-circle-fill::before { content: \"\\f7da\"; }\n.bi-c-circle::before { content: \"\\f7db\"; }\n.bi-c-square-fill::before { content: \"\\f7dc\"; }\n.bi-c-square::before { content: \"\\f7dd\"; }\n.bi-capsule-pill::before { content: \"\\f7de\"; }\n.bi-capsule::before { content: \"\\f7df\"; }\n.bi-car-front-fill::before { content: \"\\f7e0\"; }\n.bi-car-front::before { content: \"\\f7e1\"; }\n.bi-cassette-fill::before { content: \"\\f7e2\"; }\n.bi-cassette::before { content: \"\\f7e3\"; }\n.bi-cc-circle-fill::before { content: \"\\f7e6\"; }\n.bi-cc-circle::before { content: \"\\f7e7\"; }\n.bi-cc-square-fill::before { content: \"\\f7e8\"; }\n.bi-cc-square::before { content: \"\\f7e9\"; }\n.bi-cup-hot-fill::before { content: \"\\f7ea\"; }\n.bi-cup-hot::before { content: \"\\f7eb\"; }\n.bi-currency-rupee::before { content: \"\\f7ec\"; }\n.bi-dropbox::before { content: \"\\f7ed\"; }\n.bi-escape::before { content: \"\\f7ee\"; }\n.bi-fast-forward-btn-fill::before { content: \"\\f7ef\"; }\n.bi-fast-forward-btn::before { content: \"\\f7f0\"; }\n.bi-fast-forward-circle-fill::before { content: \"\\f7f1\"; }\n.bi-fast-forward-circle::before { content: \"\\f7f2\"; }\n.bi-fast-forward-fill::before { content: \"\\f7f3\"; }\n.bi-fast-forward::before { content: \"\\f7f4\"; }\n.bi-filetype-sql::before { content: \"\\f7f5\"; }\n.bi-fire::before { content: \"\\f7f6\"; }\n.bi-google-play::before { content: \"\\f7f7\"; }\n.bi-h-circle-fill::before { content: \"\\f7fa\"; }\n.bi-h-circle::before { content: \"\\f7fb\"; }\n.bi-h-square-fill::before { content: \"\\f7fc\"; }\n.bi-h-square::before { content: \"\\f7fd\"; }\n.bi-indent::before { content: \"\\f7fe\"; }\n.bi-lungs-fill::before { content: \"\\f7ff\"; }\n.bi-lungs::before { content: \"\\f800\"; }\n.bi-microsoft-teams::before { content: \"\\f801\"; }\n.bi-p-circle-fill::before { content: \"\\f804\"; }\n.bi-p-circle::before { content: \"\\f805\"; }\n.bi-p-square-fill::before { content: \"\\f806\"; }\n.bi-p-square::before { content: \"\\f807\"; }\n.bi-pass-fill::before { content: \"\\f808\"; }\n.bi-pass::before { content: \"\\f809\"; }\n.bi-prescription::before { content: \"\\f80a\"; }\n.bi-prescription2::before { content: \"\\f80b\"; }\n.bi-r-circle-fill::before { content: \"\\f80e\"; }\n.bi-r-circle::before { content: \"\\f80f\"; }\n.bi-r-square-fill::before { content: \"\\f810\"; }\n.bi-r-square::before { content: \"\\f811\"; }\n.bi-repeat-1::before { content: \"\\f812\"; }\n.bi-repeat::before { content: \"\\f813\"; }\n.bi-rewind-btn-fill::before { content: \"\\f814\"; }\n.bi-rewind-btn::before { content: \"\\f815\"; }\n.bi-rewind-circle-fill::before { content: \"\\f816\"; }\n.bi-rewind-circle::before { content: \"\\f817\"; }\n.bi-rewind-fill::before { content: \"\\f818\"; }\n.bi-rewind::before { content: \"\\f819\"; }\n.bi-train-freight-front-fill::before { content: \"\\f81a\"; }\n.bi-train-freight-front::before { content: \"\\f81b\"; }\n.bi-train-front-fill::before { content: \"\\f81c\"; }\n.bi-train-front::before { content: \"\\f81d\"; }\n.bi-train-lightrail-front-fill::before { content: \"\\f81e\"; }\n.bi-train-lightrail-front::before { content: \"\\f81f\"; }\n.bi-truck-front-fill::before { content: \"\\f820\"; }\n.bi-truck-front::before { content: \"\\f821\"; }\n.bi-ubuntu::before { content: \"\\f822\"; }\n.bi-unindent::before { content: \"\\f823\"; }\n.bi-unity::before { content: \"\\f824\"; }\n.bi-universal-access-circle::before { content: \"\\f825\"; }\n.bi-universal-access::before { content: \"\\f826\"; }\n.bi-virus::before { content: \"\\f827\"; }\n.bi-virus2::before { content: \"\\f828\"; }\n.bi-wechat::before { content: \"\\f829\"; }\n.bi-yelp::before { content: \"\\f82a\"; }\n.bi-sign-stop-fill::before { content: \"\\f82b\"; }\n.bi-sign-stop-lights-fill::before { content: \"\\f82c\"; }\n.bi-sign-stop-lights::before { content: \"\\f82d\"; }\n.bi-sign-stop::before { content: \"\\f82e\"; }\n.bi-sign-turn-left-fill::before { content: \"\\f82f\"; }\n.bi-sign-turn-left::before { content: \"\\f830\"; }\n.bi-sign-turn-right-fill::before { content: \"\\f831\"; }\n.bi-sign-turn-right::before { content: \"\\f832\"; }\n.bi-sign-turn-slight-left-fill::before { content: \"\\f833\"; }\n.bi-sign-turn-slight-left::before { content: \"\\f834\"; }\n.bi-sign-turn-slight-right-fill::before { content: \"\\f835\"; }\n.bi-sign-turn-slight-right::before { content: \"\\f836\"; }\n.bi-sign-yield-fill::before { content: \"\\f837\"; }\n.bi-sign-yield::before { content: \"\\f838\"; }\n.bi-ev-station-fill::before { content: \"\\f839\"; }\n.bi-ev-station::before { content: \"\\f83a\"; }\n.bi-fuel-pump-diesel-fill::before { content: \"\\f83b\"; }\n.bi-fuel-pump-diesel::before { content: \"\\f83c\"; }\n.bi-fuel-pump-fill::before { content: \"\\f83d\"; }\n.bi-fuel-pump::before { content: \"\\f83e\"; }\n.bi-0-circle-fill::before { content: \"\\f83f\"; }\n.bi-0-circle::before { content: \"\\f840\"; }\n.bi-0-square-fill::before { content: \"\\f841\"; }\n.bi-0-square::before { content: \"\\f842\"; }\n.bi-rocket-fill::before { content: \"\\f843\"; }\n.bi-rocket-takeoff-fill::before { content: \"\\f844\"; }\n.bi-rocket-takeoff::before { content: \"\\f845\"; }\n.bi-rocket::before { content: \"\\f846\"; }\n.bi-stripe::before { content: \"\\f847\"; }\n.bi-subscript::before { content: \"\\f848\"; }\n.bi-superscript::before { content: \"\\f849\"; }\n.bi-trello::before { content: \"\\f84a\"; }\n.bi-envelope-at-fill::before { content: \"\\f84b\"; }\n.bi-envelope-at::before { content: \"\\f84c\"; }\n.bi-regex::before { content: \"\\f84d\"; }\n.bi-text-wrap::before { content: \"\\f84e\"; }\n.bi-sign-dead-end-fill::before { content: \"\\f84f\"; }\n.bi-sign-dead-end::before { content: \"\\f850\"; }\n.bi-sign-do-not-enter-fill::before { content: \"\\f851\"; }\n.bi-sign-do-not-enter::before { content: \"\\f852\"; }\n.bi-sign-intersection-fill::before { content: \"\\f853\"; }\n.bi-sign-intersection-side-fill::before { content: \"\\f854\"; }\n.bi-sign-intersection-side::before { content: \"\\f855\"; }\n.bi-sign-intersection-t-fill::before { content: \"\\f856\"; }\n.bi-sign-intersection-t::before { content: \"\\f857\"; }\n.bi-sign-intersection-y-fill::before { content: \"\\f858\"; }\n.bi-sign-intersection-y::before { content: \"\\f859\"; }\n.bi-sign-intersection::before { content: \"\\f85a\"; }\n.bi-sign-merge-left-fill::before { content: \"\\f85b\"; }\n.bi-sign-merge-left::before { content: \"\\f85c\"; }\n.bi-sign-merge-right-fill::before { content: \"\\f85d\"; }\n.bi-sign-merge-right::before { content: \"\\f85e\"; }\n.bi-sign-no-left-turn-fill::before { content: \"\\f85f\"; }\n.bi-sign-no-left-turn::before { content: \"\\f860\"; }\n.bi-sign-no-parking-fill::before { content: \"\\f861\"; }\n.bi-sign-no-parking::before { content: \"\\f862\"; }\n.bi-sign-no-right-turn-fill::before { content: \"\\f863\"; }\n.bi-sign-no-right-turn::before { content: \"\\f864\"; }\n.bi-sign-railroad-fill::before { content: \"\\f865\"; }\n.bi-sign-railroad::before { content: \"\\f866\"; }\n.bi-building-add::before { content: \"\\f867\"; }\n.bi-building-check::before { content: \"\\f868\"; }\n.bi-building-dash::before { content: \"\\f869\"; }\n.bi-building-down::before { content: \"\\f86a\"; }\n.bi-building-exclamation::before { content: \"\\f86b\"; }\n.bi-building-fill-add::before { content: \"\\f86c\"; }\n.bi-building-fill-check::before { content: \"\\f86d\"; }\n.bi-building-fill-dash::before { content: \"\\f86e\"; }\n.bi-building-fill-down::before { content: \"\\f86f\"; }\n.bi-building-fill-exclamation::before { content: \"\\f870\"; }\n.bi-building-fill-gear::before { content: \"\\f871\"; }\n.bi-building-fill-lock::before { content: \"\\f872\"; }\n.bi-building-fill-slash::before { content: \"\\f873\"; }\n.bi-building-fill-up::before { content: \"\\f874\"; }\n.bi-building-fill-x::before { content: \"\\f875\"; }\n.bi-building-fill::before { content: \"\\f876\"; }\n.bi-building-gear::before { content: \"\\f877\"; }\n.bi-building-lock::before { content: \"\\f878\"; }\n.bi-building-slash::before { content: \"\\f879\"; }\n.bi-building-up::before { content: \"\\f87a\"; }\n.bi-building-x::before { content: \"\\f87b\"; }\n.bi-buildings-fill::before { content: \"\\f87c\"; }\n.bi-buildings::before { content: \"\\f87d\"; }\n.bi-bus-front-fill::before { content: \"\\f87e\"; }\n.bi-bus-front::before { content: \"\\f87f\"; }\n.bi-ev-front-fill::before { content: \"\\f880\"; }\n.bi-ev-front::before { content: \"\\f881\"; }\n.bi-globe-americas::before { content: \"\\f882\"; }\n.bi-globe-asia-australia::before { content: \"\\f883\"; }\n.bi-globe-central-south-asia::before { content: \"\\f884\"; }\n.bi-globe-europe-africa::before { content: \"\\f885\"; }\n.bi-house-add-fill::before { content: \"\\f886\"; }\n.bi-house-add::before { content: \"\\f887\"; }\n.bi-house-check-fill::before { content: \"\\f888\"; }\n.bi-house-check::before { content: \"\\f889\"; }\n.bi-house-dash-fill::before { content: \"\\f88a\"; }\n.bi-house-dash::before { content: \"\\f88b\"; }\n.bi-house-down-fill::before { content: \"\\f88c\"; }\n.bi-house-down::before { content: \"\\f88d\"; }\n.bi-house-exclamation-fill::before { content: \"\\f88e\"; }\n.bi-house-exclamation::before { content: \"\\f88f\"; }\n.bi-house-gear-fill::before { content: \"\\f890\"; }\n.bi-house-gear::before { content: \"\\f891\"; }\n.bi-house-lock-fill::before { content: \"\\f892\"; }\n.bi-house-lock::before { content: \"\\f893\"; }\n.bi-house-slash-fill::before { content: \"\\f894\"; }\n.bi-house-slash::before { content: \"\\f895\"; }\n.bi-house-up-fill::before { content: \"\\f896\"; }\n.bi-house-up::before { content: \"\\f897\"; }\n.bi-house-x-fill::before { content: \"\\f898\"; }\n.bi-house-x::before { content: \"\\f899\"; }\n.bi-person-add::before { content: \"\\f89a\"; }\n.bi-person-down::before { content: \"\\f89b\"; }\n.bi-person-exclamation::before { content: \"\\f89c\"; }\n.bi-person-fill-add::before { content: \"\\f89d\"; }\n.bi-person-fill-check::before { content: \"\\f89e\"; }\n.bi-person-fill-dash::before { content: \"\\f89f\"; }\n.bi-person-fill-down::before { content: \"\\f8a0\"; }\n.bi-person-fill-exclamation::before { content: \"\\f8a1\"; }\n.bi-person-fill-gear::before { content: \"\\f8a2\"; }\n.bi-person-fill-lock::before { content: \"\\f8a3\"; }\n.bi-person-fill-slash::before { content: \"\\f8a4\"; }\n.bi-person-fill-up::before { content: \"\\f8a5\"; }\n.bi-person-fill-x::before { content: \"\\f8a6\"; }\n.bi-person-gear::before { content: \"\\f8a7\"; }\n.bi-person-lock::before { content: \"\\f8a8\"; }\n.bi-person-slash::before { content: \"\\f8a9\"; }\n.bi-person-up::before { content: \"\\f8aa\"; }\n.bi-scooter::before { content: \"\\f8ab\"; }\n.bi-taxi-front-fill::before { content: \"\\f8ac\"; }\n.bi-taxi-front::before { content: \"\\f8ad\"; }\n.bi-amd::before { content: \"\\f8ae\"; }\n.bi-database-add::before { content: \"\\f8af\"; }\n.bi-database-check::before { content: \"\\f8b0\"; }\n.bi-database-dash::before { content: \"\\f8b1\"; }\n.bi-database-down::before { content: \"\\f8b2\"; }\n.bi-database-exclamation::before { content: \"\\f8b3\"; }\n.bi-database-fill-add::before { content: \"\\f8b4\"; }\n.bi-database-fill-check::before { content: \"\\f8b5\"; }\n.bi-database-fill-dash::before { content: \"\\f8b6\"; }\n.bi-database-fill-down::before { content: \"\\f8b7\"; }\n.bi-database-fill-exclamation::before { content: \"\\f8b8\"; }\n.bi-database-fill-gear::before { content: \"\\f8b9\"; }\n.bi-database-fill-lock::before { content: \"\\f8ba\"; }\n.bi-database-fill-slash::before { content: \"\\f8bb\"; }\n.bi-database-fill-up::before { content: \"\\f8bc\"; }\n.bi-database-fill-x::before { content: \"\\f8bd\"; }\n.bi-database-fill::before { content: \"\\f8be\"; }\n.bi-database-gear::before { content: \"\\f8bf\"; }\n.bi-database-lock::before { content: \"\\f8c0\"; }\n.bi-database-slash::before { content: \"\\f8c1\"; }\n.bi-database-up::before { content: \"\\f8c2\"; }\n.bi-database-x::before { content: \"\\f8c3\"; }\n.bi-database::before { content: \"\\f8c4\"; }\n.bi-houses-fill::before { content: \"\\f8c5\"; }\n.bi-houses::before { content: \"\\f8c6\"; }\n.bi-nvidia::before { content: \"\\f8c7\"; }\n.bi-person-vcard-fill::before { content: \"\\f8c8\"; }\n.bi-person-vcard::before { content: \"\\f8c9\"; }\n.bi-sina-weibo::before { content: \"\\f8ca\"; }\n.bi-tencent-qq::before { content: \"\\f8cb\"; }\n.bi-wikipedia::before { content: \"\\f8cc\"; }\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6967,24 +6973,19 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 var stylesInDOM = [];
-
 function getIndexByIdentifier(identifier) {
   var result = -1;
-
   for (var i = 0; i < stylesInDOM.length; i++) {
     if (stylesInDOM[i].identifier === identifier) {
       result = i;
       break;
     }
   }
-
   return result;
 }
-
 function modulesToDom(list, options) {
   var idCountMap = {};
   var identifiers = [];
-
   for (var i = 0; i < list.length; i++) {
     var item = list[i];
     var id = options.base ? item[0] + options.base : item[0];
@@ -6999,7 +7000,6 @@ function modulesToDom(list, options) {
       supports: item[4],
       layer: item[5]
     };
-
     if (indexByIdentifier !== -1) {
       stylesInDOM[indexByIdentifier].references++;
       stylesInDOM[indexByIdentifier].updater(obj);
@@ -7012,59 +7012,45 @@ function modulesToDom(list, options) {
         references: 1
       });
     }
-
     identifiers.push(identifier);
   }
-
   return identifiers;
 }
-
 function addElementStyle(obj, options) {
   var api = options.domAPI(options);
   api.update(obj);
-
   var updater = function updater(newObj) {
     if (newObj) {
       if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
         return;
       }
-
       api.update(obj = newObj);
     } else {
       api.remove();
     }
   };
-
   return updater;
 }
-
 module.exports = function (list, options) {
   options = options || {};
   list = list || [];
   var lastIdentifiers = modulesToDom(list, options);
   return function update(newList) {
     newList = newList || [];
-
     for (var i = 0; i < lastIdentifiers.length; i++) {
       var identifier = lastIdentifiers[i];
       var index = getIndexByIdentifier(identifier);
       stylesInDOM[index].references--;
     }
-
     var newLastIdentifiers = modulesToDom(newList, options);
-
     for (var _i = 0; _i < lastIdentifiers.length; _i++) {
       var _identifier = lastIdentifiers[_i];
-
       var _index = getIndexByIdentifier(_identifier);
-
       if (stylesInDOM[_index].references === 0) {
         stylesInDOM[_index].updater();
-
         stylesInDOM.splice(_index, 1);
       }
     }
-
     lastIdentifiers = newLastIdentifiers;
   };
 };
@@ -7078,12 +7064,13 @@ module.exports = function (list, options) {
 
 
 var memo = {};
-/* istanbul ignore next  */
 
+/* istanbul ignore next  */
 function getTarget(target) {
   if (typeof memo[target] === "undefined") {
-    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+    var styleTarget = document.querySelector(target);
 
+    // Special case to return head of iframe instead of iframe itself
     if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
       try {
         // This will throw an exception if access to iframe is blocked
@@ -7094,25 +7081,19 @@ function getTarget(target) {
         styleTarget = null;
       }
     }
-
     memo[target] = styleTarget;
   }
-
   return memo[target];
 }
+
 /* istanbul ignore next  */
-
-
 function insertBySelector(insert, style) {
   var target = getTarget(insert);
-
   if (!target) {
     throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
   }
-
   target.appendChild(style);
 }
-
 module.exports = insertBySelector;
 
 /***/ }),
@@ -7130,7 +7111,6 @@ function insertStyleElement(options) {
   options.insert(element, options.options);
   return element;
 }
-
 module.exports = insertStyleElement;
 
 /***/ }),
@@ -7144,12 +7124,10 @@ module.exports = insertStyleElement;
 /* istanbul ignore next  */
 function setAttributesWithoutAttributes(styleElement) {
   var nonce =  true ? __webpack_require__.nc : 0;
-
   if (nonce) {
     styleElement.setAttribute("nonce", nonce);
   }
 }
-
 module.exports = setAttributesWithoutAttributes;
 
 /***/ }),
@@ -7163,59 +7141,51 @@ module.exports = setAttributesWithoutAttributes;
 /* istanbul ignore next  */
 function apply(styleElement, options, obj) {
   var css = "";
-
   if (obj.supports) {
     css += "@supports (".concat(obj.supports, ") {");
   }
-
   if (obj.media) {
     css += "@media ".concat(obj.media, " {");
   }
-
   var needLayer = typeof obj.layer !== "undefined";
-
   if (needLayer) {
     css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
   }
-
   css += obj.css;
-
   if (needLayer) {
     css += "}";
   }
-
   if (obj.media) {
     css += "}";
   }
-
   if (obj.supports) {
     css += "}";
   }
-
   var sourceMap = obj.sourceMap;
-
   if (sourceMap && typeof btoa !== "undefined") {
     css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  } // For old IE
+  }
 
+  // For old IE
   /* istanbul ignore if  */
-
-
   options.styleTagTransform(css, styleElement, options.options);
 }
-
 function removeStyleElement(styleElement) {
   // istanbul ignore if
   if (styleElement.parentNode === null) {
     return false;
   }
-
   styleElement.parentNode.removeChild(styleElement);
 }
+
 /* istanbul ignore next  */
-
-
 function domAPI(options) {
+  if (typeof document === "undefined") {
+    return {
+      update: function update() {},
+      remove: function remove() {}
+    };
+  }
   var styleElement = options.insertStyleElement(options);
   return {
     update: function update(obj) {
@@ -7226,7 +7196,6 @@ function domAPI(options) {
     }
   };
 }
-
 module.exports = domAPI;
 
 /***/ }),
@@ -7245,16 +7214,14 @@ function styleTagTransform(css, styleElement) {
     while (styleElement.firstChild) {
       styleElement.removeChild(styleElement.firstChild);
     }
-
     styleElement.appendChild(document.createTextNode(css));
   }
 }
-
 module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 1738:
+/***/ 1275:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -7262,7 +7229,7 @@ module.exports = __webpack_require__.p + "assets/fonts/bootstrap-icons.woff2";
 
 /***/ }),
 
-/***/ 8819:
+/***/ 6353:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -7559,6 +7526,7 @@ function json() {
 /* harmony export */   "qp": () => (/* binding */ LRLanguage),
 /* harmony export */   "qz": () => (/* binding */ syntaxTree),
 /* harmony export */   "ri": () => (/* binding */ LanguageSupport),
+/* harmony export */   "rs": () => (/* binding */ foldService),
 /* harmony export */   "tC": () => (/* binding */ continuedIndent),
 /* harmony export */   "uj": () => (/* binding */ indentNodeProp),
 /* harmony export */   "vw": () => (/* binding */ delimitedIndent),
@@ -7566,7 +7534,7 @@ function json() {
 /* harmony export */   "y1": () => (/* binding */ getIndentUnit),
 /* harmony export */   "ze": () => (/* binding */ flatIndent)
 /* harmony export */ });
-/* unused harmony exports HighlightStyle, StringStream, TreeIndentContext, bracketMatching, codeFolding, ensureSyntaxTree, foldAll, foldCode, foldEffect, foldKeymap, foldService, foldState, foldable, foldedRanges, forceParsing, highlightingFor, indentOnInput, indentRange, indentService, language, syntaxParserRunning, syntaxTreeAvailable, toggleFold, unfoldAll, unfoldCode, unfoldEffect */
+/* unused harmony exports HighlightStyle, StringStream, TreeIndentContext, bracketMatching, codeFolding, ensureSyntaxTree, foldAll, foldCode, foldEffect, foldKeymap, foldState, foldable, foldedRanges, forceParsing, highlightingFor, indentOnInput, indentRange, indentService, language, syntaxParserRunning, syntaxTreeAvailable, toggleFold, unfoldAll, unfoldCode, unfoldEffect */
 /* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2064);
 /* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5854);
 /* harmony import */ var _codemirror_view__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9732);
@@ -13116,6 +13084,12 @@ class ContentView {
   get isEditable() {
     return true;
   }
+  get isWidget() {
+    return false;
+  }
+  get isHidden() {
+    return false;
+  }
   merge(from, to, source, hasStart, openStart, openEnd) {
     return false;
   }
@@ -13443,13 +13417,12 @@ class WidgetView extends ContentView {
     return true;
   }
   become(other) {
-    if (other.length == this.length && other instanceof WidgetView && other.side == this.side) {
-      if (this.widget.constructor == other.widget.constructor) {
-        if (!this.widget.eq(other.widget)) this.markDirty(true);
-        if (this.dom && !this.prevWidget) this.prevWidget = this.widget;
-        this.widget = other.widget;
-        return true;
-      }
+    if (other instanceof WidgetView && other.side == this.side && this.widget.constructor == other.widget.constructor) {
+      if (!this.widget.compare(other.widget)) this.markDirty(true);
+      if (this.dom && !this.prevWidget) this.prevWidget = this.widget;
+      this.widget = other.widget;
+      this.length = other.length;
+      return true;
     }
     return false;
   }
@@ -13471,7 +13444,7 @@ class WidgetView extends ContentView {
     return text ? text.slice(start, start + this.length) : state_dist/* Text.empty */.xv.empty;
   }
   domAtPos(pos) {
-    return pos == 0 ? DOMPos.before(this.dom) : DOMPos.after(this.dom, pos == this.length);
+    return (this.length ? pos == 0 : this.side > 0) ? DOMPos.before(this.dom) : DOMPos.after(this.dom, pos == this.length);
   }
   domBoundsAround() {
     return null;
@@ -13489,6 +13462,12 @@ class WidgetView extends ContentView {
   get isEditable() {
     return false;
   }
+  get isWidget() {
+    return true;
+  }
+  get isHidden() {
+    return this.widget.isHidden;
+  }
   destroy() {
     super.destroy();
     if (this.dom) this.widget.destroy(this.dom);
@@ -13501,7 +13480,7 @@ class CompositionView extends WidgetView {
       text
     } = this.widget;
     if (!topView) return new DOMPos(text, Math.min(pos, text.nodeValue.length));
-    return scanCompositionTree(pos, 0, topView, text, (v, p) => v.domAtPos(p), p => new DOMPos(text, Math.min(p, text.nodeValue.length)));
+    return scanCompositionTree(pos, 0, topView, text, this.length - topView.length, (v, p) => v.domAtPos(p), (text, p) => new DOMPos(text, Math.min(p, text.nodeValue.length)));
   }
   sync() {
     this.setDOM(this.widget.toDOM());
@@ -13512,7 +13491,7 @@ class CompositionView extends WidgetView {
       text
     } = this.widget;
     if (!topView) return Math.min(offset, this.length);
-    return posFromDOMInCompositionTree(node, offset, topView, text);
+    return posFromDOMInCompositionTree(node, offset, topView, text, this.length - topView.length);
   }
   ignoreMutation() {
     return false;
@@ -13526,7 +13505,7 @@ class CompositionView extends WidgetView {
       text
     } = this.widget;
     if (!topView) return textCoords(text, pos, side);
-    return scanCompositionTree(pos, side, topView, text, (v, pos, side) => v.coordsAt(pos, side), (pos, side) => textCoords(text, pos, side));
+    return scanCompositionTree(pos, side, topView, text, this.length - topView.length, (v, pos, side) => v.coordsAt(pos, side), (text, pos, side) => textCoords(text, pos, side));
   }
   destroy() {
     var _a;
@@ -13540,36 +13519,91 @@ class CompositionView extends WidgetView {
     return true;
   }
 }
-function scanCompositionTree(pos, side, view, text, enterView, fromText) {
+function scanCompositionTree(pos, side, view, text, dLen, enterView, fromText) {
   if (view instanceof MarkView) {
     for (let child = view.dom.firstChild; child; child = child.nextSibling) {
       let desc = ContentView.get(child);
-      if (!desc) return fromText(pos, side);
-      let hasComp = contains(child, text);
-      let len = desc.length + (hasComp ? text.nodeValue.length : 0);
-      if (pos < len || pos == len && desc.getSide() <= 0) return hasComp ? scanCompositionTree(pos, side, desc, text, enterView, fromText) : enterView(desc, pos, side);
-      pos -= len;
+      if (!desc) {
+        let inner = scanCompositionNode(pos, side, child, fromText);
+        if (typeof inner != "number") return inner;
+        pos = inner;
+      } else {
+        let hasComp = contains(child, text);
+        let len = desc.length + (hasComp ? dLen : 0);
+        if (pos < len || pos == len && desc.getSide() <= 0) return hasComp ? scanCompositionTree(pos, side, desc, text, dLen, enterView, fromText) : enterView(desc, pos, side);
+        pos -= len;
+      }
     }
     return enterView(view, view.length, -1);
   } else if (view.dom == text) {
-    return fromText(pos, side);
+    return fromText(text, pos, side);
   } else {
     return enterView(view, pos, side);
   }
 }
-function posFromDOMInCompositionTree(node, offset, view, text) {
+function scanCompositionNode(pos, side, node, fromText) {
+  if (node.nodeType == 3) {
+    let len = node.nodeValue.length;
+    if (pos <= len) return fromText(node, pos, side);
+    pos -= len;
+  } else if (node.nodeType == 1 && node.contentEditable != "false") {
+    for (let child = node.firstChild; child; child = child.nextSibling) {
+      let inner = scanCompositionNode(pos, side, child, fromText);
+      if (typeof inner != "number") return inner;
+      pos = inner;
+    }
+  }
+  return pos;
+}
+function posFromDOMInCompositionTree(node, offset, view, text, dLen) {
   if (view instanceof MarkView) {
-    for (var _iterator7 = _createForOfIteratorHelperLoose(view.children), _step7; !(_step7 = _iterator7()).done;) {
-      let child = _step7.value;
-      let pos = 0,
-        hasComp = contains(child.dom, text);
-      if (contains(child.dom, node)) return pos + (hasComp ? posFromDOMInCompositionTree(node, offset, child, text) : child.localPosFromDOM(node, offset));
-      pos += hasComp ? text.nodeValue.length : child.length;
+    let pos = 0;
+    for (let child = view.dom.firstChild; child; child = child.nextSibling) {
+      let childView = ContentView.get(child);
+      if (childView) {
+        let hasComp = contains(child, text);
+        if (contains(child, node)) return pos + (hasComp ? posFromDOMInCompositionTree(node, offset, childView, text, dLen) : childView.localPosFromDOM(node, offset));
+        pos += childView.length + (hasComp ? dLen : 0);
+      } else {
+        let inner = posFromDOMInOpaqueNode(node, offset, child);
+        if (inner.result != null) return pos + inner.result;
+        pos += inner.size;
+      }
     }
   } else if (view.dom == text) {
     return Math.min(offset, text.nodeValue.length);
   }
   return view.localPosFromDOM(node, offset);
+}
+function posFromDOMInOpaqueNode(node, offset, target) {
+  if (target.nodeType == 3) {
+    return node == target ? {
+      result: offset
+    } : {
+      size: target.nodeValue.length
+    };
+  } else if (target.nodeType == 1 && target.contentEditable != "false") {
+    let pos = 0;
+    for (let child = target.firstChild, i = 0;; child = child.nextSibling, i++) {
+      if (node == target && i == offset) return {
+        result: pos
+      };
+      if (!child) return {
+        size: pos
+      };
+      let inner = posFromDOMInOpaqueNode(node, offset, child);
+      if (inner.result != null) return {
+        result: offset + inner.result
+      };
+      pos += inner.size;
+    }
+  } else {
+    return target.contains(node) ? {
+      result: 0
+    } : {
+      size: 0
+    };
+  }
 }
 class WidgetBufferView extends ContentView {
   constructor(side) {
@@ -13600,7 +13634,7 @@ class WidgetBufferView extends ContentView {
     return this.side;
   }
   domAtPos(pos) {
-    return DOMPos.before(this.dom);
+    return this.side > 0 ? DOMPos.before(this.dom) : DOMPos.after(this.dom);
   }
   localPosFromDOM() {
     return 0;
@@ -13620,6 +13654,9 @@ class WidgetBufferView extends ContentView {
   }
   get overrideDOMText() {
     return state_dist/* Text.empty */.xv.empty;
+  }
+  get isHidden() {
+    return true;
   }
 }
 TextView.prototype.children = WidgetView.prototype.children = WidgetBufferView.prototype.children = noChildren;
@@ -13694,7 +13731,7 @@ function coordsInChildren(view, pos, side) {
       if (end >= pos) {
         if (child.children.length) {
           scan(child, pos - off);
-        } else if (!after && (end > pos || off == end && child.getSide() > 0)) {
+        } else if ((!after || after instanceof WidgetBufferView && side > 0) && (end > pos || off == end && child.getSide() > 0)) {
           after = child;
           afterPos = pos - off;
         } else if (off < pos || off == end && child.getSide() < 0) {
@@ -13758,6 +13795,9 @@ class WidgetType {
   }
   get customView() {
     return null;
+  }
+  get isHidden() {
+    return false;
   }
   destroy(dom) {}
 }
@@ -14012,21 +14052,40 @@ class LineView extends ContentView {
   }
   measureTextSize() {
     if (this.children.length == 0 || this.length > 20) return null;
-    let totalWidth = 0;
-    for (var _iterator8 = _createForOfIteratorHelperLoose(this.children), _step8; !(_step8 = _iterator8()).done;) {
-      let child = _step8.value;
+    let totalWidth = 0,
+      textHeight;
+    for (var _iterator7 = _createForOfIteratorHelperLoose(this.children), _step7; !(_step7 = _iterator7()).done;) {
+      let child = _step7.value;
       if (!(child instanceof TextView) || /[^ -~]/.test(child.text)) return null;
       let rects = clientRectsFor(child.dom);
       if (rects.length != 1) return null;
       totalWidth += rects[0].width;
+      textHeight = rects[0].height;
     }
     return !totalWidth ? null : {
       lineHeight: this.dom.getBoundingClientRect().height,
-      charWidth: totalWidth / this.length
+      charWidth: totalWidth / this.length,
+      textHeight
     };
   }
   coordsAt(pos, side) {
-    return coordsInChildren(this, pos, side);
+    let rect = coordsInChildren(this, pos, side);
+    if (!this.children.length && rect && this.parent) {
+      let {
+          heightOracle
+        } = this.parent.view.viewState,
+        height = rect.bottom - rect.top;
+      if (Math.abs(height - heightOracle.lineHeight) < 2 && heightOracle.textHeight < height) {
+        let dist = (height - heightOracle.textHeight) / 2;
+        return {
+          top: rect.top + dist,
+          bottom: rect.bottom - dist,
+          left: rect.left,
+          right: rect.left
+        };
+      }
+    }
+    return rect;
   }
   become(_other) {
     return false;
@@ -14090,7 +14149,7 @@ class BlockWidgetView extends ContentView {
   }
   become(other) {
     if (other instanceof BlockWidgetView && other.type == this.type && other.widget.constructor == this.widget.constructor) {
-      if (!other.widget.eq(this.widget)) this.markDirty(true);
+      if (!other.widget.compare(this.widget)) this.markDirty(true);
       if (this.dom && !this.prevWidget) this.prevWidget = this.widget;
       this.widget = other.widget;
       this.length = other.length;
@@ -14104,6 +14163,12 @@ class BlockWidgetView extends ContentView {
   }
   ignoreEvent(event) {
     return this.widget.ignoreEvent(event);
+  }
+  get isEditable() {
+    return false;
+  }
+  get isWidget() {
+    return true;
   }
   destroy() {
     super.destroy();
@@ -14214,7 +14279,7 @@ class ContentBuilder {
         let cursorBefore = this.atCursorPos && !view.isEditable && openStart <= active.length && (from < to || deco.startSide > 0);
         let cursorAfter = !view.isEditable && (from < to || openStart > active.length || deco.startSide <= 0);
         let line = this.getLine();
-        if (this.pendingBuffer == 2 && !cursorBefore) this.pendingBuffer = 0;
+        if (this.pendingBuffer == 2 && !cursorBefore && !view.isEditable) this.pendingBuffer = 0;
         this.flushBuffer(active);
         if (cursorBefore) {
           line.append(wrapMarks(new WidgetBufferView(1), active), openStart);
@@ -14249,8 +14314,8 @@ class ContentBuilder {
   }
 }
 function wrapMarks(view, active) {
-  for (var _iterator9 = _createForOfIteratorHelperLoose(active), _step9; !(_step9 = _iterator9()).done;) {
-    let mark = _step9.value;
+  for (var _iterator8 = _createForOfIteratorHelperLoose(active), _step8; !(_step8 = _iterator8()).done;) {
+    let mark = _step8.value;
     view = new MarkView(mark, [view], view.length);
   }
   return view;
@@ -14269,6 +14334,9 @@ class NullWidget extends WidgetType {
   updateDOM(elt) {
     return elt.nodeName.toLowerCase() == this.tag;
   }
+  get isHidden() {
+    return true;
+  }
 }
 const clickAddsSelectionRange = state_dist/* Facet.define */.r$.define();
 const dragMovesSelection$1 = state_dist/* Facet.define */.r$.define();
@@ -14276,6 +14344,7 @@ const mouseSelectionStyle = state_dist/* Facet.define */.r$.define();
 const exceptionSink = state_dist/* Facet.define */.r$.define();
 const updateListener = state_dist/* Facet.define */.r$.define();
 const inputHandler = state_dist/* Facet.define */.r$.define();
+const focusChangeEffect = state_dist/* Facet.define */.r$.define();
 const perLineTextDirection = state_dist/* Facet.define */.r$.define({
   combine: values => values.some(x => x)
 });
@@ -14451,18 +14520,13 @@ class ViewUpdate {
     this.flags = 0;
     this.startState = view.state;
     this.changes = state_dist/* ChangeSet.empty */.as.empty(this.startState.doc.length);
-    for (var _iterator10 = _createForOfIteratorHelperLoose(transactions), _step10; !(_step10 = _iterator10()).done;) {
-      let tr = _step10.value;
+    for (var _iterator9 = _createForOfIteratorHelperLoose(transactions), _step9; !(_step9 = _iterator9()).done;) {
+      let tr = _step9.value;
       this.changes = this.changes.compose(tr.changes);
     }
     let changedRanges = [];
     this.changes.iterChangedRanges((fromA, toA, fromB, toB) => changedRanges.push(new ChangedRange(fromA, toA, fromB, toB)));
     this.changedRanges = changedRanges;
-    let focus = view.hasFocus;
-    if (focus != view.inputState.notifiedFocused) {
-      view.inputState.notifiedFocused = focus;
-      this.flags |= 1;
-    }
   }
   static create(view, state, transactions) {
     return new ViewUpdate(view, state, transactions);
@@ -14710,8 +14774,8 @@ class DOMReader {
   }
   readTextNode(node) {
     let text = node.nodeValue;
-    for (var _iterator11 = _createForOfIteratorHelperLoose(this.points), _step11; !(_step11 = _iterator11()).done;) {
-      let point = _step11.value;
+    for (var _iterator10 = _createForOfIteratorHelperLoose(this.points), _step10; !(_step10 = _iterator10()).done;) {
+      let point = _step10.value;
       if (point.node == node) point.pos = this.text.length + Math.min(point.offset, text.length);
     }
     for (let off = 0, re = this.lineSeparator ? null : /\r\n?|\n/g;;) {
@@ -14729,8 +14793,8 @@ class DOMReader {
       if (nextBreak < 0) break;
       this.lineBreak();
       if (breakSize > 1) {
-        for (var _iterator12 = _createForOfIteratorHelperLoose(this.points), _step12; !(_step12 = _iterator12()).done;) {
-          let point = _step12.value;
+        for (var _iterator11 = _createForOfIteratorHelperLoose(this.points), _step11; !(_step11 = _iterator11()).done;) {
+          let point = _step11.value;
           if (point.node == node && point.pos > this.text.length) point.pos -= breakSize - 1;
         }
       }
@@ -14755,14 +14819,14 @@ class DOMReader {
     }
   }
   findPointBefore(node, next) {
-    for (var _iterator13 = _createForOfIteratorHelperLoose(this.points), _step13; !(_step13 = _iterator13()).done;) {
-      let point = _step13.value;
+    for (var _iterator12 = _createForOfIteratorHelperLoose(this.points), _step12; !(_step12 = _iterator12()).done;) {
+      let point = _step12.value;
       if (point.node == node && node.childNodes[point.offset] == next) point.pos = this.text.length;
     }
   }
   findPointInside(node, maxLen) {
-    for (var _iterator14 = _createForOfIteratorHelperLoose(this.points), _step14; !(_step14 = _iterator14()).done;) {
-      let point = _step14.value;
+    for (var _iterator13 = _createForOfIteratorHelperLoose(this.points), _step13; !(_step13 = _iterator13()).done;) {
+      let point = _step13.value;
       if (node.nodeType == 3 ? point.node == node : node.contains(point.node)) point.pos = this.text.length + Math.min(maxLen, point.offset);
     }
   }
@@ -14850,8 +14914,8 @@ class DocView extends ContentView {
     });
     let gaps = [];
     if (this.view.viewport.from || this.view.viewport.to < this.view.state.doc.length) {
-      for (var _iterator15 = _createForOfIteratorHelperLoose(this.children), _step15; !(_step15 = _iterator15()).done;) {
-        let child = _step15.value;
+      for (var _iterator14 = _createForOfIteratorHelperLoose(this.children), _step14; !(_step14 = _iterator14()).done;) {
+        let child = _step14.value;
         if (child instanceof BlockWidgetView && child.widget instanceof BlockGapWidget) gaps.push(child.dom);
       }
     }
@@ -14893,13 +14957,16 @@ class DocView extends ContentView {
       fromPointer = false;
     }
     if (mustRead || !this.view.observer.selectionRange.focusNode) this.view.observer.readSelectionRange();
-    if (!(fromPointer || this.mayControlSelection())) return;
+    let activeElt = this.view.root.activeElement,
+      focused = activeElt == this.dom;
+    let selectionNotFocus = !focused && hasSelection(this.dom, this.view.observer.selectionRange) && !(activeElt && this.dom.contains(activeElt));
+    if (!(focused || fromPointer || selectionNotFocus)) return;
     let force = this.forceSelection;
     this.forceSelection = false;
     let main = this.view.state.selection.main;
     let anchor = this.domAtPos(main.anchor);
     let head = main.empty ? anchor : this.domAtPos(main.head);
-    if (browser.gecko && main.empty && betweenUneditable(anchor)) {
+    if (browser.gecko && main.empty && !this.compositionDeco.size && betweenUneditable(anchor)) {
       let dummy = document.createTextNode("");
       this.view.observer.ignore(() => anchor.node.insertBefore(dummy, anchor.node.childNodes[anchor.offset] || null));
       anchor = head = new DOMPos(dummy, 0);
@@ -14938,6 +15005,10 @@ class DocView extends ContentView {
           rawSel.removeAllRanges();
           rawSel.addRange(range);
         }
+        if (selectionNotFocus && this.view.root.activeElement == this.dom) {
+          this.dom.blur();
+          if (activeElt) activeElt.focus();
+        }
       });
       this.view.observer.setSelectionRange(anchor, head);
     }
@@ -14969,10 +15040,6 @@ class DocView extends ContentView {
     view.observer.readSelectionRange();
     let newRange = view.observer.selectionRange;
     if (view.docView.posFromDOM(newRange.anchorNode, newRange.anchorOffset) != cursor.from) sel.collapse(anchorNode, anchorOffset);
-  }
-  mayControlSelection() {
-    let active = this.view.root.activeElement;
-    return active == this.dom || hasSelection(this.dom, this.view.observer.selectionRange) && !(active && this.dom.contains(active));
   }
   nearest(dom) {
     for (let cur = dom; cur;) {
@@ -15051,8 +15118,8 @@ class DocView extends ContentView {
     return getComputedStyle(this.children[i].dom).direction == "rtl" ? Direction.RTL : Direction.LTR;
   }
   measureTextSize() {
-    for (var _iterator16 = _createForOfIteratorHelperLoose(this.children), _step16; !(_step16 = _iterator16()).done;) {
-      let child = _step16.value;
+    for (var _iterator15 = _createForOfIteratorHelperLoose(this.children), _step15; !(_step15 = _iterator15()).done;) {
+      let child = _step15.value;
       if (child instanceof LineView) {
         let measure = child.measureTextSize();
         if (measure) return measure;
@@ -15060,7 +15127,8 @@ class DocView extends ContentView {
     }
     let dummy = document.createElement("div"),
       lineHeight,
-      charWidth;
+      charWidth,
+      textHeight;
     dummy.className = "cm-line";
     dummy.style.width = "99999px";
     dummy.textContent = "abc def ghi jkl mno pqr stu";
@@ -15069,11 +15137,13 @@ class DocView extends ContentView {
       let rect = clientRectsFor(dummy.firstChild)[0];
       lineHeight = dummy.getBoundingClientRect().height;
       charWidth = rect ? rect.width / 27 : 7;
+      textHeight = rect ? rect.height : lineHeight;
       dummy.remove();
     });
     return {
       lineHeight,
-      charWidth
+      charWidth,
+      textHeight
     };
   }
   childCursor(pos) {
@@ -15129,8 +15199,8 @@ class DocView extends ContentView {
       mRight = 0,
       mTop = 0,
       mBottom = 0;
-    for (var _iterator17 = _createForOfIteratorHelperLoose(this.view.state.facet(scrollMargins).map(f => f(this.view))), _step17; !(_step17 = _iterator17()).done;) {
-      let margins = _step17.value;
+    for (var _iterator16 = _createForOfIteratorHelperLoose(this.view.state.facet(scrollMargins).map(f => f(this.view))), _step16; !(_step16 = _iterator16()).done;) {
+      let margins = _step16.value;
       if (margins) {
         let {
           left,
@@ -15260,19 +15330,26 @@ class CompositionWidget extends WidgetType {
     return CompositionView;
   }
 }
-function nearbyTextNode(node, offset, side) {
-  for (;;) {
+function nearbyTextNode(startNode, startOffset, side) {
+  if (side <= 0) for (let node = startNode, offset = startOffset;;) {
     if (node.nodeType == 3) return node;
-    if (node.nodeType == 1 && offset > 0 && side <= 0) {
+    if (node.nodeType == 1 && offset > 0) {
       node = node.childNodes[offset - 1];
       offset = maxOffset(node);
-    } else if (node.nodeType == 1 && offset < node.childNodes.length && side >= 0) {
+    } else {
+      break;
+    }
+  }
+  if (side >= 0) for (let node = startNode, offset = startOffset;;) {
+    if (node.nodeType == 3) return node;
+    if (node.nodeType == 1 && offset < node.childNodes.length && side >= 0) {
       node = node.childNodes[offset];
       offset = 0;
     } else {
-      return null;
+      break;
     }
   }
+  return null;
 }
 function nextToUneditable(node, offset) {
   if (node.nodeType != 1) return 0;
@@ -15443,22 +15520,22 @@ function domPosInText(node, x, y) {
     offset: closestOffset > -1 ? closestOffset : generalSide > 0 ? node.nodeValue.length : 0
   };
 }
-function posAtCoords(view, _ref2, precise, bias) {
-  let {
-    x,
-    y
-  } = _ref2;
+function posAtCoords(view, coords, precise, bias) {
   if (bias === void 0) {
     bias = -1;
   }
-  var _a;
+  var _a, _b;
   let content = view.contentDOM.getBoundingClientRect(),
     docTop = content.top + view.viewState.paddingTop;
   let block,
     {
       docHeight
     } = view.viewState;
-  let yOffset = y - docTop;
+  let {
+      x,
+      y
+    } = coords,
+    yOffset = y - docTop;
   if (yOffset < 0) return 0;
   if (yOffset > docHeight) return view.state.doc.length;
   for (let halfLine = view.defaultLineHeight / 2, bounced = false;;) {
@@ -15513,7 +15590,14 @@ function posAtCoords(view, _ref2, precise, bias) {
       offset
     } = domPosAtCoords(line.dom, x, y));
   }
-  return view.docView.posFromDOM(node, offset);
+  let nearest = view.docView.nearest(node);
+  if (!nearest) return null;
+  if (nearest.isWidget && ((_b = nearest.dom) === null || _b === void 0 ? void 0 : _b.nodeType) == 1) {
+    let rect = nearest.dom.getBoundingClientRect();
+    return coords.y < rect.top || coords.y <= rect.bottom && coords.x <= (rect.left + rect.right) / 2 ? nearest.posAtStart : nearest.posAtEnd;
+  } else {
+    return nearest.localPosFromDOM(node, offset) + nearest.posAtStart;
+  }
 }
 function posAtCoordsImprecise(view, contentRect, block, x, y) {
   let into = Math.round((x - contentRect.left) * view.defaultCharacterWidth);
@@ -15621,8 +15705,8 @@ function skipAtoms(view, oldPos, pos) {
   let atoms = view.state.facet(atomicRanges).map(f => f(view));
   for (;;) {
     let moved = false;
-    for (var _iterator18 = _createForOfIteratorHelperLoose(atoms), _step18; !(_step18 = _iterator18()).done;) {
-      let set = _step18.value;
+    for (var _iterator17 = _createForOfIteratorHelperLoose(atoms), _step17; !(_step17 = _iterator17()).done;) {
+      let set = _step17.value;
       set.between(pos.from - 1, pos.from + 1, (from, to, value) => {
         if (pos.from > from && pos.from < to) {
           pos = oldPos.head > pos.from ? state_dist/* EditorSelection.cursor */.jT.cursor(from, 1) : state_dist/* EditorSelection.cursor */.jT.cursor(to, -1);
@@ -15653,6 +15737,8 @@ class InputState {
     this.composing = -1;
     this.compositionFirstChange = null;
     this.compositionEndedAt = 0;
+    this.compositionPendingKey = false;
+    this.compositionPendingChange = false;
     this.mouseSelection = null;
     let handleEvent = (handler, event) => {
       if (this.ignoreDuringComposition(event)) return;
@@ -15668,7 +15754,14 @@ class InputState {
       this.registeredEvents.push(type);
     }
     view.scrollDOM.addEventListener("mousedown", event => {
-      if (event.target == view.scrollDOM && event.clientY > view.contentDOM.getBoundingClientRect().bottom) handleEvent(handlers.mousedown, event);
+      if (event.target == view.scrollDOM && event.clientY > view.contentDOM.getBoundingClientRect().bottom) {
+        handleEvent(handlers.mousedown, event);
+        if (!event.defaultPrevented && event.button == 2) {
+          let start = view.contentDOM.style.minHeight;
+          view.contentDOM.style.minHeight = "100%";
+          setTimeout(() => view.contentDOM.style.minHeight = start, 200);
+        }
+      }
     });
     if (browser.chrome && browser.chrome_version == 102) {
       view.scrollDOM.addEventListener("wheel", () => {
@@ -15692,8 +15785,8 @@ class InputState {
     var _a;
     let handlers;
     this.customHandlers = [];
-    for (var _iterator19 = _createForOfIteratorHelperLoose(plugins), _step19; !(_step19 = _iterator19()).done;) {
-      let plugin = _step19.value;
+    for (var _iterator18 = _createForOfIteratorHelperLoose(plugins), _step18; !(_step18 = _iterator18()).done;) {
+      let plugin = _step18.value;
       if (handlers = (_a = plugin.update(view).spec) === null || _a === void 0 ? void 0 : _a.domEventHandlers) {
         this.customHandlers.push({
           plugin: plugin.value,
@@ -15710,8 +15803,8 @@ class InputState {
     }
   }
   runCustomHandlers(type, view, event) {
-    for (var _iterator20 = _createForOfIteratorHelperLoose(this.customHandlers), _step20; !(_step20 = _iterator20()).done;) {
-      let set = _step20.value;
+    for (var _iterator19 = _createForOfIteratorHelperLoose(this.customHandlers), _step19; !(_step19 = _iterator19()).done;) {
+      let set = _step19.value;
       let handler = set.handlers[type];
       if (handler) {
         try {
@@ -15726,8 +15819,8 @@ class InputState {
   runScrollHandlers(view, event) {
     this.lastScrollTop = view.scrollDOM.scrollTop;
     this.lastScrollLeft = view.scrollDOM.scrollLeft;
-    for (var _iterator21 = _createForOfIteratorHelperLoose(this.customHandlers), _step21; !(_step21 = _iterator21()).done;) {
-      let set = _step21.value;
+    for (var _iterator20 = _createForOfIteratorHelperLoose(this.customHandlers), _step20; !(_step20 = _iterator20()).done;) {
+      let set = _step20.value;
       let handler = set.handlers.scroll;
       if (handler) {
         try {
@@ -15742,6 +15835,7 @@ class InputState {
     this.lastKeyCode = event.keyCode;
     this.lastKeyTime = Date.now();
     if (event.keyCode == 9 && Date.now() < this.lastEscPress + 2000) return true;
+    if (event.keyCode != 27 && modifierCodes.indexOf(event.keyCode) < 0) view.inputState.lastEscPress = 0;
     if (browser.android && browser.chrome && !event.synthetic && (event.keyCode == 13 || event.keyCode == 8)) {
       view.observer.delayAndroidKey(event.key, event.keyCode);
       return true;
@@ -15763,8 +15857,8 @@ class InputState {
   ignoreDuringComposition(event) {
     if (!/^key/.test(event.type)) return false;
     if (this.composing > 0) return true;
-    if (browser.safari && !browser.ios && Date.now() - this.compositionEndedAt < 100) {
-      this.compositionEndedAt = 0;
+    if (browser.safari && !browser.ios && this.compositionPendingKey && Date.now() - this.compositionEndedAt < 100) {
+      this.compositionPendingKey = false;
       return true;
     }
     return false;
@@ -15799,8 +15893,9 @@ const PendingKeys = [{
 }];
 const EmacsyPendingKeys = "dthko";
 const modifierCodes = [16, 17, 18, 20, 91, 92, 224, 225];
+const dragScrollMargin = 6;
 function dragScrollSpeed(dist) {
-  return dist * 0.7 + 8;
+  return Math.max(0, dist) * 0.7 + 8;
 }
 class MouseSelection {
   constructor(view, startEvent, style, mustSelect) {
@@ -15841,8 +15936,8 @@ class MouseSelection {
       right: this.view.win.innerWidth,
       bottom: this.view.win.innerHeight
     };
-    if (event.clientX <= rect.left) sx = -dragScrollSpeed(rect.left - event.clientX);else if (event.clientX >= rect.right) sx = dragScrollSpeed(event.clientX - rect.right);
-    if (event.clientY <= rect.top) sy = -dragScrollSpeed(rect.top - event.clientY);else if (event.clientY >= rect.bottom) sy = dragScrollSpeed(event.clientY - rect.bottom);
+    if (event.clientX <= rect.left + dragScrollMargin) sx = -dragScrollSpeed(rect.left - event.clientX);else if (event.clientX >= rect.right - dragScrollMargin) sx = dragScrollSpeed(event.clientX - rect.right);
+    if (event.clientY <= rect.top + dragScrollMargin) sy = -dragScrollSpeed(rect.top - event.clientY);else if (event.clientY >= rect.bottom - dragScrollMargin) sy = dragScrollSpeed(event.clientY - rect.bottom);
     this.setScrollSpeed(sx, sy);
   }
   up(event) {
@@ -15982,7 +16077,7 @@ function doPaste(view, input) {
 }
 handlers.keydown = (view, event) => {
   view.inputState.setSelectionOrigin("select");
-  if (event.keyCode == 27) view.inputState.lastEscPress = Date.now();else if (modifierCodes.indexOf(event.keyCode) < 0) view.inputState.lastEscPress = 0;
+  if (event.keyCode == 27) view.inputState.lastEscPress = Date.now();
 };
 handlers.touchstart = (view, e) => {
   view.inputState.lastTouchTime = Date.now();
@@ -15998,8 +16093,8 @@ handlers.mousedown = (view, event) => {
   view.observer.flush();
   if (view.inputState.lastTouchTime > Date.now() - 2000) return;
   let style = null;
-  for (var _iterator22 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step22; !(_step22 = _iterator22()).done;) {
-    let makeStyle = _step22.value;
+  for (var _iterator21 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step21; !(_step21 = _iterator21()).done;) {
+    let makeStyle = _step21.value;
     style = makeStyle(view, event);
     if (style) break;
   }
@@ -16073,7 +16168,8 @@ function basicMouseSelection(view, event) {
       }
     },
     get(event, extend, multiple) {
-      let cur = queryPos(view, event);
+      let cur = queryPos(view, event),
+        removed;
       let range = rangeForClick(view, cur.pos, cur.bias, type);
       if (start.pos != cur.pos && !extend) {
         let startRange = rangeForClick(view, start.pos, start.bias, type);
@@ -16081,14 +16177,19 @@ function basicMouseSelection(view, event) {
           to = Math.max(startRange.to, range.to);
         range = from < range.from ? state_dist/* EditorSelection.range */.jT.range(from, to) : state_dist/* EditorSelection.range */.jT.range(to, from);
       }
-      if (extend) return startSel.replaceRange(startSel.main.extend(range.from, range.to));else if (multiple && startSel.ranges.length > 1 && startSel.ranges.some(r => r.eq(range))) return removeRange(startSel, range);else if (multiple) return startSel.addRange(range);else return state_dist/* EditorSelection.create */.jT.create([range]);
+      if (extend) return startSel.replaceRange(startSel.main.extend(range.from, range.to));else if (multiple && type == 1 && startSel.ranges.length > 1 && (removed = removeRangeAround(startSel, cur.pos))) return removed;else if (multiple) return startSel.addRange(range);else return state_dist/* EditorSelection.create */.jT.create([range]);
     }
   };
 }
-function removeRange(sel, range) {
-  for (let i = 0;; i++) {
-    if (sel.ranges[i].eq(range)) return state_dist/* EditorSelection.create */.jT.create(sel.ranges.slice(0, i).concat(sel.ranges.slice(i + 1)), sel.mainIndex == i ? 0 : sel.mainIndex - (sel.mainIndex > i ? 1 : 0));
+function removeRangeAround(sel, pos) {
+  for (let i = 0; i < sel.ranges.length; i++) {
+    let {
+      from,
+      to
+    } = sel.ranges[i];
+    if (from <= pos && to >= pos) return state_dist/* EditorSelection.create */.jT.create(sel.ranges.slice(0, i).concat(sel.ranges.slice(i + 1)), sel.mainIndex == i ? 0 : sel.mainIndex - (sel.mainIndex > i ? 1 : 0));
   }
+  return null;
 }
 handlers.dragstart = (view, event) => {
   let {
@@ -16163,7 +16264,7 @@ handlers.paste = (view, event) => {
   view.observer.flush();
   let data = brokenClipboardAPI ? null : event.clipboardData;
   if (data) {
-    doPaste(view, data.getData("text/plain"));
+    doPaste(view, data.getData("text/plain") || data.getData("text/uri-text"));
     event.preventDefault();
   } else {
     capturePaste(view);
@@ -16187,8 +16288,8 @@ function copiedRange(state) {
   let content = [],
     ranges = [],
     linewise = false;
-  for (var _iterator23 = _createForOfIteratorHelperLoose(state.selection.ranges), _step23; !(_step23 = _iterator23()).done;) {
-    let range = _step23.value;
+  for (var _iterator22 = _createForOfIteratorHelperLoose(state.selection.ranges), _step22; !(_step22 = _iterator22()).done;) {
+    let range = _step22.value;
     if (!range.empty) {
       content.push(state.sliceDoc(range.from, range.to));
       ranges.push(range);
@@ -16196,10 +16297,10 @@ function copiedRange(state) {
   }
   if (!content.length) {
     let upto = -1;
-    for (var _iterator24 = _createForOfIteratorHelperLoose(state.selection.ranges), _step24; !(_step24 = _iterator24()).done;) {
+    for (var _iterator23 = _createForOfIteratorHelperLoose(state.selection.ranges), _step23; !(_step23 = _iterator23()).done;) {
       let {
         from
-      } = _step24.value;
+      } = _step23.value;
       let line = state.doc.lineAt(from);
       if (line.number > upto) {
         content.push(line.text);
@@ -16241,9 +16342,26 @@ handlers.copy = handlers.cut = (view, event) => {
     userEvent: "delete.cut"
   });
 };
+const isFocusChange = state_dist/* Annotation.define */.q6.define();
+function focusChangeTransaction(state, focus) {
+  let effects = [];
+  for (var _iterator24 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step24; !(_step24 = _iterator24()).done;) {
+    let getEffect = _step24.value;
+    let effect = getEffect(state, focus);
+    if (effect) effects.push(effect);
+  }
+  return effects ? state.update({
+    effects,
+    annotations: isFocusChange.of(true)
+  }) : null;
+}
 function updateForFocusChange(view) {
   setTimeout(() => {
-    if (view.hasFocus != view.inputState.notifiedFocused) view.update([]);
+    let focus = view.hasFocus;
+    if (focus != view.inputState.notifiedFocused) {
+      let tr = focusChangeTransaction(view.state, focus);
+      if (tr) view.dispatch(tr);else view.update([]);
+    }
   }, 10);
 }
 handlers.focus = view => {
@@ -16267,11 +16385,18 @@ handlers.compositionstart = handlers.compositionupdate = view => {
 handlers.compositionend = view => {
   view.inputState.composing = -1;
   view.inputState.compositionEndedAt = Date.now();
+  view.inputState.compositionPendingKey = true;
+  view.inputState.compositionPendingChange = view.observer.pendingRecords().length > 0;
   view.inputState.compositionFirstChange = null;
-  if (browser.chrome && browser.android) view.observer.flushSoon();
-  setTimeout(() => {
-    if (view.inputState.composing < 0 && view.docView.compositionDeco.size) view.update([]);
-  }, 50);
+  if (browser.chrome && browser.android) {
+    view.observer.flushSoon();
+  } else if (view.inputState.compositionPendingChange) {
+    Promise.resolve().then(() => view.observer.flush());
+  } else {
+    setTimeout(() => {
+      if (view.inputState.composing < 0 && view.docView.compositionDeco.size) view.update([]);
+    }, 50);
+  }
 };
 handlers.contextmenu = view => {
   view.inputState.lastContextMenu = Date.now();
@@ -16301,12 +16426,13 @@ class HeightOracle {
     this.heightSamples = {};
     this.lineHeight = 14;
     this.charWidth = 7;
+    this.textHeight = 14;
     this.lineLength = 30;
     this.heightChanged = false;
   }
   heightForGap(from, to) {
     let lines = this.doc.lineAt(to).number - this.doc.lineAt(from).number + 1;
-    if (this.lineWrapping) lines += Math.ceil((to - from - lines * this.lineLength * 0.5) / this.lineLength);
+    if (this.lineWrapping) lines += Math.max(0, Math.ceil((to - from - lines * this.lineLength * 0.5) / this.lineLength));
     return this.lineHeight * lines;
   }
   heightForLine(length) {
@@ -16334,12 +16460,13 @@ class HeightOracle {
     }
     return newHeight;
   }
-  refresh(whiteSpace, lineHeight, charWidth, lineLength, knownHeights) {
+  refresh(whiteSpace, lineHeight, charWidth, textHeight, lineLength, knownHeights) {
     let lineWrapping = wrappingWhiteSpace.indexOf(whiteSpace) > -1;
     let changed = Math.round(lineHeight) != Math.round(this.lineHeight) || this.lineWrapping != lineWrapping;
     this.lineWrapping = lineWrapping;
     this.lineHeight = lineHeight;
     this.charWidth = charWidth;
+    this.textHeight = textHeight;
     this.lineLength = lineLength;
     if (changed) {
       this.heightSamples = {};
@@ -16418,7 +16545,8 @@ class HeightMap {
     result.push(this);
   }
   applyChanges(decorations, oldDoc, oracle, changes) {
-    let me = this;
+    let me = this,
+      doc = oracle.doc;
     for (let i = changes.length - 1; i >= 0; i--) {
       let {
         fromA,
@@ -16426,19 +16554,19 @@ class HeightMap {
         fromB,
         toB
       } = changes[i];
-      let start = me.lineAt(fromA, QueryType.ByPosNoHeight, oldDoc, 0, 0);
-      let end = start.to >= toA ? start : me.lineAt(toA, QueryType.ByPosNoHeight, oldDoc, 0, 0);
+      let start = me.lineAt(fromA, QueryType.ByPosNoHeight, oracle.setDoc(oldDoc), 0, 0);
+      let end = start.to >= toA ? start : me.lineAt(toA, QueryType.ByPosNoHeight, oracle, 0, 0);
       toB += end.to - toA;
       toA = end.to;
       while (i > 0 && start.from <= changes[i - 1].toA) {
         fromA = changes[i - 1].fromA;
         fromB = changes[i - 1].fromB;
         i--;
-        if (fromA < start.from) start = me.lineAt(fromA, QueryType.ByPosNoHeight, oldDoc, 0, 0);
+        if (fromA < start.from) start = me.lineAt(fromA, QueryType.ByPosNoHeight, oracle, 0, 0);
       }
       fromB += start.from - fromA;
       fromA = start.from;
-      let nodes = NodeBuilder.build(oracle, decorations, fromB, toB);
+      let nodes = NodeBuilder.build(oracle.setDoc(doc), decorations, fromB, toB);
       me = me.replace(fromA, toA, nodes);
     }
     return me.updateHeight(oracle, 0);
@@ -16492,14 +16620,14 @@ class HeightMapBlock extends HeightMap {
     super(length, height);
     this.type = type;
   }
-  blockAt(_height, _doc, top, offset) {
+  blockAt(_height, _oracle, top, offset) {
     return new BlockInfo(offset, this.length, top, this.height, this.type);
   }
-  lineAt(_value, _type, doc, top, offset) {
-    return this.blockAt(0, doc, top, offset);
+  lineAt(_value, _type, oracle, top, offset) {
+    return this.blockAt(0, oracle, top, offset);
   }
-  forEachLine(from, to, doc, top, offset, f) {
-    if (from <= offset + this.length && to >= offset) f(this.blockAt(0, doc, top, offset));
+  forEachLine(from, to, oracle, top, offset, f) {
+    if (from <= offset + this.length && to >= offset) f(this.blockAt(0, oracle, top, offset));
   }
   updateHeight(oracle, offset, _force, measured) {
     if (offset === void 0) {
@@ -16551,58 +16679,85 @@ class HeightMapGap extends HeightMap {
   constructor(length) {
     super(length, 0);
   }
-  lines(doc, offset) {
-    let firstLine = doc.lineAt(offset).number,
-      lastLine = doc.lineAt(offset + this.length).number;
+  heightMetrics(oracle, offset) {
+    let firstLine = oracle.doc.lineAt(offset).number,
+      lastLine = oracle.doc.lineAt(offset + this.length).number;
+    let lines = lastLine - firstLine + 1;
+    let perLine,
+      perChar = 0;
+    if (oracle.lineWrapping) {
+      let totalPerLine = Math.min(this.height, oracle.lineHeight * lines);
+      perLine = totalPerLine / lines;
+      if (this.length > lines + 1) perChar = (this.height - totalPerLine) / (this.length - lines - 1);
+    } else {
+      perLine = this.height / lines;
+    }
     return {
       firstLine,
       lastLine,
-      lineHeight: this.height / (lastLine - firstLine + 1)
+      perLine,
+      perChar
     };
   }
-  blockAt(height, doc, top, offset) {
+  blockAt(height, oracle, top, offset) {
     let {
       firstLine,
       lastLine,
-      lineHeight
-    } = this.lines(doc, offset);
-    let line = Math.max(0, Math.min(lastLine - firstLine, Math.floor((height - top) / lineHeight)));
-    let {
-      from,
-      length
-    } = doc.line(firstLine + line);
-    return new BlockInfo(from, length, top + lineHeight * line, lineHeight, BlockType.Text);
+      perLine,
+      perChar
+    } = this.heightMetrics(oracle, offset);
+    if (oracle.lineWrapping) {
+      let guess = offset + Math.round(Math.max(0, Math.min(1, (height - top) / this.height)) * this.length);
+      let line = oracle.doc.lineAt(guess),
+        lineHeight = perLine + line.length * perChar;
+      let lineTop = Math.max(top, height - lineHeight / 2);
+      return new BlockInfo(line.from, line.length, lineTop, lineHeight, BlockType.Text);
+    } else {
+      let line = Math.max(0, Math.min(lastLine - firstLine, Math.floor((height - top) / perLine)));
+      let {
+        from,
+        length
+      } = oracle.doc.line(firstLine + line);
+      return new BlockInfo(from, length, top + perLine * line, perLine, BlockType.Text);
+    }
   }
-  lineAt(value, type, doc, top, offset) {
-    if (type == QueryType.ByHeight) return this.blockAt(value, doc, top, offset);
+  lineAt(value, type, oracle, top, offset) {
+    if (type == QueryType.ByHeight) return this.blockAt(value, oracle, top, offset);
     if (type == QueryType.ByPosNoHeight) {
       let {
         from,
         to
-      } = doc.lineAt(value);
+      } = oracle.doc.lineAt(value);
       return new BlockInfo(from, to - from, 0, 0, BlockType.Text);
     }
     let {
       firstLine,
-      lineHeight
-    } = this.lines(doc, offset);
-    let {
-      from,
-      length,
-      number
-    } = doc.lineAt(value);
-    return new BlockInfo(from, length, top + lineHeight * (number - firstLine), lineHeight, BlockType.Text);
+      perLine,
+      perChar
+    } = this.heightMetrics(oracle, offset);
+    let line = oracle.doc.lineAt(value),
+      lineHeight = perLine + line.length * perChar;
+    let linesAbove = line.number - firstLine;
+    let lineTop = top + perLine * linesAbove + perChar * (line.from - offset - linesAbove);
+    return new BlockInfo(line.from, line.length, Math.max(top, Math.min(lineTop, top + this.height - lineHeight)), lineHeight, BlockType.Text);
   }
-  forEachLine(from, to, doc, top, offset, f) {
+  forEachLine(from, to, oracle, top, offset, f) {
+    from = Math.max(from, offset);
+    to = Math.min(to, offset + this.length);
     let {
       firstLine,
-      lineHeight
-    } = this.lines(doc, offset);
-    for (let pos = Math.max(from, offset), end = Math.min(offset + this.length, to); pos <= end;) {
-      let line = doc.lineAt(pos);
-      if (pos == from) top += lineHeight * (line.number - firstLine);
-      f(new BlockInfo(line.from, line.length, top, lineHeight, BlockType.Text));
-      top += lineHeight;
+      perLine,
+      perChar
+    } = this.heightMetrics(oracle, offset);
+    for (let pos = from, lineTop = top; pos <= to;) {
+      let line = oracle.doc.lineAt(pos);
+      if (pos == from) {
+        let linesAbove = line.number - firstLine;
+        lineTop += perLine * linesAbove + perChar * (from - offset - linesAbove);
+      }
+      let lineHeight = perLine + perChar * line.length;
+      f(new BlockInfo(line.from, line.length, lineTop, lineHeight, BlockType.Text));
+      lineTop += lineHeight;
       pos = line.to + 1;
     }
   }
@@ -16636,7 +16791,6 @@ class HeightMapGap extends HeightMap {
       let nodes = [],
         pos = Math.max(offset, measured.from),
         singleHeight = -1;
-      let wasChanged = oracle.heightChanged;
       if (measured.from > offset) nodes.push(new HeightMapGap(measured.from - offset - 1).updateHeight(oracle, offset));
       while (pos <= end && measured.more) {
         let len = oracle.doc.lineAt(pos).length;
@@ -16650,7 +16804,7 @@ class HeightMapGap extends HeightMap {
       }
       if (pos <= end) nodes.push(null, new HeightMapGap(end - pos).updateHeight(oracle, pos));
       let result = HeightMap.of(nodes);
-      oracle.heightChanged = wasChanged || singleHeight < 0 || Math.abs(result.height - this.height) >= Epsilon || Math.abs(singleHeight - this.lines(oracle.doc, offset).lineHeight) >= Epsilon;
+      if (singleHeight < 0 || Math.abs(result.height - this.height) >= Epsilon || Math.abs(singleHeight - this.heightMetrics(oracle, offset).perLine) >= Epsilon) oracle.heightChanged = true;
       return result;
     } else if (force || this.outdated) {
       this.setHeight(oracle, oracle.heightForGap(offset, offset + this.length));
@@ -16672,30 +16826,30 @@ class HeightMapBranch extends HeightMap {
   get break() {
     return this.flags & 1;
   }
-  blockAt(height, doc, top, offset) {
+  blockAt(height, oracle, top, offset) {
     let mid = top + this.left.height;
-    return height < mid ? this.left.blockAt(height, doc, top, offset) : this.right.blockAt(height, doc, mid, offset + this.left.length + this.break);
+    return height < mid ? this.left.blockAt(height, oracle, top, offset) : this.right.blockAt(height, oracle, mid, offset + this.left.length + this.break);
   }
-  lineAt(value, type, doc, top, offset) {
+  lineAt(value, type, oracle, top, offset) {
     let rightTop = top + this.left.height,
       rightOffset = offset + this.left.length + this.break;
     let left = type == QueryType.ByHeight ? value < rightTop : value < rightOffset;
-    let base = left ? this.left.lineAt(value, type, doc, top, offset) : this.right.lineAt(value, type, doc, rightTop, rightOffset);
+    let base = left ? this.left.lineAt(value, type, oracle, top, offset) : this.right.lineAt(value, type, oracle, rightTop, rightOffset);
     if (this.break || (left ? base.to < rightOffset : base.from > rightOffset)) return base;
     let subQuery = type == QueryType.ByPosNoHeight ? QueryType.ByPosNoHeight : QueryType.ByPos;
-    if (left) return base.join(this.right.lineAt(rightOffset, subQuery, doc, rightTop, rightOffset));else return this.left.lineAt(rightOffset, subQuery, doc, top, offset).join(base);
+    if (left) return base.join(this.right.lineAt(rightOffset, subQuery, oracle, rightTop, rightOffset));else return this.left.lineAt(rightOffset, subQuery, oracle, top, offset).join(base);
   }
-  forEachLine(from, to, doc, top, offset, f) {
+  forEachLine(from, to, oracle, top, offset, f) {
     let rightTop = top + this.left.height,
       rightOffset = offset + this.left.length + this.break;
     if (this.break) {
-      if (from < rightOffset) this.left.forEachLine(from, to, doc, top, offset, f);
-      if (to >= rightOffset) this.right.forEachLine(from, to, doc, rightTop, rightOffset, f);
+      if (from < rightOffset) this.left.forEachLine(from, to, oracle, top, offset, f);
+      if (to >= rightOffset) this.right.forEachLine(from, to, oracle, rightTop, rightOffset, f);
     } else {
-      let mid = this.lineAt(rightOffset, QueryType.ByPos, doc, top, offset);
-      if (from < mid.from) this.left.forEachLine(from, mid.from - 1, doc, top, offset, f);
+      let mid = this.lineAt(rightOffset, QueryType.ByPos, oracle, top, offset);
+      if (from < mid.from) this.left.forEachLine(from, mid.from - 1, oracle, top, offset, f);
       if (mid.to >= from && mid.from <= to) f(mid);
-      if (to > mid.to) this.right.forEachLine(mid.to + 1, to, doc, rightTop, rightOffset, f);
+      if (to > mid.to) this.right.forEachLine(mid.to + 1, to, oracle, rightTop, rightOffset, f);
     }
   }
   replace(from, to, nodes) {
@@ -17017,11 +17171,11 @@ class ViewState {
       } = this.state.selection;
     for (let i = 0; i <= 1; i++) {
       let pos = i ? main.head : main.anchor;
-      if (!viewports.some(_ref3 => {
+      if (!viewports.some(_ref2 => {
         let {
           from,
           to
-        } = _ref3;
+        } = _ref2;
         return pos >= from && pos <= to;
       })) {
         let {
@@ -17032,11 +17186,11 @@ class ViewState {
       }
     }
     this.viewports = viewports.sort((a, b) => a.from - b.from);
-    this.scaler = this.heightMap.height <= 7000000 ? IdScaler : new BigScaler(this.heightOracle.doc, this.heightMap, this.viewports);
+    this.scaler = this.heightMap.height <= 7000000 ? IdScaler : new BigScaler(this.heightOracle, this.heightMap, this.viewports);
   }
   updateViewportLines() {
     this.viewportLines = [];
-    this.heightMap.forEachLine(this.viewport.from, this.viewport.to, this.state.doc, 0, 0, block => {
+    this.heightMap.forEachLine(this.viewport.from, this.viewport.to, this.heightOracle.setDoc(this.state.doc), 0, 0, block => {
       this.viewportLines.push(this.scaler.scale == 1 ? block : scaleBlock(block, this.scaler));
     });
   }
@@ -17070,8 +17224,9 @@ class ViewState {
     let whiteSpace = style.whiteSpace;
     this.defaultTextDirection = style.direction == "rtl" ? Direction.RTL : Direction.LTR;
     let refresh = this.heightOracle.mustRefreshForWrapping(whiteSpace);
-    let measureContent = refresh || this.mustMeasureContent || this.contentDOMHeight != dom.clientHeight;
-    this.contentDOMHeight = dom.clientHeight;
+    let domRect = dom.getBoundingClientRect();
+    let measureContent = refresh || this.mustMeasureContent || this.contentDOMHeight != domRect.height;
+    this.contentDOMHeight = domRect.height;
     this.mustMeasureContent = false;
     let result = 0,
       bias = 0;
@@ -17097,9 +17252,9 @@ class ViewState {
       if (inView) measureContent = true;
     }
     if (!this.inView && !this.scrollTarget) return 0;
-    let contentWidth = dom.clientWidth;
+    let contentWidth = domRect.width;
     if (this.contentDOMWidth != contentWidth || this.editorHeight != view.scrollDOM.clientHeight) {
-      this.contentDOMWidth = contentWidth;
+      this.contentDOMWidth = domRect.width;
       this.editorHeight = view.scrollDOM.clientHeight;
       result |= 8;
     }
@@ -17109,9 +17264,10 @@ class ViewState {
       if (refresh || oracle.lineWrapping && Math.abs(contentWidth - this.contentDOMWidth) > oracle.charWidth) {
         let {
           lineHeight,
-          charWidth
+          charWidth,
+          textHeight
         } = view.docView.measureTextSize();
-        refresh = lineHeight > 0 && oracle.refresh(whiteSpace, lineHeight, charWidth, contentWidth / charWidth, lineHeights);
+        refresh = lineHeight > 0 && oracle.refresh(whiteSpace, lineHeight, charWidth, textHeight, contentWidth / charWidth, lineHeights);
         if (refresh) {
           view.docView.minWidth = 0;
           result |= 8;
@@ -17147,22 +17303,22 @@ class ViewState {
   getViewport(bias, scrollTarget) {
     let marginTop = 0.5 - Math.max(-0.5, Math.min(0.5, bias / 1000 / 2));
     let map = this.heightMap,
-      doc = this.state.doc,
-      {
-        visibleTop,
-        visibleBottom
-      } = this;
-    let viewport = new Viewport(map.lineAt(visibleTop - marginTop * 1000, QueryType.ByHeight, doc, 0, 0).from, map.lineAt(visibleBottom + (1 - marginTop) * 1000, QueryType.ByHeight, doc, 0, 0).to);
+      oracle = this.heightOracle;
+    let {
+      visibleTop,
+      visibleBottom
+    } = this;
+    let viewport = new Viewport(map.lineAt(visibleTop - marginTop * 1000, QueryType.ByHeight, oracle, 0, 0).from, map.lineAt(visibleBottom + (1 - marginTop) * 1000, QueryType.ByHeight, oracle, 0, 0).to);
     if (scrollTarget) {
       let {
         head
       } = scrollTarget.range;
       if (head < viewport.from || head > viewport.to) {
         let viewHeight = Math.min(this.editorHeight, this.pixelViewport.bottom - this.pixelViewport.top);
-        let block = map.lineAt(head, QueryType.ByPos, doc, 0, 0),
+        let block = map.lineAt(head, QueryType.ByPos, oracle, 0, 0),
           topPos;
         if (scrollTarget.y == "center") topPos = (block.top + block.bottom) / 2 - viewHeight / 2;else if (scrollTarget.y == "start" || scrollTarget.y == "nearest" && head < viewport.from) topPos = block.top;else topPos = block.bottom - viewHeight;
-        viewport = new Viewport(map.lineAt(topPos - 1000 / 2, QueryType.ByHeight, doc, 0, 0).from, map.lineAt(topPos + viewHeight + 1000 / 2, QueryType.ByHeight, doc, 0, 0).to);
+        viewport = new Viewport(map.lineAt(topPos - 1000 / 2, QueryType.ByHeight, oracle, 0, 0).from, map.lineAt(topPos + viewHeight + 1000 / 2, QueryType.ByHeight, oracle, 0, 0).to);
       }
     }
     return viewport;
@@ -17170,23 +17326,23 @@ class ViewState {
   mapViewport(viewport, changes) {
     let from = changes.mapPos(viewport.from, -1),
       to = changes.mapPos(viewport.to, 1);
-    return new Viewport(this.heightMap.lineAt(from, QueryType.ByPos, this.state.doc, 0, 0).from, this.heightMap.lineAt(to, QueryType.ByPos, this.state.doc, 0, 0).to);
+    return new Viewport(this.heightMap.lineAt(from, QueryType.ByPos, this.heightOracle, 0, 0).from, this.heightMap.lineAt(to, QueryType.ByPos, this.heightOracle, 0, 0).to);
   }
-  viewportIsAppropriate(_ref4, bias) {
+  viewportIsAppropriate(_ref3, bias) {
     let {
       from,
       to
-    } = _ref4;
+    } = _ref3;
     if (bias === void 0) {
       bias = 0;
     }
     if (!this.inView) return true;
     let {
       top
-    } = this.heightMap.lineAt(from, QueryType.ByPos, this.state.doc, 0, 0);
+    } = this.heightMap.lineAt(from, QueryType.ByPos, this.heightOracle, 0, 0);
     let {
       bottom
-    } = this.heightMap.lineAt(to, QueryType.ByPos, this.state.doc, 0, 0);
+    } = this.heightMap.lineAt(to, QueryType.ByPos, this.heightOracle, 0, 0);
     let {
       visibleTop,
       visibleBottom
@@ -17306,13 +17462,13 @@ class ViewState {
     return changed ? 4 : 0;
   }
   lineBlockAt(pos) {
-    return pos >= this.viewport.from && pos <= this.viewport.to && this.viewportLines.find(b => b.from <= pos && b.to >= pos) || scaleBlock(this.heightMap.lineAt(pos, QueryType.ByPos, this.state.doc, 0, 0), this.scaler);
+    return pos >= this.viewport.from && pos <= this.viewport.to && this.viewportLines.find(b => b.from <= pos && b.to >= pos) || scaleBlock(this.heightMap.lineAt(pos, QueryType.ByPos, this.heightOracle, 0, 0), this.scaler);
   }
   lineBlockAtHeight(height) {
-    return scaleBlock(this.heightMap.lineAt(this.scaler.fromDOM(height), QueryType.ByHeight, this.state.doc, 0, 0), this.scaler);
+    return scaleBlock(this.heightMap.lineAt(this.scaler.fromDOM(height), QueryType.ByHeight, this.heightOracle, 0, 0), this.scaler);
   }
   elementAtHeight(height) {
-    return scaleBlock(this.heightMap.blockAt(this.scaler.fromDOM(height), this.state.doc, 0, 0), this.scaler);
+    return scaleBlock(this.heightMap.blockAt(this.scaler.fromDOM(height), this.heightOracle, 0, 0), this.scaler);
   }
   get docHeight() {
     return this.scaler.toDOM(this.heightMap.height);
@@ -17356,11 +17512,11 @@ function lineStructure(from, to, stateDeco) {
     ranges
   };
 }
-function findPosition(_ref5, ratio) {
+function findPosition(_ref4, ratio) {
   let {
     total,
     ranges
-  } = _ref5;
+  } = _ref4;
   if (ratio <= 0) return ranges[0].from;
   if (ratio >= 1) return ranges[ranges.length - 1].to;
   let dist = Math.floor(total * ratio);
@@ -17406,17 +17562,17 @@ const IdScaler = {
   scale: 1
 };
 class BigScaler {
-  constructor(doc, heightMap, viewports) {
+  constructor(oracle, heightMap, viewports) {
     let vpHeight = 0,
       base = 0,
       domBase = 0;
-    this.viewports = viewports.map(_ref6 => {
+    this.viewports = viewports.map(_ref5 => {
       let {
         from,
         to
-      } = _ref6;
-      let top = heightMap.lineAt(from, QueryType.ByPos, doc, 0, 0).top;
-      let bottom = heightMap.lineAt(to, QueryType.ByPos, doc, 0, 0).bottom;
+      } = _ref5;
+      let top = heightMap.lineAt(from, QueryType.ByPos, oracle, 0, 0).top;
+      let bottom = heightMap.lineAt(to, QueryType.ByPos, oracle, 0, 0).bottom;
       vpHeight += bottom - top;
       return {
         from,
@@ -17536,6 +17692,9 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
     padding: "0 2px 0 6px"
   },
   ".cm-layer": {
+    position: "absolute",
+    left: 0,
+    top: 0,
     contain: "size style",
     "& > *": {
       position: "absolute"
@@ -17547,16 +17706,16 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
   "&dark .cm-selectionBackground": {
     background: "#222"
   },
-  "&light.cm-focused .cm-selectionBackground": {
+  "&light.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": {
     background: "#d7d4f0"
   },
-  "&dark.cm-focused .cm-selectionBackground": {
+  "&dark.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": {
     background: "#233"
   },
   ".cm-cursorLayer": {
     pointerEvents: "none"
   },
-  "&.cm-focused .cm-cursorLayer": {
+  "&.cm-focused > .cm-scroller > .cm-cursorLayer": {
     animation: "steps(1) cm-blink 1.2s infinite"
   },
   "@keyframes cm-blink": {
@@ -17587,7 +17746,7 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
   ".cm-dropCursor": {
     position: "absolute"
   },
-  "&.cm-focused .cm-cursor": {
+  "&.cm-focused > .cm-scroller > .cm-cursorLayer .cm-cursor": {
     display: "block"
   },
   "&light .cm-activeLine": {
@@ -17796,7 +17955,7 @@ function applyDOMChange(view, domChange) {
       to: sel.to,
       insert: view.state.doc.slice(sel.from, change.from).append(change.insert).append(view.state.doc.slice(change.to, sel.to))
     };
-  } else if ((browser.mac || browser.android) && change && change.from == change.to && change.from == sel.head - 1 && /^\. ?$/.test(change.insert.toString())) {
+  } else if ((browser.mac || browser.android) && change && change.from == change.to && change.from == sel.head - 1 && /^\. ?$/.test(change.insert.toString()) && view.contentDOM.getAttribute("autocorrect") == "off") {
     if (newSel && change.insert.length == 2) newSel = state_dist/* EditorSelection.single */.jT.single(newSel.main.anchor - 1, newSel.main.head - 1);
     change = {
       from: sel.from,
@@ -17825,7 +17984,7 @@ function applyDOMChange(view, domChange) {
       tr = startState.replaceSelection(view.state.toText(before + change.insert.sliceString(0, undefined, view.state.lineBreak) + after));
     } else {
       let changes = startState.changes(change);
-      let mainSel = newSel && !startState.selection.main.eq(newSel.main) && newSel.main.to <= changes.newLength ? newSel.main : undefined;
+      let mainSel = newSel && newSel.main.to <= changes.newLength ? newSel.main : undefined;
       if (startState.selection.ranges.length > 1 && view.inputState.composing >= 0 && change.to <= sel.to && change.to >= sel.to - 10) {
         let replaced = view.state.sliceDoc(change.from, change.to);
         let compositionRange = compositionSurroundingNode(view) || view.state.doc.lineAt(sel.head);
@@ -17860,7 +18019,8 @@ function applyDOMChange(view, domChange) {
       }
     }
     let userEvent = "input.type";
-    if (view.composing) {
+    if (view.composing || view.inputState.compositionPendingChange && view.inputState.compositionEndedAt > Date.now() - 50) {
+      view.inputState.compositionPendingChange = false;
       userEvent += ".compose";
       if (view.inputState.compositionFirstChange) {
         userEvent += ".start";
@@ -18177,12 +18337,15 @@ class DOMObserver {
     }
     this.flush();
   }
-  processRecords() {
-    let records = this.queue;
+  pendingRecords() {
     for (var _iterator37 = _createForOfIteratorHelperLoose(this.observer.takeRecords()), _step37; !(_step37 = _iterator37()).done;) {
       let mut = _step37.value;
-      records.push(mut);
+      this.queue.push(mut);
     }
+    return this.queue;
+  }
+  processRecords() {
+    let records = this.pendingRecords();
     if (records.length) this.queue = [];
     let from = -1,
       to = -1,
@@ -18413,6 +18576,17 @@ class EditorView {
       this.viewState.state = state;
       return;
     }
+    let focus = this.hasFocus,
+      focusFlag = 0,
+      dispatchFocus = null;
+    if (transactions.some(tr => tr.annotation(isFocusChange))) {
+      this.inputState.notifiedFocused = focus;
+      focusFlag = 1;
+    } else if (focus != this.inputState.notifiedFocused) {
+      this.inputState.notifiedFocused = focus;
+      dispatchFocus = focusChangeTransaction(state, focus);
+      if (!dispatchFocus) focusFlag = 1;
+    }
     let pendingKey = this.observer.delayedAndroidKey,
       domChange = null;
     if (pendingKey) {
@@ -18424,6 +18598,7 @@ class EditorView {
     }
     if (state.facet(state_dist/* EditorState.phrases */.yy.phrases) != this.state.facet(state_dist/* EditorState.phrases */.yy.phrases)) return this.setState(state);
     update = ViewUpdate.create(this, state, transactions);
+    update.flags |= focusFlag;
     let scrollTarget = this.viewState.scrollTarget;
     try {
       this.updateState = 2;
@@ -18463,9 +18638,12 @@ class EditorView {
         listener(update);
       }
     }
-    if (domChange) {
-      if (!applyDOMChange(this, domChange) && pendingKey.force) dispatchKey(this.contentDOM, pendingKey.key, pendingKey.keyCode);
-    }
+    if (dispatchFocus || domChange) Promise.resolve().then(() => {
+      if (dispatchFocus && this.state == dispatchFocus.startState) this.dispatch(dispatchFocus);
+      if (domChange) {
+        if (!applyDOMChange(this, domChange) && pendingKey.force) dispatchKey(this.contentDOM, pendingKey.key, pendingKey.keyCode);
+      }
+    });
   }
   setState(newState) {
     if (this.updateState != 0) throw new Error("Calls to EditorView.setState are not allowed while an update is in progress");
@@ -18534,7 +18712,7 @@ class EditorView {
       flush = true;
     }
     if (this.destroyed) return;
-    if (this.measureScheduled > -1) cancelAnimationFrame(this.measureScheduled);
+    if (this.measureScheduled > -1) this.win.cancelAnimationFrame(this.measureScheduled);
     this.measureScheduled = 0;
     if (flush) this.observer.forceFlush();
     let updated = null;
@@ -18806,7 +18984,7 @@ class EditorView {
     this.inputState.destroy();
     this.dom.remove();
     this.observer.destroy();
-    if (this.measureScheduled > -1) cancelAnimationFrame(this.measureScheduled);
+    if (this.measureScheduled > -1) this.win.cancelAnimationFrame(this.measureScheduled);
     this.destroyed = true;
   }
   static scrollIntoView(pos, options) {
@@ -18838,6 +19016,7 @@ class EditorView {
 }
 EditorView.styleModule = styleModule;
 EditorView.inputHandler = inputHandler;
+EditorView.focusChangeEffect = focusChangeEffect;
 EditorView.perLineTextDirection = perLineTextDirection;
 EditorView.exceptionSink = exceptionSink;
 EditorView.updateListener = updateListener;
@@ -19104,9 +19283,10 @@ function rectanglesForRange(view, className, range) {
   let content = view.contentDOM,
     contentRect = content.getBoundingClientRect(),
     base = getBase(view);
-  let lineStyle = window.getComputedStyle(content.firstChild);
-  let leftSide = contentRect.left + parseInt(lineStyle.paddingLeft) + Math.min(0, parseInt(lineStyle.textIndent));
-  let rightSide = contentRect.right - parseInt(lineStyle.paddingRight);
+  let lineElt = content.querySelector(".cm-line"),
+    lineStyle = lineElt && window.getComputedStyle(lineElt);
+  let leftSide = contentRect.left + (lineStyle ? parseInt(lineStyle.paddingLeft) + Math.min(0, parseInt(lineStyle.textIndent)) : 0);
+  let rightSide = contentRect.right - (lineStyle ? parseInt(lineStyle.paddingRight) : 0);
   let startBlock = blockAt(view, from),
     endBlock = blockAt(view, to);
   let visualStart = startBlock.type == BlockType.Text ? startBlock : null;
@@ -19127,12 +19307,12 @@ function rectanglesForRange(view, className, range) {
   function piece(left, top, right, bottom) {
     return new RectangleMarker(className, left - base.left, top - base.top - 0.01, right - left, bottom - top + 0.01);
   }
-  function pieces(_ref7) {
+  function pieces(_ref6) {
     let {
       top,
       bottom,
       horizontal
-    } = _ref7;
+    } = _ref6;
     let pieces = [];
     for (let i = 0; i < horizontal.length; i += 2) pieces.push(piece(horizontal[i], top, horizontal[i + 1], bottom));
     return pieces;
@@ -20077,10 +20257,10 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
         let tv = this.manager.tooltipViews[i];
         return tv.getCoords ? tv.getCoords(t.pos) : this.view.coordsAtPos(t.pos);
       }),
-      size: this.manager.tooltipViews.map(_ref8 => {
+      size: this.manager.tooltipViews.map(_ref7 => {
         let {
           dom
-        } = _ref8;
+        } = _ref7;
         return dom.getBoundingClientRect();
       }),
       space: this.view.state.facet(tooltipConfig).tooltipSpace(this.view)
@@ -20277,6 +20457,13 @@ class HoverTooltipHost {
   update(update) {
     this.manager.update(update);
   }
+  destroy() {
+    var _a;
+    for (var _iterator79 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step79; !(_step79 = _iterator79()).done;) {
+      let t = _step79.value;
+      (_a = t.destroy) === null || _a === void 0 ? void 0 : _a.call(t);
+    }
+  }
 }
 const showHoverTooltipHost = showTooltip.compute([showHoverTooltip], state => {
   let tooltips = state.facet(showHoverTooltip).filter(t => t);
@@ -20429,8 +20616,8 @@ function hoverTooltip(source, options) {
         if (value.end != null) copy.end = tr.changes.mapPos(value.end);
         value = copy;
       }
-      for (var _iterator79 = _createForOfIteratorHelperLoose(tr.effects), _step79; !(_step79 = _iterator79()).done;) {
-        let effect = _step79.value;
+      for (var _iterator80 = _createForOfIteratorHelperLoose(tr.effects), _step80; !(_step80 = _iterator80()).done;) {
+        let effect = _step80.value;
         if (effect.is(setHover)) value = effect.value;
         if (effect.is(closeHoverTooltipEffect)) value = null;
       }
@@ -20458,8 +20645,8 @@ function repositionTooltips(view) {
 const panelConfig = state_dist/* Facet.define */.r$.define({
   combine(configs) {
     let topContainer, bottomContainer;
-    for (var _iterator80 = _createForOfIteratorHelperLoose(configs), _step80; !(_step80 = _iterator80()).done;) {
-      let c = _step80.value;
+    for (var _iterator81 = _createForOfIteratorHelperLoose(configs), _step81; !(_step81 = _iterator81()).done;) {
+      let c = _step81.value;
       topContainer = topContainer || c.topContainer;
       bottomContainer = bottomContainer || c.bottomContainer;
     }
@@ -20487,8 +20674,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
     this.bottom = new PanelGroup(view, false, conf.bottomContainer);
     this.top.sync(this.panels.filter(p => p.top));
     this.bottom.sync(this.panels.filter(p => !p.top));
-    for (var _iterator81 = _createForOfIteratorHelperLoose(this.panels), _step81; !(_step81 = _iterator81()).done;) {
-      let p = _step81.value;
+    for (var _iterator82 = _createForOfIteratorHelperLoose(this.panels), _step82; !(_step82 = _iterator82()).done;) {
+      let p = _step82.value;
       p.dom.classList.add("cm-panel");
       if (p.mount) p.mount();
     }
@@ -20512,8 +20699,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         top = [],
         bottom = [],
         mount = [];
-      for (var _iterator82 = _createForOfIteratorHelperLoose(specs), _step82; !(_step82 = _iterator82()).done;) {
-        let spec = _step82.value;
+      for (var _iterator83 = _createForOfIteratorHelperLoose(specs), _step83; !(_step83 = _iterator83()).done;) {
+        let spec = _step83.value;
         let known = this.specs.indexOf(spec),
           panel;
         if (known < 0) {
@@ -20536,8 +20723,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         if (p.mount) p.mount();
       }
     } else {
-      for (var _iterator83 = _createForOfIteratorHelperLoose(this.panels), _step83; !(_step83 = _iterator83()).done;) {
-        let p = _step83.value;
+      for (var _iterator84 = _createForOfIteratorHelperLoose(this.panels), _step84; !(_step84 = _iterator84()).done;) {
+        let p = _step84.value;
         if (p.update) p.update(update);
       }
     }
@@ -20566,8 +20753,8 @@ class PanelGroup {
     this.syncClasses();
   }
   sync(panels) {
-    for (var _iterator84 = _createForOfIteratorHelperLoose(this.panels), _step84; !(_step84 = _iterator84()).done;) {
-      let p = _step84.value;
+    for (var _iterator85 = _createForOfIteratorHelperLoose(this.panels), _step85; !(_step85 = _iterator85()).done;) {
+      let p = _step85.value;
       if (p.destroy && panels.indexOf(p) < 0) p.destroy();
     }
     this.panels = panels;
@@ -20589,8 +20776,8 @@ class PanelGroup {
       parent.insertBefore(this.dom, this.top ? parent.firstChild : null);
     }
     let curDOM = this.dom.firstChild;
-    for (var _iterator85 = _createForOfIteratorHelperLoose(this.panels), _step85; !(_step85 = _iterator85()).done;) {
-      let panel = _step85.value;
+    for (var _iterator86 = _createForOfIteratorHelperLoose(this.panels), _step86; !(_step86 = _iterator86()).done;) {
+      let panel = _step86.value;
       if (panel.dom.parentNode == this.dom) {
         while (curDOM != panel.dom) curDOM = rm(curDOM);
         curDOM = curDOM.nextSibling;
@@ -20605,12 +20792,12 @@ class PanelGroup {
   }
   syncClasses() {
     if (!this.container || this.classes == this.view.themeClasses) return;
-    for (var _iterator86 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step86; !(_step86 = _iterator86()).done;) {
-      let cls = _step86.value;
+    for (var _iterator87 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step87; !(_step87 = _iterator87()).done;) {
+      let cls = _step87.value;
       if (cls) this.container.classList.remove(cls);
     }
-    for (var _iterator87 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step87; !(_step87 = _iterator87()).done;) {
-      let cls = _step87.value;
+    for (var _iterator88 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step88; !(_step88 = _iterator88()).done;) {
+      let cls = _step88.value;
       if (cls) this.container.classList.add(cls);
     }
   }
@@ -20670,8 +20857,8 @@ const gutterView = ViewPlugin.fromClass(class {
     this.dom.setAttribute("aria-hidden", "true");
     this.dom.style.minHeight = this.view.contentHeight + "px";
     this.gutters = view.state.facet(activeGutters).map(conf => new SingleGutterView(view, conf));
-    for (var _iterator88 = _createForOfIteratorHelperLoose(this.gutters), _step88; !(_step88 = _iterator88()).done;) {
-      let gutter = _step88.value;
+    for (var _iterator89 = _createForOfIteratorHelperLoose(this.gutters), _step89; !(_step89 = _iterator89()).done;) {
+      let gutter = _step89.value;
       this.dom.appendChild(gutter.dom);
     }
     this.fixed = !view.state.facet(unfixGutters);
@@ -20701,12 +20888,12 @@ const gutterView = ViewPlugin.fromClass(class {
     let lineClasses = state_dist/* RangeSet.iter */.Xs.iter(this.view.state.facet(gutterLineClass), this.view.viewport.from);
     let classSet = [];
     let contexts = this.gutters.map(gutter => new UpdateContext(gutter, this.view.viewport, -this.view.documentPadding.top));
-    for (var _iterator89 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step89; !(_step89 = _iterator89()).done;) {
-      let line = _step89.value;
+    for (var _iterator90 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step90; !(_step90 = _iterator90()).done;) {
+      let line = _step90.value;
       let text;
       if (Array.isArray(line.type)) {
-        for (var _iterator91 = _createForOfIteratorHelperLoose(line.type), _step91; !(_step91 = _iterator91()).done;) {
-          let b = _step91.value;
+        for (var _iterator92 = _createForOfIteratorHelperLoose(line.type), _step92; !(_step92 = _iterator92()).done;) {
+          let b = _step92.value;
           if (b.type == BlockType.Text) {
             text = b;
             break;
@@ -20718,13 +20905,13 @@ const gutterView = ViewPlugin.fromClass(class {
       if (!text) continue;
       if (classSet.length) classSet = [];
       advanceCursor(lineClasses, classSet, line.from);
-      for (var _iterator92 = _createForOfIteratorHelperLoose(contexts), _step92; !(_step92 = _iterator92()).done;) {
-        let cx = _step92.value;
+      for (var _iterator93 = _createForOfIteratorHelperLoose(contexts), _step93; !(_step93 = _iterator93()).done;) {
+        let cx = _step93.value;
         cx.line(this.view, text, classSet);
       }
     }
-    for (var _iterator90 = _createForOfIteratorHelperLoose(contexts), _step90; !(_step90 = _iterator90()).done;) {
-      let cx = _step90.value;
+    for (var _iterator91 = _createForOfIteratorHelperLoose(contexts), _step91; !(_step91 = _iterator91()).done;) {
+      let cx = _step91.value;
       cx.finish();
     }
     if (detach) this.view.scrollDOM.insertBefore(this.dom, after);
@@ -20734,15 +20921,15 @@ const gutterView = ViewPlugin.fromClass(class {
       cur = update.state.facet(activeGutters);
     let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet.eq */.Xs.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
     if (prev == cur) {
-      for (var _iterator93 = _createForOfIteratorHelperLoose(this.gutters), _step93; !(_step93 = _iterator93()).done;) {
-        let gutter = _step93.value;
+      for (var _iterator94 = _createForOfIteratorHelperLoose(this.gutters), _step94; !(_step94 = _iterator94()).done;) {
+        let gutter = _step94.value;
         if (gutter.update(update)) change = true;
       }
     } else {
       change = true;
       let gutters = [];
-      for (var _iterator94 = _createForOfIteratorHelperLoose(cur), _step94; !(_step94 = _iterator94()).done;) {
-        let conf = _step94.value;
+      for (var _iterator95 = _createForOfIteratorHelperLoose(cur), _step95; !(_step95 = _iterator95()).done;) {
+        let conf = _step95.value;
         let known = prev.indexOf(conf);
         if (known < 0) {
           gutters.push(new SingleGutterView(this.view, conf));
@@ -20751,8 +20938,8 @@ const gutterView = ViewPlugin.fromClass(class {
           gutters.push(this.gutters[known]);
         }
       }
-      for (var _iterator95 = _createForOfIteratorHelperLoose(this.gutters), _step95; !(_step95 = _iterator95()).done;) {
-        let g = _step95.value;
+      for (var _iterator96 = _createForOfIteratorHelperLoose(this.gutters), _step96; !(_step96 = _iterator96()).done;) {
+        let g = _step96.value;
         g.dom.remove();
         if (gutters.indexOf(g) < 0) g.destroy();
       }
@@ -20765,8 +20952,8 @@ const gutterView = ViewPlugin.fromClass(class {
     return change;
   }
   destroy() {
-    for (var _iterator96 = _createForOfIteratorHelperLoose(this.gutters), _step96; !(_step96 = _iterator96()).done;) {
-      let view = _step96.value;
+    for (var _iterator97 = _createForOfIteratorHelperLoose(this.gutters), _step97; !(_step97 = _iterator97()).done;) {
+      let view = _step97.value;
       view.destroy();
     }
     this.dom.remove();
@@ -20867,8 +21054,8 @@ class SingleGutterView {
     return !state_dist/* RangeSet.eq */.Xs.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
   }
   destroy() {
-    for (var _iterator97 = _createForOfIteratorHelperLoose(this.elements), _step97; !(_step97 = _iterator97()).done;) {
-      let elt = _step97.value;
+    for (var _iterator98 = _createForOfIteratorHelperLoose(this.elements), _step98; !(_step98 = _iterator98()).done;) {
+      let elt = _step98.value;
       elt.destroy();
     }
   }
@@ -21006,8 +21193,8 @@ const activeLineGutterMarker = new class extends GutterMarker {
 const activeLineGutterHighlighter = gutterLineClass.compute(["selection"], state => {
   let marks = [],
     last = -1;
-  for (var _iterator98 = _createForOfIteratorHelperLoose(state.selection.ranges), _step98; !(_step98 = _iterator98()).done;) {
-    let range = _step98.value;
+  for (var _iterator99 = _createForOfIteratorHelperLoose(state.selection.ranges), _step99; !(_step99 = _iterator99()).done;) {
+    let range = _step99.value;
     let linePos = state.doc.lineAt(range.head).from;
     if (linePos > last) {
       last = linePos;
@@ -23851,19 +24038,19 @@ class LocalTokenGroup {
   }
   token(input, stack) {
     let start = input.pos,
-      cur;
+      skipped = 0;
     for (;;) {
-      cur = input.pos;
       readToken(this.data, input, stack, 0, this.data, this.precTable);
       if (input.token.value > -1) break;
       if (this.elseToken == null) return;
       if (input.next < 0) break;
       input.advance();
-      input.reset(cur + 1, input.token);
+      input.reset(input.pos, input.token);
+      skipped++;
     }
-    if (cur > start) {
+    if (skipped) {
       input.reset(start, input.token);
-      input.acceptToken(this.elseToken, cur - start);
+      input.acceptToken(this.elseToken, skipped);
     }
   }
 }
@@ -24661,19 +24848,22 @@ class StyleModule {
     (root[SET] || new StyleSet(root)).mount(Array.isArray(modules) ? modules : [modules]);
   }
 }
-let adoptedSet = null;
+let adoptedSet = new Map();
 class StyleSet {
   constructor(root) {
-    if (!root.head && root.adoptedStyleSheets && typeof CSSStyleSheet != "undefined") {
-      if (adoptedSet) {
-        root.adoptedStyleSheets = [adoptedSet.sheet].concat(root.adoptedStyleSheets);
-        return root[SET] = adoptedSet;
+    let doc = root.ownerDocument || root,
+      win = doc.defaultView;
+    if (!root.head && root.adoptedStyleSheets && win.CSSStyleSheet) {
+      let adopted = adoptedSet.get(doc);
+      if (adopted) {
+        root.adoptedStyleSheets = [adopted.sheet, ...root.adoptedStyleSheets];
+        return root[SET] = adopted;
       }
-      this.sheet = new CSSStyleSheet();
-      root.adoptedStyleSheets = [this.sheet].concat(root.adoptedStyleSheets);
-      adoptedSet = this;
+      this.sheet = new win.CSSStyleSheet();
+      root.adoptedStyleSheets = [this.sheet, ...root.adoptedStyleSheets];
+      adoptedSet.set(doc, this);
     } else {
-      this.styleTag = (root.ownerDocument || root).createElement("style");
+      this.styleTag = doc.createElement("style");
       let target = root.head || root;
       target.insertBefore(this.styleTag, target.firstChild);
     }
@@ -24859,7 +25049,7 @@ class StyleSet {
 /******/ 				script.parentNode && script.parentNode.removeChild(script);
 /******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
 /******/ 				if(prev) return prev(event);
-/******/ 			};
+/******/ 			}
 /******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
 /******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
 /******/ 			script.onload = onScriptComplete.bind(null, script.onload);
@@ -24885,7 +25075,7 @@ class StyleSet {
 /******/ 		var document = __webpack_require__.g.document;
 /******/ 		if (!scriptUrl && document) {
 /******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
+/******/ 				scriptUrl = document.currentScript.src;
 /******/ 			if (!scriptUrl) {
 /******/ 				var scripts = document.getElementsByTagName("script");
 /******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
@@ -25141,52 +25331,43 @@ var jspath = __webpack_require__(3400);
 var jspath_default = /*#__PURE__*/__webpack_require__.n(jspath);
 ;// CONCATENATED MODULE: ./node_modules/ami-http-client/src/client.js
 
-function _classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
-var id = 0;
-function _classPrivateFieldLooseKey(name) { return "__private_" + id++ + "_" + name; }
 
-var _endpoint = _classPrivateFieldLooseKey("endpoint");
-var _converter = _classPrivateFieldLooseKey("converter");
-var _paramRegExp = _classPrivateFieldLooseKey("paramRegExp");
-var _errorMessage = _classPrivateFieldLooseKey("errorMessage");
-var _response = _classPrivateFieldLooseKey("response");
-var _guest = _classPrivateFieldLooseKey("guest");
-var _getUserInfo = _classPrivateFieldLooseKey("getUserInfo");
 class AMIHTTPClient {
+  version = '{{VERSION}}';
+  #endpoint = '';
+  #converter = 'AMIXmlToJson.xsl';
+  #paramRegExp = new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g');
+  #errorMessage = 'resource temporarily unreachable';
   constructor(endpoint) {
-    Object.defineProperty(this, _getUserInfo, {
-      value: _getUserInfo2
-    });
-    this.version = '{{VERSION}}';
-    Object.defineProperty(this, _endpoint, {
-      writable: true,
-      value: ''
-    });
-    Object.defineProperty(this, _converter, {
-      writable: true,
-      value: 'AMIXmlToJson.xsl'
-    });
-    Object.defineProperty(this, _paramRegExp, {
-      writable: true,
-      value: new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g')
-    });
-    Object.defineProperty(this, _errorMessage, {
-      writable: true,
-      value: 'resource temporarily unreachable'
-    });
-    _classPrivateFieldLooseBase(this, _endpoint)[_endpoint] = endpoint;
+    this.#endpoint = endpoint;
   }
   getEndpoint() {
-    return _classPrivateFieldLooseBase(this, _endpoint)[_endpoint];
+    return this.#endpoint;
+  }
+  static #response(data, message, urlWithParameters, jsonError) {
+    if (jsonError) {
+      data = {
+        'AMIMessage': [{
+          'error': [{
+            '$': data
+          }]
+        }]
+      };
+    }
+    return {
+      data: data,
+      message: message,
+      urlWithParameters: urlWithParameters
+    };
   }
   execute(command, options) {
     options = options || {};
-    const endpoint = (options.endpoint || _classPrivateFieldLooseBase(this, _endpoint)[_endpoint]).trim();
-    const converter = (options.converter || _classPrivateFieldLooseBase(this, _converter)[_converter]).trim();
+    const endpoint = (options.endpoint || this.#endpoint).trim();
+    const converter = (options.converter || this.#converter).trim();
     const extras = options.extras || {};
     const params = options.params || [];
     const timeout = options.timeout || 120000;
-    command = (command || '').trim().replace(_classPrivateFieldLooseBase(this, _paramRegExp)[_paramRegExp], (x, y) => {
+    command = (command || '').trim().replace(this.#paramRegExp, (x, y) => {
       const rawValue = params.shift();
       return Object.prototype.toString.call(rawValue) === '[object String]' ? `-${y}=${JSON.stringify(rawValue)}` : `-${y}="${JSON.stringify(rawValue)}"`;
     });
@@ -25205,7 +25386,7 @@ class AMIHTTPClient {
       if (converter === 'AMIXmlToJson.xsl') {
         let inTime = true;
         const timeoutId = setTimeout(() => {
-          reject(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response]('timeout', 'timeout', urlWithParameters, true));
+          reject(AMIHTTPClient.#response('timeout', 'timeout', urlWithParameters, true));
           inTime = false;
         }, timeout);
         fetch(url, {
@@ -25226,23 +25407,23 @@ class AMIHTTPClient {
               const info = jspath_default().apply('.AMIMessage.info.$', data);
               const error = jspath_default().apply('.AMIMessage.error.$', data);
               if (error.length === 0) {
-                resolve(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response](data, info.join('. '), urlWithParameters, false));
+                resolve(AMIHTTPClient.#response(data, info.join('. '), urlWithParameters, false));
               } else {
-                reject(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response](data, error.join('. '), urlWithParameters, true));
+                reject(AMIHTTPClient.#response(data, error.join('. '), urlWithParameters, true));
               }
             }).catch(() => {
-              reject(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response](_classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], _classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], urlWithParameters, true));
+              reject(AMIHTTPClient.#response(this.#errorMessage, this.#errorMessage, urlWithParameters, true));
             });
           }
         }).catch(() => {
           if (inTime) {
-            reject(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response](_classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], _classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], urlWithParameters, true));
+            reject(AMIHTTPClient.#response(this.#errorMessage, this.#errorMessage, urlWithParameters, true));
           }
         });
       } else {
         let inTime = true;
         const timeoutId = setTimeout(() => {
-          reject(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response]('timeout', 'timeout', urlWithParameters, false));
+          reject(AMIHTTPClient.#response('timeout', 'timeout', urlWithParameters, false));
           inTime = false;
         }, timeout);
         fetch(url, {
@@ -25260,17 +25441,104 @@ class AMIHTTPClient {
         }).then(response => {
           if (inTime) {
             response.text().then(data => {
-              resolve(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response](data, data, urlWithParameters, false));
+              resolve(AMIHTTPClient.#response(data, data, urlWithParameters, false));
             }).catch(() => {
-              reject(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response](_classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], _classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], urlWithParameters, false));
+              reject(AMIHTTPClient.#response(this.#errorMessage, this.#errorMessage, urlWithParameters, false));
             });
           }
         }).catch(() => {
           if (inTime) {
-            reject(_classPrivateFieldLooseBase(AMIHTTPClient, _response)[_response](_classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], _classPrivateFieldLooseBase(this, _errorMessage)[_errorMessage], urlWithParameters, false));
+            reject(AMIHTTPClient.#response(this.#errorMessage, this.#errorMessage, urlWithParameters, false));
           }
         });
       }
+    });
+  }
+  static #guest() {
+    return {
+      AMIUser: 'guest',
+      guestUser: 'guest',
+      clientDNInAMI: '',
+      issuerDNInAMI: '',
+      clientDNInSession: '',
+      issuerDNInSession: '',
+      notBefore: '',
+      notAfter: '',
+      mqttToken: '',
+      firstName: 'guest',
+      lastName: 'guest',
+      email: 'N/A',
+      country: 'N/A',
+      valid: 'false'
+    };
+  }
+  #getUserInfo(promise) {
+    return new Promise((resolve, reject) => {
+      promise.then(response => {
+        const userInfo = {};
+        const roleInfo = {};
+        const bookmarkInfo = {};
+        const dashboardInfo = {};
+        const awfInfo = {};
+        jspath_default().apply('..rowset{.@type==="user"}.row.field', response.data).forEach(item => {
+          userInfo[item['@name']] = item['$'];
+        });
+        jspath_default().apply('..rowset{.@type==="awf"}.row.field', response.data).forEach(item => {
+          awfInfo[item['@name']] = item['$'];
+        });
+        jspath_default().apply('..rowset{.@type==="role"}.row', response.data).forEach(row => {
+          let name = '';
+          const role = {};
+          row.field.forEach(field => {
+            role[field['@name']] = field['$'];
+            if (field['@name'] === 'name') {
+              name = field['$'];
+            }
+          });
+          roleInfo[name] = role;
+        });
+        jspath_default().apply('..rowset{.@type==="bookmark"}.row', response.data).forEach(row => {
+          let hash = '';
+          const bookmark = {};
+          row.field.forEach(field => {
+            bookmark[field['@name']] = field['$'];
+            if (field['@name'] === 'hash') {
+              hash = field['$'];
+            }
+          });
+          bookmarkInfo[hash] = bookmark;
+        });
+        jspath_default().apply('..rowset{.@type==="dashboard"}.row', response.data).forEach(row => {
+          let hash = '';
+          const dashboard = {};
+          row.field.forEach(field => {
+            dashboard[field['@name']] = field['$'];
+            if (field['@name'] === 'hash') {
+              hash = field['$'];
+            }
+          });
+          dashboardInfo[hash] = dashboard;
+        });
+        resolve({
+          data: response.data,
+          message: response.message,
+          userInfo: userInfo,
+          roleInfo: roleInfo,
+          bookmarkInfo: bookmarkInfo,
+          dashboardInfo: dashboardInfo,
+          awfInfo: awfInfo
+        });
+      }).catch(response => {
+        reject({
+          data: response.data,
+          message: response.message,
+          userInfo: AMIHTTPClient.#guest(),
+          roleInfo: {},
+          bookmarkInfo: {},
+          dashboardInfo: {},
+          awfInfo: {}
+        });
+      });
     });
   }
   signInByCode(code, options) {
@@ -25279,7 +25547,7 @@ class AMIHTTPClient {
       'NoCert': null
     };
     options['params'] = [code];
-    return _classPrivateFieldLooseBase(this, _getUserInfo)[_getUserInfo](this.execute('GetSessionInfo -AMIUser="__oidc_code__" -AMIPass=?', options));
+    return this.#getUserInfo(this.execute('GetSessionInfo -AMIUser="__oidc_code__" -AMIPass=?', options));
   }
   signInByToken(token, options) {
     options = options || {};
@@ -25287,7 +25555,7 @@ class AMIHTTPClient {
       'NoCert': null
     };
     options['params'] = [token];
-    return _classPrivateFieldLooseBase(this, _getUserInfo)[_getUserInfo](this.execute('GetSessionInfo -AMIUser="__oidc_token__" -AMIPass=?', options));
+    return this.#getUserInfo(this.execute('GetSessionInfo -AMIUser="__oidc_token__" -AMIPass=?', options));
   }
   signInByPassword(username, password, options) {
     options = options || {};
@@ -25295,13 +25563,13 @@ class AMIHTTPClient {
       'NoCert': null
     };
     options['params'] = [username, password];
-    return _classPrivateFieldLooseBase(this, _getUserInfo)[_getUserInfo](this.execute('GetSessionInfo -AMIUser=? -AMIPass=?', options));
+    return this.#getUserInfo(this.execute('GetSessionInfo -AMIUser=? -AMIPass=?', options));
   }
   signInByCertificate(options) {
     options = options || {};
     options['extras'] = {};
     options['params'] = [];
-    return _classPrivateFieldLooseBase(this, _getUserInfo)[_getUserInfo](this.execute('GetSessionInfo', options));
+    return this.#getUserInfo(this.execute('GetSessionInfo', options));
   }
   signOut(options) {
     options = options || {};
@@ -25309,121 +25577,12 @@ class AMIHTTPClient {
       'NoCert': null
     };
     options['params'] = ['', ''];
-    return _classPrivateFieldLooseBase(this, _getUserInfo)[_getUserInfo](this.execute('GetSessionInfo -AMIUser=? -AMIPass=?', options));
+    return this.#getUserInfo(this.execute('GetSessionInfo -AMIUser=? -AMIPass=?', options));
   }
   jspath(path, json) {
     return jspath_default().apply(path, json);
   }
 }
-function _response2(data, message, urlWithParameters, jsonError) {
-  if (jsonError) {
-    data = {
-      'AMIMessage': [{
-        'error': [{
-          '$': data
-        }]
-      }]
-    };
-  }
-  return {
-    data: data,
-    message: message,
-    urlWithParameters: urlWithParameters
-  };
-}
-function _guest2() {
-  return {
-    AMIUser: 'guest',
-    guestUser: 'guest',
-    clientDNInAMI: '',
-    issuerDNInAMI: '',
-    clientDNInSession: '',
-    issuerDNInSession: '',
-    notBefore: '',
-    notAfter: '',
-    mqttToken: '',
-    firstName: 'guest',
-    lastName: 'guest',
-    email: 'N/A',
-    country: 'N/A',
-    valid: 'false'
-  };
-}
-function _getUserInfo2(promise) {
-  return new Promise((resolve, reject) => {
-    promise.then(response => {
-      const userInfo = {};
-      const roleInfo = {};
-      const bookmarkInfo = {};
-      const dashboardInfo = {};
-      const awfInfo = {};
-      jspath_default().apply('..rowset{.@type==="user"}.row.field', response.data).forEach(item => {
-        userInfo[item['@name']] = item['$'];
-      });
-      jspath_default().apply('..rowset{.@type==="awf"}.row.field', response.data).forEach(item => {
-        awfInfo[item['@name']] = item['$'];
-      });
-      jspath_default().apply('..rowset{.@type==="role"}.row', response.data).forEach(row => {
-        let name = '';
-        const role = {};
-        row.field.forEach(field => {
-          role[field['@name']] = field['$'];
-          if (field['@name'] === 'name') {
-            name = field['$'];
-          }
-        });
-        roleInfo[name] = role;
-      });
-      jspath_default().apply('..rowset{.@type==="bookmark"}.row', response.data).forEach(row => {
-        let hash = '';
-        const bookmark = {};
-        row.field.forEach(field => {
-          bookmark[field['@name']] = field['$'];
-          if (field['@name'] === 'hash') {
-            hash = field['$'];
-          }
-        });
-        bookmarkInfo[hash] = bookmark;
-      });
-      jspath_default().apply('..rowset{.@type==="dashboard"}.row', response.data).forEach(row => {
-        let hash = '';
-        const dashboard = {};
-        row.field.forEach(field => {
-          dashboard[field['@name']] = field['$'];
-          if (field['@name'] === 'hash') {
-            hash = field['$'];
-          }
-        });
-        dashboardInfo[hash] = dashboard;
-      });
-      resolve({
-        data: response.data,
-        message: response.message,
-        userInfo: userInfo,
-        roleInfo: roleInfo,
-        bookmarkInfo: bookmarkInfo,
-        dashboardInfo: dashboardInfo,
-        awfInfo: awfInfo
-      });
-    }).catch(response => {
-      reject({
-        data: response.data,
-        message: response.message,
-        userInfo: _classPrivateFieldLooseBase(AMIHTTPClient, _guest)[_guest](),
-        roleInfo: {},
-        bookmarkInfo: {},
-        dashboardInfo: {},
-        awfInfo: {}
-      });
-    });
-  });
-}
-Object.defineProperty(AMIHTTPClient, _guest, {
-  value: _guest2
-});
-Object.defineProperty(AMIHTTPClient, _response, {
-  value: _response2
-});
 if (typeof window !== 'undefined') window.AMIHTTPClient = AMIHTTPClient;
 /* harmony default export */ const client = (AMIHTTPClient);
 ;// CONCATENATED MODULE: ./node_modules/ami-http-client/index.js
@@ -25434,9 +25593,6 @@ if (typeof window !== 'undefined') window.AMIHTTPClient = AMIHTTPClient;
 var paho_mqtt = __webpack_require__(1772);
 ;// CONCATENATED MODULE: ./node_modules/ami-mqtt-client/src/client.js
 
-function client_classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
-var client_id = 0;
-function client_classPrivateFieldLooseKey(name) { return "__private_" + client_id++ + "_" + name; }
 
 
 function parseJwt(token) {
@@ -25454,57 +25610,16 @@ function parseJwt(token) {
     return {};
   }
 }
-var _L = client_classPrivateFieldLooseKey("L");
-var _cnt = client_classPrivateFieldLooseKey("cnt");
-var _connected = client_classPrivateFieldLooseKey("connected");
-var client_converter = client_classPrivateFieldLooseKey("converter");
-var client_paramRegExp = client_classPrivateFieldLooseKey("paramRegExp");
-var _responseRegExp = client_classPrivateFieldLooseKey("responseRegExp");
-var client_response = client_classPrivateFieldLooseKey("response");
-var _onConnected = client_classPrivateFieldLooseKey("onConnected");
-var _onConnectionLost = client_classPrivateFieldLooseKey("onConnectionLost");
-var _onMessageArrived = client_classPrivateFieldLooseKey("onMessageArrived");
-var _onMessageDelivered = client_classPrivateFieldLooseKey("onMessageDelivered");
 class AMIMQTTClient {
-  constructor(_endpoint, options) {
+  version = '{{VERSION}}';
+  #L = {};
+  #cnt = 0x01;
+  #connected = false;
+  #converter = 'AMIXmlToJson.xsl';
+  #paramRegExp = new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g');
+  #responseRegExp = new RegExp('AMI-RESPONSE<([0-9]+),(true|false)>(.*)', 's');
+  constructor(endpoint, options) {
     var _this = this;
-    Object.defineProperty(this, _onMessageDelivered, {
-      value: _onMessageDelivered2
-    });
-    Object.defineProperty(this, _onMessageArrived, {
-      value: _onMessageArrived2
-    });
-    Object.defineProperty(this, _onConnectionLost, {
-      value: _onConnectionLost2
-    });
-    Object.defineProperty(this, _onConnected, {
-      value: _onConnected2
-    });
-    this.version = '{{VERSION}}';
-    Object.defineProperty(this, _L, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _cnt, {
-      writable: true,
-      value: 0x01
-    });
-    Object.defineProperty(this, _connected, {
-      writable: true,
-      value: false
-    });
-    Object.defineProperty(this, client_converter, {
-      writable: true,
-      value: 'AMIXmlToJson.xsl'
-    });
-    Object.defineProperty(this, client_paramRegExp, {
-      writable: true,
-      value: new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g')
-    });
-    Object.defineProperty(this, _responseRegExp, {
-      writable: true,
-      value: new RegExp('AMI-RESPONSE<([0-9]+),(true|false)>(.*)', 's')
-    });
     options = options || {};
     const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
       const r = 16 * Math.random(),
@@ -25512,39 +25627,39 @@ class AMIMQTTClient {
       return v.toString(16);
     });
     this._uuid = uuid;
-    this._endpoint = _endpoint;
+    this._endpoint = endpoint;
     this._discoveryTopic = options.discoveryTopic;
     this._triggerDiscoveryTopic = options.triggerDiscoveryTopic;
     this._userOnConnected = options.onConnected || null;
     this._userOnConnectionLost = options.onConnectionLost || null;
     this._userOnMessageArrived = options.onMessageArrived || null;
     this._userOnMessageDelivered = options.onMessageDelivered || null;
-    const url = new URL(_endpoint);
+    const url = new URL(endpoint);
     this._useSSL = url.protocol === 'wss:';
     this._client = new paho_mqtt.Client(url.hostname, parseInt(url.port || '443'), url.pathname, uuid);
     this._client.onConnected = function () {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
       }
-      return client_classPrivateFieldLooseBase(_this, _onConnected)[_onConnected].apply(_this, args);
+      return _this.#onConnected.apply(_this, args);
     };
     this._client.onConnectionLost = function () {
       for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
         args[_key2] = arguments[_key2];
       }
-      return client_classPrivateFieldLooseBase(_this, _onConnectionLost)[_onConnectionLost].apply(_this, args);
+      return _this.#onConnectionLost.apply(_this, args);
     };
     this._client.onMessageArrived = function () {
       for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
         args[_key3] = arguments[_key3];
       }
-      return client_classPrivateFieldLooseBase(_this, _onMessageArrived)[_onMessageArrived].apply(_this, args);
+      return _this.#onMessageArrived.apply(_this, args);
     };
     this._client.onMessageDelivered = function () {
       for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
         args[_key4] = arguments[_key4];
       }
-      return client_classPrivateFieldLooseBase(_this, _onMessageDelivered)[_onMessageDelivered].apply(_this, args);
+      return _this.#onMessageDelivered.apply(_this, args);
     };
   }
   setOnConnected(onConnected) {
@@ -25608,7 +25723,7 @@ class AMIMQTTClient {
     });
   }
   isConnected() {
-    return client_classPrivateFieldLooseBase(this, _connected)[_connected];
+    return this.#connected;
   }
   getUUID() {
     return this._uuid;
@@ -25662,7 +25777,7 @@ class AMIMQTTClient {
   }
   send(topic, payload, options) {
     options = options || {};
-    const token = client_classPrivateFieldLooseBase(this, _cnt)[_cnt]++;
+    const token = this.#cnt++;
     const message = new paho_mqtt.Message(payload);
     message.token = token;
     message.topic = topic;
@@ -25671,13 +25786,29 @@ class AMIMQTTClient {
     this._client.send(message);
     return token;
   }
+  static #response(data, message, urlWithParameters, jsonError) {
+    if (jsonError) {
+      data = {
+        'AMIMessage': [{
+          'error': [{
+            '$': data
+          }]
+        }]
+      };
+    }
+    return {
+      data: data,
+      message: message,
+      urlWithParameters: urlWithParameters
+    };
+  }
   execute(command, options) {
     options = options || {};
-    const token = client_classPrivateFieldLooseBase(this, _cnt)[_cnt]++;
+    const token = this.#cnt++;
     const params = options.params || [];
     const serverName = 'serverName' in options ? options.serverName || this._serverName : this._serverName;
-    const converter = 'converter' in options ? options.converter || '' : client_classPrivateFieldLooseBase(this, client_converter)[client_converter];
-    command = (command || '').trim().replace(client_classPrivateFieldLooseBase(this, client_paramRegExp)[client_paramRegExp], (x, y) => {
+    const converter = 'converter' in options ? options.converter || '' : this.#converter;
+    command = (command || '').trim().replace(this.#paramRegExp, (x, y) => {
       const rawValue = params.shift();
       return Object.prototype.toString.call(rawValue) === '[object String]' ? `-${y}=${JSON.stringify(rawValue)}` : `-${y}="${JSON.stringify(rawValue)}"`;
     });
@@ -25693,14 +25824,14 @@ class AMIMQTTClient {
       } catch (errorMessage) {
         reject(`error sending command \`${command}\`: ${errorMessage}`);
       }
-      client_classPrivateFieldLooseBase(this, _L)[_L][token] = {
+      this.#L[token] = {
         resolve: resolve,
         reject: reject
       };
       setTimeout(() => {
-        if (token in client_classPrivateFieldLooseBase(this, _L)[_L]) {
-          reject(client_classPrivateFieldLooseBase(AMIMQTTClient, client_response)[client_response]('timeout', 'timeout', token, converter === 'AMIXmlToJson.xsl'));
-          delete client_classPrivateFieldLooseBase(this, _L)[_L][token];
+        if (token in this.#L) {
+          reject(AMIMQTTClient.#response('timeout', 'timeout', token, converter === 'AMIXmlToJson.xsl'));
+          delete this.#L[token];
         }
       }, options.timeout || 10000);
     });
@@ -25708,102 +25839,83 @@ class AMIMQTTClient {
   jspath(path, json) {
     return jspath_default().apply(path, json);
   }
-}
-function client_response2(data, message, urlWithParameters, jsonError) {
-  if (jsonError) {
-    data = {
-      'AMIMessage': [{
-        'error': [{
-          '$': data
-        }]
-      }]
-    };
-  }
-  return {
-    data: data,
-    message: message,
-    urlWithParameters: urlWithParameters
-  };
-}
-function _onConnected2(reconnect, endpoint) {
-  client_classPrivateFieldLooseBase(this, _connected)[_connected] = true;
-  if (reconnect) {
-    console.log(`onConnected: client \`${this._uuid}\` reconnected to server \`${this._endpoint}\``);
-  } else {
-    console.log(`onConnected: client \`${this._uuid}\` connected to server \`${this._endpoint}\``);
-  }
-  this.subscribe(this._uuid).finally(() => {
-    if (!this._serverName) {
-      if (this._discoveryTopic) {
-        this.subscribe(this._discoveryTopic).then(() => {
-          if (this._triggerDiscoveryTopic) {
-            this.send(this._triggerDiscoveryTopic, '{}');
-          }
-        });
-      }
+  #onConnected(reconnect, endpoint) {
+    this.#connected = true;
+    if (reconnect) {
+      console.log(`onConnected: client \`${this._uuid}\` reconnected to server \`${this._endpoint}\``);
     } else {
-      if (this._userOnConnected) {
-        this._userOnConnected(this, reconnect, endpoint);
-      }
+      console.log(`onConnected: client \`${this._uuid}\` connected to server \`${this._endpoint}\``);
     }
-  });
-}
-function _onConnectionLost2(responseObject) {
-  client_classPrivateFieldLooseBase(this, _connected)[_connected] = false;
-  if (responseObject.errorCode !== 0) {
-    console.log(`onConnectionLost: client \`${this._uuid}\` disconnected, cause: ${responseObject.errorMessage}`);
-    if (this._userOnConnectionLost) {
-      this._userOnConnectionLost(this, responseObject.errorMessage);
-    }
-  }
-}
-function _onMessageArrived2(message) {
-  const m = message.payloadString.match(client_classPrivateFieldLooseBase(this, _responseRegExp)[_responseRegExp]);
-  if (message.topic === this._discoveryTopic && !this._serverName) {
-    const json = JSON.parse(message.payloadString);
-    if (json['server_name']) {
-      this._serverName = json['server_name'];
-      if (this._userOnConnected) {
-        this._userOnConnected(this, false, this._endpoint);
-      }
-    }
-  } else if (message.topic === this._uuid && m) {
-    const token = parseInt(m[1]);
-    const json = m[2];
-    const data = m[3];
-    if (token in client_classPrivateFieldLooseBase(this, _L)[_L]) {
-      if (json === 'true') {
-        try {
-          const json = JSON.parse(data);
-          const info = jspath_default().apply('.AMIMessage.info.$', json);
-          const error = jspath_default().apply('.AMIMessage.error.$', json);
-          if (error.length === 0) {
-            client_classPrivateFieldLooseBase(this, _L)[_L][token].resolve(client_classPrivateFieldLooseBase(AMIMQTTClient, client_response)[client_response](json, info.join('. '), token, false));
-          } else {
-            client_classPrivateFieldLooseBase(this, _L)[_L][token].reject(client_classPrivateFieldLooseBase(AMIMQTTClient, client_response)[client_response](json, error.join('. '), token, true));
-          }
-        } catch (e) {
-          client_classPrivateFieldLooseBase(this, _L)[_L][token].reject(client_classPrivateFieldLooseBase(AMIMQTTClient, client_response)[client_response]('invalid JSON', 'invalid JSON', token, true));
+    this.subscribe(this._uuid).finally(() => {
+      if (!this._serverName) {
+        if (this._discoveryTopic) {
+          this.subscribe(this._discoveryTopic).then(() => {
+            if (this._triggerDiscoveryTopic) {
+              this.send(this._triggerDiscoveryTopic, '{}');
+            }
+          });
         }
       } else {
-        client_classPrivateFieldLooseBase(this, _L)[_L][token].resolve(client_classPrivateFieldLooseBase(AMIMQTTClient, client_response)[client_response](data, '', token, false));
+        if (this._userOnConnected) {
+          this._userOnConnected(this, reconnect, endpoint);
+        }
       }
-      delete client_classPrivateFieldLooseBase(this, _L)[_L][token];
+    });
+  }
+  #onConnectionLost(responseObject) {
+    this.#connected = false;
+    if (responseObject.errorCode !== 0) {
+      console.log(`onConnectionLost: client \`${this._uuid}\` disconnected, cause: ${responseObject.errorMessage}`);
+      if (this._userOnConnectionLost) {
+        this._userOnConnectionLost(this, responseObject.errorMessage);
+      }
     }
-  } else {
-    if (this._userOnMessageArrived) {
-      this._userOnMessageArrived(this, message.topic, message.payloadString, message.qos, message.retained);
+  }
+  #onMessageArrived(message) {
+    const m = message.payloadString.match(this.#responseRegExp);
+    if (message.topic === this._discoveryTopic && !this._serverName) {
+      const json = JSON.parse(message.payloadString);
+      if (json['server_name']) {
+        this._serverName = json['server_name'];
+        if (this._userOnConnected) {
+          this._userOnConnected(this, false, this._endpoint);
+        }
+      }
+    } else if (message.topic === this._uuid && m) {
+      const token = parseInt(m[1]);
+      const json = m[2];
+      const data = m[3];
+      if (token in this.#L) {
+        if (json === 'true') {
+          try {
+            const json = JSON.parse(data);
+            const info = jspath_default().apply('.AMIMessage.info.$', json);
+            const error = jspath_default().apply('.AMIMessage.error.$', json);
+            if (error.length === 0) {
+              this.#L[token].resolve(AMIMQTTClient.#response(json, info.join('. '), token, false));
+            } else {
+              this.#L[token].reject(AMIMQTTClient.#response(json, error.join('. '), token, true));
+            }
+          } catch (e) {
+            this.#L[token].reject(AMIMQTTClient.#response('invalid JSON', 'invalid JSON', token, true));
+          }
+        } else {
+          this.#L[token].resolve(AMIMQTTClient.#response(data, '', token, false));
+        }
+        delete this.#L[token];
+      }
+    } else {
+      if (this._userOnMessageArrived) {
+        this._userOnMessageArrived(this, message.topic, message.payloadString, message.qos, message.retained);
+      }
+    }
+  }
+  #onMessageDelivered(message) {
+    if (this._userOnMessageDelivered) {
+      this._userOnMessageDelivered(this, message.token);
     }
   }
 }
-function _onMessageDelivered2(message) {
-  if (this._userOnMessageDelivered) {
-    this._userOnMessageDelivered(this, message.token);
-  }
-}
-Object.defineProperty(AMIMQTTClient, client_response, {
-  value: client_response2
-});
 if (typeof window !== 'undefined') window.AMIMQTTClient = AMIMQTTClient;
 /* harmony default export */ const src_client = (AMIMQTTClient);
 ;// CONCATENATED MODULE: ./node_modules/ami-mqtt-client/index.js
@@ -25813,40 +25925,26 @@ if (typeof window !== 'undefined') window.AMIMQTTClient = AMIMQTTClient;
 ;// CONCATENATED MODULE: ./src/js/AMICommand.js
 
 
-function AMICommand_classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
-var AMICommand_id = 0;
-function AMICommand_classPrivateFieldLooseKey(name) { return "__private_" + AMICommand_id++ + "_" + name; }
 
 
-var _httpClient = AMICommand_classPrivateFieldLooseKey("httpClient");
-var _mqttClient = AMICommand_classPrivateFieldLooseKey("mqttClient");
-var _toDeferred = AMICommand_classPrivateFieldLooseKey("toDeferred");
 class AMICommand {
-  constructor() {
-    Object.defineProperty(this, _httpClient, {
-      writable: true,
-      value: null
-    });
-    Object.defineProperty(this, _mqttClient, {
-      writable: true,
-      value: null
-    });
-  }
+  #httpClient = null;
+  #mqttClient = null;
   initHttpClient(endpoint) {
-    AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient] = new ami_http_client(endpoint);
+    this.#httpClient = new ami_http_client(endpoint);
   }
   initMqttClient(endpoint) {
-    AMICommand_classPrivateFieldLooseBase(this, _mqttClient)[_mqttClient] = new ami_mqtt_client(endpoint);
+    this.#mqttClient = new ami_mqtt_client(endpoint);
   }
   getHttpEndpoint() {
-    return AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient] ? AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient].getEndpoint() : '';
+    return this.#httpClient ? this.#httpClient.getEndpoint() : '';
   }
   getMqttEndpoint() {
-    return AMICommand_classPrivateFieldLooseBase(this, _mqttClient)[_mqttClient] ? AMICommand_classPrivateFieldLooseBase(this, _mqttClient)[_mqttClient].getEndpoint() : '';
+    return this.#mqttClient ? this.#mqttClient.getEndpoint() : '';
   }
   execute(command, options) {
     const result = $.Deferred();
-    const promise = typeof options === 'object' && 'mqtt' in options ? AMICommand_classPrivateFieldLooseBase(this, _mqttClient)[_mqttClient].execute(command, options) : AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient].execute(command, options);
+    const promise = typeof options === 'object' && 'mqtt' in options ? this.#mqttClient.execute(command, options) : this.#httpClient.execute(command, options);
     promise.then(response => {
       result.resolve(response.data, response.message, response.urlWithParameters);
     }).catch(response => {
@@ -25854,26 +25952,35 @@ class AMICommand {
     });
     return result;
   }
+  static #toDeferred(promise) {
+    const result = $.Deferred();
+    promise.then(response => {
+      result.resolve(response.data, response.message, response.userInfo, response.roleInfo, response.bookmarkInfo, response.dashboardInfo, response.awfInfo);
+    }).catch(response => {
+      result.reject(response.data, response.message, response.userInfo, response.roleInfo, response.bookmarkInfo, response.dashboardInfo, response.awfInfo);
+    });
+    return result;
+  }
   mqttSignInByToken(token, serverName, options) {
-    return AMICommand_classPrivateFieldLooseBase(AMICommand, _toDeferred)[_toDeferred](AMICommand_classPrivateFieldLooseBase(this, _mqttClient)[_mqttClient].signInByToken(token, serverName));
+    return AMICommand.#toDeferred(this.#mqttClient.signInByToken(token, serverName));
   }
   mqttSignOut(options) {
-    return AMICommand_classPrivateFieldLooseBase(AMICommand, _toDeferred)[_toDeferred](AMICommand_classPrivateFieldLooseBase(this, _mqttClient)[_mqttClient].signOut(options));
+    return AMICommand.#toDeferred(this.#mqttClient.signOut(options));
   }
   signInByCode(code, options) {
-    return AMICommand_classPrivateFieldLooseBase(AMICommand, _toDeferred)[_toDeferred](AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient].signInByCode(code, options));
+    return AMICommand.#toDeferred(this.#httpClient.signInByCode(code, options));
   }
   signInByToken(token, options) {
-    return AMICommand_classPrivateFieldLooseBase(AMICommand, _toDeferred)[_toDeferred](AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient].signInByToken(token, options));
+    return AMICommand.#toDeferred(this.#httpClient.signInByToken(token, options));
   }
   signInByPassword(username, password, options) {
-    return AMICommand_classPrivateFieldLooseBase(AMICommand, _toDeferred)[_toDeferred](AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient].signInByPassword(username, password, options));
+    return AMICommand.#toDeferred(this.#httpClient.signInByPassword(username, password, options));
   }
   signInByCertificate(options) {
-    return AMICommand_classPrivateFieldLooseBase(AMICommand, _toDeferred)[_toDeferred](AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient].signInByCertificate(options));
+    return AMICommand.#toDeferred(this.#httpClient.signInByCertificate(options));
   }
   signOut(options) {
-    return AMICommand_classPrivateFieldLooseBase(AMICommand, _toDeferred)[_toDeferred](AMICommand_classPrivateFieldLooseBase(this, _httpClient)[_httpClient].signOut(options)).always(() => {});
+    return AMICommand.#toDeferred(this.#httpClient.signOut(options)).always(() => {});
   }
   attachCertificate(options) {
     options = options || {};
@@ -25904,18 +26011,6 @@ class AMICommand {
     return this.execute('ResetPassword -amiLogin=? -captchaHash=? -captchaText=?', options);
   }
 }
-function _toDeferred2(promise) {
-  const result = $.Deferred();
-  promise.then(response => {
-    result.resolve(response.data, response.message, response.userInfo, response.roleInfo, response.bookmarkInfo, response.dashboardInfo, response.awfInfo);
-  }).catch(response => {
-    result.reject(response.data, response.message, response.userInfo, response.roleInfo, response.bookmarkInfo, response.dashboardInfo, response.awfInfo);
-  });
-  return result;
-}
-Object.defineProperty(AMICommand, _toDeferred, {
-  value: _toDeferred2
-});
 /* harmony default export */ const js_AMICommand = (new AMICommand());
 // EXTERNAL MODULE: ./node_modules/ami-twig/index.js
 var ami_twig = __webpack_require__(14);
@@ -26006,134 +26101,138 @@ function setup(optionNames, optionDefaults, options) {
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function AMIRouter_classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
-var AMIRouter_id = 0;
-function AMIRouter_classPrivateFieldLooseKey(name) { return "__private_" + AMIRouter_id++ + "_" + name; }
 
-var _webAppURL = AMIRouter_classPrivateFieldLooseKey("webAppURL");
-var _webAppArgs = AMIRouter_classPrivateFieldLooseKey("webAppArgs");
-var _webAppHash = AMIRouter_classPrivateFieldLooseKey("webAppHash");
-var _scriptURL = AMIRouter_classPrivateFieldLooseKey("scriptURL");
-var _scriptArgs = AMIRouter_classPrivateFieldLooseKey("scriptArgs");
-var _scriptHash = AMIRouter_classPrivateFieldLooseKey("scriptHash");
-var _originURL = AMIRouter_classPrivateFieldLooseKey("originURL");
-var _routes = AMIRouter_classPrivateFieldLooseKey("routes");
-var _findThisJs = AMIRouter_classPrivateFieldLooseKey("findThisJs");
-var _searchParamToDict = AMIRouter_classPrivateFieldLooseKey("searchParamToDict");
-var _eatSlashes = AMIRouter_classPrivateFieldLooseKey("eatSlashes");
-var _buildURL = AMIRouter_classPrivateFieldLooseKey("buildURL");
-var _goto = AMIRouter_classPrivateFieldLooseKey("goto");
 class AMIRouter {
+  #webAppURL = '';
+  #webAppArgs = {};
+  #webAppHash = '';
+  #scriptURL = '';
+  #scriptArgs = {};
+  #scriptHash = '';
+  #originURL = '';
+  #routes = [];
   constructor(prodJsFilename, devJsFilename) {
-    Object.defineProperty(this, _goto, {
-      value: _goto2
-    });
-    Object.defineProperty(this, _buildURL, {
-      value: _buildURL2
-    });
-    Object.defineProperty(this, _webAppURL, {
-      writable: true,
-      value: ''
-    });
-    Object.defineProperty(this, _webAppArgs, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _webAppHash, {
-      writable: true,
-      value: ''
-    });
-    Object.defineProperty(this, _scriptURL, {
-      writable: true,
-      value: ''
-    });
-    Object.defineProperty(this, _scriptArgs, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _scriptHash, {
-      writable: true,
-      value: ''
-    });
-    Object.defineProperty(this, _originURL, {
-      writable: true,
-      value: ''
-    });
-    Object.defineProperty(this, _routes, {
-      writable: true,
-      value: []
-    });
     const webappUrl = new URL(window.location);
-    const scriptUrl = AMIRouter_classPrivateFieldLooseBase(AMIRouter, _findThisJs)[_findThisJs](prodJsFilename, devJsFilename);
+    const scriptUrl = AMIRouter.#findThisJs(prodJsFilename, devJsFilename);
     if (!scriptUrl) {
       throw `cannot find neither '${prodJsFilename}' nor '${devJsFilename}'`;
     }
-    AMIRouter_classPrivateFieldLooseBase(this, _webAppURL)[_webAppURL] = webappUrl.protocol === 'file:' ? `file://${webappUrl.pathname}` : `${webappUrl.origin}${webappUrl.pathname}`;
-    AMIRouter_classPrivateFieldLooseBase(this, _webAppArgs)[_webAppArgs] = AMIRouter_classPrivateFieldLooseBase(AMIRouter, _searchParamToDict)[_searchParamToDict](webappUrl);
-    AMIRouter_classPrivateFieldLooseBase(this, _webAppHash)[_webAppHash] = webappUrl.hash.substring(1);
-    AMIRouter_classPrivateFieldLooseBase(this, _scriptURL)[_scriptURL] = scriptUrl.protocol === 'file:' ? `file://${scriptUrl.pathname}` : `${scriptUrl.origin}${scriptUrl.pathname}`;
-    AMIRouter_classPrivateFieldLooseBase(this, _scriptArgs)[_scriptArgs] = AMIRouter_classPrivateFieldLooseBase(AMIRouter, _searchParamToDict)[_searchParamToDict](scriptUrl);
-    AMIRouter_classPrivateFieldLooseBase(this, _scriptHash)[_scriptHash] = scriptUrl.hash.substring(1);
+    this.#webAppURL = webappUrl.protocol === 'file:' ? `file://${webappUrl.pathname}` : `${webappUrl.origin}${webappUrl.pathname}`;
+    this.#webAppArgs = AMIRouter.#searchParamToDict(webappUrl);
+    this.#webAppHash = webappUrl.hash.substring(1);
+    this.#scriptURL = scriptUrl.protocol === 'file:' ? `file://${scriptUrl.pathname}` : `${scriptUrl.origin}${scriptUrl.pathname}`;
+    this.#scriptArgs = AMIRouter.#searchParamToDict(scriptUrl);
+    this.#scriptHash = scriptUrl.hash.substring(1);
     let idx;
-    if ((idx = AMIRouter_classPrivateFieldLooseBase(this, _scriptURL)[_scriptURL].indexOf(prodJsFilename)) > 0) {
-      AMIRouter_classPrivateFieldLooseBase(this, _originURL)[_originURL] = AMIRouter_classPrivateFieldLooseBase(AMIRouter, _eatSlashes)[_eatSlashes](AMIRouter_classPrivateFieldLooseBase(this, _scriptURL)[_scriptURL].substring(0, idx));
-    } else if ((idx = AMIRouter_classPrivateFieldLooseBase(this, _scriptURL)[_scriptURL].indexOf(devJsFilename)) > 0) {
-      AMIRouter_classPrivateFieldLooseBase(this, _originURL)[_originURL] = AMIRouter_classPrivateFieldLooseBase(AMIRouter, _eatSlashes)[_eatSlashes](AMIRouter_classPrivateFieldLooseBase(this, _scriptURL)[_scriptURL].substring(0, idx));
+    if ((idx = this.#scriptURL.indexOf(prodJsFilename)) > 0) {
+      this.#originURL = AMIRouter.#eatSlashes(this.#scriptURL.substring(0, idx));
+    } else if ((idx = this.#scriptURL.indexOf(devJsFilename)) > 0) {
+      this.#originURL = AMIRouter.#eatSlashes(this.#scriptURL.substring(0, idx));
     }
   }
+  static #findThisJs(prodJsFilename, devJsFilename) {
+    const scripts = document.getElementsByTagName('script');
+    for (let i = 0; i < scripts.length; i++) {
+      try {
+        const url = new URL(scripts[i].src);
+        if (url.pathname.endsWith(prodJsFilename) > 0 || url.pathname.endsWith(devJsFilename) > 0) {
+          return url;
+        }
+      } catch (e) {}
+    }
+    return null;
+  }
+  static #searchParamToDict(url) {
+    const result = {};
+    for (var _iterator = _createForOfIteratorHelperLoose(url.searchParams.entries()), _step; !(_step = _iterator()).done;) {
+      const [name, value] = _step.value;
+      result[name] = value;
+    }
+    return result;
+  }
+  static #eatSlashes(url) {
+    url = url.trim();
+    while (url[url.length - 1] === '/') {
+      url = url.substring(0, url.length - 1);
+    }
+    return url;
+  }
   getWebAppURL() {
-    return AMIRouter_classPrivateFieldLooseBase(this, _webAppURL)[_webAppURL];
+    return this.#webAppURL;
   }
   getWebAppArgs() {
-    return AMIRouter_classPrivateFieldLooseBase(this, _webAppArgs)[_webAppArgs];
+    return this.#webAppArgs;
   }
   getWebAppHash() {
-    return AMIRouter_classPrivateFieldLooseBase(this, _webAppHash)[_webAppHash];
+    return this.#webAppHash;
   }
   getScriptURL() {
-    return AMIRouter_classPrivateFieldLooseBase(this, _scriptURL)[_scriptURL];
+    return this.#scriptURL;
   }
   getScriptArgs() {
-    return AMIRouter_classPrivateFieldLooseBase(this, _scriptArgs)[_scriptArgs];
+    return this.#scriptArgs;
   }
   getWebappHash() {
-    return AMIRouter_classPrivateFieldLooseBase(this, _scriptHash)[_scriptHash];
+    return this.#scriptHash;
   }
   getOriginURL() {
-    return AMIRouter_classPrivateFieldLooseBase(this, _originURL)[_originURL];
+    return this.#originURL;
   }
   append(regExp, callback) {
-    AMIRouter_classPrivateFieldLooseBase(this, _routes)[_routes].unshift({
+    this.#routes.unshift({
       regExp: regExp,
       callback: callback
     });
     return this;
   }
   remove(regExp) {
-    AMIRouter_classPrivateFieldLooseBase(this, _routes)[_routes] = AMIRouter_classPrivateFieldLooseBase(this, _routes)[_routes].filter(route => {
+    this.#routes = this.#routes.filter(route => {
       return route.regExp.toString() !== regExp.toString();
     });
     return this;
   }
   check() {
     let m;
-    for (let i = 0; i < AMIRouter_classPrivateFieldLooseBase(this, _routes)[_routes].length; i++) {
-      m = AMIRouter_classPrivateFieldLooseBase(this, _webAppHash)[_webAppHash].match(AMIRouter_classPrivateFieldLooseBase(this, _routes)[_routes][i].regExp);
+    for (let i = 0; i < this.#routes.length; i++) {
+      m = this.#webAppHash.match(this.#routes[i].regExp);
       if (m) {
-        AMIRouter_classPrivateFieldLooseBase(this, _routes)[_routes][i].callback.apply(this, m);
+        this.#routes[i].callback.apply(this, m);
         return true;
       }
     }
     return false;
   }
+  #buildURL(searchParams, hash) {
+    const result = new URL(this.#webAppURL);
+    for (var _i = 0, _Object$entries = Object.entries(searchParams); _i < _Object$entries.length; _i++) {
+      const [name, value] = _Object$entries[_i];
+      if (typeof value === 'string') {
+        result.searchParams.set(name, value);
+      }
+    }
+    if (hash) {
+      result.hash = hash;
+    }
+    return result;
+  }
+  #goto(hash) {
+    if (hash) {
+      setTimeout(() => {
+        const el = $(hash);
+        if (el.length > 0) {
+          $(document).scrollTop(el.offset().top);
+        }
+      }, 1000);
+    }
+  }
   appendHistoryEntry(options) {
     if (history.pushState) {
       const [context, searchParams, hash] = setup(['context', 'searchParams', 'hash'], [{}, {}, null], options);
-      const url = AMIRouter_classPrivateFieldLooseBase(this, _buildURL)[_buildURL](searchParams, hash);
+      const url = this.#buildURL(searchParams, hash);
       if (window.location !== url.toString()) {
         history.pushState(context, null, url.toString());
       }
-      AMIRouter_classPrivateFieldLooseBase(this, _goto)[_goto](url.hash);
+      this.#goto(url.hash);
       return true;
     }
     return false;
@@ -26141,75 +26240,16 @@ class AMIRouter {
   replaceHistoryEntry(options) {
     if (history.replaceState) {
       const [context, searchParams, hash] = setup(['context', 'searchParams', 'hash'], [{}, {}, null], options);
-      const url = AMIRouter_classPrivateFieldLooseBase(this, _buildURL)[_buildURL](searchParams, hash);
+      const url = this.#buildURL(searchParams, hash);
       if (window.location !== url.toString()) {
         history.replaceState(context, null, url.toString());
       }
-      AMIRouter_classPrivateFieldLooseBase(this, _goto)[_goto](url.hash);
+      this.#goto(url.hash);
       return true;
     }
     return false;
   }
 }
-function _findThisJs2(prodJsFilename, devJsFilename) {
-  const scripts = document.getElementsByTagName('script');
-  for (let i = 0; i < scripts.length; i++) {
-    try {
-      const url = new URL(scripts[i].src);
-      if (url.pathname.endsWith(prodJsFilename) > 0 || url.pathname.endsWith(devJsFilename) > 0) {
-        return url;
-      }
-    } catch (e) {}
-  }
-  return null;
-}
-function _searchParamToDict2(url) {
-  const result = {};
-  for (var _iterator = _createForOfIteratorHelperLoose(url.searchParams.entries()), _step; !(_step = _iterator()).done;) {
-    const [name, value] = _step.value;
-    result[name] = value;
-  }
-  return result;
-}
-function _eatSlashes2(url) {
-  url = url.trim();
-  while (url[url.length - 1] === '/') {
-    url = url.substring(0, url.length - 1);
-  }
-  return url;
-}
-function _buildURL2(searchParams, hash) {
-  const result = new URL(AMIRouter_classPrivateFieldLooseBase(this, _webAppURL)[_webAppURL]);
-  for (var _i = 0, _Object$entries = Object.entries(searchParams); _i < _Object$entries.length; _i++) {
-    const [name, value] = _Object$entries[_i];
-    if (typeof value === 'string') {
-      result.searchParams.set(name, value);
-    }
-  }
-  if (hash) {
-    result.hash = hash;
-  }
-  return result;
-}
-function _goto2(hash) {
-  if (hash) {
-    setTimeout(() => {
-      const el = $(hash);
-      if (el.length > 0) {
-        $(document).scrollTop(el.offset().top);
-      }
-    }, 1000);
-  }
-}
-Object.defineProperty(AMIRouter, _eatSlashes, {
-  value: _eatSlashes2
-});
-Object.defineProperty(AMIRouter, _searchParamToDict, {
-  value: _searchParamToDict2
-});
-Object.defineProperty(AMIRouter, _findThisJs, {
-  value: _findThisJs2
-});
 /* harmony default export */ const js_AMIRouter = (new AMIRouter('js/ami.min.js', 'js/ami.js'));
 ;// CONCATENATED MODULE: ./src/js/utilities/locks.js
 
@@ -28577,7 +28617,7 @@ const toggleComment = target => {
   let {
       state
     } = target,
-    line = state.doc.lineAt(state.selection.main.head),
+    line = state.doc.lineAt(state.selection.main.from),
     config = getConfig(target.state, line.from);
   return config.line ? toggleLineComment(target) : config.block ? toggleBlockCommentByLine(target) : false;
 };
@@ -28660,7 +28700,7 @@ function selectedLineRanges(state) {
     let toLine = r.to <= fromLine.to ? fromLine : state.doc.lineAt(r.to);
     let last = ranges.length - 1;
     if (last >= 0 && ranges[last].to > fromLine.from) ranges[last].to = toLine.to;else ranges.push({
-      from: fromLine.from,
+      from: fromLine.from + /^\s*/.exec(fromLine.text)[0].length,
       to: toLine.to
     });
   }
@@ -28721,12 +28761,12 @@ function changeLineComment(option, state, ranges) {
     } = _step2.value;
     let startI = lines.length,
       minIndent = 1e9;
+    let token = getConfig(state, from).line;
+    if (!token) continue;
     for (let pos = from; pos <= to;) {
       let line = state.doc.lineAt(pos);
       if (line.from > prevLine && (from == to || to > line.from)) {
         prevLine = line.from;
-        let token = getConfig(state, line.from).line;
-        if (!token) continue;
         let indent = /^\s*/.exec(line.text)[0].length;
         let empty = indent == line.length;
         let comment = line.text.slice(indent, indent + token.length) == token ? indent : -1;
@@ -30209,7 +30249,7 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   alias: ["xhtml"],
   extensions: ["html", "htm", "handlebars", "hbs"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3077), __webpack_require__.e(2493), __webpack_require__.e(6414)]).then(__webpack_require__.bind(__webpack_require__, 6414)).then(m => m.html());
+    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414)]).then(__webpack_require__.bind(__webpack_require__, 6414)).then(m => m.html());
   }
 }), language_dist/* LanguageDescription.of */.c6.of({
   name: "Java",
@@ -30248,7 +30288,7 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   name: "Markdown",
   extensions: ["md", "markdown", "mkd"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3077), __webpack_require__.e(2493), __webpack_require__.e(6414), __webpack_require__.e(5022)]).then(__webpack_require__.bind(__webpack_require__, 5022)).then(m => m.markdown());
+    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(5022)]).then(__webpack_require__.bind(__webpack_require__, 5022)).then(m => m.markdown());
   }
 }), language_dist/* LanguageDescription.of */.c6.of({
   name: "MS SQL",
@@ -30264,7 +30304,7 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   name: "PHP",
   extensions: ["php", "php3", "php4", "php5", "php7", "phtml"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3077), __webpack_require__.e(2493), __webpack_require__.e(6414), __webpack_require__.e(2487)]).then(__webpack_require__.bind(__webpack_require__, 2487)).then(m => m.php());
+    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(2487)]).then(__webpack_require__.bind(__webpack_require__, 2487)).then(m => m.php());
   }
 }), language_dist/* LanguageDescription.of */.c6.of({
   name: "PLSQL",
@@ -30289,6 +30329,20 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   extensions: ["rs"],
   load() {
     return __webpack_require__.e(/* import() */ 8321).then(__webpack_require__.bind(__webpack_require__, 8321)).then(m => m.rust());
+  }
+}), language_dist/* LanguageDescription.of */.c6.of({
+  name: "Sass",
+  extensions: ["sass"],
+  load() {
+    return Promise.all(/* import() */[__webpack_require__.e(2493), __webpack_require__.e(7314)]).then(__webpack_require__.bind(__webpack_require__, 7314)).then(m => m.sass({
+      indented: true
+    }));
+  }
+}), language_dist/* LanguageDescription.of */.c6.of({
+  name: "SCSS",
+  extensions: ["scss"],
+  load() {
+    return Promise.all(/* import() */[__webpack_require__.e(2493), __webpack_require__.e(7314)]).then(__webpack_require__.bind(__webpack_require__, 7314)).then(m => m.sass());
   }
 }), language_dist/* LanguageDescription.of */.c6.of({
   name: "SQL",
@@ -30788,6 +30842,7 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   name: "Ruby",
   alias: ["jruby", "macruby", "rake", "rb", "rbx"],
   extensions: ["rb"],
+  filename: /^(Gemfile|Rakefile)$/,
   load() {
     return __webpack_require__.e(/* import() */ 9463).then(__webpack_require__.bind(__webpack_require__, 9463)).then(m => legacy(m.ruby));
   }
@@ -30796,12 +30851,6 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   extensions: ["sas"],
   load() {
     return __webpack_require__.e(/* import() */ 6031).then(__webpack_require__.bind(__webpack_require__, 6031)).then(m => legacy(m.sas));
-  }
-}), language_dist/* LanguageDescription.of */.c6.of({
-  name: "Sass",
-  extensions: ["sass"],
-  load() {
-    return __webpack_require__.e(/* import() */ 1713).then(__webpack_require__.bind(__webpack_require__, 1713)).then(m => legacy(m.sass));
   }
 }), language_dist/* LanguageDescription.of */.c6.of({
   name: "Scala",
@@ -30814,12 +30863,6 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   extensions: ["scm", "ss"],
   load() {
     return __webpack_require__.e(/* import() */ 4435).then(__webpack_require__.bind(__webpack_require__, 4435)).then(m => legacy(m.scheme));
-  }
-}), language_dist/* LanguageDescription.of */.c6.of({
-  name: "SCSS",
-  extensions: ["scss"],
-  load() {
-    return __webpack_require__.e(/* import() */ 7718).then(__webpack_require__.bind(__webpack_require__, 7718)).then(m => legacy(m.sCSS));
   }
 }), language_dist/* LanguageDescription.of */.c6.of({
   name: "Shell",
@@ -31031,6 +31074,17 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   extensions: ["msgenny"],
   load() {
     return __webpack_require__.e(/* import() */ 457).then(__webpack_require__.bind(__webpack_require__, 457)).then(m => legacy(m.msgenny));
+  }
+}), language_dist/* LanguageDescription.of */.c6.of({
+  name: "Vue",
+  extensions: ["vue"],
+  load() {
+    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(7802)]).then(__webpack_require__.bind(__webpack_require__, 7802)).then(m => m.vue());
+  }
+}), language_dist/* LanguageDescription.of */.c6.of({
+  name: "Angular Template",
+  load() {
+    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(4217)]).then(__webpack_require__.bind(__webpack_require__, 4217)).then(m => m.angular());
   }
 })];
 
@@ -31318,439 +31372,356 @@ function formatTWIG(twig, dict, twigs) {
 function jsdoc_createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = jsdoc_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function jsdoc_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return jsdoc_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return jsdoc_arrayLikeToArray(o, minLen); }
 function jsdoc_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function jsdoc_classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
-var jsdoc_id = 0;
-function jsdoc_classPrivateFieldLooseKey(name) { return "__private_" + jsdoc_id++ + "_" + name; }
 
-var jsdoc_linkExp = jsdoc_classPrivateFieldLooseKey("linkExp");
-var _menuSelector = jsdoc_classPrivateFieldLooseKey("menuSelector");
-var _bodySelector = jsdoc_classPrivateFieldLooseKey("bodySelector");
-var _json = jsdoc_classPrivateFieldLooseKey("json");
-var _makeMenu = jsdoc_classPrivateFieldLooseKey("makeMenu");
-var _makeSubMenu = jsdoc_classPrivateFieldLooseKey("makeSubMenu");
-var _makeContent = jsdoc_classPrivateFieldLooseKey("makeContent");
-var _makeVariable = jsdoc_classPrivateFieldLooseKey("makeVariable");
-var _makeVariableSignature = jsdoc_classPrivateFieldLooseKey("makeVariableSignature");
-var _makeFunction = jsdoc_classPrivateFieldLooseKey("makeFunction");
-var _makeFunctionSignature = jsdoc_classPrivateFieldLooseKey("makeFunctionSignature");
-var _makeFunctionParameters = jsdoc_classPrivateFieldLooseKey("makeFunctionParameters");
-var _makeFunctionExceptions = jsdoc_classPrivateFieldLooseKey("makeFunctionExceptions");
-var _makeFunctionReturn = jsdoc_classPrivateFieldLooseKey("makeFunctionReturn");
-var _makeAlias = jsdoc_classPrivateFieldLooseKey("makeAlias");
-var _makeDesc = jsdoc_classPrivateFieldLooseKey("makeDesc");
-var _makeParam = jsdoc_classPrivateFieldLooseKey("makeParam");
-var _makeType = jsdoc_classPrivateFieldLooseKey("makeType");
-var _makeDetails = jsdoc_classPrivateFieldLooseKey("makeDetails");
-var _makeExamples = jsdoc_classPrivateFieldLooseKey("makeExamples");
 class AMIJSDoc {
+  static #linkExp = /(?:\[\s*([^\s\]]+)\s*])?{@link\s+([^\s}]+)\s*}/g;
+  #menuSelector = null;
+  #bodySelector = null;
+  #json = null;
   constructor(menuSelector, bodySelector, json) {
-    Object.defineProperty(this, _makeContent, {
-      value: _makeContent2
-    });
-    Object.defineProperty(this, _makeSubMenu, {
-      value: _makeSubMenu2
-    });
-    Object.defineProperty(this, _makeMenu, {
-      value: _makeMenu2
-    });
-    Object.defineProperty(this, _menuSelector, {
-      writable: true,
-      value: null
-    });
-    Object.defineProperty(this, _bodySelector, {
-      writable: true,
-      value: null
-    });
-    Object.defineProperty(this, _json, {
-      writable: true,
-      value: null
-    });
-    jsdoc_classPrivateFieldLooseBase(this, _menuSelector)[_menuSelector] = menuSelector;
-    jsdoc_classPrivateFieldLooseBase(this, _bodySelector)[_bodySelector] = bodySelector;
-    jsdoc_classPrivateFieldLooseBase(this, _json)[_json] = json;
-    jsdoc_classPrivateFieldLooseBase(this, _makeMenu)[_makeMenu]();
+    this.#menuSelector = menuSelector;
+    this.#bodySelector = bodySelector;
+    this.#json = json;
+    this.#makeMenu();
   }
-}
-function _makeMenu2() {
-  const s = `
+  #makeMenu() {
+    const s = `
 <a class="list-group-item list-group-item-action p-2" href="">
 	<i class="bi bi-house"></i> Home
 </a>
 
 <div class="list-group-item list-group-item-action p-2">
 
-	${jsdoc_classPrivateFieldLooseBase(this, _makeSubMenu)[_makeSubMenu]('Global', 'global')}
-	${jsdoc_classPrivateFieldLooseBase(this, _makeSubMenu)[_makeSubMenu]('Namespace', 'namespaces')}
-	${jsdoc_classPrivateFieldLooseBase(this, _makeSubMenu)[_makeSubMenu]('Interface', 'interfaces')}
-	${jsdoc_classPrivateFieldLooseBase(this, _makeSubMenu)[_makeSubMenu]('Class', 'classes')}
+	${this.#makeSubMenu('Global', 'global')}
+	${this.#makeSubMenu('Namespace', 'namespaces')}
+	${this.#makeSubMenu('Interface', 'interfaces')}
+	${this.#makeSubMenu('Class', 'classes')}
 
 </div>
 `;
-  $(jsdoc_classPrivateFieldLooseBase(this, _menuSelector)[_menuSelector]).html(s.trim()).promise().done(_ => {
-    $(jsdoc_classPrivateFieldLooseBase(this, _menuSelector)[_menuSelector]).find('a[data-name][data-cat][data-name]').click(e => {
-      const el = $(e.currentTarget);
-      e.preventDefault();
-      jsdoc_classPrivateFieldLooseBase(this, _makeContent)[_makeContent](el.attr('data-title'), el.attr('data-cat'), el.attr('data-name'));
+    $(this.#menuSelector).html(s.trim()).promise().done(_ => {
+      $(this.#menuSelector).find('a[data-name][data-cat][data-name]').click(e => {
+        const el = $(e.currentTarget);
+        e.preventDefault();
+        this.#makeContent(el.attr('data-title'), el.attr('data-cat'), el.attr('data-name'));
+      });
     });
-  });
-}
-function _makeSubMenu2(title, cat) {
-  const result = [];
-  let items;
-  if (cat === 'global') {
-    items = [];
-    if (jsdoc_classPrivateFieldLooseBase(this, _json)[_json]['variables']) {
-      items = items.concat(jsdoc_classPrivateFieldLooseBase(this, _json)[_json]['variables']);
-    }
-    if (jsdoc_classPrivateFieldLooseBase(this, _json)[_json]['functions']) {
-      items = items.concat(jsdoc_classPrivateFieldLooseBase(this, _json)[_json]['functions']);
-    }
-  } else {
-    items = jsdoc_classPrivateFieldLooseBase(this, _json)[_json][cat];
   }
-  if (Array.isArray(items) && items.length > 0) {
-    result.push('<div>');
-    result.push(`<a href="#jsdoc_menu_${title.toLowerCase()}" data-toggle="collapse" data-bs-toggle="collapse"><i class="bi bi-book"></i> ${textToHtml(title)}</a>`);
-    result.push(`<ul class="collapse mb-0" id="jsdoc_menu_${title.toLowerCase()}">${items.map(_item => `<li><a href="#" data-title="${textToHtml(title)}" data-cat="${textToHtml(cat)}" data-name="${textToHtml(_item.name)}">${textToHtml(_item.name)}</a></li>`).join('')}</ul>`);
-    result.push('</div>');
-  }
-  return result.join('');
-}
-function _makeContent2(title, cat, name) {
-  const s = [];
-  let item;
-  if (cat === 'global') {
-    item = {
-      name: 'variables and functions',
-      variables: jsdoc_classPrivateFieldLooseBase(this, _json)[_json]['variables'],
-      functions: jsdoc_classPrivateFieldLooseBase(this, _json)[_json]['functions']
-    };
-  } else {
-    item = jsdoc_classPrivateFieldLooseBase(this, _json)[_json][cat].filter(item => item.name === name)[0];
-  }
-  s.push('<div class="card">');
-  s.push('<div class="card-body bg-light">');
-  s.push(`<h1>${textToHtml(title)}: ${textToHtml(item.name)}</h1>`);
-  s.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeAlias)[_makeAlias](item));
-  s.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDesc)[_makeDesc](item));
-  s.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDetails)[_makeDetails](item));
-  s.push('</div>');
-  s.push('</div>');
-  if (item.konstructor) {
-    s.push('<h4 class="mt-3">Constructor</h4>');
-    s.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeFunction)[_makeFunction](item.konstructor));
-  }
-  if (Array.isArray(item.variables)) {
-    s.push('<h4 class="mt-3">Members</h4>');
-    for (var _iterator = jsdoc_createForOfIteratorHelperLoose(item.variables), _step; !(_step = _iterator()).done;) {
-      const _variable = _step.value;
-      s.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeVariable)[_makeVariable](_variable));
-    }
-  }
-  if (Array.isArray(item.functions)) {
-    s.push('<h4 class="mt-3">Methods</h4>');
-    for (var _iterator2 = jsdoc_createForOfIteratorHelperLoose(item.functions), _step2; !(_step2 = _iterator2()).done;) {
-      const _function = _step2.value;
-      s.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeFunction)[_makeFunction](_function));
-    }
-  }
-  if (Array.isArray(item.events)) {
-    s.push('<h4 class="mt-3">Events</h4>');
-    for (var _iterator3 = jsdoc_createForOfIteratorHelperLoose(item.events), _step3; !(_step3 = _iterator3()).done;) {
-      const _event = _step3.value;
-      s.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeFunction)[_makeFunction](_event));
-    }
-  }
-  $(jsdoc_classPrivateFieldLooseBase(this, _bodySelector)[_bodySelector]).html(s.join(''));
-}
-function _makeVariable2(variable) {
-  const result = [];
-  result.push(`<hr id="jsdoc_variable_${variable.name}" />`);
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeVariableSignature)[_makeVariableSignature](variable));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeAlias)[_makeAlias](variable));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDesc)[_makeDesc](variable));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDetails)[_makeDetails](variable));
-  return result.join('');
-}
-function _makeVariableSignature2(variable) {
-  const result = [];
-  result.push(`<span class="signature-name">${textToHtml(variable.name)}</span>`);
-  result.push(`<span class="signature-attrs">: {${jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeType)[_makeType](variable)}}</span>`);
-  return result.join('');
-}
-function _makeFunction2(method) {
-  const result = [];
-  result.push(`<hr id="jsdoc_method_${method.name}" />`);
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeFunctionSignature)[_makeFunctionSignature](method));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeAlias)[_makeAlias](method));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDesc)[_makeDesc](method));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeFunctionParameters)[_makeFunctionParameters](method));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDetails)[_makeDetails](method));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeFunctionExceptions)[_makeFunctionExceptions](method));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeFunctionReturn)[_makeFunctionReturn](method));
-  result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeExamples)[_makeExamples](method));
-  return result.join('');
-}
-function _makeFunctionSignature2(method) {
-  const result = [];
-  result.push(`<span class="signature-name">${textToHtml(method.name)}</span>`);
-  if (method.params) {
-    const L = method.params.map(_param => jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeParam)[_makeParam](_param));
-    result.push(`<span class="signature-params">(${L.join(', ')})</span>`);
-  }
-  if (method.returns) {
-    const L = method.returns.map(_return => jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeType)[_makeType](_return));
-    result.push(`<span class="signature-attrs"> &rarr; {${L.join(' or ')}}</span>`);
-  }
-  return result.join('');
-}
-function _makeFunctionParameters2(method) {
-  const result = [];
-  if (method.params.length > 0) {
-    const L1 = [],
-      L2 = [],
-      L3 = [],
-      L4 = [],
-      L5 = [],
-      L6 = [];
-    let cnt1 = 0,
-      cnt2 = 0,
-      cnt3 = 0,
-      cnt4 = 0,
-      cnt5 = 0,
-      cnt6 = 0;
-    for (var _iterator4 = jsdoc_createForOfIteratorHelperLoose(method.params), _step4; !(_step4 = _iterator4()).done;) {
-      const _params = _step4.value;
-      L1.push(textToHtml(_params['name']));
-      L2.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeType)[_makeType](_params));
-      L3.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDesc)[_makeDesc](_params));
-      L4.push(textToHtml(_params['default']));
-      L5.push(_params['optional']);
-      L6.push(_params['nullable']);
-      if (_params['name']) {
-        cnt1++;
+  #makeSubMenu(title, cat) {
+    const result = [];
+    let items;
+    if (cat === 'global') {
+      items = [];
+      if (this.#json['variables']) {
+        items = items.concat(this.#json['variables']);
       }
-      if (_params['type']) {
-        cnt2++;
+      if (this.#json['functions']) {
+        items = items.concat(this.#json['functions']);
       }
-      if (_params['desc']) {
-        cnt3++;
-      }
-      if (_params['default']) {
-        cnt4++;
-      }
-      if (_params['optional']) {
-        cnt5++;
-      }
-      if (_params['nullable']) {
-        cnt6++;
+    } else {
+      items = this.#json[cat];
+    }
+    if (Array.isArray(items) && items.length > 0) {
+      result.push('<div>');
+      result.push(`<a href="#jsdoc_menu_${title.toLowerCase()}" data-toggle="collapse" data-bs-toggle="collapse"><i class="bi bi-book"></i> ${textToHtml(title)}</a>`);
+      result.push(`<ul class="collapse mb-0" id="jsdoc_menu_${title.toLowerCase()}">${items.map(_item => `<li><a href="#" data-title="${textToHtml(title)}" data-cat="${textToHtml(cat)}" data-name="${textToHtml(_item.name)}">${textToHtml(_item.name)}</a></li>`).join('')}</ul>`);
+      result.push('</div>');
+    }
+    return result.join('');
+  }
+  #makeContent(title, cat, name) {
+    const s = [];
+    let item;
+    if (cat === 'global') {
+      item = {
+        name: 'variables and functions',
+        variables: this.#json['variables'],
+        functions: this.#json['functions']
+      };
+    } else {
+      item = this.#json[cat].filter(item => item.name === name)[0];
+    }
+    s.push('<div class="card">');
+    s.push('<div class="card-body bg-light">');
+    s.push(`<h1>${textToHtml(title)}: ${textToHtml(item.name)}</h1>`);
+    s.push(AMIJSDoc.#makeAlias(item));
+    s.push(AMIJSDoc.#makeDesc(item));
+    s.push(AMIJSDoc.#makeDetails(item));
+    s.push('</div>');
+    s.push('</div>');
+    if (item.konstructor) {
+      s.push('<h4 class="mt-3">Constructor</h4>');
+      s.push(AMIJSDoc.#makeFunction(item.konstructor));
+    }
+    if (Array.isArray(item.variables)) {
+      s.push('<h4 class="mt-3">Members</h4>');
+      for (var _iterator = jsdoc_createForOfIteratorHelperLoose(item.variables), _step; !(_step = _iterator()).done;) {
+        const _variable = _step.value;
+        s.push(AMIJSDoc.#makeVariable(_variable));
       }
     }
-    result.push('<h5 class="mt-2"><strong>Parameters:</strong></h5>');
-    result.push('<table class="table table-sm table-hover table-striped table-bordered" style="width: auto;">');
-    result.push('<thead>');
-    result.push('<tr>');
-    if (cnt1 > 0) {
-      result.push('<th>Name</th>');
+    if (Array.isArray(item.functions)) {
+      s.push('<h4 class="mt-3">Methods</h4>');
+      for (var _iterator2 = jsdoc_createForOfIteratorHelperLoose(item.functions), _step2; !(_step2 = _iterator2()).done;) {
+        const _function = _step2.value;
+        s.push(AMIJSDoc.#makeFunction(_function));
+      }
     }
-    if (cnt2 > 0) {
-      result.push('<th>Type</th>');
+    if (Array.isArray(item.events)) {
+      s.push('<h4 class="mt-3">Events</h4>');
+      for (var _iterator3 = jsdoc_createForOfIteratorHelperLoose(item.events), _step3; !(_step3 = _iterator3()).done;) {
+        const _event = _step3.value;
+        s.push(AMIJSDoc.#makeFunction(_event));
+      }
     }
-    if (cnt4 > 0) {
-      result.push('<th>Default</th>');
+    $(this.#bodySelector).html(s.join(''));
+  }
+  static #makeVariable(variable) {
+    const result = [];
+    result.push(`<hr id="jsdoc_variable_${variable.name}" />`);
+    result.push(AMIJSDoc.#makeVariableSignature(variable));
+    result.push(AMIJSDoc.#makeAlias(variable));
+    result.push(AMIJSDoc.#makeDesc(variable));
+    result.push(AMIJSDoc.#makeDetails(variable));
+    return result.join('');
+  }
+  static #makeVariableSignature(variable) {
+    const result = [];
+    result.push(`<span class="signature-name">${textToHtml(variable.name)}</span>`);
+    result.push(`<span class="signature-attrs">: {${AMIJSDoc.#makeType(variable)}}</span>`);
+    return result.join('');
+  }
+  static #makeFunction(method) {
+    const result = [];
+    result.push(`<hr id="jsdoc_method_${method.name}" />`);
+    result.push(AMIJSDoc.#makeFunctionSignature(method));
+    result.push(AMIJSDoc.#makeAlias(method));
+    result.push(AMIJSDoc.#makeDesc(method));
+    result.push(AMIJSDoc.#makeFunctionParameters(method));
+    result.push(AMIJSDoc.#makeDetails(method));
+    result.push(AMIJSDoc.#makeFunctionExceptions(method));
+    result.push(AMIJSDoc.#makeFunctionReturn(method));
+    result.push(AMIJSDoc.#makeExamples(method));
+    return result.join('');
+  }
+  static #makeFunctionSignature(method) {
+    const result = [];
+    result.push(`<span class="signature-name">${textToHtml(method.name)}</span>`);
+    if (method.params) {
+      const L = method.params.map(_param => AMIJSDoc.#makeParam(_param));
+      result.push(`<span class="signature-params">(${L.join(', ')})</span>`);
     }
-    if (cnt5 > 0) {
-      result.push('<th>Optional</th>');
+    if (method.returns) {
+      const L = method.returns.map(_return => AMIJSDoc.#makeType(_return));
+      result.push(`<span class="signature-attrs"> &rarr; {${L.join(' or ')}}</span>`);
     }
-    if (cnt6 > 0) {
-      result.push('<th>Nullable</th>');
-    }
-    if (cnt3 > 0) {
-      result.push('<th>Description</th>');
-    }
-    result.push('</tr>');
-    result.push('</thead>');
-    result.push('<tbody>');
-    for (const i in method.params) {
+    return result.join('');
+  }
+  static #makeFunctionParameters(method) {
+    const result = [];
+    if (method.params.length > 0) {
+      const L1 = [],
+        L2 = [],
+        L3 = [],
+        L4 = [],
+        L5 = [],
+        L6 = [];
+      let cnt1 = 0,
+        cnt2 = 0,
+        cnt3 = 0,
+        cnt4 = 0,
+        cnt5 = 0,
+        cnt6 = 0;
+      for (var _iterator4 = jsdoc_createForOfIteratorHelperLoose(method.params), _step4; !(_step4 = _iterator4()).done;) {
+        const _params = _step4.value;
+        L1.push(textToHtml(_params['name']));
+        L2.push(AMIJSDoc.#makeType(_params));
+        L3.push(AMIJSDoc.#makeDesc(_params));
+        L4.push(textToHtml(_params['default']));
+        L5.push(_params['optional']);
+        L6.push(_params['nullable']);
+        if (_params['name']) {
+          cnt1++;
+        }
+        if (_params['type']) {
+          cnt2++;
+        }
+        if (_params['desc']) {
+          cnt3++;
+        }
+        if (_params['default']) {
+          cnt4++;
+        }
+        if (_params['optional']) {
+          cnt5++;
+        }
+        if (_params['nullable']) {
+          cnt6++;
+        }
+      }
+      result.push('<h5 class="mt-2"><strong>Parameters:</strong></h5>');
+      result.push('<table class="table table-sm table-hover table-striped table-bordered" style="width: auto;">');
+      result.push('<thead>');
       result.push('<tr>');
       if (cnt1 > 0) {
-        result.push(`<td>${L1[i]}</td>`);
+        result.push('<th>Name</th>');
       }
       if (cnt2 > 0) {
-        result.push(`<td>${L2[i]}</td>`);
+        result.push('<th>Type</th>');
       }
       if (cnt4 > 0) {
-        result.push(`<td>${L4[i]}</td>`);
+        result.push('<th>Default</th>');
       }
       if (cnt5 > 0) {
-        result.push(`<td class="text-center">${L5[i] ? '✓' : ''}</td>`);
+        result.push('<th>Optional</th>');
       }
       if (cnt6 > 0) {
-        result.push(`<td class="text-center">${L6[i] ? '✓' : ''}</td>`);
+        result.push('<th>Nullable</th>');
       }
       if (cnt3 > 0) {
-        result.push(`<td>${L3[i]}</td>`);
+        result.push('<th>Description</th>');
       }
       result.push('</tr>');
+      result.push('</thead>');
+      result.push('<tbody>');
+      for (const i in method.params) {
+        result.push('<tr>');
+        if (cnt1 > 0) {
+          result.push(`<td>${L1[i]}</td>`);
+        }
+        if (cnt2 > 0) {
+          result.push(`<td>${L2[i]}</td>`);
+        }
+        if (cnt4 > 0) {
+          result.push(`<td>${L4[i]}</td>`);
+        }
+        if (cnt5 > 0) {
+          result.push(`<td class="text-center">${L5[i] ? '✓' : ''}</td>`);
+        }
+        if (cnt6 > 0) {
+          result.push(`<td class="text-center">${L6[i] ? '✓' : ''}</td>`);
+        }
+        if (cnt3 > 0) {
+          result.push(`<td>${L3[i]}</td>`);
+        }
+        result.push('</tr>');
+      }
+      result.push('</tbody>');
+      result.push('</table>');
     }
-    result.push('</tbody>');
-    result.push('</table>');
+    return result.join('');
   }
-  return result.join('');
-}
-function _makeFunctionExceptions2(method) {
-  const result = [];
-  if (Array.isArray(method.exceptions)) {
-    for (var _iterator5 = jsdoc_createForOfIteratorHelperLoose(method.exceptions), _step5; !(_step5 = _iterator5()).done;) {
-      const _exception = _step5.value;
-      result.push('<h5 class="mt-2"><strong>Throws:</strong></h5>');
-      result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDesc)[_makeDesc](_exception));
-      result.push(`<div>Type: <span class="signature-attrs">${jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeType)[_makeType](_exception)}</span></div>`);
+  static #makeFunctionExceptions(method) {
+    const result = [];
+    if (Array.isArray(method.exceptions)) {
+      for (var _iterator5 = jsdoc_createForOfIteratorHelperLoose(method.exceptions), _step5; !(_step5 = _iterator5()).done;) {
+        const _exception = _step5.value;
+        result.push('<h5 class="mt-2"><strong>Throws:</strong></h5>');
+        result.push(AMIJSDoc.#makeDesc(_exception));
+        result.push(`<div>Type: <span class="signature-attrs">${AMIJSDoc.#makeType(_exception)}</span></div>`);
+      }
     }
+    return result.join('');
   }
-  return result.join('');
-}
-function _makeFunctionReturn2(method) {
-  const result = [];
-  if (Array.isArray(method.returns)) {
-    for (var _iterator6 = jsdoc_createForOfIteratorHelperLoose(method.returns), _step6; !(_step6 = _iterator6()).done;) {
-      const _return = _step6.value;
-      result.push('<h5 class="mt-2"><strong>Returns:</strong></h5>');
-      result.push(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeDesc)[_makeDesc](_return));
-      result.push(`<div>Type: <span class="signature-attrs">${jsdoc_classPrivateFieldLooseBase(AMIJSDoc, _makeType)[_makeType](_return)}</span></div>`);
+  static #makeFunctionReturn(method) {
+    const result = [];
+    if (Array.isArray(method.returns)) {
+      for (var _iterator6 = jsdoc_createForOfIteratorHelperLoose(method.returns), _step6; !(_step6 = _iterator6()).done;) {
+        const _return = _step6.value;
+        result.push('<h5 class="mt-2"><strong>Returns:</strong></h5>');
+        result.push(AMIJSDoc.#makeDesc(_return));
+        result.push(`<div>Type: <span class="signature-attrs">${AMIJSDoc.#makeType(_return)}</span></div>`);
+      }
     }
+    return result.join('');
   }
-  return result.join('');
-}
-function _makeAlias2(x) {
-  const result = [];
-  if (x.alias) {
-    result.push('<div>');
-    result.push(`Alias: ${textToHtml(x.alias)}`);
-    result.push('</div>');
+  static #makeAlias(x) {
+    const result = [];
+    if (x.alias) {
+      result.push('<div>');
+      result.push(`Alias: ${textToHtml(x.alias)}`);
+      result.push('</div>');
+    }
+    return result.join('');
   }
-  return result.join('');
-}
-function _makeDesc2(x) {
-  const result = [];
-  if (x.desc) {
-    result.push('<div>');
-    result.push(textToHtml(x.desc).replace(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, jsdoc_linkExp)[jsdoc_linkExp], (_, x, y) => {
-      return `<a href="${y}">${x || y}</a>`;
-    }));
-    result.push('</div>');
-  }
-  return result.join('');
-}
-function _makeParam2(x) {
-  const result = [];
-  result.push(textToHtml(x.name));
-  if (x.optional) {
-    result.push('<sup class="signature-params-attrs">opt.</sup>');
-  }
-  if (x.nullable) {
-    result.push('<sup class="signature-params-attrs">null.</sup>');
-  }
-  return result.join('');
-}
-function _makeType2(x) {
-  return x.type.map(y => `<i>${textToHtml(y.replace(/\s*/g, ''))}</i>`).join(' or ');
-}
-function _makeDetails2(x) {
-  const result = [];
-  if (Array.isArray(x.implements) && x.implements.length > 0) {
-    result.push(`<div>Implements: ${textToHtml(x.implements.join(', '))}</div>`);
-  }
-  if (Array.isArray(x.inherits) && x.inherits.length > 0) {
-    result.push(`<div>Inherits: ${textToHtml(x.inherits.join(', '))}</div>`);
-  }
-  const version = [];
-  const author = [];
-  const see = [];
-  if (x.version) {
-    version.push(`<dt>Version:</dt><dd>${textToHtml(x.version)}</dd>`);
-  }
-  if (Array.isArray(x.author)) {
-    for (var _iterator7 = jsdoc_createForOfIteratorHelperLoose(x.author), _step7; !(_step7 = _iterator7()).done;) {
-      const _author = _step7.value;
-      const _AUTHOR = _author.replace(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, jsdoc_linkExp)[jsdoc_linkExp], (_, x, y) => {
+  static #makeDesc(x) {
+    const result = [];
+    if (x.desc) {
+      result.push('<div>');
+      result.push(textToHtml(x.desc).replace(AMIJSDoc.#linkExp, (_, x, y) => {
         return `<a href="${y}">${x || y}</a>`;
-      });
-      author.push(`<dt>Author:</dt><dd>${_AUTHOR}</dd>`);
+      }));
+      result.push('</div>');
     }
+    return result.join('');
   }
-  if (Array.isArray(x.see)) {
-    for (var _iterator8 = jsdoc_createForOfIteratorHelperLoose(x.see), _step8; !(_step8 = _iterator8()).done;) {
-      const _see = _step8.value;
-      const _SEE = _see.replace(jsdoc_classPrivateFieldLooseBase(AMIJSDoc, jsdoc_linkExp)[jsdoc_linkExp], (_, x, y) => {
-        return `<a href="${y}">${x || y}</a>`;
-      });
-      see.push(`<dt>See:</dt><dd>${_SEE}</dd>`);
+  static #makeParam(x) {
+    const result = [];
+    result.push(textToHtml(x.name));
+    if (x.optional) {
+      result.push('<sup class="signature-params-attrs">opt.</sup>');
     }
+    if (x.nullable) {
+      result.push('<sup class="signature-params-attrs">null.</sup>');
+    }
+    return result.join('');
   }
-  if (author.length > 0 || version.length > 0 || see.length > 0) {
-    result.push('<dl class="details">');
-    result.push(version.join(''));
-    result.push(author.join(''));
-    result.push(see.join(''));
-    result.push('</dl>');
+  static #makeType(x) {
+    return x.type.map(y => `<i>${textToHtml(y.replace(/\s*/g, ''))}</i>`).join(' or ');
   }
-  return result.join('');
+  static #makeDetails(x) {
+    const result = [];
+    if (Array.isArray(x.implements) && x.implements.length > 0) {
+      result.push(`<div>Implements: ${textToHtml(x.implements.join(', '))}</div>`);
+    }
+    if (Array.isArray(x.inherits) && x.inherits.length > 0) {
+      result.push(`<div>Inherits: ${textToHtml(x.inherits.join(', '))}</div>`);
+    }
+    const version = [];
+    const author = [];
+    const see = [];
+    if (x.version) {
+      version.push(`<dt>Version:</dt><dd>${textToHtml(x.version)}</dd>`);
+    }
+    if (Array.isArray(x.author)) {
+      for (var _iterator7 = jsdoc_createForOfIteratorHelperLoose(x.author), _step7; !(_step7 = _iterator7()).done;) {
+        const _author = _step7.value;
+        const _AUTHOR = _author.replace(AMIJSDoc.#linkExp, (_, x, y) => {
+          return `<a href="${y}">${x || y}</a>`;
+        });
+        author.push(`<dt>Author:</dt><dd>${_AUTHOR}</dd>`);
+      }
+    }
+    if (Array.isArray(x.see)) {
+      for (var _iterator8 = jsdoc_createForOfIteratorHelperLoose(x.see), _step8; !(_step8 = _iterator8()).done;) {
+        const _see = _step8.value;
+        const _SEE = _see.replace(AMIJSDoc.#linkExp, (_, x, y) => {
+          return `<a href="${y}">${x || y}</a>`;
+        });
+        see.push(`<dt>See:</dt><dd>${_SEE}</dd>`);
+      }
+    }
+    if (author.length > 0 || version.length > 0 || see.length > 0) {
+      result.push('<dl class="details">');
+      result.push(version.join(''));
+      result.push(author.join(''));
+      result.push(see.join(''));
+      result.push('</dl>');
+    }
+    return result.join('');
+  }
+  static #makeExamples(x, mode) {
+    const result = [];
+    if (Array.isArray(x.examples)) {
+      for (var _iterator9 = jsdoc_createForOfIteratorHelperLoose(x.examples), _step9; !(_step9 = _iterator9()).done;) {
+        const _example = _step9.value;
+        result.push('<h5 class="mt-2"><strong>Example:</strong></h5>');
+        result.push(`<textarea class="form-editor" data-mode="${textToHtml(mode)}">${textToHtml(_example)}</textarea>`);
+      }
+    }
+    return result.join('');
+  }
 }
-function _makeExamples2(x, mode) {
-  const result = [];
-  if (Array.isArray(x.examples)) {
-    for (var _iterator9 = jsdoc_createForOfIteratorHelperLoose(x.examples), _step9; !(_step9 = _iterator9()).done;) {
-      const _example = _step9.value;
-      result.push('<h5 class="mt-2"><strong>Example:</strong></h5>');
-      result.push(`<textarea class="form-editor" data-mode="${textToHtml(mode)}">${textToHtml(_example)}</textarea>`);
-    }
-  }
-  return result.join('');
-}
-Object.defineProperty(AMIJSDoc, _makeExamples, {
-  value: _makeExamples2
-});
-Object.defineProperty(AMIJSDoc, _makeDetails, {
-  value: _makeDetails2
-});
-Object.defineProperty(AMIJSDoc, _makeType, {
-  value: _makeType2
-});
-Object.defineProperty(AMIJSDoc, _makeParam, {
-  value: _makeParam2
-});
-Object.defineProperty(AMIJSDoc, _makeDesc, {
-  value: _makeDesc2
-});
-Object.defineProperty(AMIJSDoc, _makeAlias, {
-  value: _makeAlias2
-});
-Object.defineProperty(AMIJSDoc, _makeFunctionReturn, {
-  value: _makeFunctionReturn2
-});
-Object.defineProperty(AMIJSDoc, _makeFunctionExceptions, {
-  value: _makeFunctionExceptions2
-});
-Object.defineProperty(AMIJSDoc, _makeFunctionParameters, {
-  value: _makeFunctionParameters2
-});
-Object.defineProperty(AMIJSDoc, _makeFunctionSignature, {
-  value: _makeFunctionSignature2
-});
-Object.defineProperty(AMIJSDoc, _makeFunction, {
-  value: _makeFunction2
-});
-Object.defineProperty(AMIJSDoc, _makeVariableSignature, {
-  value: _makeVariableSignature2
-});
-Object.defineProperty(AMIJSDoc, _makeVariable, {
-  value: _makeVariable2
-});
-Object.defineProperty(AMIJSDoc, jsdoc_linkExp, {
-  writable: true,
-  value: /(?:\[\s*([^\s\]]+)\s*])?{@link\s+([^\s}]+)\s*}/g
-});
 function renderJSDoc(menuSelector, bodySelector, json) {
   return new AMIJSDoc(menuSelector, bodySelector, json);
 }
@@ -32077,9 +32048,6 @@ var clipboard_default = /*#__PURE__*/__webpack_require__.n(clipboard);
 ;// CONCATENATED MODULE: ./src/js/AMIAuth.js
 
 
-function AMIAuth_classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
-var AMIAuth_id = 0;
-function AMIAuth_classPrivateFieldLooseKey(name) { return "__private_" + AMIAuth_id++ + "_" + name; }
 
 
 
@@ -32098,48 +32066,25 @@ function AMIAuth_classPrivateFieldLooseKey(name) { return "__private_" + AMIAuth
 
 
 
-var _flags = AMIAuth_classPrivateFieldLooseKey("flags");
-var _userInfo = AMIAuth_classPrivateFieldLooseKey("userInfo");
-var _roleInfo = AMIAuth_classPrivateFieldLooseKey("roleInfo");
-var _bookmarkInfo = AMIAuth_classPrivateFieldLooseKey("bookmarkInfo");
-var _dashboardInfo = AMIAuth_classPrivateFieldLooseKey("dashboardInfo");
-var _awfInfo = AMIAuth_classPrivateFieldLooseKey("awfInfo");
-var _setupAWF = AMIAuth_classPrivateFieldLooseKey("setupAWF");
-var _clean = AMIAuth_classPrivateFieldLooseKey("clean");
-var _update = AMIAuth_classPrivateFieldLooseKey("update");
 class AMIAuth {
-  constructor() {
-    Object.defineProperty(this, _update, {
-      value: _update2
-    });
-    Object.defineProperty(this, _flags, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _userInfo, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _roleInfo, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _bookmarkInfo, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _dashboardInfo, {
-      writable: true,
-      value: {}
-    });
-    Object.defineProperty(this, _awfInfo, {
-      writable: true,
-      value: {}
-    });
+  #flags = {};
+  #userInfo = {};
+  #roleInfo = {};
+  #bookmarkInfo = {};
+  #dashboardInfo = {};
+  #awfInfo = {};
+  static #setupAWF(awfInfo) {
+    try {
+      const result = JSON.parse(base64Decode(awfInfo.config));
+      setDateTimeFormats(result['datetimePrecision'], result['datetimeFormat'], result['dateFormat'], result['timePrecision'], result['timeHMSFormat'], result['timeHMFormat']);
+      return result;
+    } catch (e) {
+      return {};
+    }
   }
   init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, bookmarksAllowed, dashboardsAllowed) {
     const result = $.Deferred();
-    AMIAuth_classPrivateFieldLooseBase(this, _flags)[_flags] = {
+    this.#flags = {
       signInImageURL: signInImageURL,
       signInText: signInText,
       ssoAutoAuthentication: ssoAutoAuthentication,
@@ -32156,7 +32101,7 @@ class AMIAuth {
       dashboardsAllowed: dashboardsAllowed
     };
     js_AMIWebApp.appendHTML('body', sign_in_modal_namespaceObject + change_info_modal_namespaceObject + change_pass_modal_namespaceObject + change_cert_modal_namespaceObject + account_modal_namespaceObject, {
-      dict: AMIAuth_classPrivateFieldLooseBase(this, _flags)[_flags]
+      dict: this.#flags
     }).done(() => {
       $('#B7894CC1_1DAA_4A7E_B7D1_DBDF6F06AC73').submit(e => {
         this.form_login(e);
@@ -32204,18 +32149,18 @@ class AMIAuth {
           return;
         }
         promise.fail((data, message, userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) => {
-          AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).always(() => {
+          this.#update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).always(() => {
             js_AMIWebApp.error(message, true);
           });
         }).done((data, message, userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) => {
-          AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).fail(message => {
+          this.#update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).fail(message => {
             js_AMIWebApp.error(message, true);
           }).done(() => {
             if ((userInfo.AMIUser || 'guest') === (userInfo.guestUser || 'guest')) {
               js_AMIWebApp.error('Authentification failed', true);
             } else {
               $('#D2B5FADE_97A3_4B8C_8561_7A9AEACDBE5B').modal('hide');
-              AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
+              AMIAuth.#clean();
               js_AMIWebApp.unlock();
             }
           });
@@ -32224,20 +32169,20 @@ class AMIAuth {
     };
     const userdata = js_AMIRouter.getWebAppArgs()['userdata'] || '';
     js_AMICommand.signInByCertificate().fail((data, message, userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) => {
-      AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).always(() => {
+      this.#update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).always(() => {
         result.reject(message);
       });
     }).done((data, message, userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) => {
       _internal_then(js_AMIWebApp.onReady(userdata), () => {
         js_AMIWebApp._isReady = true;
-        AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).then(message => {
+        this.#update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).then(message => {
           result.resolve(message);
         }, message => {
           result.reject(message);
         });
       }, message => {
         js_AMIWebApp._isReady = true;
-        AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).then(() => {
+        this.#update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).then(() => {
           result.reject(message);
         }, () => {
           result.reject(message);
@@ -32246,72 +32191,217 @@ class AMIAuth {
     });
     return result;
   }
+  static #clean() {
+    $('#B7894CC1_1DAA_4A7E_B7D1_DBDF6F06AC73').trigger('reset');
+    $('#EE055CD4_E58F_4834_8020_986AE3F8D67D').trigger('reset');
+    $('#DA2047A2_9E5D_420D_B6E7_FA261D2EF10F').trigger('reset');
+    $('#E92A1097_983B_4857_875F_07E4659B41B0').trigger('reset');
+  }
+  #update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) {
+    const result = $.Deferred();
+    awfInfo = AMIAuth.#setupAWF(awfInfo);
+    $('#A09AE316_7068_4BC1_96A9_6B87D28863FE').prop('disabled', !userInfo.clientDNInSession || !userInfo.issuerDNInSession);
+    $('#C3E94F6D_48E0_86C0_3534_691728E492F4').attr('src', awfInfo.privacyPolicyURL || `${js_AMIWebApp.originURL}/docs/privacy_policy.html`);
+    $('#E50FF8BD_B0F5_CD72_F9DC_FC2BFA5DBA27').attr('src', awfInfo.privacyPolicyURL || `${js_AMIWebApp.originURL}/docs/privacy_policy.html`);
+    const dict = {
+      ...this.#flags,
+      userInfo: this.#userInfo = userInfo,
+      roleInfo: this.#roleInfo = roleInfo,
+      bookmarkInfo: this.#bookmarkInfo = bookmarkInfo,
+      dashboardInfo: this.#dashboardInfo = dashboardInfo,
+      awfInfo: this.#awfInfo = awfInfo
+    };
+    const user = userInfo.AMIUser || 'guest';
+    const guest = userInfo.guestUser || 'guest';
+    if (user !== guest) {
+      const firstName = userInfo.firstName || '';
+      const lastName = userInfo.lastName || '';
+      const email = userInfo.email || '';
+      const clientDNInSession = userInfo.clientDNInSession || '';
+      const issuerDNInSession = userInfo.issuerDNInSession || '';
+      const clientDNInAMI = userInfo.clientDNInAMI || '';
+      const issuerDNInAMI = userInfo.issuerDNInAMI || '';
+      const notBefore = userInfo.notBefore || '';
+      const notAfter = userInfo.notAfter || '';
+      const jwtToken = userInfo.mqttToken || '';
+      const valid = userInfo.valid || 'false';
+      $('#E513F27D_5521_4B08_BF61_52AFB81356F7').val(firstName);
+      $('#AFF0B5C0_BEEC_4842_916D_DCBA7F589195').val(lastName);
+      $('#C587486B_62C0_4B6E_9288_D8F9F89D157B').val(email);
+      $('#ABEB0291_40B0_414A_A42B_E7EABB9B487E').val(firstName);
+      $('#A5AFDB62_1034_4F66_A3E6_9341B31FA290').val(lastName);
+      $('#D730A774_05EA_47AB_A0C8_D92753802E3E').val(email);
+      $('#FE2F6232_C256_4B80_939C_EBEC90320308').val(issuerDNInSession);
+      $('#F42FAF6B_2C8D_4142_8BD9_E5BCDCAA05AA').val(issuerDNInAMI);
+      $('#C76805D7_1E86_4231_9071_1D04783423BB').val(clientDNInSession);
+      $('#D1BEE3BF_9161_41DC_BC53_C44FFE4D2522').val(clientDNInAMI);
+      const tokenButton = $('#A3C9E9DE_B73C_2DE2_8BB2_A93982940E77').attr('data-clipboard-text', jwtToken);
+      if (this.hasRole('AMI_ADMIN')) {
+        tokenButton.show();
+      } else {
+        tokenButton.hide();
+      }
+      if (issuerDNInSession && clientDNInSession) {
+        $('#C8B8F968_CCAA_26DF_8665_2B518189E3DE').val(issuerDNInSession);
+        $('#A962ED59_DB71_C10C_6173_3615C6F48028').val(clientDNInSession);
+        $('#DB0223B3_D721_7EEB_50B8_032A04C7D218').prop('disabled', issuerDNInSession === issuerDNInAMI && clientDNInSession === clientDNInAMI);
+      } else {
+        $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val('N/A');
+        $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val('N/A');
+        $('#DB0223B3_D721_7EEB_50B8_032A04C7D218').prop('disabled', true);
+      }
+      if (issuerDNInAMI && clientDNInAMI) {
+        $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val(issuerDNInAMI);
+        $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val(clientDNInAMI);
+        $('#B39BA3DE_4BA7_CE2F_BB80_BB6F4A5CB2A2').prop('disabled', false);
+      } else {
+        $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val('N/A');
+        $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val('N/A');
+        $('#B39BA3DE_4BA7_CE2F_BB80_BB6F4A5CB2A2').prop('disabled', true);
+      }
+      const table = [];
+      for (const role in roleInfo) {
+        table.push('<tr>');
+        table.push(`<td>${js_AMIWebApp.textToHtml(roleInfo[role].name || 'N/A')}</td>`);
+        table.push(`<td>${js_AMIWebApp.textToHtml(roleInfo[role].description || 'N/A')}</td>`);
+        table.push('</tr>');
+      }
+      $('#BB07676B_EACA_9B42_ED51_477DB2976041').html(table.join(''));
+      let icon = '';
+      let message = '';
+      let bgColor;
+      let fgColor;
+      if (valid !== 'false') {
+        if (!this.#flags.ssoAutoAuthentication) {
+          if (clientDNInSession && clientDNInAMI && issuerDNInSession && issuerDNInAMI && (clientDNInSession !== clientDNInAMI || issuerDNInSession !== issuerDNInAMI)) {
+            message = 'The X.509 certificate in the session differs from the one in AMI.';
+          }
+        }
+        if (message) {
+          $('#D944B01D_2E8D_4EE9_9DCC_2691438BBA16').html(`<i class="bi bi-info-circle text-warning"></i> ${message}`);
+          icon = `
+<a class="nav-link text-warning" href="javascript:amiLogin.accountStatus();">
+	<i class="bi bi-info-circle"></i>
+</a>`;
+        }
+        $('#F3FF9F43_DE72_40BB_B1BA_B7B3C9002671').css('color', '#006400').html('<i class="bi bi-asterisk"></i> valid <i class="bi bi-asterisk"></i>').closest('.rounded').css('background', `#B8D49B url("${certificate_green_namespaceObject}") no-repeat center center`).css('background-size', 'cover');
+        $('#E91280F6_E7C6_3E53_A457_646995C99317').text(`valid from ${notBefore || 'N/A'} to ${notAfter || 'N/A'}`);
+        bgColor = '#B8D49B';
+        fgColor = '#006400';
+      } else {
+        if (!this.#flags.ssoAutoAuthentication) {
+          message = 'Check your membership.';
+        }
+        if (message) {
+          $('#D944B01D_2E8D_4EE9_9DCC_2691438BBA16').html(`<i class="bi bi-info-circle text-danger"></i> ${message}`);
+          icon = `
+<a class="nav-link text-danger" href="javascript:amiAuth.accountStatus();">
+	<i class="bi bi-info-circle"></i>
+</a>`;
+        }
+        $('#F3FF9F43_DE72_40BB_B1BA_B7B3C9002671').css('color', '#DC3545').html('<i class="bi bi-asterisk"></i> invalid <i class="bi bi-asterisk"></i>').closest('.rounded').css('background', `#E8C8CF url("${certificate_pink_namespaceObject}") no-repeat center center`).css('background-size', 'cover');
+        $('#E91280F6_E7C6_3E53_A457_646995C99317').text(`valid from ${notBefore || 'N/A'} to ${notAfter || 'N/A'}`);
+        bgColor = '#E8C8CF';
+        fgColor = '#DC3545';
+      }
+      browser.toCanvas(document.getElementById('EC948084_8C0A_CEBF_58C9_086046AB2456'), `${user}|${firstName} ${lastName}|${email}|${clientDNInAMI}|${issuerDNInAMI}`, {
+        color: {
+          dark: fgColor,
+          light: bgColor
+        },
+        margin: 0,
+        width: 150
+      });
+      dict['user'] = user;
+      dict['icon'] = icon;
+      js_AMIWebApp.replaceHTML('#ami_login_menu_content', sign_out_button_namespaceObject, {
+        dict: dict
+      }).done(() => {
+        triggerLogin().then(() => {
+          result.resolve();
+        }, message => {
+          result.reject(message);
+        });
+      });
+    } else {
+      js_AMIWebApp.replaceHTML('#ami_login_menu_content', sign_in_button_namespaceObject, {
+        dict: dict
+      }).done(() => {
+        triggerLogout().then(() => {
+          result.resolve();
+        }, message => {
+          result.reject(message);
+        });
+      });
+    }
+    return result.promise();
+  }
   getJWTToken() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].mqttToken || '';
+    return this.#userInfo.mqttToken || '';
   }
   getMQTTBrokerEndpoint() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo].mqttBrokerEndpoint || '';
+    return this.#awfInfo.mqttBrokerEndpoint || '';
   }
   getAMIPipelineEndpoint() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo].amiPipelineEndpoint || '';
+    return this.#awfInfo.amiPipelineEndpoint || '';
   }
   getUserInfo() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo];
+    return this.#userInfo;
   }
   getRoleInfo() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _roleInfo)[_roleInfo];
+    return this.#roleInfo;
   }
   getBookmarkInfo() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _bookmarkInfo)[_bookmarkInfo];
+    return this.#bookmarkInfo;
   }
   getDashboardInfo() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _dashboardInfo)[_dashboardInfo];
+    return this.#dashboardInfo;
   }
   getAWFInfo() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo];
+    return this.#awfInfo;
   }
   getUser() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].AMIUser || 'guest';
+    return this.#userInfo.AMIUser || 'guest';
   }
   getGuest() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].guestUser || 'guest';
+    return this.#userInfo.guestUser || 'guest';
   }
   getNotBeforeDate() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].notBefore || '';
+    return this.#userInfo.notBefore || '';
   }
   getNotAfterDate() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].notAfter || '';
+    return this.#userInfo.notAfter || '';
   }
   getClientDN() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].clientDNInSession || '';
+    return this.#userInfo.clientDNInSession || '';
   }
   getIssuerDN() {
-    return AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].issuerDNInSession || '';
+    return this.#userInfo.issuerDNInSession || '';
   }
   isValid() {
-    return (AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].valid || 'false') !== 'false';
+    return (this.#userInfo.valid || 'false') !== 'false';
   }
   isAuthenticated() {
     return this.getUser() !== this.getGuest();
   }
   hasRole(roleName) {
-    return roleName in AMIAuth_classPrivateFieldLooseBase(this, _roleInfo)[_roleInfo];
+    return roleName in this.#roleInfo;
   }
   update() {
     js_AMIWebApp.lock();
     return js_AMICommand.signInByCertificate().done((data, message, userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) => {
-      AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).always(() => {
+      this.#update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).always(() => {
         js_AMIWebApp.unlock();
       });
     });
   }
   sso() {
-    AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
-    window.open(AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo].ssoAuthURL ? `${AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo].ssoAuthURL}?response_type=code&client_id=${encodeURIComponent(AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo].ssoClientId || '')}&redirect_uri=${encodeURIComponent(js_AMIRouter.getOriginURL())}/docs/sso.html` : `${js_AMIRouter.getOriginURL()}/docs/sso_not_configured.html`, AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo].ssoLabel || 'Single Sign-On', 'location=no, menubar=no, status=no, scrollbars=no, width=800, height=525');
+    AMIAuth.#clean();
+    window.open(this.#awfInfo.ssoAuthURL ? `${this.#awfInfo.ssoAuthURL}?response_type=code&client_id=${encodeURIComponent(this.#awfInfo.ssoClientId || '')}&redirect_uri=${encodeURIComponent(js_AMIRouter.getOriginURL())}/docs/sso.html` : `${js_AMIRouter.getOriginURL()}/docs/sso_not_configured.html`, this.#awfInfo.ssoLabel || 'Single Sign-On', 'location=no, menubar=no, status=no, scrollbars=no, width=800, height=525');
   }
   signIn() {
-    AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
-    if (AMIAuth_classPrivateFieldLooseBase(this, _flags)[_flags].captchaAllowed) {
+    AMIAuth.#clean();
+    if (this.#flags.captchaAllowed) {
       js_AMICommand.execute('GenerateCaptcha').then(data => {
         const image = js_AMIWebApp.jspath('..field{.@name==="image"}.$', data)[0] || '';
         const hash = js_AMIWebApp.jspath('..field{.@name==="hash"}.$', data)[0] || '';
@@ -32330,7 +32420,7 @@ class AMIAuth {
   signOut() {
     js_AMIWebApp.lock();
     return js_AMICommand.signOut().always((data, message, userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) => {
-      AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).then(() => {
+      this.#update(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo).then(() => {
         js_AMIWebApp.unlock();
       }, message => {
         js_AMIWebApp.error(message, true);
@@ -32338,19 +32428,19 @@ class AMIAuth {
     });
   }
   changeInfo() {
-    AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
+    AMIAuth.#clean();
     $('#D9EAF998_ED8E_44D2_A0BE_8C5CF5E438BD').modal('show');
   }
   changePass() {
-    AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
+    AMIAuth.#clean();
     $('#E92A1097_983B_4857_875F_07E4659B41B0').modal('show');
   }
   changeCertificate() {
-    AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
+    AMIAuth.#clean();
     $('#ECB92A89_A706_7C76_E248_E57D14C8B205').modal('show');
   }
   accountStatus() {
-    AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
+    AMIAuth.#clean();
     $('#AB1CB183_96EB_4116_8A9E_4409BE058F34').modal('show');
   }
   form_login(e) {
@@ -32362,10 +32452,10 @@ class AMIAuth {
     const promise = username && password ? js_AMICommand.signInByPassword(username.trim(), password.trim()) : js_AMICommand.signInByCertificate();
     js_AMIWebApp.lock();
     promise.then((data, message, userInfo, roleInfo, bookmarkInfo, udpInfo, ssoInfo) => {
-      AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, udpInfo, ssoInfo).then(() => {
+      this.#update(userInfo, roleInfo, bookmarkInfo, udpInfo, ssoInfo).then(() => {
         if ((userInfo.AMIUser || 'guest') !== (userInfo.guestUser || 'guest')) {
           $('#D2B5FADE_97A3_4B8C_8561_7A9AEACDBE5B').modal('hide');
-          AMIAuth_classPrivateFieldLooseBase(AMIAuth, _clean)[_clean]();
+          AMIAuth.#clean();
           js_AMIWebApp.unlock();
         }
       }, message => {
@@ -32382,7 +32472,7 @@ class AMIAuth {
         js_AMIWebApp.error(message, true);
       }
     }, (data, message, userInfo, roleInfo, bookmarkInfo, udpInfo, ssoInfo) => {
-      AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](userInfo, roleInfo, bookmarkInfo, udpInfo, ssoInfo).always(() => {
+      this.#update(userInfo, roleInfo, bookmarkInfo, udpInfo, ssoInfo).always(() => {
         js_AMIWebApp.error(message, true);
       });
     });
@@ -32422,7 +32512,7 @@ class AMIAuth {
     e.preventDefault();
     const values = $(e.target).serializeObject();
     js_AMIWebApp.lock();
-    js_AMICommand.changePassword(AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].AMIUser || 'guest', values['old_password'], values['new_password']).then((data, message) => {
+    js_AMICommand.changePassword(this.#userInfo.AMIUser || 'guest', values['old_password'], values['new_password']).then((data, message) => {
       js_AMIWebApp.success(message, true);
     }, (data, message) => {
       js_AMIWebApp.error(message, true);
@@ -32431,11 +32521,11 @@ class AMIAuth {
   form_attachCert() {
     js_AMIWebApp.lock();
     return js_AMICommand.attachCertificate().then((data, message) => {
-      $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val(AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].issuerDNInAMI = AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].issuerDNInSession);
-      $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val(AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].clientDNInAMI = AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].clientDNInSession);
+      $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val(this.#userInfo.issuerDNInAMI = this.#userInfo.issuerDNInSession);
+      $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val(this.#userInfo.clientDNInAMI = this.#userInfo.clientDNInSession);
       $('#DB0223B3_D721_7EEB_50B8_032A04C7D218').prop('disabled', true);
       $('#B39BA3DE_4BA7_CE2F_BB80_BB6F4A5CB2A2').prop('disabled', false);
-      AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo], AMIAuth_classPrivateFieldLooseBase(this, _roleInfo)[_roleInfo], AMIAuth_classPrivateFieldLooseBase(this, _bookmarkInfo)[_bookmarkInfo], AMIAuth_classPrivateFieldLooseBase(this, _dashboardInfo)[_dashboardInfo], AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo]).then(() => {
+      this.#update(this.#userInfo, this.#roleInfo, this.#bookmarkInfo, this.#dashboardInfo, this.#awfInfo).then(() => {
         js_AMIWebApp.success(message, true);
       }, message => {
         js_AMIWebApp.error(message, true);
@@ -32447,11 +32537,11 @@ class AMIAuth {
   form_detachCert() {
     js_AMIWebApp.lock();
     return js_AMICommand.detachCertificate().then((data, message) => {
-      $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val(AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].issuerDNInAMI = '');
-      $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val(AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].clientDNInAMI = '');
-      $('#DB0223B3_D721_7EEB_50B8_032A04C7D218').prop('disabled', !AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].clientDNInSession || !AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo].issuerDNInSession);
+      $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val(this.#userInfo.issuerDNInAMI = '');
+      $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val(this.#userInfo.clientDNInAMI = '');
+      $('#DB0223B3_D721_7EEB_50B8_032A04C7D218').prop('disabled', !this.#userInfo.clientDNInSession || !this.#userInfo.issuerDNInSession);
       $('#B39BA3DE_4BA7_CE2F_BB80_BB6F4A5CB2A2').prop('disabled', true);
-      AMIAuth_classPrivateFieldLooseBase(this, _update)[_update](AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo], AMIAuth_classPrivateFieldLooseBase(this, _roleInfo)[_roleInfo], AMIAuth_classPrivateFieldLooseBase(this, _bookmarkInfo)[_bookmarkInfo], AMIAuth_classPrivateFieldLooseBase(this, _dashboardInfo)[_dashboardInfo], AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo]).then(() => {
+      this.#update(this.#userInfo, this.#roleInfo, this.#bookmarkInfo, this.#dashboardInfo, this.#awfInfo).then(() => {
         js_AMIWebApp.success(message, true);
       }, message => {
         js_AMIWebApp.error(message, true);
@@ -32461,166 +32551,6 @@ class AMIAuth {
     });
   }
 }
-function _setupAWF2(awfInfo) {
-  try {
-    const result = JSON.parse(base64Decode(awfInfo.config));
-    setDateTimeFormats(result['datetimePrecision'], result['datetimeFormat'], result['dateFormat'], result['timePrecision'], result['timeHMSFormat'], result['timeHMFormat']);
-    return result;
-  } catch (e) {
-    return {};
-  }
-}
-function _clean2() {
-  $('#B7894CC1_1DAA_4A7E_B7D1_DBDF6F06AC73').trigger('reset');
-  $('#EE055CD4_E58F_4834_8020_986AE3F8D67D').trigger('reset');
-  $('#DA2047A2_9E5D_420D_B6E7_FA261D2EF10F').trigger('reset');
-  $('#E92A1097_983B_4857_875F_07E4659B41B0').trigger('reset');
-}
-function _update2(userInfo, roleInfo, bookmarkInfo, dashboardInfo, awfInfo) {
-  const result = $.Deferred();
-  awfInfo = AMIAuth_classPrivateFieldLooseBase(AMIAuth, _setupAWF)[_setupAWF](awfInfo);
-  $('#A09AE316_7068_4BC1_96A9_6B87D28863FE').prop('disabled', !userInfo.clientDNInSession || !userInfo.issuerDNInSession);
-  $('#C3E94F6D_48E0_86C0_3534_691728E492F4').attr('src', awfInfo.privacyPolicyURL || `${js_AMIWebApp.originURL}/docs/privacy_policy.html`);
-  $('#E50FF8BD_B0F5_CD72_F9DC_FC2BFA5DBA27').attr('src', awfInfo.privacyPolicyURL || `${js_AMIWebApp.originURL}/docs/privacy_policy.html`);
-  const dict = {
-    ...AMIAuth_classPrivateFieldLooseBase(this, _flags)[_flags],
-    userInfo: AMIAuth_classPrivateFieldLooseBase(this, _userInfo)[_userInfo] = userInfo,
-    roleInfo: AMIAuth_classPrivateFieldLooseBase(this, _roleInfo)[_roleInfo] = roleInfo,
-    bookmarkInfo: AMIAuth_classPrivateFieldLooseBase(this, _bookmarkInfo)[_bookmarkInfo] = bookmarkInfo,
-    dashboardInfo: AMIAuth_classPrivateFieldLooseBase(this, _dashboardInfo)[_dashboardInfo] = dashboardInfo,
-    awfInfo: AMIAuth_classPrivateFieldLooseBase(this, _awfInfo)[_awfInfo] = awfInfo
-  };
-  const user = userInfo.AMIUser || 'guest';
-  const guest = userInfo.guestUser || 'guest';
-  if (user !== guest) {
-    const firstName = userInfo.firstName || '';
-    const lastName = userInfo.lastName || '';
-    const email = userInfo.email || '';
-    const clientDNInSession = userInfo.clientDNInSession || '';
-    const issuerDNInSession = userInfo.issuerDNInSession || '';
-    const clientDNInAMI = userInfo.clientDNInAMI || '';
-    const issuerDNInAMI = userInfo.issuerDNInAMI || '';
-    const notBefore = userInfo.notBefore || '';
-    const notAfter = userInfo.notAfter || '';
-    const jwtToken = userInfo.mqttToken || '';
-    const valid = userInfo.valid || 'false';
-    $('#E513F27D_5521_4B08_BF61_52AFB81356F7').val(firstName);
-    $('#AFF0B5C0_BEEC_4842_916D_DCBA7F589195').val(lastName);
-    $('#C587486B_62C0_4B6E_9288_D8F9F89D157B').val(email);
-    $('#ABEB0291_40B0_414A_A42B_E7EABB9B487E').val(firstName);
-    $('#A5AFDB62_1034_4F66_A3E6_9341B31FA290').val(lastName);
-    $('#D730A774_05EA_47AB_A0C8_D92753802E3E').val(email);
-    $('#FE2F6232_C256_4B80_939C_EBEC90320308').val(issuerDNInSession);
-    $('#F42FAF6B_2C8D_4142_8BD9_E5BCDCAA05AA').val(issuerDNInAMI);
-    $('#C76805D7_1E86_4231_9071_1D04783423BB').val(clientDNInSession);
-    $('#D1BEE3BF_9161_41DC_BC53_C44FFE4D2522').val(clientDNInAMI);
-    const tokenButton = $('#A3C9E9DE_B73C_2DE2_8BB2_A93982940E77').attr('data-clipboard-text', jwtToken);
-    if (this.hasRole('AMI_ADMIN')) {
-      tokenButton.show();
-    } else {
-      tokenButton.hide();
-    }
-    if (issuerDNInSession && clientDNInSession) {
-      $('#C8B8F968_CCAA_26DF_8665_2B518189E3DE').val(issuerDNInSession);
-      $('#A962ED59_DB71_C10C_6173_3615C6F48028').val(clientDNInSession);
-      $('#DB0223B3_D721_7EEB_50B8_032A04C7D218').prop('disabled', issuerDNInSession === issuerDNInAMI && clientDNInSession === clientDNInAMI);
-    } else {
-      $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val('N/A');
-      $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val('N/A');
-      $('#DB0223B3_D721_7EEB_50B8_032A04C7D218').prop('disabled', true);
-    }
-    if (issuerDNInAMI && clientDNInAMI) {
-      $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val(issuerDNInAMI);
-      $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val(clientDNInAMI);
-      $('#B39BA3DE_4BA7_CE2F_BB80_BB6F4A5CB2A2').prop('disabled', false);
-    } else {
-      $('#C9297C00_920D_4AE6_8A20_B0DDB383CC6A').val('N/A');
-      $('#D4B29AC0_4867_815B_8657_5A1D623C29CF').val('N/A');
-      $('#B39BA3DE_4BA7_CE2F_BB80_BB6F4A5CB2A2').prop('disabled', true);
-    }
-    const table = [];
-    for (const role in roleInfo) {
-      table.push('<tr>');
-      table.push(`<td>${js_AMIWebApp.textToHtml(roleInfo[role].name || 'N/A')}</td>`);
-      table.push(`<td>${js_AMIWebApp.textToHtml(roleInfo[role].description || 'N/A')}</td>`);
-      table.push('</tr>');
-    }
-    $('#BB07676B_EACA_9B42_ED51_477DB2976041').html(table.join(''));
-    let icon = '';
-    let message = '';
-    let bgColor;
-    let fgColor;
-    if (valid !== 'false') {
-      if (!AMIAuth_classPrivateFieldLooseBase(this, _flags)[_flags].ssoAutoAuthentication) {
-        if (clientDNInSession && clientDNInAMI && issuerDNInSession && issuerDNInAMI && (clientDNInSession !== clientDNInAMI || issuerDNInSession !== issuerDNInAMI)) {
-          message = 'The X.509 certificate in the session differs from the one in AMI.';
-        }
-      }
-      if (message) {
-        $('#D944B01D_2E8D_4EE9_9DCC_2691438BBA16').html(`<i class="bi bi-info-circle text-warning"></i> ${message}`);
-        icon = `
-<a class="nav-link text-warning" href="javascript:amiLogin.accountStatus();">
-	<i class="bi bi-info-circle"></i>
-</a>`;
-      }
-      $('#F3FF9F43_DE72_40BB_B1BA_B7B3C9002671').css('color', '#006400').html('<i class="bi bi-asterisk"></i> valid <i class="bi bi-asterisk"></i>').closest('.rounded').css('background', `#B8D49B url("${certificate_green_namespaceObject}") no-repeat center center`).css('background-size', 'cover');
-      $('#E91280F6_E7C6_3E53_A457_646995C99317').text(`valid from ${notBefore || 'N/A'} to ${notAfter || 'N/A'}`);
-      bgColor = '#B8D49B';
-      fgColor = '#006400';
-    } else {
-      if (!AMIAuth_classPrivateFieldLooseBase(this, _flags)[_flags].ssoAutoAuthentication) {
-        message = 'Check your membership.';
-      }
-      if (message) {
-        $('#D944B01D_2E8D_4EE9_9DCC_2691438BBA16').html(`<i class="bi bi-info-circle text-danger"></i> ${message}`);
-        icon = `
-<a class="nav-link text-danger" href="javascript:amiAuth.accountStatus();">
-	<i class="bi bi-info-circle"></i>
-</a>`;
-      }
-      $('#F3FF9F43_DE72_40BB_B1BA_B7B3C9002671').css('color', '#DC3545').html('<i class="bi bi-asterisk"></i> invalid <i class="bi bi-asterisk"></i>').closest('.rounded').css('background', `#E8C8CF url("${certificate_pink_namespaceObject}") no-repeat center center`).css('background-size', 'cover');
-      $('#E91280F6_E7C6_3E53_A457_646995C99317').text(`valid from ${notBefore || 'N/A'} to ${notAfter || 'N/A'}`);
-      bgColor = '#E8C8CF';
-      fgColor = '#DC3545';
-    }
-    browser.toCanvas(document.getElementById('EC948084_8C0A_CEBF_58C9_086046AB2456'), `${user}|${firstName} ${lastName}|${email}|${clientDNInAMI}|${issuerDNInAMI}`, {
-      color: {
-        dark: fgColor,
-        light: bgColor
-      },
-      margin: 0,
-      width: 150
-    });
-    dict['user'] = user;
-    dict['icon'] = icon;
-    js_AMIWebApp.replaceHTML('#ami_login_menu_content', sign_out_button_namespaceObject, {
-      dict: dict
-    }).done(() => {
-      triggerLogin().then(() => {
-        result.resolve();
-      }, message => {
-        result.reject(message);
-      });
-    });
-  } else {
-    js_AMIWebApp.replaceHTML('#ami_login_menu_content', sign_in_button_namespaceObject, {
-      dict: dict
-    }).done(() => {
-      triggerLogout().then(() => {
-        result.resolve();
-      }, message => {
-        result.reject(message);
-      });
-    });
-  }
-  return result.promise();
-}
-Object.defineProperty(AMIAuth, _clean, {
-  value: _clean2
-});
-Object.defineProperty(AMIAuth, _setupAWF, {
-  value: _setupAWF2
-});
 /* harmony default export */ const js_AMIAuth = (new AMIAuth());
 ;// CONCATENATED MODULE: ./src/js/utilities/subapps.js
 
@@ -33061,9 +32991,6 @@ const sign_in_image_namespaceObject = __webpack_require__.p + "assets/images/sig
 ;// CONCATENATED MODULE: ./src/js/AMIWebApp.js
 
 
-function AMIWebApp_classPrivateFieldLooseBase(receiver, privateKey) { if (!Object.prototype.hasOwnProperty.call(receiver, privateKey)) { throw new TypeError("attempted to use private field on non-instance"); } return receiver; }
-var AMIWebApp_id = 0;
-function AMIWebApp_classPrivateFieldLooseKey(name) { return "__private_" + AMIWebApp_id++ + "_" + name; }
 
 
 
@@ -33087,98 +33014,20 @@ function AMIWebApp_classPrivateFieldLooseKey(name) { return "__private_" + AMIWe
 
 
 
-var _embedded = AMIWebApp_classPrivateFieldLooseKey("embedded");
-var _noBootstrap = AMIWebApp_classPrivateFieldLooseKey("noBootstrap");
-var _noMoment = AMIWebApp_classPrivateFieldLooseKey("noMoment");
-var _noSelect = AMIWebApp_classPrivateFieldLooseKey("noSelect2");
-var _globalDeferred = AMIWebApp_classPrivateFieldLooseKey("globalDeferred");
 class AMIWebApp {
+  #embedded = false;
+  #noBootstrap = false;
+  #noMoment = false;
+  #noSelect2 = false;
+  #globalDeferred = $.Deferred();
+  _isReady = false;
+  webAppURL = '';
+  scriptURL = '';
+  originURL = '';
+  args = {};
+  hash = '';
+  bootstrapVersion = 4;
   constructor() {
-    Object.defineProperty(this, _embedded, {
-      writable: true,
-      value: false
-    });
-    Object.defineProperty(this, _noBootstrap, {
-      writable: true,
-      value: false
-    });
-    Object.defineProperty(this, _noMoment, {
-      writable: true,
-      value: false
-    });
-    Object.defineProperty(this, _noSelect, {
-      writable: true,
-      value: false
-    });
-    Object.defineProperty(this, _globalDeferred, {
-      writable: true,
-      value: $.Deferred()
-    });
-    this._isReady = false;
-    this.webAppURL = '';
-    this.scriptURL = '';
-    this.originURL = '';
-    this.args = {};
-    this.hash = '';
-    this.bootstrapVersion = 4;
-    this._internal_then = _internal_then;
-    this._internal_always = _internal_always;
-    this.typeOf = typeOf;
-    this.asArray = asArray;
-    this.isString = isString;
-    this.isArray = isArray;
-    this.isObject = isObject;
-    this.isSet = isSet;
-    this.isMap = isMap;
-    this.setupParams = setupParams;
-    this.setup = setup;
-    this.getStack = getStack;
-    this.lock = lock;
-    this.unlock = unlock;
-    this.modalEnter = modalEnter;
-    this.modalLeave = modalLeave;
-    this.canLeave = canLeave;
-    this.error = error;
-    this.info = info;
-    this.success = success;
-    this.warning = warning;
-    this.flush = flush;
-    this.base64Encode = base64Encode;
-    this.base64Decode = base64Decode;
-    this.textToHtml = textToHtml;
-    this.htmlToText = htmlToText;
-    this.textToString = textToString;
-    this.stringToText = stringToText;
-    this.htmlToString = htmlToString;
-    this.stringToHtml = stringToHtml;
-    this.textToSQL = textToSQL;
-    this.sqlToText = sqlToText;
-    this.fillBreadcrumb = fillBreadcrumb;
-    this.replaceHTML = replaceHTML;
-    this.prependHTML = prependHTML;
-    this.appendHTML = appendHTML;
-    this.parentHTML = parentHTML;
-    this.formatTWIG = formatTWIG;
-    this.renderJSDoc = renderJSDoc;
-    this.jspath = (jspath_default()).apply;
-    this.loadResources = loadResources;
-    this.loadSheets = loadSheets;
-    this.loadScripts = loadScripts;
-    this.loadJSONs = loadJSONs;
-    this.loadXMLs = loadXMLs;
-    this.loadHTMLs = loadHTMLs;
-    this.loadTWIGs = loadTWIGs;
-    this.loadTexts = loadTexts;
-    this._subapps = _subapps;
-    this.loadSubApp = loadSubApp;
-    this.loadSubAppAlt = loadSubAppAlt;
-    this.loadSubAppByURL = loadSubAppByURL;
-    this._controls = _controls;
-    this.loadControl = loadControl;
-    this.createControl = createControl;
-    this.createControlInBody = createControlInBody;
-    this.createControlInContainer = createControlInContainer;
-    this.createControlFromWebLink = createControlFromWebLink;
     $AMINamespace('ami', {
       awf: {
         buildVersion: '2.0.0',
@@ -33195,10 +33044,10 @@ class AMIWebApp {
     AMIExtension();
     AMIInterface();
     const scriptArgs = js_AMIRouter.getScriptArgs();
-    AMIWebApp_classPrivateFieldLooseBase(this, _embedded)[_embedded] = 'embedded' in scriptArgs;
-    AMIWebApp_classPrivateFieldLooseBase(this, _noBootstrap)[_noBootstrap] = 'nobootstrap' in scriptArgs;
-    AMIWebApp_classPrivateFieldLooseBase(this, _noSelect)[_noSelect] = 'noselect2' in scriptArgs;
-    AMIWebApp_classPrivateFieldLooseBase(this, _noMoment)[_noMoment] = 'nomoment' in scriptArgs;
+    this.#embedded = 'embedded' in scriptArgs;
+    this.#noBootstrap = 'nobootstrap' in scriptArgs;
+    this.#noSelect2 = 'noselect2' in scriptArgs;
+    this.#noMoment = 'nomoment' in scriptArgs;
     this.webAppURL = js_AMIRouter.getWebAppURL();
     this.scriptURL = js_AMIRouter.getScriptURL();
     this.originURL = js_AMIRouter.getOriginURL();
@@ -33210,7 +33059,7 @@ class AMIWebApp {
     }
     const resourcesCSS = [];
     const resourcesJS = [];
-    if (!AMIWebApp_classPrivateFieldLooseBase(this, _noBootstrap)[_noBootstrap] && typeof jQuery.fn.modal !== 'function') {
+    if (!this.#noBootstrap && typeof jQuery.fn.modal !== 'function') {
       if (this.bootstrapVersion === 4) {
         resourcesJS.push(`${this.originURL}/js/assets/css/bootstrap4.min.css`);
         resourcesJS.push(`${this.originURL}/js/assets/js/bootstrap4.bundle.min.js`);
@@ -33219,11 +33068,11 @@ class AMIWebApp {
         resourcesJS.push(`${this.originURL}/js/assets/js/bootstrap5.bundle.min.js`);
       }
     }
-    if (!AMIWebApp_classPrivateFieldLooseBase(this, _noSelect)[_noSelect] && typeof jQuery.fn.select2 !== 'function') {
+    if (!this.#noSelect2 && typeof jQuery.fn.select2 !== 'function') {
       resourcesCSS.push(`${this.originURL}/js/assets/css/select2.min.css`);
       resourcesJS.push(`${this.originURL}/js/assets/js/select2.min.js`);
     }
-    if (!AMIWebApp_classPrivateFieldLooseBase(this, _noMoment)[_noMoment] && typeof window.moment !== 'function') {
+    if (!this.#noMoment && typeof window.moment !== 'function') {
       resourcesJS.push(`${this.originURL}/js/assets/js/moment.min.js`);
     }
     loadResources([...resourcesCSS, ...resourcesJS], {
@@ -33232,28 +33081,86 @@ class AMIWebApp {
       window.JSPath = (jspath_default());
       __webpack_require__(7371);
       __webpack_require__(3340)(window.moment);
-      AMIWebApp_classPrivateFieldLooseBase(this, _globalDeferred)[_globalDeferred].resolve(resources);
+      this.#globalDeferred.resolve(resources);
     }).fail(message => {
-      AMIWebApp_classPrivateFieldLooseBase(this, _globalDeferred)[_globalDeferred].reject(message);
+      this.#globalDeferred.reject(message);
     });
   }
   isEmbedded() {
-    return AMIWebApp_classPrivateFieldLooseBase(this, _embedded)[_embedded];
+    return this.#embedded;
   }
+  _internal_then = _internal_then;
+  _internal_always = _internal_always;
+  typeOf = typeOf;
+  asArray = asArray;
+  isString = isString;
+  isArray = isArray;
+  isObject = isObject;
+  isSet = isSet;
+  isMap = isMap;
+  setupParams = setupParams;
+  setup = setup;
+  getStack = getStack;
+  lock = lock;
+  unlock = unlock;
+  modalEnter = modalEnter;
+  modalLeave = modalLeave;
+  canLeave = canLeave;
+  error = error;
+  info = info;
+  success = success;
+  warning = warning;
+  flush = flush;
+  base64Encode = base64Encode;
+  base64Decode = base64Decode;
+  textToHtml = textToHtml;
+  htmlToText = htmlToText;
+  textToString = textToString;
+  stringToText = stringToText;
+  htmlToString = htmlToString;
+  stringToHtml = stringToHtml;
+  textToSQL = textToSQL;
+  sqlToText = sqlToText;
+  fillBreadcrumb = fillBreadcrumb;
+  replaceHTML = replaceHTML;
+  prependHTML = prependHTML;
+  appendHTML = appendHTML;
+  parentHTML = parentHTML;
+  formatTWIG = formatTWIG;
+  renderJSDoc = renderJSDoc;
+  jspath = (jspath_default()).apply;
+  loadResources = loadResources;
+  loadSheets = loadSheets;
+  loadScripts = loadScripts;
+  loadJSONs = loadJSONs;
+  loadXMLs = loadXMLs;
+  loadHTMLs = loadHTMLs;
+  loadTWIGs = loadTWIGs;
+  loadTexts = loadTexts;
+  _subapps = _subapps;
+  loadSubApp = loadSubApp;
+  loadSubAppAlt = loadSubAppAlt;
+  loadSubAppByURL = loadSubAppByURL;
+  _controls = _controls;
+  loadControl = loadControl;
+  createControl = createControl;
+  createControlInBody = createControlInBody;
+  createControlInContainer = createControlInContainer;
+  createControlFromWebLink = createControlFromWebLink;
   onReady(userdata) {
-    if (!AMIWebApp_classPrivateFieldLooseBase(this, _embedded)[_embedded]) {
+    if (!this.#embedded) {
       alert('error: \'amiWebApp.onReady()\' must be overloaded!');
     }
     return null;
   }
   onRefresh(isAuth) {
-    if (!AMIWebApp_classPrivateFieldLooseBase(this, _embedded)[_embedded]) {
+    if (!this.#embedded) {
       alert('error: \'amiWebApp.onRefresh()\' must be overloaded!');
     }
     return null;
   }
   start(options) {
-    AMIWebApp_classPrivateFieldLooseBase(this, _globalDeferred)[_globalDeferred].done(() => {
+    this.#globalDeferred.done(() => {
       const [logoURL, backgroundURL, signInImageURL, homeURL, contactEmail, aboutURL, defaultThemeURL, dashboardThemeURL, lockerURL, endpointURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, bookmarksAllowed, dashboardsAllowed] = setup(['logo_url', 'background_url', 'sign_in_image_url', 'home_url', 'contact_email', 'about_url', 'default_theme_url', 'dashboard_theme_url', 'locker_url', 'endpoint_url', 'sign_in_text', 'sso_auto_authentication', 'sso_authentication_allowed', 'password_authentication_allowed', 'certificate_authentication_allowed', 'sign_out_allowed', 'create_account_allowed', 'change_info_allowed', 'change_password_allowed', 'change_certificate_allowed', 'captcha_allowed', 'bookmarks_allowed', 'dashboards_allowed'], [logo_namespaceObject, background_namespaceObject, sign_in_image_namespaceObject, this.webAppURL, 'ami@lpsc.in2p3.fr', 'https://cern.ch/ami/', `${this.originURL}/twig/v${this.bootstrapVersion}/Themes/blue.twig`, `${this.originURL}/twig/v${this.bootstrapVersion}/Themes/cloud.twig`, `${this.originURL}/twig/v${this.bootstrapVersion}/Lockers/default.twig`, `${this.originURL}/AMI/FrontEnd`, 'Welcome in AMI!', false, false, true, true, true, true, true, true, true, true, true, true], options);
       js_AMICommand.initHttpClient(endpointURL);
       window.onbeforeunload = e => {
@@ -33285,7 +33192,7 @@ class AMIWebApp {
           for (const name in data2) {
             _subapps[name.toLowerCase()] = data2[name];
           }
-          if (!AMIWebApp_classPrivateFieldLooseBase(this, _embedded)[_embedded]) {
+          if (!this.#embedded) {
             const dict = {
               LOGO_URL: logoURL,
               BACKGROUND_URL: backgroundURL,
