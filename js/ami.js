@@ -30,7 +30,7 @@
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* module decorator */ module = __webpack_require__.hmd(module);
 const amiTwig = {
@@ -6796,7 +6796,7 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1368);
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
@@ -6814,7 +6814,1988 @@ var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*!\n * Bootstrap Icons v1.10.5 (https://icons.getbootstrap.com/)\n * Copyright 2019-2023 The Bootstrap Authors\n * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)\n */\n\n@font-face {\n  font-display: block;\n  font-family: \"bootstrap-icons\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"woff2\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff\");\n}\n\n.bi::before,\n[class^=\"bi-\"]::before,\n[class*=\" bi-\"]::before {\n  display: inline-block;\n  font-family: bootstrap-icons !important;\n  font-style: normal;\n  font-weight: normal !important;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  vertical-align: -.125em;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.bi-123::before { content: \"\\f67f\"; }\n.bi-alarm-fill::before { content: \"\\f101\"; }\n.bi-alarm::before { content: \"\\f102\"; }\n.bi-align-bottom::before { content: \"\\f103\"; }\n.bi-align-center::before { content: \"\\f104\"; }\n.bi-align-end::before { content: \"\\f105\"; }\n.bi-align-middle::before { content: \"\\f106\"; }\n.bi-align-start::before { content: \"\\f107\"; }\n.bi-align-top::before { content: \"\\f108\"; }\n.bi-alt::before { content: \"\\f109\"; }\n.bi-app-indicator::before { content: \"\\f10a\"; }\n.bi-app::before { content: \"\\f10b\"; }\n.bi-archive-fill::before { content: \"\\f10c\"; }\n.bi-archive::before { content: \"\\f10d\"; }\n.bi-arrow-90deg-down::before { content: \"\\f10e\"; }\n.bi-arrow-90deg-left::before { content: \"\\f10f\"; }\n.bi-arrow-90deg-right::before { content: \"\\f110\"; }\n.bi-arrow-90deg-up::before { content: \"\\f111\"; }\n.bi-arrow-bar-down::before { content: \"\\f112\"; }\n.bi-arrow-bar-left::before { content: \"\\f113\"; }\n.bi-arrow-bar-right::before { content: \"\\f114\"; }\n.bi-arrow-bar-up::before { content: \"\\f115\"; }\n.bi-arrow-clockwise::before { content: \"\\f116\"; }\n.bi-arrow-counterclockwise::before { content: \"\\f117\"; }\n.bi-arrow-down-circle-fill::before { content: \"\\f118\"; }\n.bi-arrow-down-circle::before { content: \"\\f119\"; }\n.bi-arrow-down-left-circle-fill::before { content: \"\\f11a\"; }\n.bi-arrow-down-left-circle::before { content: \"\\f11b\"; }\n.bi-arrow-down-left-square-fill::before { content: \"\\f11c\"; }\n.bi-arrow-down-left-square::before { content: \"\\f11d\"; }\n.bi-arrow-down-left::before { content: \"\\f11e\"; }\n.bi-arrow-down-right-circle-fill::before { content: \"\\f11f\"; }\n.bi-arrow-down-right-circle::before { content: \"\\f120\"; }\n.bi-arrow-down-right-square-fill::before { content: \"\\f121\"; }\n.bi-arrow-down-right-square::before { content: \"\\f122\"; }\n.bi-arrow-down-right::before { content: \"\\f123\"; }\n.bi-arrow-down-short::before { content: \"\\f124\"; }\n.bi-arrow-down-square-fill::before { content: \"\\f125\"; }\n.bi-arrow-down-square::before { content: \"\\f126\"; }\n.bi-arrow-down-up::before { content: \"\\f127\"; }\n.bi-arrow-down::before { content: \"\\f128\"; }\n.bi-arrow-left-circle-fill::before { content: \"\\f129\"; }\n.bi-arrow-left-circle::before { content: \"\\f12a\"; }\n.bi-arrow-left-right::before { content: \"\\f12b\"; }\n.bi-arrow-left-short::before { content: \"\\f12c\"; }\n.bi-arrow-left-square-fill::before { content: \"\\f12d\"; }\n.bi-arrow-left-square::before { content: \"\\f12e\"; }\n.bi-arrow-left::before { content: \"\\f12f\"; }\n.bi-arrow-repeat::before { content: \"\\f130\"; }\n.bi-arrow-return-left::before { content: \"\\f131\"; }\n.bi-arrow-return-right::before { content: \"\\f132\"; }\n.bi-arrow-right-circle-fill::before { content: \"\\f133\"; }\n.bi-arrow-right-circle::before { content: \"\\f134\"; }\n.bi-arrow-right-short::before { content: \"\\f135\"; }\n.bi-arrow-right-square-fill::before { content: \"\\f136\"; }\n.bi-arrow-right-square::before { content: \"\\f137\"; }\n.bi-arrow-right::before { content: \"\\f138\"; }\n.bi-arrow-up-circle-fill::before { content: \"\\f139\"; }\n.bi-arrow-up-circle::before { content: \"\\f13a\"; }\n.bi-arrow-up-left-circle-fill::before { content: \"\\f13b\"; }\n.bi-arrow-up-left-circle::before { content: \"\\f13c\"; }\n.bi-arrow-up-left-square-fill::before { content: \"\\f13d\"; }\n.bi-arrow-up-left-square::before { content: \"\\f13e\"; }\n.bi-arrow-up-left::before { content: \"\\f13f\"; }\n.bi-arrow-up-right-circle-fill::before { content: \"\\f140\"; }\n.bi-arrow-up-right-circle::before { content: \"\\f141\"; }\n.bi-arrow-up-right-square-fill::before { content: \"\\f142\"; }\n.bi-arrow-up-right-square::before { content: \"\\f143\"; }\n.bi-arrow-up-right::before { content: \"\\f144\"; }\n.bi-arrow-up-short::before { content: \"\\f145\"; }\n.bi-arrow-up-square-fill::before { content: \"\\f146\"; }\n.bi-arrow-up-square::before { content: \"\\f147\"; }\n.bi-arrow-up::before { content: \"\\f148\"; }\n.bi-arrows-angle-contract::before { content: \"\\f149\"; }\n.bi-arrows-angle-expand::before { content: \"\\f14a\"; }\n.bi-arrows-collapse::before { content: \"\\f14b\"; }\n.bi-arrows-expand::before { content: \"\\f14c\"; }\n.bi-arrows-fullscreen::before { content: \"\\f14d\"; }\n.bi-arrows-move::before { content: \"\\f14e\"; }\n.bi-aspect-ratio-fill::before { content: \"\\f14f\"; }\n.bi-aspect-ratio::before { content: \"\\f150\"; }\n.bi-asterisk::before { content: \"\\f151\"; }\n.bi-at::before { content: \"\\f152\"; }\n.bi-award-fill::before { content: \"\\f153\"; }\n.bi-award::before { content: \"\\f154\"; }\n.bi-back::before { content: \"\\f155\"; }\n.bi-backspace-fill::before { content: \"\\f156\"; }\n.bi-backspace-reverse-fill::before { content: \"\\f157\"; }\n.bi-backspace-reverse::before { content: \"\\f158\"; }\n.bi-backspace::before { content: \"\\f159\"; }\n.bi-badge-3d-fill::before { content: \"\\f15a\"; }\n.bi-badge-3d::before { content: \"\\f15b\"; }\n.bi-badge-4k-fill::before { content: \"\\f15c\"; }\n.bi-badge-4k::before { content: \"\\f15d\"; }\n.bi-badge-8k-fill::before { content: \"\\f15e\"; }\n.bi-badge-8k::before { content: \"\\f15f\"; }\n.bi-badge-ad-fill::before { content: \"\\f160\"; }\n.bi-badge-ad::before { content: \"\\f161\"; }\n.bi-badge-ar-fill::before { content: \"\\f162\"; }\n.bi-badge-ar::before { content: \"\\f163\"; }\n.bi-badge-cc-fill::before { content: \"\\f164\"; }\n.bi-badge-cc::before { content: \"\\f165\"; }\n.bi-badge-hd-fill::before { content: \"\\f166\"; }\n.bi-badge-hd::before { content: \"\\f167\"; }\n.bi-badge-tm-fill::before { content: \"\\f168\"; }\n.bi-badge-tm::before { content: \"\\f169\"; }\n.bi-badge-vo-fill::before { content: \"\\f16a\"; }\n.bi-badge-vo::before { content: \"\\f16b\"; }\n.bi-badge-vr-fill::before { content: \"\\f16c\"; }\n.bi-badge-vr::before { content: \"\\f16d\"; }\n.bi-badge-wc-fill::before { content: \"\\f16e\"; }\n.bi-badge-wc::before { content: \"\\f16f\"; }\n.bi-bag-check-fill::before { content: \"\\f170\"; }\n.bi-bag-check::before { content: \"\\f171\"; }\n.bi-bag-dash-fill::before { content: \"\\f172\"; }\n.bi-bag-dash::before { content: \"\\f173\"; }\n.bi-bag-fill::before { content: \"\\f174\"; }\n.bi-bag-plus-fill::before { content: \"\\f175\"; }\n.bi-bag-plus::before { content: \"\\f176\"; }\n.bi-bag-x-fill::before { content: \"\\f177\"; }\n.bi-bag-x::before { content: \"\\f178\"; }\n.bi-bag::before { content: \"\\f179\"; }\n.bi-bar-chart-fill::before { content: \"\\f17a\"; }\n.bi-bar-chart-line-fill::before { content: \"\\f17b\"; }\n.bi-bar-chart-line::before { content: \"\\f17c\"; }\n.bi-bar-chart-steps::before { content: \"\\f17d\"; }\n.bi-bar-chart::before { content: \"\\f17e\"; }\n.bi-basket-fill::before { content: \"\\f17f\"; }\n.bi-basket::before { content: \"\\f180\"; }\n.bi-basket2-fill::before { content: \"\\f181\"; }\n.bi-basket2::before { content: \"\\f182\"; }\n.bi-basket3-fill::before { content: \"\\f183\"; }\n.bi-basket3::before { content: \"\\f184\"; }\n.bi-battery-charging::before { content: \"\\f185\"; }\n.bi-battery-full::before { content: \"\\f186\"; }\n.bi-battery-half::before { content: \"\\f187\"; }\n.bi-battery::before { content: \"\\f188\"; }\n.bi-bell-fill::before { content: \"\\f189\"; }\n.bi-bell::before { content: \"\\f18a\"; }\n.bi-bezier::before { content: \"\\f18b\"; }\n.bi-bezier2::before { content: \"\\f18c\"; }\n.bi-bicycle::before { content: \"\\f18d\"; }\n.bi-binoculars-fill::before { content: \"\\f18e\"; }\n.bi-binoculars::before { content: \"\\f18f\"; }\n.bi-blockquote-left::before { content: \"\\f190\"; }\n.bi-blockquote-right::before { content: \"\\f191\"; }\n.bi-book-fill::before { content: \"\\f192\"; }\n.bi-book-half::before { content: \"\\f193\"; }\n.bi-book::before { content: \"\\f194\"; }\n.bi-bookmark-check-fill::before { content: \"\\f195\"; }\n.bi-bookmark-check::before { content: \"\\f196\"; }\n.bi-bookmark-dash-fill::before { content: \"\\f197\"; }\n.bi-bookmark-dash::before { content: \"\\f198\"; }\n.bi-bookmark-fill::before { content: \"\\f199\"; }\n.bi-bookmark-heart-fill::before { content: \"\\f19a\"; }\n.bi-bookmark-heart::before { content: \"\\f19b\"; }\n.bi-bookmark-plus-fill::before { content: \"\\f19c\"; }\n.bi-bookmark-plus::before { content: \"\\f19d\"; }\n.bi-bookmark-star-fill::before { content: \"\\f19e\"; }\n.bi-bookmark-star::before { content: \"\\f19f\"; }\n.bi-bookmark-x-fill::before { content: \"\\f1a0\"; }\n.bi-bookmark-x::before { content: \"\\f1a1\"; }\n.bi-bookmark::before { content: \"\\f1a2\"; }\n.bi-bookmarks-fill::before { content: \"\\f1a3\"; }\n.bi-bookmarks::before { content: \"\\f1a4\"; }\n.bi-bookshelf::before { content: \"\\f1a5\"; }\n.bi-bootstrap-fill::before { content: \"\\f1a6\"; }\n.bi-bootstrap-reboot::before { content: \"\\f1a7\"; }\n.bi-bootstrap::before { content: \"\\f1a8\"; }\n.bi-border-all::before { content: \"\\f1a9\"; }\n.bi-border-bottom::before { content: \"\\f1aa\"; }\n.bi-border-center::before { content: \"\\f1ab\"; }\n.bi-border-inner::before { content: \"\\f1ac\"; }\n.bi-border-left::before { content: \"\\f1ad\"; }\n.bi-border-middle::before { content: \"\\f1ae\"; }\n.bi-border-outer::before { content: \"\\f1af\"; }\n.bi-border-right::before { content: \"\\f1b0\"; }\n.bi-border-style::before { content: \"\\f1b1\"; }\n.bi-border-top::before { content: \"\\f1b2\"; }\n.bi-border-width::before { content: \"\\f1b3\"; }\n.bi-border::before { content: \"\\f1b4\"; }\n.bi-bounding-box-circles::before { content: \"\\f1b5\"; }\n.bi-bounding-box::before { content: \"\\f1b6\"; }\n.bi-box-arrow-down-left::before { content: \"\\f1b7\"; }\n.bi-box-arrow-down-right::before { content: \"\\f1b8\"; }\n.bi-box-arrow-down::before { content: \"\\f1b9\"; }\n.bi-box-arrow-in-down-left::before { content: \"\\f1ba\"; }\n.bi-box-arrow-in-down-right::before { content: \"\\f1bb\"; }\n.bi-box-arrow-in-down::before { content: \"\\f1bc\"; }\n.bi-box-arrow-in-left::before { content: \"\\f1bd\"; }\n.bi-box-arrow-in-right::before { content: \"\\f1be\"; }\n.bi-box-arrow-in-up-left::before { content: \"\\f1bf\"; }\n.bi-box-arrow-in-up-right::before { content: \"\\f1c0\"; }\n.bi-box-arrow-in-up::before { content: \"\\f1c1\"; }\n.bi-box-arrow-left::before { content: \"\\f1c2\"; }\n.bi-box-arrow-right::before { content: \"\\f1c3\"; }\n.bi-box-arrow-up-left::before { content: \"\\f1c4\"; }\n.bi-box-arrow-up-right::before { content: \"\\f1c5\"; }\n.bi-box-arrow-up::before { content: \"\\f1c6\"; }\n.bi-box-seam::before { content: \"\\f1c7\"; }\n.bi-box::before { content: \"\\f1c8\"; }\n.bi-braces::before { content: \"\\f1c9\"; }\n.bi-bricks::before { content: \"\\f1ca\"; }\n.bi-briefcase-fill::before { content: \"\\f1cb\"; }\n.bi-briefcase::before { content: \"\\f1cc\"; }\n.bi-brightness-alt-high-fill::before { content: \"\\f1cd\"; }\n.bi-brightness-alt-high::before { content: \"\\f1ce\"; }\n.bi-brightness-alt-low-fill::before { content: \"\\f1cf\"; }\n.bi-brightness-alt-low::before { content: \"\\f1d0\"; }\n.bi-brightness-high-fill::before { content: \"\\f1d1\"; }\n.bi-brightness-high::before { content: \"\\f1d2\"; }\n.bi-brightness-low-fill::before { content: \"\\f1d3\"; }\n.bi-brightness-low::before { content: \"\\f1d4\"; }\n.bi-broadcast-pin::before { content: \"\\f1d5\"; }\n.bi-broadcast::before { content: \"\\f1d6\"; }\n.bi-brush-fill::before { content: \"\\f1d7\"; }\n.bi-brush::before { content: \"\\f1d8\"; }\n.bi-bucket-fill::before { content: \"\\f1d9\"; }\n.bi-bucket::before { content: \"\\f1da\"; }\n.bi-bug-fill::before { content: \"\\f1db\"; }\n.bi-bug::before { content: \"\\f1dc\"; }\n.bi-building::before { content: \"\\f1dd\"; }\n.bi-bullseye::before { content: \"\\f1de\"; }\n.bi-calculator-fill::before { content: \"\\f1df\"; }\n.bi-calculator::before { content: \"\\f1e0\"; }\n.bi-calendar-check-fill::before { content: \"\\f1e1\"; }\n.bi-calendar-check::before { content: \"\\f1e2\"; }\n.bi-calendar-date-fill::before { content: \"\\f1e3\"; }\n.bi-calendar-date::before { content: \"\\f1e4\"; }\n.bi-calendar-day-fill::before { content: \"\\f1e5\"; }\n.bi-calendar-day::before { content: \"\\f1e6\"; }\n.bi-calendar-event-fill::before { content: \"\\f1e7\"; }\n.bi-calendar-event::before { content: \"\\f1e8\"; }\n.bi-calendar-fill::before { content: \"\\f1e9\"; }\n.bi-calendar-minus-fill::before { content: \"\\f1ea\"; }\n.bi-calendar-minus::before { content: \"\\f1eb\"; }\n.bi-calendar-month-fill::before { content: \"\\f1ec\"; }\n.bi-calendar-month::before { content: \"\\f1ed\"; }\n.bi-calendar-plus-fill::before { content: \"\\f1ee\"; }\n.bi-calendar-plus::before { content: \"\\f1ef\"; }\n.bi-calendar-range-fill::before { content: \"\\f1f0\"; }\n.bi-calendar-range::before { content: \"\\f1f1\"; }\n.bi-calendar-week-fill::before { content: \"\\f1f2\"; }\n.bi-calendar-week::before { content: \"\\f1f3\"; }\n.bi-calendar-x-fill::before { content: \"\\f1f4\"; }\n.bi-calendar-x::before { content: \"\\f1f5\"; }\n.bi-calendar::before { content: \"\\f1f6\"; }\n.bi-calendar2-check-fill::before { content: \"\\f1f7\"; }\n.bi-calendar2-check::before { content: \"\\f1f8\"; }\n.bi-calendar2-date-fill::before { content: \"\\f1f9\"; }\n.bi-calendar2-date::before { content: \"\\f1fa\"; }\n.bi-calendar2-day-fill::before { content: \"\\f1fb\"; }\n.bi-calendar2-day::before { content: \"\\f1fc\"; }\n.bi-calendar2-event-fill::before { content: \"\\f1fd\"; }\n.bi-calendar2-event::before { content: \"\\f1fe\"; }\n.bi-calendar2-fill::before { content: \"\\f1ff\"; }\n.bi-calendar2-minus-fill::before { content: \"\\f200\"; }\n.bi-calendar2-minus::before { content: \"\\f201\"; }\n.bi-calendar2-month-fill::before { content: \"\\f202\"; }\n.bi-calendar2-month::before { content: \"\\f203\"; }\n.bi-calendar2-plus-fill::before { content: \"\\f204\"; }\n.bi-calendar2-plus::before { content: \"\\f205\"; }\n.bi-calendar2-range-fill::before { content: \"\\f206\"; }\n.bi-calendar2-range::before { content: \"\\f207\"; }\n.bi-calendar2-week-fill::before { content: \"\\f208\"; }\n.bi-calendar2-week::before { content: \"\\f209\"; }\n.bi-calendar2-x-fill::before { content: \"\\f20a\"; }\n.bi-calendar2-x::before { content: \"\\f20b\"; }\n.bi-calendar2::before { content: \"\\f20c\"; }\n.bi-calendar3-event-fill::before { content: \"\\f20d\"; }\n.bi-calendar3-event::before { content: \"\\f20e\"; }\n.bi-calendar3-fill::before { content: \"\\f20f\"; }\n.bi-calendar3-range-fill::before { content: \"\\f210\"; }\n.bi-calendar3-range::before { content: \"\\f211\"; }\n.bi-calendar3-week-fill::before { content: \"\\f212\"; }\n.bi-calendar3-week::before { content: \"\\f213\"; }\n.bi-calendar3::before { content: \"\\f214\"; }\n.bi-calendar4-event::before { content: \"\\f215\"; }\n.bi-calendar4-range::before { content: \"\\f216\"; }\n.bi-calendar4-week::before { content: \"\\f217\"; }\n.bi-calendar4::before { content: \"\\f218\"; }\n.bi-camera-fill::before { content: \"\\f219\"; }\n.bi-camera-reels-fill::before { content: \"\\f21a\"; }\n.bi-camera-reels::before { content: \"\\f21b\"; }\n.bi-camera-video-fill::before { content: \"\\f21c\"; }\n.bi-camera-video-off-fill::before { content: \"\\f21d\"; }\n.bi-camera-video-off::before { content: \"\\f21e\"; }\n.bi-camera-video::before { content: \"\\f21f\"; }\n.bi-camera::before { content: \"\\f220\"; }\n.bi-camera2::before { content: \"\\f221\"; }\n.bi-capslock-fill::before { content: \"\\f222\"; }\n.bi-capslock::before { content: \"\\f223\"; }\n.bi-card-checklist::before { content: \"\\f224\"; }\n.bi-card-heading::before { content: \"\\f225\"; }\n.bi-card-image::before { content: \"\\f226\"; }\n.bi-card-list::before { content: \"\\f227\"; }\n.bi-card-text::before { content: \"\\f228\"; }\n.bi-caret-down-fill::before { content: \"\\f229\"; }\n.bi-caret-down-square-fill::before { content: \"\\f22a\"; }\n.bi-caret-down-square::before { content: \"\\f22b\"; }\n.bi-caret-down::before { content: \"\\f22c\"; }\n.bi-caret-left-fill::before { content: \"\\f22d\"; }\n.bi-caret-left-square-fill::before { content: \"\\f22e\"; }\n.bi-caret-left-square::before { content: \"\\f22f\"; }\n.bi-caret-left::before { content: \"\\f230\"; }\n.bi-caret-right-fill::before { content: \"\\f231\"; }\n.bi-caret-right-square-fill::before { content: \"\\f232\"; }\n.bi-caret-right-square::before { content: \"\\f233\"; }\n.bi-caret-right::before { content: \"\\f234\"; }\n.bi-caret-up-fill::before { content: \"\\f235\"; }\n.bi-caret-up-square-fill::before { content: \"\\f236\"; }\n.bi-caret-up-square::before { content: \"\\f237\"; }\n.bi-caret-up::before { content: \"\\f238\"; }\n.bi-cart-check-fill::before { content: \"\\f239\"; }\n.bi-cart-check::before { content: \"\\f23a\"; }\n.bi-cart-dash-fill::before { content: \"\\f23b\"; }\n.bi-cart-dash::before { content: \"\\f23c\"; }\n.bi-cart-fill::before { content: \"\\f23d\"; }\n.bi-cart-plus-fill::before { content: \"\\f23e\"; }\n.bi-cart-plus::before { content: \"\\f23f\"; }\n.bi-cart-x-fill::before { content: \"\\f240\"; }\n.bi-cart-x::before { content: \"\\f241\"; }\n.bi-cart::before { content: \"\\f242\"; }\n.bi-cart2::before { content: \"\\f243\"; }\n.bi-cart3::before { content: \"\\f244\"; }\n.bi-cart4::before { content: \"\\f245\"; }\n.bi-cash-stack::before { content: \"\\f246\"; }\n.bi-cash::before { content: \"\\f247\"; }\n.bi-cast::before { content: \"\\f248\"; }\n.bi-chat-dots-fill::before { content: \"\\f249\"; }\n.bi-chat-dots::before { content: \"\\f24a\"; }\n.bi-chat-fill::before { content: \"\\f24b\"; }\n.bi-chat-left-dots-fill::before { content: \"\\f24c\"; }\n.bi-chat-left-dots::before { content: \"\\f24d\"; }\n.bi-chat-left-fill::before { content: \"\\f24e\"; }\n.bi-chat-left-quote-fill::before { content: \"\\f24f\"; }\n.bi-chat-left-quote::before { content: \"\\f250\"; }\n.bi-chat-left-text-fill::before { content: \"\\f251\"; }\n.bi-chat-left-text::before { content: \"\\f252\"; }\n.bi-chat-left::before { content: \"\\f253\"; }\n.bi-chat-quote-fill::before { content: \"\\f254\"; }\n.bi-chat-quote::before { content: \"\\f255\"; }\n.bi-chat-right-dots-fill::before { content: \"\\f256\"; }\n.bi-chat-right-dots::before { content: \"\\f257\"; }\n.bi-chat-right-fill::before { content: \"\\f258\"; }\n.bi-chat-right-quote-fill::before { content: \"\\f259\"; }\n.bi-chat-right-quote::before { content: \"\\f25a\"; }\n.bi-chat-right-text-fill::before { content: \"\\f25b\"; }\n.bi-chat-right-text::before { content: \"\\f25c\"; }\n.bi-chat-right::before { content: \"\\f25d\"; }\n.bi-chat-square-dots-fill::before { content: \"\\f25e\"; }\n.bi-chat-square-dots::before { content: \"\\f25f\"; }\n.bi-chat-square-fill::before { content: \"\\f260\"; }\n.bi-chat-square-quote-fill::before { content: \"\\f261\"; }\n.bi-chat-square-quote::before { content: \"\\f262\"; }\n.bi-chat-square-text-fill::before { content: \"\\f263\"; }\n.bi-chat-square-text::before { content: \"\\f264\"; }\n.bi-chat-square::before { content: \"\\f265\"; }\n.bi-chat-text-fill::before { content: \"\\f266\"; }\n.bi-chat-text::before { content: \"\\f267\"; }\n.bi-chat::before { content: \"\\f268\"; }\n.bi-check-all::before { content: \"\\f269\"; }\n.bi-check-circle-fill::before { content: \"\\f26a\"; }\n.bi-check-circle::before { content: \"\\f26b\"; }\n.bi-check-square-fill::before { content: \"\\f26c\"; }\n.bi-check-square::before { content: \"\\f26d\"; }\n.bi-check::before { content: \"\\f26e\"; }\n.bi-check2-all::before { content: \"\\f26f\"; }\n.bi-check2-circle::before { content: \"\\f270\"; }\n.bi-check2-square::before { content: \"\\f271\"; }\n.bi-check2::before { content: \"\\f272\"; }\n.bi-chevron-bar-contract::before { content: \"\\f273\"; }\n.bi-chevron-bar-down::before { content: \"\\f274\"; }\n.bi-chevron-bar-expand::before { content: \"\\f275\"; }\n.bi-chevron-bar-left::before { content: \"\\f276\"; }\n.bi-chevron-bar-right::before { content: \"\\f277\"; }\n.bi-chevron-bar-up::before { content: \"\\f278\"; }\n.bi-chevron-compact-down::before { content: \"\\f279\"; }\n.bi-chevron-compact-left::before { content: \"\\f27a\"; }\n.bi-chevron-compact-right::before { content: \"\\f27b\"; }\n.bi-chevron-compact-up::before { content: \"\\f27c\"; }\n.bi-chevron-contract::before { content: \"\\f27d\"; }\n.bi-chevron-double-down::before { content: \"\\f27e\"; }\n.bi-chevron-double-left::before { content: \"\\f27f\"; }\n.bi-chevron-double-right::before { content: \"\\f280\"; }\n.bi-chevron-double-up::before { content: \"\\f281\"; }\n.bi-chevron-down::before { content: \"\\f282\"; }\n.bi-chevron-expand::before { content: \"\\f283\"; }\n.bi-chevron-left::before { content: \"\\f284\"; }\n.bi-chevron-right::before { content: \"\\f285\"; }\n.bi-chevron-up::before { content: \"\\f286\"; }\n.bi-circle-fill::before { content: \"\\f287\"; }\n.bi-circle-half::before { content: \"\\f288\"; }\n.bi-circle-square::before { content: \"\\f289\"; }\n.bi-circle::before { content: \"\\f28a\"; }\n.bi-clipboard-check::before { content: \"\\f28b\"; }\n.bi-clipboard-data::before { content: \"\\f28c\"; }\n.bi-clipboard-minus::before { content: \"\\f28d\"; }\n.bi-clipboard-plus::before { content: \"\\f28e\"; }\n.bi-clipboard-x::before { content: \"\\f28f\"; }\n.bi-clipboard::before { content: \"\\f290\"; }\n.bi-clock-fill::before { content: \"\\f291\"; }\n.bi-clock-history::before { content: \"\\f292\"; }\n.bi-clock::before { content: \"\\f293\"; }\n.bi-cloud-arrow-down-fill::before { content: \"\\f294\"; }\n.bi-cloud-arrow-down::before { content: \"\\f295\"; }\n.bi-cloud-arrow-up-fill::before { content: \"\\f296\"; }\n.bi-cloud-arrow-up::before { content: \"\\f297\"; }\n.bi-cloud-check-fill::before { content: \"\\f298\"; }\n.bi-cloud-check::before { content: \"\\f299\"; }\n.bi-cloud-download-fill::before { content: \"\\f29a\"; }\n.bi-cloud-download::before { content: \"\\f29b\"; }\n.bi-cloud-drizzle-fill::before { content: \"\\f29c\"; }\n.bi-cloud-drizzle::before { content: \"\\f29d\"; }\n.bi-cloud-fill::before { content: \"\\f29e\"; }\n.bi-cloud-fog-fill::before { content: \"\\f29f\"; }\n.bi-cloud-fog::before { content: \"\\f2a0\"; }\n.bi-cloud-fog2-fill::before { content: \"\\f2a1\"; }\n.bi-cloud-fog2::before { content: \"\\f2a2\"; }\n.bi-cloud-hail-fill::before { content: \"\\f2a3\"; }\n.bi-cloud-hail::before { content: \"\\f2a4\"; }\n.bi-cloud-haze-fill::before { content: \"\\f2a6\"; }\n.bi-cloud-haze::before { content: \"\\f2a7\"; }\n.bi-cloud-haze2-fill::before { content: \"\\f2a8\"; }\n.bi-cloud-lightning-fill::before { content: \"\\f2a9\"; }\n.bi-cloud-lightning-rain-fill::before { content: \"\\f2aa\"; }\n.bi-cloud-lightning-rain::before { content: \"\\f2ab\"; }\n.bi-cloud-lightning::before { content: \"\\f2ac\"; }\n.bi-cloud-minus-fill::before { content: \"\\f2ad\"; }\n.bi-cloud-minus::before { content: \"\\f2ae\"; }\n.bi-cloud-moon-fill::before { content: \"\\f2af\"; }\n.bi-cloud-moon::before { content: \"\\f2b0\"; }\n.bi-cloud-plus-fill::before { content: \"\\f2b1\"; }\n.bi-cloud-plus::before { content: \"\\f2b2\"; }\n.bi-cloud-rain-fill::before { content: \"\\f2b3\"; }\n.bi-cloud-rain-heavy-fill::before { content: \"\\f2b4\"; }\n.bi-cloud-rain-heavy::before { content: \"\\f2b5\"; }\n.bi-cloud-rain::before { content: \"\\f2b6\"; }\n.bi-cloud-slash-fill::before { content: \"\\f2b7\"; }\n.bi-cloud-slash::before { content: \"\\f2b8\"; }\n.bi-cloud-sleet-fill::before { content: \"\\f2b9\"; }\n.bi-cloud-sleet::before { content: \"\\f2ba\"; }\n.bi-cloud-snow-fill::before { content: \"\\f2bb\"; }\n.bi-cloud-snow::before { content: \"\\f2bc\"; }\n.bi-cloud-sun-fill::before { content: \"\\f2bd\"; }\n.bi-cloud-sun::before { content: \"\\f2be\"; }\n.bi-cloud-upload-fill::before { content: \"\\f2bf\"; }\n.bi-cloud-upload::before { content: \"\\f2c0\"; }\n.bi-cloud::before { content: \"\\f2c1\"; }\n.bi-clouds-fill::before { content: \"\\f2c2\"; }\n.bi-clouds::before { content: \"\\f2c3\"; }\n.bi-cloudy-fill::before { content: \"\\f2c4\"; }\n.bi-cloudy::before { content: \"\\f2c5\"; }\n.bi-code-slash::before { content: \"\\f2c6\"; }\n.bi-code-square::before { content: \"\\f2c7\"; }\n.bi-code::before { content: \"\\f2c8\"; }\n.bi-collection-fill::before { content: \"\\f2c9\"; }\n.bi-collection-play-fill::before { content: \"\\f2ca\"; }\n.bi-collection-play::before { content: \"\\f2cb\"; }\n.bi-collection::before { content: \"\\f2cc\"; }\n.bi-columns-gap::before { content: \"\\f2cd\"; }\n.bi-columns::before { content: \"\\f2ce\"; }\n.bi-command::before { content: \"\\f2cf\"; }\n.bi-compass-fill::before { content: \"\\f2d0\"; }\n.bi-compass::before { content: \"\\f2d1\"; }\n.bi-cone-striped::before { content: \"\\f2d2\"; }\n.bi-cone::before { content: \"\\f2d3\"; }\n.bi-controller::before { content: \"\\f2d4\"; }\n.bi-cpu-fill::before { content: \"\\f2d5\"; }\n.bi-cpu::before { content: \"\\f2d6\"; }\n.bi-credit-card-2-back-fill::before { content: \"\\f2d7\"; }\n.bi-credit-card-2-back::before { content: \"\\f2d8\"; }\n.bi-credit-card-2-front-fill::before { content: \"\\f2d9\"; }\n.bi-credit-card-2-front::before { content: \"\\f2da\"; }\n.bi-credit-card-fill::before { content: \"\\f2db\"; }\n.bi-credit-card::before { content: \"\\f2dc\"; }\n.bi-crop::before { content: \"\\f2dd\"; }\n.bi-cup-fill::before { content: \"\\f2de\"; }\n.bi-cup-straw::before { content: \"\\f2df\"; }\n.bi-cup::before { content: \"\\f2e0\"; }\n.bi-cursor-fill::before { content: \"\\f2e1\"; }\n.bi-cursor-text::before { content: \"\\f2e2\"; }\n.bi-cursor::before { content: \"\\f2e3\"; }\n.bi-dash-circle-dotted::before { content: \"\\f2e4\"; }\n.bi-dash-circle-fill::before { content: \"\\f2e5\"; }\n.bi-dash-circle::before { content: \"\\f2e6\"; }\n.bi-dash-square-dotted::before { content: \"\\f2e7\"; }\n.bi-dash-square-fill::before { content: \"\\f2e8\"; }\n.bi-dash-square::before { content: \"\\f2e9\"; }\n.bi-dash::before { content: \"\\f2ea\"; }\n.bi-diagram-2-fill::before { content: \"\\f2eb\"; }\n.bi-diagram-2::before { content: \"\\f2ec\"; }\n.bi-diagram-3-fill::before { content: \"\\f2ed\"; }\n.bi-diagram-3::before { content: \"\\f2ee\"; }\n.bi-diamond-fill::before { content: \"\\f2ef\"; }\n.bi-diamond-half::before { content: \"\\f2f0\"; }\n.bi-diamond::before { content: \"\\f2f1\"; }\n.bi-dice-1-fill::before { content: \"\\f2f2\"; }\n.bi-dice-1::before { content: \"\\f2f3\"; }\n.bi-dice-2-fill::before { content: \"\\f2f4\"; }\n.bi-dice-2::before { content: \"\\f2f5\"; }\n.bi-dice-3-fill::before { content: \"\\f2f6\"; }\n.bi-dice-3::before { content: \"\\f2f7\"; }\n.bi-dice-4-fill::before { content: \"\\f2f8\"; }\n.bi-dice-4::before { content: \"\\f2f9\"; }\n.bi-dice-5-fill::before { content: \"\\f2fa\"; }\n.bi-dice-5::before { content: \"\\f2fb\"; }\n.bi-dice-6-fill::before { content: \"\\f2fc\"; }\n.bi-dice-6::before { content: \"\\f2fd\"; }\n.bi-disc-fill::before { content: \"\\f2fe\"; }\n.bi-disc::before { content: \"\\f2ff\"; }\n.bi-discord::before { content: \"\\f300\"; }\n.bi-display-fill::before { content: \"\\f301\"; }\n.bi-display::before { content: \"\\f302\"; }\n.bi-distribute-horizontal::before { content: \"\\f303\"; }\n.bi-distribute-vertical::before { content: \"\\f304\"; }\n.bi-door-closed-fill::before { content: \"\\f305\"; }\n.bi-door-closed::before { content: \"\\f306\"; }\n.bi-door-open-fill::before { content: \"\\f307\"; }\n.bi-door-open::before { content: \"\\f308\"; }\n.bi-dot::before { content: \"\\f309\"; }\n.bi-download::before { content: \"\\f30a\"; }\n.bi-droplet-fill::before { content: \"\\f30b\"; }\n.bi-droplet-half::before { content: \"\\f30c\"; }\n.bi-droplet::before { content: \"\\f30d\"; }\n.bi-earbuds::before { content: \"\\f30e\"; }\n.bi-easel-fill::before { content: \"\\f30f\"; }\n.bi-easel::before { content: \"\\f310\"; }\n.bi-egg-fill::before { content: \"\\f311\"; }\n.bi-egg-fried::before { content: \"\\f312\"; }\n.bi-egg::before { content: \"\\f313\"; }\n.bi-eject-fill::before { content: \"\\f314\"; }\n.bi-eject::before { content: \"\\f315\"; }\n.bi-emoji-angry-fill::before { content: \"\\f316\"; }\n.bi-emoji-angry::before { content: \"\\f317\"; }\n.bi-emoji-dizzy-fill::before { content: \"\\f318\"; }\n.bi-emoji-dizzy::before { content: \"\\f319\"; }\n.bi-emoji-expressionless-fill::before { content: \"\\f31a\"; }\n.bi-emoji-expressionless::before { content: \"\\f31b\"; }\n.bi-emoji-frown-fill::before { content: \"\\f31c\"; }\n.bi-emoji-frown::before { content: \"\\f31d\"; }\n.bi-emoji-heart-eyes-fill::before { content: \"\\f31e\"; }\n.bi-emoji-heart-eyes::before { content: \"\\f31f\"; }\n.bi-emoji-laughing-fill::before { content: \"\\f320\"; }\n.bi-emoji-laughing::before { content: \"\\f321\"; }\n.bi-emoji-neutral-fill::before { content: \"\\f322\"; }\n.bi-emoji-neutral::before { content: \"\\f323\"; }\n.bi-emoji-smile-fill::before { content: \"\\f324\"; }\n.bi-emoji-smile-upside-down-fill::before { content: \"\\f325\"; }\n.bi-emoji-smile-upside-down::before { content: \"\\f326\"; }\n.bi-emoji-smile::before { content: \"\\f327\"; }\n.bi-emoji-sunglasses-fill::before { content: \"\\f328\"; }\n.bi-emoji-sunglasses::before { content: \"\\f329\"; }\n.bi-emoji-wink-fill::before { content: \"\\f32a\"; }\n.bi-emoji-wink::before { content: \"\\f32b\"; }\n.bi-envelope-fill::before { content: \"\\f32c\"; }\n.bi-envelope-open-fill::before { content: \"\\f32d\"; }\n.bi-envelope-open::before { content: \"\\f32e\"; }\n.bi-envelope::before { content: \"\\f32f\"; }\n.bi-eraser-fill::before { content: \"\\f330\"; }\n.bi-eraser::before { content: \"\\f331\"; }\n.bi-exclamation-circle-fill::before { content: \"\\f332\"; }\n.bi-exclamation-circle::before { content: \"\\f333\"; }\n.bi-exclamation-diamond-fill::before { content: \"\\f334\"; }\n.bi-exclamation-diamond::before { content: \"\\f335\"; }\n.bi-exclamation-octagon-fill::before { content: \"\\f336\"; }\n.bi-exclamation-octagon::before { content: \"\\f337\"; }\n.bi-exclamation-square-fill::before { content: \"\\f338\"; }\n.bi-exclamation-square::before { content: \"\\f339\"; }\n.bi-exclamation-triangle-fill::before { content: \"\\f33a\"; }\n.bi-exclamation-triangle::before { content: \"\\f33b\"; }\n.bi-exclamation::before { content: \"\\f33c\"; }\n.bi-exclude::before { content: \"\\f33d\"; }\n.bi-eye-fill::before { content: \"\\f33e\"; }\n.bi-eye-slash-fill::before { content: \"\\f33f\"; }\n.bi-eye-slash::before { content: \"\\f340\"; }\n.bi-eye::before { content: \"\\f341\"; }\n.bi-eyedropper::before { content: \"\\f342\"; }\n.bi-eyeglasses::before { content: \"\\f343\"; }\n.bi-facebook::before { content: \"\\f344\"; }\n.bi-file-arrow-down-fill::before { content: \"\\f345\"; }\n.bi-file-arrow-down::before { content: \"\\f346\"; }\n.bi-file-arrow-up-fill::before { content: \"\\f347\"; }\n.bi-file-arrow-up::before { content: \"\\f348\"; }\n.bi-file-bar-graph-fill::before { content: \"\\f349\"; }\n.bi-file-bar-graph::before { content: \"\\f34a\"; }\n.bi-file-binary-fill::before { content: \"\\f34b\"; }\n.bi-file-binary::before { content: \"\\f34c\"; }\n.bi-file-break-fill::before { content: \"\\f34d\"; }\n.bi-file-break::before { content: \"\\f34e\"; }\n.bi-file-check-fill::before { content: \"\\f34f\"; }\n.bi-file-check::before { content: \"\\f350\"; }\n.bi-file-code-fill::before { content: \"\\f351\"; }\n.bi-file-code::before { content: \"\\f352\"; }\n.bi-file-diff-fill::before { content: \"\\f353\"; }\n.bi-file-diff::before { content: \"\\f354\"; }\n.bi-file-earmark-arrow-down-fill::before { content: \"\\f355\"; }\n.bi-file-earmark-arrow-down::before { content: \"\\f356\"; }\n.bi-file-earmark-arrow-up-fill::before { content: \"\\f357\"; }\n.bi-file-earmark-arrow-up::before { content: \"\\f358\"; }\n.bi-file-earmark-bar-graph-fill::before { content: \"\\f359\"; }\n.bi-file-earmark-bar-graph::before { content: \"\\f35a\"; }\n.bi-file-earmark-binary-fill::before { content: \"\\f35b\"; }\n.bi-file-earmark-binary::before { content: \"\\f35c\"; }\n.bi-file-earmark-break-fill::before { content: \"\\f35d\"; }\n.bi-file-earmark-break::before { content: \"\\f35e\"; }\n.bi-file-earmark-check-fill::before { content: \"\\f35f\"; }\n.bi-file-earmark-check::before { content: \"\\f360\"; }\n.bi-file-earmark-code-fill::before { content: \"\\f361\"; }\n.bi-file-earmark-code::before { content: \"\\f362\"; }\n.bi-file-earmark-diff-fill::before { content: \"\\f363\"; }\n.bi-file-earmark-diff::before { content: \"\\f364\"; }\n.bi-file-earmark-easel-fill::before { content: \"\\f365\"; }\n.bi-file-earmark-easel::before { content: \"\\f366\"; }\n.bi-file-earmark-excel-fill::before { content: \"\\f367\"; }\n.bi-file-earmark-excel::before { content: \"\\f368\"; }\n.bi-file-earmark-fill::before { content: \"\\f369\"; }\n.bi-file-earmark-font-fill::before { content: \"\\f36a\"; }\n.bi-file-earmark-font::before { content: \"\\f36b\"; }\n.bi-file-earmark-image-fill::before { content: \"\\f36c\"; }\n.bi-file-earmark-image::before { content: \"\\f36d\"; }\n.bi-file-earmark-lock-fill::before { content: \"\\f36e\"; }\n.bi-file-earmark-lock::before { content: \"\\f36f\"; }\n.bi-file-earmark-lock2-fill::before { content: \"\\f370\"; }\n.bi-file-earmark-lock2::before { content: \"\\f371\"; }\n.bi-file-earmark-medical-fill::before { content: \"\\f372\"; }\n.bi-file-earmark-medical::before { content: \"\\f373\"; }\n.bi-file-earmark-minus-fill::before { content: \"\\f374\"; }\n.bi-file-earmark-minus::before { content: \"\\f375\"; }\n.bi-file-earmark-music-fill::before { content: \"\\f376\"; }\n.bi-file-earmark-music::before { content: \"\\f377\"; }\n.bi-file-earmark-person-fill::before { content: \"\\f378\"; }\n.bi-file-earmark-person::before { content: \"\\f379\"; }\n.bi-file-earmark-play-fill::before { content: \"\\f37a\"; }\n.bi-file-earmark-play::before { content: \"\\f37b\"; }\n.bi-file-earmark-plus-fill::before { content: \"\\f37c\"; }\n.bi-file-earmark-plus::before { content: \"\\f37d\"; }\n.bi-file-earmark-post-fill::before { content: \"\\f37e\"; }\n.bi-file-earmark-post::before { content: \"\\f37f\"; }\n.bi-file-earmark-ppt-fill::before { content: \"\\f380\"; }\n.bi-file-earmark-ppt::before { content: \"\\f381\"; }\n.bi-file-earmark-richtext-fill::before { content: \"\\f382\"; }\n.bi-file-earmark-richtext::before { content: \"\\f383\"; }\n.bi-file-earmark-ruled-fill::before { content: \"\\f384\"; }\n.bi-file-earmark-ruled::before { content: \"\\f385\"; }\n.bi-file-earmark-slides-fill::before { content: \"\\f386\"; }\n.bi-file-earmark-slides::before { content: \"\\f387\"; }\n.bi-file-earmark-spreadsheet-fill::before { content: \"\\f388\"; }\n.bi-file-earmark-spreadsheet::before { content: \"\\f389\"; }\n.bi-file-earmark-text-fill::before { content: \"\\f38a\"; }\n.bi-file-earmark-text::before { content: \"\\f38b\"; }\n.bi-file-earmark-word-fill::before { content: \"\\f38c\"; }\n.bi-file-earmark-word::before { content: \"\\f38d\"; }\n.bi-file-earmark-x-fill::before { content: \"\\f38e\"; }\n.bi-file-earmark-x::before { content: \"\\f38f\"; }\n.bi-file-earmark-zip-fill::before { content: \"\\f390\"; }\n.bi-file-earmark-zip::before { content: \"\\f391\"; }\n.bi-file-earmark::before { content: \"\\f392\"; }\n.bi-file-easel-fill::before { content: \"\\f393\"; }\n.bi-file-easel::before { content: \"\\f394\"; }\n.bi-file-excel-fill::before { content: \"\\f395\"; }\n.bi-file-excel::before { content: \"\\f396\"; }\n.bi-file-fill::before { content: \"\\f397\"; }\n.bi-file-font-fill::before { content: \"\\f398\"; }\n.bi-file-font::before { content: \"\\f399\"; }\n.bi-file-image-fill::before { content: \"\\f39a\"; }\n.bi-file-image::before { content: \"\\f39b\"; }\n.bi-file-lock-fill::before { content: \"\\f39c\"; }\n.bi-file-lock::before { content: \"\\f39d\"; }\n.bi-file-lock2-fill::before { content: \"\\f39e\"; }\n.bi-file-lock2::before { content: \"\\f39f\"; }\n.bi-file-medical-fill::before { content: \"\\f3a0\"; }\n.bi-file-medical::before { content: \"\\f3a1\"; }\n.bi-file-minus-fill::before { content: \"\\f3a2\"; }\n.bi-file-minus::before { content: \"\\f3a3\"; }\n.bi-file-music-fill::before { content: \"\\f3a4\"; }\n.bi-file-music::before { content: \"\\f3a5\"; }\n.bi-file-person-fill::before { content: \"\\f3a6\"; }\n.bi-file-person::before { content: \"\\f3a7\"; }\n.bi-file-play-fill::before { content: \"\\f3a8\"; }\n.bi-file-play::before { content: \"\\f3a9\"; }\n.bi-file-plus-fill::before { content: \"\\f3aa\"; }\n.bi-file-plus::before { content: \"\\f3ab\"; }\n.bi-file-post-fill::before { content: \"\\f3ac\"; }\n.bi-file-post::before { content: \"\\f3ad\"; }\n.bi-file-ppt-fill::before { content: \"\\f3ae\"; }\n.bi-file-ppt::before { content: \"\\f3af\"; }\n.bi-file-richtext-fill::before { content: \"\\f3b0\"; }\n.bi-file-richtext::before { content: \"\\f3b1\"; }\n.bi-file-ruled-fill::before { content: \"\\f3b2\"; }\n.bi-file-ruled::before { content: \"\\f3b3\"; }\n.bi-file-slides-fill::before { content: \"\\f3b4\"; }\n.bi-file-slides::before { content: \"\\f3b5\"; }\n.bi-file-spreadsheet-fill::before { content: \"\\f3b6\"; }\n.bi-file-spreadsheet::before { content: \"\\f3b7\"; }\n.bi-file-text-fill::before { content: \"\\f3b8\"; }\n.bi-file-text::before { content: \"\\f3b9\"; }\n.bi-file-word-fill::before { content: \"\\f3ba\"; }\n.bi-file-word::before { content: \"\\f3bb\"; }\n.bi-file-x-fill::before { content: \"\\f3bc\"; }\n.bi-file-x::before { content: \"\\f3bd\"; }\n.bi-file-zip-fill::before { content: \"\\f3be\"; }\n.bi-file-zip::before { content: \"\\f3bf\"; }\n.bi-file::before { content: \"\\f3c0\"; }\n.bi-files-alt::before { content: \"\\f3c1\"; }\n.bi-files::before { content: \"\\f3c2\"; }\n.bi-film::before { content: \"\\f3c3\"; }\n.bi-filter-circle-fill::before { content: \"\\f3c4\"; }\n.bi-filter-circle::before { content: \"\\f3c5\"; }\n.bi-filter-left::before { content: \"\\f3c6\"; }\n.bi-filter-right::before { content: \"\\f3c7\"; }\n.bi-filter-square-fill::before { content: \"\\f3c8\"; }\n.bi-filter-square::before { content: \"\\f3c9\"; }\n.bi-filter::before { content: \"\\f3ca\"; }\n.bi-flag-fill::before { content: \"\\f3cb\"; }\n.bi-flag::before { content: \"\\f3cc\"; }\n.bi-flower1::before { content: \"\\f3cd\"; }\n.bi-flower2::before { content: \"\\f3ce\"; }\n.bi-flower3::before { content: \"\\f3cf\"; }\n.bi-folder-check::before { content: \"\\f3d0\"; }\n.bi-folder-fill::before { content: \"\\f3d1\"; }\n.bi-folder-minus::before { content: \"\\f3d2\"; }\n.bi-folder-plus::before { content: \"\\f3d3\"; }\n.bi-folder-symlink-fill::before { content: \"\\f3d4\"; }\n.bi-folder-symlink::before { content: \"\\f3d5\"; }\n.bi-folder-x::before { content: \"\\f3d6\"; }\n.bi-folder::before { content: \"\\f3d7\"; }\n.bi-folder2-open::before { content: \"\\f3d8\"; }\n.bi-folder2::before { content: \"\\f3d9\"; }\n.bi-fonts::before { content: \"\\f3da\"; }\n.bi-forward-fill::before { content: \"\\f3db\"; }\n.bi-forward::before { content: \"\\f3dc\"; }\n.bi-front::before { content: \"\\f3dd\"; }\n.bi-fullscreen-exit::before { content: \"\\f3de\"; }\n.bi-fullscreen::before { content: \"\\f3df\"; }\n.bi-funnel-fill::before { content: \"\\f3e0\"; }\n.bi-funnel::before { content: \"\\f3e1\"; }\n.bi-gear-fill::before { content: \"\\f3e2\"; }\n.bi-gear-wide-connected::before { content: \"\\f3e3\"; }\n.bi-gear-wide::before { content: \"\\f3e4\"; }\n.bi-gear::before { content: \"\\f3e5\"; }\n.bi-gem::before { content: \"\\f3e6\"; }\n.bi-geo-alt-fill::before { content: \"\\f3e7\"; }\n.bi-geo-alt::before { content: \"\\f3e8\"; }\n.bi-geo-fill::before { content: \"\\f3e9\"; }\n.bi-geo::before { content: \"\\f3ea\"; }\n.bi-gift-fill::before { content: \"\\f3eb\"; }\n.bi-gift::before { content: \"\\f3ec\"; }\n.bi-github::before { content: \"\\f3ed\"; }\n.bi-globe::before { content: \"\\f3ee\"; }\n.bi-globe2::before { content: \"\\f3ef\"; }\n.bi-google::before { content: \"\\f3f0\"; }\n.bi-graph-down::before { content: \"\\f3f1\"; }\n.bi-graph-up::before { content: \"\\f3f2\"; }\n.bi-grid-1x2-fill::before { content: \"\\f3f3\"; }\n.bi-grid-1x2::before { content: \"\\f3f4\"; }\n.bi-grid-3x2-gap-fill::before { content: \"\\f3f5\"; }\n.bi-grid-3x2-gap::before { content: \"\\f3f6\"; }\n.bi-grid-3x2::before { content: \"\\f3f7\"; }\n.bi-grid-3x3-gap-fill::before { content: \"\\f3f8\"; }\n.bi-grid-3x3-gap::before { content: \"\\f3f9\"; }\n.bi-grid-3x3::before { content: \"\\f3fa\"; }\n.bi-grid-fill::before { content: \"\\f3fb\"; }\n.bi-grid::before { content: \"\\f3fc\"; }\n.bi-grip-horizontal::before { content: \"\\f3fd\"; }\n.bi-grip-vertical::before { content: \"\\f3fe\"; }\n.bi-hammer::before { content: \"\\f3ff\"; }\n.bi-hand-index-fill::before { content: \"\\f400\"; }\n.bi-hand-index-thumb-fill::before { content: \"\\f401\"; }\n.bi-hand-index-thumb::before { content: \"\\f402\"; }\n.bi-hand-index::before { content: \"\\f403\"; }\n.bi-hand-thumbs-down-fill::before { content: \"\\f404\"; }\n.bi-hand-thumbs-down::before { content: \"\\f405\"; }\n.bi-hand-thumbs-up-fill::before { content: \"\\f406\"; }\n.bi-hand-thumbs-up::before { content: \"\\f407\"; }\n.bi-handbag-fill::before { content: \"\\f408\"; }\n.bi-handbag::before { content: \"\\f409\"; }\n.bi-hash::before { content: \"\\f40a\"; }\n.bi-hdd-fill::before { content: \"\\f40b\"; }\n.bi-hdd-network-fill::before { content: \"\\f40c\"; }\n.bi-hdd-network::before { content: \"\\f40d\"; }\n.bi-hdd-rack-fill::before { content: \"\\f40e\"; }\n.bi-hdd-rack::before { content: \"\\f40f\"; }\n.bi-hdd-stack-fill::before { content: \"\\f410\"; }\n.bi-hdd-stack::before { content: \"\\f411\"; }\n.bi-hdd::before { content: \"\\f412\"; }\n.bi-headphones::before { content: \"\\f413\"; }\n.bi-headset::before { content: \"\\f414\"; }\n.bi-heart-fill::before { content: \"\\f415\"; }\n.bi-heart-half::before { content: \"\\f416\"; }\n.bi-heart::before { content: \"\\f417\"; }\n.bi-heptagon-fill::before { content: \"\\f418\"; }\n.bi-heptagon-half::before { content: \"\\f419\"; }\n.bi-heptagon::before { content: \"\\f41a\"; }\n.bi-hexagon-fill::before { content: \"\\f41b\"; }\n.bi-hexagon-half::before { content: \"\\f41c\"; }\n.bi-hexagon::before { content: \"\\f41d\"; }\n.bi-hourglass-bottom::before { content: \"\\f41e\"; }\n.bi-hourglass-split::before { content: \"\\f41f\"; }\n.bi-hourglass-top::before { content: \"\\f420\"; }\n.bi-hourglass::before { content: \"\\f421\"; }\n.bi-house-door-fill::before { content: \"\\f422\"; }\n.bi-house-door::before { content: \"\\f423\"; }\n.bi-house-fill::before { content: \"\\f424\"; }\n.bi-house::before { content: \"\\f425\"; }\n.bi-hr::before { content: \"\\f426\"; }\n.bi-hurricane::before { content: \"\\f427\"; }\n.bi-image-alt::before { content: \"\\f428\"; }\n.bi-image-fill::before { content: \"\\f429\"; }\n.bi-image::before { content: \"\\f42a\"; }\n.bi-images::before { content: \"\\f42b\"; }\n.bi-inbox-fill::before { content: \"\\f42c\"; }\n.bi-inbox::before { content: \"\\f42d\"; }\n.bi-inboxes-fill::before { content: \"\\f42e\"; }\n.bi-inboxes::before { content: \"\\f42f\"; }\n.bi-info-circle-fill::before { content: \"\\f430\"; }\n.bi-info-circle::before { content: \"\\f431\"; }\n.bi-info-square-fill::before { content: \"\\f432\"; }\n.bi-info-square::before { content: \"\\f433\"; }\n.bi-info::before { content: \"\\f434\"; }\n.bi-input-cursor-text::before { content: \"\\f435\"; }\n.bi-input-cursor::before { content: \"\\f436\"; }\n.bi-instagram::before { content: \"\\f437\"; }\n.bi-intersect::before { content: \"\\f438\"; }\n.bi-journal-album::before { content: \"\\f439\"; }\n.bi-journal-arrow-down::before { content: \"\\f43a\"; }\n.bi-journal-arrow-up::before { content: \"\\f43b\"; }\n.bi-journal-bookmark-fill::before { content: \"\\f43c\"; }\n.bi-journal-bookmark::before { content: \"\\f43d\"; }\n.bi-journal-check::before { content: \"\\f43e\"; }\n.bi-journal-code::before { content: \"\\f43f\"; }\n.bi-journal-medical::before { content: \"\\f440\"; }\n.bi-journal-minus::before { content: \"\\f441\"; }\n.bi-journal-plus::before { content: \"\\f442\"; }\n.bi-journal-richtext::before { content: \"\\f443\"; }\n.bi-journal-text::before { content: \"\\f444\"; }\n.bi-journal-x::before { content: \"\\f445\"; }\n.bi-journal::before { content: \"\\f446\"; }\n.bi-journals::before { content: \"\\f447\"; }\n.bi-joystick::before { content: \"\\f448\"; }\n.bi-justify-left::before { content: \"\\f449\"; }\n.bi-justify-right::before { content: \"\\f44a\"; }\n.bi-justify::before { content: \"\\f44b\"; }\n.bi-kanban-fill::before { content: \"\\f44c\"; }\n.bi-kanban::before { content: \"\\f44d\"; }\n.bi-key-fill::before { content: \"\\f44e\"; }\n.bi-key::before { content: \"\\f44f\"; }\n.bi-keyboard-fill::before { content: \"\\f450\"; }\n.bi-keyboard::before { content: \"\\f451\"; }\n.bi-ladder::before { content: \"\\f452\"; }\n.bi-lamp-fill::before { content: \"\\f453\"; }\n.bi-lamp::before { content: \"\\f454\"; }\n.bi-laptop-fill::before { content: \"\\f455\"; }\n.bi-laptop::before { content: \"\\f456\"; }\n.bi-layer-backward::before { content: \"\\f457\"; }\n.bi-layer-forward::before { content: \"\\f458\"; }\n.bi-layers-fill::before { content: \"\\f459\"; }\n.bi-layers-half::before { content: \"\\f45a\"; }\n.bi-layers::before { content: \"\\f45b\"; }\n.bi-layout-sidebar-inset-reverse::before { content: \"\\f45c\"; }\n.bi-layout-sidebar-inset::before { content: \"\\f45d\"; }\n.bi-layout-sidebar-reverse::before { content: \"\\f45e\"; }\n.bi-layout-sidebar::before { content: \"\\f45f\"; }\n.bi-layout-split::before { content: \"\\f460\"; }\n.bi-layout-text-sidebar-reverse::before { content: \"\\f461\"; }\n.bi-layout-text-sidebar::before { content: \"\\f462\"; }\n.bi-layout-text-window-reverse::before { content: \"\\f463\"; }\n.bi-layout-text-window::before { content: \"\\f464\"; }\n.bi-layout-three-columns::before { content: \"\\f465\"; }\n.bi-layout-wtf::before { content: \"\\f466\"; }\n.bi-life-preserver::before { content: \"\\f467\"; }\n.bi-lightbulb-fill::before { content: \"\\f468\"; }\n.bi-lightbulb-off-fill::before { content: \"\\f469\"; }\n.bi-lightbulb-off::before { content: \"\\f46a\"; }\n.bi-lightbulb::before { content: \"\\f46b\"; }\n.bi-lightning-charge-fill::before { content: \"\\f46c\"; }\n.bi-lightning-charge::before { content: \"\\f46d\"; }\n.bi-lightning-fill::before { content: \"\\f46e\"; }\n.bi-lightning::before { content: \"\\f46f\"; }\n.bi-link-45deg::before { content: \"\\f470\"; }\n.bi-link::before { content: \"\\f471\"; }\n.bi-linkedin::before { content: \"\\f472\"; }\n.bi-list-check::before { content: \"\\f473\"; }\n.bi-list-nested::before { content: \"\\f474\"; }\n.bi-list-ol::before { content: \"\\f475\"; }\n.bi-list-stars::before { content: \"\\f476\"; }\n.bi-list-task::before { content: \"\\f477\"; }\n.bi-list-ul::before { content: \"\\f478\"; }\n.bi-list::before { content: \"\\f479\"; }\n.bi-lock-fill::before { content: \"\\f47a\"; }\n.bi-lock::before { content: \"\\f47b\"; }\n.bi-mailbox::before { content: \"\\f47c\"; }\n.bi-mailbox2::before { content: \"\\f47d\"; }\n.bi-map-fill::before { content: \"\\f47e\"; }\n.bi-map::before { content: \"\\f47f\"; }\n.bi-markdown-fill::before { content: \"\\f480\"; }\n.bi-markdown::before { content: \"\\f481\"; }\n.bi-mask::before { content: \"\\f482\"; }\n.bi-megaphone-fill::before { content: \"\\f483\"; }\n.bi-megaphone::before { content: \"\\f484\"; }\n.bi-menu-app-fill::before { content: \"\\f485\"; }\n.bi-menu-app::before { content: \"\\f486\"; }\n.bi-menu-button-fill::before { content: \"\\f487\"; }\n.bi-menu-button-wide-fill::before { content: \"\\f488\"; }\n.bi-menu-button-wide::before { content: \"\\f489\"; }\n.bi-menu-button::before { content: \"\\f48a\"; }\n.bi-menu-down::before { content: \"\\f48b\"; }\n.bi-menu-up::before { content: \"\\f48c\"; }\n.bi-mic-fill::before { content: \"\\f48d\"; }\n.bi-mic-mute-fill::before { content: \"\\f48e\"; }\n.bi-mic-mute::before { content: \"\\f48f\"; }\n.bi-mic::before { content: \"\\f490\"; }\n.bi-minecart-loaded::before { content: \"\\f491\"; }\n.bi-minecart::before { content: \"\\f492\"; }\n.bi-moisture::before { content: \"\\f493\"; }\n.bi-moon-fill::before { content: \"\\f494\"; }\n.bi-moon-stars-fill::before { content: \"\\f495\"; }\n.bi-moon-stars::before { content: \"\\f496\"; }\n.bi-moon::before { content: \"\\f497\"; }\n.bi-mouse-fill::before { content: \"\\f498\"; }\n.bi-mouse::before { content: \"\\f499\"; }\n.bi-mouse2-fill::before { content: \"\\f49a\"; }\n.bi-mouse2::before { content: \"\\f49b\"; }\n.bi-mouse3-fill::before { content: \"\\f49c\"; }\n.bi-mouse3::before { content: \"\\f49d\"; }\n.bi-music-note-beamed::before { content: \"\\f49e\"; }\n.bi-music-note-list::before { content: \"\\f49f\"; }\n.bi-music-note::before { content: \"\\f4a0\"; }\n.bi-music-player-fill::before { content: \"\\f4a1\"; }\n.bi-music-player::before { content: \"\\f4a2\"; }\n.bi-newspaper::before { content: \"\\f4a3\"; }\n.bi-node-minus-fill::before { content: \"\\f4a4\"; }\n.bi-node-minus::before { content: \"\\f4a5\"; }\n.bi-node-plus-fill::before { content: \"\\f4a6\"; }\n.bi-node-plus::before { content: \"\\f4a7\"; }\n.bi-nut-fill::before { content: \"\\f4a8\"; }\n.bi-nut::before { content: \"\\f4a9\"; }\n.bi-octagon-fill::before { content: \"\\f4aa\"; }\n.bi-octagon-half::before { content: \"\\f4ab\"; }\n.bi-octagon::before { content: \"\\f4ac\"; }\n.bi-option::before { content: \"\\f4ad\"; }\n.bi-outlet::before { content: \"\\f4ae\"; }\n.bi-paint-bucket::before { content: \"\\f4af\"; }\n.bi-palette-fill::before { content: \"\\f4b0\"; }\n.bi-palette::before { content: \"\\f4b1\"; }\n.bi-palette2::before { content: \"\\f4b2\"; }\n.bi-paperclip::before { content: \"\\f4b3\"; }\n.bi-paragraph::before { content: \"\\f4b4\"; }\n.bi-patch-check-fill::before { content: \"\\f4b5\"; }\n.bi-patch-check::before { content: \"\\f4b6\"; }\n.bi-patch-exclamation-fill::before { content: \"\\f4b7\"; }\n.bi-patch-exclamation::before { content: \"\\f4b8\"; }\n.bi-patch-minus-fill::before { content: \"\\f4b9\"; }\n.bi-patch-minus::before { content: \"\\f4ba\"; }\n.bi-patch-plus-fill::before { content: \"\\f4bb\"; }\n.bi-patch-plus::before { content: \"\\f4bc\"; }\n.bi-patch-question-fill::before { content: \"\\f4bd\"; }\n.bi-patch-question::before { content: \"\\f4be\"; }\n.bi-pause-btn-fill::before { content: \"\\f4bf\"; }\n.bi-pause-btn::before { content: \"\\f4c0\"; }\n.bi-pause-circle-fill::before { content: \"\\f4c1\"; }\n.bi-pause-circle::before { content: \"\\f4c2\"; }\n.bi-pause-fill::before { content: \"\\f4c3\"; }\n.bi-pause::before { content: \"\\f4c4\"; }\n.bi-peace-fill::before { content: \"\\f4c5\"; }\n.bi-peace::before { content: \"\\f4c6\"; }\n.bi-pen-fill::before { content: \"\\f4c7\"; }\n.bi-pen::before { content: \"\\f4c8\"; }\n.bi-pencil-fill::before { content: \"\\f4c9\"; }\n.bi-pencil-square::before { content: \"\\f4ca\"; }\n.bi-pencil::before { content: \"\\f4cb\"; }\n.bi-pentagon-fill::before { content: \"\\f4cc\"; }\n.bi-pentagon-half::before { content: \"\\f4cd\"; }\n.bi-pentagon::before { content: \"\\f4ce\"; }\n.bi-people-fill::before { content: \"\\f4cf\"; }\n.bi-people::before { content: \"\\f4d0\"; }\n.bi-percent::before { content: \"\\f4d1\"; }\n.bi-person-badge-fill::before { content: \"\\f4d2\"; }\n.bi-person-badge::before { content: \"\\f4d3\"; }\n.bi-person-bounding-box::before { content: \"\\f4d4\"; }\n.bi-person-check-fill::before { content: \"\\f4d5\"; }\n.bi-person-check::before { content: \"\\f4d6\"; }\n.bi-person-circle::before { content: \"\\f4d7\"; }\n.bi-person-dash-fill::before { content: \"\\f4d8\"; }\n.bi-person-dash::before { content: \"\\f4d9\"; }\n.bi-person-fill::before { content: \"\\f4da\"; }\n.bi-person-lines-fill::before { content: \"\\f4db\"; }\n.bi-person-plus-fill::before { content: \"\\f4dc\"; }\n.bi-person-plus::before { content: \"\\f4dd\"; }\n.bi-person-square::before { content: \"\\f4de\"; }\n.bi-person-x-fill::before { content: \"\\f4df\"; }\n.bi-person-x::before { content: \"\\f4e0\"; }\n.bi-person::before { content: \"\\f4e1\"; }\n.bi-phone-fill::before { content: \"\\f4e2\"; }\n.bi-phone-landscape-fill::before { content: \"\\f4e3\"; }\n.bi-phone-landscape::before { content: \"\\f4e4\"; }\n.bi-phone-vibrate-fill::before { content: \"\\f4e5\"; }\n.bi-phone-vibrate::before { content: \"\\f4e6\"; }\n.bi-phone::before { content: \"\\f4e7\"; }\n.bi-pie-chart-fill::before { content: \"\\f4e8\"; }\n.bi-pie-chart::before { content: \"\\f4e9\"; }\n.bi-pin-angle-fill::before { content: \"\\f4ea\"; }\n.bi-pin-angle::before { content: \"\\f4eb\"; }\n.bi-pin-fill::before { content: \"\\f4ec\"; }\n.bi-pin::before { content: \"\\f4ed\"; }\n.bi-pip-fill::before { content: \"\\f4ee\"; }\n.bi-pip::before { content: \"\\f4ef\"; }\n.bi-play-btn-fill::before { content: \"\\f4f0\"; }\n.bi-play-btn::before { content: \"\\f4f1\"; }\n.bi-play-circle-fill::before { content: \"\\f4f2\"; }\n.bi-play-circle::before { content: \"\\f4f3\"; }\n.bi-play-fill::before { content: \"\\f4f4\"; }\n.bi-play::before { content: \"\\f4f5\"; }\n.bi-plug-fill::before { content: \"\\f4f6\"; }\n.bi-plug::before { content: \"\\f4f7\"; }\n.bi-plus-circle-dotted::before { content: \"\\f4f8\"; }\n.bi-plus-circle-fill::before { content: \"\\f4f9\"; }\n.bi-plus-circle::before { content: \"\\f4fa\"; }\n.bi-plus-square-dotted::before { content: \"\\f4fb\"; }\n.bi-plus-square-fill::before { content: \"\\f4fc\"; }\n.bi-plus-square::before { content: \"\\f4fd\"; }\n.bi-plus::before { content: \"\\f4fe\"; }\n.bi-power::before { content: \"\\f4ff\"; }\n.bi-printer-fill::before { content: \"\\f500\"; }\n.bi-printer::before { content: \"\\f501\"; }\n.bi-puzzle-fill::before { content: \"\\f502\"; }\n.bi-puzzle::before { content: \"\\f503\"; }\n.bi-question-circle-fill::before { content: \"\\f504\"; }\n.bi-question-circle::before { content: \"\\f505\"; }\n.bi-question-diamond-fill::before { content: \"\\f506\"; }\n.bi-question-diamond::before { content: \"\\f507\"; }\n.bi-question-octagon-fill::before { content: \"\\f508\"; }\n.bi-question-octagon::before { content: \"\\f509\"; }\n.bi-question-square-fill::before { content: \"\\f50a\"; }\n.bi-question-square::before { content: \"\\f50b\"; }\n.bi-question::before { content: \"\\f50c\"; }\n.bi-rainbow::before { content: \"\\f50d\"; }\n.bi-receipt-cutoff::before { content: \"\\f50e\"; }\n.bi-receipt::before { content: \"\\f50f\"; }\n.bi-reception-0::before { content: \"\\f510\"; }\n.bi-reception-1::before { content: \"\\f511\"; }\n.bi-reception-2::before { content: \"\\f512\"; }\n.bi-reception-3::before { content: \"\\f513\"; }\n.bi-reception-4::before { content: \"\\f514\"; }\n.bi-record-btn-fill::before { content: \"\\f515\"; }\n.bi-record-btn::before { content: \"\\f516\"; }\n.bi-record-circle-fill::before { content: \"\\f517\"; }\n.bi-record-circle::before { content: \"\\f518\"; }\n.bi-record-fill::before { content: \"\\f519\"; }\n.bi-record::before { content: \"\\f51a\"; }\n.bi-record2-fill::before { content: \"\\f51b\"; }\n.bi-record2::before { content: \"\\f51c\"; }\n.bi-reply-all-fill::before { content: \"\\f51d\"; }\n.bi-reply-all::before { content: \"\\f51e\"; }\n.bi-reply-fill::before { content: \"\\f51f\"; }\n.bi-reply::before { content: \"\\f520\"; }\n.bi-rss-fill::before { content: \"\\f521\"; }\n.bi-rss::before { content: \"\\f522\"; }\n.bi-rulers::before { content: \"\\f523\"; }\n.bi-save-fill::before { content: \"\\f524\"; }\n.bi-save::before { content: \"\\f525\"; }\n.bi-save2-fill::before { content: \"\\f526\"; }\n.bi-save2::before { content: \"\\f527\"; }\n.bi-scissors::before { content: \"\\f528\"; }\n.bi-screwdriver::before { content: \"\\f529\"; }\n.bi-search::before { content: \"\\f52a\"; }\n.bi-segmented-nav::before { content: \"\\f52b\"; }\n.bi-server::before { content: \"\\f52c\"; }\n.bi-share-fill::before { content: \"\\f52d\"; }\n.bi-share::before { content: \"\\f52e\"; }\n.bi-shield-check::before { content: \"\\f52f\"; }\n.bi-shield-exclamation::before { content: \"\\f530\"; }\n.bi-shield-fill-check::before { content: \"\\f531\"; }\n.bi-shield-fill-exclamation::before { content: \"\\f532\"; }\n.bi-shield-fill-minus::before { content: \"\\f533\"; }\n.bi-shield-fill-plus::before { content: \"\\f534\"; }\n.bi-shield-fill-x::before { content: \"\\f535\"; }\n.bi-shield-fill::before { content: \"\\f536\"; }\n.bi-shield-lock-fill::before { content: \"\\f537\"; }\n.bi-shield-lock::before { content: \"\\f538\"; }\n.bi-shield-minus::before { content: \"\\f539\"; }\n.bi-shield-plus::before { content: \"\\f53a\"; }\n.bi-shield-shaded::before { content: \"\\f53b\"; }\n.bi-shield-slash-fill::before { content: \"\\f53c\"; }\n.bi-shield-slash::before { content: \"\\f53d\"; }\n.bi-shield-x::before { content: \"\\f53e\"; }\n.bi-shield::before { content: \"\\f53f\"; }\n.bi-shift-fill::before { content: \"\\f540\"; }\n.bi-shift::before { content: \"\\f541\"; }\n.bi-shop-window::before { content: \"\\f542\"; }\n.bi-shop::before { content: \"\\f543\"; }\n.bi-shuffle::before { content: \"\\f544\"; }\n.bi-signpost-2-fill::before { content: \"\\f545\"; }\n.bi-signpost-2::before { content: \"\\f546\"; }\n.bi-signpost-fill::before { content: \"\\f547\"; }\n.bi-signpost-split-fill::before { content: \"\\f548\"; }\n.bi-signpost-split::before { content: \"\\f549\"; }\n.bi-signpost::before { content: \"\\f54a\"; }\n.bi-sim-fill::before { content: \"\\f54b\"; }\n.bi-sim::before { content: \"\\f54c\"; }\n.bi-skip-backward-btn-fill::before { content: \"\\f54d\"; }\n.bi-skip-backward-btn::before { content: \"\\f54e\"; }\n.bi-skip-backward-circle-fill::before { content: \"\\f54f\"; }\n.bi-skip-backward-circle::before { content: \"\\f550\"; }\n.bi-skip-backward-fill::before { content: \"\\f551\"; }\n.bi-skip-backward::before { content: \"\\f552\"; }\n.bi-skip-end-btn-fill::before { content: \"\\f553\"; }\n.bi-skip-end-btn::before { content: \"\\f554\"; }\n.bi-skip-end-circle-fill::before { content: \"\\f555\"; }\n.bi-skip-end-circle::before { content: \"\\f556\"; }\n.bi-skip-end-fill::before { content: \"\\f557\"; }\n.bi-skip-end::before { content: \"\\f558\"; }\n.bi-skip-forward-btn-fill::before { content: \"\\f559\"; }\n.bi-skip-forward-btn::before { content: \"\\f55a\"; }\n.bi-skip-forward-circle-fill::before { content: \"\\f55b\"; }\n.bi-skip-forward-circle::before { content: \"\\f55c\"; }\n.bi-skip-forward-fill::before { content: \"\\f55d\"; }\n.bi-skip-forward::before { content: \"\\f55e\"; }\n.bi-skip-start-btn-fill::before { content: \"\\f55f\"; }\n.bi-skip-start-btn::before { content: \"\\f560\"; }\n.bi-skip-start-circle-fill::before { content: \"\\f561\"; }\n.bi-skip-start-circle::before { content: \"\\f562\"; }\n.bi-skip-start-fill::before { content: \"\\f563\"; }\n.bi-skip-start::before { content: \"\\f564\"; }\n.bi-slack::before { content: \"\\f565\"; }\n.bi-slash-circle-fill::before { content: \"\\f566\"; }\n.bi-slash-circle::before { content: \"\\f567\"; }\n.bi-slash-square-fill::before { content: \"\\f568\"; }\n.bi-slash-square::before { content: \"\\f569\"; }\n.bi-slash::before { content: \"\\f56a\"; }\n.bi-sliders::before { content: \"\\f56b\"; }\n.bi-smartwatch::before { content: \"\\f56c\"; }\n.bi-snow::before { content: \"\\f56d\"; }\n.bi-snow2::before { content: \"\\f56e\"; }\n.bi-snow3::before { content: \"\\f56f\"; }\n.bi-sort-alpha-down-alt::before { content: \"\\f570\"; }\n.bi-sort-alpha-down::before { content: \"\\f571\"; }\n.bi-sort-alpha-up-alt::before { content: \"\\f572\"; }\n.bi-sort-alpha-up::before { content: \"\\f573\"; }\n.bi-sort-down-alt::before { content: \"\\f574\"; }\n.bi-sort-down::before { content: \"\\f575\"; }\n.bi-sort-numeric-down-alt::before { content: \"\\f576\"; }\n.bi-sort-numeric-down::before { content: \"\\f577\"; }\n.bi-sort-numeric-up-alt::before { content: \"\\f578\"; }\n.bi-sort-numeric-up::before { content: \"\\f579\"; }\n.bi-sort-up-alt::before { content: \"\\f57a\"; }\n.bi-sort-up::before { content: \"\\f57b\"; }\n.bi-soundwave::before { content: \"\\f57c\"; }\n.bi-speaker-fill::before { content: \"\\f57d\"; }\n.bi-speaker::before { content: \"\\f57e\"; }\n.bi-speedometer::before { content: \"\\f57f\"; }\n.bi-speedometer2::before { content: \"\\f580\"; }\n.bi-spellcheck::before { content: \"\\f581\"; }\n.bi-square-fill::before { content: \"\\f582\"; }\n.bi-square-half::before { content: \"\\f583\"; }\n.bi-square::before { content: \"\\f584\"; }\n.bi-stack::before { content: \"\\f585\"; }\n.bi-star-fill::before { content: \"\\f586\"; }\n.bi-star-half::before { content: \"\\f587\"; }\n.bi-star::before { content: \"\\f588\"; }\n.bi-stars::before { content: \"\\f589\"; }\n.bi-stickies-fill::before { content: \"\\f58a\"; }\n.bi-stickies::before { content: \"\\f58b\"; }\n.bi-sticky-fill::before { content: \"\\f58c\"; }\n.bi-sticky::before { content: \"\\f58d\"; }\n.bi-stop-btn-fill::before { content: \"\\f58e\"; }\n.bi-stop-btn::before { content: \"\\f58f\"; }\n.bi-stop-circle-fill::before { content: \"\\f590\"; }\n.bi-stop-circle::before { content: \"\\f591\"; }\n.bi-stop-fill::before { content: \"\\f592\"; }\n.bi-stop::before { content: \"\\f593\"; }\n.bi-stoplights-fill::before { content: \"\\f594\"; }\n.bi-stoplights::before { content: \"\\f595\"; }\n.bi-stopwatch-fill::before { content: \"\\f596\"; }\n.bi-stopwatch::before { content: \"\\f597\"; }\n.bi-subtract::before { content: \"\\f598\"; }\n.bi-suit-club-fill::before { content: \"\\f599\"; }\n.bi-suit-club::before { content: \"\\f59a\"; }\n.bi-suit-diamond-fill::before { content: \"\\f59b\"; }\n.bi-suit-diamond::before { content: \"\\f59c\"; }\n.bi-suit-heart-fill::before { content: \"\\f59d\"; }\n.bi-suit-heart::before { content: \"\\f59e\"; }\n.bi-suit-spade-fill::before { content: \"\\f59f\"; }\n.bi-suit-spade::before { content: \"\\f5a0\"; }\n.bi-sun-fill::before { content: \"\\f5a1\"; }\n.bi-sun::before { content: \"\\f5a2\"; }\n.bi-sunglasses::before { content: \"\\f5a3\"; }\n.bi-sunrise-fill::before { content: \"\\f5a4\"; }\n.bi-sunrise::before { content: \"\\f5a5\"; }\n.bi-sunset-fill::before { content: \"\\f5a6\"; }\n.bi-sunset::before { content: \"\\f5a7\"; }\n.bi-symmetry-horizontal::before { content: \"\\f5a8\"; }\n.bi-symmetry-vertical::before { content: \"\\f5a9\"; }\n.bi-table::before { content: \"\\f5aa\"; }\n.bi-tablet-fill::before { content: \"\\f5ab\"; }\n.bi-tablet-landscape-fill::before { content: \"\\f5ac\"; }\n.bi-tablet-landscape::before { content: \"\\f5ad\"; }\n.bi-tablet::before { content: \"\\f5ae\"; }\n.bi-tag-fill::before { content: \"\\f5af\"; }\n.bi-tag::before { content: \"\\f5b0\"; }\n.bi-tags-fill::before { content: \"\\f5b1\"; }\n.bi-tags::before { content: \"\\f5b2\"; }\n.bi-telegram::before { content: \"\\f5b3\"; }\n.bi-telephone-fill::before { content: \"\\f5b4\"; }\n.bi-telephone-forward-fill::before { content: \"\\f5b5\"; }\n.bi-telephone-forward::before { content: \"\\f5b6\"; }\n.bi-telephone-inbound-fill::before { content: \"\\f5b7\"; }\n.bi-telephone-inbound::before { content: \"\\f5b8\"; }\n.bi-telephone-minus-fill::before { content: \"\\f5b9\"; }\n.bi-telephone-minus::before { content: \"\\f5ba\"; }\n.bi-telephone-outbound-fill::before { content: \"\\f5bb\"; }\n.bi-telephone-outbound::before { content: \"\\f5bc\"; }\n.bi-telephone-plus-fill::before { content: \"\\f5bd\"; }\n.bi-telephone-plus::before { content: \"\\f5be\"; }\n.bi-telephone-x-fill::before { content: \"\\f5bf\"; }\n.bi-telephone-x::before { content: \"\\f5c0\"; }\n.bi-telephone::before { content: \"\\f5c1\"; }\n.bi-terminal-fill::before { content: \"\\f5c2\"; }\n.bi-terminal::before { content: \"\\f5c3\"; }\n.bi-text-center::before { content: \"\\f5c4\"; }\n.bi-text-indent-left::before { content: \"\\f5c5\"; }\n.bi-text-indent-right::before { content: \"\\f5c6\"; }\n.bi-text-left::before { content: \"\\f5c7\"; }\n.bi-text-paragraph::before { content: \"\\f5c8\"; }\n.bi-text-right::before { content: \"\\f5c9\"; }\n.bi-textarea-resize::before { content: \"\\f5ca\"; }\n.bi-textarea-t::before { content: \"\\f5cb\"; }\n.bi-textarea::before { content: \"\\f5cc\"; }\n.bi-thermometer-half::before { content: \"\\f5cd\"; }\n.bi-thermometer-high::before { content: \"\\f5ce\"; }\n.bi-thermometer-low::before { content: \"\\f5cf\"; }\n.bi-thermometer-snow::before { content: \"\\f5d0\"; }\n.bi-thermometer-sun::before { content: \"\\f5d1\"; }\n.bi-thermometer::before { content: \"\\f5d2\"; }\n.bi-three-dots-vertical::before { content: \"\\f5d3\"; }\n.bi-three-dots::before { content: \"\\f5d4\"; }\n.bi-toggle-off::before { content: \"\\f5d5\"; }\n.bi-toggle-on::before { content: \"\\f5d6\"; }\n.bi-toggle2-off::before { content: \"\\f5d7\"; }\n.bi-toggle2-on::before { content: \"\\f5d8\"; }\n.bi-toggles::before { content: \"\\f5d9\"; }\n.bi-toggles2::before { content: \"\\f5da\"; }\n.bi-tools::before { content: \"\\f5db\"; }\n.bi-tornado::before { content: \"\\f5dc\"; }\n.bi-trash-fill::before { content: \"\\f5dd\"; }\n.bi-trash::before { content: \"\\f5de\"; }\n.bi-trash2-fill::before { content: \"\\f5df\"; }\n.bi-trash2::before { content: \"\\f5e0\"; }\n.bi-tree-fill::before { content: \"\\f5e1\"; }\n.bi-tree::before { content: \"\\f5e2\"; }\n.bi-triangle-fill::before { content: \"\\f5e3\"; }\n.bi-triangle-half::before { content: \"\\f5e4\"; }\n.bi-triangle::before { content: \"\\f5e5\"; }\n.bi-trophy-fill::before { content: \"\\f5e6\"; }\n.bi-trophy::before { content: \"\\f5e7\"; }\n.bi-tropical-storm::before { content: \"\\f5e8\"; }\n.bi-truck-flatbed::before { content: \"\\f5e9\"; }\n.bi-truck::before { content: \"\\f5ea\"; }\n.bi-tsunami::before { content: \"\\f5eb\"; }\n.bi-tv-fill::before { content: \"\\f5ec\"; }\n.bi-tv::before { content: \"\\f5ed\"; }\n.bi-twitch::before { content: \"\\f5ee\"; }\n.bi-twitter::before { content: \"\\f5ef\"; }\n.bi-type-bold::before { content: \"\\f5f0\"; }\n.bi-type-h1::before { content: \"\\f5f1\"; }\n.bi-type-h2::before { content: \"\\f5f2\"; }\n.bi-type-h3::before { content: \"\\f5f3\"; }\n.bi-type-italic::before { content: \"\\f5f4\"; }\n.bi-type-strikethrough::before { content: \"\\f5f5\"; }\n.bi-type-underline::before { content: \"\\f5f6\"; }\n.bi-type::before { content: \"\\f5f7\"; }\n.bi-ui-checks-grid::before { content: \"\\f5f8\"; }\n.bi-ui-checks::before { content: \"\\f5f9\"; }\n.bi-ui-radios-grid::before { content: \"\\f5fa\"; }\n.bi-ui-radios::before { content: \"\\f5fb\"; }\n.bi-umbrella-fill::before { content: \"\\f5fc\"; }\n.bi-umbrella::before { content: \"\\f5fd\"; }\n.bi-union::before { content: \"\\f5fe\"; }\n.bi-unlock-fill::before { content: \"\\f5ff\"; }\n.bi-unlock::before { content: \"\\f600\"; }\n.bi-upc-scan::before { content: \"\\f601\"; }\n.bi-upc::before { content: \"\\f602\"; }\n.bi-upload::before { content: \"\\f603\"; }\n.bi-vector-pen::before { content: \"\\f604\"; }\n.bi-view-list::before { content: \"\\f605\"; }\n.bi-view-stacked::before { content: \"\\f606\"; }\n.bi-vinyl-fill::before { content: \"\\f607\"; }\n.bi-vinyl::before { content: \"\\f608\"; }\n.bi-voicemail::before { content: \"\\f609\"; }\n.bi-volume-down-fill::before { content: \"\\f60a\"; }\n.bi-volume-down::before { content: \"\\f60b\"; }\n.bi-volume-mute-fill::before { content: \"\\f60c\"; }\n.bi-volume-mute::before { content: \"\\f60d\"; }\n.bi-volume-off-fill::before { content: \"\\f60e\"; }\n.bi-volume-off::before { content: \"\\f60f\"; }\n.bi-volume-up-fill::before { content: \"\\f610\"; }\n.bi-volume-up::before { content: \"\\f611\"; }\n.bi-vr::before { content: \"\\f612\"; }\n.bi-wallet-fill::before { content: \"\\f613\"; }\n.bi-wallet::before { content: \"\\f614\"; }\n.bi-wallet2::before { content: \"\\f615\"; }\n.bi-watch::before { content: \"\\f616\"; }\n.bi-water::before { content: \"\\f617\"; }\n.bi-whatsapp::before { content: \"\\f618\"; }\n.bi-wifi-1::before { content: \"\\f619\"; }\n.bi-wifi-2::before { content: \"\\f61a\"; }\n.bi-wifi-off::before { content: \"\\f61b\"; }\n.bi-wifi::before { content: \"\\f61c\"; }\n.bi-wind::before { content: \"\\f61d\"; }\n.bi-window-dock::before { content: \"\\f61e\"; }\n.bi-window-sidebar::before { content: \"\\f61f\"; }\n.bi-window::before { content: \"\\f620\"; }\n.bi-wrench::before { content: \"\\f621\"; }\n.bi-x-circle-fill::before { content: \"\\f622\"; }\n.bi-x-circle::before { content: \"\\f623\"; }\n.bi-x-diamond-fill::before { content: \"\\f624\"; }\n.bi-x-diamond::before { content: \"\\f625\"; }\n.bi-x-octagon-fill::before { content: \"\\f626\"; }\n.bi-x-octagon::before { content: \"\\f627\"; }\n.bi-x-square-fill::before { content: \"\\f628\"; }\n.bi-x-square::before { content: \"\\f629\"; }\n.bi-x::before { content: \"\\f62a\"; }\n.bi-youtube::before { content: \"\\f62b\"; }\n.bi-zoom-in::before { content: \"\\f62c\"; }\n.bi-zoom-out::before { content: \"\\f62d\"; }\n.bi-bank::before { content: \"\\f62e\"; }\n.bi-bank2::before { content: \"\\f62f\"; }\n.bi-bell-slash-fill::before { content: \"\\f630\"; }\n.bi-bell-slash::before { content: \"\\f631\"; }\n.bi-cash-coin::before { content: \"\\f632\"; }\n.bi-check-lg::before { content: \"\\f633\"; }\n.bi-coin::before { content: \"\\f634\"; }\n.bi-currency-bitcoin::before { content: \"\\f635\"; }\n.bi-currency-dollar::before { content: \"\\f636\"; }\n.bi-currency-euro::before { content: \"\\f637\"; }\n.bi-currency-exchange::before { content: \"\\f638\"; }\n.bi-currency-pound::before { content: \"\\f639\"; }\n.bi-currency-yen::before { content: \"\\f63a\"; }\n.bi-dash-lg::before { content: \"\\f63b\"; }\n.bi-exclamation-lg::before { content: \"\\f63c\"; }\n.bi-file-earmark-pdf-fill::before { content: \"\\f63d\"; }\n.bi-file-earmark-pdf::before { content: \"\\f63e\"; }\n.bi-file-pdf-fill::before { content: \"\\f63f\"; }\n.bi-file-pdf::before { content: \"\\f640\"; }\n.bi-gender-ambiguous::before { content: \"\\f641\"; }\n.bi-gender-female::before { content: \"\\f642\"; }\n.bi-gender-male::before { content: \"\\f643\"; }\n.bi-gender-trans::before { content: \"\\f644\"; }\n.bi-headset-vr::before { content: \"\\f645\"; }\n.bi-info-lg::before { content: \"\\f646\"; }\n.bi-mastodon::before { content: \"\\f647\"; }\n.bi-messenger::before { content: \"\\f648\"; }\n.bi-piggy-bank-fill::before { content: \"\\f649\"; }\n.bi-piggy-bank::before { content: \"\\f64a\"; }\n.bi-pin-map-fill::before { content: \"\\f64b\"; }\n.bi-pin-map::before { content: \"\\f64c\"; }\n.bi-plus-lg::before { content: \"\\f64d\"; }\n.bi-question-lg::before { content: \"\\f64e\"; }\n.bi-recycle::before { content: \"\\f64f\"; }\n.bi-reddit::before { content: \"\\f650\"; }\n.bi-safe-fill::before { content: \"\\f651\"; }\n.bi-safe2-fill::before { content: \"\\f652\"; }\n.bi-safe2::before { content: \"\\f653\"; }\n.bi-sd-card-fill::before { content: \"\\f654\"; }\n.bi-sd-card::before { content: \"\\f655\"; }\n.bi-skype::before { content: \"\\f656\"; }\n.bi-slash-lg::before { content: \"\\f657\"; }\n.bi-translate::before { content: \"\\f658\"; }\n.bi-x-lg::before { content: \"\\f659\"; }\n.bi-safe::before { content: \"\\f65a\"; }\n.bi-apple::before { content: \"\\f65b\"; }\n.bi-microsoft::before { content: \"\\f65d\"; }\n.bi-windows::before { content: \"\\f65e\"; }\n.bi-behance::before { content: \"\\f65c\"; }\n.bi-dribbble::before { content: \"\\f65f\"; }\n.bi-line::before { content: \"\\f660\"; }\n.bi-medium::before { content: \"\\f661\"; }\n.bi-paypal::before { content: \"\\f662\"; }\n.bi-pinterest::before { content: \"\\f663\"; }\n.bi-signal::before { content: \"\\f664\"; }\n.bi-snapchat::before { content: \"\\f665\"; }\n.bi-spotify::before { content: \"\\f666\"; }\n.bi-stack-overflow::before { content: \"\\f667\"; }\n.bi-strava::before { content: \"\\f668\"; }\n.bi-wordpress::before { content: \"\\f669\"; }\n.bi-vimeo::before { content: \"\\f66a\"; }\n.bi-activity::before { content: \"\\f66b\"; }\n.bi-easel2-fill::before { content: \"\\f66c\"; }\n.bi-easel2::before { content: \"\\f66d\"; }\n.bi-easel3-fill::before { content: \"\\f66e\"; }\n.bi-easel3::before { content: \"\\f66f\"; }\n.bi-fan::before { content: \"\\f670\"; }\n.bi-fingerprint::before { content: \"\\f671\"; }\n.bi-graph-down-arrow::before { content: \"\\f672\"; }\n.bi-graph-up-arrow::before { content: \"\\f673\"; }\n.bi-hypnotize::before { content: \"\\f674\"; }\n.bi-magic::before { content: \"\\f675\"; }\n.bi-person-rolodex::before { content: \"\\f676\"; }\n.bi-person-video::before { content: \"\\f677\"; }\n.bi-person-video2::before { content: \"\\f678\"; }\n.bi-person-video3::before { content: \"\\f679\"; }\n.bi-person-workspace::before { content: \"\\f67a\"; }\n.bi-radioactive::before { content: \"\\f67b\"; }\n.bi-webcam-fill::before { content: \"\\f67c\"; }\n.bi-webcam::before { content: \"\\f67d\"; }\n.bi-yin-yang::before { content: \"\\f67e\"; }\n.bi-bandaid-fill::before { content: \"\\f680\"; }\n.bi-bandaid::before { content: \"\\f681\"; }\n.bi-bluetooth::before { content: \"\\f682\"; }\n.bi-body-text::before { content: \"\\f683\"; }\n.bi-boombox::before { content: \"\\f684\"; }\n.bi-boxes::before { content: \"\\f685\"; }\n.bi-dpad-fill::before { content: \"\\f686\"; }\n.bi-dpad::before { content: \"\\f687\"; }\n.bi-ear-fill::before { content: \"\\f688\"; }\n.bi-ear::before { content: \"\\f689\"; }\n.bi-envelope-check-fill::before { content: \"\\f68b\"; }\n.bi-envelope-check::before { content: \"\\f68c\"; }\n.bi-envelope-dash-fill::before { content: \"\\f68e\"; }\n.bi-envelope-dash::before { content: \"\\f68f\"; }\n.bi-envelope-exclamation-fill::before { content: \"\\f691\"; }\n.bi-envelope-exclamation::before { content: \"\\f692\"; }\n.bi-envelope-plus-fill::before { content: \"\\f693\"; }\n.bi-envelope-plus::before { content: \"\\f694\"; }\n.bi-envelope-slash-fill::before { content: \"\\f696\"; }\n.bi-envelope-slash::before { content: \"\\f697\"; }\n.bi-envelope-x-fill::before { content: \"\\f699\"; }\n.bi-envelope-x::before { content: \"\\f69a\"; }\n.bi-explicit-fill::before { content: \"\\f69b\"; }\n.bi-explicit::before { content: \"\\f69c\"; }\n.bi-git::before { content: \"\\f69d\"; }\n.bi-infinity::before { content: \"\\f69e\"; }\n.bi-list-columns-reverse::before { content: \"\\f69f\"; }\n.bi-list-columns::before { content: \"\\f6a0\"; }\n.bi-meta::before { content: \"\\f6a1\"; }\n.bi-nintendo-switch::before { content: \"\\f6a4\"; }\n.bi-pc-display-horizontal::before { content: \"\\f6a5\"; }\n.bi-pc-display::before { content: \"\\f6a6\"; }\n.bi-pc-horizontal::before { content: \"\\f6a7\"; }\n.bi-pc::before { content: \"\\f6a8\"; }\n.bi-playstation::before { content: \"\\f6a9\"; }\n.bi-plus-slash-minus::before { content: \"\\f6aa\"; }\n.bi-projector-fill::before { content: \"\\f6ab\"; }\n.bi-projector::before { content: \"\\f6ac\"; }\n.bi-qr-code-scan::before { content: \"\\f6ad\"; }\n.bi-qr-code::before { content: \"\\f6ae\"; }\n.bi-quora::before { content: \"\\f6af\"; }\n.bi-quote::before { content: \"\\f6b0\"; }\n.bi-robot::before { content: \"\\f6b1\"; }\n.bi-send-check-fill::before { content: \"\\f6b2\"; }\n.bi-send-check::before { content: \"\\f6b3\"; }\n.bi-send-dash-fill::before { content: \"\\f6b4\"; }\n.bi-send-dash::before { content: \"\\f6b5\"; }\n.bi-send-exclamation-fill::before { content: \"\\f6b7\"; }\n.bi-send-exclamation::before { content: \"\\f6b8\"; }\n.bi-send-fill::before { content: \"\\f6b9\"; }\n.bi-send-plus-fill::before { content: \"\\f6ba\"; }\n.bi-send-plus::before { content: \"\\f6bb\"; }\n.bi-send-slash-fill::before { content: \"\\f6bc\"; }\n.bi-send-slash::before { content: \"\\f6bd\"; }\n.bi-send-x-fill::before { content: \"\\f6be\"; }\n.bi-send-x::before { content: \"\\f6bf\"; }\n.bi-send::before { content: \"\\f6c0\"; }\n.bi-steam::before { content: \"\\f6c1\"; }\n.bi-terminal-dash::before { content: \"\\f6c3\"; }\n.bi-terminal-plus::before { content: \"\\f6c4\"; }\n.bi-terminal-split::before { content: \"\\f6c5\"; }\n.bi-ticket-detailed-fill::before { content: \"\\f6c6\"; }\n.bi-ticket-detailed::before { content: \"\\f6c7\"; }\n.bi-ticket-fill::before { content: \"\\f6c8\"; }\n.bi-ticket-perforated-fill::before { content: \"\\f6c9\"; }\n.bi-ticket-perforated::before { content: \"\\f6ca\"; }\n.bi-ticket::before { content: \"\\f6cb\"; }\n.bi-tiktok::before { content: \"\\f6cc\"; }\n.bi-window-dash::before { content: \"\\f6cd\"; }\n.bi-window-desktop::before { content: \"\\f6ce\"; }\n.bi-window-fullscreen::before { content: \"\\f6cf\"; }\n.bi-window-plus::before { content: \"\\f6d0\"; }\n.bi-window-split::before { content: \"\\f6d1\"; }\n.bi-window-stack::before { content: \"\\f6d2\"; }\n.bi-window-x::before { content: \"\\f6d3\"; }\n.bi-xbox::before { content: \"\\f6d4\"; }\n.bi-ethernet::before { content: \"\\f6d5\"; }\n.bi-hdmi-fill::before { content: \"\\f6d6\"; }\n.bi-hdmi::before { content: \"\\f6d7\"; }\n.bi-usb-c-fill::before { content: \"\\f6d8\"; }\n.bi-usb-c::before { content: \"\\f6d9\"; }\n.bi-usb-fill::before { content: \"\\f6da\"; }\n.bi-usb-plug-fill::before { content: \"\\f6db\"; }\n.bi-usb-plug::before { content: \"\\f6dc\"; }\n.bi-usb-symbol::before { content: \"\\f6dd\"; }\n.bi-usb::before { content: \"\\f6de\"; }\n.bi-boombox-fill::before { content: \"\\f6df\"; }\n.bi-displayport::before { content: \"\\f6e1\"; }\n.bi-gpu-card::before { content: \"\\f6e2\"; }\n.bi-memory::before { content: \"\\f6e3\"; }\n.bi-modem-fill::before { content: \"\\f6e4\"; }\n.bi-modem::before { content: \"\\f6e5\"; }\n.bi-motherboard-fill::before { content: \"\\f6e6\"; }\n.bi-motherboard::before { content: \"\\f6e7\"; }\n.bi-optical-audio-fill::before { content: \"\\f6e8\"; }\n.bi-optical-audio::before { content: \"\\f6e9\"; }\n.bi-pci-card::before { content: \"\\f6ea\"; }\n.bi-router-fill::before { content: \"\\f6eb\"; }\n.bi-router::before { content: \"\\f6ec\"; }\n.bi-thunderbolt-fill::before { content: \"\\f6ef\"; }\n.bi-thunderbolt::before { content: \"\\f6f0\"; }\n.bi-usb-drive-fill::before { content: \"\\f6f1\"; }\n.bi-usb-drive::before { content: \"\\f6f2\"; }\n.bi-usb-micro-fill::before { content: \"\\f6f3\"; }\n.bi-usb-micro::before { content: \"\\f6f4\"; }\n.bi-usb-mini-fill::before { content: \"\\f6f5\"; }\n.bi-usb-mini::before { content: \"\\f6f6\"; }\n.bi-cloud-haze2::before { content: \"\\f6f7\"; }\n.bi-device-hdd-fill::before { content: \"\\f6f8\"; }\n.bi-device-hdd::before { content: \"\\f6f9\"; }\n.bi-device-ssd-fill::before { content: \"\\f6fa\"; }\n.bi-device-ssd::before { content: \"\\f6fb\"; }\n.bi-displayport-fill::before { content: \"\\f6fc\"; }\n.bi-mortarboard-fill::before { content: \"\\f6fd\"; }\n.bi-mortarboard::before { content: \"\\f6fe\"; }\n.bi-terminal-x::before { content: \"\\f6ff\"; }\n.bi-arrow-through-heart-fill::before { content: \"\\f700\"; }\n.bi-arrow-through-heart::before { content: \"\\f701\"; }\n.bi-badge-sd-fill::before { content: \"\\f702\"; }\n.bi-badge-sd::before { content: \"\\f703\"; }\n.bi-bag-heart-fill::before { content: \"\\f704\"; }\n.bi-bag-heart::before { content: \"\\f705\"; }\n.bi-balloon-fill::before { content: \"\\f706\"; }\n.bi-balloon-heart-fill::before { content: \"\\f707\"; }\n.bi-balloon-heart::before { content: \"\\f708\"; }\n.bi-balloon::before { content: \"\\f709\"; }\n.bi-box2-fill::before { content: \"\\f70a\"; }\n.bi-box2-heart-fill::before { content: \"\\f70b\"; }\n.bi-box2-heart::before { content: \"\\f70c\"; }\n.bi-box2::before { content: \"\\f70d\"; }\n.bi-braces-asterisk::before { content: \"\\f70e\"; }\n.bi-calendar-heart-fill::before { content: \"\\f70f\"; }\n.bi-calendar-heart::before { content: \"\\f710\"; }\n.bi-calendar2-heart-fill::before { content: \"\\f711\"; }\n.bi-calendar2-heart::before { content: \"\\f712\"; }\n.bi-chat-heart-fill::before { content: \"\\f713\"; }\n.bi-chat-heart::before { content: \"\\f714\"; }\n.bi-chat-left-heart-fill::before { content: \"\\f715\"; }\n.bi-chat-left-heart::before { content: \"\\f716\"; }\n.bi-chat-right-heart-fill::before { content: \"\\f717\"; }\n.bi-chat-right-heart::before { content: \"\\f718\"; }\n.bi-chat-square-heart-fill::before { content: \"\\f719\"; }\n.bi-chat-square-heart::before { content: \"\\f71a\"; }\n.bi-clipboard-check-fill::before { content: \"\\f71b\"; }\n.bi-clipboard-data-fill::before { content: \"\\f71c\"; }\n.bi-clipboard-fill::before { content: \"\\f71d\"; }\n.bi-clipboard-heart-fill::before { content: \"\\f71e\"; }\n.bi-clipboard-heart::before { content: \"\\f71f\"; }\n.bi-clipboard-minus-fill::before { content: \"\\f720\"; }\n.bi-clipboard-plus-fill::before { content: \"\\f721\"; }\n.bi-clipboard-pulse::before { content: \"\\f722\"; }\n.bi-clipboard-x-fill::before { content: \"\\f723\"; }\n.bi-clipboard2-check-fill::before { content: \"\\f724\"; }\n.bi-clipboard2-check::before { content: \"\\f725\"; }\n.bi-clipboard2-data-fill::before { content: \"\\f726\"; }\n.bi-clipboard2-data::before { content: \"\\f727\"; }\n.bi-clipboard2-fill::before { content: \"\\f728\"; }\n.bi-clipboard2-heart-fill::before { content: \"\\f729\"; }\n.bi-clipboard2-heart::before { content: \"\\f72a\"; }\n.bi-clipboard2-minus-fill::before { content: \"\\f72b\"; }\n.bi-clipboard2-minus::before { content: \"\\f72c\"; }\n.bi-clipboard2-plus-fill::before { content: \"\\f72d\"; }\n.bi-clipboard2-plus::before { content: \"\\f72e\"; }\n.bi-clipboard2-pulse-fill::before { content: \"\\f72f\"; }\n.bi-clipboard2-pulse::before { content: \"\\f730\"; }\n.bi-clipboard2-x-fill::before { content: \"\\f731\"; }\n.bi-clipboard2-x::before { content: \"\\f732\"; }\n.bi-clipboard2::before { content: \"\\f733\"; }\n.bi-emoji-kiss-fill::before { content: \"\\f734\"; }\n.bi-emoji-kiss::before { content: \"\\f735\"; }\n.bi-envelope-heart-fill::before { content: \"\\f736\"; }\n.bi-envelope-heart::before { content: \"\\f737\"; }\n.bi-envelope-open-heart-fill::before { content: \"\\f738\"; }\n.bi-envelope-open-heart::before { content: \"\\f739\"; }\n.bi-envelope-paper-fill::before { content: \"\\f73a\"; }\n.bi-envelope-paper-heart-fill::before { content: \"\\f73b\"; }\n.bi-envelope-paper-heart::before { content: \"\\f73c\"; }\n.bi-envelope-paper::before { content: \"\\f73d\"; }\n.bi-filetype-aac::before { content: \"\\f73e\"; }\n.bi-filetype-ai::before { content: \"\\f73f\"; }\n.bi-filetype-bmp::before { content: \"\\f740\"; }\n.bi-filetype-cs::before { content: \"\\f741\"; }\n.bi-filetype-css::before { content: \"\\f742\"; }\n.bi-filetype-csv::before { content: \"\\f743\"; }\n.bi-filetype-doc::before { content: \"\\f744\"; }\n.bi-filetype-docx::before { content: \"\\f745\"; }\n.bi-filetype-exe::before { content: \"\\f746\"; }\n.bi-filetype-gif::before { content: \"\\f747\"; }\n.bi-filetype-heic::before { content: \"\\f748\"; }\n.bi-filetype-html::before { content: \"\\f749\"; }\n.bi-filetype-java::before { content: \"\\f74a\"; }\n.bi-filetype-jpg::before { content: \"\\f74b\"; }\n.bi-filetype-js::before { content: \"\\f74c\"; }\n.bi-filetype-jsx::before { content: \"\\f74d\"; }\n.bi-filetype-key::before { content: \"\\f74e\"; }\n.bi-filetype-m4p::before { content: \"\\f74f\"; }\n.bi-filetype-md::before { content: \"\\f750\"; }\n.bi-filetype-mdx::before { content: \"\\f751\"; }\n.bi-filetype-mov::before { content: \"\\f752\"; }\n.bi-filetype-mp3::before { content: \"\\f753\"; }\n.bi-filetype-mp4::before { content: \"\\f754\"; }\n.bi-filetype-otf::before { content: \"\\f755\"; }\n.bi-filetype-pdf::before { content: \"\\f756\"; }\n.bi-filetype-php::before { content: \"\\f757\"; }\n.bi-filetype-png::before { content: \"\\f758\"; }\n.bi-filetype-ppt::before { content: \"\\f75a\"; }\n.bi-filetype-psd::before { content: \"\\f75b\"; }\n.bi-filetype-py::before { content: \"\\f75c\"; }\n.bi-filetype-raw::before { content: \"\\f75d\"; }\n.bi-filetype-rb::before { content: \"\\f75e\"; }\n.bi-filetype-sass::before { content: \"\\f75f\"; }\n.bi-filetype-scss::before { content: \"\\f760\"; }\n.bi-filetype-sh::before { content: \"\\f761\"; }\n.bi-filetype-svg::before { content: \"\\f762\"; }\n.bi-filetype-tiff::before { content: \"\\f763\"; }\n.bi-filetype-tsx::before { content: \"\\f764\"; }\n.bi-filetype-ttf::before { content: \"\\f765\"; }\n.bi-filetype-txt::before { content: \"\\f766\"; }\n.bi-filetype-wav::before { content: \"\\f767\"; }\n.bi-filetype-woff::before { content: \"\\f768\"; }\n.bi-filetype-xls::before { content: \"\\f76a\"; }\n.bi-filetype-xml::before { content: \"\\f76b\"; }\n.bi-filetype-yml::before { content: \"\\f76c\"; }\n.bi-heart-arrow::before { content: \"\\f76d\"; }\n.bi-heart-pulse-fill::before { content: \"\\f76e\"; }\n.bi-heart-pulse::before { content: \"\\f76f\"; }\n.bi-heartbreak-fill::before { content: \"\\f770\"; }\n.bi-heartbreak::before { content: \"\\f771\"; }\n.bi-hearts::before { content: \"\\f772\"; }\n.bi-hospital-fill::before { content: \"\\f773\"; }\n.bi-hospital::before { content: \"\\f774\"; }\n.bi-house-heart-fill::before { content: \"\\f775\"; }\n.bi-house-heart::before { content: \"\\f776\"; }\n.bi-incognito::before { content: \"\\f777\"; }\n.bi-magnet-fill::before { content: \"\\f778\"; }\n.bi-magnet::before { content: \"\\f779\"; }\n.bi-person-heart::before { content: \"\\f77a\"; }\n.bi-person-hearts::before { content: \"\\f77b\"; }\n.bi-phone-flip::before { content: \"\\f77c\"; }\n.bi-plugin::before { content: \"\\f77d\"; }\n.bi-postage-fill::before { content: \"\\f77e\"; }\n.bi-postage-heart-fill::before { content: \"\\f77f\"; }\n.bi-postage-heart::before { content: \"\\f780\"; }\n.bi-postage::before { content: \"\\f781\"; }\n.bi-postcard-fill::before { content: \"\\f782\"; }\n.bi-postcard-heart-fill::before { content: \"\\f783\"; }\n.bi-postcard-heart::before { content: \"\\f784\"; }\n.bi-postcard::before { content: \"\\f785\"; }\n.bi-search-heart-fill::before { content: \"\\f786\"; }\n.bi-search-heart::before { content: \"\\f787\"; }\n.bi-sliders2-vertical::before { content: \"\\f788\"; }\n.bi-sliders2::before { content: \"\\f789\"; }\n.bi-trash3-fill::before { content: \"\\f78a\"; }\n.bi-trash3::before { content: \"\\f78b\"; }\n.bi-valentine::before { content: \"\\f78c\"; }\n.bi-valentine2::before { content: \"\\f78d\"; }\n.bi-wrench-adjustable-circle-fill::before { content: \"\\f78e\"; }\n.bi-wrench-adjustable-circle::before { content: \"\\f78f\"; }\n.bi-wrench-adjustable::before { content: \"\\f790\"; }\n.bi-filetype-json::before { content: \"\\f791\"; }\n.bi-filetype-pptx::before { content: \"\\f792\"; }\n.bi-filetype-xlsx::before { content: \"\\f793\"; }\n.bi-1-circle-fill::before { content: \"\\f796\"; }\n.bi-1-circle::before { content: \"\\f797\"; }\n.bi-1-square-fill::before { content: \"\\f798\"; }\n.bi-1-square::before { content: \"\\f799\"; }\n.bi-2-circle-fill::before { content: \"\\f79c\"; }\n.bi-2-circle::before { content: \"\\f79d\"; }\n.bi-2-square-fill::before { content: \"\\f79e\"; }\n.bi-2-square::before { content: \"\\f79f\"; }\n.bi-3-circle-fill::before { content: \"\\f7a2\"; }\n.bi-3-circle::before { content: \"\\f7a3\"; }\n.bi-3-square-fill::before { content: \"\\f7a4\"; }\n.bi-3-square::before { content: \"\\f7a5\"; }\n.bi-4-circle-fill::before { content: \"\\f7a8\"; }\n.bi-4-circle::before { content: \"\\f7a9\"; }\n.bi-4-square-fill::before { content: \"\\f7aa\"; }\n.bi-4-square::before { content: \"\\f7ab\"; }\n.bi-5-circle-fill::before { content: \"\\f7ae\"; }\n.bi-5-circle::before { content: \"\\f7af\"; }\n.bi-5-square-fill::before { content: \"\\f7b0\"; }\n.bi-5-square::before { content: \"\\f7b1\"; }\n.bi-6-circle-fill::before { content: \"\\f7b4\"; }\n.bi-6-circle::before { content: \"\\f7b5\"; }\n.bi-6-square-fill::before { content: \"\\f7b6\"; }\n.bi-6-square::before { content: \"\\f7b7\"; }\n.bi-7-circle-fill::before { content: \"\\f7ba\"; }\n.bi-7-circle::before { content: \"\\f7bb\"; }\n.bi-7-square-fill::before { content: \"\\f7bc\"; }\n.bi-7-square::before { content: \"\\f7bd\"; }\n.bi-8-circle-fill::before { content: \"\\f7c0\"; }\n.bi-8-circle::before { content: \"\\f7c1\"; }\n.bi-8-square-fill::before { content: \"\\f7c2\"; }\n.bi-8-square::before { content: \"\\f7c3\"; }\n.bi-9-circle-fill::before { content: \"\\f7c6\"; }\n.bi-9-circle::before { content: \"\\f7c7\"; }\n.bi-9-square-fill::before { content: \"\\f7c8\"; }\n.bi-9-square::before { content: \"\\f7c9\"; }\n.bi-airplane-engines-fill::before { content: \"\\f7ca\"; }\n.bi-airplane-engines::before { content: \"\\f7cb\"; }\n.bi-airplane-fill::before { content: \"\\f7cc\"; }\n.bi-airplane::before { content: \"\\f7cd\"; }\n.bi-alexa::before { content: \"\\f7ce\"; }\n.bi-alipay::before { content: \"\\f7cf\"; }\n.bi-android::before { content: \"\\f7d0\"; }\n.bi-android2::before { content: \"\\f7d1\"; }\n.bi-box-fill::before { content: \"\\f7d2\"; }\n.bi-box-seam-fill::before { content: \"\\f7d3\"; }\n.bi-browser-chrome::before { content: \"\\f7d4\"; }\n.bi-browser-edge::before { content: \"\\f7d5\"; }\n.bi-browser-firefox::before { content: \"\\f7d6\"; }\n.bi-browser-safari::before { content: \"\\f7d7\"; }\n.bi-c-circle-fill::before { content: \"\\f7da\"; }\n.bi-c-circle::before { content: \"\\f7db\"; }\n.bi-c-square-fill::before { content: \"\\f7dc\"; }\n.bi-c-square::before { content: \"\\f7dd\"; }\n.bi-capsule-pill::before { content: \"\\f7de\"; }\n.bi-capsule::before { content: \"\\f7df\"; }\n.bi-car-front-fill::before { content: \"\\f7e0\"; }\n.bi-car-front::before { content: \"\\f7e1\"; }\n.bi-cassette-fill::before { content: \"\\f7e2\"; }\n.bi-cassette::before { content: \"\\f7e3\"; }\n.bi-cc-circle-fill::before { content: \"\\f7e6\"; }\n.bi-cc-circle::before { content: \"\\f7e7\"; }\n.bi-cc-square-fill::before { content: \"\\f7e8\"; }\n.bi-cc-square::before { content: \"\\f7e9\"; }\n.bi-cup-hot-fill::before { content: \"\\f7ea\"; }\n.bi-cup-hot::before { content: \"\\f7eb\"; }\n.bi-currency-rupee::before { content: \"\\f7ec\"; }\n.bi-dropbox::before { content: \"\\f7ed\"; }\n.bi-escape::before { content: \"\\f7ee\"; }\n.bi-fast-forward-btn-fill::before { content: \"\\f7ef\"; }\n.bi-fast-forward-btn::before { content: \"\\f7f0\"; }\n.bi-fast-forward-circle-fill::before { content: \"\\f7f1\"; }\n.bi-fast-forward-circle::before { content: \"\\f7f2\"; }\n.bi-fast-forward-fill::before { content: \"\\f7f3\"; }\n.bi-fast-forward::before { content: \"\\f7f4\"; }\n.bi-filetype-sql::before { content: \"\\f7f5\"; }\n.bi-fire::before { content: \"\\f7f6\"; }\n.bi-google-play::before { content: \"\\f7f7\"; }\n.bi-h-circle-fill::before { content: \"\\f7fa\"; }\n.bi-h-circle::before { content: \"\\f7fb\"; }\n.bi-h-square-fill::before { content: \"\\f7fc\"; }\n.bi-h-square::before { content: \"\\f7fd\"; }\n.bi-indent::before { content: \"\\f7fe\"; }\n.bi-lungs-fill::before { content: \"\\f7ff\"; }\n.bi-lungs::before { content: \"\\f800\"; }\n.bi-microsoft-teams::before { content: \"\\f801\"; }\n.bi-p-circle-fill::before { content: \"\\f804\"; }\n.bi-p-circle::before { content: \"\\f805\"; }\n.bi-p-square-fill::before { content: \"\\f806\"; }\n.bi-p-square::before { content: \"\\f807\"; }\n.bi-pass-fill::before { content: \"\\f808\"; }\n.bi-pass::before { content: \"\\f809\"; }\n.bi-prescription::before { content: \"\\f80a\"; }\n.bi-prescription2::before { content: \"\\f80b\"; }\n.bi-r-circle-fill::before { content: \"\\f80e\"; }\n.bi-r-circle::before { content: \"\\f80f\"; }\n.bi-r-square-fill::before { content: \"\\f810\"; }\n.bi-r-square::before { content: \"\\f811\"; }\n.bi-repeat-1::before { content: \"\\f812\"; }\n.bi-repeat::before { content: \"\\f813\"; }\n.bi-rewind-btn-fill::before { content: \"\\f814\"; }\n.bi-rewind-btn::before { content: \"\\f815\"; }\n.bi-rewind-circle-fill::before { content: \"\\f816\"; }\n.bi-rewind-circle::before { content: \"\\f817\"; }\n.bi-rewind-fill::before { content: \"\\f818\"; }\n.bi-rewind::before { content: \"\\f819\"; }\n.bi-train-freight-front-fill::before { content: \"\\f81a\"; }\n.bi-train-freight-front::before { content: \"\\f81b\"; }\n.bi-train-front-fill::before { content: \"\\f81c\"; }\n.bi-train-front::before { content: \"\\f81d\"; }\n.bi-train-lightrail-front-fill::before { content: \"\\f81e\"; }\n.bi-train-lightrail-front::before { content: \"\\f81f\"; }\n.bi-truck-front-fill::before { content: \"\\f820\"; }\n.bi-truck-front::before { content: \"\\f821\"; }\n.bi-ubuntu::before { content: \"\\f822\"; }\n.bi-unindent::before { content: \"\\f823\"; }\n.bi-unity::before { content: \"\\f824\"; }\n.bi-universal-access-circle::before { content: \"\\f825\"; }\n.bi-universal-access::before { content: \"\\f826\"; }\n.bi-virus::before { content: \"\\f827\"; }\n.bi-virus2::before { content: \"\\f828\"; }\n.bi-wechat::before { content: \"\\f829\"; }\n.bi-yelp::before { content: \"\\f82a\"; }\n.bi-sign-stop-fill::before { content: \"\\f82b\"; }\n.bi-sign-stop-lights-fill::before { content: \"\\f82c\"; }\n.bi-sign-stop-lights::before { content: \"\\f82d\"; }\n.bi-sign-stop::before { content: \"\\f82e\"; }\n.bi-sign-turn-left-fill::before { content: \"\\f82f\"; }\n.bi-sign-turn-left::before { content: \"\\f830\"; }\n.bi-sign-turn-right-fill::before { content: \"\\f831\"; }\n.bi-sign-turn-right::before { content: \"\\f832\"; }\n.bi-sign-turn-slight-left-fill::before { content: \"\\f833\"; }\n.bi-sign-turn-slight-left::before { content: \"\\f834\"; }\n.bi-sign-turn-slight-right-fill::before { content: \"\\f835\"; }\n.bi-sign-turn-slight-right::before { content: \"\\f836\"; }\n.bi-sign-yield-fill::before { content: \"\\f837\"; }\n.bi-sign-yield::before { content: \"\\f838\"; }\n.bi-ev-station-fill::before { content: \"\\f839\"; }\n.bi-ev-station::before { content: \"\\f83a\"; }\n.bi-fuel-pump-diesel-fill::before { content: \"\\f83b\"; }\n.bi-fuel-pump-diesel::before { content: \"\\f83c\"; }\n.bi-fuel-pump-fill::before { content: \"\\f83d\"; }\n.bi-fuel-pump::before { content: \"\\f83e\"; }\n.bi-0-circle-fill::before { content: \"\\f83f\"; }\n.bi-0-circle::before { content: \"\\f840\"; }\n.bi-0-square-fill::before { content: \"\\f841\"; }\n.bi-0-square::before { content: \"\\f842\"; }\n.bi-rocket-fill::before { content: \"\\f843\"; }\n.bi-rocket-takeoff-fill::before { content: \"\\f844\"; }\n.bi-rocket-takeoff::before { content: \"\\f845\"; }\n.bi-rocket::before { content: \"\\f846\"; }\n.bi-stripe::before { content: \"\\f847\"; }\n.bi-subscript::before { content: \"\\f848\"; }\n.bi-superscript::before { content: \"\\f849\"; }\n.bi-trello::before { content: \"\\f84a\"; }\n.bi-envelope-at-fill::before { content: \"\\f84b\"; }\n.bi-envelope-at::before { content: \"\\f84c\"; }\n.bi-regex::before { content: \"\\f84d\"; }\n.bi-text-wrap::before { content: \"\\f84e\"; }\n.bi-sign-dead-end-fill::before { content: \"\\f84f\"; }\n.bi-sign-dead-end::before { content: \"\\f850\"; }\n.bi-sign-do-not-enter-fill::before { content: \"\\f851\"; }\n.bi-sign-do-not-enter::before { content: \"\\f852\"; }\n.bi-sign-intersection-fill::before { content: \"\\f853\"; }\n.bi-sign-intersection-side-fill::before { content: \"\\f854\"; }\n.bi-sign-intersection-side::before { content: \"\\f855\"; }\n.bi-sign-intersection-t-fill::before { content: \"\\f856\"; }\n.bi-sign-intersection-t::before { content: \"\\f857\"; }\n.bi-sign-intersection-y-fill::before { content: \"\\f858\"; }\n.bi-sign-intersection-y::before { content: \"\\f859\"; }\n.bi-sign-intersection::before { content: \"\\f85a\"; }\n.bi-sign-merge-left-fill::before { content: \"\\f85b\"; }\n.bi-sign-merge-left::before { content: \"\\f85c\"; }\n.bi-sign-merge-right-fill::before { content: \"\\f85d\"; }\n.bi-sign-merge-right::before { content: \"\\f85e\"; }\n.bi-sign-no-left-turn-fill::before { content: \"\\f85f\"; }\n.bi-sign-no-left-turn::before { content: \"\\f860\"; }\n.bi-sign-no-parking-fill::before { content: \"\\f861\"; }\n.bi-sign-no-parking::before { content: \"\\f862\"; }\n.bi-sign-no-right-turn-fill::before { content: \"\\f863\"; }\n.bi-sign-no-right-turn::before { content: \"\\f864\"; }\n.bi-sign-railroad-fill::before { content: \"\\f865\"; }\n.bi-sign-railroad::before { content: \"\\f866\"; }\n.bi-building-add::before { content: \"\\f867\"; }\n.bi-building-check::before { content: \"\\f868\"; }\n.bi-building-dash::before { content: \"\\f869\"; }\n.bi-building-down::before { content: \"\\f86a\"; }\n.bi-building-exclamation::before { content: \"\\f86b\"; }\n.bi-building-fill-add::before { content: \"\\f86c\"; }\n.bi-building-fill-check::before { content: \"\\f86d\"; }\n.bi-building-fill-dash::before { content: \"\\f86e\"; }\n.bi-building-fill-down::before { content: \"\\f86f\"; }\n.bi-building-fill-exclamation::before { content: \"\\f870\"; }\n.bi-building-fill-gear::before { content: \"\\f871\"; }\n.bi-building-fill-lock::before { content: \"\\f872\"; }\n.bi-building-fill-slash::before { content: \"\\f873\"; }\n.bi-building-fill-up::before { content: \"\\f874\"; }\n.bi-building-fill-x::before { content: \"\\f875\"; }\n.bi-building-fill::before { content: \"\\f876\"; }\n.bi-building-gear::before { content: \"\\f877\"; }\n.bi-building-lock::before { content: \"\\f878\"; }\n.bi-building-slash::before { content: \"\\f879\"; }\n.bi-building-up::before { content: \"\\f87a\"; }\n.bi-building-x::before { content: \"\\f87b\"; }\n.bi-buildings-fill::before { content: \"\\f87c\"; }\n.bi-buildings::before { content: \"\\f87d\"; }\n.bi-bus-front-fill::before { content: \"\\f87e\"; }\n.bi-bus-front::before { content: \"\\f87f\"; }\n.bi-ev-front-fill::before { content: \"\\f880\"; }\n.bi-ev-front::before { content: \"\\f881\"; }\n.bi-globe-americas::before { content: \"\\f882\"; }\n.bi-globe-asia-australia::before { content: \"\\f883\"; }\n.bi-globe-central-south-asia::before { content: \"\\f884\"; }\n.bi-globe-europe-africa::before { content: \"\\f885\"; }\n.bi-house-add-fill::before { content: \"\\f886\"; }\n.bi-house-add::before { content: \"\\f887\"; }\n.bi-house-check-fill::before { content: \"\\f888\"; }\n.bi-house-check::before { content: \"\\f889\"; }\n.bi-house-dash-fill::before { content: \"\\f88a\"; }\n.bi-house-dash::before { content: \"\\f88b\"; }\n.bi-house-down-fill::before { content: \"\\f88c\"; }\n.bi-house-down::before { content: \"\\f88d\"; }\n.bi-house-exclamation-fill::before { content: \"\\f88e\"; }\n.bi-house-exclamation::before { content: \"\\f88f\"; }\n.bi-house-gear-fill::before { content: \"\\f890\"; }\n.bi-house-gear::before { content: \"\\f891\"; }\n.bi-house-lock-fill::before { content: \"\\f892\"; }\n.bi-house-lock::before { content: \"\\f893\"; }\n.bi-house-slash-fill::before { content: \"\\f894\"; }\n.bi-house-slash::before { content: \"\\f895\"; }\n.bi-house-up-fill::before { content: \"\\f896\"; }\n.bi-house-up::before { content: \"\\f897\"; }\n.bi-house-x-fill::before { content: \"\\f898\"; }\n.bi-house-x::before { content: \"\\f899\"; }\n.bi-person-add::before { content: \"\\f89a\"; }\n.bi-person-down::before { content: \"\\f89b\"; }\n.bi-person-exclamation::before { content: \"\\f89c\"; }\n.bi-person-fill-add::before { content: \"\\f89d\"; }\n.bi-person-fill-check::before { content: \"\\f89e\"; }\n.bi-person-fill-dash::before { content: \"\\f89f\"; }\n.bi-person-fill-down::before { content: \"\\f8a0\"; }\n.bi-person-fill-exclamation::before { content: \"\\f8a1\"; }\n.bi-person-fill-gear::before { content: \"\\f8a2\"; }\n.bi-person-fill-lock::before { content: \"\\f8a3\"; }\n.bi-person-fill-slash::before { content: \"\\f8a4\"; }\n.bi-person-fill-up::before { content: \"\\f8a5\"; }\n.bi-person-fill-x::before { content: \"\\f8a6\"; }\n.bi-person-gear::before { content: \"\\f8a7\"; }\n.bi-person-lock::before { content: \"\\f8a8\"; }\n.bi-person-slash::before { content: \"\\f8a9\"; }\n.bi-person-up::before { content: \"\\f8aa\"; }\n.bi-scooter::before { content: \"\\f8ab\"; }\n.bi-taxi-front-fill::before { content: \"\\f8ac\"; }\n.bi-taxi-front::before { content: \"\\f8ad\"; }\n.bi-amd::before { content: \"\\f8ae\"; }\n.bi-database-add::before { content: \"\\f8af\"; }\n.bi-database-check::before { content: \"\\f8b0\"; }\n.bi-database-dash::before { content: \"\\f8b1\"; }\n.bi-database-down::before { content: \"\\f8b2\"; }\n.bi-database-exclamation::before { content: \"\\f8b3\"; }\n.bi-database-fill-add::before { content: \"\\f8b4\"; }\n.bi-database-fill-check::before { content: \"\\f8b5\"; }\n.bi-database-fill-dash::before { content: \"\\f8b6\"; }\n.bi-database-fill-down::before { content: \"\\f8b7\"; }\n.bi-database-fill-exclamation::before { content: \"\\f8b8\"; }\n.bi-database-fill-gear::before { content: \"\\f8b9\"; }\n.bi-database-fill-lock::before { content: \"\\f8ba\"; }\n.bi-database-fill-slash::before { content: \"\\f8bb\"; }\n.bi-database-fill-up::before { content: \"\\f8bc\"; }\n.bi-database-fill-x::before { content: \"\\f8bd\"; }\n.bi-database-fill::before { content: \"\\f8be\"; }\n.bi-database-gear::before { content: \"\\f8bf\"; }\n.bi-database-lock::before { content: \"\\f8c0\"; }\n.bi-database-slash::before { content: \"\\f8c1\"; }\n.bi-database-up::before { content: \"\\f8c2\"; }\n.bi-database-x::before { content: \"\\f8c3\"; }\n.bi-database::before { content: \"\\f8c4\"; }\n.bi-houses-fill::before { content: \"\\f8c5\"; }\n.bi-houses::before { content: \"\\f8c6\"; }\n.bi-nvidia::before { content: \"\\f8c7\"; }\n.bi-person-vcard-fill::before { content: \"\\f8c8\"; }\n.bi-person-vcard::before { content: \"\\f8c9\"; }\n.bi-sina-weibo::before { content: \"\\f8ca\"; }\n.bi-tencent-qq::before { content: \"\\f8cb\"; }\n.bi-wikipedia::before { content: \"\\f8cc\"; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `/*!
+ * Bootstrap Icons v1.10.5 (https://icons.getbootstrap.com/)
+ * Copyright 2019-2023 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
+ */
+
+@font-face {
+  font-display: block;
+  font-family: "bootstrap-icons";
+  src: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format("woff2"),
+url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-123::before { content: "\\f67f"; }
+.bi-alarm-fill::before { content: "\\f101"; }
+.bi-alarm::before { content: "\\f102"; }
+.bi-align-bottom::before { content: "\\f103"; }
+.bi-align-center::before { content: "\\f104"; }
+.bi-align-end::before { content: "\\f105"; }
+.bi-align-middle::before { content: "\\f106"; }
+.bi-align-start::before { content: "\\f107"; }
+.bi-align-top::before { content: "\\f108"; }
+.bi-alt::before { content: "\\f109"; }
+.bi-app-indicator::before { content: "\\f10a"; }
+.bi-app::before { content: "\\f10b"; }
+.bi-archive-fill::before { content: "\\f10c"; }
+.bi-archive::before { content: "\\f10d"; }
+.bi-arrow-90deg-down::before { content: "\\f10e"; }
+.bi-arrow-90deg-left::before { content: "\\f10f"; }
+.bi-arrow-90deg-right::before { content: "\\f110"; }
+.bi-arrow-90deg-up::before { content: "\\f111"; }
+.bi-arrow-bar-down::before { content: "\\f112"; }
+.bi-arrow-bar-left::before { content: "\\f113"; }
+.bi-arrow-bar-right::before { content: "\\f114"; }
+.bi-arrow-bar-up::before { content: "\\f115"; }
+.bi-arrow-clockwise::before { content: "\\f116"; }
+.bi-arrow-counterclockwise::before { content: "\\f117"; }
+.bi-arrow-down-circle-fill::before { content: "\\f118"; }
+.bi-arrow-down-circle::before { content: "\\f119"; }
+.bi-arrow-down-left-circle-fill::before { content: "\\f11a"; }
+.bi-arrow-down-left-circle::before { content: "\\f11b"; }
+.bi-arrow-down-left-square-fill::before { content: "\\f11c"; }
+.bi-arrow-down-left-square::before { content: "\\f11d"; }
+.bi-arrow-down-left::before { content: "\\f11e"; }
+.bi-arrow-down-right-circle-fill::before { content: "\\f11f"; }
+.bi-arrow-down-right-circle::before { content: "\\f120"; }
+.bi-arrow-down-right-square-fill::before { content: "\\f121"; }
+.bi-arrow-down-right-square::before { content: "\\f122"; }
+.bi-arrow-down-right::before { content: "\\f123"; }
+.bi-arrow-down-short::before { content: "\\f124"; }
+.bi-arrow-down-square-fill::before { content: "\\f125"; }
+.bi-arrow-down-square::before { content: "\\f126"; }
+.bi-arrow-down-up::before { content: "\\f127"; }
+.bi-arrow-down::before { content: "\\f128"; }
+.bi-arrow-left-circle-fill::before { content: "\\f129"; }
+.bi-arrow-left-circle::before { content: "\\f12a"; }
+.bi-arrow-left-right::before { content: "\\f12b"; }
+.bi-arrow-left-short::before { content: "\\f12c"; }
+.bi-arrow-left-square-fill::before { content: "\\f12d"; }
+.bi-arrow-left-square::before { content: "\\f12e"; }
+.bi-arrow-left::before { content: "\\f12f"; }
+.bi-arrow-repeat::before { content: "\\f130"; }
+.bi-arrow-return-left::before { content: "\\f131"; }
+.bi-arrow-return-right::before { content: "\\f132"; }
+.bi-arrow-right-circle-fill::before { content: "\\f133"; }
+.bi-arrow-right-circle::before { content: "\\f134"; }
+.bi-arrow-right-short::before { content: "\\f135"; }
+.bi-arrow-right-square-fill::before { content: "\\f136"; }
+.bi-arrow-right-square::before { content: "\\f137"; }
+.bi-arrow-right::before { content: "\\f138"; }
+.bi-arrow-up-circle-fill::before { content: "\\f139"; }
+.bi-arrow-up-circle::before { content: "\\f13a"; }
+.bi-arrow-up-left-circle-fill::before { content: "\\f13b"; }
+.bi-arrow-up-left-circle::before { content: "\\f13c"; }
+.bi-arrow-up-left-square-fill::before { content: "\\f13d"; }
+.bi-arrow-up-left-square::before { content: "\\f13e"; }
+.bi-arrow-up-left::before { content: "\\f13f"; }
+.bi-arrow-up-right-circle-fill::before { content: "\\f140"; }
+.bi-arrow-up-right-circle::before { content: "\\f141"; }
+.bi-arrow-up-right-square-fill::before { content: "\\f142"; }
+.bi-arrow-up-right-square::before { content: "\\f143"; }
+.bi-arrow-up-right::before { content: "\\f144"; }
+.bi-arrow-up-short::before { content: "\\f145"; }
+.bi-arrow-up-square-fill::before { content: "\\f146"; }
+.bi-arrow-up-square::before { content: "\\f147"; }
+.bi-arrow-up::before { content: "\\f148"; }
+.bi-arrows-angle-contract::before { content: "\\f149"; }
+.bi-arrows-angle-expand::before { content: "\\f14a"; }
+.bi-arrows-collapse::before { content: "\\f14b"; }
+.bi-arrows-expand::before { content: "\\f14c"; }
+.bi-arrows-fullscreen::before { content: "\\f14d"; }
+.bi-arrows-move::before { content: "\\f14e"; }
+.bi-aspect-ratio-fill::before { content: "\\f14f"; }
+.bi-aspect-ratio::before { content: "\\f150"; }
+.bi-asterisk::before { content: "\\f151"; }
+.bi-at::before { content: "\\f152"; }
+.bi-award-fill::before { content: "\\f153"; }
+.bi-award::before { content: "\\f154"; }
+.bi-back::before { content: "\\f155"; }
+.bi-backspace-fill::before { content: "\\f156"; }
+.bi-backspace-reverse-fill::before { content: "\\f157"; }
+.bi-backspace-reverse::before { content: "\\f158"; }
+.bi-backspace::before { content: "\\f159"; }
+.bi-badge-3d-fill::before { content: "\\f15a"; }
+.bi-badge-3d::before { content: "\\f15b"; }
+.bi-badge-4k-fill::before { content: "\\f15c"; }
+.bi-badge-4k::before { content: "\\f15d"; }
+.bi-badge-8k-fill::before { content: "\\f15e"; }
+.bi-badge-8k::before { content: "\\f15f"; }
+.bi-badge-ad-fill::before { content: "\\f160"; }
+.bi-badge-ad::before { content: "\\f161"; }
+.bi-badge-ar-fill::before { content: "\\f162"; }
+.bi-badge-ar::before { content: "\\f163"; }
+.bi-badge-cc-fill::before { content: "\\f164"; }
+.bi-badge-cc::before { content: "\\f165"; }
+.bi-badge-hd-fill::before { content: "\\f166"; }
+.bi-badge-hd::before { content: "\\f167"; }
+.bi-badge-tm-fill::before { content: "\\f168"; }
+.bi-badge-tm::before { content: "\\f169"; }
+.bi-badge-vo-fill::before { content: "\\f16a"; }
+.bi-badge-vo::before { content: "\\f16b"; }
+.bi-badge-vr-fill::before { content: "\\f16c"; }
+.bi-badge-vr::before { content: "\\f16d"; }
+.bi-badge-wc-fill::before { content: "\\f16e"; }
+.bi-badge-wc::before { content: "\\f16f"; }
+.bi-bag-check-fill::before { content: "\\f170"; }
+.bi-bag-check::before { content: "\\f171"; }
+.bi-bag-dash-fill::before { content: "\\f172"; }
+.bi-bag-dash::before { content: "\\f173"; }
+.bi-bag-fill::before { content: "\\f174"; }
+.bi-bag-plus-fill::before { content: "\\f175"; }
+.bi-bag-plus::before { content: "\\f176"; }
+.bi-bag-x-fill::before { content: "\\f177"; }
+.bi-bag-x::before { content: "\\f178"; }
+.bi-bag::before { content: "\\f179"; }
+.bi-bar-chart-fill::before { content: "\\f17a"; }
+.bi-bar-chart-line-fill::before { content: "\\f17b"; }
+.bi-bar-chart-line::before { content: "\\f17c"; }
+.bi-bar-chart-steps::before { content: "\\f17d"; }
+.bi-bar-chart::before { content: "\\f17e"; }
+.bi-basket-fill::before { content: "\\f17f"; }
+.bi-basket::before { content: "\\f180"; }
+.bi-basket2-fill::before { content: "\\f181"; }
+.bi-basket2::before { content: "\\f182"; }
+.bi-basket3-fill::before { content: "\\f183"; }
+.bi-basket3::before { content: "\\f184"; }
+.bi-battery-charging::before { content: "\\f185"; }
+.bi-battery-full::before { content: "\\f186"; }
+.bi-battery-half::before { content: "\\f187"; }
+.bi-battery::before { content: "\\f188"; }
+.bi-bell-fill::before { content: "\\f189"; }
+.bi-bell::before { content: "\\f18a"; }
+.bi-bezier::before { content: "\\f18b"; }
+.bi-bezier2::before { content: "\\f18c"; }
+.bi-bicycle::before { content: "\\f18d"; }
+.bi-binoculars-fill::before { content: "\\f18e"; }
+.bi-binoculars::before { content: "\\f18f"; }
+.bi-blockquote-left::before { content: "\\f190"; }
+.bi-blockquote-right::before { content: "\\f191"; }
+.bi-book-fill::before { content: "\\f192"; }
+.bi-book-half::before { content: "\\f193"; }
+.bi-book::before { content: "\\f194"; }
+.bi-bookmark-check-fill::before { content: "\\f195"; }
+.bi-bookmark-check::before { content: "\\f196"; }
+.bi-bookmark-dash-fill::before { content: "\\f197"; }
+.bi-bookmark-dash::before { content: "\\f198"; }
+.bi-bookmark-fill::before { content: "\\f199"; }
+.bi-bookmark-heart-fill::before { content: "\\f19a"; }
+.bi-bookmark-heart::before { content: "\\f19b"; }
+.bi-bookmark-plus-fill::before { content: "\\f19c"; }
+.bi-bookmark-plus::before { content: "\\f19d"; }
+.bi-bookmark-star-fill::before { content: "\\f19e"; }
+.bi-bookmark-star::before { content: "\\f19f"; }
+.bi-bookmark-x-fill::before { content: "\\f1a0"; }
+.bi-bookmark-x::before { content: "\\f1a1"; }
+.bi-bookmark::before { content: "\\f1a2"; }
+.bi-bookmarks-fill::before { content: "\\f1a3"; }
+.bi-bookmarks::before { content: "\\f1a4"; }
+.bi-bookshelf::before { content: "\\f1a5"; }
+.bi-bootstrap-fill::before { content: "\\f1a6"; }
+.bi-bootstrap-reboot::before { content: "\\f1a7"; }
+.bi-bootstrap::before { content: "\\f1a8"; }
+.bi-border-all::before { content: "\\f1a9"; }
+.bi-border-bottom::before { content: "\\f1aa"; }
+.bi-border-center::before { content: "\\f1ab"; }
+.bi-border-inner::before { content: "\\f1ac"; }
+.bi-border-left::before { content: "\\f1ad"; }
+.bi-border-middle::before { content: "\\f1ae"; }
+.bi-border-outer::before { content: "\\f1af"; }
+.bi-border-right::before { content: "\\f1b0"; }
+.bi-border-style::before { content: "\\f1b1"; }
+.bi-border-top::before { content: "\\f1b2"; }
+.bi-border-width::before { content: "\\f1b3"; }
+.bi-border::before { content: "\\f1b4"; }
+.bi-bounding-box-circles::before { content: "\\f1b5"; }
+.bi-bounding-box::before { content: "\\f1b6"; }
+.bi-box-arrow-down-left::before { content: "\\f1b7"; }
+.bi-box-arrow-down-right::before { content: "\\f1b8"; }
+.bi-box-arrow-down::before { content: "\\f1b9"; }
+.bi-box-arrow-in-down-left::before { content: "\\f1ba"; }
+.bi-box-arrow-in-down-right::before { content: "\\f1bb"; }
+.bi-box-arrow-in-down::before { content: "\\f1bc"; }
+.bi-box-arrow-in-left::before { content: "\\f1bd"; }
+.bi-box-arrow-in-right::before { content: "\\f1be"; }
+.bi-box-arrow-in-up-left::before { content: "\\f1bf"; }
+.bi-box-arrow-in-up-right::before { content: "\\f1c0"; }
+.bi-box-arrow-in-up::before { content: "\\f1c1"; }
+.bi-box-arrow-left::before { content: "\\f1c2"; }
+.bi-box-arrow-right::before { content: "\\f1c3"; }
+.bi-box-arrow-up-left::before { content: "\\f1c4"; }
+.bi-box-arrow-up-right::before { content: "\\f1c5"; }
+.bi-box-arrow-up::before { content: "\\f1c6"; }
+.bi-box-seam::before { content: "\\f1c7"; }
+.bi-box::before { content: "\\f1c8"; }
+.bi-braces::before { content: "\\f1c9"; }
+.bi-bricks::before { content: "\\f1ca"; }
+.bi-briefcase-fill::before { content: "\\f1cb"; }
+.bi-briefcase::before { content: "\\f1cc"; }
+.bi-brightness-alt-high-fill::before { content: "\\f1cd"; }
+.bi-brightness-alt-high::before { content: "\\f1ce"; }
+.bi-brightness-alt-low-fill::before { content: "\\f1cf"; }
+.bi-brightness-alt-low::before { content: "\\f1d0"; }
+.bi-brightness-high-fill::before { content: "\\f1d1"; }
+.bi-brightness-high::before { content: "\\f1d2"; }
+.bi-brightness-low-fill::before { content: "\\f1d3"; }
+.bi-brightness-low::before { content: "\\f1d4"; }
+.bi-broadcast-pin::before { content: "\\f1d5"; }
+.bi-broadcast::before { content: "\\f1d6"; }
+.bi-brush-fill::before { content: "\\f1d7"; }
+.bi-brush::before { content: "\\f1d8"; }
+.bi-bucket-fill::before { content: "\\f1d9"; }
+.bi-bucket::before { content: "\\f1da"; }
+.bi-bug-fill::before { content: "\\f1db"; }
+.bi-bug::before { content: "\\f1dc"; }
+.bi-building::before { content: "\\f1dd"; }
+.bi-bullseye::before { content: "\\f1de"; }
+.bi-calculator-fill::before { content: "\\f1df"; }
+.bi-calculator::before { content: "\\f1e0"; }
+.bi-calendar-check-fill::before { content: "\\f1e1"; }
+.bi-calendar-check::before { content: "\\f1e2"; }
+.bi-calendar-date-fill::before { content: "\\f1e3"; }
+.bi-calendar-date::before { content: "\\f1e4"; }
+.bi-calendar-day-fill::before { content: "\\f1e5"; }
+.bi-calendar-day::before { content: "\\f1e6"; }
+.bi-calendar-event-fill::before { content: "\\f1e7"; }
+.bi-calendar-event::before { content: "\\f1e8"; }
+.bi-calendar-fill::before { content: "\\f1e9"; }
+.bi-calendar-minus-fill::before { content: "\\f1ea"; }
+.bi-calendar-minus::before { content: "\\f1eb"; }
+.bi-calendar-month-fill::before { content: "\\f1ec"; }
+.bi-calendar-month::before { content: "\\f1ed"; }
+.bi-calendar-plus-fill::before { content: "\\f1ee"; }
+.bi-calendar-plus::before { content: "\\f1ef"; }
+.bi-calendar-range-fill::before { content: "\\f1f0"; }
+.bi-calendar-range::before { content: "\\f1f1"; }
+.bi-calendar-week-fill::before { content: "\\f1f2"; }
+.bi-calendar-week::before { content: "\\f1f3"; }
+.bi-calendar-x-fill::before { content: "\\f1f4"; }
+.bi-calendar-x::before { content: "\\f1f5"; }
+.bi-calendar::before { content: "\\f1f6"; }
+.bi-calendar2-check-fill::before { content: "\\f1f7"; }
+.bi-calendar2-check::before { content: "\\f1f8"; }
+.bi-calendar2-date-fill::before { content: "\\f1f9"; }
+.bi-calendar2-date::before { content: "\\f1fa"; }
+.bi-calendar2-day-fill::before { content: "\\f1fb"; }
+.bi-calendar2-day::before { content: "\\f1fc"; }
+.bi-calendar2-event-fill::before { content: "\\f1fd"; }
+.bi-calendar2-event::before { content: "\\f1fe"; }
+.bi-calendar2-fill::before { content: "\\f1ff"; }
+.bi-calendar2-minus-fill::before { content: "\\f200"; }
+.bi-calendar2-minus::before { content: "\\f201"; }
+.bi-calendar2-month-fill::before { content: "\\f202"; }
+.bi-calendar2-month::before { content: "\\f203"; }
+.bi-calendar2-plus-fill::before { content: "\\f204"; }
+.bi-calendar2-plus::before { content: "\\f205"; }
+.bi-calendar2-range-fill::before { content: "\\f206"; }
+.bi-calendar2-range::before { content: "\\f207"; }
+.bi-calendar2-week-fill::before { content: "\\f208"; }
+.bi-calendar2-week::before { content: "\\f209"; }
+.bi-calendar2-x-fill::before { content: "\\f20a"; }
+.bi-calendar2-x::before { content: "\\f20b"; }
+.bi-calendar2::before { content: "\\f20c"; }
+.bi-calendar3-event-fill::before { content: "\\f20d"; }
+.bi-calendar3-event::before { content: "\\f20e"; }
+.bi-calendar3-fill::before { content: "\\f20f"; }
+.bi-calendar3-range-fill::before { content: "\\f210"; }
+.bi-calendar3-range::before { content: "\\f211"; }
+.bi-calendar3-week-fill::before { content: "\\f212"; }
+.bi-calendar3-week::before { content: "\\f213"; }
+.bi-calendar3::before { content: "\\f214"; }
+.bi-calendar4-event::before { content: "\\f215"; }
+.bi-calendar4-range::before { content: "\\f216"; }
+.bi-calendar4-week::before { content: "\\f217"; }
+.bi-calendar4::before { content: "\\f218"; }
+.bi-camera-fill::before { content: "\\f219"; }
+.bi-camera-reels-fill::before { content: "\\f21a"; }
+.bi-camera-reels::before { content: "\\f21b"; }
+.bi-camera-video-fill::before { content: "\\f21c"; }
+.bi-camera-video-off-fill::before { content: "\\f21d"; }
+.bi-camera-video-off::before { content: "\\f21e"; }
+.bi-camera-video::before { content: "\\f21f"; }
+.bi-camera::before { content: "\\f220"; }
+.bi-camera2::before { content: "\\f221"; }
+.bi-capslock-fill::before { content: "\\f222"; }
+.bi-capslock::before { content: "\\f223"; }
+.bi-card-checklist::before { content: "\\f224"; }
+.bi-card-heading::before { content: "\\f225"; }
+.bi-card-image::before { content: "\\f226"; }
+.bi-card-list::before { content: "\\f227"; }
+.bi-card-text::before { content: "\\f228"; }
+.bi-caret-down-fill::before { content: "\\f229"; }
+.bi-caret-down-square-fill::before { content: "\\f22a"; }
+.bi-caret-down-square::before { content: "\\f22b"; }
+.bi-caret-down::before { content: "\\f22c"; }
+.bi-caret-left-fill::before { content: "\\f22d"; }
+.bi-caret-left-square-fill::before { content: "\\f22e"; }
+.bi-caret-left-square::before { content: "\\f22f"; }
+.bi-caret-left::before { content: "\\f230"; }
+.bi-caret-right-fill::before { content: "\\f231"; }
+.bi-caret-right-square-fill::before { content: "\\f232"; }
+.bi-caret-right-square::before { content: "\\f233"; }
+.bi-caret-right::before { content: "\\f234"; }
+.bi-caret-up-fill::before { content: "\\f235"; }
+.bi-caret-up-square-fill::before { content: "\\f236"; }
+.bi-caret-up-square::before { content: "\\f237"; }
+.bi-caret-up::before { content: "\\f238"; }
+.bi-cart-check-fill::before { content: "\\f239"; }
+.bi-cart-check::before { content: "\\f23a"; }
+.bi-cart-dash-fill::before { content: "\\f23b"; }
+.bi-cart-dash::before { content: "\\f23c"; }
+.bi-cart-fill::before { content: "\\f23d"; }
+.bi-cart-plus-fill::before { content: "\\f23e"; }
+.bi-cart-plus::before { content: "\\f23f"; }
+.bi-cart-x-fill::before { content: "\\f240"; }
+.bi-cart-x::before { content: "\\f241"; }
+.bi-cart::before { content: "\\f242"; }
+.bi-cart2::before { content: "\\f243"; }
+.bi-cart3::before { content: "\\f244"; }
+.bi-cart4::before { content: "\\f245"; }
+.bi-cash-stack::before { content: "\\f246"; }
+.bi-cash::before { content: "\\f247"; }
+.bi-cast::before { content: "\\f248"; }
+.bi-chat-dots-fill::before { content: "\\f249"; }
+.bi-chat-dots::before { content: "\\f24a"; }
+.bi-chat-fill::before { content: "\\f24b"; }
+.bi-chat-left-dots-fill::before { content: "\\f24c"; }
+.bi-chat-left-dots::before { content: "\\f24d"; }
+.bi-chat-left-fill::before { content: "\\f24e"; }
+.bi-chat-left-quote-fill::before { content: "\\f24f"; }
+.bi-chat-left-quote::before { content: "\\f250"; }
+.bi-chat-left-text-fill::before { content: "\\f251"; }
+.bi-chat-left-text::before { content: "\\f252"; }
+.bi-chat-left::before { content: "\\f253"; }
+.bi-chat-quote-fill::before { content: "\\f254"; }
+.bi-chat-quote::before { content: "\\f255"; }
+.bi-chat-right-dots-fill::before { content: "\\f256"; }
+.bi-chat-right-dots::before { content: "\\f257"; }
+.bi-chat-right-fill::before { content: "\\f258"; }
+.bi-chat-right-quote-fill::before { content: "\\f259"; }
+.bi-chat-right-quote::before { content: "\\f25a"; }
+.bi-chat-right-text-fill::before { content: "\\f25b"; }
+.bi-chat-right-text::before { content: "\\f25c"; }
+.bi-chat-right::before { content: "\\f25d"; }
+.bi-chat-square-dots-fill::before { content: "\\f25e"; }
+.bi-chat-square-dots::before { content: "\\f25f"; }
+.bi-chat-square-fill::before { content: "\\f260"; }
+.bi-chat-square-quote-fill::before { content: "\\f261"; }
+.bi-chat-square-quote::before { content: "\\f262"; }
+.bi-chat-square-text-fill::before { content: "\\f263"; }
+.bi-chat-square-text::before { content: "\\f264"; }
+.bi-chat-square::before { content: "\\f265"; }
+.bi-chat-text-fill::before { content: "\\f266"; }
+.bi-chat-text::before { content: "\\f267"; }
+.bi-chat::before { content: "\\f268"; }
+.bi-check-all::before { content: "\\f269"; }
+.bi-check-circle-fill::before { content: "\\f26a"; }
+.bi-check-circle::before { content: "\\f26b"; }
+.bi-check-square-fill::before { content: "\\f26c"; }
+.bi-check-square::before { content: "\\f26d"; }
+.bi-check::before { content: "\\f26e"; }
+.bi-check2-all::before { content: "\\f26f"; }
+.bi-check2-circle::before { content: "\\f270"; }
+.bi-check2-square::before { content: "\\f271"; }
+.bi-check2::before { content: "\\f272"; }
+.bi-chevron-bar-contract::before { content: "\\f273"; }
+.bi-chevron-bar-down::before { content: "\\f274"; }
+.bi-chevron-bar-expand::before { content: "\\f275"; }
+.bi-chevron-bar-left::before { content: "\\f276"; }
+.bi-chevron-bar-right::before { content: "\\f277"; }
+.bi-chevron-bar-up::before { content: "\\f278"; }
+.bi-chevron-compact-down::before { content: "\\f279"; }
+.bi-chevron-compact-left::before { content: "\\f27a"; }
+.bi-chevron-compact-right::before { content: "\\f27b"; }
+.bi-chevron-compact-up::before { content: "\\f27c"; }
+.bi-chevron-contract::before { content: "\\f27d"; }
+.bi-chevron-double-down::before { content: "\\f27e"; }
+.bi-chevron-double-left::before { content: "\\f27f"; }
+.bi-chevron-double-right::before { content: "\\f280"; }
+.bi-chevron-double-up::before { content: "\\f281"; }
+.bi-chevron-down::before { content: "\\f282"; }
+.bi-chevron-expand::before { content: "\\f283"; }
+.bi-chevron-left::before { content: "\\f284"; }
+.bi-chevron-right::before { content: "\\f285"; }
+.bi-chevron-up::before { content: "\\f286"; }
+.bi-circle-fill::before { content: "\\f287"; }
+.bi-circle-half::before { content: "\\f288"; }
+.bi-circle-square::before { content: "\\f289"; }
+.bi-circle::before { content: "\\f28a"; }
+.bi-clipboard-check::before { content: "\\f28b"; }
+.bi-clipboard-data::before { content: "\\f28c"; }
+.bi-clipboard-minus::before { content: "\\f28d"; }
+.bi-clipboard-plus::before { content: "\\f28e"; }
+.bi-clipboard-x::before { content: "\\f28f"; }
+.bi-clipboard::before { content: "\\f290"; }
+.bi-clock-fill::before { content: "\\f291"; }
+.bi-clock-history::before { content: "\\f292"; }
+.bi-clock::before { content: "\\f293"; }
+.bi-cloud-arrow-down-fill::before { content: "\\f294"; }
+.bi-cloud-arrow-down::before { content: "\\f295"; }
+.bi-cloud-arrow-up-fill::before { content: "\\f296"; }
+.bi-cloud-arrow-up::before { content: "\\f297"; }
+.bi-cloud-check-fill::before { content: "\\f298"; }
+.bi-cloud-check::before { content: "\\f299"; }
+.bi-cloud-download-fill::before { content: "\\f29a"; }
+.bi-cloud-download::before { content: "\\f29b"; }
+.bi-cloud-drizzle-fill::before { content: "\\f29c"; }
+.bi-cloud-drizzle::before { content: "\\f29d"; }
+.bi-cloud-fill::before { content: "\\f29e"; }
+.bi-cloud-fog-fill::before { content: "\\f29f"; }
+.bi-cloud-fog::before { content: "\\f2a0"; }
+.bi-cloud-fog2-fill::before { content: "\\f2a1"; }
+.bi-cloud-fog2::before { content: "\\f2a2"; }
+.bi-cloud-hail-fill::before { content: "\\f2a3"; }
+.bi-cloud-hail::before { content: "\\f2a4"; }
+.bi-cloud-haze-fill::before { content: "\\f2a6"; }
+.bi-cloud-haze::before { content: "\\f2a7"; }
+.bi-cloud-haze2-fill::before { content: "\\f2a8"; }
+.bi-cloud-lightning-fill::before { content: "\\f2a9"; }
+.bi-cloud-lightning-rain-fill::before { content: "\\f2aa"; }
+.bi-cloud-lightning-rain::before { content: "\\f2ab"; }
+.bi-cloud-lightning::before { content: "\\f2ac"; }
+.bi-cloud-minus-fill::before { content: "\\f2ad"; }
+.bi-cloud-minus::before { content: "\\f2ae"; }
+.bi-cloud-moon-fill::before { content: "\\f2af"; }
+.bi-cloud-moon::before { content: "\\f2b0"; }
+.bi-cloud-plus-fill::before { content: "\\f2b1"; }
+.bi-cloud-plus::before { content: "\\f2b2"; }
+.bi-cloud-rain-fill::before { content: "\\f2b3"; }
+.bi-cloud-rain-heavy-fill::before { content: "\\f2b4"; }
+.bi-cloud-rain-heavy::before { content: "\\f2b5"; }
+.bi-cloud-rain::before { content: "\\f2b6"; }
+.bi-cloud-slash-fill::before { content: "\\f2b7"; }
+.bi-cloud-slash::before { content: "\\f2b8"; }
+.bi-cloud-sleet-fill::before { content: "\\f2b9"; }
+.bi-cloud-sleet::before { content: "\\f2ba"; }
+.bi-cloud-snow-fill::before { content: "\\f2bb"; }
+.bi-cloud-snow::before { content: "\\f2bc"; }
+.bi-cloud-sun-fill::before { content: "\\f2bd"; }
+.bi-cloud-sun::before { content: "\\f2be"; }
+.bi-cloud-upload-fill::before { content: "\\f2bf"; }
+.bi-cloud-upload::before { content: "\\f2c0"; }
+.bi-cloud::before { content: "\\f2c1"; }
+.bi-clouds-fill::before { content: "\\f2c2"; }
+.bi-clouds::before { content: "\\f2c3"; }
+.bi-cloudy-fill::before { content: "\\f2c4"; }
+.bi-cloudy::before { content: "\\f2c5"; }
+.bi-code-slash::before { content: "\\f2c6"; }
+.bi-code-square::before { content: "\\f2c7"; }
+.bi-code::before { content: "\\f2c8"; }
+.bi-collection-fill::before { content: "\\f2c9"; }
+.bi-collection-play-fill::before { content: "\\f2ca"; }
+.bi-collection-play::before { content: "\\f2cb"; }
+.bi-collection::before { content: "\\f2cc"; }
+.bi-columns-gap::before { content: "\\f2cd"; }
+.bi-columns::before { content: "\\f2ce"; }
+.bi-command::before { content: "\\f2cf"; }
+.bi-compass-fill::before { content: "\\f2d0"; }
+.bi-compass::before { content: "\\f2d1"; }
+.bi-cone-striped::before { content: "\\f2d2"; }
+.bi-cone::before { content: "\\f2d3"; }
+.bi-controller::before { content: "\\f2d4"; }
+.bi-cpu-fill::before { content: "\\f2d5"; }
+.bi-cpu::before { content: "\\f2d6"; }
+.bi-credit-card-2-back-fill::before { content: "\\f2d7"; }
+.bi-credit-card-2-back::before { content: "\\f2d8"; }
+.bi-credit-card-2-front-fill::before { content: "\\f2d9"; }
+.bi-credit-card-2-front::before { content: "\\f2da"; }
+.bi-credit-card-fill::before { content: "\\f2db"; }
+.bi-credit-card::before { content: "\\f2dc"; }
+.bi-crop::before { content: "\\f2dd"; }
+.bi-cup-fill::before { content: "\\f2de"; }
+.bi-cup-straw::before { content: "\\f2df"; }
+.bi-cup::before { content: "\\f2e0"; }
+.bi-cursor-fill::before { content: "\\f2e1"; }
+.bi-cursor-text::before { content: "\\f2e2"; }
+.bi-cursor::before { content: "\\f2e3"; }
+.bi-dash-circle-dotted::before { content: "\\f2e4"; }
+.bi-dash-circle-fill::before { content: "\\f2e5"; }
+.bi-dash-circle::before { content: "\\f2e6"; }
+.bi-dash-square-dotted::before { content: "\\f2e7"; }
+.bi-dash-square-fill::before { content: "\\f2e8"; }
+.bi-dash-square::before { content: "\\f2e9"; }
+.bi-dash::before { content: "\\f2ea"; }
+.bi-diagram-2-fill::before { content: "\\f2eb"; }
+.bi-diagram-2::before { content: "\\f2ec"; }
+.bi-diagram-3-fill::before { content: "\\f2ed"; }
+.bi-diagram-3::before { content: "\\f2ee"; }
+.bi-diamond-fill::before { content: "\\f2ef"; }
+.bi-diamond-half::before { content: "\\f2f0"; }
+.bi-diamond::before { content: "\\f2f1"; }
+.bi-dice-1-fill::before { content: "\\f2f2"; }
+.bi-dice-1::before { content: "\\f2f3"; }
+.bi-dice-2-fill::before { content: "\\f2f4"; }
+.bi-dice-2::before { content: "\\f2f5"; }
+.bi-dice-3-fill::before { content: "\\f2f6"; }
+.bi-dice-3::before { content: "\\f2f7"; }
+.bi-dice-4-fill::before { content: "\\f2f8"; }
+.bi-dice-4::before { content: "\\f2f9"; }
+.bi-dice-5-fill::before { content: "\\f2fa"; }
+.bi-dice-5::before { content: "\\f2fb"; }
+.bi-dice-6-fill::before { content: "\\f2fc"; }
+.bi-dice-6::before { content: "\\f2fd"; }
+.bi-disc-fill::before { content: "\\f2fe"; }
+.bi-disc::before { content: "\\f2ff"; }
+.bi-discord::before { content: "\\f300"; }
+.bi-display-fill::before { content: "\\f301"; }
+.bi-display::before { content: "\\f302"; }
+.bi-distribute-horizontal::before { content: "\\f303"; }
+.bi-distribute-vertical::before { content: "\\f304"; }
+.bi-door-closed-fill::before { content: "\\f305"; }
+.bi-door-closed::before { content: "\\f306"; }
+.bi-door-open-fill::before { content: "\\f307"; }
+.bi-door-open::before { content: "\\f308"; }
+.bi-dot::before { content: "\\f309"; }
+.bi-download::before { content: "\\f30a"; }
+.bi-droplet-fill::before { content: "\\f30b"; }
+.bi-droplet-half::before { content: "\\f30c"; }
+.bi-droplet::before { content: "\\f30d"; }
+.bi-earbuds::before { content: "\\f30e"; }
+.bi-easel-fill::before { content: "\\f30f"; }
+.bi-easel::before { content: "\\f310"; }
+.bi-egg-fill::before { content: "\\f311"; }
+.bi-egg-fried::before { content: "\\f312"; }
+.bi-egg::before { content: "\\f313"; }
+.bi-eject-fill::before { content: "\\f314"; }
+.bi-eject::before { content: "\\f315"; }
+.bi-emoji-angry-fill::before { content: "\\f316"; }
+.bi-emoji-angry::before { content: "\\f317"; }
+.bi-emoji-dizzy-fill::before { content: "\\f318"; }
+.bi-emoji-dizzy::before { content: "\\f319"; }
+.bi-emoji-expressionless-fill::before { content: "\\f31a"; }
+.bi-emoji-expressionless::before { content: "\\f31b"; }
+.bi-emoji-frown-fill::before { content: "\\f31c"; }
+.bi-emoji-frown::before { content: "\\f31d"; }
+.bi-emoji-heart-eyes-fill::before { content: "\\f31e"; }
+.bi-emoji-heart-eyes::before { content: "\\f31f"; }
+.bi-emoji-laughing-fill::before { content: "\\f320"; }
+.bi-emoji-laughing::before { content: "\\f321"; }
+.bi-emoji-neutral-fill::before { content: "\\f322"; }
+.bi-emoji-neutral::before { content: "\\f323"; }
+.bi-emoji-smile-fill::before { content: "\\f324"; }
+.bi-emoji-smile-upside-down-fill::before { content: "\\f325"; }
+.bi-emoji-smile-upside-down::before { content: "\\f326"; }
+.bi-emoji-smile::before { content: "\\f327"; }
+.bi-emoji-sunglasses-fill::before { content: "\\f328"; }
+.bi-emoji-sunglasses::before { content: "\\f329"; }
+.bi-emoji-wink-fill::before { content: "\\f32a"; }
+.bi-emoji-wink::before { content: "\\f32b"; }
+.bi-envelope-fill::before { content: "\\f32c"; }
+.bi-envelope-open-fill::before { content: "\\f32d"; }
+.bi-envelope-open::before { content: "\\f32e"; }
+.bi-envelope::before { content: "\\f32f"; }
+.bi-eraser-fill::before { content: "\\f330"; }
+.bi-eraser::before { content: "\\f331"; }
+.bi-exclamation-circle-fill::before { content: "\\f332"; }
+.bi-exclamation-circle::before { content: "\\f333"; }
+.bi-exclamation-diamond-fill::before { content: "\\f334"; }
+.bi-exclamation-diamond::before { content: "\\f335"; }
+.bi-exclamation-octagon-fill::before { content: "\\f336"; }
+.bi-exclamation-octagon::before { content: "\\f337"; }
+.bi-exclamation-square-fill::before { content: "\\f338"; }
+.bi-exclamation-square::before { content: "\\f339"; }
+.bi-exclamation-triangle-fill::before { content: "\\f33a"; }
+.bi-exclamation-triangle::before { content: "\\f33b"; }
+.bi-exclamation::before { content: "\\f33c"; }
+.bi-exclude::before { content: "\\f33d"; }
+.bi-eye-fill::before { content: "\\f33e"; }
+.bi-eye-slash-fill::before { content: "\\f33f"; }
+.bi-eye-slash::before { content: "\\f340"; }
+.bi-eye::before { content: "\\f341"; }
+.bi-eyedropper::before { content: "\\f342"; }
+.bi-eyeglasses::before { content: "\\f343"; }
+.bi-facebook::before { content: "\\f344"; }
+.bi-file-arrow-down-fill::before { content: "\\f345"; }
+.bi-file-arrow-down::before { content: "\\f346"; }
+.bi-file-arrow-up-fill::before { content: "\\f347"; }
+.bi-file-arrow-up::before { content: "\\f348"; }
+.bi-file-bar-graph-fill::before { content: "\\f349"; }
+.bi-file-bar-graph::before { content: "\\f34a"; }
+.bi-file-binary-fill::before { content: "\\f34b"; }
+.bi-file-binary::before { content: "\\f34c"; }
+.bi-file-break-fill::before { content: "\\f34d"; }
+.bi-file-break::before { content: "\\f34e"; }
+.bi-file-check-fill::before { content: "\\f34f"; }
+.bi-file-check::before { content: "\\f350"; }
+.bi-file-code-fill::before { content: "\\f351"; }
+.bi-file-code::before { content: "\\f352"; }
+.bi-file-diff-fill::before { content: "\\f353"; }
+.bi-file-diff::before { content: "\\f354"; }
+.bi-file-earmark-arrow-down-fill::before { content: "\\f355"; }
+.bi-file-earmark-arrow-down::before { content: "\\f356"; }
+.bi-file-earmark-arrow-up-fill::before { content: "\\f357"; }
+.bi-file-earmark-arrow-up::before { content: "\\f358"; }
+.bi-file-earmark-bar-graph-fill::before { content: "\\f359"; }
+.bi-file-earmark-bar-graph::before { content: "\\f35a"; }
+.bi-file-earmark-binary-fill::before { content: "\\f35b"; }
+.bi-file-earmark-binary::before { content: "\\f35c"; }
+.bi-file-earmark-break-fill::before { content: "\\f35d"; }
+.bi-file-earmark-break::before { content: "\\f35e"; }
+.bi-file-earmark-check-fill::before { content: "\\f35f"; }
+.bi-file-earmark-check::before { content: "\\f360"; }
+.bi-file-earmark-code-fill::before { content: "\\f361"; }
+.bi-file-earmark-code::before { content: "\\f362"; }
+.bi-file-earmark-diff-fill::before { content: "\\f363"; }
+.bi-file-earmark-diff::before { content: "\\f364"; }
+.bi-file-earmark-easel-fill::before { content: "\\f365"; }
+.bi-file-earmark-easel::before { content: "\\f366"; }
+.bi-file-earmark-excel-fill::before { content: "\\f367"; }
+.bi-file-earmark-excel::before { content: "\\f368"; }
+.bi-file-earmark-fill::before { content: "\\f369"; }
+.bi-file-earmark-font-fill::before { content: "\\f36a"; }
+.bi-file-earmark-font::before { content: "\\f36b"; }
+.bi-file-earmark-image-fill::before { content: "\\f36c"; }
+.bi-file-earmark-image::before { content: "\\f36d"; }
+.bi-file-earmark-lock-fill::before { content: "\\f36e"; }
+.bi-file-earmark-lock::before { content: "\\f36f"; }
+.bi-file-earmark-lock2-fill::before { content: "\\f370"; }
+.bi-file-earmark-lock2::before { content: "\\f371"; }
+.bi-file-earmark-medical-fill::before { content: "\\f372"; }
+.bi-file-earmark-medical::before { content: "\\f373"; }
+.bi-file-earmark-minus-fill::before { content: "\\f374"; }
+.bi-file-earmark-minus::before { content: "\\f375"; }
+.bi-file-earmark-music-fill::before { content: "\\f376"; }
+.bi-file-earmark-music::before { content: "\\f377"; }
+.bi-file-earmark-person-fill::before { content: "\\f378"; }
+.bi-file-earmark-person::before { content: "\\f379"; }
+.bi-file-earmark-play-fill::before { content: "\\f37a"; }
+.bi-file-earmark-play::before { content: "\\f37b"; }
+.bi-file-earmark-plus-fill::before { content: "\\f37c"; }
+.bi-file-earmark-plus::before { content: "\\f37d"; }
+.bi-file-earmark-post-fill::before { content: "\\f37e"; }
+.bi-file-earmark-post::before { content: "\\f37f"; }
+.bi-file-earmark-ppt-fill::before { content: "\\f380"; }
+.bi-file-earmark-ppt::before { content: "\\f381"; }
+.bi-file-earmark-richtext-fill::before { content: "\\f382"; }
+.bi-file-earmark-richtext::before { content: "\\f383"; }
+.bi-file-earmark-ruled-fill::before { content: "\\f384"; }
+.bi-file-earmark-ruled::before { content: "\\f385"; }
+.bi-file-earmark-slides-fill::before { content: "\\f386"; }
+.bi-file-earmark-slides::before { content: "\\f387"; }
+.bi-file-earmark-spreadsheet-fill::before { content: "\\f388"; }
+.bi-file-earmark-spreadsheet::before { content: "\\f389"; }
+.bi-file-earmark-text-fill::before { content: "\\f38a"; }
+.bi-file-earmark-text::before { content: "\\f38b"; }
+.bi-file-earmark-word-fill::before { content: "\\f38c"; }
+.bi-file-earmark-word::before { content: "\\f38d"; }
+.bi-file-earmark-x-fill::before { content: "\\f38e"; }
+.bi-file-earmark-x::before { content: "\\f38f"; }
+.bi-file-earmark-zip-fill::before { content: "\\f390"; }
+.bi-file-earmark-zip::before { content: "\\f391"; }
+.bi-file-earmark::before { content: "\\f392"; }
+.bi-file-easel-fill::before { content: "\\f393"; }
+.bi-file-easel::before { content: "\\f394"; }
+.bi-file-excel-fill::before { content: "\\f395"; }
+.bi-file-excel::before { content: "\\f396"; }
+.bi-file-fill::before { content: "\\f397"; }
+.bi-file-font-fill::before { content: "\\f398"; }
+.bi-file-font::before { content: "\\f399"; }
+.bi-file-image-fill::before { content: "\\f39a"; }
+.bi-file-image::before { content: "\\f39b"; }
+.bi-file-lock-fill::before { content: "\\f39c"; }
+.bi-file-lock::before { content: "\\f39d"; }
+.bi-file-lock2-fill::before { content: "\\f39e"; }
+.bi-file-lock2::before { content: "\\f39f"; }
+.bi-file-medical-fill::before { content: "\\f3a0"; }
+.bi-file-medical::before { content: "\\f3a1"; }
+.bi-file-minus-fill::before { content: "\\f3a2"; }
+.bi-file-minus::before { content: "\\f3a3"; }
+.bi-file-music-fill::before { content: "\\f3a4"; }
+.bi-file-music::before { content: "\\f3a5"; }
+.bi-file-person-fill::before { content: "\\f3a6"; }
+.bi-file-person::before { content: "\\f3a7"; }
+.bi-file-play-fill::before { content: "\\f3a8"; }
+.bi-file-play::before { content: "\\f3a9"; }
+.bi-file-plus-fill::before { content: "\\f3aa"; }
+.bi-file-plus::before { content: "\\f3ab"; }
+.bi-file-post-fill::before { content: "\\f3ac"; }
+.bi-file-post::before { content: "\\f3ad"; }
+.bi-file-ppt-fill::before { content: "\\f3ae"; }
+.bi-file-ppt::before { content: "\\f3af"; }
+.bi-file-richtext-fill::before { content: "\\f3b0"; }
+.bi-file-richtext::before { content: "\\f3b1"; }
+.bi-file-ruled-fill::before { content: "\\f3b2"; }
+.bi-file-ruled::before { content: "\\f3b3"; }
+.bi-file-slides-fill::before { content: "\\f3b4"; }
+.bi-file-slides::before { content: "\\f3b5"; }
+.bi-file-spreadsheet-fill::before { content: "\\f3b6"; }
+.bi-file-spreadsheet::before { content: "\\f3b7"; }
+.bi-file-text-fill::before { content: "\\f3b8"; }
+.bi-file-text::before { content: "\\f3b9"; }
+.bi-file-word-fill::before { content: "\\f3ba"; }
+.bi-file-word::before { content: "\\f3bb"; }
+.bi-file-x-fill::before { content: "\\f3bc"; }
+.bi-file-x::before { content: "\\f3bd"; }
+.bi-file-zip-fill::before { content: "\\f3be"; }
+.bi-file-zip::before { content: "\\f3bf"; }
+.bi-file::before { content: "\\f3c0"; }
+.bi-files-alt::before { content: "\\f3c1"; }
+.bi-files::before { content: "\\f3c2"; }
+.bi-film::before { content: "\\f3c3"; }
+.bi-filter-circle-fill::before { content: "\\f3c4"; }
+.bi-filter-circle::before { content: "\\f3c5"; }
+.bi-filter-left::before { content: "\\f3c6"; }
+.bi-filter-right::before { content: "\\f3c7"; }
+.bi-filter-square-fill::before { content: "\\f3c8"; }
+.bi-filter-square::before { content: "\\f3c9"; }
+.bi-filter::before { content: "\\f3ca"; }
+.bi-flag-fill::before { content: "\\f3cb"; }
+.bi-flag::before { content: "\\f3cc"; }
+.bi-flower1::before { content: "\\f3cd"; }
+.bi-flower2::before { content: "\\f3ce"; }
+.bi-flower3::before { content: "\\f3cf"; }
+.bi-folder-check::before { content: "\\f3d0"; }
+.bi-folder-fill::before { content: "\\f3d1"; }
+.bi-folder-minus::before { content: "\\f3d2"; }
+.bi-folder-plus::before { content: "\\f3d3"; }
+.bi-folder-symlink-fill::before { content: "\\f3d4"; }
+.bi-folder-symlink::before { content: "\\f3d5"; }
+.bi-folder-x::before { content: "\\f3d6"; }
+.bi-folder::before { content: "\\f3d7"; }
+.bi-folder2-open::before { content: "\\f3d8"; }
+.bi-folder2::before { content: "\\f3d9"; }
+.bi-fonts::before { content: "\\f3da"; }
+.bi-forward-fill::before { content: "\\f3db"; }
+.bi-forward::before { content: "\\f3dc"; }
+.bi-front::before { content: "\\f3dd"; }
+.bi-fullscreen-exit::before { content: "\\f3de"; }
+.bi-fullscreen::before { content: "\\f3df"; }
+.bi-funnel-fill::before { content: "\\f3e0"; }
+.bi-funnel::before { content: "\\f3e1"; }
+.bi-gear-fill::before { content: "\\f3e2"; }
+.bi-gear-wide-connected::before { content: "\\f3e3"; }
+.bi-gear-wide::before { content: "\\f3e4"; }
+.bi-gear::before { content: "\\f3e5"; }
+.bi-gem::before { content: "\\f3e6"; }
+.bi-geo-alt-fill::before { content: "\\f3e7"; }
+.bi-geo-alt::before { content: "\\f3e8"; }
+.bi-geo-fill::before { content: "\\f3e9"; }
+.bi-geo::before { content: "\\f3ea"; }
+.bi-gift-fill::before { content: "\\f3eb"; }
+.bi-gift::before { content: "\\f3ec"; }
+.bi-github::before { content: "\\f3ed"; }
+.bi-globe::before { content: "\\f3ee"; }
+.bi-globe2::before { content: "\\f3ef"; }
+.bi-google::before { content: "\\f3f0"; }
+.bi-graph-down::before { content: "\\f3f1"; }
+.bi-graph-up::before { content: "\\f3f2"; }
+.bi-grid-1x2-fill::before { content: "\\f3f3"; }
+.bi-grid-1x2::before { content: "\\f3f4"; }
+.bi-grid-3x2-gap-fill::before { content: "\\f3f5"; }
+.bi-grid-3x2-gap::before { content: "\\f3f6"; }
+.bi-grid-3x2::before { content: "\\f3f7"; }
+.bi-grid-3x3-gap-fill::before { content: "\\f3f8"; }
+.bi-grid-3x3-gap::before { content: "\\f3f9"; }
+.bi-grid-3x3::before { content: "\\f3fa"; }
+.bi-grid-fill::before { content: "\\f3fb"; }
+.bi-grid::before { content: "\\f3fc"; }
+.bi-grip-horizontal::before { content: "\\f3fd"; }
+.bi-grip-vertical::before { content: "\\f3fe"; }
+.bi-hammer::before { content: "\\f3ff"; }
+.bi-hand-index-fill::before { content: "\\f400"; }
+.bi-hand-index-thumb-fill::before { content: "\\f401"; }
+.bi-hand-index-thumb::before { content: "\\f402"; }
+.bi-hand-index::before { content: "\\f403"; }
+.bi-hand-thumbs-down-fill::before { content: "\\f404"; }
+.bi-hand-thumbs-down::before { content: "\\f405"; }
+.bi-hand-thumbs-up-fill::before { content: "\\f406"; }
+.bi-hand-thumbs-up::before { content: "\\f407"; }
+.bi-handbag-fill::before { content: "\\f408"; }
+.bi-handbag::before { content: "\\f409"; }
+.bi-hash::before { content: "\\f40a"; }
+.bi-hdd-fill::before { content: "\\f40b"; }
+.bi-hdd-network-fill::before { content: "\\f40c"; }
+.bi-hdd-network::before { content: "\\f40d"; }
+.bi-hdd-rack-fill::before { content: "\\f40e"; }
+.bi-hdd-rack::before { content: "\\f40f"; }
+.bi-hdd-stack-fill::before { content: "\\f410"; }
+.bi-hdd-stack::before { content: "\\f411"; }
+.bi-hdd::before { content: "\\f412"; }
+.bi-headphones::before { content: "\\f413"; }
+.bi-headset::before { content: "\\f414"; }
+.bi-heart-fill::before { content: "\\f415"; }
+.bi-heart-half::before { content: "\\f416"; }
+.bi-heart::before { content: "\\f417"; }
+.bi-heptagon-fill::before { content: "\\f418"; }
+.bi-heptagon-half::before { content: "\\f419"; }
+.bi-heptagon::before { content: "\\f41a"; }
+.bi-hexagon-fill::before { content: "\\f41b"; }
+.bi-hexagon-half::before { content: "\\f41c"; }
+.bi-hexagon::before { content: "\\f41d"; }
+.bi-hourglass-bottom::before { content: "\\f41e"; }
+.bi-hourglass-split::before { content: "\\f41f"; }
+.bi-hourglass-top::before { content: "\\f420"; }
+.bi-hourglass::before { content: "\\f421"; }
+.bi-house-door-fill::before { content: "\\f422"; }
+.bi-house-door::before { content: "\\f423"; }
+.bi-house-fill::before { content: "\\f424"; }
+.bi-house::before { content: "\\f425"; }
+.bi-hr::before { content: "\\f426"; }
+.bi-hurricane::before { content: "\\f427"; }
+.bi-image-alt::before { content: "\\f428"; }
+.bi-image-fill::before { content: "\\f429"; }
+.bi-image::before { content: "\\f42a"; }
+.bi-images::before { content: "\\f42b"; }
+.bi-inbox-fill::before { content: "\\f42c"; }
+.bi-inbox::before { content: "\\f42d"; }
+.bi-inboxes-fill::before { content: "\\f42e"; }
+.bi-inboxes::before { content: "\\f42f"; }
+.bi-info-circle-fill::before { content: "\\f430"; }
+.bi-info-circle::before { content: "\\f431"; }
+.bi-info-square-fill::before { content: "\\f432"; }
+.bi-info-square::before { content: "\\f433"; }
+.bi-info::before { content: "\\f434"; }
+.bi-input-cursor-text::before { content: "\\f435"; }
+.bi-input-cursor::before { content: "\\f436"; }
+.bi-instagram::before { content: "\\f437"; }
+.bi-intersect::before { content: "\\f438"; }
+.bi-journal-album::before { content: "\\f439"; }
+.bi-journal-arrow-down::before { content: "\\f43a"; }
+.bi-journal-arrow-up::before { content: "\\f43b"; }
+.bi-journal-bookmark-fill::before { content: "\\f43c"; }
+.bi-journal-bookmark::before { content: "\\f43d"; }
+.bi-journal-check::before { content: "\\f43e"; }
+.bi-journal-code::before { content: "\\f43f"; }
+.bi-journal-medical::before { content: "\\f440"; }
+.bi-journal-minus::before { content: "\\f441"; }
+.bi-journal-plus::before { content: "\\f442"; }
+.bi-journal-richtext::before { content: "\\f443"; }
+.bi-journal-text::before { content: "\\f444"; }
+.bi-journal-x::before { content: "\\f445"; }
+.bi-journal::before { content: "\\f446"; }
+.bi-journals::before { content: "\\f447"; }
+.bi-joystick::before { content: "\\f448"; }
+.bi-justify-left::before { content: "\\f449"; }
+.bi-justify-right::before { content: "\\f44a"; }
+.bi-justify::before { content: "\\f44b"; }
+.bi-kanban-fill::before { content: "\\f44c"; }
+.bi-kanban::before { content: "\\f44d"; }
+.bi-key-fill::before { content: "\\f44e"; }
+.bi-key::before { content: "\\f44f"; }
+.bi-keyboard-fill::before { content: "\\f450"; }
+.bi-keyboard::before { content: "\\f451"; }
+.bi-ladder::before { content: "\\f452"; }
+.bi-lamp-fill::before { content: "\\f453"; }
+.bi-lamp::before { content: "\\f454"; }
+.bi-laptop-fill::before { content: "\\f455"; }
+.bi-laptop::before { content: "\\f456"; }
+.bi-layer-backward::before { content: "\\f457"; }
+.bi-layer-forward::before { content: "\\f458"; }
+.bi-layers-fill::before { content: "\\f459"; }
+.bi-layers-half::before { content: "\\f45a"; }
+.bi-layers::before { content: "\\f45b"; }
+.bi-layout-sidebar-inset-reverse::before { content: "\\f45c"; }
+.bi-layout-sidebar-inset::before { content: "\\f45d"; }
+.bi-layout-sidebar-reverse::before { content: "\\f45e"; }
+.bi-layout-sidebar::before { content: "\\f45f"; }
+.bi-layout-split::before { content: "\\f460"; }
+.bi-layout-text-sidebar-reverse::before { content: "\\f461"; }
+.bi-layout-text-sidebar::before { content: "\\f462"; }
+.bi-layout-text-window-reverse::before { content: "\\f463"; }
+.bi-layout-text-window::before { content: "\\f464"; }
+.bi-layout-three-columns::before { content: "\\f465"; }
+.bi-layout-wtf::before { content: "\\f466"; }
+.bi-life-preserver::before { content: "\\f467"; }
+.bi-lightbulb-fill::before { content: "\\f468"; }
+.bi-lightbulb-off-fill::before { content: "\\f469"; }
+.bi-lightbulb-off::before { content: "\\f46a"; }
+.bi-lightbulb::before { content: "\\f46b"; }
+.bi-lightning-charge-fill::before { content: "\\f46c"; }
+.bi-lightning-charge::before { content: "\\f46d"; }
+.bi-lightning-fill::before { content: "\\f46e"; }
+.bi-lightning::before { content: "\\f46f"; }
+.bi-link-45deg::before { content: "\\f470"; }
+.bi-link::before { content: "\\f471"; }
+.bi-linkedin::before { content: "\\f472"; }
+.bi-list-check::before { content: "\\f473"; }
+.bi-list-nested::before { content: "\\f474"; }
+.bi-list-ol::before { content: "\\f475"; }
+.bi-list-stars::before { content: "\\f476"; }
+.bi-list-task::before { content: "\\f477"; }
+.bi-list-ul::before { content: "\\f478"; }
+.bi-list::before { content: "\\f479"; }
+.bi-lock-fill::before { content: "\\f47a"; }
+.bi-lock::before { content: "\\f47b"; }
+.bi-mailbox::before { content: "\\f47c"; }
+.bi-mailbox2::before { content: "\\f47d"; }
+.bi-map-fill::before { content: "\\f47e"; }
+.bi-map::before { content: "\\f47f"; }
+.bi-markdown-fill::before { content: "\\f480"; }
+.bi-markdown::before { content: "\\f481"; }
+.bi-mask::before { content: "\\f482"; }
+.bi-megaphone-fill::before { content: "\\f483"; }
+.bi-megaphone::before { content: "\\f484"; }
+.bi-menu-app-fill::before { content: "\\f485"; }
+.bi-menu-app::before { content: "\\f486"; }
+.bi-menu-button-fill::before { content: "\\f487"; }
+.bi-menu-button-wide-fill::before { content: "\\f488"; }
+.bi-menu-button-wide::before { content: "\\f489"; }
+.bi-menu-button::before { content: "\\f48a"; }
+.bi-menu-down::before { content: "\\f48b"; }
+.bi-menu-up::before { content: "\\f48c"; }
+.bi-mic-fill::before { content: "\\f48d"; }
+.bi-mic-mute-fill::before { content: "\\f48e"; }
+.bi-mic-mute::before { content: "\\f48f"; }
+.bi-mic::before { content: "\\f490"; }
+.bi-minecart-loaded::before { content: "\\f491"; }
+.bi-minecart::before { content: "\\f492"; }
+.bi-moisture::before { content: "\\f493"; }
+.bi-moon-fill::before { content: "\\f494"; }
+.bi-moon-stars-fill::before { content: "\\f495"; }
+.bi-moon-stars::before { content: "\\f496"; }
+.bi-moon::before { content: "\\f497"; }
+.bi-mouse-fill::before { content: "\\f498"; }
+.bi-mouse::before { content: "\\f499"; }
+.bi-mouse2-fill::before { content: "\\f49a"; }
+.bi-mouse2::before { content: "\\f49b"; }
+.bi-mouse3-fill::before { content: "\\f49c"; }
+.bi-mouse3::before { content: "\\f49d"; }
+.bi-music-note-beamed::before { content: "\\f49e"; }
+.bi-music-note-list::before { content: "\\f49f"; }
+.bi-music-note::before { content: "\\f4a0"; }
+.bi-music-player-fill::before { content: "\\f4a1"; }
+.bi-music-player::before { content: "\\f4a2"; }
+.bi-newspaper::before { content: "\\f4a3"; }
+.bi-node-minus-fill::before { content: "\\f4a4"; }
+.bi-node-minus::before { content: "\\f4a5"; }
+.bi-node-plus-fill::before { content: "\\f4a6"; }
+.bi-node-plus::before { content: "\\f4a7"; }
+.bi-nut-fill::before { content: "\\f4a8"; }
+.bi-nut::before { content: "\\f4a9"; }
+.bi-octagon-fill::before { content: "\\f4aa"; }
+.bi-octagon-half::before { content: "\\f4ab"; }
+.bi-octagon::before { content: "\\f4ac"; }
+.bi-option::before { content: "\\f4ad"; }
+.bi-outlet::before { content: "\\f4ae"; }
+.bi-paint-bucket::before { content: "\\f4af"; }
+.bi-palette-fill::before { content: "\\f4b0"; }
+.bi-palette::before { content: "\\f4b1"; }
+.bi-palette2::before { content: "\\f4b2"; }
+.bi-paperclip::before { content: "\\f4b3"; }
+.bi-paragraph::before { content: "\\f4b4"; }
+.bi-patch-check-fill::before { content: "\\f4b5"; }
+.bi-patch-check::before { content: "\\f4b6"; }
+.bi-patch-exclamation-fill::before { content: "\\f4b7"; }
+.bi-patch-exclamation::before { content: "\\f4b8"; }
+.bi-patch-minus-fill::before { content: "\\f4b9"; }
+.bi-patch-minus::before { content: "\\f4ba"; }
+.bi-patch-plus-fill::before { content: "\\f4bb"; }
+.bi-patch-plus::before { content: "\\f4bc"; }
+.bi-patch-question-fill::before { content: "\\f4bd"; }
+.bi-patch-question::before { content: "\\f4be"; }
+.bi-pause-btn-fill::before { content: "\\f4bf"; }
+.bi-pause-btn::before { content: "\\f4c0"; }
+.bi-pause-circle-fill::before { content: "\\f4c1"; }
+.bi-pause-circle::before { content: "\\f4c2"; }
+.bi-pause-fill::before { content: "\\f4c3"; }
+.bi-pause::before { content: "\\f4c4"; }
+.bi-peace-fill::before { content: "\\f4c5"; }
+.bi-peace::before { content: "\\f4c6"; }
+.bi-pen-fill::before { content: "\\f4c7"; }
+.bi-pen::before { content: "\\f4c8"; }
+.bi-pencil-fill::before { content: "\\f4c9"; }
+.bi-pencil-square::before { content: "\\f4ca"; }
+.bi-pencil::before { content: "\\f4cb"; }
+.bi-pentagon-fill::before { content: "\\f4cc"; }
+.bi-pentagon-half::before { content: "\\f4cd"; }
+.bi-pentagon::before { content: "\\f4ce"; }
+.bi-people-fill::before { content: "\\f4cf"; }
+.bi-people::before { content: "\\f4d0"; }
+.bi-percent::before { content: "\\f4d1"; }
+.bi-person-badge-fill::before { content: "\\f4d2"; }
+.bi-person-badge::before { content: "\\f4d3"; }
+.bi-person-bounding-box::before { content: "\\f4d4"; }
+.bi-person-check-fill::before { content: "\\f4d5"; }
+.bi-person-check::before { content: "\\f4d6"; }
+.bi-person-circle::before { content: "\\f4d7"; }
+.bi-person-dash-fill::before { content: "\\f4d8"; }
+.bi-person-dash::before { content: "\\f4d9"; }
+.bi-person-fill::before { content: "\\f4da"; }
+.bi-person-lines-fill::before { content: "\\f4db"; }
+.bi-person-plus-fill::before { content: "\\f4dc"; }
+.bi-person-plus::before { content: "\\f4dd"; }
+.bi-person-square::before { content: "\\f4de"; }
+.bi-person-x-fill::before { content: "\\f4df"; }
+.bi-person-x::before { content: "\\f4e0"; }
+.bi-person::before { content: "\\f4e1"; }
+.bi-phone-fill::before { content: "\\f4e2"; }
+.bi-phone-landscape-fill::before { content: "\\f4e3"; }
+.bi-phone-landscape::before { content: "\\f4e4"; }
+.bi-phone-vibrate-fill::before { content: "\\f4e5"; }
+.bi-phone-vibrate::before { content: "\\f4e6"; }
+.bi-phone::before { content: "\\f4e7"; }
+.bi-pie-chart-fill::before { content: "\\f4e8"; }
+.bi-pie-chart::before { content: "\\f4e9"; }
+.bi-pin-angle-fill::before { content: "\\f4ea"; }
+.bi-pin-angle::before { content: "\\f4eb"; }
+.bi-pin-fill::before { content: "\\f4ec"; }
+.bi-pin::before { content: "\\f4ed"; }
+.bi-pip-fill::before { content: "\\f4ee"; }
+.bi-pip::before { content: "\\f4ef"; }
+.bi-play-btn-fill::before { content: "\\f4f0"; }
+.bi-play-btn::before { content: "\\f4f1"; }
+.bi-play-circle-fill::before { content: "\\f4f2"; }
+.bi-play-circle::before { content: "\\f4f3"; }
+.bi-play-fill::before { content: "\\f4f4"; }
+.bi-play::before { content: "\\f4f5"; }
+.bi-plug-fill::before { content: "\\f4f6"; }
+.bi-plug::before { content: "\\f4f7"; }
+.bi-plus-circle-dotted::before { content: "\\f4f8"; }
+.bi-plus-circle-fill::before { content: "\\f4f9"; }
+.bi-plus-circle::before { content: "\\f4fa"; }
+.bi-plus-square-dotted::before { content: "\\f4fb"; }
+.bi-plus-square-fill::before { content: "\\f4fc"; }
+.bi-plus-square::before { content: "\\f4fd"; }
+.bi-plus::before { content: "\\f4fe"; }
+.bi-power::before { content: "\\f4ff"; }
+.bi-printer-fill::before { content: "\\f500"; }
+.bi-printer::before { content: "\\f501"; }
+.bi-puzzle-fill::before { content: "\\f502"; }
+.bi-puzzle::before { content: "\\f503"; }
+.bi-question-circle-fill::before { content: "\\f504"; }
+.bi-question-circle::before { content: "\\f505"; }
+.bi-question-diamond-fill::before { content: "\\f506"; }
+.bi-question-diamond::before { content: "\\f507"; }
+.bi-question-octagon-fill::before { content: "\\f508"; }
+.bi-question-octagon::before { content: "\\f509"; }
+.bi-question-square-fill::before { content: "\\f50a"; }
+.bi-question-square::before { content: "\\f50b"; }
+.bi-question::before { content: "\\f50c"; }
+.bi-rainbow::before { content: "\\f50d"; }
+.bi-receipt-cutoff::before { content: "\\f50e"; }
+.bi-receipt::before { content: "\\f50f"; }
+.bi-reception-0::before { content: "\\f510"; }
+.bi-reception-1::before { content: "\\f511"; }
+.bi-reception-2::before { content: "\\f512"; }
+.bi-reception-3::before { content: "\\f513"; }
+.bi-reception-4::before { content: "\\f514"; }
+.bi-record-btn-fill::before { content: "\\f515"; }
+.bi-record-btn::before { content: "\\f516"; }
+.bi-record-circle-fill::before { content: "\\f517"; }
+.bi-record-circle::before { content: "\\f518"; }
+.bi-record-fill::before { content: "\\f519"; }
+.bi-record::before { content: "\\f51a"; }
+.bi-record2-fill::before { content: "\\f51b"; }
+.bi-record2::before { content: "\\f51c"; }
+.bi-reply-all-fill::before { content: "\\f51d"; }
+.bi-reply-all::before { content: "\\f51e"; }
+.bi-reply-fill::before { content: "\\f51f"; }
+.bi-reply::before { content: "\\f520"; }
+.bi-rss-fill::before { content: "\\f521"; }
+.bi-rss::before { content: "\\f522"; }
+.bi-rulers::before { content: "\\f523"; }
+.bi-save-fill::before { content: "\\f524"; }
+.bi-save::before { content: "\\f525"; }
+.bi-save2-fill::before { content: "\\f526"; }
+.bi-save2::before { content: "\\f527"; }
+.bi-scissors::before { content: "\\f528"; }
+.bi-screwdriver::before { content: "\\f529"; }
+.bi-search::before { content: "\\f52a"; }
+.bi-segmented-nav::before { content: "\\f52b"; }
+.bi-server::before { content: "\\f52c"; }
+.bi-share-fill::before { content: "\\f52d"; }
+.bi-share::before { content: "\\f52e"; }
+.bi-shield-check::before { content: "\\f52f"; }
+.bi-shield-exclamation::before { content: "\\f530"; }
+.bi-shield-fill-check::before { content: "\\f531"; }
+.bi-shield-fill-exclamation::before { content: "\\f532"; }
+.bi-shield-fill-minus::before { content: "\\f533"; }
+.bi-shield-fill-plus::before { content: "\\f534"; }
+.bi-shield-fill-x::before { content: "\\f535"; }
+.bi-shield-fill::before { content: "\\f536"; }
+.bi-shield-lock-fill::before { content: "\\f537"; }
+.bi-shield-lock::before { content: "\\f538"; }
+.bi-shield-minus::before { content: "\\f539"; }
+.bi-shield-plus::before { content: "\\f53a"; }
+.bi-shield-shaded::before { content: "\\f53b"; }
+.bi-shield-slash-fill::before { content: "\\f53c"; }
+.bi-shield-slash::before { content: "\\f53d"; }
+.bi-shield-x::before { content: "\\f53e"; }
+.bi-shield::before { content: "\\f53f"; }
+.bi-shift-fill::before { content: "\\f540"; }
+.bi-shift::before { content: "\\f541"; }
+.bi-shop-window::before { content: "\\f542"; }
+.bi-shop::before { content: "\\f543"; }
+.bi-shuffle::before { content: "\\f544"; }
+.bi-signpost-2-fill::before { content: "\\f545"; }
+.bi-signpost-2::before { content: "\\f546"; }
+.bi-signpost-fill::before { content: "\\f547"; }
+.bi-signpost-split-fill::before { content: "\\f548"; }
+.bi-signpost-split::before { content: "\\f549"; }
+.bi-signpost::before { content: "\\f54a"; }
+.bi-sim-fill::before { content: "\\f54b"; }
+.bi-sim::before { content: "\\f54c"; }
+.bi-skip-backward-btn-fill::before { content: "\\f54d"; }
+.bi-skip-backward-btn::before { content: "\\f54e"; }
+.bi-skip-backward-circle-fill::before { content: "\\f54f"; }
+.bi-skip-backward-circle::before { content: "\\f550"; }
+.bi-skip-backward-fill::before { content: "\\f551"; }
+.bi-skip-backward::before { content: "\\f552"; }
+.bi-skip-end-btn-fill::before { content: "\\f553"; }
+.bi-skip-end-btn::before { content: "\\f554"; }
+.bi-skip-end-circle-fill::before { content: "\\f555"; }
+.bi-skip-end-circle::before { content: "\\f556"; }
+.bi-skip-end-fill::before { content: "\\f557"; }
+.bi-skip-end::before { content: "\\f558"; }
+.bi-skip-forward-btn-fill::before { content: "\\f559"; }
+.bi-skip-forward-btn::before { content: "\\f55a"; }
+.bi-skip-forward-circle-fill::before { content: "\\f55b"; }
+.bi-skip-forward-circle::before { content: "\\f55c"; }
+.bi-skip-forward-fill::before { content: "\\f55d"; }
+.bi-skip-forward::before { content: "\\f55e"; }
+.bi-skip-start-btn-fill::before { content: "\\f55f"; }
+.bi-skip-start-btn::before { content: "\\f560"; }
+.bi-skip-start-circle-fill::before { content: "\\f561"; }
+.bi-skip-start-circle::before { content: "\\f562"; }
+.bi-skip-start-fill::before { content: "\\f563"; }
+.bi-skip-start::before { content: "\\f564"; }
+.bi-slack::before { content: "\\f565"; }
+.bi-slash-circle-fill::before { content: "\\f566"; }
+.bi-slash-circle::before { content: "\\f567"; }
+.bi-slash-square-fill::before { content: "\\f568"; }
+.bi-slash-square::before { content: "\\f569"; }
+.bi-slash::before { content: "\\f56a"; }
+.bi-sliders::before { content: "\\f56b"; }
+.bi-smartwatch::before { content: "\\f56c"; }
+.bi-snow::before { content: "\\f56d"; }
+.bi-snow2::before { content: "\\f56e"; }
+.bi-snow3::before { content: "\\f56f"; }
+.bi-sort-alpha-down-alt::before { content: "\\f570"; }
+.bi-sort-alpha-down::before { content: "\\f571"; }
+.bi-sort-alpha-up-alt::before { content: "\\f572"; }
+.bi-sort-alpha-up::before { content: "\\f573"; }
+.bi-sort-down-alt::before { content: "\\f574"; }
+.bi-sort-down::before { content: "\\f575"; }
+.bi-sort-numeric-down-alt::before { content: "\\f576"; }
+.bi-sort-numeric-down::before { content: "\\f577"; }
+.bi-sort-numeric-up-alt::before { content: "\\f578"; }
+.bi-sort-numeric-up::before { content: "\\f579"; }
+.bi-sort-up-alt::before { content: "\\f57a"; }
+.bi-sort-up::before { content: "\\f57b"; }
+.bi-soundwave::before { content: "\\f57c"; }
+.bi-speaker-fill::before { content: "\\f57d"; }
+.bi-speaker::before { content: "\\f57e"; }
+.bi-speedometer::before { content: "\\f57f"; }
+.bi-speedometer2::before { content: "\\f580"; }
+.bi-spellcheck::before { content: "\\f581"; }
+.bi-square-fill::before { content: "\\f582"; }
+.bi-square-half::before { content: "\\f583"; }
+.bi-square::before { content: "\\f584"; }
+.bi-stack::before { content: "\\f585"; }
+.bi-star-fill::before { content: "\\f586"; }
+.bi-star-half::before { content: "\\f587"; }
+.bi-star::before { content: "\\f588"; }
+.bi-stars::before { content: "\\f589"; }
+.bi-stickies-fill::before { content: "\\f58a"; }
+.bi-stickies::before { content: "\\f58b"; }
+.bi-sticky-fill::before { content: "\\f58c"; }
+.bi-sticky::before { content: "\\f58d"; }
+.bi-stop-btn-fill::before { content: "\\f58e"; }
+.bi-stop-btn::before { content: "\\f58f"; }
+.bi-stop-circle-fill::before { content: "\\f590"; }
+.bi-stop-circle::before { content: "\\f591"; }
+.bi-stop-fill::before { content: "\\f592"; }
+.bi-stop::before { content: "\\f593"; }
+.bi-stoplights-fill::before { content: "\\f594"; }
+.bi-stoplights::before { content: "\\f595"; }
+.bi-stopwatch-fill::before { content: "\\f596"; }
+.bi-stopwatch::before { content: "\\f597"; }
+.bi-subtract::before { content: "\\f598"; }
+.bi-suit-club-fill::before { content: "\\f599"; }
+.bi-suit-club::before { content: "\\f59a"; }
+.bi-suit-diamond-fill::before { content: "\\f59b"; }
+.bi-suit-diamond::before { content: "\\f59c"; }
+.bi-suit-heart-fill::before { content: "\\f59d"; }
+.bi-suit-heart::before { content: "\\f59e"; }
+.bi-suit-spade-fill::before { content: "\\f59f"; }
+.bi-suit-spade::before { content: "\\f5a0"; }
+.bi-sun-fill::before { content: "\\f5a1"; }
+.bi-sun::before { content: "\\f5a2"; }
+.bi-sunglasses::before { content: "\\f5a3"; }
+.bi-sunrise-fill::before { content: "\\f5a4"; }
+.bi-sunrise::before { content: "\\f5a5"; }
+.bi-sunset-fill::before { content: "\\f5a6"; }
+.bi-sunset::before { content: "\\f5a7"; }
+.bi-symmetry-horizontal::before { content: "\\f5a8"; }
+.bi-symmetry-vertical::before { content: "\\f5a9"; }
+.bi-table::before { content: "\\f5aa"; }
+.bi-tablet-fill::before { content: "\\f5ab"; }
+.bi-tablet-landscape-fill::before { content: "\\f5ac"; }
+.bi-tablet-landscape::before { content: "\\f5ad"; }
+.bi-tablet::before { content: "\\f5ae"; }
+.bi-tag-fill::before { content: "\\f5af"; }
+.bi-tag::before { content: "\\f5b0"; }
+.bi-tags-fill::before { content: "\\f5b1"; }
+.bi-tags::before { content: "\\f5b2"; }
+.bi-telegram::before { content: "\\f5b3"; }
+.bi-telephone-fill::before { content: "\\f5b4"; }
+.bi-telephone-forward-fill::before { content: "\\f5b5"; }
+.bi-telephone-forward::before { content: "\\f5b6"; }
+.bi-telephone-inbound-fill::before { content: "\\f5b7"; }
+.bi-telephone-inbound::before { content: "\\f5b8"; }
+.bi-telephone-minus-fill::before { content: "\\f5b9"; }
+.bi-telephone-minus::before { content: "\\f5ba"; }
+.bi-telephone-outbound-fill::before { content: "\\f5bb"; }
+.bi-telephone-outbound::before { content: "\\f5bc"; }
+.bi-telephone-plus-fill::before { content: "\\f5bd"; }
+.bi-telephone-plus::before { content: "\\f5be"; }
+.bi-telephone-x-fill::before { content: "\\f5bf"; }
+.bi-telephone-x::before { content: "\\f5c0"; }
+.bi-telephone::before { content: "\\f5c1"; }
+.bi-terminal-fill::before { content: "\\f5c2"; }
+.bi-terminal::before { content: "\\f5c3"; }
+.bi-text-center::before { content: "\\f5c4"; }
+.bi-text-indent-left::before { content: "\\f5c5"; }
+.bi-text-indent-right::before { content: "\\f5c6"; }
+.bi-text-left::before { content: "\\f5c7"; }
+.bi-text-paragraph::before { content: "\\f5c8"; }
+.bi-text-right::before { content: "\\f5c9"; }
+.bi-textarea-resize::before { content: "\\f5ca"; }
+.bi-textarea-t::before { content: "\\f5cb"; }
+.bi-textarea::before { content: "\\f5cc"; }
+.bi-thermometer-half::before { content: "\\f5cd"; }
+.bi-thermometer-high::before { content: "\\f5ce"; }
+.bi-thermometer-low::before { content: "\\f5cf"; }
+.bi-thermometer-snow::before { content: "\\f5d0"; }
+.bi-thermometer-sun::before { content: "\\f5d1"; }
+.bi-thermometer::before { content: "\\f5d2"; }
+.bi-three-dots-vertical::before { content: "\\f5d3"; }
+.bi-three-dots::before { content: "\\f5d4"; }
+.bi-toggle-off::before { content: "\\f5d5"; }
+.bi-toggle-on::before { content: "\\f5d6"; }
+.bi-toggle2-off::before { content: "\\f5d7"; }
+.bi-toggle2-on::before { content: "\\f5d8"; }
+.bi-toggles::before { content: "\\f5d9"; }
+.bi-toggles2::before { content: "\\f5da"; }
+.bi-tools::before { content: "\\f5db"; }
+.bi-tornado::before { content: "\\f5dc"; }
+.bi-trash-fill::before { content: "\\f5dd"; }
+.bi-trash::before { content: "\\f5de"; }
+.bi-trash2-fill::before { content: "\\f5df"; }
+.bi-trash2::before { content: "\\f5e0"; }
+.bi-tree-fill::before { content: "\\f5e1"; }
+.bi-tree::before { content: "\\f5e2"; }
+.bi-triangle-fill::before { content: "\\f5e3"; }
+.bi-triangle-half::before { content: "\\f5e4"; }
+.bi-triangle::before { content: "\\f5e5"; }
+.bi-trophy-fill::before { content: "\\f5e6"; }
+.bi-trophy::before { content: "\\f5e7"; }
+.bi-tropical-storm::before { content: "\\f5e8"; }
+.bi-truck-flatbed::before { content: "\\f5e9"; }
+.bi-truck::before { content: "\\f5ea"; }
+.bi-tsunami::before { content: "\\f5eb"; }
+.bi-tv-fill::before { content: "\\f5ec"; }
+.bi-tv::before { content: "\\f5ed"; }
+.bi-twitch::before { content: "\\f5ee"; }
+.bi-twitter::before { content: "\\f5ef"; }
+.bi-type-bold::before { content: "\\f5f0"; }
+.bi-type-h1::before { content: "\\f5f1"; }
+.bi-type-h2::before { content: "\\f5f2"; }
+.bi-type-h3::before { content: "\\f5f3"; }
+.bi-type-italic::before { content: "\\f5f4"; }
+.bi-type-strikethrough::before { content: "\\f5f5"; }
+.bi-type-underline::before { content: "\\f5f6"; }
+.bi-type::before { content: "\\f5f7"; }
+.bi-ui-checks-grid::before { content: "\\f5f8"; }
+.bi-ui-checks::before { content: "\\f5f9"; }
+.bi-ui-radios-grid::before { content: "\\f5fa"; }
+.bi-ui-radios::before { content: "\\f5fb"; }
+.bi-umbrella-fill::before { content: "\\f5fc"; }
+.bi-umbrella::before { content: "\\f5fd"; }
+.bi-union::before { content: "\\f5fe"; }
+.bi-unlock-fill::before { content: "\\f5ff"; }
+.bi-unlock::before { content: "\\f600"; }
+.bi-upc-scan::before { content: "\\f601"; }
+.bi-upc::before { content: "\\f602"; }
+.bi-upload::before { content: "\\f603"; }
+.bi-vector-pen::before { content: "\\f604"; }
+.bi-view-list::before { content: "\\f605"; }
+.bi-view-stacked::before { content: "\\f606"; }
+.bi-vinyl-fill::before { content: "\\f607"; }
+.bi-vinyl::before { content: "\\f608"; }
+.bi-voicemail::before { content: "\\f609"; }
+.bi-volume-down-fill::before { content: "\\f60a"; }
+.bi-volume-down::before { content: "\\f60b"; }
+.bi-volume-mute-fill::before { content: "\\f60c"; }
+.bi-volume-mute::before { content: "\\f60d"; }
+.bi-volume-off-fill::before { content: "\\f60e"; }
+.bi-volume-off::before { content: "\\f60f"; }
+.bi-volume-up-fill::before { content: "\\f610"; }
+.bi-volume-up::before { content: "\\f611"; }
+.bi-vr::before { content: "\\f612"; }
+.bi-wallet-fill::before { content: "\\f613"; }
+.bi-wallet::before { content: "\\f614"; }
+.bi-wallet2::before { content: "\\f615"; }
+.bi-watch::before { content: "\\f616"; }
+.bi-water::before { content: "\\f617"; }
+.bi-whatsapp::before { content: "\\f618"; }
+.bi-wifi-1::before { content: "\\f619"; }
+.bi-wifi-2::before { content: "\\f61a"; }
+.bi-wifi-off::before { content: "\\f61b"; }
+.bi-wifi::before { content: "\\f61c"; }
+.bi-wind::before { content: "\\f61d"; }
+.bi-window-dock::before { content: "\\f61e"; }
+.bi-window-sidebar::before { content: "\\f61f"; }
+.bi-window::before { content: "\\f620"; }
+.bi-wrench::before { content: "\\f621"; }
+.bi-x-circle-fill::before { content: "\\f622"; }
+.bi-x-circle::before { content: "\\f623"; }
+.bi-x-diamond-fill::before { content: "\\f624"; }
+.bi-x-diamond::before { content: "\\f625"; }
+.bi-x-octagon-fill::before { content: "\\f626"; }
+.bi-x-octagon::before { content: "\\f627"; }
+.bi-x-square-fill::before { content: "\\f628"; }
+.bi-x-square::before { content: "\\f629"; }
+.bi-x::before { content: "\\f62a"; }
+.bi-youtube::before { content: "\\f62b"; }
+.bi-zoom-in::before { content: "\\f62c"; }
+.bi-zoom-out::before { content: "\\f62d"; }
+.bi-bank::before { content: "\\f62e"; }
+.bi-bank2::before { content: "\\f62f"; }
+.bi-bell-slash-fill::before { content: "\\f630"; }
+.bi-bell-slash::before { content: "\\f631"; }
+.bi-cash-coin::before { content: "\\f632"; }
+.bi-check-lg::before { content: "\\f633"; }
+.bi-coin::before { content: "\\f634"; }
+.bi-currency-bitcoin::before { content: "\\f635"; }
+.bi-currency-dollar::before { content: "\\f636"; }
+.bi-currency-euro::before { content: "\\f637"; }
+.bi-currency-exchange::before { content: "\\f638"; }
+.bi-currency-pound::before { content: "\\f639"; }
+.bi-currency-yen::before { content: "\\f63a"; }
+.bi-dash-lg::before { content: "\\f63b"; }
+.bi-exclamation-lg::before { content: "\\f63c"; }
+.bi-file-earmark-pdf-fill::before { content: "\\f63d"; }
+.bi-file-earmark-pdf::before { content: "\\f63e"; }
+.bi-file-pdf-fill::before { content: "\\f63f"; }
+.bi-file-pdf::before { content: "\\f640"; }
+.bi-gender-ambiguous::before { content: "\\f641"; }
+.bi-gender-female::before { content: "\\f642"; }
+.bi-gender-male::before { content: "\\f643"; }
+.bi-gender-trans::before { content: "\\f644"; }
+.bi-headset-vr::before { content: "\\f645"; }
+.bi-info-lg::before { content: "\\f646"; }
+.bi-mastodon::before { content: "\\f647"; }
+.bi-messenger::before { content: "\\f648"; }
+.bi-piggy-bank-fill::before { content: "\\f649"; }
+.bi-piggy-bank::before { content: "\\f64a"; }
+.bi-pin-map-fill::before { content: "\\f64b"; }
+.bi-pin-map::before { content: "\\f64c"; }
+.bi-plus-lg::before { content: "\\f64d"; }
+.bi-question-lg::before { content: "\\f64e"; }
+.bi-recycle::before { content: "\\f64f"; }
+.bi-reddit::before { content: "\\f650"; }
+.bi-safe-fill::before { content: "\\f651"; }
+.bi-safe2-fill::before { content: "\\f652"; }
+.bi-safe2::before { content: "\\f653"; }
+.bi-sd-card-fill::before { content: "\\f654"; }
+.bi-sd-card::before { content: "\\f655"; }
+.bi-skype::before { content: "\\f656"; }
+.bi-slash-lg::before { content: "\\f657"; }
+.bi-translate::before { content: "\\f658"; }
+.bi-x-lg::before { content: "\\f659"; }
+.bi-safe::before { content: "\\f65a"; }
+.bi-apple::before { content: "\\f65b"; }
+.bi-microsoft::before { content: "\\f65d"; }
+.bi-windows::before { content: "\\f65e"; }
+.bi-behance::before { content: "\\f65c"; }
+.bi-dribbble::before { content: "\\f65f"; }
+.bi-line::before { content: "\\f660"; }
+.bi-medium::before { content: "\\f661"; }
+.bi-paypal::before { content: "\\f662"; }
+.bi-pinterest::before { content: "\\f663"; }
+.bi-signal::before { content: "\\f664"; }
+.bi-snapchat::before { content: "\\f665"; }
+.bi-spotify::before { content: "\\f666"; }
+.bi-stack-overflow::before { content: "\\f667"; }
+.bi-strava::before { content: "\\f668"; }
+.bi-wordpress::before { content: "\\f669"; }
+.bi-vimeo::before { content: "\\f66a"; }
+.bi-activity::before { content: "\\f66b"; }
+.bi-easel2-fill::before { content: "\\f66c"; }
+.bi-easel2::before { content: "\\f66d"; }
+.bi-easel3-fill::before { content: "\\f66e"; }
+.bi-easel3::before { content: "\\f66f"; }
+.bi-fan::before { content: "\\f670"; }
+.bi-fingerprint::before { content: "\\f671"; }
+.bi-graph-down-arrow::before { content: "\\f672"; }
+.bi-graph-up-arrow::before { content: "\\f673"; }
+.bi-hypnotize::before { content: "\\f674"; }
+.bi-magic::before { content: "\\f675"; }
+.bi-person-rolodex::before { content: "\\f676"; }
+.bi-person-video::before { content: "\\f677"; }
+.bi-person-video2::before { content: "\\f678"; }
+.bi-person-video3::before { content: "\\f679"; }
+.bi-person-workspace::before { content: "\\f67a"; }
+.bi-radioactive::before { content: "\\f67b"; }
+.bi-webcam-fill::before { content: "\\f67c"; }
+.bi-webcam::before { content: "\\f67d"; }
+.bi-yin-yang::before { content: "\\f67e"; }
+.bi-bandaid-fill::before { content: "\\f680"; }
+.bi-bandaid::before { content: "\\f681"; }
+.bi-bluetooth::before { content: "\\f682"; }
+.bi-body-text::before { content: "\\f683"; }
+.bi-boombox::before { content: "\\f684"; }
+.bi-boxes::before { content: "\\f685"; }
+.bi-dpad-fill::before { content: "\\f686"; }
+.bi-dpad::before { content: "\\f687"; }
+.bi-ear-fill::before { content: "\\f688"; }
+.bi-ear::before { content: "\\f689"; }
+.bi-envelope-check-fill::before { content: "\\f68b"; }
+.bi-envelope-check::before { content: "\\f68c"; }
+.bi-envelope-dash-fill::before { content: "\\f68e"; }
+.bi-envelope-dash::before { content: "\\f68f"; }
+.bi-envelope-exclamation-fill::before { content: "\\f691"; }
+.bi-envelope-exclamation::before { content: "\\f692"; }
+.bi-envelope-plus-fill::before { content: "\\f693"; }
+.bi-envelope-plus::before { content: "\\f694"; }
+.bi-envelope-slash-fill::before { content: "\\f696"; }
+.bi-envelope-slash::before { content: "\\f697"; }
+.bi-envelope-x-fill::before { content: "\\f699"; }
+.bi-envelope-x::before { content: "\\f69a"; }
+.bi-explicit-fill::before { content: "\\f69b"; }
+.bi-explicit::before { content: "\\f69c"; }
+.bi-git::before { content: "\\f69d"; }
+.bi-infinity::before { content: "\\f69e"; }
+.bi-list-columns-reverse::before { content: "\\f69f"; }
+.bi-list-columns::before { content: "\\f6a0"; }
+.bi-meta::before { content: "\\f6a1"; }
+.bi-nintendo-switch::before { content: "\\f6a4"; }
+.bi-pc-display-horizontal::before { content: "\\f6a5"; }
+.bi-pc-display::before { content: "\\f6a6"; }
+.bi-pc-horizontal::before { content: "\\f6a7"; }
+.bi-pc::before { content: "\\f6a8"; }
+.bi-playstation::before { content: "\\f6a9"; }
+.bi-plus-slash-minus::before { content: "\\f6aa"; }
+.bi-projector-fill::before { content: "\\f6ab"; }
+.bi-projector::before { content: "\\f6ac"; }
+.bi-qr-code-scan::before { content: "\\f6ad"; }
+.bi-qr-code::before { content: "\\f6ae"; }
+.bi-quora::before { content: "\\f6af"; }
+.bi-quote::before { content: "\\f6b0"; }
+.bi-robot::before { content: "\\f6b1"; }
+.bi-send-check-fill::before { content: "\\f6b2"; }
+.bi-send-check::before { content: "\\f6b3"; }
+.bi-send-dash-fill::before { content: "\\f6b4"; }
+.bi-send-dash::before { content: "\\f6b5"; }
+.bi-send-exclamation-fill::before { content: "\\f6b7"; }
+.bi-send-exclamation::before { content: "\\f6b8"; }
+.bi-send-fill::before { content: "\\f6b9"; }
+.bi-send-plus-fill::before { content: "\\f6ba"; }
+.bi-send-plus::before { content: "\\f6bb"; }
+.bi-send-slash-fill::before { content: "\\f6bc"; }
+.bi-send-slash::before { content: "\\f6bd"; }
+.bi-send-x-fill::before { content: "\\f6be"; }
+.bi-send-x::before { content: "\\f6bf"; }
+.bi-send::before { content: "\\f6c0"; }
+.bi-steam::before { content: "\\f6c1"; }
+.bi-terminal-dash::before { content: "\\f6c3"; }
+.bi-terminal-plus::before { content: "\\f6c4"; }
+.bi-terminal-split::before { content: "\\f6c5"; }
+.bi-ticket-detailed-fill::before { content: "\\f6c6"; }
+.bi-ticket-detailed::before { content: "\\f6c7"; }
+.bi-ticket-fill::before { content: "\\f6c8"; }
+.bi-ticket-perforated-fill::before { content: "\\f6c9"; }
+.bi-ticket-perforated::before { content: "\\f6ca"; }
+.bi-ticket::before { content: "\\f6cb"; }
+.bi-tiktok::before { content: "\\f6cc"; }
+.bi-window-dash::before { content: "\\f6cd"; }
+.bi-window-desktop::before { content: "\\f6ce"; }
+.bi-window-fullscreen::before { content: "\\f6cf"; }
+.bi-window-plus::before { content: "\\f6d0"; }
+.bi-window-split::before { content: "\\f6d1"; }
+.bi-window-stack::before { content: "\\f6d2"; }
+.bi-window-x::before { content: "\\f6d3"; }
+.bi-xbox::before { content: "\\f6d4"; }
+.bi-ethernet::before { content: "\\f6d5"; }
+.bi-hdmi-fill::before { content: "\\f6d6"; }
+.bi-hdmi::before { content: "\\f6d7"; }
+.bi-usb-c-fill::before { content: "\\f6d8"; }
+.bi-usb-c::before { content: "\\f6d9"; }
+.bi-usb-fill::before { content: "\\f6da"; }
+.bi-usb-plug-fill::before { content: "\\f6db"; }
+.bi-usb-plug::before { content: "\\f6dc"; }
+.bi-usb-symbol::before { content: "\\f6dd"; }
+.bi-usb::before { content: "\\f6de"; }
+.bi-boombox-fill::before { content: "\\f6df"; }
+.bi-displayport::before { content: "\\f6e1"; }
+.bi-gpu-card::before { content: "\\f6e2"; }
+.bi-memory::before { content: "\\f6e3"; }
+.bi-modem-fill::before { content: "\\f6e4"; }
+.bi-modem::before { content: "\\f6e5"; }
+.bi-motherboard-fill::before { content: "\\f6e6"; }
+.bi-motherboard::before { content: "\\f6e7"; }
+.bi-optical-audio-fill::before { content: "\\f6e8"; }
+.bi-optical-audio::before { content: "\\f6e9"; }
+.bi-pci-card::before { content: "\\f6ea"; }
+.bi-router-fill::before { content: "\\f6eb"; }
+.bi-router::before { content: "\\f6ec"; }
+.bi-thunderbolt-fill::before { content: "\\f6ef"; }
+.bi-thunderbolt::before { content: "\\f6f0"; }
+.bi-usb-drive-fill::before { content: "\\f6f1"; }
+.bi-usb-drive::before { content: "\\f6f2"; }
+.bi-usb-micro-fill::before { content: "\\f6f3"; }
+.bi-usb-micro::before { content: "\\f6f4"; }
+.bi-usb-mini-fill::before { content: "\\f6f5"; }
+.bi-usb-mini::before { content: "\\f6f6"; }
+.bi-cloud-haze2::before { content: "\\f6f7"; }
+.bi-device-hdd-fill::before { content: "\\f6f8"; }
+.bi-device-hdd::before { content: "\\f6f9"; }
+.bi-device-ssd-fill::before { content: "\\f6fa"; }
+.bi-device-ssd::before { content: "\\f6fb"; }
+.bi-displayport-fill::before { content: "\\f6fc"; }
+.bi-mortarboard-fill::before { content: "\\f6fd"; }
+.bi-mortarboard::before { content: "\\f6fe"; }
+.bi-terminal-x::before { content: "\\f6ff"; }
+.bi-arrow-through-heart-fill::before { content: "\\f700"; }
+.bi-arrow-through-heart::before { content: "\\f701"; }
+.bi-badge-sd-fill::before { content: "\\f702"; }
+.bi-badge-sd::before { content: "\\f703"; }
+.bi-bag-heart-fill::before { content: "\\f704"; }
+.bi-bag-heart::before { content: "\\f705"; }
+.bi-balloon-fill::before { content: "\\f706"; }
+.bi-balloon-heart-fill::before { content: "\\f707"; }
+.bi-balloon-heart::before { content: "\\f708"; }
+.bi-balloon::before { content: "\\f709"; }
+.bi-box2-fill::before { content: "\\f70a"; }
+.bi-box2-heart-fill::before { content: "\\f70b"; }
+.bi-box2-heart::before { content: "\\f70c"; }
+.bi-box2::before { content: "\\f70d"; }
+.bi-braces-asterisk::before { content: "\\f70e"; }
+.bi-calendar-heart-fill::before { content: "\\f70f"; }
+.bi-calendar-heart::before { content: "\\f710"; }
+.bi-calendar2-heart-fill::before { content: "\\f711"; }
+.bi-calendar2-heart::before { content: "\\f712"; }
+.bi-chat-heart-fill::before { content: "\\f713"; }
+.bi-chat-heart::before { content: "\\f714"; }
+.bi-chat-left-heart-fill::before { content: "\\f715"; }
+.bi-chat-left-heart::before { content: "\\f716"; }
+.bi-chat-right-heart-fill::before { content: "\\f717"; }
+.bi-chat-right-heart::before { content: "\\f718"; }
+.bi-chat-square-heart-fill::before { content: "\\f719"; }
+.bi-chat-square-heart::before { content: "\\f71a"; }
+.bi-clipboard-check-fill::before { content: "\\f71b"; }
+.bi-clipboard-data-fill::before { content: "\\f71c"; }
+.bi-clipboard-fill::before { content: "\\f71d"; }
+.bi-clipboard-heart-fill::before { content: "\\f71e"; }
+.bi-clipboard-heart::before { content: "\\f71f"; }
+.bi-clipboard-minus-fill::before { content: "\\f720"; }
+.bi-clipboard-plus-fill::before { content: "\\f721"; }
+.bi-clipboard-pulse::before { content: "\\f722"; }
+.bi-clipboard-x-fill::before { content: "\\f723"; }
+.bi-clipboard2-check-fill::before { content: "\\f724"; }
+.bi-clipboard2-check::before { content: "\\f725"; }
+.bi-clipboard2-data-fill::before { content: "\\f726"; }
+.bi-clipboard2-data::before { content: "\\f727"; }
+.bi-clipboard2-fill::before { content: "\\f728"; }
+.bi-clipboard2-heart-fill::before { content: "\\f729"; }
+.bi-clipboard2-heart::before { content: "\\f72a"; }
+.bi-clipboard2-minus-fill::before { content: "\\f72b"; }
+.bi-clipboard2-minus::before { content: "\\f72c"; }
+.bi-clipboard2-plus-fill::before { content: "\\f72d"; }
+.bi-clipboard2-plus::before { content: "\\f72e"; }
+.bi-clipboard2-pulse-fill::before { content: "\\f72f"; }
+.bi-clipboard2-pulse::before { content: "\\f730"; }
+.bi-clipboard2-x-fill::before { content: "\\f731"; }
+.bi-clipboard2-x::before { content: "\\f732"; }
+.bi-clipboard2::before { content: "\\f733"; }
+.bi-emoji-kiss-fill::before { content: "\\f734"; }
+.bi-emoji-kiss::before { content: "\\f735"; }
+.bi-envelope-heart-fill::before { content: "\\f736"; }
+.bi-envelope-heart::before { content: "\\f737"; }
+.bi-envelope-open-heart-fill::before { content: "\\f738"; }
+.bi-envelope-open-heart::before { content: "\\f739"; }
+.bi-envelope-paper-fill::before { content: "\\f73a"; }
+.bi-envelope-paper-heart-fill::before { content: "\\f73b"; }
+.bi-envelope-paper-heart::before { content: "\\f73c"; }
+.bi-envelope-paper::before { content: "\\f73d"; }
+.bi-filetype-aac::before { content: "\\f73e"; }
+.bi-filetype-ai::before { content: "\\f73f"; }
+.bi-filetype-bmp::before { content: "\\f740"; }
+.bi-filetype-cs::before { content: "\\f741"; }
+.bi-filetype-css::before { content: "\\f742"; }
+.bi-filetype-csv::before { content: "\\f743"; }
+.bi-filetype-doc::before { content: "\\f744"; }
+.bi-filetype-docx::before { content: "\\f745"; }
+.bi-filetype-exe::before { content: "\\f746"; }
+.bi-filetype-gif::before { content: "\\f747"; }
+.bi-filetype-heic::before { content: "\\f748"; }
+.bi-filetype-html::before { content: "\\f749"; }
+.bi-filetype-java::before { content: "\\f74a"; }
+.bi-filetype-jpg::before { content: "\\f74b"; }
+.bi-filetype-js::before { content: "\\f74c"; }
+.bi-filetype-jsx::before { content: "\\f74d"; }
+.bi-filetype-key::before { content: "\\f74e"; }
+.bi-filetype-m4p::before { content: "\\f74f"; }
+.bi-filetype-md::before { content: "\\f750"; }
+.bi-filetype-mdx::before { content: "\\f751"; }
+.bi-filetype-mov::before { content: "\\f752"; }
+.bi-filetype-mp3::before { content: "\\f753"; }
+.bi-filetype-mp4::before { content: "\\f754"; }
+.bi-filetype-otf::before { content: "\\f755"; }
+.bi-filetype-pdf::before { content: "\\f756"; }
+.bi-filetype-php::before { content: "\\f757"; }
+.bi-filetype-png::before { content: "\\f758"; }
+.bi-filetype-ppt::before { content: "\\f75a"; }
+.bi-filetype-psd::before { content: "\\f75b"; }
+.bi-filetype-py::before { content: "\\f75c"; }
+.bi-filetype-raw::before { content: "\\f75d"; }
+.bi-filetype-rb::before { content: "\\f75e"; }
+.bi-filetype-sass::before { content: "\\f75f"; }
+.bi-filetype-scss::before { content: "\\f760"; }
+.bi-filetype-sh::before { content: "\\f761"; }
+.bi-filetype-svg::before { content: "\\f762"; }
+.bi-filetype-tiff::before { content: "\\f763"; }
+.bi-filetype-tsx::before { content: "\\f764"; }
+.bi-filetype-ttf::before { content: "\\f765"; }
+.bi-filetype-txt::before { content: "\\f766"; }
+.bi-filetype-wav::before { content: "\\f767"; }
+.bi-filetype-woff::before { content: "\\f768"; }
+.bi-filetype-xls::before { content: "\\f76a"; }
+.bi-filetype-xml::before { content: "\\f76b"; }
+.bi-filetype-yml::before { content: "\\f76c"; }
+.bi-heart-arrow::before { content: "\\f76d"; }
+.bi-heart-pulse-fill::before { content: "\\f76e"; }
+.bi-heart-pulse::before { content: "\\f76f"; }
+.bi-heartbreak-fill::before { content: "\\f770"; }
+.bi-heartbreak::before { content: "\\f771"; }
+.bi-hearts::before { content: "\\f772"; }
+.bi-hospital-fill::before { content: "\\f773"; }
+.bi-hospital::before { content: "\\f774"; }
+.bi-house-heart-fill::before { content: "\\f775"; }
+.bi-house-heart::before { content: "\\f776"; }
+.bi-incognito::before { content: "\\f777"; }
+.bi-magnet-fill::before { content: "\\f778"; }
+.bi-magnet::before { content: "\\f779"; }
+.bi-person-heart::before { content: "\\f77a"; }
+.bi-person-hearts::before { content: "\\f77b"; }
+.bi-phone-flip::before { content: "\\f77c"; }
+.bi-plugin::before { content: "\\f77d"; }
+.bi-postage-fill::before { content: "\\f77e"; }
+.bi-postage-heart-fill::before { content: "\\f77f"; }
+.bi-postage-heart::before { content: "\\f780"; }
+.bi-postage::before { content: "\\f781"; }
+.bi-postcard-fill::before { content: "\\f782"; }
+.bi-postcard-heart-fill::before { content: "\\f783"; }
+.bi-postcard-heart::before { content: "\\f784"; }
+.bi-postcard::before { content: "\\f785"; }
+.bi-search-heart-fill::before { content: "\\f786"; }
+.bi-search-heart::before { content: "\\f787"; }
+.bi-sliders2-vertical::before { content: "\\f788"; }
+.bi-sliders2::before { content: "\\f789"; }
+.bi-trash3-fill::before { content: "\\f78a"; }
+.bi-trash3::before { content: "\\f78b"; }
+.bi-valentine::before { content: "\\f78c"; }
+.bi-valentine2::before { content: "\\f78d"; }
+.bi-wrench-adjustable-circle-fill::before { content: "\\f78e"; }
+.bi-wrench-adjustable-circle::before { content: "\\f78f"; }
+.bi-wrench-adjustable::before { content: "\\f790"; }
+.bi-filetype-json::before { content: "\\f791"; }
+.bi-filetype-pptx::before { content: "\\f792"; }
+.bi-filetype-xlsx::before { content: "\\f793"; }
+.bi-1-circle-fill::before { content: "\\f796"; }
+.bi-1-circle::before { content: "\\f797"; }
+.bi-1-square-fill::before { content: "\\f798"; }
+.bi-1-square::before { content: "\\f799"; }
+.bi-2-circle-fill::before { content: "\\f79c"; }
+.bi-2-circle::before { content: "\\f79d"; }
+.bi-2-square-fill::before { content: "\\f79e"; }
+.bi-2-square::before { content: "\\f79f"; }
+.bi-3-circle-fill::before { content: "\\f7a2"; }
+.bi-3-circle::before { content: "\\f7a3"; }
+.bi-3-square-fill::before { content: "\\f7a4"; }
+.bi-3-square::before { content: "\\f7a5"; }
+.bi-4-circle-fill::before { content: "\\f7a8"; }
+.bi-4-circle::before { content: "\\f7a9"; }
+.bi-4-square-fill::before { content: "\\f7aa"; }
+.bi-4-square::before { content: "\\f7ab"; }
+.bi-5-circle-fill::before { content: "\\f7ae"; }
+.bi-5-circle::before { content: "\\f7af"; }
+.bi-5-square-fill::before { content: "\\f7b0"; }
+.bi-5-square::before { content: "\\f7b1"; }
+.bi-6-circle-fill::before { content: "\\f7b4"; }
+.bi-6-circle::before { content: "\\f7b5"; }
+.bi-6-square-fill::before { content: "\\f7b6"; }
+.bi-6-square::before { content: "\\f7b7"; }
+.bi-7-circle-fill::before { content: "\\f7ba"; }
+.bi-7-circle::before { content: "\\f7bb"; }
+.bi-7-square-fill::before { content: "\\f7bc"; }
+.bi-7-square::before { content: "\\f7bd"; }
+.bi-8-circle-fill::before { content: "\\f7c0"; }
+.bi-8-circle::before { content: "\\f7c1"; }
+.bi-8-square-fill::before { content: "\\f7c2"; }
+.bi-8-square::before { content: "\\f7c3"; }
+.bi-9-circle-fill::before { content: "\\f7c6"; }
+.bi-9-circle::before { content: "\\f7c7"; }
+.bi-9-square-fill::before { content: "\\f7c8"; }
+.bi-9-square::before { content: "\\f7c9"; }
+.bi-airplane-engines-fill::before { content: "\\f7ca"; }
+.bi-airplane-engines::before { content: "\\f7cb"; }
+.bi-airplane-fill::before { content: "\\f7cc"; }
+.bi-airplane::before { content: "\\f7cd"; }
+.bi-alexa::before { content: "\\f7ce"; }
+.bi-alipay::before { content: "\\f7cf"; }
+.bi-android::before { content: "\\f7d0"; }
+.bi-android2::before { content: "\\f7d1"; }
+.bi-box-fill::before { content: "\\f7d2"; }
+.bi-box-seam-fill::before { content: "\\f7d3"; }
+.bi-browser-chrome::before { content: "\\f7d4"; }
+.bi-browser-edge::before { content: "\\f7d5"; }
+.bi-browser-firefox::before { content: "\\f7d6"; }
+.bi-browser-safari::before { content: "\\f7d7"; }
+.bi-c-circle-fill::before { content: "\\f7da"; }
+.bi-c-circle::before { content: "\\f7db"; }
+.bi-c-square-fill::before { content: "\\f7dc"; }
+.bi-c-square::before { content: "\\f7dd"; }
+.bi-capsule-pill::before { content: "\\f7de"; }
+.bi-capsule::before { content: "\\f7df"; }
+.bi-car-front-fill::before { content: "\\f7e0"; }
+.bi-car-front::before { content: "\\f7e1"; }
+.bi-cassette-fill::before { content: "\\f7e2"; }
+.bi-cassette::before { content: "\\f7e3"; }
+.bi-cc-circle-fill::before { content: "\\f7e6"; }
+.bi-cc-circle::before { content: "\\f7e7"; }
+.bi-cc-square-fill::before { content: "\\f7e8"; }
+.bi-cc-square::before { content: "\\f7e9"; }
+.bi-cup-hot-fill::before { content: "\\f7ea"; }
+.bi-cup-hot::before { content: "\\f7eb"; }
+.bi-currency-rupee::before { content: "\\f7ec"; }
+.bi-dropbox::before { content: "\\f7ed"; }
+.bi-escape::before { content: "\\f7ee"; }
+.bi-fast-forward-btn-fill::before { content: "\\f7ef"; }
+.bi-fast-forward-btn::before { content: "\\f7f0"; }
+.bi-fast-forward-circle-fill::before { content: "\\f7f1"; }
+.bi-fast-forward-circle::before { content: "\\f7f2"; }
+.bi-fast-forward-fill::before { content: "\\f7f3"; }
+.bi-fast-forward::before { content: "\\f7f4"; }
+.bi-filetype-sql::before { content: "\\f7f5"; }
+.bi-fire::before { content: "\\f7f6"; }
+.bi-google-play::before { content: "\\f7f7"; }
+.bi-h-circle-fill::before { content: "\\f7fa"; }
+.bi-h-circle::before { content: "\\f7fb"; }
+.bi-h-square-fill::before { content: "\\f7fc"; }
+.bi-h-square::before { content: "\\f7fd"; }
+.bi-indent::before { content: "\\f7fe"; }
+.bi-lungs-fill::before { content: "\\f7ff"; }
+.bi-lungs::before { content: "\\f800"; }
+.bi-microsoft-teams::before { content: "\\f801"; }
+.bi-p-circle-fill::before { content: "\\f804"; }
+.bi-p-circle::before { content: "\\f805"; }
+.bi-p-square-fill::before { content: "\\f806"; }
+.bi-p-square::before { content: "\\f807"; }
+.bi-pass-fill::before { content: "\\f808"; }
+.bi-pass::before { content: "\\f809"; }
+.bi-prescription::before { content: "\\f80a"; }
+.bi-prescription2::before { content: "\\f80b"; }
+.bi-r-circle-fill::before { content: "\\f80e"; }
+.bi-r-circle::before { content: "\\f80f"; }
+.bi-r-square-fill::before { content: "\\f810"; }
+.bi-r-square::before { content: "\\f811"; }
+.bi-repeat-1::before { content: "\\f812"; }
+.bi-repeat::before { content: "\\f813"; }
+.bi-rewind-btn-fill::before { content: "\\f814"; }
+.bi-rewind-btn::before { content: "\\f815"; }
+.bi-rewind-circle-fill::before { content: "\\f816"; }
+.bi-rewind-circle::before { content: "\\f817"; }
+.bi-rewind-fill::before { content: "\\f818"; }
+.bi-rewind::before { content: "\\f819"; }
+.bi-train-freight-front-fill::before { content: "\\f81a"; }
+.bi-train-freight-front::before { content: "\\f81b"; }
+.bi-train-front-fill::before { content: "\\f81c"; }
+.bi-train-front::before { content: "\\f81d"; }
+.bi-train-lightrail-front-fill::before { content: "\\f81e"; }
+.bi-train-lightrail-front::before { content: "\\f81f"; }
+.bi-truck-front-fill::before { content: "\\f820"; }
+.bi-truck-front::before { content: "\\f821"; }
+.bi-ubuntu::before { content: "\\f822"; }
+.bi-unindent::before { content: "\\f823"; }
+.bi-unity::before { content: "\\f824"; }
+.bi-universal-access-circle::before { content: "\\f825"; }
+.bi-universal-access::before { content: "\\f826"; }
+.bi-virus::before { content: "\\f827"; }
+.bi-virus2::before { content: "\\f828"; }
+.bi-wechat::before { content: "\\f829"; }
+.bi-yelp::before { content: "\\f82a"; }
+.bi-sign-stop-fill::before { content: "\\f82b"; }
+.bi-sign-stop-lights-fill::before { content: "\\f82c"; }
+.bi-sign-stop-lights::before { content: "\\f82d"; }
+.bi-sign-stop::before { content: "\\f82e"; }
+.bi-sign-turn-left-fill::before { content: "\\f82f"; }
+.bi-sign-turn-left::before { content: "\\f830"; }
+.bi-sign-turn-right-fill::before { content: "\\f831"; }
+.bi-sign-turn-right::before { content: "\\f832"; }
+.bi-sign-turn-slight-left-fill::before { content: "\\f833"; }
+.bi-sign-turn-slight-left::before { content: "\\f834"; }
+.bi-sign-turn-slight-right-fill::before { content: "\\f835"; }
+.bi-sign-turn-slight-right::before { content: "\\f836"; }
+.bi-sign-yield-fill::before { content: "\\f837"; }
+.bi-sign-yield::before { content: "\\f838"; }
+.bi-ev-station-fill::before { content: "\\f839"; }
+.bi-ev-station::before { content: "\\f83a"; }
+.bi-fuel-pump-diesel-fill::before { content: "\\f83b"; }
+.bi-fuel-pump-diesel::before { content: "\\f83c"; }
+.bi-fuel-pump-fill::before { content: "\\f83d"; }
+.bi-fuel-pump::before { content: "\\f83e"; }
+.bi-0-circle-fill::before { content: "\\f83f"; }
+.bi-0-circle::before { content: "\\f840"; }
+.bi-0-square-fill::before { content: "\\f841"; }
+.bi-0-square::before { content: "\\f842"; }
+.bi-rocket-fill::before { content: "\\f843"; }
+.bi-rocket-takeoff-fill::before { content: "\\f844"; }
+.bi-rocket-takeoff::before { content: "\\f845"; }
+.bi-rocket::before { content: "\\f846"; }
+.bi-stripe::before { content: "\\f847"; }
+.bi-subscript::before { content: "\\f848"; }
+.bi-superscript::before { content: "\\f849"; }
+.bi-trello::before { content: "\\f84a"; }
+.bi-envelope-at-fill::before { content: "\\f84b"; }
+.bi-envelope-at::before { content: "\\f84c"; }
+.bi-regex::before { content: "\\f84d"; }
+.bi-text-wrap::before { content: "\\f84e"; }
+.bi-sign-dead-end-fill::before { content: "\\f84f"; }
+.bi-sign-dead-end::before { content: "\\f850"; }
+.bi-sign-do-not-enter-fill::before { content: "\\f851"; }
+.bi-sign-do-not-enter::before { content: "\\f852"; }
+.bi-sign-intersection-fill::before { content: "\\f853"; }
+.bi-sign-intersection-side-fill::before { content: "\\f854"; }
+.bi-sign-intersection-side::before { content: "\\f855"; }
+.bi-sign-intersection-t-fill::before { content: "\\f856"; }
+.bi-sign-intersection-t::before { content: "\\f857"; }
+.bi-sign-intersection-y-fill::before { content: "\\f858"; }
+.bi-sign-intersection-y::before { content: "\\f859"; }
+.bi-sign-intersection::before { content: "\\f85a"; }
+.bi-sign-merge-left-fill::before { content: "\\f85b"; }
+.bi-sign-merge-left::before { content: "\\f85c"; }
+.bi-sign-merge-right-fill::before { content: "\\f85d"; }
+.bi-sign-merge-right::before { content: "\\f85e"; }
+.bi-sign-no-left-turn-fill::before { content: "\\f85f"; }
+.bi-sign-no-left-turn::before { content: "\\f860"; }
+.bi-sign-no-parking-fill::before { content: "\\f861"; }
+.bi-sign-no-parking::before { content: "\\f862"; }
+.bi-sign-no-right-turn-fill::before { content: "\\f863"; }
+.bi-sign-no-right-turn::before { content: "\\f864"; }
+.bi-sign-railroad-fill::before { content: "\\f865"; }
+.bi-sign-railroad::before { content: "\\f866"; }
+.bi-building-add::before { content: "\\f867"; }
+.bi-building-check::before { content: "\\f868"; }
+.bi-building-dash::before { content: "\\f869"; }
+.bi-building-down::before { content: "\\f86a"; }
+.bi-building-exclamation::before { content: "\\f86b"; }
+.bi-building-fill-add::before { content: "\\f86c"; }
+.bi-building-fill-check::before { content: "\\f86d"; }
+.bi-building-fill-dash::before { content: "\\f86e"; }
+.bi-building-fill-down::before { content: "\\f86f"; }
+.bi-building-fill-exclamation::before { content: "\\f870"; }
+.bi-building-fill-gear::before { content: "\\f871"; }
+.bi-building-fill-lock::before { content: "\\f872"; }
+.bi-building-fill-slash::before { content: "\\f873"; }
+.bi-building-fill-up::before { content: "\\f874"; }
+.bi-building-fill-x::before { content: "\\f875"; }
+.bi-building-fill::before { content: "\\f876"; }
+.bi-building-gear::before { content: "\\f877"; }
+.bi-building-lock::before { content: "\\f878"; }
+.bi-building-slash::before { content: "\\f879"; }
+.bi-building-up::before { content: "\\f87a"; }
+.bi-building-x::before { content: "\\f87b"; }
+.bi-buildings-fill::before { content: "\\f87c"; }
+.bi-buildings::before { content: "\\f87d"; }
+.bi-bus-front-fill::before { content: "\\f87e"; }
+.bi-bus-front::before { content: "\\f87f"; }
+.bi-ev-front-fill::before { content: "\\f880"; }
+.bi-ev-front::before { content: "\\f881"; }
+.bi-globe-americas::before { content: "\\f882"; }
+.bi-globe-asia-australia::before { content: "\\f883"; }
+.bi-globe-central-south-asia::before { content: "\\f884"; }
+.bi-globe-europe-africa::before { content: "\\f885"; }
+.bi-house-add-fill::before { content: "\\f886"; }
+.bi-house-add::before { content: "\\f887"; }
+.bi-house-check-fill::before { content: "\\f888"; }
+.bi-house-check::before { content: "\\f889"; }
+.bi-house-dash-fill::before { content: "\\f88a"; }
+.bi-house-dash::before { content: "\\f88b"; }
+.bi-house-down-fill::before { content: "\\f88c"; }
+.bi-house-down::before { content: "\\f88d"; }
+.bi-house-exclamation-fill::before { content: "\\f88e"; }
+.bi-house-exclamation::before { content: "\\f88f"; }
+.bi-house-gear-fill::before { content: "\\f890"; }
+.bi-house-gear::before { content: "\\f891"; }
+.bi-house-lock-fill::before { content: "\\f892"; }
+.bi-house-lock::before { content: "\\f893"; }
+.bi-house-slash-fill::before { content: "\\f894"; }
+.bi-house-slash::before { content: "\\f895"; }
+.bi-house-up-fill::before { content: "\\f896"; }
+.bi-house-up::before { content: "\\f897"; }
+.bi-house-x-fill::before { content: "\\f898"; }
+.bi-house-x::before { content: "\\f899"; }
+.bi-person-add::before { content: "\\f89a"; }
+.bi-person-down::before { content: "\\f89b"; }
+.bi-person-exclamation::before { content: "\\f89c"; }
+.bi-person-fill-add::before { content: "\\f89d"; }
+.bi-person-fill-check::before { content: "\\f89e"; }
+.bi-person-fill-dash::before { content: "\\f89f"; }
+.bi-person-fill-down::before { content: "\\f8a0"; }
+.bi-person-fill-exclamation::before { content: "\\f8a1"; }
+.bi-person-fill-gear::before { content: "\\f8a2"; }
+.bi-person-fill-lock::before { content: "\\f8a3"; }
+.bi-person-fill-slash::before { content: "\\f8a4"; }
+.bi-person-fill-up::before { content: "\\f8a5"; }
+.bi-person-fill-x::before { content: "\\f8a6"; }
+.bi-person-gear::before { content: "\\f8a7"; }
+.bi-person-lock::before { content: "\\f8a8"; }
+.bi-person-slash::before { content: "\\f8a9"; }
+.bi-person-up::before { content: "\\f8aa"; }
+.bi-scooter::before { content: "\\f8ab"; }
+.bi-taxi-front-fill::before { content: "\\f8ac"; }
+.bi-taxi-front::before { content: "\\f8ad"; }
+.bi-amd::before { content: "\\f8ae"; }
+.bi-database-add::before { content: "\\f8af"; }
+.bi-database-check::before { content: "\\f8b0"; }
+.bi-database-dash::before { content: "\\f8b1"; }
+.bi-database-down::before { content: "\\f8b2"; }
+.bi-database-exclamation::before { content: "\\f8b3"; }
+.bi-database-fill-add::before { content: "\\f8b4"; }
+.bi-database-fill-check::before { content: "\\f8b5"; }
+.bi-database-fill-dash::before { content: "\\f8b6"; }
+.bi-database-fill-down::before { content: "\\f8b7"; }
+.bi-database-fill-exclamation::before { content: "\\f8b8"; }
+.bi-database-fill-gear::before { content: "\\f8b9"; }
+.bi-database-fill-lock::before { content: "\\f8ba"; }
+.bi-database-fill-slash::before { content: "\\f8bb"; }
+.bi-database-fill-up::before { content: "\\f8bc"; }
+.bi-database-fill-x::before { content: "\\f8bd"; }
+.bi-database-fill::before { content: "\\f8be"; }
+.bi-database-gear::before { content: "\\f8bf"; }
+.bi-database-lock::before { content: "\\f8c0"; }
+.bi-database-slash::before { content: "\\f8c1"; }
+.bi-database-up::before { content: "\\f8c2"; }
+.bi-database-x::before { content: "\\f8c3"; }
+.bi-database::before { content: "\\f8c4"; }
+.bi-houses-fill::before { content: "\\f8c5"; }
+.bi-houses::before { content: "\\f8c6"; }
+.bi-nvidia::before { content: "\\f8c7"; }
+.bi-person-vcard-fill::before { content: "\\f8c8"; }
+.bi-person-vcard::before { content: "\\f8c9"; }
+.bi-sina-weibo::before { content: "\\f8ca"; }
+.bi-tencent-qq::before { content: "\\f8cb"; }
+.bi-wikipedia::before { content: "\\f8cc"; }
+`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6826,7 +8807,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/*!\n * Bootstrap Icons v1.10.5 (https
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1368);
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
@@ -6837,7 +8818,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/*!\n * Bootstrap Icons v1.10.5 (https
 
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".flatpickr-calendar{background:transparent;opacity:0;display:none;text-align:center;visibility:hidden;padding:0;-webkit-animation:none;animation:none;direction:ltr;border:0;font-size:14px;line-height:24px;border-radius:5px;position:absolute;width:307.875px;-webkit-box-sizing:border-box;box-sizing:border-box;-ms-touch-action:manipulation;touch-action:manipulation;background:#fff;-webkit-box-shadow:1px 0 0 #e6e6e6,-1px 0 0 #e6e6e6,0 1px 0 #e6e6e6,0 -1px 0 #e6e6e6,0 3px 13px rgba(0,0,0,0.08);box-shadow:1px 0 0 #e6e6e6,-1px 0 0 #e6e6e6,0 1px 0 #e6e6e6,0 -1px 0 #e6e6e6,0 3px 13px rgba(0,0,0,0.08)}.flatpickr-calendar.open,.flatpickr-calendar.inline{opacity:1;max-height:640px;visibility:visible}.flatpickr-calendar.open{display:inline-block;z-index:99999}.flatpickr-calendar.animate.open{-webkit-animation:fpFadeInDown 300ms cubic-bezier(.23,1,.32,1);animation:fpFadeInDown 300ms cubic-bezier(.23,1,.32,1)}.flatpickr-calendar.inline{display:block;position:relative;top:2px}.flatpickr-calendar.static{position:absolute;top:calc(100% + 2px)}.flatpickr-calendar.static.open{z-index:999;display:block}.flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+1) .flatpickr-day.inRange:nth-child(7n+7){-webkit-box-shadow:none !important;box-shadow:none !important}.flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+2) .flatpickr-day.inRange:nth-child(7n+1){-webkit-box-shadow:-2px 0 0 #e6e6e6,5px 0 0 #e6e6e6;box-shadow:-2px 0 0 #e6e6e6,5px 0 0 #e6e6e6}.flatpickr-calendar .hasWeeks .dayContainer,.flatpickr-calendar .hasTime .dayContainer{border-bottom:0;border-bottom-right-radius:0;border-bottom-left-radius:0}.flatpickr-calendar .hasWeeks .dayContainer{border-left:0}.flatpickr-calendar.hasTime .flatpickr-time{height:40px;border-top:1px solid #e6e6e6}.flatpickr-calendar.noCalendar.hasTime .flatpickr-time{height:auto}.flatpickr-calendar:before,.flatpickr-calendar:after{position:absolute;display:block;pointer-events:none;border:solid transparent;content:'';height:0;width:0;left:22px}.flatpickr-calendar.rightMost:before,.flatpickr-calendar.arrowRight:before,.flatpickr-calendar.rightMost:after,.flatpickr-calendar.arrowRight:after{left:auto;right:22px}.flatpickr-calendar.arrowCenter:before,.flatpickr-calendar.arrowCenter:after{left:50%;right:50%}.flatpickr-calendar:before{border-width:5px;margin:0 -5px}.flatpickr-calendar:after{border-width:4px;margin:0 -4px}.flatpickr-calendar.arrowTop:before,.flatpickr-calendar.arrowTop:after{bottom:100%}.flatpickr-calendar.arrowTop:before{border-bottom-color:#e6e6e6}.flatpickr-calendar.arrowTop:after{border-bottom-color:#fff}.flatpickr-calendar.arrowBottom:before,.flatpickr-calendar.arrowBottom:after{top:100%}.flatpickr-calendar.arrowBottom:before{border-top-color:#e6e6e6}.flatpickr-calendar.arrowBottom:after{border-top-color:#fff}.flatpickr-calendar:focus{outline:0}.flatpickr-wrapper{position:relative;display:inline-block}.flatpickr-months{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.flatpickr-months .flatpickr-month{background:transparent;color:rgba(0,0,0,0.9);fill:rgba(0,0,0,0.9);height:34px;line-height:1;text-align:center;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.flatpickr-months .flatpickr-prev-month,.flatpickr-months .flatpickr-next-month{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none;cursor:pointer;position:absolute;top:0;height:34px;padding:10px;z-index:3;color:rgba(0,0,0,0.9);fill:rgba(0,0,0,0.9)}.flatpickr-months .flatpickr-prev-month.flatpickr-disabled,.flatpickr-months .flatpickr-next-month.flatpickr-disabled{display:none}.flatpickr-months .flatpickr-prev-month i,.flatpickr-months .flatpickr-next-month i{position:relative}.flatpickr-months .flatpickr-prev-month.flatpickr-prev-month,.flatpickr-months .flatpickr-next-month.flatpickr-prev-month{/*\n      /*rtl:begin:ignore*/left:0/*\n      /*rtl:end:ignore*/}/*\n      /*rtl:begin:ignore*/\n/*\n      /*rtl:end:ignore*/\n.flatpickr-months .flatpickr-prev-month.flatpickr-next-month,.flatpickr-months .flatpickr-next-month.flatpickr-next-month{/*\n      /*rtl:begin:ignore*/right:0/*\n      /*rtl:end:ignore*/}/*\n      /*rtl:begin:ignore*/\n/*\n      /*rtl:end:ignore*/\n.flatpickr-months .flatpickr-prev-month:hover,.flatpickr-months .flatpickr-next-month:hover{color:#959ea9}.flatpickr-months .flatpickr-prev-month:hover svg,.flatpickr-months .flatpickr-next-month:hover svg{fill:#f64747}.flatpickr-months .flatpickr-prev-month svg,.flatpickr-months .flatpickr-next-month svg{width:14px;height:14px}.flatpickr-months .flatpickr-prev-month svg path,.flatpickr-months .flatpickr-next-month svg path{-webkit-transition:fill .1s;transition:fill .1s;fill:inherit}.numInputWrapper{position:relative;height:auto}.numInputWrapper input,.numInputWrapper span{display:inline-block}.numInputWrapper input{width:100%}.numInputWrapper input::-ms-clear{display:none}.numInputWrapper input::-webkit-outer-spin-button,.numInputWrapper input::-webkit-inner-spin-button{margin:0;-webkit-appearance:none}.numInputWrapper span{position:absolute;right:0;width:14px;padding:0 4px 0 2px;height:50%;line-height:50%;opacity:0;cursor:pointer;border:1px solid rgba(57,57,57,0.15);-webkit-box-sizing:border-box;box-sizing:border-box}.numInputWrapper span:hover{background:rgba(0,0,0,0.1)}.numInputWrapper span:active{background:rgba(0,0,0,0.2)}.numInputWrapper span:after{display:block;content:\"\";position:absolute}.numInputWrapper span.arrowUp{top:0;border-bottom:0}.numInputWrapper span.arrowUp:after{border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:4px solid rgba(57,57,57,0.6);top:26%}.numInputWrapper span.arrowDown{top:50%}.numInputWrapper span.arrowDown:after{border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid rgba(57,57,57,0.6);top:40%}.numInputWrapper span svg{width:inherit;height:auto}.numInputWrapper span svg path{fill:rgba(0,0,0,0.5)}.numInputWrapper:hover{background:rgba(0,0,0,0.05)}.numInputWrapper:hover span{opacity:1}.flatpickr-current-month{font-size:135%;line-height:inherit;font-weight:300;color:inherit;position:absolute;width:75%;left:12.5%;padding:7.48px 0 0 0;line-height:1;height:34px;display:inline-block;text-align:center;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.flatpickr-current-month span.cur-month{font-family:inherit;font-weight:700;color:inherit;display:inline-block;margin-left:.5ch;padding:0}.flatpickr-current-month span.cur-month:hover{background:rgba(0,0,0,0.05)}.flatpickr-current-month .numInputWrapper{width:6ch;width:7ch\\0;display:inline-block}.flatpickr-current-month .numInputWrapper span.arrowUp:after{border-bottom-color:rgba(0,0,0,0.9)}.flatpickr-current-month .numInputWrapper span.arrowDown:after{border-top-color:rgba(0,0,0,0.9)}.flatpickr-current-month input.cur-year{background:transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:inherit;cursor:text;padding:0 0 0 .5ch;margin:0;display:inline-block;font-size:inherit;font-family:inherit;font-weight:300;line-height:inherit;height:auto;border:0;border-radius:0;vertical-align:initial;-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}.flatpickr-current-month input.cur-year:focus{outline:0}.flatpickr-current-month input.cur-year[disabled],.flatpickr-current-month input.cur-year[disabled]:hover{font-size:100%;color:rgba(0,0,0,0.5);background:transparent;pointer-events:none}.flatpickr-current-month .flatpickr-monthDropdown-months{appearance:menulist;background:transparent;border:none;border-radius:0;box-sizing:border-box;color:inherit;cursor:pointer;font-size:inherit;font-family:inherit;font-weight:300;height:auto;line-height:inherit;margin:-1px 0 0 0;outline:none;padding:0 0 0 .5ch;position:relative;vertical-align:initial;-webkit-box-sizing:border-box;-webkit-appearance:menulist;-moz-appearance:menulist;width:auto}.flatpickr-current-month .flatpickr-monthDropdown-months:focus,.flatpickr-current-month .flatpickr-monthDropdown-months:active{outline:none}.flatpickr-current-month .flatpickr-monthDropdown-months:hover{background:rgba(0,0,0,0.05)}.flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month{background-color:transparent;outline:none;padding:0}.flatpickr-weekdays{background:transparent;text-align:center;overflow:hidden;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:28px}.flatpickr-weekdays .flatpickr-weekdaycontainer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color:rgba(0,0,0,0.54);line-height:1;margin:0;text-align:center;display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;font-weight:bolder}.dayContainer,.flatpickr-weeks{padding:1px 0 0 0}.flatpickr-days{position:relative;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;width:307.875px}.flatpickr-days:focus{outline:0}.dayContainer{padding:0;outline:0;text-align:left;width:307.875px;min-width:307.875px;max-width:307.875px;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-wrap:wrap;-ms-flex-pack:justify;-webkit-justify-content:space-around;justify-content:space-around;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.dayContainer + .dayContainer{-webkit-box-shadow:-1px 0 0 #e6e6e6;box-shadow:-1px 0 0 #e6e6e6}.flatpickr-day{background:none;border:1px solid transparent;border-radius:150px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#393939;cursor:pointer;font-weight:400;width:14.2857143%;-webkit-flex-basis:14.2857143%;-ms-flex-preferred-size:14.2857143%;flex-basis:14.2857143%;max-width:39px;height:39px;line-height:39px;margin:0;display:inline-block;position:relative;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}.flatpickr-day.inRange,.flatpickr-day.prevMonthDay.inRange,.flatpickr-day.nextMonthDay.inRange,.flatpickr-day.today.inRange,.flatpickr-day.prevMonthDay.today.inRange,.flatpickr-day.nextMonthDay.today.inRange,.flatpickr-day:hover,.flatpickr-day.prevMonthDay:hover,.flatpickr-day.nextMonthDay:hover,.flatpickr-day:focus,.flatpickr-day.prevMonthDay:focus,.flatpickr-day.nextMonthDay:focus{cursor:pointer;outline:0;background:#e6e6e6;border-color:#e6e6e6}.flatpickr-day.today{border-color:#959ea9}.flatpickr-day.today:hover,.flatpickr-day.today:focus{border-color:#959ea9;background:#959ea9;color:#fff}.flatpickr-day.selected,.flatpickr-day.startRange,.flatpickr-day.endRange,.flatpickr-day.selected.inRange,.flatpickr-day.startRange.inRange,.flatpickr-day.endRange.inRange,.flatpickr-day.selected:focus,.flatpickr-day.startRange:focus,.flatpickr-day.endRange:focus,.flatpickr-day.selected:hover,.flatpickr-day.startRange:hover,.flatpickr-day.endRange:hover,.flatpickr-day.selected.prevMonthDay,.flatpickr-day.startRange.prevMonthDay,.flatpickr-day.endRange.prevMonthDay,.flatpickr-day.selected.nextMonthDay,.flatpickr-day.startRange.nextMonthDay,.flatpickr-day.endRange.nextMonthDay{background:#569ff7;-webkit-box-shadow:none;box-shadow:none;color:#fff;border-color:#569ff7}.flatpickr-day.selected.startRange,.flatpickr-day.startRange.startRange,.flatpickr-day.endRange.startRange{border-radius:50px 0 0 50px}.flatpickr-day.selected.endRange,.flatpickr-day.startRange.endRange,.flatpickr-day.endRange.endRange{border-radius:0 50px 50px 0}.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),.flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)){-webkit-box-shadow:-10px 0 0 #569ff7;box-shadow:-10px 0 0 #569ff7}.flatpickr-day.selected.startRange.endRange,.flatpickr-day.startRange.startRange.endRange,.flatpickr-day.endRange.startRange.endRange{border-radius:50px}.flatpickr-day.inRange{border-radius:0;-webkit-box-shadow:-5px 0 0 #e6e6e6,5px 0 0 #e6e6e6;box-shadow:-5px 0 0 #e6e6e6,5px 0 0 #e6e6e6}.flatpickr-day.flatpickr-disabled,.flatpickr-day.flatpickr-disabled:hover,.flatpickr-day.prevMonthDay,.flatpickr-day.nextMonthDay,.flatpickr-day.notAllowed,.flatpickr-day.notAllowed.prevMonthDay,.flatpickr-day.notAllowed.nextMonthDay{color:rgba(57,57,57,0.3);background:transparent;border-color:transparent;cursor:default}.flatpickr-day.flatpickr-disabled,.flatpickr-day.flatpickr-disabled:hover{cursor:not-allowed;color:rgba(57,57,57,0.1)}.flatpickr-day.week.selected{border-radius:0;-webkit-box-shadow:-5px 0 0 #569ff7,5px 0 0 #569ff7;box-shadow:-5px 0 0 #569ff7,5px 0 0 #569ff7}.flatpickr-day.hidden{visibility:hidden}.rangeMode .flatpickr-day{margin-top:1px}.flatpickr-weekwrapper{float:left}.flatpickr-weekwrapper .flatpickr-weeks{padding:0 12px;-webkit-box-shadow:1px 0 0 #e6e6e6;box-shadow:1px 0 0 #e6e6e6}.flatpickr-weekwrapper .flatpickr-weekday{float:none;width:100%;line-height:28px}.flatpickr-weekwrapper span.flatpickr-day,.flatpickr-weekwrapper span.flatpickr-day:hover{display:block;width:100%;max-width:none;color:rgba(57,57,57,0.3);background:transparent;cursor:default;border:none}.flatpickr-innerContainer{display:block;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.flatpickr-rContainer{display:inline-block;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}.flatpickr-time{text-align:center;outline:0;display:block;height:0;line-height:40px;max-height:40px;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.flatpickr-time:after{content:\"\";display:table;clear:both}.flatpickr-time .numInputWrapper{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;width:40%;height:40px;float:left}.flatpickr-time .numInputWrapper span.arrowUp:after{border-bottom-color:#393939}.flatpickr-time .numInputWrapper span.arrowDown:after{border-top-color:#393939}.flatpickr-time.hasSeconds .numInputWrapper{width:26%}.flatpickr-time.time24hr .numInputWrapper{width:49%}.flatpickr-time input{background:transparent;-webkit-box-shadow:none;box-shadow:none;border:0;border-radius:0;text-align:center;margin:0;padding:0;height:inherit;line-height:inherit;color:#393939;font-size:14px;position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}.flatpickr-time input.flatpickr-hour{font-weight:bold}.flatpickr-time input.flatpickr-minute,.flatpickr-time input.flatpickr-second{font-weight:400}.flatpickr-time input:focus{outline:0;border:0}.flatpickr-time .flatpickr-time-separator,.flatpickr-time .flatpickr-am-pm{height:inherit;float:left;line-height:inherit;color:#393939;font-weight:bold;width:2%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center}.flatpickr-time .flatpickr-am-pm{outline:0;width:18%;cursor:pointer;text-align:center;font-weight:400}.flatpickr-time input:hover,.flatpickr-time .flatpickr-am-pm:hover,.flatpickr-time input:focus,.flatpickr-time .flatpickr-am-pm:focus{background:#eee}.flatpickr-input[readonly]{cursor:pointer}@-webkit-keyframes fpFadeInDown{from{opacity:0;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes fpFadeInDown{from{opacity:0;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `.flatpickr-calendar{background:transparent;opacity:0;display:none;text-align:center;visibility:hidden;padding:0;-webkit-animation:none;animation:none;direction:ltr;border:0;font-size:14px;line-height:24px;border-radius:5px;position:absolute;width:307.875px;-webkit-box-sizing:border-box;box-sizing:border-box;-ms-touch-action:manipulation;touch-action:manipulation;background:#fff;-webkit-box-shadow:1px 0 0 #e6e6e6,-1px 0 0 #e6e6e6,0 1px 0 #e6e6e6,0 -1px 0 #e6e6e6,0 3px 13px rgba(0,0,0,0.08);box-shadow:1px 0 0 #e6e6e6,-1px 0 0 #e6e6e6,0 1px 0 #e6e6e6,0 -1px 0 #e6e6e6,0 3px 13px rgba(0,0,0,0.08)}.flatpickr-calendar.open,.flatpickr-calendar.inline{opacity:1;max-height:640px;visibility:visible}.flatpickr-calendar.open{display:inline-block;z-index:99999}.flatpickr-calendar.animate.open{-webkit-animation:fpFadeInDown 300ms cubic-bezier(.23,1,.32,1);animation:fpFadeInDown 300ms cubic-bezier(.23,1,.32,1)}.flatpickr-calendar.inline{display:block;position:relative;top:2px}.flatpickr-calendar.static{position:absolute;top:calc(100% + 2px)}.flatpickr-calendar.static.open{z-index:999;display:block}.flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+1) .flatpickr-day.inRange:nth-child(7n+7){-webkit-box-shadow:none !important;box-shadow:none !important}.flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+2) .flatpickr-day.inRange:nth-child(7n+1){-webkit-box-shadow:-2px 0 0 #e6e6e6,5px 0 0 #e6e6e6;box-shadow:-2px 0 0 #e6e6e6,5px 0 0 #e6e6e6}.flatpickr-calendar .hasWeeks .dayContainer,.flatpickr-calendar .hasTime .dayContainer{border-bottom:0;border-bottom-right-radius:0;border-bottom-left-radius:0}.flatpickr-calendar .hasWeeks .dayContainer{border-left:0}.flatpickr-calendar.hasTime .flatpickr-time{height:40px;border-top:1px solid #e6e6e6}.flatpickr-calendar.noCalendar.hasTime .flatpickr-time{height:auto}.flatpickr-calendar:before,.flatpickr-calendar:after{position:absolute;display:block;pointer-events:none;border:solid transparent;content:'';height:0;width:0;left:22px}.flatpickr-calendar.rightMost:before,.flatpickr-calendar.arrowRight:before,.flatpickr-calendar.rightMost:after,.flatpickr-calendar.arrowRight:after{left:auto;right:22px}.flatpickr-calendar.arrowCenter:before,.flatpickr-calendar.arrowCenter:after{left:50%;right:50%}.flatpickr-calendar:before{border-width:5px;margin:0 -5px}.flatpickr-calendar:after{border-width:4px;margin:0 -4px}.flatpickr-calendar.arrowTop:before,.flatpickr-calendar.arrowTop:after{bottom:100%}.flatpickr-calendar.arrowTop:before{border-bottom-color:#e6e6e6}.flatpickr-calendar.arrowTop:after{border-bottom-color:#fff}.flatpickr-calendar.arrowBottom:before,.flatpickr-calendar.arrowBottom:after{top:100%}.flatpickr-calendar.arrowBottom:before{border-top-color:#e6e6e6}.flatpickr-calendar.arrowBottom:after{border-top-color:#fff}.flatpickr-calendar:focus{outline:0}.flatpickr-wrapper{position:relative;display:inline-block}.flatpickr-months{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.flatpickr-months .flatpickr-month{background:transparent;color:rgba(0,0,0,0.9);fill:rgba(0,0,0,0.9);height:34px;line-height:1;text-align:center;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.flatpickr-months .flatpickr-prev-month,.flatpickr-months .flatpickr-next-month{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none;cursor:pointer;position:absolute;top:0;height:34px;padding:10px;z-index:3;color:rgba(0,0,0,0.9);fill:rgba(0,0,0,0.9)}.flatpickr-months .flatpickr-prev-month.flatpickr-disabled,.flatpickr-months .flatpickr-next-month.flatpickr-disabled{display:none}.flatpickr-months .flatpickr-prev-month i,.flatpickr-months .flatpickr-next-month i{position:relative}.flatpickr-months .flatpickr-prev-month.flatpickr-prev-month,.flatpickr-months .flatpickr-next-month.flatpickr-prev-month{/*
+      /*rtl:begin:ignore*/left:0/*
+      /*rtl:end:ignore*/}/*
+      /*rtl:begin:ignore*/
+/*
+      /*rtl:end:ignore*/
+.flatpickr-months .flatpickr-prev-month.flatpickr-next-month,.flatpickr-months .flatpickr-next-month.flatpickr-next-month{/*
+      /*rtl:begin:ignore*/right:0/*
+      /*rtl:end:ignore*/}/*
+      /*rtl:begin:ignore*/
+/*
+      /*rtl:end:ignore*/
+.flatpickr-months .flatpickr-prev-month:hover,.flatpickr-months .flatpickr-next-month:hover{color:#959ea9}.flatpickr-months .flatpickr-prev-month:hover svg,.flatpickr-months .flatpickr-next-month:hover svg{fill:#f64747}.flatpickr-months .flatpickr-prev-month svg,.flatpickr-months .flatpickr-next-month svg{width:14px;height:14px}.flatpickr-months .flatpickr-prev-month svg path,.flatpickr-months .flatpickr-next-month svg path{-webkit-transition:fill .1s;transition:fill .1s;fill:inherit}.numInputWrapper{position:relative;height:auto}.numInputWrapper input,.numInputWrapper span{display:inline-block}.numInputWrapper input{width:100%}.numInputWrapper input::-ms-clear{display:none}.numInputWrapper input::-webkit-outer-spin-button,.numInputWrapper input::-webkit-inner-spin-button{margin:0;-webkit-appearance:none}.numInputWrapper span{position:absolute;right:0;width:14px;padding:0 4px 0 2px;height:50%;line-height:50%;opacity:0;cursor:pointer;border:1px solid rgba(57,57,57,0.15);-webkit-box-sizing:border-box;box-sizing:border-box}.numInputWrapper span:hover{background:rgba(0,0,0,0.1)}.numInputWrapper span:active{background:rgba(0,0,0,0.2)}.numInputWrapper span:after{display:block;content:"";position:absolute}.numInputWrapper span.arrowUp{top:0;border-bottom:0}.numInputWrapper span.arrowUp:after{border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:4px solid rgba(57,57,57,0.6);top:26%}.numInputWrapper span.arrowDown{top:50%}.numInputWrapper span.arrowDown:after{border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid rgba(57,57,57,0.6);top:40%}.numInputWrapper span svg{width:inherit;height:auto}.numInputWrapper span svg path{fill:rgba(0,0,0,0.5)}.numInputWrapper:hover{background:rgba(0,0,0,0.05)}.numInputWrapper:hover span{opacity:1}.flatpickr-current-month{font-size:135%;line-height:inherit;font-weight:300;color:inherit;position:absolute;width:75%;left:12.5%;padding:7.48px 0 0 0;line-height:1;height:34px;display:inline-block;text-align:center;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.flatpickr-current-month span.cur-month{font-family:inherit;font-weight:700;color:inherit;display:inline-block;margin-left:.5ch;padding:0}.flatpickr-current-month span.cur-month:hover{background:rgba(0,0,0,0.05)}.flatpickr-current-month .numInputWrapper{width:6ch;width:7ch\\0;display:inline-block}.flatpickr-current-month .numInputWrapper span.arrowUp:after{border-bottom-color:rgba(0,0,0,0.9)}.flatpickr-current-month .numInputWrapper span.arrowDown:after{border-top-color:rgba(0,0,0,0.9)}.flatpickr-current-month input.cur-year{background:transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:inherit;cursor:text;padding:0 0 0 .5ch;margin:0;display:inline-block;font-size:inherit;font-family:inherit;font-weight:300;line-height:inherit;height:auto;border:0;border-radius:0;vertical-align:initial;-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}.flatpickr-current-month input.cur-year:focus{outline:0}.flatpickr-current-month input.cur-year[disabled],.flatpickr-current-month input.cur-year[disabled]:hover{font-size:100%;color:rgba(0,0,0,0.5);background:transparent;pointer-events:none}.flatpickr-current-month .flatpickr-monthDropdown-months{appearance:menulist;background:transparent;border:none;border-radius:0;box-sizing:border-box;color:inherit;cursor:pointer;font-size:inherit;font-family:inherit;font-weight:300;height:auto;line-height:inherit;margin:-1px 0 0 0;outline:none;padding:0 0 0 .5ch;position:relative;vertical-align:initial;-webkit-box-sizing:border-box;-webkit-appearance:menulist;-moz-appearance:menulist;width:auto}.flatpickr-current-month .flatpickr-monthDropdown-months:focus,.flatpickr-current-month .flatpickr-monthDropdown-months:active{outline:none}.flatpickr-current-month .flatpickr-monthDropdown-months:hover{background:rgba(0,0,0,0.05)}.flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month{background-color:transparent;outline:none;padding:0}.flatpickr-weekdays{background:transparent;text-align:center;overflow:hidden;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:28px}.flatpickr-weekdays .flatpickr-weekdaycontainer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color:rgba(0,0,0,0.54);line-height:1;margin:0;text-align:center;display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;font-weight:bolder}.dayContainer,.flatpickr-weeks{padding:1px 0 0 0}.flatpickr-days{position:relative;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;width:307.875px}.flatpickr-days:focus{outline:0}.dayContainer{padding:0;outline:0;text-align:left;width:307.875px;min-width:307.875px;max-width:307.875px;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-wrap:wrap;-ms-flex-pack:justify;-webkit-justify-content:space-around;justify-content:space-around;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.dayContainer + .dayContainer{-webkit-box-shadow:-1px 0 0 #e6e6e6;box-shadow:-1px 0 0 #e6e6e6}.flatpickr-day{background:none;border:1px solid transparent;border-radius:150px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#393939;cursor:pointer;font-weight:400;width:14.2857143%;-webkit-flex-basis:14.2857143%;-ms-flex-preferred-size:14.2857143%;flex-basis:14.2857143%;max-width:39px;height:39px;line-height:39px;margin:0;display:inline-block;position:relative;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}.flatpickr-day.inRange,.flatpickr-day.prevMonthDay.inRange,.flatpickr-day.nextMonthDay.inRange,.flatpickr-day.today.inRange,.flatpickr-day.prevMonthDay.today.inRange,.flatpickr-day.nextMonthDay.today.inRange,.flatpickr-day:hover,.flatpickr-day.prevMonthDay:hover,.flatpickr-day.nextMonthDay:hover,.flatpickr-day:focus,.flatpickr-day.prevMonthDay:focus,.flatpickr-day.nextMonthDay:focus{cursor:pointer;outline:0;background:#e6e6e6;border-color:#e6e6e6}.flatpickr-day.today{border-color:#959ea9}.flatpickr-day.today:hover,.flatpickr-day.today:focus{border-color:#959ea9;background:#959ea9;color:#fff}.flatpickr-day.selected,.flatpickr-day.startRange,.flatpickr-day.endRange,.flatpickr-day.selected.inRange,.flatpickr-day.startRange.inRange,.flatpickr-day.endRange.inRange,.flatpickr-day.selected:focus,.flatpickr-day.startRange:focus,.flatpickr-day.endRange:focus,.flatpickr-day.selected:hover,.flatpickr-day.startRange:hover,.flatpickr-day.endRange:hover,.flatpickr-day.selected.prevMonthDay,.flatpickr-day.startRange.prevMonthDay,.flatpickr-day.endRange.prevMonthDay,.flatpickr-day.selected.nextMonthDay,.flatpickr-day.startRange.nextMonthDay,.flatpickr-day.endRange.nextMonthDay{background:#569ff7;-webkit-box-shadow:none;box-shadow:none;color:#fff;border-color:#569ff7}.flatpickr-day.selected.startRange,.flatpickr-day.startRange.startRange,.flatpickr-day.endRange.startRange{border-radius:50px 0 0 50px}.flatpickr-day.selected.endRange,.flatpickr-day.startRange.endRange,.flatpickr-day.endRange.endRange{border-radius:0 50px 50px 0}.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),.flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)){-webkit-box-shadow:-10px 0 0 #569ff7;box-shadow:-10px 0 0 #569ff7}.flatpickr-day.selected.startRange.endRange,.flatpickr-day.startRange.startRange.endRange,.flatpickr-day.endRange.startRange.endRange{border-radius:50px}.flatpickr-day.inRange{border-radius:0;-webkit-box-shadow:-5px 0 0 #e6e6e6,5px 0 0 #e6e6e6;box-shadow:-5px 0 0 #e6e6e6,5px 0 0 #e6e6e6}.flatpickr-day.flatpickr-disabled,.flatpickr-day.flatpickr-disabled:hover,.flatpickr-day.prevMonthDay,.flatpickr-day.nextMonthDay,.flatpickr-day.notAllowed,.flatpickr-day.notAllowed.prevMonthDay,.flatpickr-day.notAllowed.nextMonthDay{color:rgba(57,57,57,0.3);background:transparent;border-color:transparent;cursor:default}.flatpickr-day.flatpickr-disabled,.flatpickr-day.flatpickr-disabled:hover{cursor:not-allowed;color:rgba(57,57,57,0.1)}.flatpickr-day.week.selected{border-radius:0;-webkit-box-shadow:-5px 0 0 #569ff7,5px 0 0 #569ff7;box-shadow:-5px 0 0 #569ff7,5px 0 0 #569ff7}.flatpickr-day.hidden{visibility:hidden}.rangeMode .flatpickr-day{margin-top:1px}.flatpickr-weekwrapper{float:left}.flatpickr-weekwrapper .flatpickr-weeks{padding:0 12px;-webkit-box-shadow:1px 0 0 #e6e6e6;box-shadow:1px 0 0 #e6e6e6}.flatpickr-weekwrapper .flatpickr-weekday{float:none;width:100%;line-height:28px}.flatpickr-weekwrapper span.flatpickr-day,.flatpickr-weekwrapper span.flatpickr-day:hover{display:block;width:100%;max-width:none;color:rgba(57,57,57,0.3);background:transparent;cursor:default;border:none}.flatpickr-innerContainer{display:block;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.flatpickr-rContainer{display:inline-block;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}.flatpickr-time{text-align:center;outline:0;display:block;height:0;line-height:40px;max-height:40px;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.flatpickr-time:after{content:"";display:table;clear:both}.flatpickr-time .numInputWrapper{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;width:40%;height:40px;float:left}.flatpickr-time .numInputWrapper span.arrowUp:after{border-bottom-color:#393939}.flatpickr-time .numInputWrapper span.arrowDown:after{border-top-color:#393939}.flatpickr-time.hasSeconds .numInputWrapper{width:26%}.flatpickr-time.time24hr .numInputWrapper{width:49%}.flatpickr-time input{background:transparent;-webkit-box-shadow:none;box-shadow:none;border:0;border-radius:0;text-align:center;margin:0;padding:0;height:inherit;line-height:inherit;color:#393939;font-size:14px;position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}.flatpickr-time input.flatpickr-hour{font-weight:bold}.flatpickr-time input.flatpickr-minute,.flatpickr-time input.flatpickr-second{font-weight:400}.flatpickr-time input:focus{outline:0;border:0}.flatpickr-time .flatpickr-time-separator,.flatpickr-time .flatpickr-am-pm{height:inherit;float:left;line-height:inherit;color:#393939;font-weight:bold;width:2%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center}.flatpickr-time .flatpickr-am-pm{outline:0;width:18%;cursor:pointer;text-align:center;font-weight:400}.flatpickr-time input:hover,.flatpickr-time .flatpickr-am-pm:hover,.flatpickr-time input:focus,.flatpickr-time .flatpickr-am-pm:focus{background:#eee}.flatpickr-input[readonly]{cursor:pointer}@-webkit-keyframes fpFadeInDown{from{opacity:0;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes fpFadeInDown{from{opacity:0;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6849,7 +8842,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".flatpickr-calendar{background:transpa
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1368);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
@@ -6907,7 +8900,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_19___ = _node_modules_css_loader_dist_runtime_
 var ___CSS_LOADER_URL_REPLACEMENT_20___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_17___);
 var ___CSS_LOADER_URL_REPLACEMENT_21___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_18___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face{font-family:\"Open Sans\";font-weight:normal;font-style:normal;src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");src:local(\"Open Sans\"),local(\"OpenSans\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"embedded-opentype\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"woff\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"svg\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ") format(\"truetype\")}@font-face{font-family:\"Open Sans Light\";font-weight:normal;font-style:normal;src:url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + ");src:local(\"Open Sans Light\"),local(\"OpenSans Light\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ") format(\"embedded-opentype\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_8___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_9___ + ") format(\"woff\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_10___ + ") format(\"svg\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_11___ + ") format(\"truetype\")}@font-face{font-family:\"ami\";font-weight:normal;font-style:normal;src:url(" + ___CSS_LOADER_URL_REPLACEMENT_12___ + ");src:url(" + ___CSS_LOADER_URL_REPLACEMENT_13___ + ") format(\"embedded-opentype\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_14___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_15___ + ") format(\"woff\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_16___ + ") format(\"svg\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_17___ + ") format(\"truetype\")}@font-face{font-family:\"Trochut\";font-weight:normal;font-style:normal;src:url(" + ___CSS_LOADER_URL_REPLACEMENT_18___ + ") format(\"truetype\")}a{text-decoration:none}h1,h2,h3,h4,h5,h6{font-family:\"Open Sans Light\",\"Open Sans\"}pre{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_19___ + ");border:1px solid #ced4da;border-radius:.2rem;padding:.5rem}.bi-lpsc:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-cern:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-ami:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-rucio:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-node-red:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-arrow-down-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-arrow-right-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-arrow-left-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-arrow-up-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-key:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-leaf:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-flask:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.bi-slack:before{font-family:ami !important;vertical-align:0 !important;content:\"\"}.w-lg-25{width:100%}.w-lg-50{width:100%}.w-lg-75{width:100%}@media screen and (min-width: 992px){.w-lg-25{width:25%}.w-lg-50{width:50%}.w-lg-75{width:75%}}.bg-light{background:rgba(0,0,0,.03) url(" + ___CSS_LOADER_URL_REPLACEMENT_20___ + ")}.bg-light2{background:rgba(0,0,0,.03) url(" + ___CSS_LOADER_URL_REPLACEMENT_21___ + ")}.breadcrumb{background:rgba(0,0,0,.03) url(" + ___CSS_LOADER_URL_REPLACEMENT_21___ + ");border-radius:.125rem;padding:.25rem .5rem}.card-header{background:rgba(0,0,0,.03) url(" + ___CSS_LOADER_URL_REPLACEMENT_21___ + ")}.card-footer{background:rgba(0,0,0,.03) url(" + ___CSS_LOADER_URL_REPLACEMENT_21___ + ")}.modal-header{background:#f5f5f5 url(" + ___CSS_LOADER_URL_REPLACEMENT_20___ + ");border-radius:.25rem .25rem 0 0}.modal-footer{background:#f5f5f5 url(" + ___CSS_LOADER_URL_REPLACEMENT_21___ + ");border-radius:0 0 .25rem .25rem}.navbar-nav .dropdown-menu{padding:.3rem 0rem}.navbar-nav .dropdown-divider{margin:.2rem 0rem}.navbar-nav .dropdown-item{padding:.2rem 1rem}@media(min-width: 768px){.navbar-nav>li>.dropdown-menu::before{border-bottom:7px solid rgba(0,0,0,.2);border-left:7px solid rgba(0,0,0,0);border-right:7px solid rgba(0,0,0,0);content:\"\";display:inline-block;left:9px;position:absolute;top:-7px}.navbar-nav>li>.dropdown-menu::after{border-bottom:6px solid #fff;border-left:6px solid rgba(0,0,0,0);border-right:6px solid rgba(0,0,0,0);content:\"\";display:inline-block;left:10px;position:absolute;top:-6px}.navbar-nav.navbar-right>li>.dropdown-menu::before{left:auto;right:12px}.navbar-nav.navbar-right>li>.dropdown-menu::after{left:auto;right:13px}}.nav-tabs .nav-link{background:none}.form-label{margin-bottom:.125rem}#jsdoc_content{text-align:justify}#jsdoc_content dl.details{border-left:2px solid #ccc;margin-top:.5rem}#jsdoc_content dl.details dt{padding-left:.5rem}#jsdoc_content dl.details dd{padding-left:1.5rem}#jsdoc_content .signature-name{color:#007bff;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params{color:#000;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{color:#aaa;font-size:calc(1*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-attrs{color:#aaa;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{font-style:italic;margin-left:2px}#ami_alert_content{position:absolute;z-index:99999999;top:8px;right:8px}.ami-code{text-align:left}.ami-code,.ami-code code{white-space:pre-wrap;word-break:break-all}.form-editor-done{opacity:0;pointer-events:none;position:fixed;z-index:-9999;top:0;left:0;height:0;width:0}.select2-container--default{width:100% !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--multiple,.select2-container--default .select2-selection--multiple .select2-selection__choice{border:1px solid #ced4da !important;border-radius:.2rem !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .75rem + 2px) !important}.select2-container--default .select2-selection--single{padding:calc((1.5em + .75rem)/2 - 14px) .25rem !important}.form-control-sm~.select2-container--default .select2-selection--single,.form-control-sm~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-sm .select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .5rem + 2px) !important}.form-control-sm~.select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single{padding:calc((1.5em + .5rem)/2 - 14px) 0rem !important}.form-control-lg~.select2-container--default .select2-selection--single,.form-control-lg~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-lg .select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + 1rem + 2px) !important}.form-control-lg~.select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single{padding:calc((1.5em + 1rem)/2 - 14px) .5rem !important}input.form-datetime,input.form-date,input.form-time,input.form-time-hm{background-color:#fff !important}.flatpickr-calendar .dayContainer{padding-bottom:2px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Open Sans";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_0___});src:local("Open Sans"),local("OpenSans"),url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_2___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_3___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_4___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_5___}) format("truetype")}@font-face{font-family:"Open Sans Light";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_6___});src:local("Open Sans Light"),local("OpenSans Light"),url(${___CSS_LOADER_URL_REPLACEMENT_7___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_8___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_9___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_10___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_11___}) format("truetype")}@font-face{font-family:"ami";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_12___});src:url(${___CSS_LOADER_URL_REPLACEMENT_13___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_14___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_15___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_16___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_17___}) format("truetype")}@font-face{font-family:"Trochut";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_18___}) format("truetype")}a{text-decoration:none}h1,h2,h3,h4,h5,h6{font-family:"Open Sans Light","Open Sans"}pre{background-image:url(${___CSS_LOADER_URL_REPLACEMENT_19___});border:1px solid #ced4da;border-radius:.2rem;padding:.5rem}.bi-lpsc:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-cern:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-ami:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-rucio:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-node-red:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-down-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-right-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-left-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-up-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-key:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-leaf:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-flask:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-slack:before{font-family:ami !important;vertical-align:0 !important;content:""}.w-lg-25{width:100%}.w-lg-50{width:100%}.w-lg-75{width:100%}@media screen and (min-width: 992px){.w-lg-25{width:25%}.w-lg-50{width:50%}.w-lg-75{width:75%}}.bg-light{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_20___})}.bg-light2{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}.breadcrumb{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___});border-radius:.125rem;padding:.25rem .5rem}.card-header{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}.card-footer{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}.modal-header{background:#f5f5f5 url(${___CSS_LOADER_URL_REPLACEMENT_20___});border-radius:.25rem .25rem 0 0}.modal-footer{background:#f5f5f5 url(${___CSS_LOADER_URL_REPLACEMENT_21___});border-radius:0 0 .25rem .25rem}.navbar-nav .dropdown-menu{padding:.3rem 0rem}.navbar-nav .dropdown-divider{margin:.2rem 0rem}.navbar-nav .dropdown-item{padding:.2rem 1rem}@media(min-width: 768px){.navbar-nav>li>.dropdown-menu::before{border-bottom:7px solid rgba(0,0,0,.2);border-left:7px solid rgba(0,0,0,0);border-right:7px solid rgba(0,0,0,0);content:"";display:inline-block;left:9px;position:absolute;top:-7px}.navbar-nav>li>.dropdown-menu::after{border-bottom:6px solid #fff;border-left:6px solid rgba(0,0,0,0);border-right:6px solid rgba(0,0,0,0);content:"";display:inline-block;left:10px;position:absolute;top:-6px}.navbar-nav.navbar-right>li>.dropdown-menu::before{left:auto;right:12px}.navbar-nav.navbar-right>li>.dropdown-menu::after{left:auto;right:13px}}.nav-tabs .nav-link{background:none}.form-label{margin-bottom:.125rem}#jsdoc_content{text-align:justify}#jsdoc_content dl.details{border-left:2px solid #ccc;margin-top:.5rem}#jsdoc_content dl.details dt{padding-left:.5rem}#jsdoc_content dl.details dd{padding-left:1.5rem}#jsdoc_content .signature-name{color:#007bff;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params{color:#000;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{color:#aaa;font-size:calc(1*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-attrs{color:#aaa;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{font-style:italic;margin-left:2px}#ami_alert_content{position:absolute;z-index:99999999;top:8px;right:8px}.ami-code{text-align:left}.ami-code,.ami-code code{white-space:pre-wrap;word-break:break-all}.form-editor-done{opacity:0;pointer-events:none;position:fixed;z-index:-9999;top:0;left:0;height:0;width:0}.select2-container--default{width:100% !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--multiple,.select2-container--default .select2-selection--multiple .select2-selection__choice{border:1px solid #ced4da !important;border-radius:.2rem !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .75rem + 2px) !important}.select2-container--default .select2-selection--single{padding:calc((1.5em + .75rem)/2 - 14px) .25rem !important}.form-control-sm~.select2-container--default .select2-selection--single,.form-control-sm~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-sm .select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .5rem + 2px) !important}.form-control-sm~.select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single{padding:calc((1.5em + .5rem)/2 - 14px) 0rem !important}.form-control-lg~.select2-container--default .select2-selection--single,.form-control-lg~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-lg .select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + 1rem + 2px) !important}.form-control-lg~.select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single{padding:calc((1.5em + 1rem)/2 - 14px) .5rem !important}input.form-datetime,input.form-date,input.form-time,input.form-time-hm{background-color:#fff !important}.flatpickr-calendar .dayContainer{padding-bottom:2px}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6961,7 +8954,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.locals : undefined);
 
 
 /***/ }),
@@ -7406,9 +9399,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "json": () => (/* binding */ json),
-  "jsonLanguage": () => (/* binding */ jsonLanguage),
-  "jsonParseLinter": () => (/* binding */ jsonParseLinter)
+  json: () => (/* binding */ json),
+  jsonLanguage: () => (/* binding */ jsonLanguage),
+  jsonParseLinter: () => (/* binding */ jsonParseLinter)
 });
 
 // EXTERNAL MODULE: ./node_modules/@lezer/lr/dist/index.js
@@ -7419,16 +9412,16 @@ var highlight_dist = __webpack_require__(3740);
 
 
 const jsonHighlighting = (0,highlight_dist/* styleTags */.Gv)({
-  String: highlight_dist/* tags.string */.pJ.string,
-  Number: highlight_dist/* tags.number */.pJ.number,
-  "True False": highlight_dist/* tags.bool */.pJ.bool,
-  PropertyName: highlight_dist/* tags.propertyName */.pJ.propertyName,
-  Null: highlight_dist/* tags.null */.pJ["null"],
-  ",": highlight_dist/* tags.separator */.pJ.separator,
-  "[ ]": highlight_dist/* tags.squareBracket */.pJ.squareBracket,
-  "{ }": highlight_dist/* tags.brace */.pJ.brace
+  String: highlight_dist/* tags */.pJ.string,
+  Number: highlight_dist/* tags */.pJ.number,
+  "True False": highlight_dist/* tags */.pJ.bool,
+  PropertyName: highlight_dist/* tags */.pJ.propertyName,
+  Null: highlight_dist/* tags */.pJ.null,
+  ",": highlight_dist/* tags */.pJ.separator,
+  "[ ]": highlight_dist/* tags */.pJ.squareBracket,
+  "{ }": highlight_dist/* tags */.pJ.brace
 });
-const parser = dist/* LRParser.deserialize */.WQ.deserialize({
+const parser = dist/* LRParser */.WQ.deserialize({
   version: 14,
   states: "$bOVQPOOOOQO'#Cb'#CbOnQPO'#CeOvQPO'#CjOOQO'#Cp'#CpQOQPOOOOQO'#Cg'#CgO}QPO'#CfO!SQPO'#CrOOQO,59P,59PO![QPO,59PO!aQPO'#CuOOQO,59U,59UO!iQPO,59UOVQPO,59QOqQPO'#CkO!nQPO,59^OOQO1G.k1G.kOVQPO'#ClO!vQPO,59aOOQO1G.p1G.pOOQO1G.l1G.lOOQO,59V,59VOOQO-E6i-E6iOOQO,59W,59WOOQO-E6j-E6j",
   stateData: "#O~OcOS~OQSORSOSSOTSOWQO]ROePO~OVXOeUO~O[[O~PVOg^O~Oh_OVfX~OVaO~OhbO[iX~O[dO~Oh_OVfa~OhbO[ia~O",
@@ -7473,17 +9466,17 @@ function getErrorPosition(error, doc) {
   if (m = error.message.match(/at line (\d+) column (\d+)/)) return Math.min(doc.line(+m[1]).from + +m[2] - 1, doc.length);
   return 0;
 }
-const jsonLanguage = language_dist/* LRLanguage.define */.qp.define({
+const jsonLanguage = language_dist/* LRLanguage */.qp.define({
   name: "json",
   parser: parser.configure({
-    props: [language_dist/* indentNodeProp.add */.uj.add({
+    props: [language_dist/* indentNodeProp */.uj.add({
       Object: (0,language_dist/* continuedIndent */.tC)({
         except: /^\s*\}/
       }),
       Array: (0,language_dist/* continuedIndent */.tC)({
         except: /^\s*\]/
       })
-    }), language_dist/* foldNodeProp.add */.x0.add({
+    }), language_dist/* foldNodeProp */.x0.add({
       "Object Array": language_dist/* foldInside */.Dv
     })]
   }),
@@ -7506,35 +9499,35 @@ function json() {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Be": () => (/* binding */ ParseContext),
-/* harmony export */   "Dv": () => (/* binding */ foldInside),
-/* harmony export */   "Gn": () => (/* binding */ IndentContext),
-/* harmony export */   "K0": () => (/* binding */ getIndentation),
-/* harmony export */   "KC": () => (/* binding */ sublanguageProp),
-/* harmony export */   "R_": () => (/* binding */ defaultHighlightStyle),
-/* harmony export */   "SQ": () => (/* binding */ Language),
-/* harmony export */   "SS": () => (/* binding */ indentString),
-/* harmony export */   "Um": () => (/* binding */ matchBrackets),
-/* harmony export */   "a0": () => (/* binding */ bracketMatchingHandle),
-/* harmony export */   "c": () => (/* binding */ indentUnit),
-/* harmony export */   "c6": () => (/* binding */ LanguageDescription),
-/* harmony export */   "il": () => (/* binding */ StreamLanguage),
-/* harmony export */   "kU": () => (/* binding */ defineLanguageFacet),
-/* harmony export */   "mi": () => (/* binding */ foldGutter),
-/* harmony export */   "nF": () => (/* binding */ syntaxHighlighting),
-/* harmony export */   "pp": () => (/* binding */ languageDataProp),
-/* harmony export */   "qp": () => (/* binding */ LRLanguage),
-/* harmony export */   "qz": () => (/* binding */ syntaxTree),
-/* harmony export */   "ri": () => (/* binding */ LanguageSupport),
-/* harmony export */   "rs": () => (/* binding */ foldService),
-/* harmony export */   "tC": () => (/* binding */ continuedIndent),
-/* harmony export */   "uj": () => (/* binding */ indentNodeProp),
-/* harmony export */   "vw": () => (/* binding */ delimitedIndent),
-/* harmony export */   "x0": () => (/* binding */ foldNodeProp),
-/* harmony export */   "y1": () => (/* binding */ getIndentUnit),
-/* harmony export */   "ze": () => (/* binding */ flatIndent)
+/* harmony export */   Be: () => (/* binding */ ParseContext),
+/* harmony export */   Dv: () => (/* binding */ foldInside),
+/* harmony export */   Gn: () => (/* binding */ IndentContext),
+/* harmony export */   K0: () => (/* binding */ getIndentation),
+/* harmony export */   KC: () => (/* binding */ sublanguageProp),
+/* harmony export */   R_: () => (/* binding */ defaultHighlightStyle),
+/* harmony export */   SQ: () => (/* binding */ Language),
+/* harmony export */   SS: () => (/* binding */ indentString),
+/* harmony export */   Um: () => (/* binding */ matchBrackets),
+/* harmony export */   a0: () => (/* binding */ bracketMatchingHandle),
+/* harmony export */   c: () => (/* binding */ indentUnit),
+/* harmony export */   c6: () => (/* binding */ LanguageDescription),
+/* harmony export */   il: () => (/* binding */ StreamLanguage),
+/* harmony export */   kU: () => (/* binding */ defineLanguageFacet),
+/* harmony export */   mi: () => (/* binding */ foldGutter),
+/* harmony export */   nF: () => (/* binding */ syntaxHighlighting),
+/* harmony export */   pp: () => (/* binding */ languageDataProp),
+/* harmony export */   qp: () => (/* binding */ LRLanguage),
+/* harmony export */   qz: () => (/* binding */ syntaxTree),
+/* harmony export */   ri: () => (/* binding */ LanguageSupport),
+/* harmony export */   rs: () => (/* binding */ foldService),
+/* harmony export */   tC: () => (/* binding */ continuedIndent),
+/* harmony export */   uj: () => (/* binding */ indentNodeProp),
+/* harmony export */   vw: () => (/* binding */ delimitedIndent),
+/* harmony export */   x0: () => (/* binding */ foldNodeProp),
+/* harmony export */   y1: () => (/* binding */ getIndentUnit),
+/* harmony export */   ze: () => (/* binding */ flatIndent)
 /* harmony export */ });
-/* unused harmony exports HighlightStyle, StringStream, TreeIndentContext, bracketMatching, codeFolding, ensureSyntaxTree, foldAll, foldCode, foldEffect, foldKeymap, foldState, foldable, foldedRanges, forceParsing, highlightingFor, indentOnInput, indentRange, indentService, language, syntaxParserRunning, syntaxTreeAvailable, toggleFold, unfoldAll, unfoldCode, unfoldEffect */
+/* unused harmony exports DocInput, HighlightStyle, StringStream, TreeIndentContext, bracketMatching, codeFolding, ensureSyntaxTree, foldAll, foldCode, foldEffect, foldKeymap, foldState, foldable, foldedRanges, forceParsing, highlightingFor, indentOnInput, indentRange, indentService, language, syntaxParserRunning, syntaxTreeAvailable, toggleFold, unfoldAll, unfoldCode, unfoldEffect */
 /* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2064);
 /* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5854);
 /* harmony import */ var _codemirror_view__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8335);
@@ -7551,7 +9544,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var _a;
 const languageDataProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
 function defineLanguageFacet(baseData) {
-  return _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define({
+  return _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
     combine: baseData ? values => values.concat(baseData) : undefined
   });
 }
@@ -7566,13 +9559,13 @@ class Language {
     }
     this.data = data;
     this.name = name;
-    if (!_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState.prototype.hasOwnProperty */ .yy.prototype.hasOwnProperty("tree")) Object.defineProperty(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState.prototype */ .yy.prototype, "tree", {
+    if (!_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .yy.prototype.hasOwnProperty("tree")) Object.defineProperty(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .yy.prototype, "tree", {
       get() {
         return syntaxTree(this);
       }
     });
     this.parser = parser;
-    this.extension = [language.of(this), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState.languageData.of */ .yy.languageData.of((state, pos, side) => {
+    this.extension = [language.of(this), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .yy.languageData.of((state, pos, side) => {
       let top = topNodeAt(state, pos, side),
         data = top.type.prop(languageDataProp);
       if (!data) return [];
@@ -7613,7 +9606,7 @@ class Language {
         });
         return;
       }
-      let mount = tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp.mounted */ .md.mounted);
+      let mount = tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.mounted);
       if (mount) {
         if (mount.tree.prop(languageDataProp) == this.data) {
           if (mount.overlay) {
@@ -7647,12 +9640,12 @@ class Language {
     return true;
   }
 }
-Language.setState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect.define */ .Py.define();
+Language.setState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.define();
 function topNodeAt(state, pos, side) {
   let topLang = state.facet(language),
     tree = syntaxTree(state).topNode;
   if (!topLang || topLang.allowsNesting) {
-    for (let node = tree; node; node = node.enter(pos, side, _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode.ExcludeBuffers */ .vj.ExcludeBuffers)) if (node.type.isTop) tree = node;
+    for (let node = tree; node; node = node.enter(pos, side, _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode */ .vj.ExcludeBuffers)) if (node.type.isTop) tree = node;
   }
   return tree;
 }
@@ -7676,7 +9669,7 @@ class LRLanguage extends Language {
 }
 function syntaxTree(state) {
   let field = state.field(Language.state, false);
-  return field ? field.tree : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree.empty */ .mp.empty;
+  return field ? field.tree : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty;
 }
 function ensureSyntaxTree(state, upto, timeout) {
   if (timeout === void 0) {
@@ -7761,14 +9754,14 @@ class ParseContext {
     this.tempSkipped = [];
   }
   static create(parser, state, viewport) {
-    return new ParseContext(parser, state, [], _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree.empty */ .mp.empty, 0, viewport, [], null);
+    return new ParseContext(parser, state, [], _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty, 0, viewport, [], null);
   }
   startParse() {
     return this.parser.startParse(new DocInput(this.state.doc), this.fragments);
   }
   work(until, upto) {
     if (upto != null && upto >= this.state.doc.length) upto = undefined;
-    if (this.tree != _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree.empty */ .mp.empty && this.isDone(upto !== null && upto !== void 0 ? upto : this.state.doc.length)) {
+    if (this.tree != _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty && this.isDone(upto !== null && upto !== void 0 ? upto : this.state.doc.length)) {
       this.takeTree();
       return true;
     }
@@ -7783,7 +9776,7 @@ class ParseContext {
       for (;;) {
         let done = this.parse.advance();
         if (done) {
-          this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment.addTree */ .i9.addTree(done, this.fragments, this.parse.stoppedAt != null));
+          this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.addTree(done, this.fragments, this.parse.stoppedAt != null));
           this.treeLen = (_a = this.parse.stoppedAt) !== null && _a !== void 0 ? _a : this.state.doc.length;
           this.tree = done;
           this.parse = null;
@@ -7802,7 +9795,7 @@ class ParseContext {
       });
       this.treeLen = pos;
       this.tree = tree;
-      this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment.addTree */ .i9.addTree(this.tree, this.fragments, true));
+      this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.addTree(this.tree, this.fragments, true));
       this.parse = null;
     }
   }
@@ -7836,8 +9829,8 @@ class ParseContext {
         fromB,
         toB
       }));
-      fragments = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment.applyChanges */ .i9.applyChanges(fragments, ranges);
-      tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree.empty */ .mp.empty;
+      fragments = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.applyChanges(fragments, ranges);
+      tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty;
       treeLen = 0;
       viewport = {
         from: changes.mapPos(viewport.from, -1),
@@ -7905,7 +9898,7 @@ class ParseContext {
               if (until) cx.scheduleOn = cx.scheduleOn ? Promise.all([cx.scheduleOn, until]) : until;
             }
             this.parsedPos = to;
-            return new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType.none */ .Jq.none, [], [], to - from);
+            return new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.none, [], [], to - from);
           },
           stoppedAt: null,
           stopAt() {}
@@ -7924,7 +9917,7 @@ class ParseContext {
   }
 }
 function cutFragments(fragments, from, to) {
-  return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment.applyChanges */ .i9.applyChanges(fragments, [{
+  return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.applyChanges(fragments, [{
     fromA: from,
     toA: to,
     fromB: from,
@@ -7953,7 +9946,7 @@ class LanguageState {
     return new LanguageState(parseState);
   }
 }
-Language.state = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField.define */ .QQ.define({
+Language.state = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .QQ.define({
   create: LanguageState.init,
   update(value, tr) {
     for (var _iterator5 = _createForOfIteratorHelperLoose(tr.effects), _step5; !(_step5 = _iterator5()).done;) {
@@ -7978,7 +9971,7 @@ if (typeof requestIdleCallback != "undefined") requestIdle = callback => {
   return () => idle < 0 ? clearTimeout(timeout) : cancelIdleCallback(idle);
 };
 const isInputPending = typeof navigator != "undefined" && ((_a = navigator.scheduling) === null || _a === void 0 ? void 0 : _a.isInputPending) ? () => navigator.scheduling.isInputPending() : null;
-const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin.fromClass */ .lg.fromClass(class ParseWorker {
+const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .lg.fromClass(class ParseWorker {
   constructor(view) {
     this.view = view;
     this.working = null;
@@ -8056,11 +10049,11 @@ const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin.
     }
   }
 });
-const language = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define({
+const language = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
   combine(languages) {
     return languages.length ? languages[0] : null;
   },
-  enables: language => [Language.state, parseWorker, _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.contentAttributes.compute */ .tk.contentAttributes.compute([language], state => {
+  enables: language => [Language.state, parseWorker, _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.contentAttributes.compute([language], state => {
     let lang = state.facet(language);
     return lang && lang.name ? {
       "data-language": lang.name
@@ -8143,8 +10136,8 @@ class LanguageDescription {
     return null;
   }
 }
-const indentService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define();
-const indentUnit = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define({
+const indentService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define();
+const indentUnit = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
   combine: values => {
     if (!values.length) return "  ";
     let unit = values[0];
@@ -8301,7 +10294,7 @@ function indentStrategy(tree) {
   if (strategy) return strategy;
   let first = tree.firstChild,
     close;
-  if (first && (close = first.type.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp.closedBy */ .md.closedBy))) {
+  if (first && (close = first.type.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.closedBy))) {
     let last = tree.lastChild,
       closed = last && close.indexOf(last.name) > -1;
     return cx => delimitedStrategy(cx, true, 1, undefined, closed && !ignoreClosed(cx) ? last.from : undefined);
@@ -8434,7 +10427,7 @@ function indentOnInput() {
     }] : tr;
   });
 }
-const foldService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define();
+const foldService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define();
 const foldNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
 function foldInside(node) {
   let first = node.firstChild,
@@ -8480,10 +10473,10 @@ function mapRange(range, mapping) {
     to
   };
 }
-const foldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect.define */ .Py.define({
+const foldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.define({
   map: mapRange
 });
-const unfoldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect.define */ .Py.define({
+const unfoldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.define({
   map: mapRange
 });
 function selectedLines(view) {
@@ -8497,9 +10490,9 @@ function selectedLines(view) {
   }
   return lines;
 }
-const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField.define */ .QQ.define({
+const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .QQ.define({
   create() {
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.none */ .p.none;
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.none;
   },
   update(folded, tr) {
     folded = folded.map(tr.changes);
@@ -8529,7 +10522,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField.d
     }
     return folded;
   },
-  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.decorations.from */ .tk.decorations.from(f),
+  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.decorations.from(f),
   toJSON(folded, state) {
     let ranges = [];
     folded.between(0, state.doc.length, (from, to) => {
@@ -8546,7 +10539,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField.d
       if (typeof from != "number" || typeof to != "number") throw new RangeError("Invalid JSON for fold state");
       ranges.push(foldWidget.range(from, to));
     }
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.set */ .p.set(ranges, true);
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.set(ranges, true);
   }
 });
 function foldedRanges(state) {
@@ -8571,7 +10564,7 @@ function foldExists(folded, from, to) {
   return found;
 }
 function maybeEnable(state, other) {
-  return state.field(foldState, false) ? other : other.concat(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect.appendConfig.of */ .Py.appendConfig.of(codeFolding()));
+  return state.field(foldState, false) ? other : other.concat(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.appendConfig.of(codeFolding()));
 }
 const foldCode = view => {
   for (var _iterator16 = _createForOfIteratorHelperLoose(selectedLines(view)), _step16; !(_step16 = _iterator16()).done;) {
@@ -8605,7 +10598,7 @@ function announceFold(view, range, fold) {
   }
   let lineFrom = view.state.doc.lineAt(range.from).number,
     lineTo = view.state.doc.lineAt(range.to).number;
-  return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.announce.of */ .tk.announce.of(`${view.state.phrase(fold ? "Folded lines" : "Unfolded lines")} ${lineFrom} ${view.state.phrase("to")} ${lineTo}.`);
+  return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.announce.of(`${view.state.phrase(fold ? "Folded lines" : "Unfolded lines")} ${lineFrom} ${view.state.phrase("to")} ${lineTo}.`);
 }
 const foldAll = view => {
   let {
@@ -8682,7 +10675,7 @@ const defaultConfig = {
   placeholderDOM: null,
   placeholderText: "…"
 };
-const foldConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define({
+const foldConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
   combine(values) {
     return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .BO)(values, defaultConfig);
   }
@@ -8692,7 +10685,7 @@ function codeFolding(config) {
   if (config) result.push(foldConfig.of(config));
   return result;
 }
-const foldWidget = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.replace */ .p.replace({
+const foldWidget = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.replace({
   widget: new class extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .WidgetType */ .l9 {
     toDOM(view) {
       let {
@@ -8749,7 +10742,7 @@ function foldGutter(config) {
   let fullConfig = Object.assign(Object.assign({}, foldGutterDefaults), config);
   let canFold = new FoldMarker(fullConfig, true),
     canUnfold = new FoldMarker(fullConfig, false);
-  let markers = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin.fromClass */ .lg.fromClass(class {
+  let markers = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .lg.fromClass(class {
     constructor(view) {
       this.from = view.viewport.from;
       this.markers = this.buildMarkers(view);
@@ -8774,7 +10767,7 @@ function foldGutter(config) {
     class: "cm-foldGutter",
     markers(view) {
       var _a;
-      return ((_a = view.plugin(markers)) === null || _a === void 0 ? void 0 : _a.markers) || _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSet.empty */ .Xs.empty;
+      return ((_a = view.plugin(markers)) === null || _a === void 0 ? void 0 : _a.markers) || _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSet */ .Xs.empty;
     },
     initialSpacer() {
       return new FoldMarker(fullConfig, false);
@@ -8801,7 +10794,7 @@ function foldGutter(config) {
     })
   }), codeFolding()];
 }
-const baseTheme$1 = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.baseTheme */ .tk.baseTheme({
+const baseTheme$1 = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.baseTheme({
   ".cm-foldPlaceholder": {
     backgroundColor: "#eee",
     border: "1px solid #ddd",
@@ -8821,7 +10814,7 @@ class HighlightStyle {
     this.specs = specs;
     let modSpec;
     function def(spec) {
-      let cls = style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule.newName */ .V.newName();
+      let cls = style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule */ .V.newName();
       (modSpec || (modSpec = Object.create(null)))["." + cls] = spec;
       return cls;
     }
@@ -8843,8 +10836,8 @@ class HighlightStyle {
     return new HighlightStyle(specs, options || {});
   }
 }
-const highlighterFacet = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define();
-const fallbackHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define({
+const highlighterFacet = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define();
+const fallbackHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
   combine(values) {
     return values.length ? [values[0]] : null;
   }
@@ -8857,11 +10850,11 @@ function syntaxHighlighting(highlighter, options) {
   let ext = [treeHighlighter],
     themeType;
   if (highlighter instanceof HighlightStyle) {
-    if (highlighter.module) ext.push(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.styleModule.of */ .tk.styleModule.of(highlighter.module));
+    if (highlighter.module) ext.push(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.styleModule.of(highlighter.module));
     themeType = highlighter.themeType;
   }
-  if (options === null || options === void 0 ? void 0 : options.fallback) ext.push(fallbackHighlighter.of(highlighter));else if (themeType) ext.push(highlighterFacet.computeN([_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.darkTheme */ .tk.darkTheme], state => {
-    return state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.darkTheme */ .tk.darkTheme) == (themeType == "dark") ? [highlighter] : [];
+  if (options === null || options === void 0 ? void 0 : options.fallback) ext.push(fallbackHighlighter.of(highlighter));else if (themeType) ext.push(highlighterFacet.computeN([_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.darkTheme], state => {
+    return state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.darkTheme) == (themeType == "dark") ? [highlighter] : [];
   }));else ext.push(highlighterFacet.of(highlighter));
   return ext;
 }
@@ -8897,7 +10890,7 @@ class TreeHighlighter {
     }
   }
   buildDeco(view, highlighters) {
-    if (!highlighters || !this.tree.length) return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.none */ .p.none;
+    if (!highlighters || !this.tree.length) return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.none;
     let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .f_();
     for (var _iterator21 = _createForOfIteratorHelperLoose(view.visibleRanges), _step21; !(_step21 = _iterator21()).done;) {
       let {
@@ -8905,7 +10898,7 @@ class TreeHighlighter {
         to
       } = _step21.value;
       (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .highlightTree */ .bW)(this.tree, highlighters, (from, to, style) => {
-        builder.add(from, to, this.markCache[style] || (this.markCache[style] = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.mark */ .p.mark({
+        builder.add(from, to, this.markCache[style] || (this.markCache[style] = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
           class: style
         })));
       }, from, to);
@@ -8913,69 +10906,69 @@ class TreeHighlighter {
     return builder.finish();
   }
 }
-const treeHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec.high */ .Wl.high(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin.fromClass */ .lg.fromClass(TreeHighlighter, {
+const treeHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec */ .Wl.high(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .lg.fromClass(TreeHighlighter, {
   decorations: v => v.decorations
 }));
 const defaultHighlightStyle = HighlightStyle.define([{
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.meta */ .pJ.meta,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.meta,
   color: "#404740"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.link */ .pJ.link,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.link,
   textDecoration: "underline"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.heading */ .pJ.heading,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.heading,
   textDecoration: "underline",
   fontWeight: "bold"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.emphasis */ .pJ.emphasis,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.emphasis,
   fontStyle: "italic"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.strong */ .pJ.strong,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.strong,
   fontWeight: "bold"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.strikethrough */ .pJ.strikethrough,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.strikethrough,
   textDecoration: "line-through"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.keyword */ .pJ.keyword,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.keyword,
   color: "#708"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.atom */ .pJ.atom, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.bool */ .pJ.bool, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.url */ .pJ.url, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.contentSeparator */ .pJ.contentSeparator, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.labelName */ .pJ.labelName],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.atom, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.bool, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.url, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.contentSeparator, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.labelName],
   color: "#219"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.literal */ .pJ.literal, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.inserted */ .pJ.inserted],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.literal, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.inserted],
   color: "#164"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.string */ .pJ.string, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.deleted */ .pJ.deleted],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.string, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.deleted],
   color: "#a11"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.regexp */ .pJ.regexp, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.escape */ .pJ.escape, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.special */ .pJ.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.string */ .pJ.string)],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.regexp, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.escape, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.string)],
   color: "#e40"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.definition */ .pJ.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.variableName */ .pJ.variableName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.variableName),
   color: "#00f"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.local */ .pJ.local(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.variableName */ .pJ.variableName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.local(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.variableName),
   color: "#30a"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.typeName */ .pJ.typeName, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.namespace */ .pJ.namespace],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.typeName, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.namespace],
   color: "#085"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.className */ .pJ.className,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.className,
   color: "#167"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.special */ .pJ.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.variableName */ .pJ.variableName), _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.macroName */ .pJ.macroName],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.variableName), _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.macroName],
   color: "#256"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.definition */ .pJ.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.propertyName */ .pJ.propertyName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.propertyName),
   color: "#00c"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.comment */ .pJ.comment,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.comment,
   color: "#940"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags.invalid */ .pJ.invalid,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.invalid,
   color: "#f00"
 }]);
-const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.baseTheme */ .tk.baseTheme({
+const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.baseTheme({
   "&.cm-focused .cm-matchingBracket": {
     backgroundColor: "#328c8252"
   },
@@ -8985,7 +10978,7 @@ const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.ba
 });
 const DefaultScanDist = 10000,
   DefaultBrackets = "()[]{}";
-const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet.define */ .r$.define({
+const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
   combine(configs) {
     return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .BO)(configs, {
       afterCursor: true,
@@ -8995,10 +10988,10 @@ const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .
     });
   }
 });
-const matchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.mark */ .p.mark({
+const matchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
     class: "cm-matchingBracket"
   }),
-  nonmatchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.mark */ .p.mark({
+  nonmatchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
     class: "cm-nonmatchingBracket"
   });
 function defaultRenderMatch(match) {
@@ -9008,9 +11001,9 @@ function defaultRenderMatch(match) {
   if (match.end) decorations.push(mark.range(match.end.from, match.end.to));
   return decorations;
 }
-const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField.define */ .QQ.define({
+const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .QQ.define({
   create() {
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.none */ .p.none;
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.none;
   },
   update(deco, tr) {
     if (!tr.docChanged && !tr.selection) return deco;
@@ -9022,9 +11015,9 @@ const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .S
       let match = matchBrackets(tr.state, range.head, -1, config) || range.head > 0 && matchBrackets(tr.state, range.head - 1, 1, config) || config.afterCursor && (matchBrackets(tr.state, range.head, 1, config) || range.head < tr.state.doc.length && matchBrackets(tr.state, range.head + 1, -1, config));
       if (match) decorations = decorations.concat(config.renderMatch(match, tr.state));
     }
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration.set */ .p.set(decorations, true);
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.set(decorations, true);
   },
-  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView.decorations.from */ .tk.decorations.from(f)
+  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.decorations.from(f)
 });
 const bracketMatchingUnique = [bracketMatchingState, baseTheme];
 function bracketMatching(config) {
@@ -9035,7 +11028,7 @@ function bracketMatching(config) {
 }
 const bracketMatchingHandle = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
 function matchingNodes(node, dir, brackets) {
-  let byProp = node.prop(dir < 0 ? _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp.openedBy */ .md.openedBy : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp.closedBy */ .md.closedBy);
+  let byProp = node.prop(dir < 0 ? _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.openedBy : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.closedBy);
   if (byProp) return byProp;
   if (node.name.length == 1) {
     let index = brackets.indexOf(node.name);
@@ -9379,7 +11372,7 @@ function findStartInFragments(lang, fragments, startPos, editorState) {
   }
   return {
     state: lang.streamParser.startState(editorState ? getIndentUnit(editorState) : 4),
-    tree: _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree.empty */ .mp.empty
+    tree: _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty
   };
 }
 class Parse {
@@ -9510,7 +11503,7 @@ class Parse {
     if (this.parsedPos < this.to) this.parsedPos++;
   }
   finishChunk() {
-    let tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree.build */ .mp.build({
+    let tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.build({
       buffer: this.chunk,
       start: this.chunkStart,
       length: this.parsedPos - this.chunkStart,
@@ -9539,7 +11532,7 @@ function readToken(token, stream, state) {
   throw new Error("Stream parser failed to advance stream.");
 }
 const noTokens = Object.create(null);
-const typeArray = [_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType.none */ .Jq.none];
+const typeArray = [_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.none];
 const nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .Lj(typeArray);
 const warned = [];
 const defaultTable = Object.create(null);
@@ -9577,7 +11570,7 @@ function createTokenType(extra, tagStr) {
   }
   if (!tag) return 0;
   let name = tagStr.replace(/ /g, "_"),
-    type = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType.define */ .Jq.define({
+    type = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
       id: typeArray.length,
       name,
       props: [(0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .styleTags */ .Gv)({
@@ -9588,7 +11581,7 @@ function createTokenType(extra, tagStr) {
   return type.id;
 }
 function docID(data) {
-  let type = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType.define */ .Jq.define({
+  let type = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
     id: typeArray.length,
     name: "Document",
     props: [languageDataProp.add(() => data)]
@@ -9605,37 +11598,36 @@ function docID(data) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BO": () => (/* binding */ combineConfig),
-/* harmony export */   "D0": () => (/* binding */ CharCategory),
-/* harmony export */   "F6": () => (/* binding */ Compartment),
-/* harmony export */   "Gz": () => (/* binding */ findColumn),
-/* harmony export */   "IS": () => (/* binding */ countColumn),
-/* harmony export */   "Py": () => (/* binding */ StateEffect),
-/* harmony export */   "QQ": () => (/* binding */ StateField),
-/* harmony export */   "Wl": () => (/* binding */ Prec),
-/* harmony export */   "Xs": () => (/* binding */ RangeSet),
-/* harmony export */   "YW": () => (/* binding */ Transaction),
-/* harmony export */   "as": () => (/* binding */ ChangeSet),
-/* harmony export */   "bg": () => (/* binding */ fromCodePoint),
-/* harmony export */   "cp": () => (/* binding */ findClusterBreak),
-/* harmony export */   "f_": () => (/* binding */ RangeSetBuilder),
-/* harmony export */   "gc": () => (/* binding */ MapMode),
-/* harmony export */   "gm": () => (/* binding */ codePointAt),
-/* harmony export */   "jT": () => (/* binding */ EditorSelection),
-/* harmony export */   "n0": () => (/* binding */ ChangeDesc),
-/* harmony export */   "nZ": () => (/* binding */ codePointSize),
-/* harmony export */   "q6": () => (/* binding */ Annotation),
-/* harmony export */   "r$": () => (/* binding */ Facet),
-/* harmony export */   "uU": () => (/* binding */ RangeValue),
-/* harmony export */   "xv": () => (/* binding */ Text),
-/* harmony export */   "yy": () => (/* binding */ EditorState)
+/* harmony export */   BO: () => (/* binding */ combineConfig),
+/* harmony export */   D0: () => (/* binding */ CharCategory),
+/* harmony export */   F6: () => (/* binding */ Compartment),
+/* harmony export */   Gz: () => (/* binding */ findColumn),
+/* harmony export */   IS: () => (/* binding */ countColumn),
+/* harmony export */   Py: () => (/* binding */ StateEffect),
+/* harmony export */   QQ: () => (/* binding */ StateField),
+/* harmony export */   Wl: () => (/* binding */ Prec),
+/* harmony export */   Xs: () => (/* binding */ RangeSet),
+/* harmony export */   YW: () => (/* binding */ Transaction),
+/* harmony export */   as: () => (/* binding */ ChangeSet),
+/* harmony export */   bg: () => (/* binding */ fromCodePoint),
+/* harmony export */   cp: () => (/* binding */ findClusterBreak),
+/* harmony export */   f_: () => (/* binding */ RangeSetBuilder),
+/* harmony export */   gc: () => (/* binding */ MapMode),
+/* harmony export */   gm: () => (/* binding */ codePointAt),
+/* harmony export */   jT: () => (/* binding */ EditorSelection),
+/* harmony export */   n0: () => (/* binding */ ChangeDesc),
+/* harmony export */   nZ: () => (/* binding */ codePointSize),
+/* harmony export */   q6: () => (/* binding */ Annotation),
+/* harmony export */   r$: () => (/* binding */ Facet),
+/* harmony export */   uU: () => (/* binding */ RangeValue),
+/* harmony export */   xv: () => (/* binding */ Text),
+/* harmony export */   yy: () => (/* binding */ EditorState)
 /* harmony export */ });
 /* unused harmony exports AnnotationType, Line, Range, SelectionRange, StateEffectType */
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 class Text {
-  constructor() {}
   lineAt(pos) {
     if (pos < 0 || pos > this.length) throw new RangeError(`Invalid position ${pos} in document of length ${this.length}`);
     return this.lineInner(pos, false, 1, 0);
@@ -9709,6 +11701,7 @@ class Text {
     this.flatten(lines);
     return lines;
   }
+  constructor() {}
   static of(text) {
     if (text.length == 0) throw new RangeError("A document must have at least one line");
     if (text.length == 1 && !text[0]) return Text.empty;
@@ -12026,6 +14019,18 @@ function lazySort(ranges) {
 }
 RangeSet.empty.nextLayer = RangeSet.empty;
 class RangeSetBuilder {
+  finishChunk(newArrays) {
+    this.chunks.push(new Chunk(this.from, this.to, this.value, this.maxPoint));
+    this.chunkPos.push(this.chunkStart);
+    this.chunkStart = -1;
+    this.setMaxPoint = Math.max(this.setMaxPoint, this.maxPoint);
+    this.maxPoint = -1;
+    if (newArrays) {
+      this.from = [];
+      this.to = [];
+      this.value = [];
+    }
+  }
   constructor() {
     this.chunks = [];
     this.chunkPos = [];
@@ -12039,18 +14044,6 @@ class RangeSetBuilder {
     this.maxPoint = -1;
     this.setMaxPoint = -1;
     this.nextLayer = null;
-  }
-  finishChunk(newArrays) {
-    this.chunks.push(new Chunk(this.from, this.to, this.value, this.maxPoint));
-    this.chunkPos.push(this.chunkStart);
-    this.chunkStart = -1;
-    this.setMaxPoint = Math.max(this.setMaxPoint, this.maxPoint);
-    this.maxPoint = -1;
-    if (newArrays) {
-      this.from = [];
-      this.to = [];
-      this.value = [];
-    }
   }
   add(from, to, value) {
     if (!this.addInner(from, to, value)) (this.nextLayer || (this.nextLayer = new RangeSetBuilder())).add(from, to, value);
@@ -12384,7 +14377,7 @@ function compare(a, startA, b, startB, length, comparator) {
     let end = diff < 0 ? a.to + dPos : b.to,
       clipEnd = Math.min(end, endB);
     if (a.point || b.point) {
-      if (!(a.point && b.point && (a.point == b.point || a.point.eq(b.point)) && sameValues(a.activeForPoint(a.to + dPos), b.activeForPoint(b.to)))) comparator.comparePoint(pos, clipEnd, a.point, b.point);
+      if (!(a.point && b.point && (a.point == b.point || a.point.eq(b.point)) && sameValues(a.activeForPoint(a.to), b.activeForPoint(b.to)))) comparator.comparePoint(pos, clipEnd, a.point, b.point);
     } else {
       if (clipEnd > pos && !sameValues(a.active, b.active)) comparator.compareRange(pos, clipEnd, a.active, b.active);
     }
@@ -12452,19 +14445,19 @@ function findColumn(string, col, tabSize, strict) {
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "p": () => (/* binding */ Decoration),
-  "Nm": () => (/* binding */ Direction),
-  "tk": () => (/* binding */ EditorView),
-  "SJ": () => (/* binding */ GutterMarker),
-  "lg": () => (/* binding */ ViewPlugin),
-  "l9": () => (/* binding */ WidgetType),
-  "gB": () => (/* binding */ getTooltip),
-  "v5": () => (/* binding */ gutter),
-  "AE": () => (/* binding */ highlightSpecialChars),
-  "$f": () => (/* binding */ keymap),
-  "Eu": () => (/* binding */ lineNumbers),
-  "OO": () => (/* binding */ logException),
-  "hJ": () => (/* binding */ showTooltip)
+  p: () => (/* binding */ Decoration),
+  Nm: () => (/* binding */ Direction),
+  tk: () => (/* binding */ EditorView),
+  SJ: () => (/* binding */ GutterMarker),
+  lg: () => (/* binding */ ViewPlugin),
+  l9: () => (/* binding */ WidgetType),
+  gB: () => (/* binding */ getTooltip),
+  v5: () => (/* binding */ gutter),
+  AE: () => (/* binding */ highlightSpecialChars),
+  $f: () => (/* binding */ keymap),
+  Eu: () => (/* binding */ lineNumbers),
+  OO: () => (/* binding */ logException),
+  hJ: () => (/* binding */ showTooltip)
 });
 
 // UNUSED EXPORTS: BidiSpan, BlockInfo, BlockType, MatchDecorator, RectangleMarker, ViewUpdate, __test, closeHoverTooltips, crosshairCursor, drawSelection, dropCursor, getPanel, gutterLineClass, gutters, hasHoverTooltips, highlightActiveLine, highlightActiveLineGutter, highlightTrailingWhitespace, highlightWhitespace, hoverTooltip, layer, lineNumberMarkers, panels, placeholder, rectangularSelection, repositionTooltips, runScopeHandlers, scrollPastEnd, showPanel, tooltips
@@ -12554,11 +14547,8 @@ var shift = {
   221: "}",
   222: "\""
 };
-var chrome = typeof navigator != "undefined" && /Chrome\/(\d+)/.exec(navigator.userAgent);
-var gecko = typeof navigator != "undefined" && /Gecko\/\d+/.test(navigator.userAgent);
 var mac = typeof navigator != "undefined" && /Mac/.test(navigator.platform);
 var ie = typeof navigator != "undefined" && /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(navigator.userAgent);
-var brokenModifierNames = mac || chrome && +chrome[1] < 57;
 for (var i = 0; i < 10; i++) base[48 + i] = base[96 + i] = String(i);
 for (var i = 1; i <= 24; i++) base[i + 111] = "F" + i;
 for (var i = 65; i <= 90; i++) {
@@ -12567,7 +14557,7 @@ for (var i = 65; i <= 90; i++) {
 }
 for (var code in base) if (!shift.hasOwnProperty(code)) shift[code] = base[code];
 function keyName(event) {
-  var ignoreKey = brokenModifierNames && (event.ctrlKey || event.altKey || event.metaKey) || ie && event.shiftKey && event.key && event.key.length == 1 || event.key == "Unidentified";
+  var ignoreKey = mac && event.metaKey && event.shiftKey && !event.ctrlKey && !event.altKey || ie && event.shiftKey && event.key && event.key.length == 1 || event.key == "Unidentified";
   var name = !ignoreKey && event.key || (event.shiftKey ? shift : base)[event.keyCode] || event.key || "Unidentified";
   if (name == "Esc") name = "Escape";
   if (name == "Del") name = "Delete";
@@ -13214,8 +15204,8 @@ const ie_edge = /Edge\/(\d+)/.exec(nav.userAgent);
 const ie_upto10 = /MSIE \d/.test(nav.userAgent);
 const ie_11up = /Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(nav.userAgent);
 const dist_ie = !!(ie_upto10 || ie_11up || ie_edge);
-const dist_gecko = !dist_ie && /gecko\/(\d+)/i.test(nav.userAgent);
-const dist_chrome = !dist_ie && /Chrome\/(\d+)/.exec(nav.userAgent);
+const gecko = !dist_ie && /gecko\/(\d+)/i.test(nav.userAgent);
+const chrome = !dist_ie && /Chrome\/(\d+)/.exec(nav.userAgent);
 const webkit = ("webkitFontSmoothing" in doc.documentElement.style);
 const safari = !dist_ie && /Apple Computer/.test(nav.vendor);
 const ios = safari && (/Mobile\/\w+/.test(nav.userAgent) || nav.maxTouchPoints > 2);
@@ -13225,10 +15215,10 @@ var browser = {
   linux: /Linux|X11/.test(nav.platform),
   ie: dist_ie,
   ie_version: ie_upto10 ? doc.documentMode || 6 : ie_11up ? +ie_11up[1] : ie_edge ? +ie_edge[1] : 0,
-  gecko: dist_gecko,
-  gecko_version: dist_gecko ? +(/Firefox\/(\d+)/.exec(nav.userAgent) || [0, 0])[1] : 0,
-  chrome: !!dist_chrome,
-  chrome_version: dist_chrome ? +dist_chrome[1] : 0,
+  gecko,
+  gecko_version: gecko ? +(/Firefox\/(\d+)/.exec(nav.userAgent) || [0, 0])[1] : 0,
+  chrome: !!chrome,
+  chrome_version: chrome ? +chrome[1] : 0,
   ios,
   android: /Android\b/.test(nav.userAgent),
   webkit,
@@ -13429,7 +15419,7 @@ class WidgetView extends ContentView {
     return this.widget.ignoreEvent(event);
   }
   get overrideDOMText() {
-    if (this.length == 0) return state_dist/* Text.empty */.xv.empty;
+    if (this.length == 0) return state_dist/* Text */.xv.empty;
     let top = this;
     while (top.parent) top = top.parent;
     let {
@@ -13437,7 +15427,7 @@ class WidgetView extends ContentView {
       } = top,
       text = view && view.state.doc,
       start = this.posAtStart;
-    return text ? text.slice(start, start + this.length) : state_dist/* Text.empty */.xv.empty;
+    return text ? text.slice(start, start + this.length) : state_dist/* Text */.xv.empty;
   }
   domAtPos(pos) {
     return (this.length ? pos == 0 : this.side > 0) ? DOMPos.before(this.dom) : DOMPos.after(this.dom, pos == this.length);
@@ -13451,11 +15441,12 @@ class WidgetView extends ContentView {
     let rects = this.dom.getClientRects(),
       rect = null;
     if (!rects.length) return null;
-    for (let i = pos > 0 ? rects.length - 1 : 0;; i += pos > 0 ? -1 : 1) {
+    let fromBack = this.side ? this.side < 0 : pos > 0;
+    for (let i = fromBack ? rects.length - 1 : 0;; i += fromBack ? -1 : 1) {
       rect = rects[i];
       if (pos > 0 ? i == 0 : i == rects.length - 1 || rect.top < rect.bottom) break;
     }
-    return this.length ? rect : flattenRect(rect, this.side > 0);
+    return this.length ? rect : flattenRect(rect, !fromBack);
   }
   get isEditable() {
     return false;
@@ -13644,7 +15635,7 @@ class WidgetBufferView extends ContentView {
     return this.dom.getBoundingClientRect();
   }
   get overrideDOMText() {
-    return state_dist/* Text.empty */.xv.empty;
+    return state_dist/* Text */.xv.empty;
   }
   get isHidden() {
     return true;
@@ -13759,6 +15750,9 @@ class WidgetType {
   get estimatedHeight() {
     return -1;
   }
+  get lineBreaks() {
+    return 0;
+  }
   ignoreEvent(event) {
     return true;
   }
@@ -13795,7 +15789,7 @@ class Decoration extends state_dist/* RangeValue */.uU {
     return new MarkDecoration(spec);
   }
   static widget(spec) {
-    let side = spec.side || 0,
+    let side = Math.max(-10000, Math.min(10000, spec.side || 0)),
       block = !!spec.block;
     side += block ? side > 0 ? 300000000 : -400000000 : side > 0 ? 100000000 : -100000000;
     return new PointDecoration(spec, side, side, block, spec.widget || null, false);
@@ -13824,13 +15818,13 @@ class Decoration extends state_dist/* RangeValue */.uU {
     if (sort === void 0) {
       sort = false;
     }
-    return state_dist/* RangeSet.of */.Xs.of(of, sort);
+    return state_dist/* RangeSet */.Xs.of(of, sort);
   }
   hasHeight() {
     return this.widget ? this.widget.estimatedHeight > -1 : false;
   }
 }
-Decoration.none = state_dist/* RangeSet.empty */.Xs.empty;
+Decoration.none = state_dist/* RangeSet */.Xs.empty;
 class MarkDecoration extends Decoration {
   constructor(spec) {
     let {
@@ -13869,20 +15863,20 @@ class LineDecoration extends Decoration {
     return super.range(from, to);
   }
 }
-LineDecoration.prototype.mapMode = state_dist/* MapMode.TrackBefore */.gc.TrackBefore;
+LineDecoration.prototype.mapMode = state_dist/* MapMode */.gc.TrackBefore;
 LineDecoration.prototype.point = true;
 class PointDecoration extends Decoration {
   constructor(spec, startSide, endSide, block, widget, isReplace) {
     super(startSide, endSide, widget, spec);
     this.block = block;
     this.isReplace = isReplace;
-    this.mapMode = !block ? state_dist/* MapMode.TrackDel */.gc.TrackDel : startSide <= 0 ? state_dist/* MapMode.TrackBefore */.gc.TrackBefore : state_dist/* MapMode.TrackAfter */.gc.TrackAfter;
+    this.mapMode = !block ? state_dist/* MapMode */.gc.TrackDel : startSide <= 0 ? state_dist/* MapMode */.gc.TrackBefore : state_dist/* MapMode */.gc.TrackAfter;
   }
   get type() {
     return this.startSide < this.endSide ? BlockType.WidgetRange : this.startSide <= 0 ? BlockType.WidgetBefore : BlockType.WidgetAfter;
   }
   get heightRelevant() {
-    return this.block || !!this.widget && this.widget.estimatedHeight >= 5;
+    return this.block || !!this.widget && (this.widget.estimatedHeight >= 5 || this.widget.lineBreaks > 0);
   }
   eq(other) {
     return other instanceof PointDecoration && widgetsEq(this.widget, other.widget) && this.block == other.block && this.startSide == other.startSide && this.endSide == other.endSide;
@@ -14114,7 +16108,7 @@ class BlockWidgetView extends ContentView {
     }
   }
   get overrideDOMText() {
-    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : state_dist/* Text.empty */.xv.empty;
+    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : state_dist/* Text */.xv.empty;
   }
   domBoundsAround() {
     return null;
@@ -14283,7 +16277,7 @@ class ContentBuilder {
   }
   static build(text, from, to, decorations, dynamicDecorationMap) {
     let builder = new ContentBuilder(text, from, to, dynamicDecorationMap);
-    builder.openEnd = state_dist/* RangeSet.spans */.Xs.spans(decorations, from, to, builder);
+    builder.openEnd = state_dist/* RangeSet */.Xs.spans(decorations, from, to, builder);
     if (builder.openStart < 0) builder.openStart = builder.openEnd;
     builder.finish(builder.openEnd);
     return builder;
@@ -14314,17 +16308,17 @@ class NullWidget extends WidgetType {
     return true;
   }
 }
-const clickAddsSelectionRange = state_dist/* Facet.define */.r$.define();
-const dragMovesSelection$1 = state_dist/* Facet.define */.r$.define();
-const mouseSelectionStyle = state_dist/* Facet.define */.r$.define();
-const exceptionSink = state_dist/* Facet.define */.r$.define();
-const updateListener = state_dist/* Facet.define */.r$.define();
-const inputHandler = state_dist/* Facet.define */.r$.define();
-const focusChangeEffect = state_dist/* Facet.define */.r$.define();
-const perLineTextDirection = state_dist/* Facet.define */.r$.define({
+const clickAddsSelectionRange = state_dist/* Facet */.r$.define();
+const dragMovesSelection$1 = state_dist/* Facet */.r$.define();
+const mouseSelectionStyle = state_dist/* Facet */.r$.define();
+const exceptionSink = state_dist/* Facet */.r$.define();
+const updateListener = state_dist/* Facet */.r$.define();
+const inputHandler = state_dist/* Facet */.r$.define();
+const focusChangeEffect = state_dist/* Facet */.r$.define();
+const perLineTextDirection = state_dist/* Facet */.r$.define({
   combine: values => values.some(x => x)
 });
-const nativeSelectionHidden = state_dist/* Facet.define */.r$.define({
+const nativeSelectionHidden = state_dist/* Facet */.r$.define({
   combine: values => values.some(x => x)
 });
 class ScrollTarget {
@@ -14351,18 +16345,18 @@ class ScrollTarget {
     return changes.empty ? this : new ScrollTarget(this.range.map(changes), this.y, this.x, this.yMargin, this.xMargin);
   }
 }
-const scrollIntoView = state_dist/* StateEffect.define */.Py.define({
+const scrollIntoView = state_dist/* StateEffect */.Py.define({
   map: (t, ch) => t.map(ch)
 });
 function logException(state, exception, context) {
   let handler = state.facet(exceptionSink);
   if (handler.length) handler[0](exception);else if (window.onerror) window.onerror(String(exception), context, undefined, undefined, exception);else if (context) console.error(context + ":", exception);else console.error(exception);
 }
-const editable = state_dist/* Facet.define */.r$.define({
+const editable = state_dist/* Facet */.r$.define({
   combine: values => values.length ? values[0] : true
 });
 let nextPluginID = 0;
-const viewPlugin = state_dist/* Facet.define */.r$.define();
+const viewPlugin = state_dist/* Facet */.r$.define();
 class ViewPlugin {
   constructor(id, create, domEventHandlers, buildExtensions) {
     this.id = id;
@@ -14437,11 +16431,11 @@ class PluginInstance {
     this.spec = this.value = null;
   }
 }
-const editorAttributes = state_dist/* Facet.define */.r$.define();
-const contentAttributes = state_dist/* Facet.define */.r$.define();
-const decorations = state_dist/* Facet.define */.r$.define();
-const atomicRanges = state_dist/* Facet.define */.r$.define();
-const scrollMargins = state_dist/* Facet.define */.r$.define();
+const editorAttributes = state_dist/* Facet */.r$.define();
+const contentAttributes = state_dist/* Facet */.r$.define();
+const decorations = state_dist/* Facet */.r$.define();
+const atomicRanges = state_dist/* Facet */.r$.define();
+const scrollMargins = state_dist/* Facet */.r$.define();
 function getScrollMargins(view) {
   let left = 0,
     right = 0,
@@ -14464,7 +16458,7 @@ function getScrollMargins(view) {
     bottom
   };
 }
-const styleModule = state_dist/* Facet.define */.r$.define();
+const styleModule = state_dist/* Facet */.r$.define();
 class ChangedRange {
   constructor(fromA, toA, fromB, toB) {
     this.fromA = fromA;
@@ -14517,7 +16511,7 @@ class ViewUpdate {
     this.transactions = transactions;
     this.flags = 0;
     this.startState = view.state;
-    this.changes = state_dist/* ChangeSet.empty */.as.empty(this.startState.doc.length);
+    this.changes = state_dist/* ChangeSet */.as.empty(this.startState.doc.length);
     for (var _iterator10 = _createForOfIteratorHelperLoose(transactions), _step10; !(_step10 = _iterator10()).done;) {
       let tr = _step10.value;
       this.changes = this.changes.compose(tr.changes);
@@ -14735,19 +16729,18 @@ function moveVisually(line, order, dir, start, forward) {
   let indexForward = forward == (span.dir == dir);
   let nextIndex = (0,state_dist/* findClusterBreak */.cp)(line.text, startIndex, indexForward);
   movedOver = line.text.slice(Math.min(startIndex, nextIndex), Math.max(startIndex, nextIndex));
-  if (nextIndex != span.side(forward, dir)) return state_dist/* EditorSelection.cursor */.jT.cursor(nextIndex + line.from, indexForward ? -1 : 1, span.level);
+  if (nextIndex != span.side(forward, dir)) return state_dist/* EditorSelection */.jT.cursor(nextIndex + line.from, indexForward ? -1 : 1, span.level);
   let nextSpan = spanI == (forward ? order.length - 1 : 0) ? null : order[spanI + (forward ? 1 : -1)];
-  if (!nextSpan && span.level != dir) return state_dist/* EditorSelection.cursor */.jT.cursor(forward ? line.to : line.from, forward ? -1 : 1, dir);
-  if (nextSpan && nextSpan.level < span.level) return state_dist/* EditorSelection.cursor */.jT.cursor(nextSpan.side(!forward, dir) + line.from, forward ? 1 : -1, nextSpan.level);
-  return state_dist/* EditorSelection.cursor */.jT.cursor(nextIndex + line.from, forward ? -1 : 1, span.level);
+  if (!nextSpan && span.level != dir) return state_dist/* EditorSelection */.jT.cursor(forward ? line.to : line.from, forward ? -1 : 1, dir);
+  if (nextSpan && nextSpan.level < span.level) return state_dist/* EditorSelection */.jT.cursor(nextSpan.side(!forward, dir) + line.from, forward ? 1 : -1, nextSpan.level);
+  return state_dist/* EditorSelection */.jT.cursor(nextIndex + line.from, forward ? -1 : 1, span.level);
 }
 const LineBreakPlaceholder = "\uffff";
 class DOMReader {
   constructor(points, state) {
     this.points = points;
     this.text = "";
-    console.log("make reader");
-    this.lineSeparator = state.facet(state_dist/* EditorState.lineSeparator */.yy.lineSeparator);
+    this.lineSeparator = state.facet(state_dist/* EditorState */.yy.lineSeparator);
   }
   append(text) {
     this.text += text;
@@ -15279,7 +17272,11 @@ function computeCompositionDeco(view, changes) {
   let {
       state
     } = view,
-    text = node.nodeType == 3 ? node.nodeValue : new DOMReader([], state).readRange(node.firstChild, null).text;
+    reader = new DOMReader([], state);
+  if (node.nodeType == 3) reader.readTextNode(node);else reader.readRange(node.firstChild, null);
+  let {
+    text
+  } = reader;
   if (text.indexOf(LineBreakPlaceholder) > -1) return Decoration.none;
   if (newTo - newFrom < text.length) {
     if (state.doc.sliceString(newFrom, Math.min(state.doc.length, newFrom + text.length)) == text) newTo = newFrom + text.length;else if (state.doc.sliceString(Math.max(0, newTo - text.length), newTo) == text) newFrom = newTo - text.length;else return Decoration.none;
@@ -15351,7 +17348,7 @@ class DecorationComparator$1 {
 }
 function findChangedDeco(a, b, diff) {
   let comp = new DecorationComparator$1();
-  state_dist/* RangeSet.compare */.Xs.compare(a, b, diff, comp);
+  state_dist/* RangeSet */.Xs.compare(a, b, diff, comp);
   return comp.changes;
 }
 function inUneditable(node, inside) {
@@ -15369,7 +17366,7 @@ function groupAt(state, pos, bias) {
   let categorize = state.charCategorizer(pos);
   let line = state.doc.lineAt(pos),
     linePos = pos - line.from;
-  if (line.length == 0) return state_dist/* EditorSelection.cursor */.jT.cursor(pos);
+  if (line.length == 0) return state_dist/* EditorSelection */.jT.cursor(pos);
   if (linePos == 0) bias = 1;else if (linePos == line.length) bias = -1;
   let from = linePos,
     to = linePos;
@@ -15385,7 +17382,7 @@ function groupAt(state, pos, bias) {
     if (categorize(line.text.slice(to, next)) != cat) break;
     to = next;
   }
-  return state_dist/* EditorSelection.range */.jT.range(from + line.from, to + line.from);
+  return state_dist/* EditorSelection */.jT.range(from + line.from, to + line.from);
 }
 function getdx(x, rect) {
   return rect.left > x ? rect.left - x : Math.max(0, x - rect.right);
@@ -15608,9 +17605,19 @@ function isSuspiciousChromeCaretResult(node, offset, x) {
   let rect = node.nodeType == 1 ? node.getBoundingClientRect() : textRange(node, 0, Math.max(node.nodeValue.length, 1)).getBoundingClientRect();
   return x - rect.left > 5;
 }
+function blockAt(view, pos) {
+  let line = view.lineBlockAt(pos);
+  if (Array.isArray(line.type)) {
+    for (var _iterator17 = _createForOfIteratorHelperLoose(line.type), _step17; !(_step17 = _iterator17()).done;) {
+      let l = _step17.value;
+      if (l.to > pos || l.to == pos && (l.to == line.to || l.type == BlockType.Text)) return l;
+    }
+  }
+  return line;
+}
 function moveToLineBoundary(view, start, forward, includeWrap) {
-  let line = view.state.doc.lineAt(start.head);
-  let coords = !includeWrap || !view.lineWrapping ? null : view.coordsAtPos(start.assoc < 0 && start.head > line.from ? start.head - 1 : start.head);
+  let line = blockAt(view, start.head);
+  let coords = !includeWrap || line.type != BlockType.Text || !(view.lineWrapping || line.widgetLineBreaks) ? null : view.coordsAtPos(start.assoc < 0 && start.head > line.from ? start.head - 1 : start.head);
   if (coords) {
     let editorRect = view.dom.getBoundingClientRect();
     let direction = view.textDirectionAt(line.from);
@@ -15618,11 +17625,9 @@ function moveToLineBoundary(view, start, forward, includeWrap) {
       x: forward == (direction == Direction.LTR) ? editorRect.right - 1 : editorRect.left + 1,
       y: (coords.top + coords.bottom) / 2
     });
-    if (pos != null) return state_dist/* EditorSelection.cursor */.jT.cursor(pos, forward ? -1 : 1);
+    if (pos != null) return state_dist/* EditorSelection */.jT.cursor(pos, forward ? -1 : 1);
   }
-  let lineView = LineView.find(view.docView, start.head);
-  let end = lineView ? forward ? lineView.posAtEnd : lineView.posAtStart : forward ? line.to : line.from;
-  return state_dist/* EditorSelection.cursor */.jT.cursor(end, forward ? -1 : 1);
+  return state_dist/* EditorSelection */.jT.cursor(forward ? line.to : line.from, forward ? -1 : 1);
 }
 function moveByChar(view, start, forward, by) {
   let line = view.state.doc.lineAt(start.head),
@@ -15636,7 +17641,7 @@ function moveByChar(view, start, forward, by) {
       char = "\n";
       line = view.state.doc.line(line.number + (forward ? 1 : -1));
       spans = view.bidiSpans(line);
-      next = state_dist/* EditorSelection.cursor */.jT.cursor(forward ? line.from : line.to);
+      next = state_dist/* EditorSelection */.jT.cursor(forward ? line.from : line.to);
     }
     if (!check) {
       if (!by) return next;
@@ -15652,14 +17657,14 @@ function byGroup(view, pos, start) {
   let cat = categorize(start);
   return next => {
     let nextCat = categorize(next);
-    if (cat == state_dist/* CharCategory.Space */.D0.Space) cat = nextCat;
+    if (cat == state_dist/* CharCategory */.D0.Space) cat = nextCat;
     return cat == nextCat;
   };
 }
 function moveVertically(view, start, forward, distance) {
   let startPos = start.head,
     dir = forward ? 1 : -1;
-  if (startPos == (forward ? view.state.doc.length : 0)) return state_dist/* EditorSelection.cursor */.jT.cursor(startPos, start.assoc);
+  if (startPos == (forward ? view.state.doc.length : 0)) return state_dist/* EditorSelection */.jT.cursor(startPos, start.assoc);
   let goal = start.goalColumn,
     startY;
   let rect = view.contentDOM.getBoundingClientRect();
@@ -15681,14 +17686,14 @@ function moveVertically(view, start, forward, distance) {
       x: resolvedGoal,
       y: curY
     }, false, dir);
-    if (curY < rect.top || curY > rect.bottom || (dir < 0 ? pos < startPos : pos > startPos)) return state_dist/* EditorSelection.cursor */.jT.cursor(pos, start.assoc, undefined, goal);
+    if (curY < rect.top || curY > rect.bottom || (dir < 0 ? pos < startPos : pos > startPos)) return state_dist/* EditorSelection */.jT.cursor(pos, start.assoc, undefined, goal);
   }
 }
 function skipAtomicRanges(atoms, pos, bias) {
   for (;;) {
     let moved = 0;
-    for (var _iterator17 = _createForOfIteratorHelperLoose(atoms), _step17; !(_step17 = _iterator17()).done;) {
-      let set = _step17.value;
+    for (var _iterator18 = _createForOfIteratorHelperLoose(atoms), _step18; !(_step18 = _iterator18()).done;) {
+      let set = _step18.value;
       set.between(pos - 1, pos + 1, (from, to, value) => {
         if (pos > from && pos < to) {
           let side = moved || bias || (pos - from < to - pos ? -1 : 1);
@@ -15702,7 +17707,7 @@ function skipAtomicRanges(atoms, pos, bias) {
 }
 function skipAtoms(view, oldPos, pos) {
   let newPos = skipAtomicRanges(view.state.facet(atomicRanges).map(f => f(view)), pos.from, oldPos.head > pos.from ? -1 : 1);
-  return newPos == pos.from ? pos : state_dist/* EditorSelection.cursor */.jT.cursor(newPos, newPos < pos.from ? 1 : -1);
+  return newPos == pos.from ? pos : state_dist/* EditorSelection */.jT.cursor(newPos, newPos < pos.from ? 1 : -1);
 }
 class InputState {
   constructor(view) {
@@ -15775,8 +17780,8 @@ class InputState {
     var _a;
     let handlers;
     this.customHandlers = [];
-    for (var _iterator18 = _createForOfIteratorHelperLoose(plugins), _step18; !(_step18 = _iterator18()).done;) {
-      let plugin = _step18.value;
+    for (var _iterator19 = _createForOfIteratorHelperLoose(plugins), _step19; !(_step19 = _iterator19()).done;) {
+      let plugin = _step19.value;
       if (handlers = (_a = plugin.update(view).spec) === null || _a === void 0 ? void 0 : _a.domEventHandlers) {
         this.customHandlers.push({
           plugin: plugin.value,
@@ -15793,8 +17798,8 @@ class InputState {
     }
   }
   runCustomHandlers(type, view, event) {
-    for (var _iterator19 = _createForOfIteratorHelperLoose(this.customHandlers), _step19; !(_step19 = _iterator19()).done;) {
-      let set = _step19.value;
+    for (var _iterator20 = _createForOfIteratorHelperLoose(this.customHandlers), _step20; !(_step20 = _iterator20()).done;) {
+      let set = _step20.value;
       let handler = set.handlers[type];
       if (handler) {
         try {
@@ -15809,8 +17814,8 @@ class InputState {
   runScrollHandlers(view, event) {
     this.lastScrollTop = view.scrollDOM.scrollTop;
     this.lastScrollLeft = view.scrollDOM.scrollLeft;
-    for (var _iterator20 = _createForOfIteratorHelperLoose(this.customHandlers), _step20; !(_step20 = _iterator20()).done;) {
-      let set = _step20.value;
+    for (var _iterator21 = _createForOfIteratorHelperLoose(this.customHandlers), _step21; !(_step21 = _iterator21()).done;) {
+      let set = _step21.value;
       let handler = set.handlers.scroll;
       if (handler) {
         try {
@@ -15904,7 +17909,7 @@ class MouseSelection {
     doc.addEventListener("mousemove", this.move = this.move.bind(this));
     doc.addEventListener("mouseup", this.up = this.up.bind(this));
     this.extend = startEvent.shiftKey;
-    this.multiple = view.state.facet(state_dist/* EditorState.allowMultipleSelections */.yy.allowMultipleSelections) && addsSelectionRange(view, startEvent);
+    this.multiple = view.state.facet(state_dist/* EditorState */.yy.allowMultipleSelections) && addsSelectionRange(view, startEvent);
     this.dragMove = dragMovesSelection(view, startEvent);
     this.dragging = isInPrimarySelection(view, startEvent) && getClickType(startEvent) == 1 ? null : false;
   }
@@ -15972,18 +17977,18 @@ class MouseSelection {
         updated = null;
       if (range.empty) {
         let pos = skipAtomicRanges(this.atoms, range.from, 0);
-        if (pos != range.from) updated = state_dist/* EditorSelection.cursor */.jT.cursor(pos, -1);
+        if (pos != range.from) updated = state_dist/* EditorSelection */.jT.cursor(pos, -1);
       } else {
         let from = skipAtomicRanges(this.atoms, range.from, -1);
         let to = skipAtomicRanges(this.atoms, range.to, 1);
-        if (from != range.from || to != range.to) updated = state_dist/* EditorSelection.range */.jT.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
+        if (from != range.from || to != range.to) updated = state_dist/* EditorSelection */.jT.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
       }
       if (updated) {
         if (!ranges) ranges = sel.ranges.slice();
         ranges[i] = updated;
       }
     }
-    return ranges ? state_dist/* EditorSelection.create */.jT.create(ranges, sel.mainIndex) : sel;
+    return ranges ? state_dist/* EditorSelection */.jT.create(ranges, sel.mainIndex) : sel;
   }
   select(event) {
     let {
@@ -16067,7 +18072,7 @@ function doPaste(view, input) {
           from: line.from,
           insert
         },
-        range: state_dist/* EditorSelection.cursor */.jT.cursor(range.from + insert.length)
+        range: state_dist/* EditorSelection */.jT.cursor(range.from + insert.length)
       };
     });
   } else if (byLine) {
@@ -16079,7 +18084,7 @@ function doPaste(view, input) {
           to: range.to,
           insert: line.text
         },
-        range: state_dist/* EditorSelection.cursor */.jT.cursor(range.from + line.length)
+        range: state_dist/* EditorSelection */.jT.cursor(range.from + line.length)
       };
     });
   } else {
@@ -16108,8 +18113,8 @@ handlers.mousedown = (view, event) => {
   view.observer.flush();
   if (view.inputState.lastTouchTime > Date.now() - 2000) return;
   let style = null;
-  for (var _iterator21 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step21; !(_step21 = _iterator21()).done;) {
-    let makeStyle = _step21.value;
+  for (var _iterator22 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step22; !(_step22 = _iterator22()).done;) {
+    let makeStyle = _step22.value;
     style = makeStyle(view, event);
     if (style) break;
   }
@@ -16123,7 +18128,7 @@ handlers.mousedown = (view, event) => {
 };
 function rangeForClick(view, pos, bias, type) {
   if (type == 1) {
-    return state_dist/* EditorSelection.cursor */.jT.cursor(pos, bias);
+    return state_dist/* EditorSelection */.jT.cursor(pos, bias);
   } else if (type == 2) {
     return groupAt(view.state, pos, bias);
   } else {
@@ -16132,7 +18137,7 @@ function rangeForClick(view, pos, bias, type) {
     let from = visual ? visual.posAtStart : line.from,
       to = visual ? visual.posAtEnd : line.to;
     if (to < view.state.doc.length && to == line.to) to++;
-    return state_dist/* EditorSelection.range */.jT.range(from, to);
+    return state_dist/* EditorSelection */.jT.range(from, to);
   }
 }
 let insideY = (y, rect) => y >= rect.top && y <= rect.bottom;
@@ -16190,9 +18195,9 @@ function basicMouseSelection(view, event) {
         let startRange = rangeForClick(view, start.pos, start.bias, type);
         let from = Math.min(startRange.from, range.from),
           to = Math.max(startRange.to, range.to);
-        range = from < range.from ? state_dist/* EditorSelection.range */.jT.range(from, to) : state_dist/* EditorSelection.range */.jT.range(to, from);
+        range = from < range.from ? state_dist/* EditorSelection */.jT.range(from, to) : state_dist/* EditorSelection */.jT.range(to, from);
       }
-      if (extend) return startSel.replaceRange(startSel.main.extend(range.from, range.to));else if (multiple && type == 1 && startSel.ranges.length > 1 && (removed = removeRangeAround(startSel, cur.pos))) return removed;else if (multiple) return startSel.addRange(range);else return state_dist/* EditorSelection.create */.jT.create([range]);
+      if (extend) return startSel.replaceRange(startSel.main.extend(range.from, range.to));else if (multiple && type == 1 && startSel.ranges.length > 1 && (removed = removeRangeAround(startSel, cur.pos))) return removed;else if (multiple) return startSel.addRange(range);else return state_dist/* EditorSelection */.jT.create([range]);
     }
   };
 }
@@ -16202,7 +18207,7 @@ function removeRangeAround(sel, pos) {
       from,
       to
     } = sel.ranges[i];
-    if (from <= pos && to >= pos) return state_dist/* EditorSelection.create */.jT.create(sel.ranges.slice(0, i).concat(sel.ranges.slice(i + 1)), sel.mainIndex == i ? 0 : sel.mainIndex - (sel.mainIndex > i ? 1 : 0));
+    if (from <= pos && to >= pos) return state_dist/* EditorSelection */.jT.create(sel.ranges.slice(0, i).concat(sel.ranges.slice(i + 1)), sel.mainIndex == i ? 0 : sel.mainIndex - (sel.mainIndex > i ? 1 : 0));
   }
   return null;
 }
@@ -16303,8 +18308,8 @@ function copiedRange(state) {
   let content = [],
     ranges = [],
     linewise = false;
-  for (var _iterator22 = _createForOfIteratorHelperLoose(state.selection.ranges), _step22; !(_step22 = _iterator22()).done;) {
-    let range = _step22.value;
+  for (var _iterator23 = _createForOfIteratorHelperLoose(state.selection.ranges), _step23; !(_step23 = _iterator23()).done;) {
+    let range = _step23.value;
     if (!range.empty) {
       content.push(state.sliceDoc(range.from, range.to));
       ranges.push(range);
@@ -16312,10 +18317,10 @@ function copiedRange(state) {
   }
   if (!content.length) {
     let upto = -1;
-    for (var _iterator23 = _createForOfIteratorHelperLoose(state.selection.ranges), _step23; !(_step23 = _iterator23()).done;) {
+    for (var _iterator24 = _createForOfIteratorHelperLoose(state.selection.ranges), _step24; !(_step24 = _iterator24()).done;) {
       let {
         from
-      } = _step23.value;
+      } = _step24.value;
       let line = state.doc.lineAt(from);
       if (line.number > upto) {
         content.push(line.text);
@@ -16357,11 +18362,11 @@ handlers.copy = handlers.cut = (view, event) => {
     userEvent: "delete.cut"
   });
 };
-const isFocusChange = state_dist/* Annotation.define */.q6.define();
+const isFocusChange = state_dist/* Annotation */.q6.define();
 function focusChangeTransaction(state, focus) {
   let effects = [];
-  for (var _iterator24 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step24; !(_step24 = _iterator24()).done;) {
-    let getEffect = _step24.value;
+  for (var _iterator25 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step25; !(_step25 = _iterator25()).done;) {
+    let getEffect = _step25.value;
     let effect = getEffect(state, focus);
     if (effect) effects.push(effect);
   }
@@ -16437,7 +18442,7 @@ const wrappingWhiteSpace = ["pre-wrap", "normal", "pre-line", "break-spaces"];
 class HeightOracle {
   constructor(lineWrapping) {
     this.lineWrapping = lineWrapping;
-    this.doc = state_dist/* Text.empty */.xv.empty;
+    this.doc = state_dist/* Text */.xv.empty;
     this.heightSamples = {};
     this.lineHeight = 14;
     this.charWidth = 7;
@@ -16504,20 +18509,15 @@ class MeasuredHeights {
   }
 }
 class BlockInfo {
-  constructor(from, length, top, height, children, deco) {
+  constructor(from, length, top, height, _content) {
     this.from = from;
     this.length = length;
     this.top = top;
     this.height = height;
-    this.children = children;
-    this.deco = deco;
+    this._content = _content;
   }
   get type() {
-    var _a, _b, _c;
-    return (_c = (_a = this.children) !== null && _a !== void 0 ? _a : (_b = this.deco) === null || _b === void 0 ? void 0 : _b.type) !== null && _c !== void 0 ? _c : BlockType.Text;
-  }
-  get widget() {
-    return this.deco && this.deco.widget;
+    return typeof this._content == "number" ? BlockType.Text : Array.isArray(this._content) ? this._content : this._content.type;
   }
   get to() {
     return this.from + this.length;
@@ -16525,9 +18525,15 @@ class BlockInfo {
   get bottom() {
     return this.top + this.height;
   }
+  get widget() {
+    return this._content instanceof PointDecoration ? this._content.widget : null;
+  }
+  get widgetLineBreaks() {
+    return typeof this._content == "number" ? this._content : 0;
+  }
   join(other) {
-    let children = (this.children || [this]).concat(other.children || [other]);
-    return new BlockInfo(this.from, this.length + other.length, this.top, this.height + other.height, children, null);
+    let content = (Array.isArray(this._content) ? this._content : [this]).concat(Array.isArray(other._content) ? other._content : [other]);
+    return new BlockInfo(this.from, this.length + other.length, this.top, this.height + other.height, content);
   }
 }
 var QueryType = function (QueryType) {
@@ -16644,7 +18650,7 @@ class HeightMapBlock extends HeightMap {
     this.deco = deco;
   }
   blockAt(_height, _oracle, top, offset) {
-    return new BlockInfo(offset, this.length, top, this.height, null, this.deco);
+    return new BlockInfo(offset, this.length, top, this.height, this.deco || 0);
   }
   lineAt(_value, _type, oracle, top, offset) {
     return this.blockAt(0, oracle, top, offset);
@@ -16672,6 +18678,10 @@ class HeightMapText extends HeightMapBlock {
     super(length, height, null);
     this.collapsed = 0;
     this.widgetHeight = 0;
+    this.breaks = 0;
+  }
+  blockAt(_height, _oracle, top, offset) {
+    return new BlockInfo(offset, this.length, top, this.height, this.breaks);
   }
   replace(_from, _to, nodes) {
     let node = nodes[0];
@@ -16690,7 +18700,7 @@ class HeightMapText extends HeightMapBlock {
     if (force === void 0) {
       force = false;
     }
-    if (measured && measured.from <= offset && measured.more) this.setHeight(oracle, measured.heights[measured.index++]);else if (force || this.outdated) this.setHeight(oracle, Math.max(this.widgetHeight, oracle.heightForLine(this.length - this.collapsed)));
+    if (measured && measured.from <= offset && measured.more) this.setHeight(oracle, measured.heights[measured.index++]);else if (force || this.outdated) this.setHeight(oracle, Math.max(this.widgetHeight, oracle.heightForLine(this.length - this.collapsed)) + this.breaks * oracle.lineHeight);
     this.outdated = false;
     return this;
   }
@@ -16734,14 +18744,14 @@ class HeightMapGap extends HeightMap {
       let line = oracle.doc.lineAt(guess),
         lineHeight = perLine + line.length * perChar;
       let lineTop = Math.max(top, height - lineHeight / 2);
-      return new BlockInfo(line.from, line.length, lineTop, lineHeight, null, null);
+      return new BlockInfo(line.from, line.length, lineTop, lineHeight, 0);
     } else {
       let line = Math.max(0, Math.min(lastLine - firstLine, Math.floor((height - top) / perLine)));
       let {
         from,
         length
       } = oracle.doc.line(firstLine + line);
-      return new BlockInfo(from, length, top + perLine * line, perLine, null, null);
+      return new BlockInfo(from, length, top + perLine * line, perLine, 0);
     }
   }
   lineAt(value, type, oracle, top, offset) {
@@ -16751,7 +18761,7 @@ class HeightMapGap extends HeightMap {
         from,
         to
       } = oracle.doc.lineAt(value);
-      return new BlockInfo(from, to - from, 0, 0, null, null);
+      return new BlockInfo(from, to - from, 0, 0, 0);
     }
     let {
       firstLine,
@@ -16762,7 +18772,7 @@ class HeightMapGap extends HeightMap {
       lineHeight = perLine + line.length * perChar;
     let linesAbove = line.number - firstLine;
     let lineTop = top + perLine * linesAbove + perChar * (line.from - offset - linesAbove);
-    return new BlockInfo(line.from, line.length, Math.max(top, Math.min(lineTop, top + this.height - lineHeight)), lineHeight, null, null);
+    return new BlockInfo(line.from, line.length, Math.max(top, Math.min(lineTop, top + this.height - lineHeight)), lineHeight, 0);
   }
   forEachLine(from, to, oracle, top, offset, f) {
     from = Math.max(from, offset);
@@ -16779,7 +18789,7 @@ class HeightMapGap extends HeightMap {
         lineTop += perLine * linesAbove + perChar * (from - offset - linesAbove);
       }
       let lineHeight = perLine + perChar * line.length;
-      f(new BlockInfo(line.from, line.length, lineTop, lineHeight, null, null));
+      f(new BlockInfo(line.from, line.length, lineTop, lineHeight, 0));
       lineTop += lineHeight;
       pos = line.to + 1;
     }
@@ -16882,8 +18892,8 @@ class HeightMapBranch extends HeightMap {
     let result = [];
     if (from > 0) this.decomposeLeft(from, result);
     let left = result.length;
-    for (var _iterator25 = _createForOfIteratorHelperLoose(nodes), _step25; !(_step25 = _iterator25()).done;) {
-      let node = _step25.value;
+    for (var _iterator26 = _createForOfIteratorHelperLoose(nodes), _step26; !(_step26 = _iterator26()).done;) {
+      let node = _step26.value;
       result.push(node);
     }
     if (from > 0) mergeGaps(result, left - 1);
@@ -16981,12 +18991,13 @@ class NodeBuilder {
   point(from, to, deco) {
     if (from < to || deco.heightRelevant) {
       let height = deco.widget ? deco.widget.estimatedHeight : 0;
+      let breaks = deco.widget ? deco.widget.lineBreaks : 0;
       if (height < 0) height = this.oracle.lineHeight;
       let len = to - from;
       if (deco.block) {
         this.addBlock(new HeightMapBlock(len, height, deco));
-      } else if (len || height >= relevantWidgetHeight) {
-        this.addLineDeco(height, len);
+      } else if (len || breaks || height >= relevantWidgetHeight) {
+        this.addLineDeco(height, breaks, len);
       }
     } else if (to > from) {
       this.span(from, to);
@@ -17030,19 +19041,20 @@ class NodeBuilder {
     this.writtenTo = this.pos = this.pos + block.length;
     if (type != BlockType.WidgetBefore) this.covering = block;
   }
-  addLineDeco(height, length) {
+  addLineDeco(height, breaks, length) {
     let line = this.ensureLine();
     line.length += length;
     line.collapsed += length;
     line.widgetHeight = Math.max(line.widgetHeight, height);
+    line.breaks += breaks;
     this.writtenTo = this.pos = this.pos + length;
   }
   finish(from) {
     let last = this.nodes.length == 0 ? null : this.nodes[this.nodes.length - 1];
     if (this.lineStart > -1 && !(last instanceof HeightMapText) && !this.isCovered) this.nodes.push(new HeightMapText(0, -1));else if (this.writtenTo < this.pos || last == null) this.nodes.push(this.blankContent(this.writtenTo, this.pos));
     let pos = from;
-    for (var _iterator26 = _createForOfIteratorHelperLoose(this.nodes), _step26; !(_step26 = _iterator26()).done;) {
-      let node = _step26.value;
+    for (var _iterator27 = _createForOfIteratorHelperLoose(this.nodes), _step27; !(_step27 = _iterator27()).done;) {
+      let node = _step27.value;
       if (node instanceof HeightMapText) node.updateHeight(this.oracle, pos);
       pos += node ? node.length : 1;
     }
@@ -17050,13 +19062,13 @@ class NodeBuilder {
   }
   static build(oracle, decorations, from, to) {
     let builder = new NodeBuilder(from, oracle);
-    state_dist/* RangeSet.spans */.Xs.spans(decorations, from, to, builder, 0);
+    state_dist/* RangeSet */.Xs.spans(decorations, from, to, builder, 0);
     return builder.finish(from);
   }
 }
 function heightRelevantDecoChanges(a, b, diff) {
   let comp = new DecorationComparator();
-  state_dist/* RangeSet.compare */.Xs.compare(a, b, diff, comp, 0);
+  state_dist/* RangeSet */.Xs.compare(a, b, diff, comp, 0);
   return comp.changes;
 }
 class DecorationComparator {
@@ -17171,6 +19183,10 @@ class ViewState {
     this.contentDOMHeight = 0;
     this.editorHeight = 0;
     this.editorWidth = 0;
+    this.scrollTop = 0;
+    this.scrolledToBottom = true;
+    this.scrollAnchorPos = 0;
+    this.scrollAnchorHeight = -1;
     this.scaler = IdScaler;
     this.scrollTarget = null;
     this.printing = false;
@@ -17181,7 +19197,7 @@ class ViewState {
     let guessWrapping = state.facet(contentAttributes).some(v => typeof v != "function" && v.class == "cm-lineWrapping");
     this.heightOracle = new HeightOracle(guessWrapping);
     this.stateDeco = state.facet(decorations).filter(d => typeof d != "function");
-    this.heightMap = HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text.empty */.xv.empty, this.heightOracle.setDoc(state.doc), [new ChangedRange(0, 0, 0, state.doc.length)]);
+    this.heightMap = HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.xv.empty, this.heightOracle.setDoc(state.doc), [new ChangedRange(0, 0, 0, state.doc.length)]);
     this.viewport = this.getViewport(0, null);
     this.updateViewportLines();
     this.updateForViewport();
@@ -17227,10 +19243,18 @@ class ViewState {
     let prevDeco = this.stateDeco;
     this.stateDeco = this.state.facet(decorations).filter(d => typeof d != "function");
     let contentChanges = update.changedRanges;
-    let heightChanges = ChangedRange.extendWithRanges(contentChanges, heightRelevantDecoChanges(prevDeco, this.stateDeco, update ? update.changes : state_dist/* ChangeSet.empty */.as.empty(this.state.doc.length)));
+    let heightChanges = ChangedRange.extendWithRanges(contentChanges, heightRelevantDecoChanges(prevDeco, this.stateDeco, update ? update.changes : state_dist/* ChangeSet */.as.empty(this.state.doc.length)));
     let prevHeight = this.heightMap.height;
+    let scrollAnchor = this.scrolledToBottom ? null : this.lineBlockAtHeight(this.scrollTop);
     this.heightMap = this.heightMap.applyChanges(this.stateDeco, update.startState.doc, this.heightOracle.setDoc(this.state.doc), heightChanges);
     if (this.heightMap.height != prevHeight) update.flags |= 2;
+    if (scrollAnchor) {
+      this.scrollAnchorPos = update.changes.mapPos(scrollAnchor.from, -1);
+      this.scrollAnchorHeight = scrollAnchor.top;
+    } else {
+      this.scrollAnchorPos = -1;
+      this.scrollAnchorHeight = this.heightMap.height;
+    }
     let viewport = heightChanges.length ? this.mapViewport(this.viewport, update.changes) : this.viewport;
     if (scrollTarget && (scrollTarget.range.head < viewport.from || scrollTarget.range.head > viewport.to) || !this.viewportIsAppropriate(viewport)) viewport = this.getViewport(0, scrollTarget);
     let updateLines = !update.changes.empty || update.flags & 2 || viewport.from != this.viewport.from || viewport.to != this.viewport.to;
@@ -17267,6 +19291,11 @@ class ViewState {
       this.editorWidth = view.scrollDOM.clientWidth;
       result |= 8;
     }
+    if (this.scrollTop != view.scrollDOM.scrollTop) {
+      this.scrollAnchorHeight = -1;
+      this.scrollTop = view.scrollDOM.scrollTop;
+    }
+    this.scrolledToBottom = this.scrollTop > view.scrollDOM.scrollHeight - view.scrollDOM.clientHeight - 4;
     let pixelViewport = (this.printing ? fullPixelRange : visiblePixelRange)(dom, this.paddingTop);
     let dTop = pixelViewport.top - this.pixelViewport.top,
       dBottom = pixelViewport.bottom - this.pixelViewport.bottom;
@@ -17300,10 +19329,10 @@ class ViewState {
       }
       if (dTop > 0 && dBottom > 0) bias = Math.max(dTop, dBottom);else if (dTop < 0 && dBottom < 0) bias = Math.min(dTop, dBottom);
       oracle.heightChanged = false;
-      for (var _iterator27 = _createForOfIteratorHelperLoose(this.viewports), _step27; !(_step27 = _iterator27()).done;) {
-        let vp = _step27.value;
+      for (var _iterator28 = _createForOfIteratorHelperLoose(this.viewports), _step28; !(_step28 = _iterator28()).done;) {
+        let vp = _step28.value;
         let heights = vp.from == this.viewport.from ? lineHeights : view.docView.measureVisibleLineHeights(vp);
-        this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text.empty */.xv.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
+        this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.xv.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
       }
       if (oracle.heightChanged) result |= 2;
     }
@@ -17377,8 +19406,8 @@ class ViewState {
   mapLineGaps(gaps, changes) {
     if (!gaps.length || changes.empty) return gaps;
     let mapped = [];
-    for (var _iterator28 = _createForOfIteratorHelperLoose(gaps), _step28; !(_step28 = _iterator28()).done;) {
-      let gap = _step28.value;
+    for (var _iterator29 = _createForOfIteratorHelperLoose(gaps), _step29; !(_step29 = _iterator29()).done;) {
+      let gap = _step29.value;
       if (!changes.touchesRange(gap.from, gap.to)) mapped.push(new LineGap(changes.mapPos(gap.from), changes.mapPos(gap.to), gap.size));
     }
     return mapped;
@@ -17406,15 +19435,15 @@ class ViewState {
       let gap = find(current, gap => gap.from >= line.from && gap.to <= line.to && Math.abs(gap.from - from) < halfMargin && Math.abs(gap.to - to) < halfMargin && !avoid.some(pos => gap.from < pos && gap.to > pos));
       if (!gap) {
         if (to < line.to && mayMeasure && wrapping && mayMeasure.visibleRanges.some(r => r.from <= to && r.to >= to)) {
-          let lineStart = mayMeasure.moveToLineBoundary(state_dist/* EditorSelection.cursor */.jT.cursor(to), false, true).head;
+          let lineStart = mayMeasure.moveToLineBoundary(state_dist/* EditorSelection */.jT.cursor(to), false, true).head;
           if (lineStart > from) to = lineStart;
         }
         gap = new LineGap(from, to, this.gapSize(line, from, to, structure));
       }
       gaps.push(gap);
     };
-    for (var _iterator29 = _createForOfIteratorHelperLoose(this.viewportLines), _step29; !(_step29 = _iterator29()).done;) {
-      let line = _step29.value;
+    for (var _iterator30 = _createForOfIteratorHelperLoose(this.viewportLines), _step30; !(_step30 = _iterator30()).done;) {
+      let line = _step30.value;
       if (line.length < doubleMargin) continue;
       let structure = lineStructure(line.from, line.to, this.stateDeco);
       if (structure.total < doubleMargin) continue;
@@ -17473,7 +19502,7 @@ class ViewState {
     let deco = this.stateDeco;
     if (this.lineGaps.length) deco = deco.concat(this.lineGapDeco);
     let ranges = [];
-    state_dist/* RangeSet.spans */.Xs.spans(deco, this.viewport.from, this.viewport.to, {
+    state_dist/* RangeSet */.Xs.spans(deco, this.viewport.from, this.viewport.to, {
       span(from, to) {
         ranges.push({
           from,
@@ -17512,7 +19541,7 @@ function lineStructure(from, to, stateDeco) {
   let ranges = [],
     pos = from,
     total = 0;
-  state_dist/* RangeSet.spans */.Xs.spans(stateDeco, from, to, {
+  state_dist/* RangeSet */.Xs.spans(stateDeco, from, to, {
     span() {},
     point(from, to) {
       if (from > pos) {
@@ -17557,11 +19586,11 @@ function findPosition(_ref4, ratio) {
 }
 function findFraction(structure, pos) {
   let counted = 0;
-  for (var _iterator30 = _createForOfIteratorHelperLoose(structure.ranges), _step30; !(_step30 = _iterator30()).done;) {
+  for (var _iterator31 = _createForOfIteratorHelperLoose(structure.ranges), _step31; !(_step31 = _iterator31()).done;) {
     let {
       from,
       to
-    } = _step30.value;
+    } = _step31.value;
     if (pos <= to) {
       counted += pos - from;
       break;
@@ -17571,8 +19600,8 @@ function findFraction(structure, pos) {
   return counted / structure.total;
 }
 function find(array, f) {
-  for (var _iterator31 = _createForOfIteratorHelperLoose(array), _step31; !(_step31 = _iterator31()).done;) {
-    let val = _step31.value;
+  for (var _iterator32 = _createForOfIteratorHelperLoose(array), _step32; !(_step32 = _iterator32()).done;) {
+    let val = _step32.value;
     if (f(val)) return val;
   }
   return undefined;
@@ -17609,8 +19638,8 @@ class BigScaler {
       };
     });
     this.scale = (7000000 - vpHeight) / (heightMap.height - vpHeight);
-    for (var _iterator32 = _createForOfIteratorHelperLoose(this.viewports), _step32; !(_step32 = _iterator32()).done;) {
-      let obj = _step32.value;
+    for (var _iterator33 = _createForOfIteratorHelperLoose(this.viewports), _step33; !(_step33 = _iterator33()).done;) {
+      let obj = _step33.value;
       obj.domTop = domBase + (obj.top - base) * this.scale;
       domBase = obj.domBottom = obj.domTop + (obj.bottom - obj.top);
       base = obj.bottom;
@@ -17639,17 +19668,17 @@ function scaleBlock(block, scaler) {
   if (scaler.scale == 1) return block;
   let bTop = scaler.toDOM(block.top),
     bBottom = scaler.toDOM(block.bottom);
-  return new BlockInfo(block.from, block.length, bTop, bBottom - bTop, block.children && block.children.map(b => scaleBlock(b, scaler)), block.deco);
+  return new BlockInfo(block.from, block.length, bTop, bBottom - bTop, Array.isArray(block._content) ? block._content.map(b => scaleBlock(b, scaler)) : block._content);
 }
-const theme = state_dist/* Facet.define */.r$.define({
+const theme = state_dist/* Facet */.r$.define({
   combine: strs => strs.join(" ")
 });
-const darkTheme = state_dist/* Facet.define */.r$.define({
+const darkTheme = state_dist/* Facet */.r$.define({
   combine: values => values.indexOf(true) > -1
 });
-const baseThemeID = style_mod/* StyleModule.newName */.V.newName(),
-  baseLightID = style_mod/* StyleModule.newName */.V.newName(),
-  baseDarkID = style_mod/* StyleModule.newName */.V.newName();
+const baseThemeID = style_mod/* StyleModule */.V.newName(),
+  baseLightID = style_mod/* StyleModule */.V.newName(),
+  baseDarkID = style_mod/* StyleModule */.V.newName();
 const lightDarkIDs = {
   "&light": "." + baseLightID,
   "&dark": "." + baseDarkID
@@ -17934,7 +19963,7 @@ class DOMChange {
       let domSel = view.observer.selectionRange;
       let head = iHead && iHead.node == domSel.focusNode && iHead.offset == domSel.focusOffset || !contains(view.contentDOM, domSel.focusNode) ? view.state.selection.main.head : view.docView.posFromDOM(domSel.focusNode, domSel.focusOffset);
       let anchor = iAnchor && iAnchor.node == domSel.anchorNode && iAnchor.offset == domSel.anchorOffset || !contains(view.contentDOM, domSel.anchorNode) ? view.state.selection.main.anchor : view.docView.posFromDOM(domSel.anchorNode, domSel.anchorOffset);
-      this.newSel = state_dist/* EditorSelection.single */.jT.single(anchor, head);
+      this.newSel = state_dist/* EditorSelection */.jT.single(anchor, head);
     }
   }
 }
@@ -17962,7 +19991,7 @@ function applyDOMChange(view, domChange) {
       change = {
         from: from + diff.from,
         to: from + diff.toA,
-        insert: state_dist/* Text.of */.xv.of(domChange.text.slice(diff.from, diff.toB).split(LineBreakPlaceholder))
+        insert: state_dist/* Text */.xv.of(domChange.text.slice(diff.from, diff.toB).split(LineBreakPlaceholder))
       };
     }
   } else if (newSel && (!view.hasFocus && view.state.facet(editable) || newSel.main.eq(sel))) {
@@ -17982,18 +20011,18 @@ function applyDOMChange(view, domChange) {
       insert: view.state.doc.slice(sel.from, change.from).append(change.insert).append(view.state.doc.slice(change.to, sel.to))
     };
   } else if ((browser.mac || browser.android) && change && change.from == change.to && change.from == sel.head - 1 && /^\. ?$/.test(change.insert.toString()) && view.contentDOM.getAttribute("autocorrect") == "off") {
-    if (newSel && change.insert.length == 2) newSel = state_dist/* EditorSelection.single */.jT.single(newSel.main.anchor - 1, newSel.main.head - 1);
+    if (newSel && change.insert.length == 2) newSel = state_dist/* EditorSelection */.jT.single(newSel.main.anchor - 1, newSel.main.head - 1);
     change = {
       from: sel.from,
       to: sel.to,
-      insert: state_dist/* Text.of */.xv.of([" "])
+      insert: state_dist/* Text */.xv.of([" "])
     };
   } else if (browser.chrome && change && change.from == change.to && change.from == sel.head && change.insert.toString() == "\n " && view.lineWrapping) {
-    if (newSel) newSel = state_dist/* EditorSelection.single */.jT.single(newSel.main.anchor - 1, newSel.main.head - 1);
+    if (newSel) newSel = state_dist/* EditorSelection */.jT.single(newSel.main.anchor - 1, newSel.main.head - 1);
     change = {
       from: sel.from,
       to: sel.to,
-      insert: state_dist/* Text.of */.xv.of([" "])
+      insert: state_dist/* Text */.xv.of([" "])
     };
   }
   if (change) {
@@ -18034,7 +20063,7 @@ function applyDOMChange(view, domChange) {
             selOff = range.to - sel.to;
           return {
             changes: rangeChanges,
-            range: !mainSel ? range.map(rangeChanges) : state_dist/* EditorSelection.range */.jT.range(Math.max(0, mainSel.anchor + selOff), Math.max(0, mainSel.head + selOff))
+            range: !mainSel ? range.map(rangeChanges) : state_dist/* EditorSelection */.jT.range(Math.max(0, mainSel.anchor + selOff), Math.max(0, mainSel.head + selOff))
           };
         });
       } else {
@@ -18126,7 +20155,7 @@ function selectionFromPoints(points, base) {
   if (points.length == 0) return null;
   let anchor = points[0].pos,
     head = points.length == 2 ? points[1].pos : anchor;
-  return anchor > -1 && head > -1 ? state_dist/* EditorSelection.single */.jT.single(anchor + base, head + base) : null;
+  return anchor > -1 && head > -1 ? state_dist/* EditorSelection */.jT.single(anchor + base, head + base) : null;
 }
 const observeOptions = {
   childList: true,
@@ -18158,8 +20187,8 @@ class DOMObserver {
     this.parentCheck = -1;
     this.dom = view.contentDOM;
     this.observer = new MutationObserver(mutations => {
-      for (var _iterator33 = _createForOfIteratorHelperLoose(mutations), _step33; !(_step33 = _iterator33()).done;) {
-        let mut = _step33.value;
+      for (var _iterator34 = _createForOfIteratorHelperLoose(mutations), _step34; !(_step34 = _iterator34()).done;) {
+        let mut = _step34.value;
         this.queue.push(mut);
       }
       if ((browser.ie && browser.ie_version <= 11 || browser.ios && view.composing) && mutations.some(m => m.type == "childList" && m.removedNodes.length || m.type == "characterData" && m.oldValue.length > m.target.nodeValue.length)) this.flushSoon();else this.flush();
@@ -18230,8 +20259,8 @@ class DOMObserver {
   updateGaps(gaps) {
     if (this.gapIntersection && (gaps.length != this.gaps.length || this.gaps.some((g, i) => g != gaps[i]))) {
       this.gapIntersection.disconnect();
-      for (var _iterator34 = _createForOfIteratorHelperLoose(gaps), _step34; !(_step34 = _iterator34()).done;) {
-        let gap = _step34.value;
+      for (var _iterator35 = _createForOfIteratorHelperLoose(gaps), _step35; !(_step35 = _iterator35()).done;) {
+        let gap = _step35.value;
         this.gapIntersection.observe(gap);
       }
       this.gaps = gaps;
@@ -18292,12 +20321,12 @@ class DOMObserver {
     }
     if (i < this.scrollTargets.length && !changed) changed = this.scrollTargets.slice(0, i);
     if (changed) {
-      for (var _iterator35 = _createForOfIteratorHelperLoose(this.scrollTargets), _step35; !(_step35 = _iterator35()).done;) {
-        let dom = _step35.value;
+      for (var _iterator36 = _createForOfIteratorHelperLoose(this.scrollTargets), _step36; !(_step36 = _iterator36()).done;) {
+        let dom = _step36.value;
         dom.removeEventListener("scroll", this.onScroll);
       }
-      for (var _iterator36 = _createForOfIteratorHelperLoose(this.scrollTargets = changed), _step36; !(_step36 = _iterator36()).done;) {
-        let dom = _step36.value;
+      for (var _iterator37 = _createForOfIteratorHelperLoose(this.scrollTargets = changed), _step37; !(_step37 = _iterator37()).done;) {
+        let dom = _step37.value;
         dom.addEventListener("scroll", this.onScroll);
       }
     }
@@ -18369,8 +20398,8 @@ class DOMObserver {
     this.flush();
   }
   pendingRecords() {
-    for (var _iterator37 = _createForOfIteratorHelperLoose(this.observer.takeRecords()), _step37; !(_step37 = _iterator37()).done;) {
-      let mut = _step37.value;
+    for (var _iterator38 = _createForOfIteratorHelperLoose(this.observer.takeRecords()), _step38; !(_step38 = _iterator38()).done;) {
+      let mut = _step38.value;
       this.queue.push(mut);
     }
     return this.queue;
@@ -18381,8 +20410,8 @@ class DOMObserver {
     let from = -1,
       to = -1,
       typeOver = false;
-    for (var _iterator38 = _createForOfIteratorHelperLoose(records), _step38; !(_step38 = _iterator38()).done;) {
-      let record = _step38.value;
+    for (var _iterator39 = _createForOfIteratorHelperLoose(records), _step39; !(_step39 = _iterator39()).done;) {
+      let record = _step39.value;
       let range = this.readMutation(record);
       if (!range) continue;
       if (range.typeOver) typeOver = true;
@@ -18477,8 +20506,8 @@ class DOMObserver {
     (_b = this.gapIntersection) === null || _b === void 0 ? void 0 : _b.disconnect();
     (_c = this.resizeScroll) === null || _c === void 0 ? void 0 : _c.disconnect();
     (_d = this.resizeContent) === null || _d === void 0 ? void 0 : _d.disconnect();
-    for (var _iterator39 = _createForOfIteratorHelperLoose(this.scrollTargets), _step39; !(_step39 = _iterator39()).done;) {
-      let dom = _step39.value;
+    for (var _iterator40 = _createForOfIteratorHelperLoose(this.scrollTargets), _step40; !(_step40 = _iterator40()).done;) {
+      let dom = _step40.value;
       dom.removeEventListener("scroll", this.onScroll);
     }
     this.removeWindowListeners(this.win);
@@ -18549,10 +20578,10 @@ class EditorView {
     this._dispatch = config.dispatch || (tr => this.update([tr]));
     this.dispatch = this.dispatch.bind(this);
     this._root = config.root || getRoot(config.parent) || document;
-    this.viewState = new ViewState(config.state || state_dist/* EditorState.create */.yy.create(config));
+    this.viewState = new ViewState(config.state || state_dist/* EditorState */.yy.create(config));
     this.plugins = this.state.facet(viewPlugin).map(spec => new PluginInstance(spec));
-    for (var _iterator40 = _createForOfIteratorHelperLoose(this.plugins), _step40; !(_step40 = _iterator40()).done;) {
-      let plugin = _step40.value;
+    for (var _iterator41 = _createForOfIteratorHelperLoose(this.plugins), _step41; !(_step41 = _iterator41()).done;) {
+      let plugin = _step41.value;
       plugin.update(this);
     }
     this.observer = new DOMObserver(this);
@@ -18590,7 +20619,8 @@ class EditorView {
     return this.dom.ownerDocument.defaultView || window;
   }
   dispatch() {
-    this._dispatch(arguments.length == 1 && (arguments.length <= 0 ? undefined : arguments[0]) instanceof state_dist/* Transaction */.YW ? arguments.length <= 0 ? undefined : arguments[0] : this.state.update(...arguments));
+    let tr = arguments.length == 1 && (arguments.length <= 0 ? undefined : arguments[0]) instanceof state_dist/* Transaction */.YW ? arguments.length <= 0 ? undefined : arguments[0] : this.state.update(...arguments);
+    this._dispatch(tr, this);
   }
   update(transactions) {
     if (this.updateState != 0) throw new Error("Calls to EditorView.update are not allowed while an update is in progress");
@@ -18598,8 +20628,8 @@ class EditorView {
       attrsChanged = false,
       update;
     let state = this.state;
-    for (var _iterator41 = _createForOfIteratorHelperLoose(transactions), _step41; !(_step41 = _iterator41()).done;) {
-      let tr = _step41.value;
+    for (var _iterator42 = _createForOfIteratorHelperLoose(transactions), _step42; !(_step42 = _iterator42()).done;) {
+      let tr = _step42.value;
       if (tr.startState != state) throw new RangeError("Trying to update state with a transaction that doesn't start from the previous state.");
       state = tr.state;
     }
@@ -18627,23 +20657,23 @@ class EditorView {
     } else {
       this.observer.clear();
     }
-    if (state.facet(state_dist/* EditorState.phrases */.yy.phrases) != this.state.facet(state_dist/* EditorState.phrases */.yy.phrases)) return this.setState(state);
+    if (state.facet(state_dist/* EditorState */.yy.phrases) != this.state.facet(state_dist/* EditorState */.yy.phrases)) return this.setState(state);
     update = ViewUpdate.create(this, state, transactions);
     update.flags |= focusFlag;
     let scrollTarget = this.viewState.scrollTarget;
     try {
       this.updateState = 2;
-      for (var _iterator42 = _createForOfIteratorHelperLoose(transactions), _step42; !(_step42 = _iterator42()).done;) {
-        let tr = _step42.value;
+      for (var _iterator43 = _createForOfIteratorHelperLoose(transactions), _step43; !(_step43 = _iterator43()).done;) {
+        let tr = _step43.value;
         if (scrollTarget) scrollTarget = scrollTarget.map(tr.changes);
         if (tr.scrollIntoView) {
           let {
             main
           } = tr.state.selection;
-          scrollTarget = new ScrollTarget(main.empty ? main : state_dist/* EditorSelection.cursor */.jT.cursor(main.head, main.head > main.anchor ? -1 : 1));
+          scrollTarget = new ScrollTarget(main.empty ? main : state_dist/* EditorSelection */.jT.cursor(main.head, main.head > main.anchor ? -1 : 1));
         }
-        for (var _iterator43 = _createForOfIteratorHelperLoose(tr.effects), _step43; !(_step43 = _iterator43()).done;) {
-          let e = _step43.value;
+        for (var _iterator44 = _createForOfIteratorHelperLoose(tr.effects), _step44; !(_step44 = _iterator44()).done;) {
+          let e = _step44.value;
           if (e.is(scrollIntoView)) scrollTarget = e.value;
         }
       }
@@ -18664,8 +20694,8 @@ class EditorView {
     if (update.startState.facet(theme) != update.state.facet(theme)) this.viewState.mustMeasureContent = true;
     if (redrawn || attrsChanged || scrollTarget || this.viewState.mustEnforceCursorAssoc || this.viewState.mustMeasureContent) this.requestMeasure();
     if (!update.empty) {
-      for (var _iterator44 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step44; !(_step44 = _iterator44()).done;) {
-        let listener = _step44.value;
+      for (var _iterator45 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step45; !(_step45 = _iterator45()).done;) {
+        let listener = _step45.value;
         listener(update);
       }
     }
@@ -18685,15 +20715,15 @@ class EditorView {
     this.updateState = 2;
     let hadFocus = this.hasFocus;
     try {
-      for (var _iterator45 = _createForOfIteratorHelperLoose(this.plugins), _step45; !(_step45 = _iterator45()).done;) {
-        let plugin = _step45.value;
+      for (var _iterator46 = _createForOfIteratorHelperLoose(this.plugins), _step46; !(_step46 = _iterator46()).done;) {
+        let plugin = _step46.value;
         plugin.destroy(this);
       }
       this.viewState = new ViewState(newState);
       this.plugins = newState.facet(viewPlugin).map(spec => new PluginInstance(spec));
       this.pluginMap.clear();
-      for (var _iterator46 = _createForOfIteratorHelperLoose(this.plugins), _step46; !(_step46 = _iterator46()).done;) {
-        let plugin = _step46.value;
+      for (var _iterator47 = _createForOfIteratorHelperLoose(this.plugins), _step47; !(_step47 = _iterator47()).done;) {
+        let plugin = _step47.value;
         plugin.update(this);
       }
       this.docView = new DocView(this);
@@ -18712,8 +20742,8 @@ class EditorView {
       specs = update.state.facet(viewPlugin);
     if (prevSpecs != specs) {
       let newPlugins = [];
-      for (var _iterator47 = _createForOfIteratorHelperLoose(specs), _step47; !(_step47 = _iterator47()).done;) {
-        let spec = _step47.value;
+      for (var _iterator48 = _createForOfIteratorHelperLoose(specs), _step48; !(_step48 = _iterator48()).done;) {
+        let spec = _step48.value;
         let found = prevSpecs.indexOf(spec);
         if (found < 0) {
           newPlugins.push(new PluginInstance(spec));
@@ -18723,16 +20753,16 @@ class EditorView {
           newPlugins.push(plugin);
         }
       }
-      for (var _iterator48 = _createForOfIteratorHelperLoose(this.plugins), _step48; !(_step48 = _iterator48()).done;) {
-        let plugin = _step48.value;
+      for (var _iterator49 = _createForOfIteratorHelperLoose(this.plugins), _step49; !(_step49 = _iterator49()).done;) {
+        let plugin = _step49.value;
         if (plugin.mustUpdate != update) plugin.destroy(this);
       }
       this.plugins = newPlugins;
       this.pluginMap.clear();
       this.inputState.ensureHandlers(this, this.plugins);
     } else {
-      for (var _iterator49 = _createForOfIteratorHelperLoose(this.plugins), _step49; !(_step49 = _iterator49()).done;) {
-        let p = _step49.value;
+      for (var _iterator50 = _createForOfIteratorHelperLoose(this.plugins), _step50; !(_step50 = _iterator50()).done;) {
+        let p = _step50.value;
         p.mustUpdate = update;
       }
     }
@@ -18747,17 +20777,26 @@ class EditorView {
     this.measureScheduled = 0;
     if (flush) this.observer.forceFlush();
     let updated = null;
-    let {
-      scrollHeight,
-      scrollTop,
-      clientHeight
-    } = this.scrollDOM;
-    let refHeight = scrollTop > scrollHeight - clientHeight - 4 ? scrollHeight : scrollTop;
+    let sDOM = this.scrollDOM,
+      {
+        scrollAnchorPos,
+        scrollAnchorHeight
+      } = this.viewState;
+    this.viewState.scrollAnchorHeight = -1;
+    if (scrollAnchorHeight < 0 || sDOM.scrollTop != this.viewState.scrollTop) {
+      if (sDOM.scrollTop > sDOM.scrollHeight - sDOM.clientHeight - 4) {
+        scrollAnchorPos = -1;
+        scrollAnchorHeight = this.viewState.heightMap.height;
+      } else {
+        let block = this.viewState.lineBlockAtHeight(sDOM.scrollTop);
+        scrollAnchorPos = block.from;
+        scrollAnchorHeight = block.top;
+      }
+    }
     try {
       for (let i = 0;; i++) {
         this.updateState = 1;
         let oldViewport = this.viewport;
-        let refBlock = this.viewState.lineBlockAtHeight(refHeight);
         let changed = this.viewState.measure(this);
         if (!changed && !this.measureRequests.length && this.viewState.scrollTarget == null) break;
         if (i > 5) {
@@ -18799,24 +20838,26 @@ class EditorView {
             this.docView.scrollIntoView(this.viewState.scrollTarget);
             this.viewState.scrollTarget = null;
             scrolled = true;
-          } else {
-            let diff = this.viewState.lineBlockAt(refBlock.from).top - refBlock.top;
+          } else if (scrollAnchorHeight > -1) {
+            let newAnchorHeight = scrollAnchorPos < 0 ? this.viewState.heightMap.height : this.viewState.lineBlockAt(scrollAnchorPos).top;
+            let diff = newAnchorHeight - scrollAnchorHeight;
             if (diff > 1 || diff < -1) {
-              this.scrollDOM.scrollTop += diff;
+              sDOM.scrollTop += diff;
               scrolled = true;
             }
           }
         }
         if (redrawn) this.docView.updateSelection(true);
         if (this.viewport.from == oldViewport.from && this.viewport.to == oldViewport.to && !scrolled && this.measureRequests.length == 0) break;
+        scrollAnchorHeight = -1;
       }
     } finally {
       this.updateState = 0;
       this.measureScheduled = -1;
     }
     if (updated && !updated.empty) {
-      for (var _iterator50 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step50; !(_step50 = _iterator50()).done;) {
-        let listener = _step50.value;
+      for (var _iterator51 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step51; !(_step51 = _iterator51()).done;) {
+        let listener = _step51.value;
         listener(updated);
       }
     }
@@ -18852,10 +20893,10 @@ class EditorView {
   }
   showAnnouncements(trs) {
     let first = true;
-    for (var _iterator51 = _createForOfIteratorHelperLoose(trs), _step51; !(_step51 = _iterator51()).done;) {
-      let tr = _step51.value;
-      for (var _iterator52 = _createForOfIteratorHelperLoose(tr.effects), _step52; !(_step52 = _iterator52()).done;) {
-        let effect = _step52.value;
+    for (var _iterator52 = _createForOfIteratorHelperLoose(trs), _step52; !(_step52 = _iterator52()).done;) {
+      let tr = _step52.value;
+      for (var _iterator53 = _createForOfIteratorHelperLoose(tr.effects), _step53; !(_step53 = _iterator53()).done;) {
+        let effect = _step53.value;
         if (effect.is(EditorView.announce)) {
           if (first) this.announceDOM.textContent = "";
           first = false;
@@ -18867,7 +20908,7 @@ class EditorView {
   }
   mountStyles() {
     this.styleModules = this.state.facet(styleModule);
-    style_mod/* StyleModule.mount */.V.mount(this.root, this.styleModules.concat(baseTheme$1).reverse());
+    style_mod/* StyleModule */.V.mount(this.root, this.styleModules.concat(baseTheme$1).reverse());
   }
   readMeasured() {
     if (this.updateState == 2) throw new Error("Reading the editor layout isn't allowed during an update");
@@ -18981,8 +21022,8 @@ class EditorView {
   bidiSpans(line) {
     if (line.length > MaxBidiLine) return trivialOrder(line.length);
     let dir = this.textDirectionAt(line.from);
-    for (var _iterator53 = _createForOfIteratorHelperLoose(this.bidiCache), _step53; !(_step53 = _iterator53()).done;) {
-      let entry = _step53.value;
+    for (var _iterator54 = _createForOfIteratorHelperLoose(this.bidiCache), _step54; !(_step54 = _iterator54()).done;) {
+      let entry = _step54.value;
       if (entry.from == line.from && entry.dir == dir) return entry.order;
     }
     let order = computeOrder(line.text, dir);
@@ -19007,8 +21048,8 @@ class EditorView {
     }
   }
   destroy() {
-    for (var _iterator54 = _createForOfIteratorHelperLoose(this.plugins), _step54; !(_step54 = _iterator54()).done;) {
-      let plugin = _step54.value;
+    for (var _iterator55 = _createForOfIteratorHelperLoose(this.plugins), _step55; !(_step55 = _iterator55()).done;) {
+      let plugin = _step55.value;
       plugin.destroy(this);
     }
     this.plugins = [];
@@ -19022,7 +21063,7 @@ class EditorView {
     if (options === void 0) {
       options = {};
     }
-    return scrollIntoView.of(new ScrollTarget(typeof pos == "number" ? state_dist/* EditorSelection.cursor */.jT.cursor(pos) : pos, options.y, options.x, options.yMargin, options.xMargin));
+    return scrollIntoView.of(new ScrollTarget(typeof pos == "number" ? state_dist/* EditorSelection */.jT.cursor(pos) : pos, options.y, options.x, options.yMargin, options.xMargin));
   }
   static domEventHandlers(handlers) {
     return ViewPlugin.define(() => ({}), {
@@ -19030,13 +21071,13 @@ class EditorView {
     });
   }
   static theme(spec, options) {
-    let prefix = style_mod/* StyleModule.newName */.V.newName();
+    let prefix = style_mod/* StyleModule */.V.newName();
     let result = [theme.of(prefix), styleModule.of(buildTheme(`.${prefix}`, spec))];
     if (options && options.dark) result.push(darkTheme.of(true));
     return result;
   }
   static baseTheme(spec) {
-    return state_dist/* Prec.lowest */.Wl.lowest(styleModule.of(buildTheme("." + baseThemeID, spec, lightDarkIDs)));
+    return state_dist/* Prec */.Wl.lowest(styleModule.of(buildTheme("." + baseThemeID, spec, lightDarkIDs)));
   }
   static findFromDOM(dom) {
     var _a;
@@ -19064,7 +21105,7 @@ EditorView.editorAttributes = editorAttributes;
 EditorView.lineWrapping = EditorView.contentAttributes.of({
   "class": "cm-lineWrapping"
 });
-EditorView.announce = state_dist/* StateEffect.define */.Py.define();
+EditorView.announce = state_dist/* StateEffect */.Py.define();
 const MaxBidiLine = 4096;
 const BadMeasure = {};
 class CachedOrder {
@@ -19118,12 +21159,12 @@ function modifiers(name, event, shift) {
   if (shift !== false && event.shiftKey) name = "Shift-" + name;
   return name;
 }
-const handleKeyEvents = state_dist/* Prec.default */.Wl["default"](EditorView.domEventHandlers({
+const handleKeyEvents = state_dist/* Prec */.Wl.default(EditorView.domEventHandlers({
   keydown(event, view) {
     return runHandlers(getKeymap(view.state), event, view, "editor");
   }
 }));
-const keymap = state_dist/* Facet.define */.r$.define({
+const keymap = state_dist/* Facet */.r$.define({
   enables: handleKeyEvents
 });
 const Keymaps = new WeakMap();
@@ -19179,12 +21220,12 @@ function buildKeymap(bindings, platform) {
     if (command) binding.run.push(command);
     if (preventDefault) binding.preventDefault = true;
   };
-  for (var _iterator55 = _createForOfIteratorHelperLoose(bindings), _step55; !(_step55 = _iterator55()).done;) {
-    let b = _step55.value;
+  for (var _iterator56 = _createForOfIteratorHelperLoose(bindings), _step56; !(_step56 = _iterator56()).done;) {
+    let b = _step56.value;
     let scopes = b.scope ? b.scope.split(" ") : ["editor"];
     if (b.any) {
-      for (var _iterator56 = _createForOfIteratorHelperLoose(scopes), _step56; !(_step56 = _iterator56()).done;) {
-        let scope = _step56.value;
+      for (var _iterator57 = _createForOfIteratorHelperLoose(scopes), _step57; !(_step57 = _iterator57()).done;) {
+        let scope = _step57.value;
         let scopeObj = bound[scope] || (bound[scope] = Object.create(null));
         if (!scopeObj._any) scopeObj._any = {
           preventDefault: false,
@@ -19195,8 +21236,8 @@ function buildKeymap(bindings, platform) {
     }
     let name = b[platform] || b.key;
     if (!name) continue;
-    for (var _iterator57 = _createForOfIteratorHelperLoose(scopes), _step57; !(_step57 = _iterator57()).done;) {
-      let scope = _step57.value;
+    for (var _iterator58 = _createForOfIteratorHelperLoose(scopes), _step58; !(_step58 = _iterator58()).done;) {
+      let scope = _step58.value;
       add(scope, name, b.run, b.preventDefault);
       if (b.shift) add(scope, "Shift-" + name, b.shift, b.preventDefault);
     }
@@ -19216,8 +21257,8 @@ function runHandlers(map, event, view, scope) {
   let ran = new Set();
   let runFor = binding => {
     if (binding) {
-      for (var _iterator58 = _createForOfIteratorHelperLoose(binding.run), _step58; !(_step58 = _iterator58()).done;) {
-        let cmd = _step58.value;
+      for (var _iterator59 = _createForOfIteratorHelperLoose(binding.run), _step59; !(_step59 = _iterator59()).done;) {
+        let cmd = _step59.value;
         if (!ran.has(cmd)) {
           ran.add(cmd);
           if (cmd(view, event)) return true;
@@ -19289,22 +21330,12 @@ function getBase(view) {
   };
 }
 function wrappedLine(view, pos, inside) {
-  let range = state_dist/* EditorSelection.cursor */.jT.cursor(pos);
+  let range = state_dist/* EditorSelection */.jT.cursor(pos);
   return {
     from: Math.max(inside.from, view.moveToLineBoundary(range, false, true).from),
     to: Math.min(inside.to, view.moveToLineBoundary(range, true, true).from),
     type: BlockType.Text
   };
-}
-function blockAt(view, pos) {
-  let line = view.lineBlockAt(pos);
-  if (Array.isArray(line.type)) {
-    for (var _iterator59 = _createForOfIteratorHelperLoose(line.type), _step59; !(_step59 = _iterator59()).done;) {
-      let l = _step59.value;
-      if (l.to > pos || l.to == pos && (l.to == line.to || l.type == BlockType.Text)) return l;
-    }
-  }
-  return line;
 }
 function rectanglesForRange(view, className, range) {
   if (range.to <= view.viewport.from || range.from >= view.viewport.to) return [];
@@ -19322,17 +21353,15 @@ function rectanglesForRange(view, className, range) {
     endBlock = blockAt(view, to);
   let visualStart = startBlock.type == BlockType.Text ? startBlock : null;
   let visualEnd = endBlock.type == BlockType.Text ? endBlock : null;
-  if (view.lineWrapping) {
-    if (visualStart) visualStart = wrappedLine(view, from, visualStart);
-    if (visualEnd) visualEnd = wrappedLine(view, to, visualEnd);
-  }
+  if (visualStart && (view.lineWrapping || startBlock.widgetLineBreaks)) visualStart = wrappedLine(view, from, visualStart);
+  if (visualEnd && (view.lineWrapping || endBlock.widgetLineBreaks)) visualEnd = wrappedLine(view, to, visualEnd);
   if (visualStart && visualEnd && visualStart.from == visualEnd.from) {
     return pieces(drawForLine(range.from, range.to, visualStart));
   } else {
     let top = visualStart ? drawForLine(range.from, null, visualStart) : drawForWidget(startBlock, false);
     let bottom = visualEnd ? drawForLine(null, range.to, visualEnd) : drawForWidget(endBlock, true);
     let between = [];
-    if ((visualStart || startBlock).to < (visualEnd || endBlock).from - (visualStart && visualEnd ? 1 : 0)) between.push(piece(leftSide, top.bottom, rightSide, bottom.top));else if (top.bottom < bottom.top && view.elementAtHeight((top.bottom + bottom.top) / 2).type == BlockType.Text) top.bottom = bottom.top = (top.bottom + bottom.top) / 2;
+    if ((visualStart || startBlock).to < (visualEnd || endBlock).from - (visualStart && visualEnd ? 1 : 0) || startBlock.widgetLineBreaks > 1 && top.bottom + view.defaultLineHeight / 2 < bottom.top) between.push(piece(leftSide, top.bottom, rightSide, bottom.top));else if (top.bottom < bottom.top && view.elementAtHeight((top.bottom + bottom.top) / 2).type == BlockType.Text) top.bottom = bottom.top = (top.bottom + bottom.top) / 2;
     return pieces(top).concat(between).concat(pieces(bottom));
   }
   function piece(left, top, right, bottom) {
@@ -19455,12 +21484,12 @@ class LayerView {
     this.dom.remove();
   }
 }
-const layerOrder = state_dist/* Facet.define */.r$.define();
+const layerOrder = state_dist/* Facet */.r$.define();
 function dist_layer(config) {
   return [ViewPlugin.define(v => new LayerView(v, config)), layerOrder.of(config)];
 }
 const CanHidePrimary = !browser.ios;
-const selectionConfig = state_dist/* Facet.define */.r$.define({
+const selectionConfig = state_dist/* Facet */.r$.define({
   combine(configs) {
     return (0,state_dist/* combineConfig */.BO)(configs, {
       cursorBlinkRate: 1200,
@@ -19493,7 +21522,7 @@ const cursorLayer = dist_layer({
       let prim = r == state.selection.main;
       if (r.empty ? !prim || CanHidePrimary : conf.drawRangeCursor) {
         let className = prim ? "cm-cursor cm-cursor-primary" : "cm-cursor cm-cursor-secondary";
-        let cursor = r.empty ? r : state_dist/* EditorSelection.cursor */.jT.cursor(r.head, r.head > r.anchor ? -1 : 1);
+        let cursor = r.empty ? r : state_dist/* EditorSelection */.jT.cursor(r.head, r.head > r.anchor ? -1 : 1);
         for (var _iterator64 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, className, cursor)), _step64; !(_step64 = _iterator64()).done;) {
           let piece = _step64.value;
           cursors.push(piece);
@@ -19537,13 +21566,13 @@ const themeSpec = {
   }
 };
 if (CanHidePrimary) themeSpec[".cm-line"].caretColor = "transparent !important";
-const hideNativeSelection = state_dist/* Prec.highest */.Wl.highest(EditorView.theme(themeSpec));
-const setDropCursorPos = state_dist/* StateEffect.define */.Py.define({
+const hideNativeSelection = state_dist/* Prec */.Wl.highest(EditorView.theme(themeSpec));
+const setDropCursorPos = state_dist/* StateEffect */.Py.define({
   map(pos, mapping) {
     return pos == null ? null : mapping.mapPos(pos);
   }
 });
-const dropCursorPos = state_dist/* StateField.define */.QQ.define({
+const dropCursorPos = state_dist/* StateField */.QQ.define({
   create() {
     return null;
   },
@@ -19778,7 +21807,7 @@ function supportsTabSize() {
   }
   return _supportsTabSize || false;
 }
-const specialCharConfig = state_dist/* Facet.define */.r$.define({
+const specialCharConfig = state_dist/* Facet */.r$.define({
   combine(configs) {
     let config = (0,state_dist/* combineConfig */.BO)(configs, {
       render: null,
@@ -20179,7 +22208,7 @@ function windowSpace(view) {
     right: win.innerWidth
   };
 }
-const tooltipConfig = state_dist/* Facet.define */.r$.define({
+const tooltipConfig = state_dist/* Facet */.r$.define({
   combine: values => {
     var _a, _b, _c;
     return {
@@ -20465,10 +22494,10 @@ const noOffset = {
   x: 0,
   y: 0
 };
-const showTooltip = state_dist/* Facet.define */.r$.define({
+const showTooltip = state_dist/* Facet */.r$.define({
   enables: [tooltipPlugin, baseTheme]
 });
-const showHoverTooltip = state_dist/* Facet.define */.r$.define();
+const showHoverTooltip = state_dist/* Facet */.r$.define();
 class HoverTooltipHost {
   constructor(view) {
     this.view = view;
@@ -20682,13 +22711,13 @@ function getTooltip(view, tooltip) {
 function hasHoverTooltips(state) {
   return state.facet(showHoverTooltip).some(x => x);
 }
-const closeHoverTooltipEffect = state_dist/* StateEffect.define */.Py.define();
+const closeHoverTooltipEffect = state_dist/* StateEffect */.Py.define();
 const closeHoverTooltips = closeHoverTooltipEffect.of(null);
 function repositionTooltips(view) {
   var _a;
   (_a = view.plugin(tooltipPlugin)) === null || _a === void 0 ? void 0 : _a.maybeMeasure();
 }
-const panelConfig = state_dist/* Facet.define */.r$.define({
+const panelConfig = state_dist/* Facet */.r$.define({
   combine(configs) {
     let topContainer, bottomContainer;
     for (var _iterator81 = _createForOfIteratorHelperLoose(configs), _step81; !(_step81 = _iterator81()).done;) {
@@ -20853,7 +22882,7 @@ function rm(node) {
   node.remove();
   return next;
 }
-const showPanel = state_dist/* Facet.define */.r$.define({
+const showPanel = state_dist/* Facet */.r$.define({
   enables: panelPlugin
 });
 class GutterMarker extends state_dist/* RangeValue */.uU {
@@ -20867,15 +22896,15 @@ class GutterMarker extends state_dist/* RangeValue */.uU {
 }
 GutterMarker.prototype.elementClass = "";
 GutterMarker.prototype.toDOM = undefined;
-GutterMarker.prototype.mapMode = state_dist/* MapMode.TrackBefore */.gc.TrackBefore;
+GutterMarker.prototype.mapMode = state_dist/* MapMode */.gc.TrackBefore;
 GutterMarker.prototype.startSide = GutterMarker.prototype.endSide = -1;
 GutterMarker.prototype.point = true;
-const gutterLineClass = state_dist/* Facet.define */.r$.define();
+const gutterLineClass = state_dist/* Facet */.r$.define();
 const defaults = {
   class: "",
   renderEmptyElements: false,
   elementStyle: "",
-  markers: () => state_dist/* RangeSet.empty */.Xs.empty,
+  markers: () => state_dist/* RangeSet */.Xs.empty,
   lineMarker: () => null,
   widgetMarker: () => null,
   lineMarkerChange: null,
@@ -20883,11 +22912,11 @@ const defaults = {
   updateSpacer: null,
   domEventHandlers: {}
 };
-const activeGutters = state_dist/* Facet.define */.r$.define();
+const activeGutters = state_dist/* Facet */.r$.define();
 function gutter(config) {
   return [gutters(), activeGutters.of(Object.assign(Object.assign({}, defaults), config))];
 }
-const unfixGutters = state_dist/* Facet.define */.r$.define({
+const unfixGutters = state_dist/* Facet */.r$.define({
   combine: values => values.some(x => x)
 });
 function gutters(config) {
@@ -20932,7 +22961,7 @@ const gutterView = ViewPlugin.fromClass(class {
   syncGutters(detach) {
     let after = this.dom.nextSibling;
     if (detach) this.dom.remove();
-    let lineClasses = state_dist/* RangeSet.iter */.Xs.iter(this.view.state.facet(gutterLineClass), this.view.viewport.from);
+    let lineClasses = state_dist/* RangeSet */.Xs.iter(this.view.state.facet(gutterLineClass), this.view.viewport.from);
     let classSet = [];
     let contexts = this.gutters.map(gutter => new UpdateContext(gutter, this.view.viewport, -this.view.documentPadding.top));
     for (var _iterator90 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step90; !(_step90 = _iterator90()).done;) {
@@ -20973,7 +23002,7 @@ const gutterView = ViewPlugin.fromClass(class {
   updateGutters(update) {
     let prev = update.startState.facet(activeGutters),
       cur = update.state.facet(activeGutters);
-    let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet.eq */.Xs.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
+    let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet */.Xs.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
     if (prev == cur) {
       for (var _iterator96 = _createForOfIteratorHelperLoose(this.gutters), _step96; !(_step96 = _iterator96()).done;) {
         let gutter = _step96.value;
@@ -21037,7 +23066,7 @@ class UpdateContext {
     this.gutter = gutter;
     this.height = height;
     this.i = 0;
-    this.cursor = state_dist/* RangeSet.iter */.Xs.iter(gutter.markers, viewport.from);
+    this.cursor = state_dist/* RangeSet */.Xs.iter(gutter.markers, viewport.from);
   }
   addElement(view, block, markers) {
     let {
@@ -21115,7 +23144,7 @@ class SingleGutterView {
       if (updated != this.spacer.markers[0]) this.spacer.update(update.view, 0, 0, [updated]);
     }
     let vp = update.view.viewport;
-    return !state_dist/* RangeSet.eq */.Xs.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
+    return !state_dist/* RangeSet */.Xs.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
   }
   destroy() {
     for (var _iterator100 = _createForOfIteratorHelperLoose(this.elements), _step100; !(_step100 = _iterator100()).done;) {
@@ -21183,8 +23212,8 @@ function sameMarkers(a, b) {
   for (let i = 0; i < a.length; i++) if (!a[i].compare(b[i])) return false;
   return true;
 }
-const lineNumberMarkers = state_dist/* Facet.define */.r$.define();
-const lineNumberConfig = state_dist/* Facet.define */.r$.define({
+const lineNumberMarkers = state_dist/* Facet */.r$.define();
+const lineNumberConfig = state_dist/* Facet */.r$.define({
   combine(values) {
     return (0,state_dist/* combineConfig */.BO)(values, {
       formatNumber: String,
@@ -21266,7 +23295,7 @@ const activeLineGutterHighlighter = gutterLineClass.compute(["selection"], state
       marks.push(activeLineGutterMarker.range(linePos));
     }
   }
-  return state_dist/* RangeSet.of */.Xs.of(marks);
+  return state_dist/* RangeSet */.Xs.of(marks);
 });
 function highlightActiveLineGutter() {
   return activeLineGutterHighlighter;
@@ -21330,16 +23359,16 @@ const __test = {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FE": () => (/* binding */ parseMixed),
-/* harmony export */   "Jq": () => (/* binding */ NodeType),
-/* harmony export */   "L3": () => (/* binding */ DefaultBufferLength),
-/* harmony export */   "Lj": () => (/* binding */ NodeSet),
-/* harmony export */   "_b": () => (/* binding */ Parser),
-/* harmony export */   "hr": () => (/* binding */ NodeWeakMap),
-/* harmony export */   "i9": () => (/* binding */ TreeFragment),
-/* harmony export */   "md": () => (/* binding */ NodeProp),
-/* harmony export */   "mp": () => (/* binding */ Tree),
-/* harmony export */   "vj": () => (/* binding */ IterMode)
+/* harmony export */   FE: () => (/* binding */ parseMixed),
+/* harmony export */   Jq: () => (/* binding */ NodeType),
+/* harmony export */   L3: () => (/* binding */ DefaultBufferLength),
+/* harmony export */   Lj: () => (/* binding */ NodeSet),
+/* harmony export */   _b: () => (/* binding */ Parser),
+/* harmony export */   hr: () => (/* binding */ NodeWeakMap),
+/* harmony export */   i9: () => (/* binding */ TreeFragment),
+/* harmony export */   md: () => (/* binding */ NodeProp),
+/* harmony export */   mp: () => (/* binding */ Tree),
+/* harmony export */   vj: () => (/* binding */ IterMode)
 /* harmony export */ });
 /* unused harmony exports MountedTree, TreeBuffer, TreeCursor */
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -21574,14 +23603,16 @@ class Tree {
       from = 0,
       to = this.length
     } = spec;
-    for (let c = this.cursor((spec.mode || 0) | IterMode.IncludeAnonymous);;) {
+    let mode = spec.mode || 0,
+      anon = (mode & IterMode.IncludeAnonymous) > 0;
+    for (let c = this.cursor(mode | IterMode.IncludeAnonymous);;) {
       let entered = false;
-      if (c.from <= to && c.to >= from && (c.type.isAnonymous || enter(c) !== false)) {
+      if (c.from <= to && c.to >= from && (!anon && c.type.isAnonymous || enter(c) !== false)) {
         if (c.firstChild()) continue;
         entered = true;
       }
       for (;;) {
-        if (entered && leave && !c.type.isAnonymous) leave(c);
+        if (entered && leave && (anon || !c.type.isAnonymous)) leave(c);
         if (c.nextSibling()) break;
         if (!c.parent()) return;
         entered = true;
@@ -22666,6 +24697,7 @@ class InnerParse {
     this.overlay = overlay;
     this.target = target;
     this.ranges = ranges;
+    if (!ranges.length || ranges.some(r => r.from >= r.to)) throw new RangeError("Invalid inner parse ranges given: " + JSON.stringify(ranges));
   }
 }
 class ActiveOverlay {
@@ -23019,11 +25051,11 @@ function enterFragments(mounts, ranges) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Gv": () => (/* binding */ styleTags),
-/* harmony export */   "QR": () => (/* binding */ tagHighlighter),
-/* harmony export */   "Vp": () => (/* binding */ Tag),
-/* harmony export */   "bW": () => (/* binding */ highlightTree),
-/* harmony export */   "pJ": () => (/* binding */ tags)
+/* harmony export */   Gv: () => (/* binding */ styleTags),
+/* harmony export */   QR: () => (/* binding */ tagHighlighter),
+/* harmony export */   Vp: () => (/* binding */ Tag),
+/* harmony export */   bW: () => (/* binding */ highlightTree),
+/* harmony export */   pJ: () => (/* binding */ tags)
 /* harmony export */ });
 /* unused harmony exports classHighlighter, getStyleTags */
 /* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2064);
@@ -23253,9 +25285,9 @@ class HighlightBuilder {
       cls += tagCls;
       if (rule.mode == 1) inheritedClass += (inheritedClass ? " " : "") + tagCls;
     }
-    this.startSpan(cursor.from, cls);
+    this.startSpan(Math.max(from, start), cls);
     if (rule.opaque) return;
-    let mounted = cursor.tree && cursor.tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp.mounted */ .md.mounted);
+    let mounted = cursor.tree && cursor.tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.mounted);
     if (mounted && mounted.overlay) {
       let inner = cursor.node.enter(mounted.overlay[0].from + start, 1);
       let innerHighlighters = this.highlighters.filter(h => !h.scope || h.scope(mounted.tree.type));
@@ -23275,12 +25307,13 @@ class HighlightBuilder {
         if (!next || nextPos > to) break;
         pos = next.to + start;
         if (pos > from) {
-          this.highlightRange(inner.cursor(), Math.max(from, next.from + start), Math.min(to, pos), inheritedClass, innerHighlighters);
-          this.startSpan(pos, cls);
+          this.highlightRange(inner.cursor(), Math.max(from, next.from + start), Math.min(to, pos), "", innerHighlighters);
+          this.startSpan(Math.min(to, pos), cls);
         }
       }
       if (hasChild) cursor.parent();
     } else if (cursor.firstChild()) {
+      if (mounted) inheritedClass = "";
       do {
         if (cursor.to <= from) continue;
         if (cursor.from >= to) break;
@@ -23497,10 +25530,10 @@ const classHighlighter = tagHighlighter([{
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "IK": () => (/* binding */ ContextTracker),
-/* harmony export */   "Jq": () => (/* binding */ ExternalTokenizer),
-/* harmony export */   "RA": () => (/* binding */ LocalTokenGroup),
-/* harmony export */   "WQ": () => (/* binding */ LRParser)
+/* harmony export */   IK: () => (/* binding */ ContextTracker),
+/* harmony export */   Jq: () => (/* binding */ ExternalTokenizer),
+/* harmony export */   RA: () => (/* binding */ LocalTokenGroup),
+/* harmony export */   WQ: () => (/* binding */ LRParser)
 /* harmony export */ });
 /* unused harmony exports InputStream, Stack */
 /* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2064);
@@ -23714,22 +25747,50 @@ class Stack {
     return result;
   }
   forceReduce() {
-    let reduce = this.p.parser.stateSlot(this.state, 5);
-    if ((reduce & 65536) == 0) return false;
     let {
       parser
     } = this.p;
+    let reduce = parser.stateSlot(this.state, 5);
+    if ((reduce & 65536) == 0) return false;
     if (!parser.validAction(this.state, reduce)) {
       let depth = reduce >> 19,
         term = reduce & 65535;
       let target = this.stack.length - depth * 3;
-      if (target < 0 || parser.getGoto(this.stack[target], term, false) < 0) return false;
+      if (target < 0 || parser.getGoto(this.stack[target], term, false) < 0) {
+        let backup = this.findForcedReduction();
+        if (backup == null) return false;
+        reduce = backup;
+      }
       this.storeNode(0, this.reducePos, this.reducePos, 4, true);
       this.score -= 100;
     }
     this.reducePos = this.pos;
     this.reduce(reduce);
     return true;
+  }
+  findForcedReduction() {
+    let {
+        parser
+      } = this.p,
+      seen = [];
+    let explore = (state, depth) => {
+      if (seen.includes(state)) return;
+      seen.push(state);
+      return parser.allActions(state, action => {
+        if (action & (262144 | 131072)) ;else if (action & 65536) {
+          let rDepth = (action >> 19) - depth;
+          if (rDepth > 1) {
+            let term = action & 65535,
+              target = this.stack.length - rDepth * 3;
+            if (target >= 0 && parser.getGoto(this.stack[target], term, false) >= 0) return rDepth << 19 | 65536 | term;
+          }
+        } else {
+          let found = explore(action, depth + 1);
+          if (found != null) return found;
+        }
+      });
+    };
+    return explore(this.state, 0);
   }
   forceAll() {
     while (!this.p.parser.stateFlag(this.state, 2)) {
@@ -23770,11 +25831,11 @@ class Stack {
   }
   emitContext() {
     let last = this.buffer.length - 1;
-    if (last < 0 || this.buffer[last] != -3) this.buffer.push(this.curContext.hash, this.reducePos, this.reducePos, -3);
+    if (last < 0 || this.buffer[last] != -3) this.buffer.push(this.curContext.hash, this.pos, this.pos, -3);
   }
   emitLookAhead() {
     let last = this.buffer.length - 1;
-    if (last < 0 || this.buffer[last] != -4) this.buffer.push(this.lookAhead, this.reducePos, this.reducePos, -4);
+    if (last < 0 || this.buffer[last] != -4) this.buffer.push(this.lookAhead, this.pos, this.pos, -4);
   }
   updateContext(context) {
     if (context != this.curContext.context) {
@@ -24183,7 +26244,7 @@ var Safety;
   Safety[Safety["Margin"] = 25] = "Margin";
 })(Safety || (Safety = {}));
 function cutAt(tree, pos, side) {
-  let cursor = tree.cursor(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode.IncludeAnonymous */ .vj.IncludeAnonymous);
+  let cursor = tree.cursor(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode */ .vj.IncludeAnonymous);
   cursor.moveTo(pos);
   for (;;) {
     if (!(side < 0 ? cursor.childBefore(pos) : cursor.childAfter(pos))) for (;;) {
@@ -24253,7 +26314,7 @@ class FragmentCursor {
           if (start < this.safeFrom) return null;
           let end = start + next.length;
           if (end <= this.safeTo) {
-            let lookAhead = next.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp.lookAhead */ .md.lookAhead);
+            let lookAhead = next.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.lookAhead);
             if (!lookAhead || end + lookAhead < this.fragment.to) return next;
           }
         }
@@ -24509,7 +26570,7 @@ class Parse {
         cxHash = strictCx ? stack.curContext.hash : 0;
       for (let cached = this.fragments.nodeAt(start); cached;) {
         let match = this.parser.nodeSet.types[cached.type.id] == cached.type ? parser.getGoto(stack.state, cached.type.id) : -1;
-        if (match > -1 && cached.length && (!strictCx || (cached.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp.contextHash */ .md.contextHash) || 0) == cxHash)) {
+        if (match > -1 && cached.length && (!strictCx || (cached.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.contextHash) || 0) == cxHash)) {
           stack.useNode(cached, match);
           if (verbose) console.log(base + this.stackID(stack) + ` (via reuse of ${parser.getName(cached.type.id)})`);
           return true;
@@ -24596,7 +26657,7 @@ class Parse {
   }
   stackToTree(stack) {
     stack.close();
-    return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree.build */ .mp.build({
+    return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.build({
       buffer: StackBufferCursor.create(stack),
       nodeSet: this.parser.nodeSet,
       topID: this.topTerm,
@@ -24675,7 +26736,7 @@ class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .
         }
       }
     }
-    this.nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .Lj(nodeNames.map((name, i) => _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType.define */ .Jq.define({
+    this.nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .Lj(nodeNames.map((name, i) => _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
       name: i >= this.minRepeatTerm ? undefined : name,
       id: i,
       props: nodeProps[i],
@@ -24748,13 +26809,18 @@ class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .
     return (this.stateSlot(state, 0) & flag) > 0;
   }
   validAction(state, action) {
-    if (action == this.stateSlot(state, 4)) return true;
-    for (let i = this.stateSlot(state, 1);; i += 3) {
+    return !!this.allActions(state, a => a == action ? true : null);
+  }
+  allActions(state, action) {
+    let deflt = this.stateSlot(state, 4);
+    let result = deflt ? action(deflt) : undefined;
+    for (let i = this.stateSlot(state, 1); result == null; i += 3) {
       if (this.data[i] == 65535) {
-        if (this.data[i + 1] == 1) i = pair(this.data, i + 2);else return false;
+        if (this.data[i + 1] == 1) i = pair(this.data, i + 2);else break;
       }
-      if (action == pair(this.data, i + 1)) return true;
+      result = action(pair(this.data, i + 1));
     }
+    return result;
   }
   nextStates(state) {
     let result = [];
@@ -24864,7 +26930,7 @@ function getSpecializer(spec) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "V": () => (/* binding */ StyleModule)
+/* harmony export */   V: () => (/* binding */ StyleModule)
 /* harmony export */ });
 const C = "\u037c";
 const COUNT = typeof Symbol == "undefined" ? "__" + C : Symbol.for(C);
@@ -26105,19 +28171,19 @@ function typeOf(x) {
   return name.startsWith('[object ') ? name.substring(8, name.length - 1) : '';
 }
 function isString(x) {
-  return ami_twig/* default.stdlib.isString */.Z.stdlib.isString(x);
+  return ami_twig/* default */.Z.stdlib.isString(x);
 }
 function isArray(x) {
-  return ami_twig/* default.stdlib.isArray */.Z.stdlib.isArray(x);
+  return ami_twig/* default */.Z.stdlib.isArray(x);
 }
 function isObject(x) {
-  return ami_twig/* default.stdlib.isObject */.Z.stdlib.isObject(x);
+  return ami_twig/* default */.Z.stdlib.isObject(x);
 }
 function isSet(x) {
-  return ami_twig/* default.stdlib.isSet */.Z.stdlib.isSet(x);
+  return ami_twig/* default */.Z.stdlib.isSet(x);
 }
 function isMap(x) {
-  return ami_twig/* default.stdlib.isMap */.Z.stdlib.isMap(x);
+  return ami_twig/* default */.Z.stdlib.isMap(x);
 }
 function asArray(x) {
   return Array.isArray(x) ? x : [x];
@@ -26399,7 +28465,7 @@ function base64Decode(s) {
     return `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`;
   }).join(''));
 }
-const _replace = ami_twig/* default.stdlib._replace */.Z.stdlib._replace;
+const _replace = ami_twig/* default */.Z.stdlib._replace;
 const _textToHtmlX = ['&', '"', '<', '>'];
 const _textToHtmlY = ['&amp;', '&quot;', '&lt;', '&gt;'];
 function textToHtml(s) {
@@ -26534,7 +28600,7 @@ var update = injectStylesIntoStyleTag_default()(flatpickr_min/* default */.Z, op
 
 
 
-       /* harmony default export */ const dist_flatpickr_min = (flatpickr_min/* default */.Z && flatpickr_min/* default.locals */.Z.locals ? flatpickr_min/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ const dist_flatpickr_min = (flatpickr_min/* default */.Z && flatpickr_min/* default */.Z.locals ? flatpickr_min/* default */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./node_modules/flatpickr/dist/esm/types/options.js
 var HOOKS = ["onChange", "onClose", "onDayCreate", "onDestroy", "onKeyDown", "onMonthChange", "onOpen", "onParseConfig", "onReady", "onValueUpdate", "onYearChange", "onPreCalendarPosition"];
@@ -28897,10 +30963,10 @@ function changeLineComment(option, state, ranges) {
   }
   return null;
 }
-const fromHistory = state_dist/* Annotation.define */.q6.define();
-const isolateHistory = state_dist/* Annotation.define */.q6.define();
-const invertedEffects = state_dist/* Facet.define */.r$.define();
-const historyConfig = state_dist/* Facet.define */.r$.define({
+const fromHistory = state_dist/* Annotation */.q6.define();
+const isolateHistory = state_dist/* Annotation */.q6.define();
+const invertedEffects = state_dist/* Facet */.r$.define();
+const historyConfig = state_dist/* Facet */.r$.define({
   combine(configs) {
     return (0,state_dist/* combineConfig */.BO)(configs, {
       minDepth: 100,
@@ -28918,7 +30984,7 @@ function changeEnd(changes) {
   changes.iterChangedRanges((_, to) => end = to);
   return end;
 }
-const historyField_ = state_dist/* StateField.define */.QQ.define({
+const historyField_ = state_dist/* StateField */.QQ.define({
   create() {
     return HistoryState.empty;
   },
@@ -28926,7 +30992,7 @@ const historyField_ = state_dist/* StateField.define */.QQ.define({
     let config = tr.state.facet(historyConfig);
     let fromHist = tr.annotation(fromHistory);
     if (fromHist) {
-      let selection = tr.docChanged ? state_dist/* EditorSelection.single */.jT.single(changeEnd(tr.changes)) : undefined;
+      let selection = tr.docChanged ? state_dist/* EditorSelection */.jT.single(changeEnd(tr.changes)) : undefined;
       let item = HistEvent.fromTransaction(tr, selection),
         from = fromHist.side;
       let other = from == 0 ? state.undone : state.done;
@@ -28935,10 +31001,10 @@ const historyField_ = state_dist/* StateField.define */.QQ.define({
     }
     let isolate = tr.annotation(isolateHistory);
     if (isolate == "full" || isolate == "before") state = state.isolate();
-    if (tr.annotation(state_dist/* Transaction.addToHistory */.YW.addToHistory) === false) return !tr.changes.empty ? state.addMapping(tr.changes.desc) : state;
+    if (tr.annotation(state_dist/* Transaction */.YW.addToHistory) === false) return !tr.changes.empty ? state.addMapping(tr.changes.desc) : state;
     let event = HistEvent.fromTransaction(tr);
-    let time = tr.annotation(state_dist/* Transaction.time */.YW.time),
-      userEvent = tr.annotation(state_dist/* Transaction.userEvent */.YW.userEvent);
+    let time = tr.annotation(state_dist/* Transaction */.YW.time),
+      userEvent = tr.annotation(state_dist/* Transaction */.YW.userEvent);
     if (event) state = state.addChanges(event, time, userEvent, config, tr);else if (tr.selection) state = state.addSelection(tr.startState.selection, time, userEvent, config.newGroupDelay);
     if (isolate == "full" || isolate == "after") state = state.isolate();
     return state;
@@ -28957,7 +31023,7 @@ function dist_history(config) {
   if (config === void 0) {
     config = {};
   }
-  return [historyField_, historyConfig.of(config), dist/* EditorView.domEventHandlers */.tk.domEventHandlers({
+  return [historyField_, historyConfig.of(config), dist/* EditorView */.tk.domEventHandlers({
     beforeinput(e, view) {
       let command = e.inputType == "historyUndo" ? undo : e.inputType == "historyRedo" ? redo : null;
       if (!command) return false;
@@ -29017,7 +31083,7 @@ class HistEvent {
     };
   }
   static fromJSON(json) {
-    return new HistEvent(json.changes && state_dist/* ChangeSet.fromJSON */.as.fromJSON(json.changes), [], json.mapped && state_dist/* ChangeDesc.fromJSON */.n0.fromJSON(json.mapped), json.startSelection && state_dist/* EditorSelection.fromJSON */.jT.fromJSON(json.startSelection), json.selectionsAfter.map(state_dist/* EditorSelection.fromJSON */.jT.fromJSON));
+    return new HistEvent(json.changes && state_dist/* ChangeSet */.as.fromJSON(json.changes), [], json.mapped && state_dist/* ChangeDesc */.n0.fromJSON(json.mapped), json.startSelection && state_dist/* EditorSelection */.jT.fromJSON(json.startSelection), json.selectionsAfter.map(state_dist/* EditorSelection */.jT.fromJSON));
   }
   static fromTransaction(tr, selection) {
     let effects = none;
@@ -29101,7 +31167,7 @@ function mapEvent(event, mapping, extraSelections) {
   let mappedChanges = event.changes.map(mapping),
     before = mapping.mapDesc(event.changes, true);
   let fullMapping = event.mapped ? event.mapped.composeDesc(before) : before;
-  return new HistEvent(mappedChanges, state_dist/* StateEffect.mapEffects */.Py.mapEffects(event.effects, mapping), fullMapping, event.startSelection.map(before), selections);
+  return new HistEvent(mappedChanges, state_dist/* StateEffect */.Py.mapEffects(event.effects, mapping), fullMapping, event.startSelection.map(before), selections);
 }
 const joinableUserEvent = /^(input\.type|delete)($|\.)/;
 class HistoryState {
@@ -29197,7 +31263,7 @@ const historyKeymap = [{
   preventDefault: true
 }];
 function updateSel(sel, by) {
-  return state_dist/* EditorSelection.create */.jT.create(sel.ranges.map(by), sel.mainIndex);
+  return state_dist/* EditorSelection */.jT.create(sel.ranges.map(by), sel.mainIndex);
 }
 function setSel(state, selection) {
   return state.update({
@@ -29217,13 +31283,13 @@ function moveSel(_ref4, how) {
   return true;
 }
 function rangeEnd(range, forward) {
-  return state_dist/* EditorSelection.cursor */.jT.cursor(forward ? range.to : range.from);
+  return state_dist/* EditorSelection */.jT.cursor(forward ? range.to : range.from);
 }
 function cursorByChar(view, forward) {
   return moveSel(view, range => range.empty ? view.moveByChar(range, forward) : rangeEnd(range, forward));
 }
 function ltrAtCursor(view) {
-  return view.textDirectionAt(view.state.selection.main.head) == dist/* Direction.LTR */.Nm.LTR;
+  return view.textDirectionAt(view.state.selection.main.head) == dist/* Direction */.Nm.LTR;
 }
 const cursorCharLeft = view => cursorByChar(view, !ltrAtCursor(view));
 const cursorCharRight = view => cursorByChar(view, ltrAtCursor(view));
@@ -29282,7 +31348,7 @@ function interestingNode(state, node, bracketProp) {
 }
 function moveBySyntax(state, start, forward) {
   let pos = (0,language_dist/* syntaxTree */.qz)(state).resolveInner(start.head);
-  let bracketProp = forward ? common_dist/* NodeProp.closedBy */.md.closedBy : common_dist/* NodeProp.openedBy */.md.openedBy;
+  let bracketProp = forward ? common_dist/* NodeProp */.md.closedBy : common_dist/* NodeProp */.md.openedBy;
   for (let at = start.head;;) {
     let next = forward ? pos.childAfter(at) : pos.childBefore(at);
     if (!next) break;
@@ -29292,7 +31358,7 @@ function moveBySyntax(state, start, forward) {
     match,
     newPos;
   if (bracket && (match = forward ? (0,language_dist/* matchBrackets */.Um)(state, pos.from, 1) : (0,language_dist/* matchBrackets */.Um)(state, pos.to, -1)) && match.matched) newPos = forward ? match.end.to : match.end.from;else newPos = forward ? pos.to : pos.from;
-  return state_dist/* EditorSelection.cursor */.jT.cursor(newPos, forward ? -1 : 1);
+  return state_dist/* EditorSelection */.jT.cursor(newPos, forward ? -1 : 1);
 }
 const cursorSyntaxLeft = view => moveSel(view, range => moveBySyntax(view.state, range, !ltrAtCursor(view)));
 const cursorSyntaxRight = view => moveSel(view, range => moveBySyntax(view.state, range, ltrAtCursor(view)));
@@ -29311,7 +31377,7 @@ function pageInfo(view) {
     marginBottom = 0,
     height;
   if (selfScroll) {
-    for (var _iterator6 = dist_createForOfIteratorHelperLoose(view.state.facet(dist/* EditorView.scrollMargins */.tk.scrollMargins)), _step6; !(_step6 = _iterator6()).done;) {
+    for (var _iterator6 = dist_createForOfIteratorHelperLoose(view.state.facet(dist/* EditorView */.tk.scrollMargins)), _step6; !(_step6 = _iterator6()).done;) {
       let source = _step6.value;
       let margins = source(view);
       if (margins === null || margins === void 0 ? void 0 : margins.top) marginTop = Math.max(margins === null || margins === void 0 ? void 0 : margins.top, marginTop);
@@ -29343,7 +31409,7 @@ function cursorByPage(view, forward) {
     let scrollRect = view.scrollDOM.getBoundingClientRect();
     let scrollTop = scrollRect.top + page.marginTop,
       scrollBottom = scrollRect.bottom - page.marginBottom;
-    if (startPos && startPos.top > scrollTop && startPos.bottom < scrollBottom) effect = dist/* EditorView.scrollIntoView */.tk.scrollIntoView(selection.main.head, {
+    if (startPos && startPos.top > scrollTop && startPos.bottom < scrollBottom) effect = dist/* EditorView */.tk.scrollIntoView(selection.main.head, {
       y: "start",
       yMargin: startPos.top - scrollTop
     });
@@ -29361,7 +31427,7 @@ function moveByLineBoundary(view, start, forward) {
   if (moved.head == start.head && moved.head != (forward ? line.to : line.from)) moved = view.moveToLineBoundary(start, forward, false);
   if (!forward && moved.head == line.from && line.length) {
     let space = /^\s*/.exec(view.state.sliceDoc(line.from, Math.min(line.from + 100, line.to)))[0].length;
-    if (space && start.head != line.from + space) moved = state_dist/* EditorSelection.cursor */.jT.cursor(line.from + space);
+    if (space && start.head != line.from + space) moved = state_dist/* EditorSelection */.jT.cursor(line.from + space);
   }
   return moved;
 }
@@ -29369,8 +31435,8 @@ const cursorLineBoundaryForward = view => moveSel(view, range => moveByLineBound
 const cursorLineBoundaryBackward = view => moveSel(view, range => moveByLineBoundary(view, range, false));
 const cursorLineBoundaryLeft = view => moveSel(view, range => moveByLineBoundary(view, range, !ltrAtCursor(view)));
 const cursorLineBoundaryRight = view => moveSel(view, range => moveByLineBoundary(view, range, ltrAtCursor(view)));
-const cursorLineStart = view => moveSel(view, range => state_dist/* EditorSelection.cursor */.jT.cursor(view.lineBlockAt(range.head).from, 1));
-const cursorLineEnd = view => moveSel(view, range => state_dist/* EditorSelection.cursor */.jT.cursor(view.lineBlockAt(range.head).to, -1));
+const cursorLineStart = view => moveSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).from, 1));
+const cursorLineEnd = view => moveSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).to, -1));
 function toMatchingBracket(state, dispatch, extend) {
   let found = false,
     selection = updateSel(state.selection, range => {
@@ -29378,7 +31444,7 @@ function toMatchingBracket(state, dispatch, extend) {
       if (!matching || !matching.end) return range;
       found = true;
       let head = matching.start.from == range.head ? matching.end.to : matching.end.from;
-      return extend ? state_dist/* EditorSelection.range */.jT.range(range.anchor, head) : state_dist/* EditorSelection.cursor */.jT.cursor(head);
+      return extend ? state_dist/* EditorSelection */.jT.range(range.anchor, head) : state_dist/* EditorSelection */.jT.cursor(head);
     });
   if (!found) return false;
   dispatch(setSel(state, selection));
@@ -29401,7 +31467,7 @@ const selectMatchingBracket = _ref6 => {
 function extendSel(view, how) {
   let selection = updateSel(view.state.selection, range => {
     let head = how(range);
-    return state_dist/* EditorSelection.range */.jT.range(range.anchor, head.head, head.goalColumn, head.bidiLevel || undefined);
+    return state_dist/* EditorSelection */.jT.range(range.anchor, head.head, head.goalColumn, head.bidiLevel || undefined);
   });
   if (selection.eq(view.state.selection)) return false;
   view.dispatch(setSel(view.state, selection));
@@ -29442,8 +31508,8 @@ const selectLineBoundaryForward = view => extendSel(view, range => moveByLineBou
 const selectLineBoundaryBackward = view => extendSel(view, range => moveByLineBoundary(view, range, false));
 const selectLineBoundaryLeft = view => extendSel(view, range => moveByLineBoundary(view, range, !ltrAtCursor(view)));
 const selectLineBoundaryRight = view => extendSel(view, range => moveByLineBoundary(view, range, ltrAtCursor(view)));
-const selectLineStart = view => extendSel(view, range => state_dist/* EditorSelection.cursor */.jT.cursor(view.lineBlockAt(range.head).from));
-const selectLineEnd = view => extendSel(view, range => state_dist/* EditorSelection.cursor */.jT.cursor(view.lineBlockAt(range.head).to));
+const selectLineStart = view => extendSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).from));
+const selectLineEnd = view => extendSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).to));
 const cursorDocStart = _ref7 => {
   let {
     state,
@@ -29510,10 +31576,10 @@ const selectLine = _ref12 => {
       from,
       to
     } = _ref13;
-    return state_dist/* EditorSelection.range */.jT.range(from, Math.min(to + 1, state.doc.length));
+    return state_dist/* EditorSelection */.jT.range(from, Math.min(to + 1, state.doc.length));
   });
   dispatch(state.update({
-    selection: state_dist/* EditorSelection.create */.jT.create(ranges),
+    selection: state_dist/* EditorSelection */.jT.create(ranges),
     userEvent: "select"
   }));
   return true;
@@ -29527,7 +31593,7 @@ const selectParentSyntax = _ref14 => {
     var _a;
     let context = (0,language_dist/* syntaxTree */.qz)(state).resolveInner(range.head, 1);
     while (!(context.from < range.from && context.to >= range.to || context.to > range.to && context.from <= range.from || !((_a = context.parent) === null || _a === void 0 ? void 0 : _a.parent))) context = context.parent;
-    return state_dist/* EditorSelection.range */.jT.range(context.to, context.from);
+    return state_dist/* EditorSelection */.jT.range(context.to, context.from);
   });
   dispatch(setSel(state, selection));
   return true;
@@ -29539,7 +31605,7 @@ const simplifySelection = _ref15 => {
   } = _ref15;
   let cur = state.selection,
     selection = null;
-  if (cur.ranges.length > 1) selection = state_dist/* EditorSelection.create */.jT.create([cur.main]);else if (!cur.main.empty) selection = state_dist/* EditorSelection.create */.jT.create([state_dist/* EditorSelection.cursor */.jT.cursor(cur.main.head)]);
+  if (cur.ranges.length > 1) selection = state_dist/* EditorSelection */.jT.create([cur.main]);else if (!cur.main.empty) selection = state_dist/* EditorSelection */.jT.create([state_dist/* EditorSelection */.jT.cursor(cur.main.head)]);
   if (!selection) return false;
   dispatch(setSel(state, selection));
   return true;
@@ -29577,20 +31643,20 @@ function deleteBy(target, by) {
         from,
         to
       },
-      range: state_dist/* EditorSelection.cursor */.jT.cursor(from)
+      range: state_dist/* EditorSelection */.jT.cursor(from)
     };
   });
   if (changes.changes.empty) return false;
   target.dispatch(state.update(changes, {
     scrollIntoView: true,
     userEvent: event,
-    effects: event == "delete.selection" ? dist/* EditorView.announce.of */.tk.announce.of(state.phrase("Selection deleted")) : undefined
+    effects: event == "delete.selection" ? dist/* EditorView */.tk.announce.of(state.phrase("Selection deleted")) : undefined
   }));
   return true;
 }
 function skipAtomic(target, pos, forward) {
   if (target instanceof dist/* EditorView */.tk) {
-    for (var _iterator7 = dist_createForOfIteratorHelperLoose(target.state.facet(dist/* EditorView.atomicRanges */.tk.atomicRanges).map(f => f(target))), _step7; !(_step7 = _iterator7()).done;) {
+    for (var _iterator7 = dist_createForOfIteratorHelperLoose(target.state.facet(dist/* EditorView */.tk.atomicRanges).map(f => f(target))), _step7; !(_step7 = _iterator7()).done;) {
       let ranges = _step7.value;
       ranges.between(pos, pos, (from, to) => {
         if (from < pos && to > pos) pos = forward ? to : from;
@@ -29691,9 +31757,9 @@ const splitLine = _ref17 => {
       changes: {
         from: range.from,
         to: range.to,
-        insert: state_dist/* Text.of */.xv.of(["", ""])
+        insert: state_dist/* Text */.xv.of(["", ""])
       },
-      range: state_dist/* EditorSelection.cursor */.jT.cursor(range.from)
+      range: state_dist/* EditorSelection */.jT.cursor(range.from)
     };
   });
   dispatch(state.update(changes, {
@@ -29722,7 +31788,7 @@ const transposeChars = _ref18 => {
         to,
         insert: state.doc.slice(pos, to).append(state.doc.slice(from, pos))
       },
-      range: state_dist/* EditorSelection.cursor */.jT.cursor(to)
+      range: state_dist/* EditorSelection */.jT.cursor(to)
     };
   });
   if (changes.changes.empty) return false;
@@ -29774,7 +31840,7 @@ function moveLine(state, dispatch, forward) {
       });
       for (var _iterator10 = dist_createForOfIteratorHelperLoose(block.ranges), _step10; !(_step10 = _iterator10()).done;) {
         let r = _step10.value;
-        ranges.push(state_dist/* EditorSelection.range */.jT.range(Math.min(state.doc.length, r.anchor + size), Math.min(state.doc.length, r.head + size)));
+        ranges.push(state_dist/* EditorSelection */.jT.range(Math.min(state.doc.length, r.anchor + size), Math.min(state.doc.length, r.head + size)));
       }
     } else {
       changes.push({
@@ -29786,7 +31852,7 @@ function moveLine(state, dispatch, forward) {
       });
       for (var _iterator11 = dist_createForOfIteratorHelperLoose(block.ranges), _step11; !(_step11 = _iterator11()).done;) {
         let r = _step11.value;
-        ranges.push(state_dist/* EditorSelection.range */.jT.range(r.anchor - size, r.head - size));
+        ranges.push(state_dist/* EditorSelection */.jT.range(r.anchor - size, r.head - size));
       }
     }
   }
@@ -29794,7 +31860,7 @@ function moveLine(state, dispatch, forward) {
   dispatch(state.update({
     changes,
     scrollIntoView: true,
-    selection: state_dist/* EditorSelection.create */.jT.create(ranges, state.selection.mainIndex),
+    selection: state_dist/* EditorSelection */.jT.create(ranges, state.selection.mainIndex),
     userEvent: "move.line"
   }));
   return true;
@@ -29892,7 +31958,7 @@ function isBetweenBrackets(state, pos) {
   let before = context.childBefore(pos),
     after = context.childAfter(pos),
     closedBy;
-  if (before && after && before.to <= pos && after.from >= pos && (closedBy = before.type.prop(common_dist/* NodeProp.closedBy */.md.closedBy)) && closedBy.indexOf(after.name) > -1 && state.doc.lineAt(before.to).from == state.doc.lineAt(after.from).from) return {
+  if (before && after && before.to <= pos && after.from >= pos && (closedBy = before.type.prop(common_dist/* NodeProp */.md.closedBy)) && closedBy.indexOf(after.name) > -1 && state.doc.lineAt(before.to).from == state.doc.lineAt(after.from).from) return {
     from: before.to,
     to: after.from
   };
@@ -29932,9 +31998,9 @@ function newlineAndIndent(atEof) {
         changes: {
           from,
           to,
-          insert: state_dist/* Text.of */.xv.of(insert)
+          insert: state_dist/* Text */.xv.of(insert)
         },
-        range: state_dist/* EditorSelection.cursor */.jT.cursor(from + 1 + insert[1].length)
+        range: state_dist/* EditorSelection */.jT.cursor(from + 1 + insert[1].length)
       };
     });
     dispatch(state.update(changes, {
@@ -29959,7 +32025,7 @@ function changeBySelectedLine(state, f) {
     let changeSet = state.changes(changes);
     return {
       changes,
-      range: state_dist/* EditorSelection.range */.jT.range(changeSet.mapPos(range.anchor, 1), changeSet.mapPos(range.head, 1))
+      range: state_dist/* EditorSelection */.jT.range(changeSet.mapPos(range.anchor, 1), changeSet.mapPos(range.head, 1))
     };
   });
 }
@@ -30280,67 +32346,67 @@ const indentWithTab = {
 ;// CONCATENATED MODULE: ./node_modules/@codemirror/language-data/dist/index.js
 
 function legacy(parser) {
-  return new language_dist/* LanguageSupport */.ri(language_dist/* StreamLanguage.define */.il.define(parser));
+  return new language_dist/* LanguageSupport */.ri(language_dist/* StreamLanguage */.il.define(parser));
 }
 function sql(dialectName) {
   return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3409)]).then(__webpack_require__.bind(__webpack_require__, 3409)).then(m => m.sql({
     dialect: m[dialectName]
   }));
 }
-const languages = [language_dist/* LanguageDescription.of */.c6.of({
+const languages = [language_dist/* LanguageDescription */.c6.of({
   name: "C",
   extensions: ["c", "h", "ino"],
   load() {
     return __webpack_require__.e(/* import() */ 365).then(__webpack_require__.bind(__webpack_require__, 365)).then(m => m.cpp());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "C++",
   alias: ["cpp"],
   extensions: ["cpp", "c++", "cc", "cxx", "hpp", "h++", "hh", "hxx"],
   load() {
     return __webpack_require__.e(/* import() */ 365).then(__webpack_require__.bind(__webpack_require__, 365)).then(m => m.cpp());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "CQL",
   alias: ["cassandra"],
   extensions: ["cql"],
   load() {
     return sql("Cassandra");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "CSS",
   extensions: ["css"],
   load() {
     return __webpack_require__.e(/* import() */ 2493).then(__webpack_require__.bind(__webpack_require__, 2493)).then(m => m.css());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "HTML",
   alias: ["xhtml"],
   extensions: ["html", "htm", "handlebars", "hbs"],
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414)]).then(__webpack_require__.bind(__webpack_require__, 6414)).then(m => m.html());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Java",
   extensions: ["java"],
   load() {
     return __webpack_require__.e(/* import() */ 4288).then(__webpack_require__.bind(__webpack_require__, 4288)).then(m => m.java());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "JavaScript",
   alias: ["ecmascript", "js", "node"],
   extensions: ["js", "mjs", "cjs"],
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3077)]).then(__webpack_require__.bind(__webpack_require__, 3077)).then(m => m.javascript());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "JSON",
   alias: ["json5"],
   extensions: ["json", "map"],
   load() {
     return Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 6744)).then(m => m.json());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "JSX",
   extensions: ["jsx"],
   load() {
@@ -30348,64 +32414,64 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
       jsx: true
     }));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "LESS",
   extensions: ["less"],
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(2493), __webpack_require__.e(652)]).then(__webpack_require__.bind(__webpack_require__, 652)).then(m => m.less());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "MariaDB SQL",
   load() {
     return sql("MariaSQL");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Markdown",
   extensions: ["md", "markdown", "mkd"],
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(5022)]).then(__webpack_require__.bind(__webpack_require__, 5022)).then(m => m.markdown());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "MS SQL",
   load() {
     return sql("MSSQL");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "MySQL",
   load() {
     return sql("MySQL");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "PHP",
   extensions: ["php", "php3", "php4", "php5", "php7", "phtml"],
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(2487)]).then(__webpack_require__.bind(__webpack_require__, 2487)).then(m => m.php());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "PLSQL",
   extensions: ["pls"],
   load() {
     return sql("PLSQL");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "PostgreSQL",
   load() {
     return sql("PostgreSQL");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Python",
   extensions: ["BUILD", "bzl", "py", "pyw"],
   filename: /^(BUCK|BUILD)$/,
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(5165)]).then(__webpack_require__.bind(__webpack_require__, 5165)).then(m => m.python());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Rust",
   extensions: ["rs"],
   load() {
     return __webpack_require__.e(/* import() */ 8321).then(__webpack_require__.bind(__webpack_require__, 8321)).then(m => m.rust());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Sass",
   extensions: ["sass"],
   load() {
@@ -30413,24 +32479,24 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
       indented: true
     }));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "SCSS",
   extensions: ["scss"],
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(2493), __webpack_require__.e(7314)]).then(__webpack_require__.bind(__webpack_require__, 7314)).then(m => m.sass());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "SQL",
   extensions: ["sql"],
   load() {
     return sql("StandardSQL");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "SQLite",
   load() {
     return sql("SQLite");
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "TSX",
   extensions: ["tsx"],
   load() {
@@ -30439,7 +32505,7 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
       typescript: true
     }));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "TypeScript",
   alias: ["ts"],
   extensions: ["ts"],
@@ -30448,466 +32514,466 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
       typescript: true
     }));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "WebAssembly",
   extensions: ["wat", "wast"],
   load() {
     return __webpack_require__.e(/* import() */ 5414).then(__webpack_require__.bind(__webpack_require__, 5414)).then(m => m.wast());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "XML",
   alias: ["rss", "wsdl", "xsd"],
   extensions: ["xml", "xsl", "xsd", "svg"],
   load() {
     return __webpack_require__.e(/* import() */ 4619).then(__webpack_require__.bind(__webpack_require__, 4619)).then(m => m.xml());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "APL",
   extensions: ["dyalog", "apl"],
   load() {
     return __webpack_require__.e(/* import() */ 1378).then(__webpack_require__.bind(__webpack_require__, 1378)).then(m => legacy(m.apl));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "PGP",
   alias: ["asciiarmor"],
   extensions: ["asc", "pgp", "sig"],
   load() {
     return __webpack_require__.e(/* import() */ 2058).then(__webpack_require__.bind(__webpack_require__, 2058)).then(m => legacy(m.asciiArmor));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "ASN.1",
   extensions: ["asn", "asn1"],
   load() {
     return __webpack_require__.e(/* import() */ 4192).then(__webpack_require__.bind(__webpack_require__, 4192)).then(m => legacy(m.asn1({})));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Asterisk",
   filename: /^extensions\.conf$/i,
   load() {
     return __webpack_require__.e(/* import() */ 4600).then(__webpack_require__.bind(__webpack_require__, 4600)).then(m => legacy(m.asterisk));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Brainfuck",
   extensions: ["b", "bf"],
   load() {
     return __webpack_require__.e(/* import() */ 7410).then(__webpack_require__.bind(__webpack_require__, 7410)).then(m => legacy(m.brainfuck));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Cobol",
   extensions: ["cob", "cpy"],
   load() {
     return __webpack_require__.e(/* import() */ 7363).then(__webpack_require__.bind(__webpack_require__, 7363)).then(m => legacy(m.cobol));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "C#",
   alias: ["csharp", "cs"],
   extensions: ["cs"],
   load() {
     return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.csharp));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Clojure",
   extensions: ["clj", "cljc", "cljx"],
   load() {
     return __webpack_require__.e(/* import() */ 5371).then(__webpack_require__.bind(__webpack_require__, 5371)).then(m => legacy(m.clojure));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "ClojureScript",
   extensions: ["cljs"],
   load() {
     return __webpack_require__.e(/* import() */ 5371).then(__webpack_require__.bind(__webpack_require__, 5371)).then(m => legacy(m.clojure));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Closure Stylesheets (GSS)",
   extensions: ["gss"],
   load() {
     return __webpack_require__.e(/* import() */ 7718).then(__webpack_require__.bind(__webpack_require__, 7718)).then(m => legacy(m.gss));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "CMake",
   extensions: ["cmake", "cmake.in"],
   filename: /^CMakeLists\.txt$/,
   load() {
     return __webpack_require__.e(/* import() */ 4358).then(__webpack_require__.bind(__webpack_require__, 4358)).then(m => legacy(m.cmake));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "CoffeeScript",
   alias: ["coffee", "coffee-script"],
   extensions: ["coffee"],
   load() {
     return __webpack_require__.e(/* import() */ 5100).then(__webpack_require__.bind(__webpack_require__, 5100)).then(m => legacy(m.coffeeScript));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Common Lisp",
   alias: ["lisp"],
   extensions: ["cl", "lisp", "el"],
   load() {
     return __webpack_require__.e(/* import() */ 5576).then(__webpack_require__.bind(__webpack_require__, 5576)).then(m => legacy(m.commonLisp));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Cypher",
   extensions: ["cyp", "cypher"],
   load() {
     return __webpack_require__.e(/* import() */ 9352).then(__webpack_require__.bind(__webpack_require__, 9352)).then(m => legacy(m.cypher));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Cython",
   extensions: ["pyx", "pxd", "pxi"],
   load() {
     return __webpack_require__.e(/* import() */ 1674).then(__webpack_require__.bind(__webpack_require__, 1674)).then(m => legacy(m.cython));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Crystal",
   extensions: ["cr"],
   load() {
     return __webpack_require__.e(/* import() */ 3424).then(__webpack_require__.bind(__webpack_require__, 3424)).then(m => legacy(m.crystal));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "D",
   extensions: ["d"],
   load() {
     return __webpack_require__.e(/* import() */ 7161).then(__webpack_require__.bind(__webpack_require__, 7161)).then(m => legacy(m.d));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Dart",
   extensions: ["dart"],
   load() {
     return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.dart));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "diff",
   extensions: ["diff", "patch"],
   load() {
     return __webpack_require__.e(/* import() */ 9223).then(__webpack_require__.bind(__webpack_require__, 9223)).then(m => legacy(m.diff));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Dockerfile",
   filename: /^Dockerfile$/,
   load() {
     return __webpack_require__.e(/* import() */ 1062).then(__webpack_require__.bind(__webpack_require__, 1062)).then(m => legacy(m.dockerFile));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "DTD",
   extensions: ["dtd"],
   load() {
     return __webpack_require__.e(/* import() */ 2260).then(__webpack_require__.bind(__webpack_require__, 2260)).then(m => legacy(m.dtd));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Dylan",
   extensions: ["dylan", "dyl", "intr"],
   load() {
     return __webpack_require__.e(/* import() */ 8409).then(__webpack_require__.bind(__webpack_require__, 8409)).then(m => legacy(m.dylan));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "EBNF",
   load() {
     return __webpack_require__.e(/* import() */ 6713).then(__webpack_require__.bind(__webpack_require__, 6713)).then(m => legacy(m.ebnf));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "ECL",
   extensions: ["ecl"],
   load() {
     return __webpack_require__.e(/* import() */ 6463).then(__webpack_require__.bind(__webpack_require__, 6463)).then(m => legacy(m.ecl));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "edn",
   extensions: ["edn"],
   load() {
     return __webpack_require__.e(/* import() */ 5371).then(__webpack_require__.bind(__webpack_require__, 5371)).then(m => legacy(m.clojure));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Eiffel",
   extensions: ["e"],
   load() {
     return __webpack_require__.e(/* import() */ 6665).then(__webpack_require__.bind(__webpack_require__, 6665)).then(m => legacy(m.eiffel));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Elm",
   extensions: ["elm"],
   load() {
     return __webpack_require__.e(/* import() */ 461).then(__webpack_require__.bind(__webpack_require__, 461)).then(m => legacy(m.elm));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Erlang",
   extensions: ["erl"],
   load() {
     return __webpack_require__.e(/* import() */ 3448).then(__webpack_require__.bind(__webpack_require__, 3448)).then(m => legacy(m.erlang));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Esper",
   load() {
     return __webpack_require__.e(/* import() */ 3405).then(__webpack_require__.bind(__webpack_require__, 3405)).then(m => legacy(m.esper));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Factor",
   extensions: ["factor"],
   load() {
     return __webpack_require__.e(/* import() */ 8414).then(__webpack_require__.bind(__webpack_require__, 8414)).then(m => legacy(m.factor));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "FCL",
   load() {
     return __webpack_require__.e(/* import() */ 3674).then(__webpack_require__.bind(__webpack_require__, 3674)).then(m => legacy(m.fcl));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Forth",
   extensions: ["forth", "fth", "4th"],
   load() {
     return __webpack_require__.e(/* import() */ 1613).then(__webpack_require__.bind(__webpack_require__, 1613)).then(m => legacy(m.forth));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Fortran",
   extensions: ["f", "for", "f77", "f90", "f95"],
   load() {
     return __webpack_require__.e(/* import() */ 3530).then(__webpack_require__.bind(__webpack_require__, 3530)).then(m => legacy(m.fortran));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "F#",
   alias: ["fsharp"],
   extensions: ["fs"],
   load() {
     return __webpack_require__.e(/* import() */ 1635).then(__webpack_require__.bind(__webpack_require__, 1635)).then(m => legacy(m.fSharp));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Gas",
   extensions: ["s"],
   load() {
     return __webpack_require__.e(/* import() */ 1061).then(__webpack_require__.bind(__webpack_require__, 1061)).then(m => legacy(m.gas));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Gherkin",
   extensions: ["feature"],
   load() {
     return __webpack_require__.e(/* import() */ 7247).then(__webpack_require__.bind(__webpack_require__, 7247)).then(m => legacy(m.gherkin));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Go",
   extensions: ["go"],
   load() {
     return __webpack_require__.e(/* import() */ 1874).then(__webpack_require__.bind(__webpack_require__, 1874)).then(m => legacy(m.go));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Groovy",
   extensions: ["groovy", "gradle"],
   filename: /^Jenkinsfile$/,
   load() {
     return __webpack_require__.e(/* import() */ 582).then(__webpack_require__.bind(__webpack_require__, 582)).then(m => legacy(m.groovy));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Haskell",
   extensions: ["hs"],
   load() {
     return __webpack_require__.e(/* import() */ 5481).then(__webpack_require__.bind(__webpack_require__, 5481)).then(m => legacy(m.haskell));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Haxe",
   extensions: ["hx"],
   load() {
     return __webpack_require__.e(/* import() */ 6975).then(__webpack_require__.bind(__webpack_require__, 6975)).then(m => legacy(m.haxe));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "HXML",
   extensions: ["hxml"],
   load() {
     return __webpack_require__.e(/* import() */ 6975).then(__webpack_require__.bind(__webpack_require__, 6975)).then(m => legacy(m.hxml));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "HTTP",
   load() {
     return __webpack_require__.e(/* import() */ 937).then(__webpack_require__.bind(__webpack_require__, 937)).then(m => legacy(m.http));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "IDL",
   extensions: ["pro"],
   load() {
     return __webpack_require__.e(/* import() */ 6432).then(__webpack_require__.bind(__webpack_require__, 6432)).then(m => legacy(m.idl));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "JSON-LD",
   alias: ["jsonld"],
   extensions: ["jsonld"],
   load() {
     return __webpack_require__.e(/* import() */ 1886).then(__webpack_require__.bind(__webpack_require__, 1886)).then(m => legacy(m.jsonld));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Jinja2",
   extensions: ["j2", "jinja", "jinja2"],
   load() {
     return __webpack_require__.e(/* import() */ 9081).then(__webpack_require__.bind(__webpack_require__, 9081)).then(m => legacy(m.jinja2));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Julia",
   extensions: ["jl"],
   load() {
     return __webpack_require__.e(/* import() */ 7375).then(__webpack_require__.bind(__webpack_require__, 7375)).then(m => legacy(m.julia));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Kotlin",
   extensions: ["kt"],
   load() {
     return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.kotlin));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "LiveScript",
   alias: ["ls"],
   extensions: ["ls"],
   load() {
     return __webpack_require__.e(/* import() */ 3702).then(__webpack_require__.bind(__webpack_require__, 3702)).then(m => legacy(m.liveScript));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Lua",
   extensions: ["lua"],
   load() {
     return __webpack_require__.e(/* import() */ 6565).then(__webpack_require__.bind(__webpack_require__, 6565)).then(m => legacy(m.lua));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "mIRC",
   extensions: ["mrc"],
   load() {
     return __webpack_require__.e(/* import() */ 7621).then(__webpack_require__.bind(__webpack_require__, 7621)).then(m => legacy(m.mirc));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Mathematica",
   extensions: ["m", "nb", "wl", "wls"],
   load() {
     return __webpack_require__.e(/* import() */ 2362).then(__webpack_require__.bind(__webpack_require__, 2362)).then(m => legacy(m.mathematica));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Modelica",
   extensions: ["mo"],
   load() {
     return __webpack_require__.e(/* import() */ 3159).then(__webpack_require__.bind(__webpack_require__, 3159)).then(m => legacy(m.modelica));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "MUMPS",
   extensions: ["mps"],
   load() {
     return __webpack_require__.e(/* import() */ 3746).then(__webpack_require__.bind(__webpack_require__, 3746)).then(m => legacy(m.mumps));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Mbox",
   extensions: ["mbox"],
   load() {
     return __webpack_require__.e(/* import() */ 5346).then(__webpack_require__.bind(__webpack_require__, 5346)).then(m => legacy(m.mbox));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Nginx",
   filename: /nginx.*\.conf$/i,
   load() {
     return __webpack_require__.e(/* import() */ 3447).then(__webpack_require__.bind(__webpack_require__, 3447)).then(m => legacy(m.nginx));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "NSIS",
   extensions: ["nsh", "nsi"],
   load() {
     return __webpack_require__.e(/* import() */ 6864).then(__webpack_require__.bind(__webpack_require__, 6864)).then(m => legacy(m.nsis));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "NTriples",
   extensions: ["nt", "nq"],
   load() {
     return __webpack_require__.e(/* import() */ 9195).then(__webpack_require__.bind(__webpack_require__, 9195)).then(m => legacy(m.ntriples));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Objective-C",
   alias: ["objective-c", "objc"],
   extensions: ["m"],
   load() {
     return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.objectiveC));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Objective-C++",
   alias: ["objective-c++", "objc++"],
   extensions: ["mm"],
   load() {
     return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.objectiveCpp));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "OCaml",
   extensions: ["ml", "mli", "mll", "mly"],
   load() {
     return __webpack_require__.e(/* import() */ 1635).then(__webpack_require__.bind(__webpack_require__, 1635)).then(m => legacy(m.oCaml));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Octave",
   extensions: ["m"],
   load() {
     return __webpack_require__.e(/* import() */ 797).then(__webpack_require__.bind(__webpack_require__, 797)).then(m => legacy(m.octave));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Oz",
   extensions: ["oz"],
   load() {
     return __webpack_require__.e(/* import() */ 270).then(__webpack_require__.bind(__webpack_require__, 270)).then(m => legacy(m.oz));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Pascal",
   extensions: ["p", "pas"],
   load() {
     return __webpack_require__.e(/* import() */ 194).then(__webpack_require__.bind(__webpack_require__, 194)).then(m => legacy(m.pascal));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Perl",
   extensions: ["pl", "pm"],
   load() {
     return __webpack_require__.e(/* import() */ 6653).then(__webpack_require__.bind(__webpack_require__, 6653)).then(m => legacy(m.perl));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Pig",
   extensions: ["pig"],
   load() {
     return __webpack_require__.e(/* import() */ 529).then(__webpack_require__.bind(__webpack_require__, 529)).then(m => legacy(m.pig));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "PowerShell",
   extensions: ["ps1", "psd1", "psm1"],
   load() {
     return __webpack_require__.e(/* import() */ 5176).then(__webpack_require__.bind(__webpack_require__, 5176)).then(m => legacy(m.powerShell));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Properties files",
   alias: ["ini", "properties"],
   extensions: ["properties", "ini", "in"],
   load() {
     return __webpack_require__.e(/* import() */ 8337).then(__webpack_require__.bind(__webpack_require__, 8337)).then(m => legacy(m.properties));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "ProtoBuf",
   extensions: ["proto"],
   load() {
     return __webpack_require__.e(/* import() */ 2661).then(__webpack_require__.bind(__webpack_require__, 2661)).then(m => legacy(m.protobuf));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Puppet",
   extensions: ["pp"],
   load() {
     return __webpack_require__.e(/* import() */ 8542).then(__webpack_require__.bind(__webpack_require__, 8542)).then(m => legacy(m.puppet));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Q",
   extensions: ["q"],
   load() {
     return __webpack_require__.e(/* import() */ 5298).then(__webpack_require__.bind(__webpack_require__, 5298)).then(m => legacy(m.q));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "R",
   alias: ["rscript"],
   extensions: ["r", "R"],
   load() {
     return __webpack_require__.e(/* import() */ 5241).then(__webpack_require__.bind(__webpack_require__, 5241)).then(m => legacy(m.r));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "RPM Changes",
   load() {
     return __webpack_require__.e(/* import() */ 6521).then(__webpack_require__.bind(__webpack_require__, 6521)).then(m => legacy(m.rpmChanges));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "RPM Spec",
   extensions: ["spec"],
   load() {
     return __webpack_require__.e(/* import() */ 6521).then(__webpack_require__.bind(__webpack_require__, 6521)).then(m => legacy(m.rpmSpec));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Ruby",
   alias: ["jruby", "macruby", "rake", "rb", "rbx"],
   extensions: ["rb"],
@@ -30915,25 +32981,25 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   load() {
     return __webpack_require__.e(/* import() */ 9463).then(__webpack_require__.bind(__webpack_require__, 9463)).then(m => legacy(m.ruby));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "SAS",
   extensions: ["sas"],
   load() {
     return __webpack_require__.e(/* import() */ 6031).then(__webpack_require__.bind(__webpack_require__, 6031)).then(m => legacy(m.sas));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Scala",
   extensions: ["scala"],
   load() {
     return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.scala));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Scheme",
   extensions: ["scm", "ss"],
   load() {
     return __webpack_require__.e(/* import() */ 4435).then(__webpack_require__.bind(__webpack_require__, 4435)).then(m => legacy(m.scheme));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Shell",
   alias: ["bash", "sh", "zsh"],
   extensions: ["sh", "ksh", "bash"],
@@ -30941,216 +33007,216 @@ const languages = [language_dist/* LanguageDescription.of */.c6.of({
   load() {
     return __webpack_require__.e(/* import() */ 9281).then(__webpack_require__.bind(__webpack_require__, 9281)).then(m => legacy(m.shell));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Sieve",
   extensions: ["siv", "sieve"],
   load() {
     return __webpack_require__.e(/* import() */ 2518).then(__webpack_require__.bind(__webpack_require__, 2518)).then(m => legacy(m.sieve));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Smalltalk",
   extensions: ["st"],
   load() {
     return __webpack_require__.e(/* import() */ 167).then(__webpack_require__.bind(__webpack_require__, 167)).then(m => legacy(m.smalltalk));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Solr",
   load() {
     return __webpack_require__.e(/* import() */ 1201).then(__webpack_require__.bind(__webpack_require__, 1201)).then(m => legacy(m.solr));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "SML",
   extensions: ["sml", "sig", "fun", "smackspec"],
   load() {
     return __webpack_require__.e(/* import() */ 1635).then(__webpack_require__.bind(__webpack_require__, 1635)).then(m => legacy(m.sml));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "SPARQL",
   alias: ["sparul"],
   extensions: ["rq", "sparql"],
   load() {
     return __webpack_require__.e(/* import() */ 7702).then(__webpack_require__.bind(__webpack_require__, 7702)).then(m => legacy(m.sparql));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Spreadsheet",
   alias: ["excel", "formula"],
   load() {
     return __webpack_require__.e(/* import() */ 8384).then(__webpack_require__.bind(__webpack_require__, 8384)).then(m => legacy(m.spreadsheet));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Squirrel",
   extensions: ["nut"],
   load() {
     return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.squirrel));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Stylus",
   extensions: ["styl"],
   load() {
     return __webpack_require__.e(/* import() */ 1611).then(__webpack_require__.bind(__webpack_require__, 1611)).then(m => legacy(m.stylus));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Swift",
   extensions: ["swift"],
   load() {
     return __webpack_require__.e(/* import() */ 2923).then(__webpack_require__.bind(__webpack_require__, 2923)).then(m => legacy(m.swift));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "sTeX",
   load() {
     return __webpack_require__.e(/* import() */ 726).then(__webpack_require__.bind(__webpack_require__, 726)).then(m => legacy(m.stex));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "LaTeX",
   alias: ["tex"],
   extensions: ["text", "ltx", "tex"],
   load() {
     return __webpack_require__.e(/* import() */ 726).then(__webpack_require__.bind(__webpack_require__, 726)).then(m => legacy(m.stex));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "SystemVerilog",
   extensions: ["v", "sv", "svh"],
   load() {
     return __webpack_require__.e(/* import() */ 9014).then(__webpack_require__.bind(__webpack_require__, 9014)).then(m => legacy(m.verilog));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Tcl",
   extensions: ["tcl"],
   load() {
     return __webpack_require__.e(/* import() */ 8864).then(__webpack_require__.bind(__webpack_require__, 8864)).then(m => legacy(m.tcl));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Textile",
   extensions: ["textile"],
   load() {
     return __webpack_require__.e(/* import() */ 3771).then(__webpack_require__.bind(__webpack_require__, 3771)).then(m => legacy(m.textile));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "TiddlyWiki",
   load() {
     return __webpack_require__.e(/* import() */ 5944).then(__webpack_require__.bind(__webpack_require__, 5944)).then(m => legacy(m.tiddlyWiki));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Tiki wiki",
   load() {
     return __webpack_require__.e(/* import() */ 4810).then(__webpack_require__.bind(__webpack_require__, 4810)).then(m => legacy(m.tiki));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "TOML",
   extensions: ["toml"],
   load() {
     return __webpack_require__.e(/* import() */ 9627).then(__webpack_require__.bind(__webpack_require__, 9627)).then(m => legacy(m.toml));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Troff",
   extensions: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
   load() {
     return __webpack_require__.e(/* import() */ 4052).then(__webpack_require__.bind(__webpack_require__, 4052)).then(m => legacy(m.troff));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "TTCN",
   extensions: ["ttcn", "ttcn3", "ttcnpp"],
   load() {
     return __webpack_require__.e(/* import() */ 5604).then(__webpack_require__.bind(__webpack_require__, 5604)).then(m => legacy(m.ttcn));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "TTCN_CFG",
   extensions: ["cfg"],
   load() {
     return __webpack_require__.e(/* import() */ 2082).then(__webpack_require__.bind(__webpack_require__, 2082)).then(m => legacy(m.ttcnCfg));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Turtle",
   extensions: ["ttl"],
   load() {
     return __webpack_require__.e(/* import() */ 5102).then(__webpack_require__.bind(__webpack_require__, 5102)).then(m => legacy(m.turtle));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Web IDL",
   extensions: ["webidl"],
   load() {
     return __webpack_require__.e(/* import() */ 4470).then(__webpack_require__.bind(__webpack_require__, 4470)).then(m => legacy(m.webIDL));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "VB.NET",
   extensions: ["vb"],
   load() {
     return __webpack_require__.e(/* import() */ 2131).then(__webpack_require__.bind(__webpack_require__, 2131)).then(m => legacy(m.vb));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "VBScript",
   extensions: ["vbs"],
   load() {
     return __webpack_require__.e(/* import() */ 7330).then(__webpack_require__.bind(__webpack_require__, 7330)).then(m => legacy(m.vbScript));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Velocity",
   extensions: ["vtl"],
   load() {
     return __webpack_require__.e(/* import() */ 8317).then(__webpack_require__.bind(__webpack_require__, 8317)).then(m => legacy(m.velocity));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Verilog",
   extensions: ["v"],
   load() {
     return __webpack_require__.e(/* import() */ 9014).then(__webpack_require__.bind(__webpack_require__, 9014)).then(m => legacy(m.verilog));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "VHDL",
   extensions: ["vhd", "vhdl"],
   load() {
     return __webpack_require__.e(/* import() */ 7069).then(__webpack_require__.bind(__webpack_require__, 7069)).then(m => legacy(m.vhdl));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "XQuery",
   extensions: ["xy", "xquery"],
   load() {
     return __webpack_require__.e(/* import() */ 5723).then(__webpack_require__.bind(__webpack_require__, 5723)).then(m => legacy(m.xQuery));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Yacas",
   extensions: ["ys"],
   load() {
     return __webpack_require__.e(/* import() */ 6745).then(__webpack_require__.bind(__webpack_require__, 6745)).then(m => legacy(m.yacas));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "YAML",
   alias: ["yml"],
   extensions: ["yaml", "yml"],
   load() {
     return __webpack_require__.e(/* import() */ 5297).then(__webpack_require__.bind(__webpack_require__, 5297)).then(m => legacy(m.yaml));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Z80",
   extensions: ["z80"],
   load() {
     return __webpack_require__.e(/* import() */ 2512).then(__webpack_require__.bind(__webpack_require__, 2512)).then(m => legacy(m.z80));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "MscGen",
   extensions: ["mscgen", "mscin", "msc"],
   load() {
     return __webpack_require__.e(/* import() */ 457).then(__webpack_require__.bind(__webpack_require__, 457)).then(m => legacy(m.mscgen));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Xù",
   extensions: ["xu"],
   load() {
     return __webpack_require__.e(/* import() */ 457).then(__webpack_require__.bind(__webpack_require__, 457)).then(m => legacy(m.xu));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "MsGenny",
   extensions: ["msgenny"],
   load() {
     return __webpack_require__.e(/* import() */ 457).then(__webpack_require__.bind(__webpack_require__, 457)).then(m => legacy(m.msgenny));
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Vue",
   extensions: ["vue"],
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(7802)]).then(__webpack_require__.bind(__webpack_require__, 7802)).then(m => m.vue());
   }
-}), language_dist/* LanguageDescription.of */.c6.of({
+}), language_dist/* LanguageDescription */.c6.of({
   name: "Angular Template",
   load() {
     return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(2493), __webpack_require__.e(3077), __webpack_require__.e(6414), __webpack_require__.e(4217)]).then(__webpack_require__.bind(__webpack_require__, 4217)).then(m => m.angular());
@@ -31209,9 +33275,9 @@ function _injectCodeMirrorStep1(editors) {
     const showGutter = textarea.attr('data-show-gutter') || 'true';
     const rounded = textarea.attr('data-rounded') || 'true';
     const editorLang = new state_dist/* Compartment */.F6();
-    const extensions = [state_dist/* EditorState.tabSize.of */.yy.tabSize.of(0x00000000000000004), dist/* EditorView.editable.of */.tk.editable.of(readOnly !== 'true'), dist/* highlightSpecialChars */.AE(), dist/* keymap.of */.$f.of([...defaultKeymap, ...historyKeymap]), dist_history(), editorLang.of(dynamicLang), language_dist/* syntaxHighlighting */.nF(language_dist/* defaultHighlightStyle */.R_, {
+    const extensions = [state_dist/* EditorState */.yy.tabSize.of(0x00000000000000004), dist/* EditorView */.tk.editable.of(readOnly !== 'true'), dist/* highlightSpecialChars */.AE(), dist/* keymap */.$f.of([...defaultKeymap, ...historyKeymap]), dist_history(), editorLang.of(dynamicLang), language_dist/* syntaxHighlighting */.nF(language_dist/* defaultHighlightStyle */.R_, {
       fallback: true
-    }), dist/* EditorView.theme */.tk.theme({
+    }), dist/* EditorView */.tk.theme({
       '&.cm-editor': {
         'fontSize': '13px'
       },
@@ -31219,7 +33285,7 @@ function _injectCodeMirrorStep1(editors) {
         'border-top-left-radius': rounded === 'true' ? '0.25rem' : '0',
         'border-bottom-left-radius': rounded === 'true' ? '0.25rem' : '0'
       }
-    }), dist/* EditorView.updateListener.of */.tk.updateListener.of(update => {
+    }), dist/* EditorView */.tk.updateListener.of(update => {
       if (textarea[0].value !== update.state.doc.toString()) {
         textarea[0].value = update.state.doc.toString();
         textarea.trigger('change');
@@ -31236,9 +33302,9 @@ function _injectCodeMirrorStep1(editors) {
       extensions.push(language_dist/* foldGutter */.mi());
     }
     if (wordWrap === 'true') {
-      extensions.push(dist/* EditorView.lineWrapping */.tk.lineWrapping);
+      extensions.push(dist/* EditorView */.tk.lineWrapping);
     }
-    const editorState = state_dist/* EditorState.create */.yy.create({
+    const editorState = state_dist/* EditorState */.yy.create({
       extensions: extensions,
       doc: textarea.val()
     });
@@ -31256,7 +33322,7 @@ function _injectCodeMirrorStep1(editors) {
       'style': textarea.attr('style')
     });
     div.insertAfter(textarea).promise().done(() => {
-      const descr = language_dist/* LanguageDescription.matchLanguageName */.c6.matchLanguageName(languages, textarea.attr('data-lang') || 'json');
+      const descr = language_dist/* LanguageDescription */.c6.matchLanguageName(languages, textarea.attr('data-lang') || 'json');
       if (descr) {
         descr.load().then(dynamicLang => {
           _injectCodeMirrorStep2(div, textarea, dynamicLang);
@@ -31424,7 +33490,7 @@ function formatTWIG(twig, dict, twigs) {
     dict['ORIGIN_URL'] = js_AMIRouter.getOriginURL();
     dict['WEBAPP_URL'] = js_AMIRouter.getWebAppURL();
     dict['BOOTSTRAP_VERSION'] = js_AMIWebApp.bootstrapVersion;
-    return ami_twig/* default.engine.render */.Z.engine.render(twig, dict, twigs);
+    return ami_twig/* default */.Z.engine.render(twig, dict, twigs);
   };
   asArray(dict).forEach(DICT => {
     try {
@@ -32695,8 +34761,8 @@ function loadSubApp(subapp, userdata, options) {
         _internal_always(_currentSubappInstance.onExit(userdata), () => {
           _currentSubappInstance = window[descr.instance];
           _currentUserdata = userdata;
-          js_AMIWebApp.args.subapp = subapp;
-          js_AMIWebApp.args.userdata = userdata;
+          js_AMIWebApp.args['subapp'] = subapp;
+          js_AMIWebApp.args['userdata'] = userdata;
           _internal_then(_currentSubappInstance.onReady(userdata), () => {
             const promise = js_AMIAuth.isAuthenticated() ? triggerLogin() : triggerLogout();
             promise.then(() => {
@@ -32847,7 +34913,7 @@ function loadSubAppByURL(defaultSubApp, defaultUserData) {
           const editorLang = this.data('editorLang');
           const editorView = this.data('editorView');
           if (editorLang && editorView) {
-            const descr = language_dist/* LanguageDescription.matchLanguageName */.c6.matchLanguageName(languages, this.attr('data-lang') || 'json');
+            const descr = language_dist/* LanguageDescription */.c6.matchLanguageName(languages, this.attr('data-lang') || 'json');
             if (descr) {
               descr.load().then(dynamicLang => {
                 editorView.dispatch(editorView.state.update({
