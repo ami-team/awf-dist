@@ -10325,11 +10325,14 @@ class TreeIndentContext extends IndentContext {
     return this.textAfterPos(this.pos);
   }
   get baseIndent() {
-    let line = this.state.doc.lineAt(this.node.from);
+    return this.baseIndentFor(this.node);
+  }
+  baseIndentFor(node) {
+    let line = this.state.doc.lineAt(node.from);
     for (;;) {
-      let atBreak = this.node.resolve(line.from);
+      let atBreak = node.resolve(line.from);
       while (atBreak.parent && atBreak.parent.from == atBreak.from) atBreak = atBreak.parent;
-      if (isParent(atBreak, this.node)) break;
+      if (isParent(atBreak, node)) break;
       line = this.state.doc.lineAt(atBreak.from);
     }
     return this.lineIndent(line.from);
@@ -15446,7 +15449,7 @@ class WidgetView extends ContentView {
       rect = rects[i];
       if (pos > 0 ? i == 0 : i == rects.length - 1 || rect.top < rect.bottom) break;
     }
-    return this.length ? rect : flattenRect(rect, !fromBack);
+    return flattenRect(rect, !fromBack);
   }
   get isEditable() {
     return false;
@@ -21933,7 +21936,7 @@ const dist_plugin = ViewPlugin.fromClass(class {
       view
     } = update;
     let height = view.viewState.editorHeight - view.defaultLineHeight - view.documentPadding.top - 0.5;
-    if (height != this.height) {
+    if (height >= 0 && height != this.height) {
       this.height = height;
       this.attrs = {
         style: `padding-bottom: ${height}px`
