@@ -6808,14 +6808,14 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(1275), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(6353), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(8853), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(9880), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/*!
- * Bootstrap Icons v1.10.5 (https://icons.getbootstrap.com/)
+ * Bootstrap Icons v1.11.1 (https://icons.getbootstrap.com/)
  * Copyright 2019-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
@@ -8795,6 +8795,103 @@ url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("woff");
 .bi-sina-weibo::before { content: "\\f8ca"; }
 .bi-tencent-qq::before { content: "\\f8cb"; }
 .bi-wikipedia::before { content: "\\f8cc"; }
+.bi-alphabet-uppercase::before { content: "\\f2a5"; }
+.bi-alphabet::before { content: "\\f68a"; }
+.bi-amazon::before { content: "\\f68d"; }
+.bi-arrows-collapse-vertical::before { content: "\\f690"; }
+.bi-arrows-expand-vertical::before { content: "\\f695"; }
+.bi-arrows-vertical::before { content: "\\f698"; }
+.bi-arrows::before { content: "\\f6a2"; }
+.bi-ban-fill::before { content: "\\f6a3"; }
+.bi-ban::before { content: "\\f6b6"; }
+.bi-bing::before { content: "\\f6c2"; }
+.bi-cake::before { content: "\\f6e0"; }
+.bi-cake2::before { content: "\\f6ed"; }
+.bi-cookie::before { content: "\\f6ee"; }
+.bi-copy::before { content: "\\f759"; }
+.bi-crosshair::before { content: "\\f769"; }
+.bi-crosshair2::before { content: "\\f794"; }
+.bi-emoji-astonished-fill::before { content: "\\f795"; }
+.bi-emoji-astonished::before { content: "\\f79a"; }
+.bi-emoji-grimace-fill::before { content: "\\f79b"; }
+.bi-emoji-grimace::before { content: "\\f7a0"; }
+.bi-emoji-grin-fill::before { content: "\\f7a1"; }
+.bi-emoji-grin::before { content: "\\f7a6"; }
+.bi-emoji-surprise-fill::before { content: "\\f7a7"; }
+.bi-emoji-surprise::before { content: "\\f7ac"; }
+.bi-emoji-tear-fill::before { content: "\\f7ad"; }
+.bi-emoji-tear::before { content: "\\f7b2"; }
+.bi-envelope-arrow-down-fill::before { content: "\\f7b3"; }
+.bi-envelope-arrow-down::before { content: "\\f7b8"; }
+.bi-envelope-arrow-up-fill::before { content: "\\f7b9"; }
+.bi-envelope-arrow-up::before { content: "\\f7be"; }
+.bi-feather::before { content: "\\f7bf"; }
+.bi-feather2::before { content: "\\f7c4"; }
+.bi-floppy-fill::before { content: "\\f7c5"; }
+.bi-floppy::before { content: "\\f7d8"; }
+.bi-floppy2-fill::before { content: "\\f7d9"; }
+.bi-floppy2::before { content: "\\f7e4"; }
+.bi-gitlab::before { content: "\\f7e5"; }
+.bi-highlighter::before { content: "\\f7f8"; }
+.bi-marker-tip::before { content: "\\f802"; }
+.bi-nvme-fill::before { content: "\\f803"; }
+.bi-nvme::before { content: "\\f80c"; }
+.bi-opencollective::before { content: "\\f80d"; }
+.bi-pci-card-network::before { content: "\\f8cd"; }
+.bi-pci-card-sound::before { content: "\\f8ce"; }
+.bi-radar::before { content: "\\f8cf"; }
+.bi-send-arrow-down-fill::before { content: "\\f8d0"; }
+.bi-send-arrow-down::before { content: "\\f8d1"; }
+.bi-send-arrow-up-fill::before { content: "\\f8d2"; }
+.bi-send-arrow-up::before { content: "\\f8d3"; }
+.bi-sim-slash-fill::before { content: "\\f8d4"; }
+.bi-sim-slash::before { content: "\\f8d5"; }
+.bi-sourceforge::before { content: "\\f8d6"; }
+.bi-substack::before { content: "\\f8d7"; }
+.bi-threads-fill::before { content: "\\f8d8"; }
+.bi-threads::before { content: "\\f8d9"; }
+.bi-transparency::before { content: "\\f8da"; }
+.bi-twitter-x::before { content: "\\f8db"; }
+.bi-type-h4::before { content: "\\f8dc"; }
+.bi-type-h5::before { content: "\\f8dd"; }
+.bi-type-h6::before { content: "\\f8de"; }
+.bi-backpack-fill::before { content: "\\f8df"; }
+.bi-backpack::before { content: "\\f8e0"; }
+.bi-backpack2-fill::before { content: "\\f8e1"; }
+.bi-backpack2::before { content: "\\f8e2"; }
+.bi-backpack3-fill::before { content: "\\f8e3"; }
+.bi-backpack3::before { content: "\\f8e4"; }
+.bi-backpack4-fill::before { content: "\\f8e5"; }
+.bi-backpack4::before { content: "\\f8e6"; }
+.bi-brilliance::before { content: "\\f8e7"; }
+.bi-cake-fill::before { content: "\\f8e8"; }
+.bi-cake2-fill::before { content: "\\f8e9"; }
+.bi-duffle-fill::before { content: "\\f8ea"; }
+.bi-duffle::before { content: "\\f8eb"; }
+.bi-exposure::before { content: "\\f8ec"; }
+.bi-gender-neuter::before { content: "\\f8ed"; }
+.bi-highlights::before { content: "\\f8ee"; }
+.bi-luggage-fill::before { content: "\\f8ef"; }
+.bi-luggage::before { content: "\\f8f0"; }
+.bi-mailbox-flag::before { content: "\\f8f1"; }
+.bi-mailbox2-flag::before { content: "\\f8f2"; }
+.bi-noise-reduction::before { content: "\\f8f3"; }
+.bi-passport-fill::before { content: "\\f8f4"; }
+.bi-passport::before { content: "\\f8f5"; }
+.bi-person-arms-up::before { content: "\\f8f6"; }
+.bi-person-raised-hand::before { content: "\\f8f7"; }
+.bi-person-standing-dress::before { content: "\\f8f8"; }
+.bi-person-standing::before { content: "\\f8f9"; }
+.bi-person-walking::before { content: "\\f8fa"; }
+.bi-person-wheelchair::before { content: "\\f8fb"; }
+.bi-shadows::before { content: "\\f8fc"; }
+.bi-suitcase-fill::before { content: "\\f8fd"; }
+.bi-suitcase-lg-fill::before { content: "\\f8fe"; }
+.bi-suitcase-lg::before { content: "\\f8ff"; }
+.bi-suitcase::before { content: "\\f900"; }
+.bi-suitcase2-fill::before { content: "\\f901"; }
+.bi-suitcase2::before { content: "\\f902"; }
+.bi-vignette::before { content: "\\f903"; }
 `, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -9214,7 +9311,7 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 1275:
+/***/ 8853:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9222,7 +9319,7 @@ module.exports = __webpack_require__.p + "assets/fonts/bootstrap-icons.woff2";
 
 /***/ }),
 
-/***/ 6353:
+/***/ 9880:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9984,7 +10081,7 @@ const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin 
   update(update) {
     let cx = this.view.state.field(Language.state).context;
     if (cx.updateViewport(update.view.viewport) || this.view.viewport.to > cx.treeLen) this.scheduleWork();
-    if (update.docChanged) {
+    if (update.docChanged || update.selectionSet) {
       if (this.view.hasFocus) this.chunkBudget += 50;
       this.scheduleWork();
     }
@@ -10284,7 +10381,24 @@ class IndentContext {
 }
 const indentNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
 function syntaxIndentation(cx, ast, pos) {
-  return indentFrom(ast.resolveInner(pos).enterUnfinishedNodesBefore(pos), pos, cx);
+  let stack = ast.resolveStack(pos);
+  let inner = stack.node.enterUnfinishedNodesBefore(pos);
+  if (inner != stack.node) {
+    let add = [];
+    for (let cur = inner; cur != stack.node; cur = cur.parent) add.push(cur);
+    for (let i = add.length - 1; i >= 0; i--) stack = {
+      node: add[i],
+      next: stack
+    };
+  }
+  return indentFor(stack, cx, pos);
+}
+function indentFor(stack, cx, pos) {
+  for (let cur = stack; cur; cur = cur.next) {
+    let strategy = indentStrategy(cur.node);
+    if (strategy) return strategy(TreeIndentContext.create(cx, pos, cur));
+  }
+  return 0;
 }
 function ignoreClosed(cx) {
   return cx.pos == cx.options.simulateBreak && cx.options.simulateDoubleBreak;
@@ -10301,25 +10415,21 @@ function indentStrategy(tree) {
   }
   return tree.parent == null ? topIndent : null;
 }
-function indentFrom(node, pos, base) {
-  for (; node; node = node.parent) {
-    let strategy = indentStrategy(node);
-    if (strategy) return strategy(TreeIndentContext.create(base, pos, node));
-  }
-  return null;
-}
 function topIndent() {
   return 0;
 }
 class TreeIndentContext extends IndentContext {
-  constructor(base, pos, node) {
+  constructor(base, pos, context) {
     super(base.state, base.options);
     this.base = base;
     this.pos = pos;
-    this.node = node;
+    this.context = context;
   }
-  static create(base, pos, node) {
-    return new TreeIndentContext(base, pos, node);
+  get node() {
+    return this.context.node;
+  }
+  static create(base, pos, context) {
+    return new TreeIndentContext(base, pos, context);
   }
   get textAfter() {
     return this.textAfterPos(this.pos);
@@ -10338,8 +10448,7 @@ class TreeIndentContext extends IndentContext {
     return this.lineIndent(line.from);
   }
   continue() {
-    let parent = this.node.parent;
-    return parent ? indentFrom(parent, this.pos, this.base) : 0;
+    return indentFor(this.context.next, this.base, this.pos);
   }
 }
 function isParent(parent, of) {
@@ -10443,9 +10552,10 @@ function foldInside(node) {
 function syntaxFolding(state, start, end) {
   let tree = syntaxTree(state);
   if (tree.length < end) return null;
-  let inner = tree.resolveInner(end, 1);
+  let stack = tree.resolveStack(end, 1);
   let found = null;
-  for (let cur = inner; cur; cur = cur.parent) {
+  for (let iter = stack; iter; iter = iter.next) {
+    let cur = iter.node;
     if (cur.to <= end || cur.from > end) continue;
     if (found && cur.from < start) break;
     let prop = cur.type.prop(foldNodeProp);
@@ -14490,7 +14600,7 @@ __webpack_require__.d(__webpack_exports__, {
   hJ: () => (/* binding */ showTooltip)
 });
 
-// UNUSED EXPORTS: BidiSpan, BlockInfo, BlockType, MatchDecorator, RectangleMarker, ViewUpdate, __test, closeHoverTooltips, crosshairCursor, drawSelection, dropCursor, getPanel, gutterLineClass, gutters, hasHoverTooltips, highlightActiveLine, highlightActiveLineGutter, highlightTrailingWhitespace, highlightWhitespace, hoverTooltip, layer, lineNumberMarkers, panels, placeholder, rectangularSelection, repositionTooltips, runScopeHandlers, scrollPastEnd, showPanel, tooltips
+// UNUSED EXPORTS: BidiSpan, BlockInfo, BlockType, MatchDecorator, RectangleMarker, ViewUpdate, __test, closeHoverTooltips, crosshairCursor, drawSelection, dropCursor, getDrawSelectionConfig, getPanel, gutterLineClass, gutters, hasHoverTooltips, highlightActiveLine, highlightActiveLineGutter, highlightTrailingWhitespace, highlightWhitespace, hoverTooltip, layer, lineNumberMarkers, panels, placeholder, rectangularSelection, repositionTooltips, runScopeHandlers, scrollPastEnd, showPanel, tooltips
 
 // EXTERNAL MODULE: ./node_modules/@codemirror/state/dist/index.js
 var state_dist = __webpack_require__(5854);
@@ -15057,6 +15167,7 @@ class ContentView {
     }
   }
   setDOM(dom) {
+    if (this.dom == dom) return;
     if (this.dom) this.dom.cmView = null;
     this.dom = dom;
     dom.cmView = this;
@@ -15167,7 +15278,7 @@ function replaceRange(parent, fromI, fromOff, toI, toOff, insert, breakAtStart, 
   if (fromI == toI && before && !breakAtStart && !breakAtEnd && insert.length < 2 && before.merge(fromOff, toOff, insert.length ? last : null, fromOff == 0, openStart, openEnd)) return;
   if (toI < children.length) {
     let after = children[toI];
-    if (after && toOff < after.length) {
+    if (after && (toOff < after.length || after.breakAfter && (last === null || last === void 0 ? void 0 : last.breakAfter))) {
       if (fromI == toI) {
         after = after.split(toOff);
         toOff = 0;
@@ -15227,105 +15338,6 @@ function mergeChildrenInto(parent, from, to, insert, openStart, openEnd) {
   }
   parent.length += dLen;
   replaceRange(parent, fromI, fromOff, toI, toOff, insert, 0, openStart, openEnd);
-}
-const LineBreakPlaceholder = "\uffff";
-class DOMReader {
-  constructor(points, state) {
-    this.points = points;
-    this.text = "";
-    this.lineSeparator = state.facet(state_dist/* EditorState */.yy.lineSeparator);
-  }
-  append(text) {
-    this.text += text;
-  }
-  lineBreak() {
-    this.text += LineBreakPlaceholder;
-  }
-  readRange(start, end) {
-    if (!start) return this;
-    let parent = start.parentNode;
-    for (let cur = start;;) {
-      this.findPointBefore(parent, cur);
-      let oldLen = this.text.length;
-      this.readNode(cur);
-      let next = cur.nextSibling;
-      if (next == end) break;
-      let view = ContentView.get(cur),
-        nextView = ContentView.get(next);
-      if (view && nextView ? view.breakAfter : (view ? view.breakAfter : isBlockElement(cur)) || isBlockElement(next) && (cur.nodeName != "BR" || cur.cmIgnore) && this.text.length > oldLen) this.lineBreak();
-      cur = next;
-    }
-    this.findPointBefore(parent, end);
-    return this;
-  }
-  readTextNode(node) {
-    let text = node.nodeValue;
-    for (var _iterator5 = _createForOfIteratorHelperLoose(this.points), _step5; !(_step5 = _iterator5()).done;) {
-      let point = _step5.value;
-      if (point.node == node) point.pos = this.text.length + Math.min(point.offset, text.length);
-    }
-    for (let off = 0, re = this.lineSeparator ? null : /\r\n?|\n/g;;) {
-      let nextBreak = -1,
-        breakSize = 1,
-        m;
-      if (this.lineSeparator) {
-        nextBreak = text.indexOf(this.lineSeparator, off);
-        breakSize = this.lineSeparator.length;
-      } else if (m = re.exec(text)) {
-        nextBreak = m.index;
-        breakSize = m[0].length;
-      }
-      this.append(text.slice(off, nextBreak < 0 ? text.length : nextBreak));
-      if (nextBreak < 0) break;
-      this.lineBreak();
-      if (breakSize > 1) {
-        for (var _iterator6 = _createForOfIteratorHelperLoose(this.points), _step6; !(_step6 = _iterator6()).done;) {
-          let point = _step6.value;
-          if (point.node == node && point.pos > this.text.length) point.pos -= breakSize - 1;
-        }
-      }
-      off = nextBreak + breakSize;
-    }
-  }
-  readNode(node) {
-    if (node.cmIgnore) return;
-    let view = ContentView.get(node);
-    let fromView = view && view.overrideDOMText;
-    if (fromView != null) {
-      this.findPointInside(node, fromView.length);
-      for (let i = fromView.iter(); !i.next().done;) {
-        if (i.lineBreak) this.lineBreak();else this.append(i.value);
-      }
-    } else if (node.nodeType == 3) {
-      this.readTextNode(node);
-    } else if (node.nodeName == "BR") {
-      if (node.nextSibling) this.lineBreak();
-    } else if (node.nodeType == 1) {
-      this.readRange(node.firstChild, null);
-    }
-  }
-  findPointBefore(node, next) {
-    for (var _iterator7 = _createForOfIteratorHelperLoose(this.points), _step7; !(_step7 = _iterator7()).done;) {
-      let point = _step7.value;
-      if (point.node == node && node.childNodes[point.offset] == next) point.pos = this.text.length;
-    }
-  }
-  findPointInside(node, maxLen) {
-    for (var _iterator8 = _createForOfIteratorHelperLoose(this.points), _step8; !(_step8 = _iterator8()).done;) {
-      let point = _step8.value;
-      if (node.nodeType == 3 ? point.node == node : node.contains(point.node)) point.pos = this.text.length + Math.min(maxLen, point.offset);
-    }
-  }
-}
-function isBlockElement(node) {
-  return node.nodeType == 1 && /^(DIV|P|LI|UL|OL|BLOCKQUOTE|DD|DT|H\d|SECTION|PRE)$/.test(node.nodeName);
-}
-class DOMPoint {
-  constructor(node, offset) {
-    this.node = node;
-    this.offset = offset;
-    this.pos = -1;
-  }
 }
 let nav = typeof navigator != "undefined" ? navigator : {
   userAgent: "",
@@ -15428,8 +15440,8 @@ class MarkView extends ContentView {
     this.mark = mark;
     this.children = children;
     this.length = length;
-    for (var _iterator9 = _createForOfIteratorHelperLoose(children), _step9; !(_step9 = _iterator9()).done;) {
-      let ch = _step9.value;
+    for (var _iterator5 = _createForOfIteratorHelperLoose(children), _step5; !(_step5 = _iterator5()).done;) {
+      let ch = _step5.value;
       ch.setParent(this);
     }
   }
@@ -15463,8 +15475,8 @@ class MarkView extends ContentView {
       off = 0,
       detachFrom = -1,
       i = 0;
-    for (var _iterator10 = _createForOfIteratorHelperLoose(this.children), _step10; !(_step10 = _iterator10()).done;) {
-      let elt = _step10.value;
+    for (var _iterator6 = _createForOfIteratorHelperLoose(this.children), _step6; !(_step6 = _iterator6()).done;) {
+      let elt = _step6.value;
       let end = off + elt.length;
       if (end > from) result.push(off < from ? elt.split(from - off) : elt);
       if (detachFrom < 0 && off >= from) detachFrom = i;
@@ -15762,6 +15774,242 @@ function getAttrs(dom) {
   }
   return attrs;
 }
+class LineView extends ContentView {
+  constructor() {
+    super(...arguments);
+    this.children = [];
+    this.length = 0;
+    this.prevAttrs = undefined;
+    this.attrs = null;
+    this.breakAfter = 0;
+  }
+  merge(from, to, source, hasStart, openStart, openEnd) {
+    if (source) {
+      if (!(source instanceof LineView)) return false;
+      if (!this.dom) source.transferDOM(this);
+    }
+    if (hasStart) this.setDeco(source ? source.attrs : null);
+    mergeChildrenInto(this, from, to, source ? source.children : [], openStart, openEnd);
+    return true;
+  }
+  split(at) {
+    let end = new LineView();
+    end.breakAfter = this.breakAfter;
+    if (this.length == 0) return end;
+    let {
+      i,
+      off
+    } = this.childPos(at);
+    if (off) {
+      end.append(this.children[i].split(off), 0);
+      this.children[i].merge(off, this.children[i].length, null, false, 0, 0);
+      i++;
+    }
+    for (let j = i; j < this.children.length; j++) end.append(this.children[j], 0);
+    while (i > 0 && this.children[i - 1].length == 0) this.children[--i].destroy();
+    this.children.length = i;
+    this.markDirty();
+    this.length = at;
+    return end;
+  }
+  transferDOM(other) {
+    if (!this.dom) return;
+    this.markDirty();
+    other.setDOM(this.dom);
+    other.prevAttrs = this.prevAttrs === undefined ? this.attrs : this.prevAttrs;
+    this.prevAttrs = undefined;
+    this.dom = null;
+  }
+  setDeco(attrs) {
+    if (!attrsEq(this.attrs, attrs)) {
+      if (this.dom) {
+        this.prevAttrs = this.attrs;
+        this.markDirty();
+      }
+      this.attrs = attrs;
+    }
+  }
+  append(child, openStart) {
+    joinInlineInto(this, child, openStart);
+  }
+  addLineDeco(deco) {
+    let attrs = deco.spec.attributes,
+      cls = deco.spec.class;
+    if (attrs) this.attrs = combineAttrs(attrs, this.attrs || {});
+    if (cls) this.attrs = combineAttrs({
+      class: cls
+    }, this.attrs || {});
+  }
+  domAtPos(pos) {
+    return inlineDOMAtPos(this, pos);
+  }
+  reuseDOM(node) {
+    if (node.nodeName == "DIV") {
+      this.setDOM(node);
+      this.flags |= 4 | 2;
+    }
+  }
+  sync(view, track) {
+    var _a;
+    if (!this.dom) {
+      this.setDOM(document.createElement("div"));
+      this.dom.className = "cm-line";
+      this.prevAttrs = this.attrs ? null : undefined;
+    } else if (this.flags & 4) {
+      clearAttributes(this.dom);
+      this.dom.className = "cm-line";
+      this.prevAttrs = this.attrs ? null : undefined;
+    }
+    if (this.prevAttrs !== undefined) {
+      updateAttrs(this.dom, this.prevAttrs, this.attrs);
+      this.dom.classList.add("cm-line");
+      this.prevAttrs = undefined;
+    }
+    super.sync(view, track);
+    let last = this.dom.lastChild;
+    while (last && ContentView.get(last) instanceof MarkView) last = last.lastChild;
+    if (!last || !this.length || last.nodeName != "BR" && ((_a = ContentView.get(last)) === null || _a === void 0 ? void 0 : _a.isEditable) == false && (!browser.ios || !this.children.some(ch => ch instanceof TextView))) {
+      let hack = document.createElement("BR");
+      hack.cmIgnore = true;
+      this.dom.appendChild(hack);
+    }
+  }
+  measureTextSize() {
+    if (this.children.length == 0 || this.length > 20) return null;
+    let totalWidth = 0,
+      textHeight;
+    for (var _iterator7 = _createForOfIteratorHelperLoose(this.children), _step7; !(_step7 = _iterator7()).done;) {
+      let child = _step7.value;
+      if (!(child instanceof TextView) || /[^ -~]/.test(child.text)) return null;
+      let rects = clientRectsFor(child.dom);
+      if (rects.length != 1) return null;
+      totalWidth += rects[0].width;
+      textHeight = rects[0].height;
+    }
+    return !totalWidth ? null : {
+      lineHeight: this.dom.getBoundingClientRect().height,
+      charWidth: totalWidth / this.length,
+      textHeight
+    };
+  }
+  coordsAt(pos, side) {
+    let rect = coordsInChildren(this, pos, side);
+    if (!this.children.length && rect && this.parent) {
+      let {
+          heightOracle
+        } = this.parent.view.viewState,
+        height = rect.bottom - rect.top;
+      if (Math.abs(height - heightOracle.lineHeight) < 2 && heightOracle.textHeight < height) {
+        let dist = (height - heightOracle.textHeight) / 2;
+        return {
+          top: rect.top + dist,
+          bottom: rect.bottom - dist,
+          left: rect.left,
+          right: rect.left
+        };
+      }
+    }
+    return rect;
+  }
+  become(_other) {
+    return false;
+  }
+  covers() {
+    return true;
+  }
+  static find(docView, pos) {
+    for (let i = 0, off = 0; i < docView.children.length; i++) {
+      let block = docView.children[i],
+        end = off + block.length;
+      if (end >= pos) {
+        if (block instanceof LineView) return block;
+        if (end > pos) break;
+      }
+      off = end + block.breakAfter;
+    }
+    return null;
+  }
+}
+class BlockWidgetView extends ContentView {
+  constructor(widget, length, deco) {
+    super();
+    this.widget = widget;
+    this.length = length;
+    this.deco = deco;
+    this.breakAfter = 0;
+    this.prevWidget = null;
+  }
+  merge(from, to, source, _takeDeco, openStart, openEnd) {
+    if (source && (!(source instanceof BlockWidgetView) || !this.widget.compare(source.widget) || from > 0 && openStart <= 0 || to < this.length && openEnd <= 0)) return false;
+    this.length = from + (source ? source.length : 0) + (this.length - to);
+    return true;
+  }
+  domAtPos(pos) {
+    return pos == 0 ? DOMPos.before(this.dom) : DOMPos.after(this.dom, pos == this.length);
+  }
+  split(at) {
+    let len = this.length - at;
+    this.length = at;
+    let end = new BlockWidgetView(this.widget, len, this.deco);
+    end.breakAfter = this.breakAfter;
+    return end;
+  }
+  get children() {
+    return noChildren;
+  }
+  sync(view) {
+    if (!this.dom || !this.widget.updateDOM(this.dom, view)) {
+      if (this.dom && this.prevWidget) this.prevWidget.destroy(this.dom);
+      this.prevWidget = null;
+      this.setDOM(this.widget.toDOM(view));
+      this.dom.contentEditable = "false";
+    }
+  }
+  get overrideDOMText() {
+    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : state_dist/* Text */.xv.empty;
+  }
+  domBoundsAround() {
+    return null;
+  }
+  become(other) {
+    if (other instanceof BlockWidgetView && other.widget.constructor == this.widget.constructor) {
+      if (!other.widget.compare(this.widget)) this.markDirty(true);
+      if (this.dom && !this.prevWidget) this.prevWidget = this.widget;
+      this.widget = other.widget;
+      this.length = other.length;
+      this.deco = other.deco;
+      this.breakAfter = other.breakAfter;
+      return true;
+    }
+    return false;
+  }
+  ignoreMutation() {
+    return true;
+  }
+  ignoreEvent(event) {
+    return this.widget.ignoreEvent(event);
+  }
+  get isEditable() {
+    return false;
+  }
+  get isWidget() {
+    return true;
+  }
+  coordsAt(pos, side) {
+    return this.widget.coordsAt(this.dom, pos, side);
+  }
+  destroy() {
+    super.destroy();
+    if (this.dom) this.widget.destroy(this.dom);
+  }
+  covers(side) {
+    let {
+      startSide,
+      endSide
+    } = this.deco;
+    return startSide == endSide ? false : side < 0 ? startSide < 0 : endSide > 0;
+  }
+}
 class WidgetType {
   eq(widget) {
     return false;
@@ -15896,7 +16144,7 @@ class PointDecoration extends Decoration {
     this.mapMode = !block ? state_dist/* MapMode */.gc.TrackDel : startSide <= 0 ? state_dist/* MapMode */.gc.TrackBefore : state_dist/* MapMode */.gc.TrackAfter;
   }
   get type() {
-    return this.startSide < this.endSide ? BlockType.WidgetRange : this.startSide <= 0 ? BlockType.WidgetBefore : BlockType.WidgetAfter;
+    return this.startSide != this.endSide ? BlockType.WidgetRange : this.startSide <= 0 ? BlockType.WidgetBefore : BlockType.WidgetAfter;
   }
   get heightRelevant() {
     return this.block || !!this.widget && (this.widget.estimatedHeight >= 5 || this.widget.lineBreaks > 0);
@@ -15939,235 +16187,6 @@ function addRange(from, to, ranges, margin) {
   let last = ranges.length - 1;
   if (last >= 0 && ranges[last] + margin >= from) ranges[last] = Math.max(ranges[last], to);else ranges.push(from, to);
 }
-class LineView extends ContentView {
-  constructor() {
-    super(...arguments);
-    this.children = [];
-    this.length = 0;
-    this.prevAttrs = undefined;
-    this.attrs = null;
-    this.breakAfter = 0;
-  }
-  merge(from, to, source, hasStart, openStart, openEnd) {
-    if (source) {
-      if (!(source instanceof LineView)) return false;
-      if (!this.dom) source.transferDOM(this);
-    }
-    if (hasStart) this.setDeco(source ? source.attrs : null);
-    mergeChildrenInto(this, from, to, source ? source.children : [], openStart, openEnd);
-    return true;
-  }
-  split(at) {
-    let end = new LineView();
-    end.breakAfter = this.breakAfter;
-    if (this.length == 0) return end;
-    let {
-      i,
-      off
-    } = this.childPos(at);
-    if (off) {
-      end.append(this.children[i].split(off), 0);
-      this.children[i].merge(off, this.children[i].length, null, false, 0, 0);
-      i++;
-    }
-    for (let j = i; j < this.children.length; j++) end.append(this.children[j], 0);
-    while (i > 0 && this.children[i - 1].length == 0) this.children[--i].destroy();
-    this.children.length = i;
-    this.markDirty();
-    this.length = at;
-    return end;
-  }
-  transferDOM(other) {
-    if (!this.dom) return;
-    this.markDirty();
-    other.setDOM(this.dom);
-    other.prevAttrs = this.prevAttrs === undefined ? this.attrs : this.prevAttrs;
-    this.prevAttrs = undefined;
-    this.dom = null;
-  }
-  setDeco(attrs) {
-    if (!attrsEq(this.attrs, attrs)) {
-      if (this.dom) {
-        this.prevAttrs = this.attrs;
-        this.markDirty();
-      }
-      this.attrs = attrs;
-    }
-  }
-  append(child, openStart) {
-    joinInlineInto(this, child, openStart);
-  }
-  addLineDeco(deco) {
-    let attrs = deco.spec.attributes,
-      cls = deco.spec.class;
-    if (attrs) this.attrs = combineAttrs(attrs, this.attrs || {});
-    if (cls) this.attrs = combineAttrs({
-      class: cls
-    }, this.attrs || {});
-  }
-  domAtPos(pos) {
-    return inlineDOMAtPos(this, pos);
-  }
-  reuseDOM(node) {
-    if (node.nodeName == "DIV") {
-      this.setDOM(node);
-      this.flags |= 4 | 2;
-    }
-  }
-  sync(view, track) {
-    var _a;
-    if (!this.dom) {
-      this.setDOM(document.createElement("div"));
-      this.dom.className = "cm-line";
-      this.prevAttrs = this.attrs ? null : undefined;
-    } else if (this.flags & 4) {
-      clearAttributes(this.dom);
-      this.dom.className = "cm-line";
-      this.prevAttrs = this.attrs ? null : undefined;
-    }
-    if (this.prevAttrs !== undefined) {
-      updateAttrs(this.dom, this.prevAttrs, this.attrs);
-      this.dom.classList.add("cm-line");
-      this.prevAttrs = undefined;
-    }
-    super.sync(view, track);
-    let last = this.dom.lastChild;
-    while (last && ContentView.get(last) instanceof MarkView) last = last.lastChild;
-    if (!last || !this.length || last.nodeName != "BR" && ((_a = ContentView.get(last)) === null || _a === void 0 ? void 0 : _a.isEditable) == false && (!browser.ios || !this.children.some(ch => ch instanceof TextView))) {
-      let hack = document.createElement("BR");
-      hack.cmIgnore = true;
-      this.dom.appendChild(hack);
-    }
-  }
-  measureTextSize() {
-    if (this.children.length == 0 || this.length > 20) return null;
-    let totalWidth = 0,
-      textHeight;
-    for (var _iterator11 = _createForOfIteratorHelperLoose(this.children), _step11; !(_step11 = _iterator11()).done;) {
-      let child = _step11.value;
-      if (!(child instanceof TextView) || /[^ -~]/.test(child.text)) return null;
-      let rects = clientRectsFor(child.dom);
-      if (rects.length != 1) return null;
-      totalWidth += rects[0].width;
-      textHeight = rects[0].height;
-    }
-    return !totalWidth ? null : {
-      lineHeight: this.dom.getBoundingClientRect().height,
-      charWidth: totalWidth / this.length,
-      textHeight
-    };
-  }
-  coordsAt(pos, side) {
-    let rect = coordsInChildren(this, pos, side);
-    if (!this.children.length && rect && this.parent) {
-      let {
-          heightOracle
-        } = this.parent.view.viewState,
-        height = rect.bottom - rect.top;
-      if (Math.abs(height - heightOracle.lineHeight) < 2 && heightOracle.textHeight < height) {
-        let dist = (height - heightOracle.textHeight) / 2;
-        return {
-          top: rect.top + dist,
-          bottom: rect.bottom - dist,
-          left: rect.left,
-          right: rect.left
-        };
-      }
-    }
-    return rect;
-  }
-  become(_other) {
-    return false;
-  }
-  get type() {
-    return BlockType.Text;
-  }
-  static find(docView, pos) {
-    for (let i = 0, off = 0; i < docView.children.length; i++) {
-      let block = docView.children[i],
-        end = off + block.length;
-      if (end >= pos) {
-        if (block instanceof LineView) return block;
-        if (end > pos) break;
-      }
-      off = end + block.breakAfter;
-    }
-    return null;
-  }
-}
-class BlockWidgetView extends ContentView {
-  constructor(widget, length, type) {
-    super();
-    this.widget = widget;
-    this.length = length;
-    this.type = type;
-    this.breakAfter = 0;
-    this.prevWidget = null;
-  }
-  merge(from, to, source, _takeDeco, openStart, openEnd) {
-    if (source && (!(source instanceof BlockWidgetView) || !this.widget.compare(source.widget) || from > 0 && openStart <= 0 || to < this.length && openEnd <= 0)) return false;
-    this.length = from + (source ? source.length : 0) + (this.length - to);
-    return true;
-  }
-  domAtPos(pos) {
-    return pos == 0 ? DOMPos.before(this.dom) : DOMPos.after(this.dom, pos == this.length);
-  }
-  split(at) {
-    let len = this.length - at;
-    this.length = at;
-    let end = new BlockWidgetView(this.widget, len, this.type);
-    end.breakAfter = this.breakAfter;
-    return end;
-  }
-  get children() {
-    return noChildren;
-  }
-  sync(view) {
-    if (!this.dom || !this.widget.updateDOM(this.dom, view)) {
-      if (this.dom && this.prevWidget) this.prevWidget.destroy(this.dom);
-      this.prevWidget = null;
-      this.setDOM(this.widget.toDOM(view));
-      this.dom.contentEditable = "false";
-    }
-  }
-  get overrideDOMText() {
-    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : state_dist/* Text */.xv.empty;
-  }
-  domBoundsAround() {
-    return null;
-  }
-  become(other) {
-    if (other instanceof BlockWidgetView && other.widget.constructor == this.widget.constructor) {
-      if (!other.widget.compare(this.widget)) this.markDirty(true);
-      if (this.dom && !this.prevWidget) this.prevWidget = this.widget;
-      this.widget = other.widget;
-      this.length = other.length;
-      this.type = other.type;
-      this.breakAfter = other.breakAfter;
-      return true;
-    }
-    return false;
-  }
-  ignoreMutation() {
-    return true;
-  }
-  ignoreEvent(event) {
-    return this.widget.ignoreEvent(event);
-  }
-  get isEditable() {
-    return false;
-  }
-  get isWidget() {
-    return true;
-  }
-  coordsAt(pos, side) {
-    return this.widget.coordsAt(this.dom, pos, side);
-  }
-  destroy() {
-    super.destroy();
-    if (this.dom) this.widget.destroy(this.dom);
-  }
-}
 class ContentBuilder {
   constructor(doc, pos, end, disallowBlockEffectsFor) {
     this.doc = doc;
@@ -16190,7 +16209,7 @@ class ContentBuilder {
   posCovered() {
     if (this.content.length == 0) return !this.breakAtStart && this.doc.lineAt(this.pos).from != this.pos;
     let last = this.content[this.content.length - 1];
-    return !last.breakAfter && !(last instanceof BlockWidgetView && last.type == BlockType.WidgetBefore);
+    return !(last.breakAfter || last instanceof BlockWidgetView && last.deco.endSide < 0);
   }
   getLine() {
     if (!this.curLine) {
@@ -16215,7 +16234,7 @@ class ContentBuilder {
   }
   finish(openEnd) {
     if (this.pendingBuffer && openEnd <= this.bufferMarks.length) this.flushBuffer();else this.pendingBuffer = 0;
-    if (!this.posCovered()) this.getLine();
+    if (!openEnd && !this.posCovered()) this.getLine();
   }
   buildText(length, active, openStart) {
     while (length > 0) {
@@ -16262,11 +16281,8 @@ class ContentBuilder {
     let len = to - from;
     if (deco instanceof PointDecoration) {
       if (deco.block) {
-        let {
-          type
-        } = deco;
-        if (type == BlockType.WidgetAfter && !this.posCovered()) this.getLine();
-        this.addBlockWidget(new BlockWidgetView(deco.widget || new NullWidget("div"), len, type));
+        if (deco.startSide > 0 && !this.posCovered()) this.getLine();
+        this.addBlockWidget(new BlockWidgetView(deco.widget || new NullWidget("div"), len, deco));
       } else {
         let view = WidgetView.create(deco.widget || new NullWidget("span"), len, len ? 0 : deco.startSide);
         let cursorBefore = this.atCursorPos && !view.isEditable && openStart <= active.length && (from < to || deco.startSide > 0);
@@ -16307,8 +16323,8 @@ class ContentBuilder {
   }
 }
 function wrapMarks(view, active) {
-  for (var _iterator12 = _createForOfIteratorHelperLoose(active), _step12; !(_step12 = _iterator12()).done;) {
-    let mark = _step12.value;
+  for (var _iterator8 = _createForOfIteratorHelperLoose(active), _step8; !(_step8 = _iterator8()).done;) {
+    let mark = _step8.value;
     view = new MarkView(mark, [view], view.length);
   }
   return view;
@@ -16381,19 +16397,21 @@ const editable = state_dist/* Facet */.r$.define({
 let nextPluginID = 0;
 const viewPlugin = state_dist/* Facet */.r$.define();
 class ViewPlugin {
-  constructor(id, create, domEventHandlers, buildExtensions) {
+  constructor(id, create, domEventHandlers, domEventObservers, buildExtensions) {
     this.id = id;
     this.create = create;
     this.domEventHandlers = domEventHandlers;
+    this.domEventObservers = domEventObservers;
     this.extension = buildExtensions(this);
   }
   static define(create, spec) {
     const {
       eventHandlers,
+      eventObservers,
       provide,
       decorations: deco
     } = spec || {};
-    return new ViewPlugin(nextPluginID++, create, eventHandlers, plugin => {
+    return new ViewPlugin(nextPluginID++, create, eventHandlers, eventObservers, plugin => {
       let ext = [viewPlugin.of(plugin)];
       if (deco) ext.push(decorations.of(view => {
         let pluginInst = view.plugin(plugin);
@@ -16496,8 +16514,8 @@ function getScrollMargins(view) {
     right = 0,
     top = 0,
     bottom = 0;
-  for (var _iterator13 = _createForOfIteratorHelperLoose(view.state.facet(scrollMargins)), _step13; !(_step13 = _iterator13()).done;) {
-    let source = _step13.value;
+  for (var _iterator9 = _createForOfIteratorHelperLoose(view.state.facet(scrollMargins)), _step9; !(_step9 = _iterator9()).done;) {
+    let source = _step9.value;
     let m = source(view);
     if (m) {
       if (m.left != null) left = Math.max(left, m.left);
@@ -16567,8 +16585,8 @@ class ViewUpdate {
     this.flags = 0;
     this.startState = view.state;
     this.changes = state_dist/* ChangeSet */.as.empty(this.startState.doc.length);
-    for (var _iterator14 = _createForOfIteratorHelperLoose(transactions), _step14; !(_step14 = _iterator14()).done;) {
-      let tr = _step14.value;
+    for (var _iterator10 = _createForOfIteratorHelperLoose(transactions), _step10; !(_step10 = _iterator10()).done;) {
+      let tr = _step10.value;
       this.changes = this.changes.compose(tr.changes);
     }
     let changedRanges = [];
@@ -16917,6 +16935,7 @@ class DocView extends ContentView {
     this.view = view;
     this.decorations = [];
     this.dynamicDecorationMap = [];
+    this.domChanged = null;
     this.hasComposition = null;
     this.markedForComposition = new Set();
     this.minWidth = 0;
@@ -16933,6 +16952,7 @@ class DocView extends ContentView {
     this.updateInner([new ChangedRange(0, 0, 0, view.state.doc.length)], 0, null);
   }
   update(update) {
+    var _a;
     let changedRanges = update.changedRanges;
     if (this.minWidth > 0 && changedRanges.length) {
       if (!changedRanges.every(_ref => {
@@ -16948,7 +16968,12 @@ class DocView extends ContentView {
         this.minWidthTo = update.changes.mapPos(this.minWidthTo, 1);
       }
     }
-    let composition = this.view.inputState.composing < 0 ? null : findCompositionRange(this.view, update.changes);
+    let readCompositionAt = -1;
+    if (this.view.inputState.composing >= 0) {
+      if ((_a = this.domChanged) === null || _a === void 0 ? void 0 : _a.newSel) readCompositionAt = this.domChanged.newSel.head;else if (!touchesComposition(update.changes, this.hasComposition) && !update.selectionSet) readCompositionAt = update.state.selection.main.head;
+    }
+    let composition = readCompositionAt > -1 ? findCompositionRange(this.view, update.changes, readCompositionAt) : null;
+    this.domChanged = null;
     if (this.hasComposition) {
       this.markedForComposition.clear();
       let {
@@ -16995,8 +17020,8 @@ class DocView extends ContentView {
     this.markedForComposition.forEach(cView => cView.flags &= ~8);
     let gaps = [];
     if (this.view.viewport.from || this.view.viewport.to < this.view.state.doc.length) {
-      for (var _iterator15 = _createForOfIteratorHelperLoose(this.children), _step15; !(_step15 = _iterator15()).done;) {
-        let child = _step15.value;
+      for (var _iterator11 = _createForOfIteratorHelperLoose(this.children), _step11; !(_step11 = _iterator11()).done;) {
+        let child = _step11.value;
         if (child instanceof BlockWidgetView && child.widget instanceof BlockGapWidget) gaps.push(child.dom);
       }
     }
@@ -17058,10 +17083,10 @@ class DocView extends ContentView {
   compositionView(composition) {
     let cur = new TextView(composition.text.nodeValue);
     cur.flags |= 8;
-    for (var _iterator16 = _createForOfIteratorHelperLoose(composition.marks), _step16; !(_step16 = _iterator16()).done;) {
+    for (var _iterator12 = _createForOfIteratorHelperLoose(composition.marks), _step12; !(_step12 = _iterator12()).done;) {
       let {
         deco
-      } = _step16.value;
+      } = _step12.value;
       cur = new MarkView(deco, [cur], cur.length);
     }
     let line = new LineView();
@@ -17073,10 +17098,8 @@ class DocView extends ContentView {
       cView.flags |= 8 | (cView.children.some(c => c.flags & 7) ? 1 : 0);
       this.markedForComposition.add(cView);
       let prev = ContentView.get(dom);
-      if (prev != cView) {
-        if (prev) prev.dom = null;
-        cView.setDOM(dom);
-      }
+      if (prev && prev != cView) prev.dom = null;
+      cView.setDOM(dom);
     };
     let pos = this.childPos(composition.range.fromB, 1);
     let cView = this.children[pos.i];
@@ -17102,8 +17125,8 @@ class DocView extends ContentView {
     let force = this.forceSelection;
     this.forceSelection = false;
     let main = this.view.state.selection.main;
-    let anchor = this.domAtPos(main.anchor);
-    let head = main.empty ? anchor : this.domAtPos(main.head);
+    let anchor = this.moveToLine(this.domAtPos(main.anchor));
+    let head = main.empty ? anchor : this.moveToLine(this.domAtPos(main.head));
     if (browser.gecko && main.empty && !this.hasComposition && betweenUneditable(anchor)) {
       let dummy = document.createTextNode("");
       this.view.observer.ignore(() => anchor.node.insertBefore(dummy, anchor.node.childNodes[anchor.offset] || null));
@@ -17125,11 +17148,11 @@ class DocView extends ContentView {
             let nextTo = nextToUneditable(anchor.node, anchor.offset);
             if (nextTo && nextTo != (1 | 2)) {
               let text = nearbyTextNode(anchor.node, anchor.offset, nextTo == 1 ? 1 : -1);
-              if (text) anchor = new DOMPos(text, nextTo == 1 ? 0 : text.nodeValue.length);
+              if (text) anchor = new DOMPos(text.node, text.offset);
             }
           }
           rawSel.collapse(anchor.node, anchor.offset);
-          if (main.bidiLevel != null && domSel.caretBidiLevel != null) domSel.caretBidiLevel = main.bidiLevel;
+          if (main.bidiLevel != null && rawSel.caretBidiLevel !== undefined) rawSel.caretBidiLevel = main.bidiLevel;
         } else if (rawSel.extend) {
           rawSel.collapse(anchor.node, anchor.offset);
           try {
@@ -17179,6 +17202,20 @@ class DocView extends ContentView {
     let newRange = view.observer.selectionRange;
     if (view.docView.posFromDOM(newRange.anchorNode, newRange.anchorOffset) != cursor.from) sel.collapse(anchorNode, anchorOffset);
   }
+  moveToLine(pos) {
+    let dom = this.dom,
+      newPos;
+    if (pos.node != dom) return pos;
+    for (let i = pos.offset; !newPos && i < dom.childNodes.length; i++) {
+      let view = ContentView.get(dom.childNodes[i]);
+      if (view instanceof LineView) newPos = view.domAtPos(0);
+    }
+    for (let i = pos.offset - 1; !newPos && i >= 0; i--) {
+      let view = ContentView.get(dom.childNodes[i]);
+      if (view instanceof LineView) newPos = view.domAtPos(view.length);
+    }
+    return newPos ? new DOMPos(newPos.node, newPos.offset, true) : pos;
+  }
   nearest(dom) {
     for (let cur = dom; cur;) {
       let domView = ContentView.get(cur);
@@ -17206,12 +17243,20 @@ class DocView extends ContentView {
     return this.children[i].domAtPos(off);
   }
   coordsAt(pos, side) {
-    for (let off = this.length, i = this.children.length - 1;; i--) {
+    let best = null,
+      bestPos = 0;
+    for (let off = this.length, i = this.children.length - 1; i >= 0; i--) {
       let child = this.children[i],
-        start = off - child.breakAfter - child.length;
-      if (pos > start || pos == start && child.type != BlockType.WidgetBefore && child.type != BlockType.WidgetAfter && (!i || side == 2 || this.children[i - 1].breakAfter || this.children[i - 1].type == BlockType.WidgetBefore && side > -2)) return child.coordsAt(pos - start, side);
+        end = off - child.breakAfter,
+        start = end - child.length;
+      if (end < pos) break;
+      if (start <= pos && (start < pos || child.covers(-1)) && (end > pos || child.covers(1)) && (!best || child instanceof LineView && !(best instanceof LineView && side >= 0))) {
+        best = child;
+        bestPos = start;
+      }
       off = start;
     }
+    return best ? best.coordsAt(pos - bestPos, side) : null;
   }
   coordsForChar(pos) {
     let {
@@ -17280,8 +17325,8 @@ class DocView extends ContentView {
     return getComputedStyle(this.children[i].dom).direction == "rtl" ? Direction.RTL : Direction.LTR;
   }
   measureTextSize() {
-    for (var _iterator17 = _createForOfIteratorHelperLoose(this.children), _step17; !(_step17 = _iterator17()).done;) {
-      let child = _step17.value;
+    for (var _iterator13 = _createForOfIteratorHelperLoose(this.children), _step13; !(_step13 = _iterator13()).done;) {
+      let child = _step13.value;
       if (child instanceof LineView) {
         let measure = child.measureTextSize();
         if (measure) return measure;
@@ -17392,68 +17437,31 @@ class BlockGapWidget extends WidgetType {
     return this.height;
   }
 }
-function findCompositionNode(view, dLen) {
+function findCompositionNode(view, headPos) {
   let sel = view.observer.selectionRange;
   let textNode = sel.focusNode && nearbyTextNode(sel.focusNode, sel.focusOffset, 0);
   if (!textNode) return null;
-  let cView = ContentView.get(textNode);
-  let from, to;
-  if (cView instanceof TextView) {
-    from = cView.posAtStart;
-    to = from + cView.length;
-  } else {
-    let oldLen = Math.max(0, textNode.nodeValue.length - dLen);
-    up: for (let offset = 0, node = textNode;;) {
-      for (let sibling = node.previousSibling, cView; sibling; sibling = sibling.previousSibling) {
-        if (cView = ContentView.get(sibling)) {
-          to = cView.posAtEnd + offset;
-          from = Math.max(0, to - oldLen);
-          break up;
-        }
-        let reader = new DOMReader([], view.state);
-        reader.readNode(sibling);
-        if (reader.text.indexOf(LineBreakPlaceholder) > -1) return null;
-        offset += reader.text.length;
-      }
-      node = node.parentNode;
-      if (!node) return null;
-      let parentView = ContentView.get(node);
-      if (parentView) {
-        from = parentView.posAtStart + offset;
-        to = from + oldLen;
-        break;
-      }
-    }
-  }
+  let from = headPos - textNode.offset;
   return {
     from,
-    to: to,
-    node: textNode
+    to: from + textNode.node.nodeValue.length,
+    node: textNode.node
   };
 }
-function findCompositionRange(view, changes) {
-  let found = findCompositionNode(view, changes.newLength - changes.length);
+function findCompositionRange(view, changes, headPos) {
+  let found = findCompositionNode(view, headPos);
   if (!found) return null;
   let {
-    from: fromA,
-    to: toA,
-    node: textNode
-  } = found;
-  let fromB = changes.mapPos(fromA, -1),
-    toB = changes.mapPos(toA, 1);
-  let text = textNode.nodeValue;
+      node: textNode,
+      from,
+      to
+    } = found,
+    text = textNode.nodeValue;
   if (/[\n\r]/.test(text)) return null;
-  if (toB - fromB != text.length) {
-    let fromB2 = changes.mapPos(fromA, 1),
-      toB2 = changes.mapPos(toA, -1);
-    if (toB2 - fromB2 == text.length) fromB = fromB2, toB = toB2;else if (view.state.doc.sliceString(toB - text.length, toB) == text) fromB = toB - text.length;else if (view.state.doc.sliceString(fromB, fromB + text.length) == text) toB = fromB + text.length;else return null;
-  }
-  let {
-    main
-  } = view.state.selection;
-  if (view.state.doc.sliceString(fromB, toB) != text || fromB > main.head || toB < main.head) return null;
+  if (view.state.doc.sliceString(found.from, found.to) != text) return null;
+  let inv = changes.invertedDesc;
+  let range = new ChangedRange(inv.mapPos(from), inv.mapPos(to), from, to);
   let marks = [];
-  let range = new ChangedRange(fromA, toA, fromB, toB);
   for (let parent = textNode.parentNode;; parent = parent.parentNode) {
     let parentView = ContentView.get(parent);
     if (parentView instanceof MarkView) marks.push({
@@ -17476,7 +17484,10 @@ function findCompositionRange(view, changes) {
 }
 function nearbyTextNode(startNode, startOffset, side) {
   if (side <= 0) for (let node = startNode, offset = startOffset;;) {
-    if (node.nodeType == 3) return node;
+    if (node.nodeType == 3) return {
+      node: node,
+      offset: offset
+    };
     if (node.nodeType == 1 && offset > 0) {
       node = node.childNodes[offset - 1];
       offset = maxOffset(node);
@@ -17485,7 +17496,10 @@ function nearbyTextNode(startNode, startOffset, side) {
     }
   }
   if (side >= 0) for (let node = startNode, offset = startOffset;;) {
-    if (node.nodeType == 3) return node;
+    if (node.nodeType == 3) return {
+      node: node,
+      offset: offset
+    };
     if (node.nodeType == 1 && offset < node.childNodes.length && side >= 0) {
       node = node.childNodes[offset];
       offset = 0;
@@ -17522,6 +17536,13 @@ function inUneditable(node, inside) {
     }
   }
   return false;
+}
+function touchesComposition(changes, composition) {
+  let touched = false;
+  if (composition) changes.iterChangedRanges((from, to) => {
+    if (from < composition.to && to > composition.from) touched = true;
+  });
+  return touched;
 }
 function groupAt(state, pos, bias) {
   if (bias === void 0) {
@@ -17773,8 +17794,8 @@ function isSuspiciousChromeCaretResult(node, offset, x) {
 function blockAt(view, pos) {
   let line = view.lineBlockAt(pos);
   if (Array.isArray(line.type)) {
-    for (var _iterator18 = _createForOfIteratorHelperLoose(line.type), _step18; !(_step18 = _iterator18()).done;) {
-      let l = _step18.value;
+    for (var _iterator14 = _createForOfIteratorHelperLoose(line.type), _step14; !(_step14 = _iterator14()).done;) {
+      let l = _step14.value;
       if (l.to > pos || l.to == pos && (l.to == line.to || l.type == BlockType.Text)) return l;
     }
   }
@@ -17833,7 +17854,7 @@ function moveVertically(view, start, forward, distance) {
   let goal = start.goalColumn,
     startY;
   let rect = view.contentDOM.getBoundingClientRect();
-  let startCoords = view.coordsAtPos(startPos),
+  let startCoords = view.coordsAtPos(startPos, start.assoc || -1),
     docTop = view.documentTop;
   if (startCoords) {
     if (goal == null) goal = startCoords.left - rect.left;
@@ -17851,14 +17872,18 @@ function moveVertically(view, start, forward, distance) {
       x: resolvedGoal,
       y: curY
     }, false, dir);
-    if (curY < rect.top || curY > rect.bottom || (dir < 0 ? pos < startPos : pos > startPos)) return state_dist/* EditorSelection */.jT.cursor(pos, start.assoc, undefined, goal);
+    if (curY < rect.top || curY > rect.bottom || (dir < 0 ? pos < startPos : pos > startPos)) {
+      let charRect = view.docView.coordsForChar(pos);
+      let assoc = !charRect || curY < charRect.top ? -1 : 1;
+      return state_dist/* EditorSelection */.jT.cursor(pos, assoc, undefined, goal);
+    }
   }
 }
 function skipAtomicRanges(atoms, pos, bias) {
   for (;;) {
     let moved = 0;
-    for (var _iterator19 = _createForOfIteratorHelperLoose(atoms), _step19; !(_step19 = _iterator19()).done;) {
-      let set = _step19.value;
+    for (var _iterator15 = _createForOfIteratorHelperLoose(atoms), _step15; !(_step15 = _iterator15()).done;) {
+      let set = _step15.value;
       set.between(pos - 1, pos + 1, (from, to, value) => {
         if (pos > from && pos < to) {
           let side = moved || bias || (pos - from < to - pos ? -1 : 1);
@@ -17880,43 +17905,30 @@ class InputState {
     this.lastSelectionTime = Date.now();
   }
   constructor(view) {
+    this.view = view;
     this.lastKeyCode = 0;
     this.lastKeyTime = 0;
     this.lastTouchTime = 0;
     this.lastFocusTime = 0;
     this.lastScrollTop = 0;
     this.lastScrollLeft = 0;
-    this.chromeScrollHack = -1;
     this.pendingIOSKey = undefined;
     this.lastSelectionOrigin = null;
     this.lastSelectionTime = 0;
     this.lastEscPress = 0;
     this.lastContextMenu = 0;
     this.scrollHandlers = [];
-    this.registeredEvents = [];
-    this.customHandlers = [];
+    this.handlers = Object.create(null);
     this.composing = -1;
     this.compositionFirstChange = null;
     this.compositionEndedAt = 0;
     this.compositionPendingKey = false;
     this.compositionPendingChange = false;
     this.mouseSelection = null;
-    let handleEvent = (handler, event) => {
-      if (this.ignoreDuringComposition(event)) return;
-      if (event.type == "keydown" && this.keydown(view, event)) return;
-      if (this.mustFlushObserver(event)) view.observer.forceFlush();
-      if (this.runCustomHandlers(event.type, view, event)) event.preventDefault();else handler(view, event);
-    };
-    for (let type in handlers) {
-      let handler = handlers[type];
-      view.contentDOM.addEventListener(type, event => {
-        if (eventBelongsToEditor(view, event)) handleEvent(handler, event);
-      }, handlerOptions[type]);
-      this.registeredEvents.push(type);
-    }
+    this.handleEvent = this.handleEvent.bind(this);
     view.scrollDOM.addEventListener("mousedown", event => {
       if (event.target == view.scrollDOM && event.clientY > view.contentDOM.getBoundingClientRect().bottom) {
-        handleEvent(handlers.mousedown, event);
+        this.runHandlers("mousedown", event);
         if (!event.defaultPrevented && event.button == 2) {
           let start = view.contentDOM.style.minHeight;
           view.contentDOM.style.minHeight = "100%";
@@ -17925,95 +17937,75 @@ class InputState {
       }
     });
     view.scrollDOM.addEventListener("drop", event => {
-      if (event.target == view.scrollDOM && event.clientY > view.contentDOM.getBoundingClientRect().bottom) handleEvent(handlers.drop, event);
+      if (event.target == view.scrollDOM && event.clientY > view.contentDOM.getBoundingClientRect().bottom) this.runHandlers("drop", event);
     });
-    if (browser.chrome && browser.chrome_version == 102) {
-      view.scrollDOM.addEventListener("wheel", () => {
-        if (this.chromeScrollHack < 0) view.contentDOM.style.pointerEvents = "none";else window.clearTimeout(this.chromeScrollHack);
-        this.chromeScrollHack = setTimeout(() => {
-          this.chromeScrollHack = -1;
-          view.contentDOM.style.pointerEvents = "";
-        }, 100);
-      }, {
-        passive: true
-      });
-    }
     this.notifiedFocused = view.hasFocus;
     if (browser.safari) view.contentDOM.addEventListener("input", () => null);
     if (browser.gecko) firefoxCopyCutHack(view.contentDOM.ownerDocument);
   }
-  ensureHandlers(view, plugins) {
-    var _a;
-    let handlers;
-    this.customHandlers = [];
-    for (var _iterator20 = _createForOfIteratorHelperLoose(plugins), _step20; !(_step20 = _iterator20()).done;) {
-      let plugin = _step20.value;
-      if (handlers = (_a = plugin.update(view).spec) === null || _a === void 0 ? void 0 : _a.domEventHandlers) {
-        this.customHandlers.push({
-          plugin: plugin.value,
-          handlers
-        });
-        for (let type in handlers) if (this.registeredEvents.indexOf(type) < 0 && type != "scroll") {
-          this.registeredEvents.push(type);
-          view.contentDOM.addEventListener(type, event => {
-            if (!eventBelongsToEditor(view, event)) return;
-            if (this.runCustomHandlers(type, view, event)) event.preventDefault();
-          });
+  handleEvent(event) {
+    if (!eventBelongsToEditor(this.view, event) || this.ignoreDuringComposition(event)) return;
+    if (event.type == "keydown" && this.keydown(event)) return;
+    this.runHandlers(event.type, event);
+  }
+  runHandlers(type, event) {
+    let handlers = this.handlers[type];
+    if (handlers) {
+      for (var _iterator16 = _createForOfIteratorHelperLoose(handlers.observers), _step16; !(_step16 = _iterator16()).done;) {
+        let observer = _step16.value;
+        observer(this.view, event);
+      }
+      for (var _iterator17 = _createForOfIteratorHelperLoose(handlers.handlers), _step17; !(_step17 = _iterator17()).done;) {
+        let handler = _step17.value;
+        if (event.defaultPrevented) break;
+        if (handler(this.view, event)) {
+          event.preventDefault();
+          break;
         }
       }
     }
   }
-  runCustomHandlers(type, view, event) {
-    for (var _iterator21 = _createForOfIteratorHelperLoose(this.customHandlers), _step21; !(_step21 = _iterator21()).done;) {
-      let set = _step21.value;
-      let handler = set.handlers[type];
-      if (handler) {
-        try {
-          if (handler.call(set.plugin, event, view) || event.defaultPrevented) return true;
-        } catch (e) {
-          logException(view.state, e);
-        }
+  ensureHandlers(plugins) {
+    let handlers = computeHandlers(plugins),
+      prev = this.handlers,
+      dom = this.view.contentDOM;
+    for (let type in handlers) if (type != "scroll") {
+      let passive = !handlers[type].handlers.length;
+      let exists = prev[type];
+      if (exists && passive != !exists.handlers.length) {
+        dom.removeEventListener(type, this.handleEvent);
+        exists = null;
       }
+      if (!exists) dom.addEventListener(type, this.handleEvent, {
+        passive
+      });
     }
-    return false;
+    for (let type in prev) if (type != "scroll" && !handlers[type]) dom.removeEventListener(type, this.handleEvent);
+    this.handlers = handlers;
   }
-  runScrollHandlers(view, event) {
-    this.lastScrollTop = view.scrollDOM.scrollTop;
-    this.lastScrollLeft = view.scrollDOM.scrollLeft;
-    for (var _iterator22 = _createForOfIteratorHelperLoose(this.customHandlers), _step22; !(_step22 = _iterator22()).done;) {
-      let set = _step22.value;
-      let handler = set.handlers.scroll;
-      if (handler) {
-        try {
-          handler.call(set.plugin, event, view);
-        } catch (e) {
-          logException(view.state, e);
-        }
-      }
-    }
-  }
-  keydown(view, event) {
+  keydown(event) {
     this.lastKeyCode = event.keyCode;
     this.lastKeyTime = Date.now();
     if (event.keyCode == 9 && Date.now() < this.lastEscPress + 2000) return true;
-    if (event.keyCode != 27 && modifierCodes.indexOf(event.keyCode) < 0) view.inputState.lastEscPress = 0;
+    if (event.keyCode != 27 && modifierCodes.indexOf(event.keyCode) < 0) this.view.inputState.lastEscPress = 0;
     if (browser.android && browser.chrome && !event.synthetic && (event.keyCode == 13 || event.keyCode == 8)) {
-      view.observer.delayAndroidKey(event.key, event.keyCode);
+      this.view.observer.delayAndroidKey(event.key, event.keyCode);
       return true;
     }
     let pending;
     if (browser.ios && !event.synthetic && !event.altKey && !event.metaKey && ((pending = PendingKeys.find(key => key.keyCode == event.keyCode)) && !event.ctrlKey || EmacsyPendingKeys.indexOf(event.key) > -1 && event.ctrlKey && !event.shiftKey)) {
       this.pendingIOSKey = pending || event;
-      setTimeout(() => this.flushIOSKey(view), 250);
+      setTimeout(() => this.flushIOSKey(), 250);
       return true;
     }
+    if (event.keyCode != 229) this.view.observer.forceFlush();
     return false;
   }
-  flushIOSKey(view) {
+  flushIOSKey() {
     let key = this.pendingIOSKey;
     if (!key) return false;
     this.pendingIOSKey = undefined;
-    return dispatchKey(view.contentDOM, key.key, key.keyCode);
+    return dispatchKey(this.view.contentDOM, key.key, key.keyCode);
   }
   ignoreDuringComposition(event) {
     if (!/^key/.test(event.type)) return false;
@@ -18023,9 +18015,6 @@ class InputState {
       return true;
     }
     return false;
-  }
-  mustFlushObserver(event) {
-    return event.type == "keydown" && event.keyCode != 229;
   }
   startMouseSelection(mouseSelection) {
     if (this.mouseSelection) this.mouseSelection.destroy();
@@ -18038,6 +18027,39 @@ class InputState {
   destroy() {
     if (this.mouseSelection) this.mouseSelection.destroy();
   }
+}
+function bindHandler(plugin, handler) {
+  return (view, event) => {
+    try {
+      return handler.call(plugin, event, view);
+    } catch (e) {
+      logException(view.state, e);
+    }
+  };
+}
+function computeHandlers(plugins) {
+  let result = Object.create(null);
+  function record(type) {
+    return result[type] || (result[type] = {
+      observers: [],
+      handlers: []
+    });
+  }
+  for (var _iterator18 = _createForOfIteratorHelperLoose(plugins), _step18; !(_step18 = _iterator18()).done;) {
+    let plugin = _step18.value;
+    let spec = plugin.spec;
+    if (spec && spec.domEventHandlers) for (let type in spec.domEventHandlers) {
+      let f = spec.domEventHandlers[type];
+      if (f) record(type).handlers.push(bindHandler(plugin.value, f));
+    }
+    if (spec && spec.domEventObservers) for (let type in spec.domEventObservers) {
+      let f = spec.domEventObservers[type];
+      if (f) record(type).observers.push(bindHandler(plugin.value, f));
+    }
+  }
+  for (let type in handlers) record(type).handlers.push(handlers[type]);
+  for (let type in observers) record(type).observers.push(observers[type]);
+  return result;
 }
 const PendingKeys = [{
   key: "Backspace",
@@ -18087,10 +18109,7 @@ class MouseSelection {
     this.dragging = isInPrimarySelection(view, startEvent) && getClickType(startEvent) == 1 ? null : false;
   }
   start(event) {
-    if (this.dragging === false) {
-      event.preventDefault();
-      this.select(event);
-    }
+    if (this.dragging === false) this.select(event);
   }
   move(event) {
     var _a;
@@ -18208,7 +18227,7 @@ function eventBelongsToEditor(view, event) {
   return true;
 }
 const handlers = Object.create(null);
-const handlerOptions = Object.create(null);
+const observers = Object.create(null);
 const brokenClipboardAPI = browser.ie && browser.ie_version < 15 || browser.ios && browser.webkit_version < 604;
 function capturePaste(view) {
   let parent = view.dom.parentNode;
@@ -18268,26 +18287,28 @@ function doPaste(view, input) {
     scrollIntoView: true
   });
 }
+observers.scroll = view => {
+  view.inputState.lastScrollTop = view.scrollDOM.scrollTop;
+  view.inputState.lastScrollLeft = view.scrollDOM.scrollLeft;
+};
 handlers.keydown = (view, event) => {
   view.inputState.setSelectionOrigin("select");
   if (event.keyCode == 27) view.inputState.lastEscPress = Date.now();
+  return false;
 };
-handlers.touchstart = (view, e) => {
+observers.touchstart = (view, e) => {
   view.inputState.lastTouchTime = Date.now();
   view.inputState.setSelectionOrigin("select.pointer");
 };
-handlers.touchmove = view => {
+observers.touchmove = view => {
   view.inputState.setSelectionOrigin("select.pointer");
-};
-handlerOptions.touchstart = handlerOptions.touchmove = {
-  passive: true
 };
 handlers.mousedown = (view, event) => {
   view.observer.flush();
-  if (view.inputState.lastTouchTime > Date.now() - 2000) return;
+  if (view.inputState.lastTouchTime > Date.now() - 2000) return false;
   let style = null;
-  for (var _iterator23 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step23; !(_step23 = _iterator23()).done;) {
-    let makeStyle = _step23.value;
+  for (var _iterator19 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step19; !(_step19 = _iterator19()).done;) {
+    let makeStyle = _step19.value;
     style = makeStyle(view, event);
     if (style) break;
   }
@@ -18296,8 +18317,13 @@ handlers.mousedown = (view, event) => {
     let mustFocus = !view.hasFocus;
     view.inputState.startMouseSelection(new MouseSelection(view, event, style, mustFocus));
     if (mustFocus) view.observer.ignore(() => focusPreventScroll(view.contentDOM));
-    if (view.inputState.mouseSelection) view.inputState.mouseSelection.start(event);
+    let mouseSel = view.inputState.mouseSelection;
+    if (mouseSel) {
+      mouseSel.start(event);
+      return !mouseSel.dragging;
+    }
   }
+  return false;
 };
 function rangeForClick(view, pos, bias, type) {
   if (type == 1) {
@@ -18398,6 +18424,7 @@ handlers.dragstart = (view, event) => {
     event.dataTransfer.setData("Text", view.state.sliceDoc(main.from, main.to));
     event.dataTransfer.effectAllowed = "copyMove";
   }
+  return false;
 };
 function dropText(view, event, text, direct) {
   if (!text) return;
@@ -18405,7 +18432,6 @@ function dropText(view, event, text, direct) {
     x: event.clientX,
     y: event.clientY
   }, false);
-  event.preventDefault();
   let {
     mouseSelection
   } = view.inputState;
@@ -18429,11 +18455,10 @@ function dropText(view, event, text, direct) {
   });
 }
 handlers.drop = (view, event) => {
-  if (!event.dataTransfer) return;
-  if (view.state.readOnly) return event.preventDefault();
+  if (!event.dataTransfer) return false;
+  if (view.state.readOnly) return true;
   let files = event.dataTransfer.files;
   if (files && files.length) {
-    event.preventDefault();
     let text = Array(files.length),
       read = 0;
     let finishFile = () => {
@@ -18448,19 +18473,26 @@ handlers.drop = (view, event) => {
       };
       reader.readAsText(files[i]);
     }
+    return true;
   } else {
-    dropText(view, event, event.dataTransfer.getData("Text"), true);
+    let text = event.dataTransfer.getData("Text");
+    if (text) {
+      dropText(view, event, text, true);
+      return true;
+    }
   }
+  return false;
 };
 handlers.paste = (view, event) => {
-  if (view.state.readOnly) return event.preventDefault();
+  if (view.state.readOnly) return true;
   view.observer.flush();
   let data = brokenClipboardAPI ? null : event.clipboardData;
   if (data) {
     doPaste(view, data.getData("text/plain") || data.getData("text/uri-text"));
-    event.preventDefault();
+    return true;
   } else {
     capturePaste(view);
+    return false;
   }
 };
 function captureCopy(view, text) {
@@ -18481,8 +18513,8 @@ function copiedRange(state) {
   let content = [],
     ranges = [],
     linewise = false;
-  for (var _iterator24 = _createForOfIteratorHelperLoose(state.selection.ranges), _step24; !(_step24 = _iterator24()).done;) {
-    let range = _step24.value;
+  for (var _iterator20 = _createForOfIteratorHelperLoose(state.selection.ranges), _step20; !(_step20 = _iterator20()).done;) {
+    let range = _step20.value;
     if (!range.empty) {
       content.push(state.sliceDoc(range.from, range.to));
       ranges.push(range);
@@ -18490,10 +18522,10 @@ function copiedRange(state) {
   }
   if (!content.length) {
     let upto = -1;
-    for (var _iterator25 = _createForOfIteratorHelperLoose(state.selection.ranges), _step25; !(_step25 = _iterator25()).done;) {
+    for (var _iterator21 = _createForOfIteratorHelperLoose(state.selection.ranges), _step21; !(_step21 = _iterator21()).done;) {
       let {
         from
-      } = _step25.value;
+      } = _step21.value;
       let line = state.doc.lineAt(from);
       if (line.number > upto) {
         content.push(line.text);
@@ -18519,27 +18551,28 @@ handlers.copy = handlers.cut = (view, event) => {
     ranges,
     linewise
   } = copiedRange(view.state);
-  if (!text && !linewise) return;
+  if (!text && !linewise) return false;
   lastLinewiseCopy = linewise ? text : null;
-  let data = brokenClipboardAPI ? null : event.clipboardData;
-  if (data) {
-    event.preventDefault();
-    data.clearData();
-    data.setData("text/plain", text);
-  } else {
-    captureCopy(view, text);
-  }
   if (event.type == "cut" && !view.state.readOnly) view.dispatch({
     changes: ranges,
     scrollIntoView: true,
     userEvent: "delete.cut"
   });
+  let data = brokenClipboardAPI ? null : event.clipboardData;
+  if (data) {
+    data.clearData();
+    data.setData("text/plain", text);
+    return true;
+  } else {
+    captureCopy(view, text);
+    return false;
+  }
 };
 const isFocusChange = state_dist/* Annotation */.q6.define();
 function focusChangeTransaction(state, focus) {
   let effects = [];
-  for (var _iterator26 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step26; !(_step26 = _iterator26()).done;) {
-    let getEffect = _step26.value;
+  for (var _iterator22 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step22; !(_step22 = _iterator22()).done;) {
+    let getEffect = _step22.value;
     let effect = getEffect(state, focus);
     if (effect) effects.push(effect);
   }
@@ -18557,7 +18590,7 @@ function updateForFocusChange(view) {
     }
   }, 10);
 }
-handlers.focus = view => {
+observers.focus = view => {
   view.inputState.lastFocusTime = Date.now();
   if (!view.scrollDOM.scrollTop && (view.inputState.lastScrollTop || view.inputState.lastScrollLeft)) {
     view.scrollDOM.scrollTop = view.inputState.lastScrollTop;
@@ -18565,17 +18598,17 @@ handlers.focus = view => {
   }
   updateForFocusChange(view);
 };
-handlers.blur = view => {
+observers.blur = view => {
   view.observer.clearSelectionRange();
   updateForFocusChange(view);
 };
-handlers.compositionstart = handlers.compositionupdate = view => {
+observers.compositionstart = observers.compositionupdate = view => {
   if (view.inputState.compositionFirstChange == null) view.inputState.compositionFirstChange = true;
   if (view.inputState.composing < 0) {
     view.inputState.composing = 0;
   }
 };
-handlers.compositionend = view => {
+observers.compositionend = view => {
   view.inputState.composing = -1;
   view.inputState.compositionEndedAt = Date.now();
   view.inputState.compositionPendingKey = true;
@@ -18591,7 +18624,7 @@ handlers.compositionend = view => {
     }, 50);
   }
 };
-handlers.contextmenu = view => {
+observers.contextmenu = view => {
   view.inputState.lastContextMenu = Date.now();
 };
 handlers.beforeinput = (view, event) => {
@@ -18610,6 +18643,7 @@ handlers.beforeinput = (view, event) => {
       }, 100);
     }
   }
+  return false;
 };
 const appliedFirefoxHack = new Set();
 function firefoxCopyCutHack(doc) {
@@ -19073,8 +19107,8 @@ class HeightMapBranch extends HeightMap {
     let result = [];
     if (from > 0) this.decomposeLeft(from, result);
     let left = result.length;
-    for (var _iterator27 = _createForOfIteratorHelperLoose(nodes), _step27; !(_step27 = _iterator27()).done;) {
-      let node = _step27.value;
+    for (var _iterator23 = _createForOfIteratorHelperLoose(nodes), _step23; !(_step23 = _iterator23()).done;) {
+      let node = _step23.value;
       result.push(node);
     }
     if (from > 0) mergeGaps(result, left - 1);
@@ -19214,13 +19248,12 @@ class NodeBuilder {
     return line;
   }
   addBlock(block) {
-    var _a;
     this.enterLine();
-    let type = (_a = block.deco) === null || _a === void 0 ? void 0 : _a.type;
-    if (type == BlockType.WidgetAfter && !this.isCovered) this.ensureLine();
+    let deco = block.deco;
+    if (deco && deco.startSide > 0 && !this.isCovered) this.ensureLine();
     this.nodes.push(block);
     this.writtenTo = this.pos = this.pos + block.length;
-    if (type != BlockType.WidgetBefore) this.covering = block;
+    if (deco && deco.endSide > 0) this.covering = block;
   }
   addLineDeco(height, breaks, length) {
     let line = this.ensureLine();
@@ -19234,8 +19267,8 @@ class NodeBuilder {
     let last = this.nodes.length == 0 ? null : this.nodes[this.nodes.length - 1];
     if (this.lineStart > -1 && !(last instanceof HeightMapText) && !this.isCovered) this.nodes.push(new HeightMapText(0, -1));else if (this.writtenTo < this.pos || last == null) this.nodes.push(this.blankContent(this.writtenTo, this.pos));
     let pos = from;
-    for (var _iterator28 = _createForOfIteratorHelperLoose(this.nodes), _step28; !(_step28 = _iterator28()).done;) {
-      let node = _step28.value;
+    for (var _iterator24 = _createForOfIteratorHelperLoose(this.nodes), _step24; !(_step24 = _iterator24()).done;) {
+      let node = _step24.value;
       if (node instanceof HeightMapText) node.updateHeight(this.oracle, pos);
       pos += node ? node.length : 1;
     }
@@ -19465,8 +19498,8 @@ class ViewState {
     if (domRect.width && domRect.height) {
       let scaleX = domRect.width / dom.offsetWidth;
       let scaleY = domRect.height / dom.offsetHeight;
-      if (scaleX > 0.995 && scaleX < 1.005) scaleX = 1;
-      if (scaleY > 0.995 && scaleY < 1.005) scaleY = 1;
+      if (scaleX > 0.995 && scaleX < 1.005 || !isFinite(scaleX) || Math.abs(domRect.width - dom.offsetWidth) < 1) scaleX = 1;
+      if (scaleY > 0.995 && scaleY < 1.005 || !isFinite(scaleY) || Math.abs(domRect.height - dom.offsetHeight) < 1) scaleY = 1;
       if (this.scaleX != scaleX || this.scaleY != scaleY) {
         this.scaleX = scaleX;
         this.scaleY = scaleY;
@@ -19525,8 +19558,8 @@ class ViewState {
       }
       if (dTop > 0 && dBottom > 0) bias = Math.max(dTop, dBottom);else if (dTop < 0 && dBottom < 0) bias = Math.min(dTop, dBottom);
       oracle.heightChanged = false;
-      for (var _iterator29 = _createForOfIteratorHelperLoose(this.viewports), _step29; !(_step29 = _iterator29()).done;) {
-        let vp = _step29.value;
+      for (var _iterator25 = _createForOfIteratorHelperLoose(this.viewports), _step25; !(_step25 = _iterator25()).done;) {
+        let vp = _step25.value;
         let heights = vp.from == this.viewport.from ? lineHeights : view.docView.measureVisibleLineHeights(vp);
         this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.xv.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
       }
@@ -19602,8 +19635,8 @@ class ViewState {
   mapLineGaps(gaps, changes) {
     if (!gaps.length || changes.empty) return gaps;
     let mapped = [];
-    for (var _iterator30 = _createForOfIteratorHelperLoose(gaps), _step30; !(_step30 = _iterator30()).done;) {
-      let gap = _step30.value;
+    for (var _iterator26 = _createForOfIteratorHelperLoose(gaps), _step26; !(_step26 = _iterator26()).done;) {
+      let gap = _step26.value;
       if (!changes.touchesRange(gap.from, gap.to)) mapped.push(new LineGap(changes.mapPos(gap.from), changes.mapPos(gap.to), gap.size));
     }
     return mapped;
@@ -19638,8 +19671,8 @@ class ViewState {
       }
       gaps.push(gap);
     };
-    for (var _iterator31 = _createForOfIteratorHelperLoose(this.viewportLines), _step31; !(_step31 = _iterator31()).done;) {
-      let line = _step31.value;
+    for (var _iterator27 = _createForOfIteratorHelperLoose(this.viewportLines), _step27; !(_step27 = _iterator27()).done;) {
+      let line = _step27.value;
       if (line.length < doubleMargin) continue;
       let structure = lineStructure(line.from, line.to, this.stateDeco);
       if (structure.total < doubleMargin) continue;
@@ -19786,11 +19819,11 @@ function findPosition(_ref4, ratio) {
 }
 function findFraction(structure, pos) {
   let counted = 0;
-  for (var _iterator32 = _createForOfIteratorHelperLoose(structure.ranges), _step32; !(_step32 = _iterator32()).done;) {
+  for (var _iterator28 = _createForOfIteratorHelperLoose(structure.ranges), _step28; !(_step28 = _iterator28()).done;) {
     let {
       from,
       to
-    } = _step32.value;
+    } = _step28.value;
     if (pos <= to) {
       counted += pos - from;
       break;
@@ -19800,8 +19833,8 @@ function findFraction(structure, pos) {
   return counted / structure.total;
 }
 function find(array, f) {
-  for (var _iterator33 = _createForOfIteratorHelperLoose(array), _step33; !(_step33 = _iterator33()).done;) {
-    let val = _step33.value;
+  for (var _iterator29 = _createForOfIteratorHelperLoose(array), _step29; !(_step29 = _iterator29()).done;) {
+    let val = _step29.value;
     if (f(val)) return val;
   }
   return undefined;
@@ -19838,8 +19871,8 @@ class BigScaler {
       };
     });
     this.scale = (7000000 - vpHeight) / (heightMap.height - vpHeight);
-    for (var _iterator34 = _createForOfIteratorHelperLoose(this.viewports), _step34; !(_step34 = _iterator34()).done;) {
-      let obj = _step34.value;
+    for (var _iterator30 = _createForOfIteratorHelperLoose(this.viewports), _step30; !(_step30 = _iterator30()).done;) {
+      let obj = _step30.value;
       obj.domTop = domBase + (obj.top - base) * this.scale;
       domBase = obj.domBottom = obj.domTop + (obj.bottom - obj.top);
       base = obj.bottom;
@@ -20142,6 +20175,113 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
     backgroundColor: "inherit"
   }
 }, lightDarkIDs);
+const LineBreakPlaceholder = "\uffff";
+class DOMReader {
+  constructor(points, state) {
+    this.points = points;
+    this.text = "";
+    this.lineSeparator = state.facet(state_dist/* EditorState */.yy.lineSeparator);
+  }
+  append(text) {
+    this.text += text;
+  }
+  lineBreak() {
+    this.text += LineBreakPlaceholder;
+  }
+  readRange(start, end) {
+    if (!start) return this;
+    let parent = start.parentNode;
+    for (let cur = start;;) {
+      this.findPointBefore(parent, cur);
+      let oldLen = this.text.length;
+      this.readNode(cur);
+      let next = cur.nextSibling;
+      if (next == end) break;
+      let view = ContentView.get(cur),
+        nextView = ContentView.get(next);
+      if (view && nextView ? view.breakAfter : (view ? view.breakAfter : isBlockElement(cur)) || isBlockElement(next) && (cur.nodeName != "BR" || cur.cmIgnore) && this.text.length > oldLen) this.lineBreak();
+      cur = next;
+    }
+    this.findPointBefore(parent, end);
+    return this;
+  }
+  readTextNode(node) {
+    let text = node.nodeValue;
+    for (var _iterator31 = _createForOfIteratorHelperLoose(this.points), _step31; !(_step31 = _iterator31()).done;) {
+      let point = _step31.value;
+      if (point.node == node) point.pos = this.text.length + Math.min(point.offset, text.length);
+    }
+    for (let off = 0, re = this.lineSeparator ? null : /\r\n?|\n/g;;) {
+      let nextBreak = -1,
+        breakSize = 1,
+        m;
+      if (this.lineSeparator) {
+        nextBreak = text.indexOf(this.lineSeparator, off);
+        breakSize = this.lineSeparator.length;
+      } else if (m = re.exec(text)) {
+        nextBreak = m.index;
+        breakSize = m[0].length;
+      }
+      this.append(text.slice(off, nextBreak < 0 ? text.length : nextBreak));
+      if (nextBreak < 0) break;
+      this.lineBreak();
+      if (breakSize > 1) {
+        for (var _iterator32 = _createForOfIteratorHelperLoose(this.points), _step32; !(_step32 = _iterator32()).done;) {
+          let point = _step32.value;
+          if (point.node == node && point.pos > this.text.length) point.pos -= breakSize - 1;
+        }
+      }
+      off = nextBreak + breakSize;
+    }
+  }
+  readNode(node) {
+    if (node.cmIgnore) return;
+    let view = ContentView.get(node);
+    let fromView = view && view.overrideDOMText;
+    if (fromView != null) {
+      this.findPointInside(node, fromView.length);
+      for (let i = fromView.iter(); !i.next().done;) {
+        if (i.lineBreak) this.lineBreak();else this.append(i.value);
+      }
+    } else if (node.nodeType == 3) {
+      this.readTextNode(node);
+    } else if (node.nodeName == "BR") {
+      if (node.nextSibling) this.lineBreak();
+    } else if (node.nodeType == 1) {
+      this.readRange(node.firstChild, null);
+    }
+  }
+  findPointBefore(node, next) {
+    for (var _iterator33 = _createForOfIteratorHelperLoose(this.points), _step33; !(_step33 = _iterator33()).done;) {
+      let point = _step33.value;
+      if (point.node == node && node.childNodes[point.offset] == next) point.pos = this.text.length;
+    }
+  }
+  findPointInside(node, length) {
+    for (var _iterator34 = _createForOfIteratorHelperLoose(this.points), _step34; !(_step34 = _iterator34()).done;) {
+      let point = _step34.value;
+      if (node.nodeType == 3 ? point.node == node : node.contains(point.node)) point.pos = this.text.length + (isAtEnd(node, point.node, point.offset) ? length : 0);
+    }
+  }
+}
+function isAtEnd(parent, node, offset) {
+  for (;;) {
+    if (!node || offset < maxOffset(node)) return false;
+    if (node == parent) return true;
+    offset = domIndex(node) + 1;
+    node = node.parentNode;
+  }
+}
+function isBlockElement(node) {
+  return node.nodeType == 1 && /^(DIV|P|LI|UL|OL|BLOCKQUOTE|DD|DT|H\d|SECTION|PRE)$/.test(node.nodeName);
+}
+class DOMPoint {
+  constructor(node, offset) {
+    this.node = node;
+    this.offset = offset;
+    this.pos = -1;
+  }
+}
 class DOMChange {
   constructor(view, start, end, typeOver) {
     this.typeOver = typeOver;
@@ -20226,7 +20366,7 @@ function applyDOMChange(view, domChange) {
     };
   }
   if (change) {
-    if (browser.ios && view.inputState.flushIOSKey(view)) return true;
+    if (browser.ios && view.inputState.flushIOSKey()) return true;
     if (browser.android && (change.from == sel.from && change.to == sel.to && change.insert.length == 1 && change.insert.lines == 2 && dispatchKey(view.contentDOM, "Enter", 13) || (change.from == sel.from - 1 && change.to == sel.to && change.insert.length == 0 || lastKey == 8 && change.insert.length < change.to - change.from && change.to > sel.head) && dispatchKey(view.contentDOM, "Backspace", 8) || change.from == sel.from && change.to == sel.to + 1 && change.insert.length == 0 && dispatchKey(view.contentDOM, "Delete", 46))) return true;
     let text = change.insert.toString();
     if (view.inputState.composing >= 0) view.inputState.composing++;
@@ -20264,7 +20404,17 @@ function applyDefaultInsert(view, change, newSel) {
     let mainSel = newSel && newSel.main.to <= changes.newLength ? newSel.main : undefined;
     if (startState.selection.ranges.length > 1 && view.inputState.composing >= 0 && change.to <= sel.to && change.to >= sel.to - 10) {
       let replaced = view.state.sliceDoc(change.from, change.to);
-      let composition = findCompositionNode(view, change.insert.length - (change.to - change.from)) || view.state.doc.lineAt(sel.head);
+      let compositionRange,
+        composition = newSel && findCompositionNode(view, newSel.main.head);
+      if (composition) {
+        let dLen = change.insert.length - (change.to - change.from);
+        compositionRange = {
+          from: composition.from,
+          to: composition.to - dLen
+        };
+      } else {
+        compositionRange = view.state.doc.lineAt(sel.head);
+      }
       let offset = sel.to - change.to,
         size = sel.to - sel.from;
       tr = startState.changeByRange(range => {
@@ -20274,7 +20424,7 @@ function applyDefaultInsert(view, change, newSel) {
         };
         let to = range.to - offset,
           from = to - replaced.length;
-        if (range.to - range.from != size || view.state.sliceDoc(from, to) != replaced || composition && range.to >= composition.from && range.from <= composition.to) return {
+        if (range.to - range.from != size || view.state.sliceDoc(from, to) != replaced || range.to >= compositionRange.from && range.from <= compositionRange.to) return {
           range
         };
         let rangeChanges = startState.changes({
@@ -20440,7 +20590,7 @@ class DOMObserver {
     this.readSelectionRange();
   }
   onScrollChanged(e) {
-    this.view.inputState.runScrollHandlers(this.view, e);
+    this.view.inputState.runHandlers("scroll", e);
     if (this.intersecting) this.view.measure();
   }
   onScroll(e) {
@@ -20647,7 +20797,11 @@ class DOMObserver {
     if (from > -1) this.lastChange = Date.now();
     this.view.inputState.lastFocusTime = 0;
     this.selectionChanged = false;
-    return new DOMChange(this.view, from, to, typeOver);
+    let change = new DOMChange(this.view, from, to, typeOver);
+    this.view.docView.domChanged = {
+      newSel: change.newSel ? change.newSel.main : null
+    };
+    return change;
   }
   flush(readSelection) {
     if (readSelection === void 0) {
@@ -20818,7 +20972,7 @@ class EditorView {
     }
     this.observer = new DOMObserver(this);
     this.inputState = new InputState(this);
-    this.inputState.ensureHandlers(this, this.plugins);
+    this.inputState.ensureHandlers(this.plugins);
     this.docView = new DocView(this);
     this.mountStyles();
     this.updateAttrs();
@@ -20938,7 +21092,7 @@ class EditorView {
         plugin.update(this);
       }
       this.docView = new DocView(this);
-      this.inputState.ensureHandlers(this, this.plugins);
+      this.inputState.ensureHandlers(this.plugins);
       this.mountStyles();
       this.updateAttrs();
       this.bidiCache = [];
@@ -20970,7 +21124,6 @@ class EditorView {
       }
       this.plugins = newPlugins;
       this.pluginMap.clear();
-      this.inputState.ensureHandlers(this, this.plugins);
     } else {
       for (var _iterator51 = _createForOfIteratorHelperLoose(this.plugins), _step51; !(_step51 = _iterator51()).done;) {
         let p = _step51.value;
@@ -20978,6 +21131,7 @@ class EditorView {
       }
     }
     for (let i = 0; i < this.plugins.length; i++) this.plugins[i].update(this);
+    if (prevSpecs != specs) this.inputState.ensureHandlers(this.plugins);
   }
   measure(flush) {
     if (flush === void 0) {
@@ -21302,6 +21456,11 @@ class EditorView {
   static domEventHandlers(handlers) {
     return ViewPlugin.define(() => ({}), {
       eventHandlers: handlers
+    });
+  }
+  static domEventObservers(observers) {
+    return ViewPlugin.define(() => ({}), {
+      eventObservers: observers
     });
   }
   static theme(spec, options) {
@@ -21785,6 +21944,9 @@ function drawSelection(config) {
   }
   return [selectionConfig.of(config), cursorLayer, selectionLayer, hideNativeSelection, nativeSelectionHidden.of(true)];
 }
+function getDrawSelectionConfig(state) {
+  return state.facet(selectionConfig);
+}
 function configChanged(update) {
   return update.startState.facet(selectionConfig) != update.state.facet(selectionConfig);
 }
@@ -21923,7 +22085,7 @@ const drawDropCursor = ViewPlugin.fromClass(class {
     });
   }
 }, {
-  eventHandlers: {
+  eventObservers: {
     dragover(event) {
       this.setDropPos(this.view.posAtCoords({
         x: event.clientX,
@@ -22411,7 +22573,7 @@ function crosshairCursor(options) {
       }
     }
   }, {
-    eventHandlers: {
+    eventObservers: {
       keydown(e) {
         this.set(e.keyCode == code || getter(e));
       },
@@ -22607,6 +22769,7 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       tooltipView.dom.remove();
       (_a = tooltipView.destroy) === null || _a === void 0 ? void 0 : _a.call(tooltipView);
     }
+    if (this.parent) this.container.remove();
     (_b = this.intersectionObserver) === null || _b === void 0 ? void 0 : _b.disconnect();
     clearTimeout(this.measureTimeout);
   }
@@ -22615,9 +22778,11 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
     let scaleX = 1,
       scaleY = 1,
       makeAbsolute = false;
-    if (this.position == "fixed") {
-      let views = this.manager.tooltipViews;
-      makeAbsolute = views.length > 0 && views[0].dom.offsetParent != this.container.ownerDocument.body;
+    if (this.position == "fixed" && this.manager.tooltipViews.length) {
+      let {
+        offsetParent
+      } = this.manager.tooltipViews[0].dom;
+      makeAbsolute = !!(offsetParent && offsetParent != this.container.ownerDocument.body);
     }
     if (makeAbsolute || this.position == "absolute") {
       if (this.parent) {
@@ -22746,7 +22911,7 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
     }
   }
 }, {
-  eventHandlers: {
+  eventObservers: {
     scroll() {
       this.maybeMeasure();
     }
@@ -23043,8 +23208,8 @@ function hasHoverTooltips(state) {
 const closeHoverTooltipEffect = state_dist/* StateEffect */.Py.define();
 const closeHoverTooltips = closeHoverTooltipEffect.of(null);
 function repositionTooltips(view) {
-  var _a;
-  (_a = view.plugin(tooltipPlugin)) === null || _a === void 0 ? void 0 : _a.maybeMeasure();
+  let plugin = view.plugin(tooltipPlugin);
+  if (plugin) plugin.maybeMeasure();
 }
 const panelConfig = state_dist/* Facet */.r$.define({
   combine(configs) {
@@ -23320,6 +23485,11 @@ const gutterView = ViewPlugin.fromClass(class {
           let cx = _step97.value;
           cx.line(this.view, line, classSet);
         }
+      } else if (line.widget) {
+        for (var _iterator98 = _createForOfIteratorHelperLoose(contexts), _step98; !(_step98 = _iterator98()).done;) {
+          let cx = _step98.value;
+          cx.widget(this.view, line);
+        }
       }
     }
     for (var _iterator93 = _createForOfIteratorHelperLoose(contexts), _step93; !(_step93 = _iterator93()).done;) {
@@ -23333,15 +23503,15 @@ const gutterView = ViewPlugin.fromClass(class {
       cur = update.state.facet(activeGutters);
     let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet */.Xs.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
     if (prev == cur) {
-      for (var _iterator98 = _createForOfIteratorHelperLoose(this.gutters), _step98; !(_step98 = _iterator98()).done;) {
-        let gutter = _step98.value;
+      for (var _iterator99 = _createForOfIteratorHelperLoose(this.gutters), _step99; !(_step99 = _iterator99()).done;) {
+        let gutter = _step99.value;
         if (gutter.update(update)) change = true;
       }
     } else {
       change = true;
       let gutters = [];
-      for (var _iterator99 = _createForOfIteratorHelperLoose(cur), _step99; !(_step99 = _iterator99()).done;) {
-        let conf = _step99.value;
+      for (var _iterator100 = _createForOfIteratorHelperLoose(cur), _step100; !(_step100 = _iterator100()).done;) {
+        let conf = _step100.value;
         let known = prev.indexOf(conf);
         if (known < 0) {
           gutters.push(new SingleGutterView(this.view, conf));
@@ -23350,8 +23520,8 @@ const gutterView = ViewPlugin.fromClass(class {
           gutters.push(this.gutters[known]);
         }
       }
-      for (var _iterator100 = _createForOfIteratorHelperLoose(this.gutters), _step100; !(_step100 = _iterator100()).done;) {
-        let g = _step100.value;
+      for (var _iterator101 = _createForOfIteratorHelperLoose(this.gutters), _step101; !(_step101 = _iterator101()).done;) {
+        let g = _step101.value;
         g.dom.remove();
         if (gutters.indexOf(g) < 0) g.destroy();
       }
@@ -23364,8 +23534,8 @@ const gutterView = ViewPlugin.fromClass(class {
     return change;
   }
   destroy() {
-    for (var _iterator101 = _createForOfIteratorHelperLoose(this.gutters), _step101; !(_step101 = _iterator101()).done;) {
-      let view = _step101.value;
+    for (var _iterator102 = _createForOfIteratorHelperLoose(this.gutters), _step102; !(_step102 = _iterator102()).done;) {
+      let view = _step102.value;
       view.destroy();
     }
     this.dom.remove();
@@ -23401,13 +23571,14 @@ class UpdateContext {
     let {
         gutter
       } = this,
-      above = block.top - this.height;
+      above = (block.top - this.height) / view.scaleY,
+      height = block.height / view.scaleY;
     if (this.i == gutter.elements.length) {
-      let newElt = new GutterElement(view, block.height, above, markers);
+      let newElt = new GutterElement(view, height, above, markers);
       gutter.elements.push(newElt);
       gutter.dom.appendChild(newElt.dom);
     } else {
-      gutter.elements[this.i].update(view, block.height, above, markers);
+      gutter.elements[this.i].update(view, height, above, markers);
     }
     this.height = block.bottom;
     this.i++;
@@ -23476,8 +23647,8 @@ class SingleGutterView {
     return !state_dist/* RangeSet */.Xs.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
   }
   destroy() {
-    for (var _iterator102 = _createForOfIteratorHelperLoose(this.elements), _step102; !(_step102 = _iterator102()).done;) {
-      let elt = _step102.value;
+    for (var _iterator103 = _createForOfIteratorHelperLoose(this.elements), _step103; !(_step103 = _iterator103()).done;) {
+      let elt = _step103.value;
       elt.destroy();
     }
   }
@@ -23494,9 +23665,9 @@ class GutterElement {
   update(view, height, above, markers) {
     if (this.height != height) {
       this.height = height;
-      this.dom.style.height = height / view.scaleY + "px";
+      this.dom.style.height = height + "px";
     }
-    if (this.above != above) this.dom.style.marginTop = (this.above = above) ? above / view.scaleY + "px" : "";
+    if (this.above != above) this.dom.style.marginTop = (this.above = above) ? above + "px" : "";
     if (!sameMarkers(this.markers, markers)) this.setMarkers(view, markers);
   }
   setMarkers(view, markers) {
@@ -23619,8 +23790,8 @@ const activeLineGutterMarker = new class extends GutterMarker {
 const activeLineGutterHighlighter = gutterLineClass.compute(["selection"], state => {
   let marks = [],
     last = -1;
-  for (var _iterator103 = _createForOfIteratorHelperLoose(state.selection.ranges), _step103; !(_step103 = _iterator103()).done;) {
-    let range = _step103.value;
+  for (var _iterator104 = _createForOfIteratorHelperLoose(state.selection.ranges), _step104; !(_step104 = _iterator104()).done;) {
+    let range = _step104.value;
     let linePos = state.doc.lineAt(range.head).from;
     if (linePos > last) {
       last = linePos;
@@ -23758,6 +23929,9 @@ class MountedTree {
     this.overlay = overlay;
     this.parser = parser;
   }
+  static get(tree) {
+    return tree && tree.props && tree.props[NodeProp.mounted.id];
+  }
 }
 const noProps = Object.create(null);
 class NodeType {
@@ -23877,7 +24051,7 @@ class Tree {
     }
   }
   toString() {
-    let mounted = this.prop(NodeProp.mounted);
+    let mounted = MountedTree.get(this);
     if (mounted && !mounted.overlay) return mounted.tree.toString();
     let children = "";
     for (var _iterator6 = _createForOfIteratorHelperLoose(this.children), _step6; !(_step6 = _iterator6()).done;) {
@@ -23927,6 +24101,12 @@ class Tree {
     let node = resolveNode(CachedInnerNode.get(this) || this.topNode, pos, side, true);
     CachedInnerNode.set(this, node);
     return node;
+  }
+  resolveStack(pos, side) {
+    if (side === void 0) {
+      side = 0;
+    }
+    return stackIterator(this, pos, side);
   }
   iterate(spec) {
     let {
@@ -24072,20 +24252,6 @@ function checkSide(side, pos, from, to) {
       return true;
   }
 }
-function enterUnfinishedNodesBefore(node, pos) {
-  let scan = node.childBefore(pos);
-  while (scan) {
-    let last = scan.lastChild;
-    if (!last || last.to != scan.to) break;
-    if (last.type.isError && last.from == last.to) {
-      node = scan;
-      scan = last.prevSibling;
-    } else {
-      scan = last;
-    }
-  }
-  return node;
-}
 function resolveNode(node, pos, side, overlays) {
   var _a;
   while (node.from == node.to || (side < 1 ? node.from >= pos : node.from > pos) || (side > -1 ? node.to <= pos : node.to < pos)) {
@@ -24103,8 +24269,72 @@ function resolveNode(node, pos, side, overlays) {
     node = inner;
   }
 }
-class TreeNode {
+class BaseNode {
+  cursor(mode) {
+    if (mode === void 0) {
+      mode = 0;
+    }
+    return new TreeCursor(this, mode);
+  }
+  getChild(type, before, after) {
+    if (before === void 0) {
+      before = null;
+    }
+    if (after === void 0) {
+      after = null;
+    }
+    let r = getChildren(this, type, before, after);
+    return r.length ? r[0] : null;
+  }
+  getChildren(type, before, after) {
+    if (before === void 0) {
+      before = null;
+    }
+    if (after === void 0) {
+      after = null;
+    }
+    return getChildren(this, type, before, after);
+  }
+  resolve(pos, side) {
+    if (side === void 0) {
+      side = 0;
+    }
+    return resolveNode(this, pos, side, false);
+  }
+  resolveInner(pos, side) {
+    if (side === void 0) {
+      side = 0;
+    }
+    return resolveNode(this, pos, side, true);
+  }
+  matchContext(context) {
+    return matchNodeContext(this, context);
+  }
+  enterUnfinishedNodesBefore(pos) {
+    let scan = this.childBefore(pos),
+      node = this;
+    while (scan) {
+      let last = scan.lastChild;
+      if (!last || last.to != scan.to) break;
+      if (last.type.isError && last.from == last.to) {
+        node = scan;
+        scan = last.prevSibling;
+      } else {
+        scan = last;
+      }
+    }
+    return node;
+  }
+  get node() {
+    return this;
+  }
+  get next() {
+    return this.parent;
+  }
+}
+class TreeNode extends BaseNode {
   constructor(_tree, from, index, _parent) {
+    super();
     this._tree = _tree;
     this.from = from;
     this.index = index;
@@ -24137,7 +24367,7 @@ class TreeNode {
           if (index > -1) return new BufferNode(new BufferContext(parent, next, i, start), null, index);
         } else if (mode & IterMode.IncludeAnonymous || !next.type.isAnonymous || hasChild(next)) {
           let mounted;
-          if (!(mode & IterMode.IgnoreMounts) && next.props && (mounted = next.prop(NodeProp.mounted)) && !mounted.overlay) return new TreeNode(mounted.tree, start, i, parent);
+          if (!(mode & IterMode.IgnoreMounts) && (mounted = MountedTree.get(next)) && !mounted.overlay) return new TreeNode(mounted.tree, start, i, parent);
           let inner = new TreeNode(next, start, i, parent);
           return mode & IterMode.IncludeAnonymous || !inner.type.isAnonymous ? inner : inner.nextChild(dir < 0 ? next.children.length - 1 : 0, dir, pos, side);
         }
@@ -24165,7 +24395,7 @@ class TreeNode {
       mode = 0;
     }
     let mounted;
-    if (!(mode & IterMode.IgnoreOverlays) && (mounted = this._tree.prop(NodeProp.mounted)) && mounted.overlay) {
+    if (!(mode & IterMode.IgnoreOverlays) && (mounted = MountedTree.get(this._tree)) && mounted.overlay) {
       let rPos = pos - this.from;
       for (var _iterator7 = _createForOfIteratorHelperLoose(mounted.overlay), _step7; !(_step7 = _iterator7()).done;) {
         let {
@@ -24191,60 +24421,14 @@ class TreeNode {
   get prevSibling() {
     return this._parent && this.index >= 0 ? this._parent.nextChild(this.index - 1, -1, 0, 4) : null;
   }
-  cursor(mode) {
-    if (mode === void 0) {
-      mode = 0;
-    }
-    return new TreeCursor(this, mode);
-  }
   get tree() {
     return this._tree;
   }
   toTree() {
     return this._tree;
   }
-  resolve(pos, side) {
-    if (side === void 0) {
-      side = 0;
-    }
-    return resolveNode(this, pos, side, false);
-  }
-  resolveInner(pos, side) {
-    if (side === void 0) {
-      side = 0;
-    }
-    return resolveNode(this, pos, side, true);
-  }
-  enterUnfinishedNodesBefore(pos) {
-    return enterUnfinishedNodesBefore(this, pos);
-  }
-  getChild(type, before, after) {
-    if (before === void 0) {
-      before = null;
-    }
-    if (after === void 0) {
-      after = null;
-    }
-    let r = getChildren(this, type, before, after);
-    return r.length ? r[0] : null;
-  }
-  getChildren(type, before, after) {
-    if (before === void 0) {
-      before = null;
-    }
-    if (after === void 0) {
-      after = null;
-    }
-    return getChildren(this, type, before, after);
-  }
   toString() {
     return this._tree.toString();
-  }
-  get node() {
-    return this;
-  }
-  matchContext(context) {
-    return matchNodeContext(this, context);
   }
 }
 function getChildren(node, type, before, after) {
@@ -24279,7 +24463,7 @@ class BufferContext {
     this.start = start;
   }
 }
-class BufferNode {
+class BufferNode extends BaseNode {
   get name() {
     return this.type.name;
   }
@@ -24290,6 +24474,7 @@ class BufferNode {
     return this.context.start + this.context.buffer.buffer[this.index + 2];
   }
   constructor(context, _parent, index) {
+    super();
     this.context = context;
     this._parent = _parent;
     this.index = index;
@@ -24347,12 +24532,6 @@ class BufferNode {
     if (this.index == parentStart) return this.externalSibling(-1);
     return new BufferNode(this.context, this._parent, buffer.findChild(parentStart, this.index, -1, 0, 4));
   }
-  cursor(mode) {
-    if (mode === void 0) {
-      mode = 0;
-    }
-    return new TreeCursor(this, mode);
-  }
   get tree() {
     return null;
   }
@@ -24371,49 +24550,53 @@ class BufferNode {
     }
     return new Tree(this.type, children, positions, this.to - this.from);
   }
-  resolve(pos, side) {
-    if (side === void 0) {
-      side = 0;
-    }
-    return resolveNode(this, pos, side, false);
-  }
-  resolveInner(pos, side) {
-    if (side === void 0) {
-      side = 0;
-    }
-    return resolveNode(this, pos, side, true);
-  }
-  enterUnfinishedNodesBefore(pos) {
-    return enterUnfinishedNodesBefore(this, pos);
-  }
   toString() {
     return this.context.buffer.childString(this.index);
   }
-  getChild(type, before, after) {
-    if (before === void 0) {
-      before = null;
+}
+function iterStack(heads) {
+  if (!heads.length) return null;
+  if (heads.length == 1) return heads[0];
+  let pick = 0,
+    picked = heads[0];
+  for (let i = 1; i < heads.length; i++) {
+    let node = heads[i];
+    if (node.from > picked.from || node.to < picked.to) {
+      picked = node;
+      pick = i;
     }
-    if (after === void 0) {
-      after = null;
+  }
+  let next = picked instanceof TreeNode && picked.index < 0 ? null : picked.parent;
+  let newHeads = heads.slice();
+  if (next) newHeads[pick] = next;else newHeads.splice(pick, 1);
+  return new StackIterator(newHeads, picked);
+}
+class StackIterator {
+  constructor(heads, node) {
+    this.heads = heads;
+    this.node = node;
+  }
+  get next() {
+    return iterStack(this.heads);
+  }
+}
+function stackIterator(tree, pos, side) {
+  let inner = tree.resolveInner(pos, side),
+    layers = null;
+  for (let scan = inner instanceof TreeNode ? inner : inner.context.parent; scan; scan = scan.parent) {
+    if (scan.index < 0) {
+      let parent = scan.parent;
+      (layers || (layers = [inner])).push(parent.resolve(pos, side));
+      scan = parent;
+    } else {
+      let mount = MountedTree.get(scan.tree);
+      if (mount && mount.overlay && mount.overlay[0].from <= pos && mount.overlay[mount.overlay.length - 1].to >= pos) {
+        let root = new TreeNode(mount.tree, mount.overlay[0].from + scan.from, 0, null);
+        (layers || (layers = [inner])).push(resolveNode(root, pos, side, false));
+      }
     }
-    let r = getChildren(this, type, before, after);
-    return r.length ? r[0] : null;
   }
-  getChildren(type, before, after) {
-    if (before === void 0) {
-      before = null;
-    }
-    if (after === void 0) {
-      after = null;
-    }
-    return getChildren(this, type, before, after);
-  }
-  get node() {
-    return this;
-  }
-  matchContext(context) {
-    return matchNodeContext(this, context);
-  }
+  return layers ? iterStack(layers) : inner;
 }
 class TreeCursor {
   get name() {
@@ -25990,8 +26173,7 @@ class Stack {
       this.buffer[index + 3] = size;
     }
   }
-  shift(action, next, nextEnd) {
-    let start = this.pos;
+  shift(action, type, start, end) {
     if (action & 131072) {
       this.pushState(action & 65535, this.pos);
     } else if ((action & 262144) == 0) {
@@ -25999,21 +26181,21 @@ class Stack {
         {
           parser
         } = this.p;
-      if (nextEnd > this.pos || next <= parser.maxNode) {
-        this.pos = nextEnd;
-        if (!parser.stateFlag(nextState, 1)) this.reducePos = nextEnd;
+      if (end > this.pos || type <= parser.maxNode) {
+        this.pos = end;
+        if (!parser.stateFlag(nextState, 1)) this.reducePos = end;
       }
       this.pushState(nextState, start);
-      this.shiftContext(next, start);
-      if (next <= parser.maxNode) this.buffer.push(next, start, nextEnd, 4);
+      this.shiftContext(type, start);
+      if (type <= parser.maxNode) this.buffer.push(type, start, end, 4);
     } else {
-      this.pos = nextEnd;
-      this.shiftContext(next, start);
-      if (next <= this.p.parser.maxNode) this.buffer.push(next, start, nextEnd, 4);
+      this.pos = end;
+      this.shiftContext(type, start);
+      if (type <= this.p.parser.maxNode) this.buffer.push(type, start, end, 4);
     }
   }
-  apply(action, next, nextEnd) {
-    if (action & 65536) this.reduce(action);else this.shift(action, next, nextEnd);
+  apply(action, next, nextStart, nextEnd) {
+    if (action & 65536) this.reduce(action);else this.shift(action, next, nextStart, nextEnd);
   }
   useNode(value, next) {
     let index = this.p.reused.length - 1;
@@ -26900,8 +27082,8 @@ class Parse {
       if (verbose) console.log(base + this.stackID(stack) + ` (via always-reduce ${parser.getName(defaultReduce & 65535)})`);
       return true;
     }
-    if (stack.stack.length >= 15000) {
-      while (stack.stack.length > 9000 && stack.forceReduce()) {}
+    if (stack.stack.length >= 9000) {
+      while (stack.stack.length > 6000 && stack.forceReduce()) {}
     }
     let actions = this.tokens.getActions(stack);
     for (let i = 0; i < actions.length;) {
@@ -26910,7 +27092,8 @@ class Parse {
         end = actions[i++];
       let last = i == actions.length || !split;
       let localStack = last ? stack : stack.split();
-      localStack.apply(action, term, end);
+      let main = this.tokens.mainToken;
+      localStack.apply(action, term, main ? main.start : localStack.pos, end);
       if (verbose) console.log(base + this.stackID(localStack) + ` (via ${(action & 65536) == 0 ? "shift" : `reduce of ${parser.getName(action & 65535)}`} for ${parser.getName(term)} @ ${start}${localStack == stack ? "" : ", split"})`);
       if (last) return true;else if (localStack.pos > start) stacks.push(localStack);else split.push(localStack);
     }
