@@ -8997,7 +8997,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_19___ = _node_modules_css_loader_dist_runtime_
 var ___CSS_LOADER_URL_REPLACEMENT_20___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_17___);
 var ___CSS_LOADER_URL_REPLACEMENT_21___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_18___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Open Sans";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_0___});src:local("Open Sans"),local("OpenSans"),url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_2___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_3___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_4___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_5___}) format("truetype")}@font-face{font-family:"Open Sans Light";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_6___});src:local("Open Sans Light"),local("OpenSans Light"),url(${___CSS_LOADER_URL_REPLACEMENT_7___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_8___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_9___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_10___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_11___}) format("truetype")}@font-face{font-family:"ami";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_12___});src:url(${___CSS_LOADER_URL_REPLACEMENT_13___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_14___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_15___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_16___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_17___}) format("truetype")}@font-face{font-family:"Trochut";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_18___}) format("truetype")}a{text-decoration:none}h1,h2,h3,h4,h5,h6{font-family:"Open Sans Light","Open Sans"}pre{background-image:url(${___CSS_LOADER_URL_REPLACEMENT_19___});border:1px solid #ced4da;border-radius:.2rem;padding:.5rem}.bi-lpsc:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-cern:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-ami:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-rucio:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-node-red:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-down-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-right-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-left-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-up-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-key:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-leaf:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-flask:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-slack:before{font-family:ami !important;vertical-align:0 !important;content:""}.w-lg-25{width:100%}.w-lg-50{width:100%}.w-lg-75{width:100%}@media screen and (min-width: 992px){.w-lg-25{width:25%}.w-lg-50{width:50%}.w-lg-75{width:75%}}.bg-light{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_20___})}.bg-light2{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}.breadcrumb{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___});border-radius:.125rem;padding:.25rem .5rem}.card-header{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}.card-footer{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}.modal-header{background:#f5f5f5 url(${___CSS_LOADER_URL_REPLACEMENT_20___});border-radius:.25rem .25rem 0 0}.modal-footer{background:#f5f5f5 url(${___CSS_LOADER_URL_REPLACEMENT_21___});border-radius:0 0 .25rem .25rem}.navbar-nav .dropdown-menu{padding:.3rem 0rem}.navbar-nav .dropdown-divider{margin:.2rem 0rem}.navbar-nav .dropdown-item{padding:.2rem 1rem}@media(min-width: 768px){.navbar-nav>li>.dropdown-menu::before{border-bottom:7px solid rgba(0,0,0,.2);border-left:7px solid rgba(0,0,0,0);border-right:7px solid rgba(0,0,0,0);content:"";display:inline-block;left:9px;position:absolute;top:-7px}.navbar-nav>li>.dropdown-menu::after{border-bottom:6px solid #fff;border-left:6px solid rgba(0,0,0,0);border-right:6px solid rgba(0,0,0,0);content:"";display:inline-block;left:10px;position:absolute;top:-6px}.navbar-nav.navbar-right>li>.dropdown-menu::before{left:auto;right:12px}.navbar-nav.navbar-right>li>.dropdown-menu::after{left:auto;right:13px}}.nav-tabs .nav-link{background:none}.form-label{margin-bottom:.125rem}#jsdoc_content{text-align:justify}#jsdoc_content dl.details{border-left:2px solid #ccc;margin-top:.5rem}#jsdoc_content dl.details dt{padding-left:.5rem}#jsdoc_content dl.details dd{padding-left:1.5rem}#jsdoc_content .signature-name{color:#007bff;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params{color:#000;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{color:#aaa;font-size:calc(1*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-attrs{color:#aaa;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{font-style:italic;margin-left:2px}#ami_alert_content{position:absolute;z-index:99999999;top:8px;right:8px}.ami-code{text-align:left}.ami-code,.ami-code code{white-space:pre-wrap;word-break:break-all}.form-editor-done{opacity:0;pointer-events:none;position:fixed;z-index:-9999;top:0;left:0;height:0;width:0}.select2-container--default{width:100% !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--multiple,.select2-container--default .select2-selection--multiple .select2-selection__choice{border:1px solid #ced4da !important;border-radius:.2rem !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .75rem + 2px) !important}.select2-container--default .select2-selection--single{padding:calc((1.5em + .75rem)/2 - 14px) .25rem !important}.form-control-sm~.select2-container--default .select2-selection--single,.form-control-sm~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-sm .select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .5rem + 2px) !important}.form-control-sm~.select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single{padding:calc((1.5em + .5rem)/2 - 14px) 0rem !important}.form-control-lg~.select2-container--default .select2-selection--single,.form-control-lg~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-lg .select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + 1rem + 2px) !important}.form-control-lg~.select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single{padding:calc((1.5em + 1rem)/2 - 14px) .5rem !important}input.form-datetime,input.form-date,input.form-time,input.form-time-hm{background-color:#fff !important}.flatpickr-calendar .dayContainer{padding-bottom:2px}`, ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Open Sans";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_0___});src:local("Open Sans"),local("OpenSans"),url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_2___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_3___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_4___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_5___}) format("truetype")}@font-face{font-family:"Open Sans Light";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_6___});src:local("Open Sans Light"),local("OpenSans Light"),url(${___CSS_LOADER_URL_REPLACEMENT_7___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_8___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_9___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_10___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_11___}) format("truetype")}@font-face{font-family:"ami";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_12___});src:url(${___CSS_LOADER_URL_REPLACEMENT_13___}) format("embedded-opentype"),url(${___CSS_LOADER_URL_REPLACEMENT_14___}) format("woff2"),url(${___CSS_LOADER_URL_REPLACEMENT_15___}) format("woff"),url(${___CSS_LOADER_URL_REPLACEMENT_16___}) format("svg"),url(${___CSS_LOADER_URL_REPLACEMENT_17___}) format("truetype")}@font-face{font-family:"Trochut";font-weight:normal;font-style:normal;src:url(${___CSS_LOADER_URL_REPLACEMENT_18___}) format("truetype")}a{text-decoration:none}h1,h2,h3,h4,h5,h6{font-family:"Open Sans Light","Open Sans"}pre{background-image:url(${___CSS_LOADER_URL_REPLACEMENT_19___});border:1px solid #ced4da;border-radius:.2rem;padding:.5rem}.bi-lpsc:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-cern:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-ami:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-rucio:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-node-red:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-down-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-right-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-left-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-arrow-up-circle-fill:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-key:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-leaf:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-flask:before{font-family:ami !important;vertical-align:0 !important;content:""}.bi-slack:before{font-family:ami !important;vertical-align:0 !important;content:""}.w-lg-25{width:100%}.w-lg-50{width:100%}.w-lg-75{width:100%}@media screen and (min-width: 992px){.w-lg-25{width:25%}.w-lg-50{width:50%}.w-lg-75{width:75%}}[data-bs-theme=light] .bg-light{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_20___})}[data-bs-theme=light] .bg-light2{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}[data-bs-theme=light] .breadcrumb{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}[data-bs-theme=light] .card-header{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}[data-bs-theme=light] .card-footer{background:rgba(0,0,0,.03) url(${___CSS_LOADER_URL_REPLACEMENT_21___})}[data-bs-theme=light] .modal-header{background:#f5f5f5 url(${___CSS_LOADER_URL_REPLACEMENT_20___})}[data-bs-theme=light] .modal-footer{background:#f5f5f5 url(${___CSS_LOADER_URL_REPLACEMENT_21___})}[data-bs-theme=dark] .bg-light{background-color:var(--bs-body-bg) !important}[data-bs-theme=dark] .bg-light2{background-color:var(--bs-body-bg) !important}.breadcrumb{border-radius:.125rem;padding:.25rem .5rem}.modal-header{border-radius:.25rem .25rem 0 0}.modal-footer{border-radius:0 0 .25rem .25rem}.navbar-nav .dropdown-menu{padding:.3rem 0rem}.navbar-nav .dropdown-divider{margin:.2rem 0rem}.navbar-nav .dropdown-item{padding:.2rem 1rem}@media(min-width: 768px){.navbar-nav>li>.dropdown-menu::before{border-bottom:7px solid rgba(0,0,0,.2);border-left:7px solid rgba(0,0,0,0);border-right:7px solid rgba(0,0,0,0);content:"";display:inline-block;left:9px;position:absolute;top:-7px}.navbar-nav>li>.dropdown-menu::after{border-bottom:6px solid #fff;border-left:6px solid rgba(0,0,0,0);border-right:6px solid rgba(0,0,0,0);content:"";display:inline-block;left:10px;position:absolute;top:-6px}.navbar-nav.navbar-right>li>.dropdown-menu::before{left:auto;right:12px}.navbar-nav.navbar-right>li>.dropdown-menu::after{left:auto;right:13px}}.nav-tabs .nav-link{background:none}.form-label{margin-bottom:.125rem}#jsdoc_content{text-align:justify}#jsdoc_content dl.details{border-left:2px solid #ccc;margin-top:.5rem}#jsdoc_content dl.details dt{padding-left:.5rem}#jsdoc_content dl.details dd{padding-left:1.5rem}#jsdoc_content .signature-name{color:#007bff;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params{color:#000;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{color:#aaa;font-size:calc(1*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-attrs{color:#aaa;font-size:calc(1.3*var(--bs-body-font-size, 0.9375rem))}#jsdoc_content .signature-params-attrs{font-style:italic;margin-left:2px}#ami_alert_content{position:absolute;z-index:99999999;top:8px;right:8px}.ami-code{text-align:left}.ami-code,.ami-code code{white-space:pre-wrap;word-break:break-all}.form-editor-done{opacity:0;pointer-events:none;position:fixed;z-index:-9999;top:0;left:0;height:0;width:0}.select2-container--default{width:100% !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--multiple,.select2-container--default .select2-selection--multiple .select2-selection__choice{border:1px solid #ced4da !important;border-radius:.2rem !important}.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .75rem + 2px) !important}.select2-container--default .select2-selection--single{padding:calc((1.5em + .75rem)/2 - 14px) .25rem !important}.form-control-sm~.select2-container--default .select2-selection--single,.form-control-sm~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-sm .select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + .5rem + 2px) !important}.form-control-sm~.select2-container--default .select2-selection--single,.input-group-sm .select2-container--default .select2-selection--single{padding:calc((1.5em + .5rem)/2 - 14px) 0rem !important}.form-control-lg~.select2-container--default .select2-selection--single,.form-control-lg~.select2-container--default .select2-selection--single .select2-selection__arrow,.input-group-lg .select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single .select2-selection__arrow{height:calc(1.5em + 1rem + 2px) !important}.form-control-lg~.select2-container--default .select2-selection--single,.input-group-lg .select2-container--default .select2-selection--single{padding:calc((1.5em + 1rem)/2 - 14px) .5rem !important}input.form-datetime,input.form-date,input.form-time,input.form-time-hm{background-color:#fff !important}.flatpickr-calendar .dayContainer{padding-bottom:2px}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15286,7 +15286,7 @@ function replaceRange(parent, fromI, fromOff, toI, toOff, insert, breakAtStart, 
       if (!breakAtEnd && last && after.merge(0, toOff, last, true, 0, openEnd)) {
         insert[insert.length - 1] = after;
       } else {
-        if (toOff) after.merge(0, toOff, null, false, 0, openEnd);
+        if (toOff || after.children.length && !after.children[0].length) after.merge(0, toOff, null, false, 0, openEnd);
         insert.push(after);
       }
     } else if (after === null || after === void 0 ? void 0 : after.breakAfter) {
@@ -16234,7 +16234,7 @@ class ContentBuilder {
   }
   finish(openEnd) {
     if (this.pendingBuffer && openEnd <= this.bufferMarks.length) this.flushBuffer();else this.pendingBuffer = 0;
-    if (!openEnd && !this.posCovered()) this.getLine();
+    if (!this.posCovered() && !(openEnd && this.content.length && this.content[this.content.length - 1] instanceof BlockWidgetView)) this.getLine();
   }
   buildText(length, active, openStart) {
     while (length > 0) {
@@ -17280,7 +17280,11 @@ class DocView extends ContentView {
     let end = (0,state_dist/* findClusterBreak */.cp)(child.text, off);
     if (end == off) return null;
     let rects = textRange(child.dom, off, end).getClientRects();
-    return !rects.length || rects[0].top >= rects[0].bottom ? null : rects[0];
+    for (let i = 0; i < rects.length; i++) {
+      let rect = rects[i];
+      if (i == rects.length - 1 || rect.top < rect.bottom && rect.left < rect.right) return rect;
+    }
+    return null;
   }
   measureVisibleLineHeights(viewport) {
     let result = [],
@@ -17926,19 +17930,6 @@ class InputState {
     this.compositionPendingChange = false;
     this.mouseSelection = null;
     this.handleEvent = this.handleEvent.bind(this);
-    view.scrollDOM.addEventListener("mousedown", event => {
-      if (event.target == view.scrollDOM && event.clientY > view.contentDOM.getBoundingClientRect().bottom) {
-        this.runHandlers("mousedown", event);
-        if (!event.defaultPrevented && event.button == 2) {
-          let start = view.contentDOM.style.minHeight;
-          view.contentDOM.style.minHeight = "100%";
-          setTimeout(() => view.contentDOM.style.minHeight = start, 200);
-        }
-      }
-    });
-    view.scrollDOM.addEventListener("drop", event => {
-      if (event.target == view.scrollDOM && event.clientY > view.contentDOM.getBoundingClientRect().bottom) this.runHandlers("drop", event);
-    });
     this.notifiedFocused = view.hasFocus;
     if (browser.safari) view.contentDOM.addEventListener("input", () => null);
     if (browser.gecko) firefoxCopyCutHack(view.contentDOM.ownerDocument);
@@ -18320,7 +18311,7 @@ handlers.mousedown = (view, event) => {
     let mouseSel = view.inputState.mouseSelection;
     if (mouseSel) {
       mouseSel.start(event);
-      return !mouseSel.dragging;
+      return mouseSel.dragging === false;
     }
   }
   return false;
@@ -19955,6 +19946,7 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
     whiteSpace: "pre",
     wordWrap: "normal",
     boxSizing: "border-box",
+    minHeight: "100%",
     padding: "4px 0",
     outline: "none",
     "&[contenteditable=true]": {
@@ -20810,7 +20802,10 @@ class DOMObserver {
     if (this.delayedFlush >= 0 || this.delayedAndroidKey) return false;
     if (readSelection) this.readSelectionRange();
     let domChange = this.readChange();
-    if (!domChange) return false;
+    if (!domChange) {
+      this.view.requestMeasure();
+      return false;
+    }
     let startState = this.view.state;
     let handled = applyDOMChange(this.view, domChange);
     if (this.view.state == startState) this.view.update([]);
@@ -22599,7 +22594,7 @@ class TooltipViewManager {
     this.tooltips = this.input.filter(t => t);
     this.tooltipViews = this.tooltips.map(createTooltipView);
   }
-  update(update) {
+  update(update, above) {
     var _a;
     let input = update.state.facet(this.facet);
     let tooltips = input.filter(x => x);
@@ -22610,7 +22605,8 @@ class TooltipViewManager {
       }
       return false;
     }
-    let tooltipViews = [];
+    let tooltipViews = [],
+      newAbove = above ? [] : null;
     for (let i = 0; i < tooltips.length; i++) {
       let tip = tooltips[i],
         known = -1;
@@ -22621,8 +22617,10 @@ class TooltipViewManager {
       }
       if (known < 0) {
         tooltipViews[i] = this.createTooltipView(tip);
+        if (newAbove) newAbove[i] = !!tip.above;
       } else {
         let tooltipView = tooltipViews[i] = this.tooltipViews[known];
+        if (newAbove) newAbove[i] = above[known];
         if (tooltipView.update) tooltipView.update(update);
       }
     }
@@ -22632,6 +22630,10 @@ class TooltipViewManager {
         t.dom.remove();
         (_a = t.destroy) === null || _a === void 0 ? void 0 : _a.call(t);
       }
+    }
+    if (above) {
+      newAbove.forEach((val, i) => above[i] = val);
+      above.length = newAbove.length;
     }
     this.input = input;
     this.tooltips = tooltips;
@@ -22670,6 +22672,7 @@ const knownHeight = new WeakMap();
 const tooltipPlugin = ViewPlugin.fromClass(class {
   constructor(view) {
     this.view = view;
+    this.above = [];
     this.inView = true;
     this.madeAbsolute = false;
     this.lastTransaction = 0;
@@ -22721,7 +22724,7 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
   }
   update(update) {
     if (update.transactions.length) this.lastTransaction = Date.now();
-    let updated = this.manager.update(update);
+    let updated = this.manager.update(update, this.above);
     if (updated) this.observeIntersection();
     let shouldMeasure = updated || update.geometryChanged;
     let newConfig = update.state.facet(tooltipConfig);
@@ -22853,8 +22856,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       let offset = tView.offset || noOffset,
         ltr = this.view.textDirection == Direction.LTR;
       let left = size.width > space.right - space.left ? ltr ? space.left : space.right - size.width : ltr ? Math.min(pos.left - (arrow ? 14 : 0) + offset.x, space.right - width) : Math.max(space.left, pos.left - width + (arrow ? 14 : 0) - offset.x);
-      let above = !!tooltip.above;
-      if (!tooltip.strictSide && (above ? pos.top - (size.bottom - size.top) - offset.y < space.top : pos.bottom + (size.bottom - size.top) + offset.y > space.bottom) && above == space.bottom - pos.bottom > pos.top - space.top) above = !above;
+      let above = this.above[i];
+      if (!tooltip.strictSide && (above ? pos.top - (size.bottom - size.top) - offset.y < space.top : pos.bottom + (size.bottom - size.top) + offset.y > space.bottom) && above == space.bottom - pos.bottom > pos.top - space.top) above = this.above[i] = !above;
       let spaceVert = (above ? pos.top - space.top : space.bottom - pos.bottom) - arrowHeight;
       if (spaceVert < height && tView.resize !== false) {
         if (spaceVert < this.view.defaultLineHeight) {
@@ -26255,6 +26258,7 @@ class Stack {
       stack.pushState(s, this.pos);
       stack.storeNode(0, stack.pos, stack.pos, 4, true);
       stack.shiftContext(nextStates[i], this.pos);
+      stack.reducePos = this.pos;
       stack.score -= 200;
       result.push(stack);
     }
@@ -26323,6 +26327,7 @@ class Stack {
     return parser.data[parser.stateSlot(this.state, 1)] == 65535 && !parser.stateSlot(this.state, 4);
   }
   restart() {
+    this.storeNode(0, this.pos, this.pos, 4, true);
     this.state = this.stack[0];
     this.stack.length = 0;
   }
@@ -32114,9 +32119,14 @@ const selectParentSyntax = _ref14 => {
   } = _ref14;
   let selection = updateSel(state.selection, range => {
     var _a;
-    let context = (0,language_dist/* syntaxTree */.qz)(state).resolveInner(range.head, 1);
-    while (!(context.from < range.from && context.to >= range.to || context.to > range.to && context.from <= range.from || !((_a = context.parent) === null || _a === void 0 ? void 0 : _a.parent))) context = context.parent;
-    return state_dist/* EditorSelection */.jT.range(context.to, context.from);
+    let stack = (0,language_dist/* syntaxTree */.qz)(state).resolveStack(range.from, 1);
+    for (let cur = stack; cur; cur = cur.next) {
+      let {
+        node
+      } = cur;
+      if ((node.from < range.from && node.to >= range.to || node.to > range.to && node.from <= range.from) && ((_a = node.parent) === null || _a === void 0 ? void 0 : _a.parent)) return state_dist/* EditorSelection */.jT.range(node.to, node.from);
+    }
+    return range;
   });
   dispatch(setSel(state, selection));
   return true;
@@ -32145,7 +32155,7 @@ function deleteBy(target, by) {
       to
     } = range;
     if (from == to) {
-      let towards = by(from);
+      let towards = by(range);
       if (towards < from) {
         event = "delete.backward";
         towards = skipAtomic(target, towards, false);
@@ -32166,7 +32176,7 @@ function deleteBy(target, by) {
         from,
         to
       },
-      range: state_dist/* EditorSelection */.jT.cursor(from)
+      range: state_dist/* EditorSelection */.jT.cursor(from, from < range.head ? -1 : 1)
     };
   });
   if (changes.changes.empty) return false;
@@ -32188,8 +32198,9 @@ function skipAtomic(target, pos, forward) {
   }
   return pos;
 }
-const deleteByChar = (target, forward) => deleteBy(target, pos => {
-  let {
+const deleteByChar = (target, forward) => deleteBy(target, range => {
+  let pos = range.from,
+    {
       state
     } = target,
     line = state.doc.lineAt(pos),
@@ -32209,8 +32220,8 @@ const deleteByChar = (target, forward) => deleteBy(target, pos => {
 });
 const deleteCharBackward = view => deleteByChar(view, false);
 const deleteCharForward = view => deleteByChar(view, true);
-const deleteByGroup = (target, forward) => deleteBy(target, start => {
-  let pos = start,
+const deleteByGroup = (target, forward) => deleteBy(target, range => {
+  let pos = range.head,
     {
       state
     } = target,
@@ -32218,27 +32229,35 @@ const deleteByGroup = (target, forward) => deleteBy(target, start => {
   let categorize = state.charCategorizer(pos);
   for (let cat = null;;) {
     if (pos == (forward ? line.to : line.from)) {
-      if (pos == start && line.number != (forward ? state.doc.lines : 1)) pos += forward ? 1 : -1;
+      if (pos == range.head && line.number != (forward ? state.doc.lines : 1)) pos += forward ? 1 : -1;
       break;
     }
     let next = (0,state_dist/* findClusterBreak */.cp)(line.text, pos - line.from, forward) + line.from;
     let nextChar = line.text.slice(Math.min(pos, next) - line.from, Math.max(pos, next) - line.from);
     let nextCat = categorize(nextChar);
     if (cat != null && nextCat != cat) break;
-    if (nextChar != " " || pos != start) cat = nextCat;
+    if (nextChar != " " || pos != range.head) cat = nextCat;
     pos = next;
   }
   return pos;
 });
 const deleteGroupBackward = target => deleteByGroup(target, false);
 const deleteGroupForward = target => deleteByGroup(target, true);
-const deleteToLineEnd = view => deleteBy(view, pos => {
-  let lineEnd = view.lineBlockAt(pos).to;
-  return pos < lineEnd ? lineEnd : Math.min(view.state.doc.length, pos + 1);
+const deleteToLineEnd = view => deleteBy(view, range => {
+  let lineEnd = view.lineBlockAt(range.head).to;
+  return range.head < lineEnd ? lineEnd : Math.min(view.state.doc.length, range.head + 1);
 });
-const deleteToLineStart = view => deleteBy(view, pos => {
-  let lineStart = view.lineBlockAt(pos).from;
-  return pos > lineStart ? lineStart : Math.max(0, pos - 1);
+const deleteToLineStart = view => deleteBy(view, range => {
+  let lineStart = view.lineBlockAt(range.head).from;
+  return range.head > lineStart ? lineStart : Math.max(0, range.head - 1);
+});
+const deleteLineBoundaryBackward = view => deleteBy(view, range => {
+  let lineStart = view.moveToLineBoundary(range, false).head;
+  return range.head > lineStart ? lineStart : Math.max(0, range.head - 1);
+});
+const deleteLineBoundaryForward = view => deleteBy(view, range => {
+  let lineStart = view.moveToLineBoundary(range, true).head;
+  return range.head < lineStart ? lineStart : Math.min(view.state.doc.length, range.head + 1);
 });
 const deleteTrailingWhitespace = _ref16 => {
   let {
@@ -32793,10 +32812,10 @@ const standardKeymap = [{
   run: deleteGroupForward
 }, {
   mac: "Mod-Backspace",
-  run: deleteToLineStart
+  run: deleteLineBoundaryBackward
 }, {
   mac: "Mod-Delete",
-  run: deleteToLineEnd
+  run: deleteLineBoundaryForward
 }].concat(emacsStyleKeymap.map(b => ({
   mac: b.key,
   run: b.run,
@@ -34680,6 +34699,8 @@ function loadTWIGs(urls, options) {
 function loadTexts(urls, options) {
   return _loadXXX(urls, 'text', options);
 }
+;// CONCATENATED MODULE: ./src/twigs/day_night_button.twig
+const day_night_button_namespaceObject = "<li class=\"nav-item\">\n\t<input class=\"btn-check\" type=\"checkbox\" role=\"switch\" id=\"B3094B72_95CB_0F9F_0364_0ED6B6DCD6EF\" onchange=\"amiWebApp.themeSet(this.checked ? 'dark' : 'light')\" />\n\t<label class=\"btn btn-sm btn-link\" for=\"B3094B72_95CB_0F9F_0364_0ED6B6DCD6EF\">\n\t\t<i class=\"bi\"></i>\n\t</label>\n</li>\n";
 ;// CONCATENATED MODULE: ./src/twigs/sign_in_button.twig
 const sign_in_button_namespaceObject = "<li class=\"nav-item xxxxxxxx\">\n\t{% if ssoAuthenticationAllowed %}\n\t<button class=\"btn btn-outline-secondary\" type=\"button\" onclick=\"amiAuth.sso()\">\n\t\t<i class=\"bi bi-box-arrow-in-right\"></i> {{ awfInfo.ssoLabel|default('Single Sign-On') }}\n\t</button>\n\t{% endif %}\n\t<button class=\"btn btn-primary\" type=\"button\" onclick=\"amiAuth.signIn()\"><i class=\"bi bi-box-arrow-in-right\"></i> Sign In</button>\n</li>\n";
 ;// CONCATENATED MODULE: ./src/twigs/sign_out_button.twig
@@ -34724,6 +34745,7 @@ var clipboard_default = /*#__PURE__*/__webpack_require__.n(clipboard);
 
 
 
+
 class AMIAuth {
   #flags = {};
   #userInfo = {};
@@ -34740,7 +34762,7 @@ class AMIAuth {
       return {};
     }
   }
-  init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, bookmarksAllowed, dashboardsAllowed) {
+  init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, dayNightAllowed, bookmarksAllowed, dashboardsAllowed) {
     const result = $.Deferred();
     this.#flags = {
       signInImageURL: signInImageURL,
@@ -34755,6 +34777,7 @@ class AMIAuth {
       changePasswordAllowed: changePasswordAllowed,
       changeCertificateAllowed: changeCertificateAllowed,
       captchaAllowed: captchaAllowed,
+      dayNightAllowed: dayNightAllowed,
       bookmarksAllowed: bookmarksAllowed,
       dashboardsAllowed: dashboardsAllowed
     };
@@ -34925,6 +34948,7 @@ class AMIAuth {
         table.push('</tr>');
       }
       $('#BB07676B_EACA_9B42_ED51_477DB2976041').html(table.join(''));
+      $('#ami_theme_menu_content').html(this.#flags.dayNightAllowed ? day_night_button_namespaceObject : '');
       let icon = '';
       let message = '';
       let bgColor;
@@ -35642,11 +35666,14 @@ const glass_namespaceObject = __webpack_require__.p + "assets/images/glass.png";
 const padlock_namespaceObject = __webpack_require__.p + "assets/images/padlock.png";
 ;// CONCATENATED MODULE: ./src/images/logo.png
 const logo_namespaceObject = __webpack_require__.p + "assets/images/logo.png";
-;// CONCATENATED MODULE: ./src/images/background.jpg
-const background_namespaceObject = __webpack_require__.p + "assets/images/background.jpg";
+;// CONCATENATED MODULE: ./src/images/background-light.jpg
+const background_light_namespaceObject = __webpack_require__.p + "assets/images/background-light.jpg";
+;// CONCATENATED MODULE: ./src/images/background-dark.jpg
+const background_dark_namespaceObject = __webpack_require__.p + "assets/images/background-dark.jpg";
 ;// CONCATENATED MODULE: ./src/images/sign_in_image.jpg
 const sign_in_image_namespaceObject = __webpack_require__.p + "assets/images/sign_in_image.jpg";
 ;// CONCATENATED MODULE: ./src/js/AMIWebApp.js
+
 
 
 
@@ -35819,7 +35846,7 @@ class AMIWebApp {
   }
   start(options) {
     this.#globalDeferred.done(() => {
-      const [logoURL, backgroundURL, signInImageURL, homeURL, contactEmail, aboutURL, defaultThemeURL, dashboardThemeURL, lockerURL, endpointURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, bookmarksAllowed, dashboardsAllowed] = setup(['logo_url', 'background_url', 'sign_in_image_url', 'home_url', 'contact_email', 'about_url', 'default_theme_url', 'dashboard_theme_url', 'locker_url', 'endpoint_url', 'sign_in_text', 'sso_auto_authentication', 'sso_authentication_allowed', 'password_authentication_allowed', 'certificate_authentication_allowed', 'sign_out_allowed', 'create_account_allowed', 'change_info_allowed', 'change_password_allowed', 'change_certificate_allowed', 'captcha_allowed', 'bookmarks_allowed', 'dashboards_allowed'], [logo_namespaceObject, background_namespaceObject, sign_in_image_namespaceObject, this.webAppURL, 'ami@lpsc.in2p3.fr', 'https://cern.ch/ami/', `${this.originURL}/twig/v${this.bootstrapVersion}/Themes/blue.twig`, `${this.originURL}/twig/v${this.bootstrapVersion}/Themes/cloud.twig`, `${this.originURL}/twig/v${this.bootstrapVersion}/Lockers/default.twig`, `${this.originURL}/AMI/FrontEnd`, 'Welcome in AMI!', false, false, true, true, true, true, true, true, true, true, true, true], options);
+      const [logoURL, backgroundLightURL, backgroundDarkURL, signInImageURL, homeURL, contactEmail, aboutURL, defaultThemeURL, dashboardThemeURL, lockerURL, endpointURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, dayNightAllowed, bookmarksAllowed, dashboardsAllowed] = setup(['logo_url', 'background_light_url', 'background_dark_url', 'sign_in_image_url', 'home_url', 'contact_email', 'about_url', 'default_theme_url', 'dashboard_theme_url', 'locker_url', 'endpoint_url', 'sign_in_text', 'sso_auto_authentication', 'sso_authentication_allowed', 'password_authentication_allowed', 'certificate_authentication_allowed', 'sign_out_allowed', 'create_account_allowed', 'change_info_allowed', 'change_password_allowed', 'change_certificate_allowed', 'captcha_allowed', 'day_night_allowed', 'bookmarks_allowed', 'dashboards_allowed'], [logo_namespaceObject, background_light_namespaceObject, background_dark_namespaceObject, sign_in_image_namespaceObject, this.webAppURL, 'ami@lpsc.in2p3.fr', 'https://cern.ch/ami/', `${this.originURL}/twig/v${this.bootstrapVersion}/Themes/blue.twig`, `${this.originURL}/twig/v${this.bootstrapVersion}/Themes/cloud.twig`, `${this.originURL}/twig/v${this.bootstrapVersion}/Lockers/default.twig`, `${this.originURL}/AMI/FrontEnd`, 'Welcome in AMI!', false, false, true, true, true, true, true, true, true, true, true, true, true], options);
       js_AMICommand.initHttpClient(endpointURL);
       window.onbeforeunload = e => {
         if (!_canLeave) {
@@ -35853,7 +35880,8 @@ class AMIWebApp {
           if (!this.#embedded) {
             const dict = {
               LOGO_URL: logoURL,
-              BACKGROUND_URL: backgroundURL,
+              BACKGROUND_LIGHT_URL: backgroundLightURL,
+              BACKGROUND_DARK_URL: backgroundDarkURL,
               HOME_URL: homeURL,
               CONTACT_EMAIL: contactEmail,
               ABOUT_URL: aboutURL
@@ -35873,7 +35901,8 @@ class AMIWebApp {
               }).then(data4 => {
                 $('body').append(formatTWIG(data3, dict) + data4).promise().done(() => {
                   lock();
-                  js_AMIAuth.init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, bookmarksAllowed, dashboardsAllowed).done(() => {
+                  js_AMIAuth.init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, dayNightAllowed, bookmarksAllowed, dashboardsAllowed).done(() => {
+                    amiWebApp.themeSet(localStorage.getItem('theme') || 'light');
                     unlock();
                   }).fail(message => {
                     error(message);
@@ -35901,7 +35930,8 @@ class AMIWebApp {
             }).done(data4 => {
               $('body').prepend(data3 + data4).promise().done(() => {
                 lock();
-                js_AMIAuth.init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, false, false).done(() => {
+                js_AMIAuth.init(signInImageURL, signInText, ssoAutoAuthentication, ssoAuthenticationAllowed, passwordAuthenticationAllowed, certificateAuthenticationAllowed, signOutAllowed, createAccountAllowed, changeInfoAllowed, changePasswordAllowed, changeCertificateAllowed, captchaAllowed, dayNightAllowed, false, false).done(() => {
+                  amiWebApp.themeSet(localStorage.getItem('theme') || 'light');
                   unlock();
                 }).fail(message => {
                   error(message);
@@ -35919,6 +35949,16 @@ class AMIWebApp {
       alert(message);
     });
     return this;
+  }
+  themeSet(theme) {
+    document.documentElement.setAttribute('data-bs-theme', theme);
+    const el = $('label[for="B3094B72_95CB_0F9F_0364_0ED6B6DCD6EF"] i');
+    if (theme === 'dark') {
+      el.addClass('bi-moon-stars-fill').removeClass('bi-sun-fill');
+    } else {
+      el.removeClass('bi-moon-stars-fill').addClass('bi-sun-fill');
+    }
+    localStorage.setItem('theme', theme);
   }
 }
 /* harmony default export */ const js_AMIWebApp = (new AMIWebApp());
@@ -36803,7 +36843,7 @@ class AMIWebApp {
       "params": [{
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (logo_url, background_url, sign_in_image_url, home_url, contact_email, about_url, default_theme_url, dashboard_theme_url, locker_url, endpoint_url, sso_auto_authentication, sso_authentication_allowed, password_authentication_allowed, certificate_authentication_allowed, sign_out_allowed, create_account_allowed, change_info_allowed, change_password_allowed, change_certificate_allowed, captcha_allowed, bookmarks_allowed, dashboards_allowed)",
+        "desc": "dictionary of optional parameters (logo_url, background_light_url, background_dark_url, sign_in_image_url, home_url, contact_email, about_url, default_theme_url, dashboard_theme_url, locker_url, endpoint_url, sso_auto_authentication, sso_authentication_allowed, password_authentication_allowed, certificate_authentication_allowed, sign_out_allowed, create_account_allowed, change_info_allowed, change_password_allowed, change_certificate_allowed, captcha_allowed, day_night_allowed, bookmarks_allowed, dashboards_allowed)",
         "default": "{}",
         "optional": true,
         "nullable": ""
