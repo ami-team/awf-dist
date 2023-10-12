@@ -12841,24 +12841,24 @@ class SelectionRange {
     this.flags = flags;
   }
   get anchor() {
-    return this.flags & 16 ? this.to : this.from;
+    return this.flags & 32 ? this.to : this.from;
   }
   get head() {
-    return this.flags & 16 ? this.from : this.to;
+    return this.flags & 32 ? this.from : this.to;
   }
   get empty() {
     return this.from == this.to;
   }
   get assoc() {
-    return this.flags & 4 ? -1 : this.flags & 8 ? 1 : 0;
+    return this.flags & 8 ? -1 : this.flags & 16 ? 1 : 0;
   }
   get bidiLevel() {
-    let level = this.flags & 3;
-    return level == 3 ? null : level;
+    let level = this.flags & 7;
+    return level == 7 ? null : level;
   }
   get goalColumn() {
-    let value = this.flags >> 5;
-    return value == 33554431 ? undefined : value;
+    let value = this.flags >> 6;
+    return value == 16777215 ? undefined : value;
   }
   map(change, assoc) {
     if (assoc === void 0) {
@@ -12967,11 +12967,11 @@ class EditorSelection {
     if (assoc === void 0) {
       assoc = 0;
     }
-    return SelectionRange.create(pos, pos, (assoc == 0 ? 0 : assoc < 0 ? 4 : 8) | (bidiLevel == null ? 3 : Math.min(2, bidiLevel)) | (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 33554431) << 5);
+    return SelectionRange.create(pos, pos, (assoc == 0 ? 0 : assoc < 0 ? 8 : 16) | (bidiLevel == null ? 7 : Math.min(6, bidiLevel)) | (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 16777215) << 6);
   }
   static range(anchor, head, goalColumn, bidiLevel) {
-    let flags = (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 33554431) << 5 | (bidiLevel == null ? 3 : Math.min(2, bidiLevel));
-    return head < anchor ? SelectionRange.create(head, anchor, 16 | 8 | flags) : SelectionRange.create(anchor, head, (head > anchor ? 4 : 0) | flags);
+    let flags = (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 16777215) << 6 | (bidiLevel == null ? 7 : Math.min(6, bidiLevel));
+    return head < anchor ? SelectionRange.create(head, anchor, 32 | 16 | flags) : SelectionRange.create(anchor, head, (head > anchor ? 8 : 0) | flags);
   }
   static normalized(ranges, mainIndex) {
     if (mainIndex === void 0) {
@@ -13009,6 +13009,9 @@ class Facet {
     this.id = nextID++;
     this.default = combine([]);
     this.extensions = typeof enables == "function" ? enables(this) : enables;
+  }
+  get reader() {
+    return this;
   }
   static define(config) {
     if (config === void 0) {
