@@ -35722,6 +35722,7 @@ function loadSubAppByURL(defaultSubApp, defaultUserData) {
 
 
 
+
 function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defaults, options) {
   if (options) {
     for (var _i = 0, _Object$entries = Object.entries(options); _i < _Object$entries.length; _i++) {
@@ -35816,29 +35817,38 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       return `${id}_scope${this._instanceScope}`;
     },
     replaceHTML: function (selector, twig, options) {
-      options = options || {};
+      if (!isMap(options)) {
+        options = {};
+      }
       if (!('dict' in options)) {
         options['dict'] = {};
       }
       options.dict.ctx = this.ctx;
+      options.dict.instance = this;
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
     prependHTML: function (selector, twig, options) {
-      options = options || {};
+      if (!isMap(options)) {
+        options = {};
+      }
       if (!('dict' in options)) {
         options['dict'] = {};
       }
       options.dict.ctx = this.ctx;
+      options.dict.instance = this;
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
     appendHTML: function (selector, twig, options) {
-      options = options || {};
+      if (!isMap(options)) {
+        options = {};
+      }
       if (!('dict' in options)) {
         options['dict'] = {};
       }
       options.dict.ctx = this.ctx;
+      options.dict.instance = this;
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
