@@ -1166,7 +1166,7 @@ amiTwig.stdlib = {
   },
   'isInRange': function (x, x1, x2) {
     if (this.isNumber(x1) && this.isNumber(x2)) {
-      return x >= x1 && x <= x2;
+      return (x >= x1) && (x <= x2);
     }
     if (this.isString(x1) && x1.length === 1 && this.isString(x2) && x2.length === 1) {
       return x.charCodeAt(0) >= x1.charCodeAt(0) && x.charCodeAt(0) <= x2.charCodeAt(0);
@@ -1675,19 +1675,19 @@ amiTwig.expr.interpreter = {
 })(this, function () {
   return function () {
     var __webpack_modules__ = {
-      686: function (__unused_webpack_module, __nested_webpack_exports__, __nested_webpack_require_481__) {
+      686: (function (__unused_webpack_module, __nested_webpack_exports__, __nested_webpack_require_482__) {
         "use strict";
-        __nested_webpack_require_481__.d(__nested_webpack_exports__, {
+        __nested_webpack_require_482__.d(__nested_webpack_exports__, {
           "default": function () {
             return clipboard;
           }
         });
-        var tiny_emitter = __nested_webpack_require_481__(279);
-        var tiny_emitter_default = __nested_webpack_require_481__.n(tiny_emitter);
-        var listen = __nested_webpack_require_481__(370);
-        var listen_default = __nested_webpack_require_481__.n(listen);
-        var src_select = __nested_webpack_require_481__(817);
-        var select_default = __nested_webpack_require_481__.n(src_select);
+        var tiny_emitter = __nested_webpack_require_482__(279);
+        var tiny_emitter_default = __nested_webpack_require_482__.n(tiny_emitter);
+        var listen = __nested_webpack_require_482__(370);
+        var listen_default = __nested_webpack_require_482__.n(listen);
+        var src_select = __nested_webpack_require_482__(817);
+        var select_default = __nested_webpack_require_482__.n(src_select);
         ;
         function command(type) {
           try {
@@ -1999,8 +1999,8 @@ amiTwig.expr.interpreter = {
           return Clipboard;
         }(tiny_emitter_default());
         var clipboard = Clipboard;
-      },
-      828: function (module) {
+      }),
+      828: (function (module) {
         var DOCUMENT_NODE_TYPE = 9;
         if (typeof Element !== 'undefined' && !Element.prototype.matches) {
           var proto = Element.prototype;
@@ -2015,9 +2015,9 @@ amiTwig.expr.interpreter = {
           }
         }
         module.exports = closest;
-      },
-      438: function (module, __unused_webpack_exports, __nested_webpack_require_14577__) {
-        var closest = __nested_webpack_require_14577__(828);
+      }),
+      438: (function (module, __unused_webpack_exports, __nested_webpack_require_14582__) {
+        var closest = __nested_webpack_require_14582__(828);
         function _delegate(element, selector, type, callback, useCapture) {
           var listenerFn = listener.apply(this, arguments);
           element.addEventListener(type, listenerFn, useCapture);
@@ -2050,8 +2050,8 @@ amiTwig.expr.interpreter = {
           };
         }
         module.exports = delegate;
-      },
-      879: function (__unused_webpack_module, exports) {
+      }),
+      879: (function (__unused_webpack_module, exports) {
         exports.node = function (value) {
           return value !== undefined && value instanceof HTMLElement && value.nodeType === 1;
         };
@@ -2066,10 +2066,10 @@ amiTwig.expr.interpreter = {
           var type = Object.prototype.toString.call(value);
           return type === '[object Function]';
         };
-      },
-      370: function (module, __unused_webpack_exports, __nested_webpack_require_16805__) {
-        var is = __nested_webpack_require_16805__(879);
-        var delegate = __nested_webpack_require_16805__(438);
+      }),
+      370: (function (module, __unused_webpack_exports, __nested_webpack_require_16814__) {
+        var is = __nested_webpack_require_16814__(879);
+        var delegate = __nested_webpack_require_16814__(438);
         function listen(target, type, callback) {
           if (!target && !type && !callback) {
             throw new Error('Missing required arguments');
@@ -2114,8 +2114,8 @@ amiTwig.expr.interpreter = {
           return delegate(document.body, selector, type, callback);
         }
         module.exports = listen;
-      },
-      817: function (module) {
+      }),
+      817: (function (module) {
         function select(element) {
           var selectedText;
           if (element.nodeName === 'SELECT') {
@@ -2146,8 +2146,8 @@ amiTwig.expr.interpreter = {
           return selectedText;
         }
         module.exports = select;
-      },
-      279: function (module) {
+      }),
+      279: (function (module) {
         function E() {}
         E.prototype = {
           on: function (name, callback, ctx) {
@@ -2193,36 +2193,36 @@ amiTwig.expr.interpreter = {
         };
         module.exports = E;
         module.exports.TinyEmitter = E;
-      }
+      })
     };
     var __webpack_module_cache__ = {};
-    function __nested_webpack_require_21443__(moduleId) {
+    function __nested_webpack_require_21457__(moduleId) {
       if (__webpack_module_cache__[moduleId]) {
         return __webpack_module_cache__[moduleId].exports;
       }
       var module = __webpack_module_cache__[moduleId] = {
         exports: {}
       };
-      __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_21443__);
+      __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_21457__);
       return module.exports;
     }
     !function () {
-      __nested_webpack_require_21443__.n = function (module) {
+      __nested_webpack_require_21457__.n = function (module) {
         var getter = module && module.__esModule ? function () {
           return module['default'];
         } : function () {
           return module;
         };
-        __nested_webpack_require_21443__.d(getter, {
+        __nested_webpack_require_21457__.d(getter, {
           a: getter
         });
         return getter;
       };
     }();
     !function () {
-      __nested_webpack_require_21443__.d = function (exports, definition) {
+      __nested_webpack_require_21457__.d = function (exports, definition) {
         for (var key in definition) {
-          if (__nested_webpack_require_21443__.o(definition, key) && !__nested_webpack_require_21443__.o(exports, key)) {
+          if (__nested_webpack_require_21457__.o(definition, key) && !__nested_webpack_require_21457__.o(exports, key)) {
             Object.defineProperty(exports, key, {
               enumerable: true,
               get: definition[key]
@@ -2232,11 +2232,11 @@ amiTwig.expr.interpreter = {
       };
     }();
     !function () {
-      __nested_webpack_require_21443__.o = function (obj, prop) {
+      __nested_webpack_require_21457__.o = function (obj, prop) {
         return Object.prototype.hasOwnProperty.call(obj, prop);
       };
     }();
-    return __nested_webpack_require_21443__(686);
+    return __nested_webpack_require_21457__(686);
   }().default;
 });
 
@@ -6808,14 +6808,14 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(8853), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(9880), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(8931), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(7972), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/*!
- * Bootstrap Icons v1.11.1 (https://icons.getbootstrap.com/)
+ * Bootstrap Icons v1.11.2 (https://icons.getbootstrap.com/)
  * Copyright 2019-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
@@ -9311,7 +9311,7 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 8853:
+/***/ 8931:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9319,7 +9319,7 @@ module.exports = __webpack_require__.p + "assets/fonts/bootstrap-icons.woff2";
 
 /***/ }),
 
-/***/ 9880:
+/***/ 7972:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -11674,6 +11674,7 @@ const noTokens = Object.create(null);
 const typeArray = [_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.none];
 const nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .Lj(typeArray);
 const warned = [];
+const byTag = Object.create(null);
 const defaultTable = Object.create(null);
 for (var _i = 0, _arr = [["variable", "variableName"], ["variable-2", "variableName.special"], ["string-2", "string.special"], ["def", "variableName.definition"], ["tag", "tagName"], ["attribute", "attributeName"], ["type", "typeName"], ["builtin", "variableName.standard"], ["qualifier", "modifier"], ["error", "invalid"], ["header", "heading"], ["property", "propertyName"]]; _i < _arr.length; _i++) {
   let [legacyName, name] = _arr[_i];
@@ -11717,13 +11718,16 @@ function createTokenType(extra, tagStr) {
   }
   if (!tags$1.length) return 0;
   let name = tagStr.replace(/ /g, "_"),
-    type = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
-      id: typeArray.length,
-      name,
-      props: [(0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .styleTags */ .Gv)({
-        [name]: tags$1
-      })]
-    });
+    key = name + " " + tags$1.map(t => t.id);
+  let known = byTag[key];
+  if (known) return known.id;
+  let type = byTag[key] = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
+    id: typeArray.length,
+    name,
+    props: [(0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .styleTags */ .Gv)({
+      [name]: tags$1
+    })]
+  });
   typeArray.push(type);
   return type.id;
 }
@@ -12246,7 +12250,10 @@ class LineCursor {
       lineBreak,
       value
     } = this.inner.next(skip);
-    if (done) {
+    if (done && this.afterBreak) {
+      this.value = "";
+      this.afterBreak = false;
+    } else if (done) {
       this.done = true;
       this.value = "";
     } else if (lineBreak) {
@@ -13687,7 +13694,8 @@ class EditorState {
     } else {
       startValues = tr.startState.values.slice();
     }
-    new EditorState(conf, tr.newDoc, tr.newSelection, startValues, (state, slot) => slot.update(state, tr), tr);
+    let selection = tr.startState.facet(allowMultipleSelections) ? tr.newSelection : tr.newSelection.asSingle();
+    new EditorState(conf, tr.newDoc, selection, startValues, (state, slot) => slot.update(state, tr), tr);
   }
   replaceSelection(text) {
     if (typeof text == "string") text = this.toText(text);
@@ -15197,7 +15205,7 @@ class ContentView {
     this.markDirty();
     for (let i = from; i < to; i++) {
       let child = this.children[i];
-      if (child.parent == this) child.destroy();
+      if (child.parent == this && children.indexOf(child) < 0) child.destroy();
     }
     this.children.splice(from, to - from, ...children);
     for (let i = 0; i < children.length; i++) children[i].setParent(this);
@@ -15249,6 +15257,10 @@ class ContentView {
     return 0;
   }
   destroy() {
+    for (var _iterator4 = _createForOfIteratorHelperLoose(this.children), _step4; !(_step4 = _iterator4()).done;) {
+      let child = _step4.value;
+      child.destroy();
+    }
     this.parent = null;
   }
 }
@@ -15343,8 +15355,8 @@ function mergeChildrenInto(parent, from, to, insert, openStart, openEnd) {
     off: fromOff
   } = cur.findPos(from, -1);
   let dLen = from - to;
-  for (var _iterator4 = _createForOfIteratorHelperLoose(insert), _step4; !(_step4 = _iterator4()).done;) {
-    let view = _step4.value;
+  for (var _iterator5 = _createForOfIteratorHelperLoose(insert), _step5; !(_step5 = _iterator5()).done;) {
+    let view = _step5.value;
     dLen += view.length;
   }
   parent.length += dLen;
@@ -15451,8 +15463,8 @@ class MarkView extends ContentView {
     this.mark = mark;
     this.children = children;
     this.length = length;
-    for (var _iterator5 = _createForOfIteratorHelperLoose(children), _step5; !(_step5 = _iterator5()).done;) {
-      let ch = _step5.value;
+    for (var _iterator6 = _createForOfIteratorHelperLoose(children), _step6; !(_step6 = _iterator6()).done;) {
+      let ch = _step6.value;
       ch.setParent(this);
     }
   }
@@ -15486,8 +15498,8 @@ class MarkView extends ContentView {
       off = 0,
       detachFrom = -1,
       i = 0;
-    for (var _iterator6 = _createForOfIteratorHelperLoose(this.children), _step6; !(_step6 = _iterator6()).done;) {
-      let elt = _step6.value;
+    for (var _iterator7 = _createForOfIteratorHelperLoose(this.children), _step7; !(_step7 = _iterator7()).done;) {
+      let elt = _step7.value;
       let end = off + elt.length;
       if (end > from) result.push(off < from ? elt.split(from - off) : elt);
       if (detachFrom < 0 && off >= from) detachFrom = i;
@@ -15889,8 +15901,8 @@ class LineView extends ContentView {
     if (this.children.length == 0 || this.length > 20) return null;
     let totalWidth = 0,
       textHeight;
-    for (var _iterator7 = _createForOfIteratorHelperLoose(this.children), _step7; !(_step7 = _iterator7()).done;) {
-      let child = _step7.value;
+    for (var _iterator8 = _createForOfIteratorHelperLoose(this.children), _step8; !(_step8 = _iterator8()).done;) {
+      let child = _step8.value;
       if (!(child instanceof TextView) || /[^ -~]/.test(child.text)) return null;
       let rects = clientRectsFor(child.dom);
       if (rects.length != 1) return null;
@@ -16334,8 +16346,8 @@ class ContentBuilder {
   }
 }
 function wrapMarks(view, active) {
-  for (var _iterator8 = _createForOfIteratorHelperLoose(active), _step8; !(_step8 = _iterator8()).done;) {
-    let mark = _step8.value;
+  for (var _iterator9 = _createForOfIteratorHelperLoose(active), _step9; !(_step9 = _iterator9()).done;) {
+    let mark = _step9.value;
     view = new MarkView(mark, [view], view.length);
   }
   return view;
@@ -16532,8 +16544,8 @@ function getScrollMargins(view) {
     right = 0,
     top = 0,
     bottom = 0;
-  for (var _iterator9 = _createForOfIteratorHelperLoose(view.state.facet(scrollMargins)), _step9; !(_step9 = _iterator9()).done;) {
-    let source = _step9.value;
+  for (var _iterator10 = _createForOfIteratorHelperLoose(view.state.facet(scrollMargins)), _step10; !(_step10 = _iterator10()).done;) {
+    let source = _step10.value;
     let m = source(view);
     if (m) {
       if (m.left != null) left = Math.max(left, m.left);
@@ -16603,8 +16615,8 @@ class ViewUpdate {
     this.flags = 0;
     this.startState = view.state;
     this.changes = state_dist/* ChangeSet */.as.empty(this.startState.doc.length);
-    for (var _iterator10 = _createForOfIteratorHelperLoose(transactions), _step10; !(_step10 = _iterator10()).done;) {
-      let tr = _step10.value;
+    for (var _iterator11 = _createForOfIteratorHelperLoose(transactions), _step11; !(_step11 = _iterator11()).done;) {
+      let tr = _step11.value;
       this.changes = this.changes.compose(tr.changes);
     }
     let changedRanges = [];
@@ -17038,8 +17050,8 @@ class DocView extends ContentView {
     this.markedForComposition.forEach(cView => cView.flags &= ~8);
     let gaps = [];
     if (this.view.viewport.from || this.view.viewport.to < this.view.state.doc.length) {
-      for (var _iterator11 = _createForOfIteratorHelperLoose(this.children), _step11; !(_step11 = _iterator11()).done;) {
-        let child = _step11.value;
+      for (var _iterator12 = _createForOfIteratorHelperLoose(this.children), _step12; !(_step12 = _iterator12()).done;) {
+        let child = _step12.value;
         if (child instanceof BlockWidgetView && child.widget instanceof BlockGapWidget) gaps.push(child.dom);
       }
     }
@@ -17101,10 +17113,10 @@ class DocView extends ContentView {
   compositionView(composition) {
     let cur = new TextView(composition.text.nodeValue);
     cur.flags |= 8;
-    for (var _iterator12 = _createForOfIteratorHelperLoose(composition.marks), _step12; !(_step12 = _iterator12()).done;) {
+    for (var _iterator13 = _createForOfIteratorHelperLoose(composition.marks), _step13; !(_step13 = _iterator13()).done;) {
       let {
         deco
-      } = _step12.value;
+      } = _step13.value;
       cur = new MarkView(deco, [cur], cur.length);
     }
     let line = new LineView();
@@ -17347,8 +17359,8 @@ class DocView extends ContentView {
     return getComputedStyle(this.children[i].dom).direction == "rtl" ? Direction.RTL : Direction.LTR;
   }
   measureTextSize() {
-    for (var _iterator13 = _createForOfIteratorHelperLoose(this.children), _step13; !(_step13 = _iterator13()).done;) {
-      let child = _step13.value;
+    for (var _iterator14 = _createForOfIteratorHelperLoose(this.children), _step14; !(_step14 = _iterator14()).done;) {
+      let child = _step14.value;
       if (child instanceof LineView) {
         let measure = child.measureTextSize();
         if (measure) return measure;
@@ -17826,8 +17838,8 @@ function isSuspiciousChromeCaretResult(node, offset, x) {
 function blockAt(view, pos) {
   let line = view.lineBlockAt(pos);
   if (Array.isArray(line.type)) {
-    for (var _iterator14 = _createForOfIteratorHelperLoose(line.type), _step14; !(_step14 = _iterator14()).done;) {
-      let l = _step14.value;
+    for (var _iterator15 = _createForOfIteratorHelperLoose(line.type), _step15; !(_step15 = _iterator15()).done;) {
+      let l = _step15.value;
       if (l.to > pos || l.to == pos && (l.to == line.to || l.type == BlockType.Text)) return l;
     }
   }
@@ -17914,8 +17926,8 @@ function moveVertically(view, start, forward, distance) {
 function skipAtomicRanges(atoms, pos, bias) {
   for (;;) {
     let moved = 0;
-    for (var _iterator15 = _createForOfIteratorHelperLoose(atoms), _step15; !(_step15 = _iterator15()).done;) {
-      let set = _step15.value;
+    for (var _iterator16 = _createForOfIteratorHelperLoose(atoms), _step16; !(_step16 = _iterator16()).done;) {
+      let set = _step16.value;
       set.between(pos - 1, pos + 1, (from, to, value) => {
         if (pos > from && pos < to) {
           let side = moved || bias || (pos - from < to - pos ? -1 : 1);
@@ -17971,12 +17983,12 @@ class InputState {
   runHandlers(type, event) {
     let handlers = this.handlers[type];
     if (handlers) {
-      for (var _iterator16 = _createForOfIteratorHelperLoose(handlers.observers), _step16; !(_step16 = _iterator16()).done;) {
-        let observer = _step16.value;
+      for (var _iterator17 = _createForOfIteratorHelperLoose(handlers.observers), _step17; !(_step17 = _iterator17()).done;) {
+        let observer = _step17.value;
         observer(this.view, event);
       }
-      for (var _iterator17 = _createForOfIteratorHelperLoose(handlers.handlers), _step17; !(_step17 = _iterator17()).done;) {
-        let handler = _step17.value;
+      for (var _iterator18 = _createForOfIteratorHelperLoose(handlers.handlers), _step18; !(_step18 = _iterator18()).done;) {
+        let handler = _step18.value;
         if (event.defaultPrevented) break;
         if (handler(this.view, event)) {
           event.preventDefault();
@@ -18066,8 +18078,8 @@ function computeHandlers(plugins) {
       handlers: []
     });
   }
-  for (var _iterator18 = _createForOfIteratorHelperLoose(plugins), _step18; !(_step18 = _iterator18()).done;) {
-    let plugin = _step18.value;
+  for (var _iterator19 = _createForOfIteratorHelperLoose(plugins), _step19; !(_step19 = _iterator19()).done;) {
+    let plugin = _step19.value;
     let spec = plugin.spec;
     if (spec && spec.domEventHandlers) for (let type in spec.domEventHandlers) {
       let f = spec.domEventHandlers[type];
@@ -18327,8 +18339,8 @@ handlers.mousedown = (view, event) => {
   view.observer.flush();
   if (view.inputState.lastTouchTime > Date.now() - 2000) return false;
   let style = null;
-  for (var _iterator19 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step19; !(_step19 = _iterator19()).done;) {
-    let makeStyle = _step19.value;
+  for (var _iterator20 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step20; !(_step20 = _iterator20()).done;) {
+    let makeStyle = _step20.value;
     style = makeStyle(view, event);
     if (style) break;
   }
@@ -18547,8 +18559,8 @@ function copiedRange(state) {
   let content = [],
     ranges = [],
     linewise = false;
-  for (var _iterator20 = _createForOfIteratorHelperLoose(state.selection.ranges), _step20; !(_step20 = _iterator20()).done;) {
-    let range = _step20.value;
+  for (var _iterator21 = _createForOfIteratorHelperLoose(state.selection.ranges), _step21; !(_step21 = _iterator21()).done;) {
+    let range = _step21.value;
     if (!range.empty) {
       content.push(state.sliceDoc(range.from, range.to));
       ranges.push(range);
@@ -18556,10 +18568,10 @@ function copiedRange(state) {
   }
   if (!content.length) {
     let upto = -1;
-    for (var _iterator21 = _createForOfIteratorHelperLoose(state.selection.ranges), _step21; !(_step21 = _iterator21()).done;) {
+    for (var _iterator22 = _createForOfIteratorHelperLoose(state.selection.ranges), _step22; !(_step22 = _iterator22()).done;) {
       let {
         from
-      } = _step21.value;
+      } = _step22.value;
       let line = state.doc.lineAt(from);
       if (line.number > upto) {
         content.push(line.text);
@@ -18605,8 +18617,8 @@ handlers.copy = handlers.cut = (view, event) => {
 const isFocusChange = state_dist/* Annotation */.q6.define();
 function focusChangeTransaction(state, focus) {
   let effects = [];
-  for (var _iterator22 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step22; !(_step22 = _iterator22()).done;) {
-    let getEffect = _step22.value;
+  for (var _iterator23 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step23; !(_step23 = _iterator23()).done;) {
+    let getEffect = _step23.value;
     let effect = getEffect(state, focus);
     if (effect) effects.push(effect);
   }
@@ -19141,8 +19153,8 @@ class HeightMapBranch extends HeightMap {
     let result = [];
     if (from > 0) this.decomposeLeft(from, result);
     let left = result.length;
-    for (var _iterator23 = _createForOfIteratorHelperLoose(nodes), _step23; !(_step23 = _iterator23()).done;) {
-      let node = _step23.value;
+    for (var _iterator24 = _createForOfIteratorHelperLoose(nodes), _step24; !(_step24 = _iterator24()).done;) {
+      let node = _step24.value;
       result.push(node);
     }
     if (from > 0) mergeGaps(result, left - 1);
@@ -19301,8 +19313,8 @@ class NodeBuilder {
     let last = this.nodes.length == 0 ? null : this.nodes[this.nodes.length - 1];
     if (this.lineStart > -1 && !(last instanceof HeightMapText) && !this.isCovered) this.nodes.push(new HeightMapText(0, -1));else if (this.writtenTo < this.pos || last == null) this.nodes.push(this.blankContent(this.writtenTo, this.pos));
     let pos = from;
-    for (var _iterator24 = _createForOfIteratorHelperLoose(this.nodes), _step24; !(_step24 = _iterator24()).done;) {
-      let node = _step24.value;
+    for (var _iterator25 = _createForOfIteratorHelperLoose(this.nodes), _step25; !(_step25 = _iterator25()).done;) {
+      let node = _step25.value;
       if (node instanceof HeightMapText) node.updateHeight(this.oracle, pos);
       pos += node ? node.length : 1;
     }
@@ -19592,8 +19604,8 @@ class ViewState {
       }
       if (dTop > 0 && dBottom > 0) bias = Math.max(dTop, dBottom);else if (dTop < 0 && dBottom < 0) bias = Math.min(dTop, dBottom);
       oracle.heightChanged = false;
-      for (var _iterator25 = _createForOfIteratorHelperLoose(this.viewports), _step25; !(_step25 = _iterator25()).done;) {
-        let vp = _step25.value;
+      for (var _iterator26 = _createForOfIteratorHelperLoose(this.viewports), _step26; !(_step26 = _iterator26()).done;) {
+        let vp = _step26.value;
         let heights = vp.from == this.viewport.from ? lineHeights : view.docView.measureVisibleLineHeights(vp);
         this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.xv.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
       }
@@ -19669,8 +19681,8 @@ class ViewState {
   mapLineGaps(gaps, changes) {
     if (!gaps.length || changes.empty) return gaps;
     let mapped = [];
-    for (var _iterator26 = _createForOfIteratorHelperLoose(gaps), _step26; !(_step26 = _iterator26()).done;) {
-      let gap = _step26.value;
+    for (var _iterator27 = _createForOfIteratorHelperLoose(gaps), _step27; !(_step27 = _iterator27()).done;) {
+      let gap = _step27.value;
       if (!changes.touchesRange(gap.from, gap.to)) mapped.push(new LineGap(changes.mapPos(gap.from), changes.mapPos(gap.to), gap.size));
     }
     return mapped;
@@ -19705,8 +19717,8 @@ class ViewState {
       }
       gaps.push(gap);
     };
-    for (var _iterator27 = _createForOfIteratorHelperLoose(this.viewportLines), _step27; !(_step27 = _iterator27()).done;) {
-      let line = _step27.value;
+    for (var _iterator28 = _createForOfIteratorHelperLoose(this.viewportLines), _step28; !(_step28 = _iterator28()).done;) {
+      let line = _step28.value;
       if (line.length < doubleMargin) continue;
       let structure = lineStructure(line.from, line.to, this.stateDeco);
       if (structure.total < doubleMargin) continue;
@@ -19853,11 +19865,11 @@ function findPosition(_ref4, ratio) {
 }
 function findFraction(structure, pos) {
   let counted = 0;
-  for (var _iterator28 = _createForOfIteratorHelperLoose(structure.ranges), _step28; !(_step28 = _iterator28()).done;) {
+  for (var _iterator29 = _createForOfIteratorHelperLoose(structure.ranges), _step29; !(_step29 = _iterator29()).done;) {
     let {
       from,
       to
-    } = _step28.value;
+    } = _step29.value;
     if (pos <= to) {
       counted += pos - from;
       break;
@@ -19867,8 +19879,8 @@ function findFraction(structure, pos) {
   return counted / structure.total;
 }
 function find(array, f) {
-  for (var _iterator29 = _createForOfIteratorHelperLoose(array), _step29; !(_step29 = _iterator29()).done;) {
-    let val = _step29.value;
+  for (var _iterator30 = _createForOfIteratorHelperLoose(array), _step30; !(_step30 = _iterator30()).done;) {
+    let val = _step30.value;
     if (f(val)) return val;
   }
   return undefined;
@@ -19905,8 +19917,8 @@ class BigScaler {
       };
     });
     this.scale = (7000000 - vpHeight) / (heightMap.height - vpHeight);
-    for (var _iterator30 = _createForOfIteratorHelperLoose(this.viewports), _step30; !(_step30 = _iterator30()).done;) {
-      let obj = _step30.value;
+    for (var _iterator31 = _createForOfIteratorHelperLoose(this.viewports), _step31; !(_step31 = _iterator31()).done;) {
+      let obj = _step31.value;
       obj.domTop = domBase + (obj.top - base) * this.scale;
       domBase = obj.domBottom = obj.domTop + (obj.bottom - obj.top);
       base = obj.bottom;
@@ -20070,6 +20082,15 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
   },
   "&.cm-focused > .cm-scroller > .cm-cursorLayer .cm-cursor": {
     display: "block"
+  },
+  ".cm-announced": {
+    position: "fixed",
+    top: "-10000px"
+  },
+  "@media print": {
+    ".cm-announced": {
+      display: "none"
+    }
   },
   "&light .cm-activeLine": {
     backgroundColor: "#cceeff44"
@@ -20242,8 +20263,8 @@ class DOMReader {
   }
   readTextNode(node) {
     let text = node.nodeValue;
-    for (var _iterator31 = _createForOfIteratorHelperLoose(this.points), _step31; !(_step31 = _iterator31()).done;) {
-      let point = _step31.value;
+    for (var _iterator32 = _createForOfIteratorHelperLoose(this.points), _step32; !(_step32 = _iterator32()).done;) {
+      let point = _step32.value;
       if (point.node == node) point.pos = this.text.length + Math.min(point.offset, text.length);
     }
     for (let off = 0, re = this.lineSeparator ? null : /\r\n?|\n/g;;) {
@@ -20261,8 +20282,8 @@ class DOMReader {
       if (nextBreak < 0) break;
       this.lineBreak();
       if (breakSize > 1) {
-        for (var _iterator32 = _createForOfIteratorHelperLoose(this.points), _step32; !(_step32 = _iterator32()).done;) {
-          let point = _step32.value;
+        for (var _iterator33 = _createForOfIteratorHelperLoose(this.points), _step33; !(_step33 = _iterator33()).done;) {
+          let point = _step33.value;
           if (point.node == node && point.pos > this.text.length) point.pos -= breakSize - 1;
         }
       }
@@ -20287,14 +20308,14 @@ class DOMReader {
     }
   }
   findPointBefore(node, next) {
-    for (var _iterator33 = _createForOfIteratorHelperLoose(this.points), _step33; !(_step33 = _iterator33()).done;) {
-      let point = _step33.value;
+    for (var _iterator34 = _createForOfIteratorHelperLoose(this.points), _step34; !(_step34 = _iterator34()).done;) {
+      let point = _step34.value;
       if (point.node == node && node.childNodes[point.offset] == next) point.pos = this.text.length;
     }
   }
   findPointInside(node, length) {
-    for (var _iterator34 = _createForOfIteratorHelperLoose(this.points), _step34; !(_step34 = _iterator34()).done;) {
-      let point = _step34.value;
+    for (var _iterator35 = _createForOfIteratorHelperLoose(this.points), _step35; !(_step35 = _iterator35()).done;) {
+      let point = _step35.value;
       if (node.nodeType == 3 ? point.node == node : node.contains(point.node)) point.pos = this.text.length + (isAtEnd(node, point.node, point.offset) ? length : 0);
     }
   }
@@ -20576,8 +20597,8 @@ class DOMObserver {
     this.parentCheck = -1;
     this.dom = view.contentDOM;
     this.observer = new MutationObserver(mutations => {
-      for (var _iterator35 = _createForOfIteratorHelperLoose(mutations), _step35; !(_step35 = _iterator35()).done;) {
-        let mut = _step35.value;
+      for (var _iterator36 = _createForOfIteratorHelperLoose(mutations), _step36; !(_step36 = _iterator36()).done;) {
+        let mut = _step36.value;
         this.queue.push(mut);
       }
       if ((browser.ie && browser.ie_version <= 11 || browser.ios && view.composing) && mutations.some(m => m.type == "childList" && m.removedNodes.length || m.type == "characterData" && m.oldValue.length > m.target.nodeValue.length)) this.flushSoon();else this.flush();
@@ -20646,8 +20667,8 @@ class DOMObserver {
   updateGaps(gaps) {
     if (this.gapIntersection && (gaps.length != this.gaps.length || this.gaps.some((g, i) => g != gaps[i]))) {
       this.gapIntersection.disconnect();
-      for (var _iterator36 = _createForOfIteratorHelperLoose(gaps), _step36; !(_step36 = _iterator36()).done;) {
-        let gap = _step36.value;
+      for (var _iterator37 = _createForOfIteratorHelperLoose(gaps), _step37; !(_step37 = _iterator37()).done;) {
+        let gap = _step37.value;
         this.gapIntersection.observe(gap);
       }
       this.gaps = gaps;
@@ -20708,12 +20729,12 @@ class DOMObserver {
     }
     if (i < this.scrollTargets.length && !changed) changed = this.scrollTargets.slice(0, i);
     if (changed) {
-      for (var _iterator37 = _createForOfIteratorHelperLoose(this.scrollTargets), _step37; !(_step37 = _iterator37()).done;) {
-        let dom = _step37.value;
+      for (var _iterator38 = _createForOfIteratorHelperLoose(this.scrollTargets), _step38; !(_step38 = _iterator38()).done;) {
+        let dom = _step38.value;
         dom.removeEventListener("scroll", this.onScroll);
       }
-      for (var _iterator38 = _createForOfIteratorHelperLoose(this.scrollTargets = changed), _step38; !(_step38 = _iterator38()).done;) {
-        let dom = _step38.value;
+      for (var _iterator39 = _createForOfIteratorHelperLoose(this.scrollTargets = changed), _step39; !(_step39 = _iterator39()).done;) {
+        let dom = _step39.value;
         dom.addEventListener("scroll", this.onScroll);
       }
     }
@@ -20785,8 +20806,8 @@ class DOMObserver {
     this.flush();
   }
   pendingRecords() {
-    for (var _iterator39 = _createForOfIteratorHelperLoose(this.observer.takeRecords()), _step39; !(_step39 = _iterator39()).done;) {
-      let mut = _step39.value;
+    for (var _iterator40 = _createForOfIteratorHelperLoose(this.observer.takeRecords()), _step40; !(_step40 = _iterator40()).done;) {
+      let mut = _step40.value;
       this.queue.push(mut);
     }
     return this.queue;
@@ -20797,8 +20818,8 @@ class DOMObserver {
     let from = -1,
       to = -1,
       typeOver = false;
-    for (var _iterator40 = _createForOfIteratorHelperLoose(records), _step40; !(_step40 = _iterator40()).done;) {
-      let record = _step40.value;
+    for (var _iterator41 = _createForOfIteratorHelperLoose(records), _step41; !(_step41 = _iterator41()).done;) {
+      let record = _step41.value;
       let range = this.readMutation(record);
       if (!range) continue;
       if (range.typeOver) typeOver = true;
@@ -20899,8 +20920,8 @@ class DOMObserver {
     (_a = this.intersection) === null || _a === void 0 ? void 0 : _a.disconnect();
     (_b = this.gapIntersection) === null || _b === void 0 ? void 0 : _b.disconnect();
     (_c = this.resizeScroll) === null || _c === void 0 ? void 0 : _c.disconnect();
-    for (var _iterator41 = _createForOfIteratorHelperLoose(this.scrollTargets), _step41; !(_step41 = _iterator41()).done;) {
-      let dom = _step41.value;
+    for (var _iterator42 = _createForOfIteratorHelperLoose(this.scrollTargets), _step42; !(_step42 = _iterator42()).done;) {
+      let dom = _step42.value;
       dom.removeEventListener("scroll", this.onScroll);
     }
     this.removeWindowListeners(this.win);
@@ -20987,7 +21008,7 @@ class EditorView {
     this.scrollDOM.className = "cm-scroller";
     this.scrollDOM.appendChild(this.contentDOM);
     this.announceDOM = document.createElement("div");
-    this.announceDOM.style.cssText = "position: fixed; top: -10000px";
+    this.announceDOM.className = "cm-announced";
     this.announceDOM.setAttribute("aria-live", "polite");
     this.dom = document.createElement("div");
     this.dom.appendChild(this.announceDOM);
@@ -21001,8 +21022,8 @@ class EditorView {
     this.viewState = new ViewState(config.state || state_dist/* EditorState */.yy.create(config));
     if (config.scrollTo && config.scrollTo.is(scrollIntoView)) this.viewState.scrollTarget = config.scrollTo.value.clip(this.viewState.state);
     this.plugins = this.state.facet(viewPlugin).map(spec => new PluginInstance(spec));
-    for (var _iterator42 = _createForOfIteratorHelperLoose(this.plugins), _step42; !(_step42 = _iterator42()).done;) {
-      let plugin = _step42.value;
+    for (var _iterator43 = _createForOfIteratorHelperLoose(this.plugins), _step43; !(_step43 = _iterator43()).done;) {
+      let plugin = _step43.value;
       plugin.update(this);
     }
     this.observer = new DOMObserver(this);
@@ -21028,8 +21049,8 @@ class EditorView {
       attrsChanged = false,
       update;
     let state = this.state;
-    for (var _iterator43 = _createForOfIteratorHelperLoose(transactions), _step43; !(_step43 = _iterator43()).done;) {
-      let tr = _step43.value;
+    for (var _iterator44 = _createForOfIteratorHelperLoose(transactions), _step44; !(_step44 = _iterator44()).done;) {
+      let tr = _step44.value;
       if (tr.startState != state) throw new RangeError("Trying to update state with a transaction that doesn't start from the previous state.");
       state = tr.state;
     }
@@ -21063,8 +21084,8 @@ class EditorView {
     let scrollTarget = this.viewState.scrollTarget;
     try {
       this.updateState = 2;
-      for (var _iterator44 = _createForOfIteratorHelperLoose(transactions), _step44; !(_step44 = _iterator44()).done;) {
-        let tr = _step44.value;
+      for (var _iterator45 = _createForOfIteratorHelperLoose(transactions), _step45; !(_step45 = _iterator45()).done;) {
+        let tr = _step45.value;
         if (scrollTarget) scrollTarget = scrollTarget.map(tr.changes);
         if (tr.scrollIntoView) {
           let {
@@ -21072,8 +21093,8 @@ class EditorView {
           } = tr.state.selection;
           scrollTarget = new ScrollTarget(main.empty ? main : state_dist/* EditorSelection */.jT.cursor(main.head, main.head > main.anchor ? -1 : 1));
         }
-        for (var _iterator45 = _createForOfIteratorHelperLoose(tr.effects), _step45; !(_step45 = _iterator45()).done;) {
-          let e = _step45.value;
+        for (var _iterator46 = _createForOfIteratorHelperLoose(tr.effects), _step46; !(_step46 = _iterator46()).done;) {
+          let e = _step46.value;
           if (e.is(scrollIntoView)) scrollTarget = e.value.clip(this.state);
         }
       }
@@ -21094,8 +21115,8 @@ class EditorView {
     if (update.startState.facet(theme) != update.state.facet(theme)) this.viewState.mustMeasureContent = true;
     if (redrawn || attrsChanged || scrollTarget || this.viewState.mustEnforceCursorAssoc || this.viewState.mustMeasureContent) this.requestMeasure();
     if (!update.empty) {
-      for (var _iterator46 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step46; !(_step46 = _iterator46()).done;) {
-        let listener = _step46.value;
+      for (var _iterator47 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step47; !(_step47 = _iterator47()).done;) {
+        let listener = _step47.value;
         try {
           listener(update);
         } catch (e) {
@@ -21119,17 +21140,18 @@ class EditorView {
     this.updateState = 2;
     let hadFocus = this.hasFocus;
     try {
-      for (var _iterator47 = _createForOfIteratorHelperLoose(this.plugins), _step47; !(_step47 = _iterator47()).done;) {
-        let plugin = _step47.value;
+      for (var _iterator48 = _createForOfIteratorHelperLoose(this.plugins), _step48; !(_step48 = _iterator48()).done;) {
+        let plugin = _step48.value;
         plugin.destroy(this);
       }
       this.viewState = new ViewState(newState);
       this.plugins = newState.facet(viewPlugin).map(spec => new PluginInstance(spec));
       this.pluginMap.clear();
-      for (var _iterator48 = _createForOfIteratorHelperLoose(this.plugins), _step48; !(_step48 = _iterator48()).done;) {
-        let plugin = _step48.value;
+      for (var _iterator49 = _createForOfIteratorHelperLoose(this.plugins), _step49; !(_step49 = _iterator49()).done;) {
+        let plugin = _step49.value;
         plugin.update(this);
       }
+      this.docView.destroy();
       this.docView = new DocView(this);
       this.inputState.ensureHandlers(this.plugins);
       this.mountStyles();
@@ -21146,8 +21168,8 @@ class EditorView {
       specs = update.state.facet(viewPlugin);
     if (prevSpecs != specs) {
       let newPlugins = [];
-      for (var _iterator49 = _createForOfIteratorHelperLoose(specs), _step49; !(_step49 = _iterator49()).done;) {
-        let spec = _step49.value;
+      for (var _iterator50 = _createForOfIteratorHelperLoose(specs), _step50; !(_step50 = _iterator50()).done;) {
+        let spec = _step50.value;
         let found = prevSpecs.indexOf(spec);
         if (found < 0) {
           newPlugins.push(new PluginInstance(spec));
@@ -21157,15 +21179,15 @@ class EditorView {
           newPlugins.push(plugin);
         }
       }
-      for (var _iterator50 = _createForOfIteratorHelperLoose(this.plugins), _step50; !(_step50 = _iterator50()).done;) {
-        let plugin = _step50.value;
+      for (var _iterator51 = _createForOfIteratorHelperLoose(this.plugins), _step51; !(_step51 = _iterator51()).done;) {
+        let plugin = _step51.value;
         if (plugin.mustUpdate != update) plugin.destroy(this);
       }
       this.plugins = newPlugins;
       this.pluginMap.clear();
     } else {
-      for (var _iterator51 = _createForOfIteratorHelperLoose(this.plugins), _step51; !(_step51 = _iterator51()).done;) {
-        let p = _step51.value;
+      for (var _iterator52 = _createForOfIteratorHelperLoose(this.plugins), _step52; !(_step52 = _iterator52()).done;) {
+        let p = _step52.value;
         p.mustUpdate = update;
       }
     }
@@ -21268,8 +21290,8 @@ class EditorView {
       this.measureScheduled = -1;
     }
     if (updated && !updated.empty) {
-      for (var _iterator52 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step52; !(_step52 = _iterator52()).done;) {
-        let listener = _step52.value;
+      for (var _iterator53 = _createForOfIteratorHelperLoose(this.state.facet(updateListener)), _step53; !(_step53 = _iterator53()).done;) {
+        let listener = _step53.value;
         listener(updated);
       }
     }
@@ -21305,10 +21327,10 @@ class EditorView {
   }
   showAnnouncements(trs) {
     let first = true;
-    for (var _iterator53 = _createForOfIteratorHelperLoose(trs), _step53; !(_step53 = _iterator53()).done;) {
-      let tr = _step53.value;
-      for (var _iterator54 = _createForOfIteratorHelperLoose(tr.effects), _step54; !(_step54 = _iterator54()).done;) {
-        let effect = _step54.value;
+    for (var _iterator54 = _createForOfIteratorHelperLoose(trs), _step54; !(_step54 = _iterator54()).done;) {
+      let tr = _step54.value;
+      for (var _iterator55 = _createForOfIteratorHelperLoose(tr.effects), _step55; !(_step55 = _iterator55()).done;) {
+        let effect = _step55.value;
         if (effect.is(EditorView.announce)) {
           if (first) this.announceDOM.textContent = "";
           first = false;
@@ -21448,8 +21470,8 @@ class EditorView {
     if (line.length > MaxBidiLine) return trivialOrder(line.length);
     let dir = this.textDirectionAt(line.from),
       isolates;
-    for (var _iterator55 = _createForOfIteratorHelperLoose(this.bidiCache), _step55; !(_step55 = _iterator55()).done;) {
-      let entry = _step55.value;
+    for (var _iterator56 = _createForOfIteratorHelperLoose(this.bidiCache), _step56; !(_step56 = _iterator56()).done;) {
+      let entry = _step56.value;
       if (entry.from == line.from && entry.dir == dir && (entry.fresh || isolatesEq(entry.isolates, isolates = getIsolatedRanges(this, line.from, line.to)))) return entry.order;
     }
     if (!isolates) isolates = getIsolatedRanges(this, line.from, line.to);
@@ -21475,12 +21497,13 @@ class EditorView {
     }
   }
   destroy() {
-    for (var _iterator56 = _createForOfIteratorHelperLoose(this.plugins), _step56; !(_step56 = _iterator56()).done;) {
-      let plugin = _step56.value;
+    for (var _iterator57 = _createForOfIteratorHelperLoose(this.plugins), _step57; !(_step57 = _iterator57()).done;) {
+      let plugin = _step57.value;
       plugin.destroy(this);
     }
     this.plugins = [];
     this.inputState.destroy();
+    this.docView.destroy();
     this.dom.remove();
     this.observer.destroy();
     if (this.measureScheduled > -1) this.win.cancelAnimationFrame(this.measureScheduled);
@@ -21669,12 +21692,12 @@ function buildKeymap(bindings, platform) {
     if (preventDefault) binding.preventDefault = true;
     if (stopPropagation) binding.stopPropagation = true;
   };
-  for (var _iterator57 = _createForOfIteratorHelperLoose(bindings), _step57; !(_step57 = _iterator57()).done;) {
-    let b = _step57.value;
+  for (var _iterator58 = _createForOfIteratorHelperLoose(bindings), _step58; !(_step58 = _iterator58()).done;) {
+    let b = _step58.value;
     let scopes = b.scope ? b.scope.split(" ") : ["editor"];
     if (b.any) {
-      for (var _iterator58 = _createForOfIteratorHelperLoose(scopes), _step58; !(_step58 = _iterator58()).done;) {
-        let scope = _step58.value;
+      for (var _iterator59 = _createForOfIteratorHelperLoose(scopes), _step59; !(_step59 = _iterator59()).done;) {
+        let scope = _step59.value;
         let scopeObj = bound[scope] || (bound[scope] = Object.create(null));
         if (!scopeObj._any) scopeObj._any = {
           preventDefault: false,
@@ -21686,8 +21709,8 @@ function buildKeymap(bindings, platform) {
     }
     let name = b[platform] || b.key;
     if (!name) continue;
-    for (var _iterator59 = _createForOfIteratorHelperLoose(scopes), _step59; !(_step59 = _iterator59()).done;) {
-      let scope = _step59.value;
+    for (var _iterator60 = _createForOfIteratorHelperLoose(scopes), _step60; !(_step60 = _iterator60()).done;) {
+      let scope = _step60.value;
       add(scope, name, b.run, b.preventDefault, b.stopPropagation);
       if (b.shift) add(scope, "Shift-" + name, b.shift, b.preventDefault, b.stopPropagation);
     }
@@ -21712,8 +21735,8 @@ function runHandlers(map, event, view, scope) {
   let ran = new Set();
   let runFor = binding => {
     if (binding) {
-      for (var _iterator60 = _createForOfIteratorHelperLoose(binding.run), _step60; !(_step60 = _iterator60()).done;) {
-        let cmd = _step60.value;
+      for (var _iterator61 = _createForOfIteratorHelperLoose(binding.run), _step61; !(_step61 = _iterator61()).done;) {
+        let cmd = _step61.value;
         if (!ran.has(cmd)) {
           ran.add(cmd);
           if (cmd(view, event)) {
@@ -21859,13 +21882,13 @@ function rectanglesForRange(view, className, range) {
     }
     let start = from !== null && from !== void 0 ? from : line.from,
       end = to !== null && to !== void 0 ? to : line.to;
-    for (var _iterator61 = _createForOfIteratorHelperLoose(view.visibleRanges), _step61; !(_step61 = _iterator61()).done;) {
-      let r = _step61.value;
+    for (var _iterator62 = _createForOfIteratorHelperLoose(view.visibleRanges), _step62; !(_step62 = _iterator62()).done;) {
+      let r = _step62.value;
       if (r.to > start && r.from < end) {
         for (let pos = Math.max(r.from, start), endPos = Math.min(r.to, end);;) {
           let docLine = view.state.doc.lineAt(pos);
-          for (var _iterator62 = _createForOfIteratorHelperLoose(view.bidiSpans(docLine)), _step62; !(_step62 = _iterator62()).done;) {
-            let span = _step62.value;
+          for (var _iterator63 = _createForOfIteratorHelperLoose(view.bidiSpans(docLine)), _step63; !(_step63 = _iterator63()).done;) {
+            let span = _step63.value;
             let spanFrom = span.from + docLine.from,
               spanTo = span.to + docLine.from;
             if (spanFrom >= endPos) break;
@@ -21947,8 +21970,8 @@ class LayerView {
     if (markers.length != this.drawn.length || markers.some((p, i) => !sameMarker(p, this.drawn[i]))) {
       let old = this.dom.firstChild,
         oldI = 0;
-      for (var _iterator63 = _createForOfIteratorHelperLoose(markers), _step63; !(_step63 = _iterator63()).done;) {
-        let marker = _step63.value;
+      for (var _iterator64 = _createForOfIteratorHelperLoose(markers), _step64; !(_step64 = _iterator64()).done;) {
+        let marker = _step64.value;
         if (marker.update && old && marker.constructor && this.drawn[oldI].constructor && marker.update(old, this.drawn[oldI])) {
           old = old.nextSibling;
           oldI++;
@@ -22005,14 +22028,14 @@ const cursorLayer = dist_layer({
       } = view,
       conf = state.facet(selectionConfig);
     let cursors = [];
-    for (var _iterator64 = _createForOfIteratorHelperLoose(state.selection.ranges), _step64; !(_step64 = _iterator64()).done;) {
-      let r = _step64.value;
+    for (var _iterator65 = _createForOfIteratorHelperLoose(state.selection.ranges), _step65; !(_step65 = _iterator65()).done;) {
+      let r = _step65.value;
       let prim = r == state.selection.main;
       if (r.empty ? !prim || CanHidePrimary : conf.drawRangeCursor) {
         let className = prim ? "cm-cursor cm-cursor-primary" : "cm-cursor cm-cursor-secondary";
         let cursor = r.empty ? r : state_dist/* EditorSelection */.jT.cursor(r.head, r.head > r.anchor ? -1 : 1);
-        for (var _iterator65 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, className, cursor)), _step65; !(_step65 = _iterator65()).done;) {
-          let piece = _step65.value;
+        for (var _iterator66 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, className, cursor)), _step66; !(_step66 = _iterator66()).done;) {
+          let piece = _step66.value;
           cursors.push(piece);
         }
       }
@@ -22053,7 +22076,12 @@ const themeSpec = {
     }
   }
 };
-if (CanHidePrimary) themeSpec[".cm-line"].caretColor = "transparent !important";
+if (CanHidePrimary) {
+  themeSpec[".cm-line"].caretColor = "transparent !important";
+  themeSpec[".cm-content"] = {
+    caretColor: "transparent !important"
+  };
+}
 const hideNativeSelection = state_dist/* Prec */.Wl.highest(EditorView.theme(themeSpec));
 const setDropCursorPos = state_dist/* StateEffect */.Py.define({
   map(pos, mapping) {
@@ -22163,11 +22191,11 @@ function matchRanges(view, maxLength) {
   let visible = view.visibleRanges;
   if (visible.length == 1 && visible[0].from == view.viewport.from && visible[0].to == view.viewport.to) return visible;
   let result = [];
-  for (var _iterator66 = _createForOfIteratorHelperLoose(visible), _step66; !(_step66 = _iterator66()).done;) {
+  for (var _iterator67 = _createForOfIteratorHelperLoose(visible), _step67; !(_step67 = _iterator67()).done;) {
     let {
       from,
       to
-    } = _step66.value;
+    } = _step67.value;
     from = Math.max(view.state.doc.lineAt(from).from, from - maxLength);
     to = Math.min(view.state.doc.lineAt(to).to, to + maxLength);
     if (result.length && result[result.length - 1].to >= from) result[result.length - 1].to = to;else result.push({
@@ -22206,11 +22234,11 @@ class MatchDecorator {
   createDeco(view) {
     let build = new state_dist/* RangeSetBuilder */.f_(),
       add = build.add.bind(build);
-    for (var _iterator67 = _createForOfIteratorHelperLoose(matchRanges(view, this.maxLength)), _step67; !(_step67 = _iterator67()).done;) {
+    for (var _iterator68 = _createForOfIteratorHelperLoose(matchRanges(view, this.maxLength)), _step68; !(_step68 = _iterator68()).done;) {
       let {
         from,
         to
-      } = _step67.value;
+      } = _step68.value;
       iterMatches(view.state.doc, this.regexp, from, to, (from, m) => this.addMatch(m, view, from, add));
     }
     return build.finish();
@@ -22229,8 +22257,8 @@ class MatchDecorator {
     return deco;
   }
   updateRange(view, deco, updateFrom, updateTo) {
-    for (var _iterator68 = _createForOfIteratorHelperLoose(view.visibleRanges), _step68; !(_step68 = _iterator68()).done;) {
-      let r = _step68.value;
+    for (var _iterator69 = _createForOfIteratorHelperLoose(view.visibleRanges), _step69; !(_step69 = _iterator69()).done;) {
+      let r = _step69.value;
       let from = Math.max(r.from, updateFrom),
         to = Math.min(r.to, updateTo);
       if (to > from) {
@@ -22458,8 +22486,8 @@ const activeLineHighlighter = ViewPlugin.fromClass(class {
   getDeco(view) {
     let lastLineStart = -1,
       deco = [];
-    for (var _iterator69 = _createForOfIteratorHelperLoose(view.state.selection.ranges), _step69; !(_step69 = _iterator69()).done;) {
-      let r = _step69.value;
+    for (var _iterator70 = _createForOfIteratorHelperLoose(view.state.selection.ranges), _step70; !(_step70 = _iterator70()).done;) {
+      let r = _step70.value;
       let line = view.lineBlockAt(r.head);
       if (line.from > lastLineStart) {
         deco.push(lineDeco.range(line.from));
@@ -22651,8 +22679,8 @@ class TooltipViewManager {
     let input = update.state.facet(this.facet);
     let tooltips = input.filter(x => x);
     if (input === this.input) {
-      for (var _iterator70 = _createForOfIteratorHelperLoose(this.tooltipViews), _step70; !(_step70 = _iterator70()).done;) {
-        let t = _step70.value;
+      for (var _iterator71 = _createForOfIteratorHelperLoose(this.tooltipViews), _step71; !(_step71 = _iterator71()).done;) {
+        let t = _step71.value;
         if (t.update) t.update(update);
       }
       return false;
@@ -22676,8 +22704,8 @@ class TooltipViewManager {
         if (tooltipView.update) tooltipView.update(update);
       }
     }
-    for (var _iterator71 = _createForOfIteratorHelperLoose(this.tooltipViews), _step71; !(_step71 = _iterator71()).done;) {
-      let t = _step71.value;
+    for (var _iterator72 = _createForOfIteratorHelperLoose(this.tooltipViews), _step72; !(_step72 = _iterator72()).done;) {
+      let t = _step72.value;
       if (tooltipViews.indexOf(t) < 0) {
         t.dom.remove();
         (_a = t.destroy) === null || _a === void 0 ? void 0 : _a.call(t);
@@ -22762,8 +22790,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
   observeIntersection() {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
-      for (var _iterator72 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step72; !(_step72 = _iterator72()).done;) {
-        let tooltip = _step72.value;
+      for (var _iterator73 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step73; !(_step73 = _iterator73()).done;) {
+        let tooltip = _step73.value;
         this.intersectionObserver.observe(tooltip.dom);
       }
     }
@@ -22782,8 +22810,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
     let newConfig = update.state.facet(tooltipConfig);
     if (newConfig.position != this.position && !this.madeAbsolute) {
       this.position = newConfig.position;
-      for (var _iterator73 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step73; !(_step73 = _iterator73()).done;) {
-        let t = _step73.value;
+      for (var _iterator74 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step74; !(_step74 = _iterator74()).done;) {
+        let t = _step74.value;
         t.dom.style.position = this.position;
       }
       shouldMeasure = true;
@@ -22792,8 +22820,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       if (this.parent) this.container.remove();
       this.parent = newConfig.parent;
       this.createContainer();
-      for (var _iterator74 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step74; !(_step74 = _iterator74()).done;) {
-        let t = _step74.value;
+      for (var _iterator75 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step75; !(_step75 = _iterator75()).done;) {
+        let t = _step75.value;
         this.container.appendChild(t.dom);
       }
       shouldMeasure = true;
@@ -22820,8 +22848,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
   destroy() {
     var _a, _b;
     this.view.win.removeEventListener("resize", this.measureSoon);
-    for (var _iterator75 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step75; !(_step75 = _iterator75()).done;) {
-      let tooltipView = _step75.value;
+    for (var _iterator76 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step76; !(_step76 = _iterator76()).done;) {
+      let tooltipView = _step76.value;
       tooltipView.dom.remove();
       (_a = tooltipView.destroy) === null || _a === void 0 ? void 0 : _a.call(tooltipView);
     }
@@ -22887,8 +22915,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
     if (measured.makeAbsolute) {
       this.madeAbsolute = true;
       this.position = "absolute";
-      for (var _iterator76 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step76; !(_step76 = _iterator76()).done;) {
-        let t = _step76.value;
+      for (var _iterator77 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step77; !(_step77 = _iterator77()).done;) {
+        let t = _step77.value;
         t.dom.style.position = "absolute";
       }
     }
@@ -22934,8 +22962,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       let top = above ? pos.top - height - arrowHeight - offset.y : pos.bottom + arrowHeight + offset.y;
       let right = left + width;
       if (tView.overlap !== true) {
-        for (var _iterator77 = _createForOfIteratorHelperLoose(others), _step77; !(_step77 = _iterator77()).done;) {
-          let r = _step77.value;
+        for (var _iterator78 = _createForOfIteratorHelperLoose(others), _step78; !(_step78 = _iterator78()).done;) {
+          let r = _step78.value;
           if (r.left < right && r.right > left && r.top < top + height && r.bottom > top) top = above ? r.top - height - 2 - arrowHeight : r.bottom + arrowHeight + 2;
         }
       }
@@ -22967,8 +22995,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       if (this.inView != this.view.inView) {
         this.inView = this.view.inView;
         if (!this.inView) {
-          for (var _iterator78 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step78; !(_step78 = _iterator78()).done;) {
-            let tv = _step78.value;
+          for (var _iterator79 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step79; !(_step79 = _iterator79()).done;) {
+            let tv = _step79.value;
             tv.dom.style.top = Outside;
           }
         }
@@ -23071,15 +23099,15 @@ class HoverTooltipHost {
     return hostedView;
   }
   mount(view) {
-    for (var _iterator79 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step79; !(_step79 = _iterator79()).done;) {
-      let hostedView = _step79.value;
+    for (var _iterator80 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step80; !(_step80 = _iterator80()).done;) {
+      let hostedView = _step80.value;
       if (hostedView.mount) hostedView.mount(view);
     }
     this.mounted = true;
   }
   positioned(space) {
-    for (var _iterator80 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step80; !(_step80 = _iterator80()).done;) {
-      let hostedView = _step80.value;
+    for (var _iterator81 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step81; !(_step81 = _iterator81()).done;) {
+      let hostedView = _step81.value;
       if (hostedView.positioned) hostedView.positioned(space);
     }
   }
@@ -23088,15 +23116,15 @@ class HoverTooltipHost {
   }
   destroy() {
     var _a;
-    for (var _iterator81 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step81; !(_step81 = _iterator81()).done;) {
-      let t = _step81.value;
+    for (var _iterator82 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step82; !(_step82 = _iterator82()).done;) {
+      let t = _step82.value;
       (_a = t.destroy) === null || _a === void 0 ? void 0 : _a.call(t);
     }
   }
   passProp(name) {
     let value = undefined;
-    for (var _iterator82 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step82; !(_step82 = _iterator82()).done;) {
-      let view = _step82.value;
+    for (var _iterator83 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step83; !(_step83 = _iterator83()).done;) {
+      let view = _step83.value;
       let given = view[name];
       if (given !== undefined) {
         if (value === undefined) value = given;else if (value !== given) return undefined;
@@ -23122,7 +23150,10 @@ const showHoverTooltipHost = showTooltip.compute([showHoverTooltip], state => {
   if (tooltips.length === 0) return null;
   return {
     pos: Math.min(...tooltips.map(t => t.pos)),
-    end: Math.max(...tooltips.filter(t => t.end != null).map(t => t.end)),
+    end: Math.max(...tooltips.map(t => {
+      var _a;
+      return (_a = t.end) !== null && _a !== void 0 ? _a : t.pos;
+    })),
     create: HoverTooltipHost.create,
     above: tooltips[0].above,
     arrow: tooltips.some(t => t.arrow)
@@ -23204,6 +23235,11 @@ class HoverPlugin {
       });
     }
   }
+  get tooltip() {
+    let plugin = this.view.plugin(tooltipPlugin);
+    let index = plugin ? plugin.manager.tooltips.findIndex(t => t.create == HoverTooltipHost.create) : -1;
+    return index > -1 ? plugin.manager.tooltipViews[index] : null;
+  }
   mousemove(event) {
     var _a;
     this.lastMove = {
@@ -23213,12 +23249,15 @@ class HoverPlugin {
       time: Date.now()
     };
     if (this.hoverTimeout < 0) this.hoverTimeout = setTimeout(this.checkHover, this.hoverTime);
-    let tooltip = this.active;
-    if (tooltip && !isInTooltip(this.lastMove.target) || this.pending) {
+    let {
+      active,
+      tooltip
+    } = this;
+    if (active && tooltip && !isInTooltip(tooltip.dom, event) || this.pending) {
       let {
           pos
-        } = tooltip || this.pending,
-        end = (_a = tooltip === null || tooltip === void 0 ? void 0 : tooltip.end) !== null && _a !== void 0 ? _a : pos;
+        } = active || this.pending,
+        end = (_a = active === null || active === void 0 ? void 0 : active.end) !== null && _a !== void 0 ? _a : pos;
       if (pos == end ? this.view.posAtCoords(this.lastMove) != pos : !isOverRange(this.view, pos, end, event.clientX, event.clientY)) {
         this.view.dispatch({
           effects: this.setHover.of(null)
@@ -23227,12 +23266,30 @@ class HoverPlugin {
       }
     }
   }
-  mouseleave(e) {
+  mouseleave(event) {
     clearTimeout(this.hoverTimeout);
     this.hoverTimeout = -1;
-    if (this.active && !isInTooltip(e.relatedTarget)) this.view.dispatch({
-      effects: this.setHover.of(null)
-    });
+    let {
+      active
+    } = this;
+    if (active) {
+      let {
+        tooltip
+      } = this;
+      let inTooltip = tooltip && tooltip.dom.contains(event.relatedTarget);
+      if (!inTooltip) this.view.dispatch({
+        effects: this.setHover.of(null)
+      });else this.watchTooltipLeave(tooltip.dom);
+    }
+  }
+  watchTooltipLeave(tooltip) {
+    let watch = event => {
+      tooltip.removeEventListener("mouseleave", watch);
+      if (this.active && !this.view.dom.contains(event.relatedTarget)) this.view.dispatch({
+        effects: this.setHover.of(null)
+      });
+    };
+    tooltip.addEventListener("mouseleave", watch);
   }
   destroy() {
     clearTimeout(this.hoverTimeout);
@@ -23240,9 +23297,10 @@ class HoverPlugin {
     this.view.dom.removeEventListener("mousemove", this.mousemove);
   }
 }
-function isInTooltip(elt) {
-  for (let cur = elt; cur; cur = cur.parentNode) if (cur.nodeType == 1 && cur.classList.contains("cm-tooltip")) return true;
-  return false;
+const tooltipMargin = 4;
+function isInTooltip(tooltip, event) {
+  let rect = tooltip.getBoundingClientRect();
+  return event.clientX >= rect.left - tooltipMargin && event.clientX <= rect.right + tooltipMargin && event.clientY >= rect.top - tooltipMargin && event.clientY <= rect.bottom + tooltipMargin;
 }
 function isOverRange(view, from, to, x, y, margin) {
   let rect = view.scrollDOM.getBoundingClientRect();
@@ -23273,8 +23331,8 @@ function hoverTooltip(source, options) {
         if (value.end != null) copy.end = tr.changes.mapPos(value.end);
         value = copy;
       }
-      for (var _iterator83 = _createForOfIteratorHelperLoose(tr.effects), _step83; !(_step83 = _iterator83()).done;) {
-        let effect = _step83.value;
+      for (var _iterator84 = _createForOfIteratorHelperLoose(tr.effects), _step84; !(_step84 = _iterator84()).done;) {
+        let effect = _step84.value;
         if (effect.is(setHover)) value = effect.value;
         if (effect.is(closeHoverTooltipEffect)) value = null;
       }
@@ -23302,8 +23360,8 @@ function repositionTooltips(view) {
 const panelConfig = state_dist/* Facet */.r$.define({
   combine(configs) {
     let topContainer, bottomContainer;
-    for (var _iterator84 = _createForOfIteratorHelperLoose(configs), _step84; !(_step84 = _iterator84()).done;) {
-      let c = _step84.value;
+    for (var _iterator85 = _createForOfIteratorHelperLoose(configs), _step85; !(_step85 = _iterator85()).done;) {
+      let c = _step85.value;
       topContainer = topContainer || c.topContainer;
       bottomContainer = bottomContainer || c.bottomContainer;
     }
@@ -23331,8 +23389,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
     this.bottom = new PanelGroup(view, false, conf.bottomContainer);
     this.top.sync(this.panels.filter(p => p.top));
     this.bottom.sync(this.panels.filter(p => !p.top));
-    for (var _iterator85 = _createForOfIteratorHelperLoose(this.panels), _step85; !(_step85 = _iterator85()).done;) {
-      let p = _step85.value;
+    for (var _iterator86 = _createForOfIteratorHelperLoose(this.panels), _step86; !(_step86 = _iterator86()).done;) {
+      let p = _step86.value;
       p.dom.classList.add("cm-panel");
       if (p.mount) p.mount();
     }
@@ -23356,8 +23414,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         top = [],
         bottom = [],
         mount = [];
-      for (var _iterator86 = _createForOfIteratorHelperLoose(specs), _step86; !(_step86 = _iterator86()).done;) {
-        let spec = _step86.value;
+      for (var _iterator87 = _createForOfIteratorHelperLoose(specs), _step87; !(_step87 = _iterator87()).done;) {
+        let spec = _step87.value;
         let known = this.specs.indexOf(spec),
           panel;
         if (known < 0) {
@@ -23380,8 +23438,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         if (p.mount) p.mount();
       }
     } else {
-      for (var _iterator87 = _createForOfIteratorHelperLoose(this.panels), _step87; !(_step87 = _iterator87()).done;) {
-        let p = _step87.value;
+      for (var _iterator88 = _createForOfIteratorHelperLoose(this.panels), _step88; !(_step88 = _iterator88()).done;) {
+        let p = _step88.value;
         if (p.update) p.update(update);
       }
     }
@@ -23410,8 +23468,8 @@ class PanelGroup {
     this.syncClasses();
   }
   sync(panels) {
-    for (var _iterator88 = _createForOfIteratorHelperLoose(this.panels), _step88; !(_step88 = _iterator88()).done;) {
-      let p = _step88.value;
+    for (var _iterator89 = _createForOfIteratorHelperLoose(this.panels), _step89; !(_step89 = _iterator89()).done;) {
+      let p = _step89.value;
       if (p.destroy && panels.indexOf(p) < 0) p.destroy();
     }
     this.panels = panels;
@@ -23433,8 +23491,8 @@ class PanelGroup {
       parent.insertBefore(this.dom, this.top ? parent.firstChild : null);
     }
     let curDOM = this.dom.firstChild;
-    for (var _iterator89 = _createForOfIteratorHelperLoose(this.panels), _step89; !(_step89 = _iterator89()).done;) {
-      let panel = _step89.value;
+    for (var _iterator90 = _createForOfIteratorHelperLoose(this.panels), _step90; !(_step90 = _iterator90()).done;) {
+      let panel = _step90.value;
       if (panel.dom.parentNode == this.dom) {
         while (curDOM != panel.dom) curDOM = rm(curDOM);
         curDOM = curDOM.nextSibling;
@@ -23449,12 +23507,12 @@ class PanelGroup {
   }
   syncClasses() {
     if (!this.container || this.classes == this.view.themeClasses) return;
-    for (var _iterator90 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step90; !(_step90 = _iterator90()).done;) {
-      let cls = _step90.value;
+    for (var _iterator91 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step91; !(_step91 = _iterator91()).done;) {
+      let cls = _step91.value;
       if (cls) this.container.classList.remove(cls);
     }
-    for (var _iterator91 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step91; !(_step91 = _iterator91()).done;) {
-      let cls = _step91.value;
+    for (var _iterator92 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step92; !(_step92 = _iterator92()).done;) {
+      let cls = _step92.value;
       if (cls) this.container.classList.add(cls);
     }
   }
@@ -23515,8 +23573,8 @@ const gutterView = ViewPlugin.fromClass(class {
     this.dom.setAttribute("aria-hidden", "true");
     this.dom.style.minHeight = this.view.contentHeight / this.view.scaleY + "px";
     this.gutters = view.state.facet(activeGutters).map(conf => new SingleGutterView(view, conf));
-    for (var _iterator92 = _createForOfIteratorHelperLoose(this.gutters), _step92; !(_step92 = _iterator92()).done;) {
-      let gutter = _step92.value;
+    for (var _iterator93 = _createForOfIteratorHelperLoose(this.gutters), _step93; !(_step93 = _iterator93()).done;) {
+      let gutter = _step93.value;
       this.dom.appendChild(gutter.dom);
     }
     this.fixed = !view.state.facet(unfixGutters);
@@ -23546,42 +23604,42 @@ const gutterView = ViewPlugin.fromClass(class {
     let lineClasses = state_dist/* RangeSet */.Xs.iter(this.view.state.facet(gutterLineClass), this.view.viewport.from);
     let classSet = [];
     let contexts = this.gutters.map(gutter => new UpdateContext(gutter, this.view.viewport, -this.view.documentPadding.top));
-    for (var _iterator93 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step93; !(_step93 = _iterator93()).done;) {
-      let line = _step93.value;
+    for (var _iterator94 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step94; !(_step94 = _iterator94()).done;) {
+      let line = _step94.value;
       if (classSet.length) classSet = [];
       if (Array.isArray(line.type)) {
         let first = true;
-        for (var _iterator95 = _createForOfIteratorHelperLoose(line.type), _step95; !(_step95 = _iterator95()).done;) {
-          let b = _step95.value;
+        for (var _iterator96 = _createForOfIteratorHelperLoose(line.type), _step96; !(_step96 = _iterator96()).done;) {
+          let b = _step96.value;
           if (b.type == BlockType.Text && first) {
             advanceCursor(lineClasses, classSet, b.from);
-            for (var _iterator96 = _createForOfIteratorHelperLoose(contexts), _step96; !(_step96 = _iterator96()).done;) {
-              let cx = _step96.value;
+            for (var _iterator97 = _createForOfIteratorHelperLoose(contexts), _step97; !(_step97 = _iterator97()).done;) {
+              let cx = _step97.value;
               cx.line(this.view, b, classSet);
             }
             first = false;
           } else if (b.widget) {
-            for (var _iterator97 = _createForOfIteratorHelperLoose(contexts), _step97; !(_step97 = _iterator97()).done;) {
-              let cx = _step97.value;
+            for (var _iterator98 = _createForOfIteratorHelperLoose(contexts), _step98; !(_step98 = _iterator98()).done;) {
+              let cx = _step98.value;
               cx.widget(this.view, b);
             }
           }
         }
       } else if (line.type == BlockType.Text) {
         advanceCursor(lineClasses, classSet, line.from);
-        for (var _iterator98 = _createForOfIteratorHelperLoose(contexts), _step98; !(_step98 = _iterator98()).done;) {
-          let cx = _step98.value;
+        for (var _iterator99 = _createForOfIteratorHelperLoose(contexts), _step99; !(_step99 = _iterator99()).done;) {
+          let cx = _step99.value;
           cx.line(this.view, line, classSet);
         }
       } else if (line.widget) {
-        for (var _iterator99 = _createForOfIteratorHelperLoose(contexts), _step99; !(_step99 = _iterator99()).done;) {
-          let cx = _step99.value;
+        for (var _iterator100 = _createForOfIteratorHelperLoose(contexts), _step100; !(_step100 = _iterator100()).done;) {
+          let cx = _step100.value;
           cx.widget(this.view, line);
         }
       }
     }
-    for (var _iterator94 = _createForOfIteratorHelperLoose(contexts), _step94; !(_step94 = _iterator94()).done;) {
-      let cx = _step94.value;
+    for (var _iterator95 = _createForOfIteratorHelperLoose(contexts), _step95; !(_step95 = _iterator95()).done;) {
+      let cx = _step95.value;
       cx.finish();
     }
     if (detach) this.view.scrollDOM.insertBefore(this.dom, after);
@@ -23591,15 +23649,15 @@ const gutterView = ViewPlugin.fromClass(class {
       cur = update.state.facet(activeGutters);
     let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet */.Xs.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
     if (prev == cur) {
-      for (var _iterator100 = _createForOfIteratorHelperLoose(this.gutters), _step100; !(_step100 = _iterator100()).done;) {
-        let gutter = _step100.value;
+      for (var _iterator101 = _createForOfIteratorHelperLoose(this.gutters), _step101; !(_step101 = _iterator101()).done;) {
+        let gutter = _step101.value;
         if (gutter.update(update)) change = true;
       }
     } else {
       change = true;
       let gutters = [];
-      for (var _iterator101 = _createForOfIteratorHelperLoose(cur), _step101; !(_step101 = _iterator101()).done;) {
-        let conf = _step101.value;
+      for (var _iterator102 = _createForOfIteratorHelperLoose(cur), _step102; !(_step102 = _iterator102()).done;) {
+        let conf = _step102.value;
         let known = prev.indexOf(conf);
         if (known < 0) {
           gutters.push(new SingleGutterView(this.view, conf));
@@ -23608,8 +23666,8 @@ const gutterView = ViewPlugin.fromClass(class {
           gutters.push(this.gutters[known]);
         }
       }
-      for (var _iterator102 = _createForOfIteratorHelperLoose(this.gutters), _step102; !(_step102 = _iterator102()).done;) {
-        let g = _step102.value;
+      for (var _iterator103 = _createForOfIteratorHelperLoose(this.gutters), _step103; !(_step103 = _iterator103()).done;) {
+        let g = _step103.value;
         g.dom.remove();
         if (gutters.indexOf(g) < 0) g.destroy();
       }
@@ -23622,8 +23680,8 @@ const gutterView = ViewPlugin.fromClass(class {
     return change;
   }
   destroy() {
-    for (var _iterator103 = _createForOfIteratorHelperLoose(this.gutters), _step103; !(_step103 = _iterator103()).done;) {
-      let view = _step103.value;
+    for (var _iterator104 = _createForOfIteratorHelperLoose(this.gutters), _step104; !(_step104 = _iterator104()).done;) {
+      let view = _step104.value;
       view.destroy();
     }
     this.dom.remove();
@@ -23735,8 +23793,8 @@ class SingleGutterView {
     return !state_dist/* RangeSet */.Xs.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
   }
   destroy() {
-    for (var _iterator104 = _createForOfIteratorHelperLoose(this.elements), _step104; !(_step104 = _iterator104()).done;) {
-      let elt = _step104.value;
+    for (var _iterator105 = _createForOfIteratorHelperLoose(this.elements), _step105; !(_step105 = _iterator105()).done;) {
+      let elt = _step105.value;
       elt.destroy();
     }
   }
@@ -23878,8 +23936,8 @@ const activeLineGutterMarker = new class extends GutterMarker {
 const activeLineGutterHighlighter = gutterLineClass.compute(["selection"], state => {
   let marks = [],
     last = -1;
-  for (var _iterator105 = _createForOfIteratorHelperLoose(state.selection.ranges), _step105; !(_step105 = _iterator105()).done;) {
-    let range = _step105.value;
+  for (var _iterator106 = _createForOfIteratorHelperLoose(state.selection.ranges), _step106; !(_step106 = _iterator106()).done;) {
+    let range = _step106.value;
     let linePos = state.doc.lineAt(range.head).from;
     if (linePos > last) {
       last = linePos;
@@ -31650,11 +31708,6 @@ const historyConfig = state_dist/* Facet */.r$.define({
     });
   }
 });
-function changeEnd(changes) {
-  let end = 0;
-  changes.iterChangedRanges((_, to) => end = to);
-  return end;
-}
 const historyField_ = state_dist/* StateField */.QQ.define({
   create() {
     return HistoryState.empty;
@@ -31663,8 +31716,7 @@ const historyField_ = state_dist/* StateField */.QQ.define({
     let config = tr.state.facet(historyConfig);
     let fromHist = tr.annotation(fromHistory);
     if (fromHist) {
-      let selection = tr.docChanged ? state_dist/* EditorSelection */.jT.single(changeEnd(tr.changes)) : undefined;
-      let item = HistEvent.fromTransaction(tr, selection),
+      let item = HistEvent.fromTransaction(tr, fromHist.selection),
         from = fromHist.side;
       let other = from == 0 ? state.undone : state.done;
       if (item) other = updateBranch(other, other.length, config.minDepth, item);else other = addSelection(other, tr.startState.selection);
@@ -31875,16 +31927,18 @@ class HistoryState {
   addMapping(mapping) {
     return new HistoryState(addMappingToBranch(this.done, mapping), addMappingToBranch(this.undone, mapping), this.prevTime, this.prevUserEvent);
   }
-  pop(side, state, selection) {
+  pop(side, state, onlySelection) {
     let branch = side == 0 ? this.done : this.undone;
     if (branch.length == 0) return null;
-    let event = branch[branch.length - 1];
-    if (selection && event.selectionsAfter.length) {
+    let event = branch[branch.length - 1],
+      selection = event.selectionsAfter[0] || state.selection;
+    if (onlySelection && event.selectionsAfter.length) {
       return state.update({
         selection: event.selectionsAfter[event.selectionsAfter.length - 1],
         annotations: fromHistory.of({
           side,
-          rest: popSelection(branch)
+          rest: popSelection(branch),
+          selection
         }),
         userEvent: side == 0 ? "select.undo" : "select.redo",
         scrollIntoView: true
@@ -31900,7 +31954,8 @@ class HistoryState {
         effects: event.effects,
         annotations: fromHistory.of({
           side,
-          rest
+          rest,
+          selection
         }),
         filter: false,
         userEvent: side == 0 ? "undo" : "redo",
@@ -32375,7 +32430,7 @@ const deleteByChar = (target, forward) => deleteBy(target, range => {
     targetPos = pos;
   } else {
     targetPos = (0,state_dist/* findClusterBreak */.cp)(line.text, pos - line.from, forward, forward) + line.from;
-    if (targetPos == pos && line.number != (forward ? state.doc.lines : 1)) targetPos += forward ? 1 : -1;
+    if (targetPos == pos && line.number != (forward ? state.doc.lines : 1)) targetPos += forward ? 1 : -1;else if (!forward && /[\ufe00-\ufe0f]/.test(line.text.slice(targetPos - line.from, pos - line.from))) targetPos = (0,state_dist/* findClusterBreak */.cp)(line.text, targetPos - line.from, false, false) + line.from;
   }
   return targetPos;
 });
@@ -34605,9 +34660,12 @@ function loadControl(control, options) {
 }
 function createControl(parent, owner, control, params, options) {
   const result = $.Deferred();
-  const [context] = setup(['context'], [result], options);
+  const [context, patch] = setup(['context', 'patch'], [result, null], options);
   loadControl(control, options).done(constructor => {
     const instance = new constructor(parent, owner);
+    if (typeof patch === 'function') {
+      patch(instance);
+    }
     _internal_then(constructor.prototype.render.apply(instance, params), function () {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
