@@ -35817,19 +35817,28 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
     },
     replaceHTML: function (selector, twig, options) {
       options = options || {};
-      options.ctx = this.ctx;
+      if (!('dict' in options)) {
+        options['dict'] = {};
+      }
+      options.dict.ctx = this.ctx;
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
     prependHTML: function (selector, twig, options) {
       options = options || {};
-      options.ctx = this.ctx;
+      if (!('dict' in options)) {
+        options['dict'] = {};
+      }
+      options.dict.ctx = this.ctx;
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
     appendHTML: function (selector, twig, options) {
       options = options || {};
-      options.ctx = this.ctx;
+      if (!('dict' in options)) {
+        options['dict'] = {};
+      }
+      options.dict.ctx = this.ctx;
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
