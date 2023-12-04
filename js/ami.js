@@ -38061,7 +38061,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, cache)",
+        "desc": "dictionary of optional parameters (context, patch, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
@@ -38119,7 +38119,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, cache)",
+        "desc": "dictionary of optional parameters (context, patch, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
@@ -38191,7 +38191,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, cache)",
+        "desc": "dictionary of optional parameters (context, patch, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
@@ -38235,7 +38235,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, cache)",
+        "desc": "dictionary of optional parameters (context, patch, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
