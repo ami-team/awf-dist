@@ -35833,8 +35833,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!('dict' in options)) {
         options['dict'] = {};
       }
-      options.dict.ctx = this.ctx;
-      options.dict.instance = this;
+      options.ctx = this.ctx;
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
@@ -35845,7 +35844,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!('dict' in options)) {
         options['dict'] = {};
       }
-      options.dict.ctx = this.ctx;
+      options.ctx = this.ctx;
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
@@ -35856,7 +35855,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!('dict' in options)) {
         options['dict'] = {};
       }
-      options.dict.ctx = this.ctx;
+      options.ctx = this.ctx;
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
