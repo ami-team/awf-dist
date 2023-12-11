@@ -35842,7 +35842,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options['dict'])) {
         options['dict'] = {};
       }
-      Object.assign(options.dict, ami.awf.tempTwigDict);
+      Object.assign(options['dict'], ami.awf.tempTwigDict);
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
@@ -35853,7 +35853,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options['dict'])) {
         options['dict'] = {};
       }
-      Object.assign(options.dict, ami.awf.tempTwigDict);
+      Object.assign(options['dict'], ami.awf.tempTwigDict);
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
@@ -35864,7 +35864,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options['dict'])) {
         options['dict'] = {};
       }
-      Object.assign(options.dict, ami.awf.tempTwigDict);
+      Object.assign(options['dict'], ami.awf.tempTwigDict);
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
