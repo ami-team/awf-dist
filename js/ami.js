@@ -14818,6 +14818,16 @@ function windowRect(win) {
     bottom: win.innerHeight
   };
 }
+function getScale(elt, rect) {
+  let scaleX = rect.width / elt.offsetWidth;
+  let scaleY = rect.height / elt.offsetHeight;
+  if (scaleX > 0.995 && scaleX < 1.005 || !isFinite(scaleX) || Math.abs(rect.width - elt.offsetWidth) < 1) scaleX = 1;
+  if (scaleY > 0.995 && scaleY < 1.005 || !isFinite(scaleY) || Math.abs(rect.height - elt.offsetHeight) < 1) scaleY = 1;
+  return {
+    scaleX,
+    scaleY
+  };
+}
 function scrollRectIntoView(dom, rect, side, x, y, xMargin, yMargin, ltr) {
   let doc = dom.ownerDocument,
     win = doc.defaultView || window;
@@ -14836,8 +14846,10 @@ function scrollRectIntoView(dom, rect, side, x, y, xMargin, yMargin, ltr) {
           continue;
         }
         let rect = cur.getBoundingClientRect();
-        scaleX = rect.width / cur.offsetWidth;
-        scaleY = rect.height / cur.offsetHeight;
+        ({
+          scaleX,
+          scaleY
+        } = getScale(cur, rect));
         bounding = {
           left: rect.left,
           right: rect.left + cur.clientWidth * scaleX,
@@ -15269,7 +15281,7 @@ class ContentView {
   destroy() {
     for (var _iterator4 = _createForOfIteratorHelperLoose(this.children), _step4; !(_step4 = _iterator4()).done;) {
       let child = _step4.value;
-      child.destroy();
+      if (child.parent == this) child.destroy();
     }
     this.parent = null;
   }
@@ -15499,7 +15511,7 @@ class MarkView extends ContentView {
   }
   merge(from, to, source, _hasStart, openStart, openEnd) {
     if (source && (!(source instanceof MarkView && source.mark.eq(this.mark)) || from && openStart <= 0 || to < this.length && openEnd <= 0)) return false;
-    mergeChildrenInto(this, from, to, source ? source.children : [], openStart - 1, openEnd - 1);
+    mergeChildrenInto(this, from, to, source ? source.children.slice() : [], openStart - 1, openEnd - 1);
     this.markDirty();
     return true;
   }
@@ -15822,7 +15834,7 @@ class LineView extends ContentView {
       if (!this.dom) source.transferDOM(this);
     }
     if (hasStart) this.setDeco(source ? source.attrs : null);
-    mergeChildrenInto(this, from, to, source ? source.children : [], openStart, openEnd);
+    mergeChildrenInto(this, from, to, source ? source.children.slice() : [], openStart, openEnd);
     return true;
   }
   split(at) {
@@ -16682,7 +16694,7 @@ for (var _i2 = 0, _arr = ["()", "[]", "{}"]; _i2 < _arr.length; _i2++) {
   Brackets[r] = -l;
 }
 function charType(ch) {
-  return ch <= 0xf7 ? LowTypes[ch] : 0x590 <= ch && ch <= 0x5f4 ? 2 : 0x600 <= ch && ch <= 0x6f9 ? ArabicTypes[ch - 0x600] : 0x6ee <= ch && ch <= 0x8ac ? 4 : 0x2000 <= ch && ch <= 0x200b ? 256 : 0xfb50 <= ch && ch <= 0xfdff ? 4 : ch == 0x200c ? 256 : 1;
+  return ch <= 0xf7 ? LowTypes[ch] : 0x590 <= ch && ch <= 0x5f4 ? 2 : 0x600 <= ch && ch <= 0x6f9 ? ArabicTypes[ch - 0x600] : 0x6ee <= ch && ch <= 0x8ac ? 4 : 0x2000 <= ch && ch <= 0x200c ? 256 : 0xfb50 <= ch && ch <= 0xfdff ? 4 : 1;
 }
 const BidiRE = /[\u0590-\u05f4\u0600-\u06ff\u0700-\u08ac\ufb50-\ufdff]/;
 class BidiSpan {
@@ -16960,7 +16972,7 @@ function moveVisually(line, order, dir, start, forward) {
   let indexForward = forward == (span.dir == dir);
   let nextIndex = (0,state_dist/* findClusterBreak */.cp)(line.text, startIndex, indexForward);
   movedOver = line.text.slice(Math.min(startIndex, nextIndex), Math.max(startIndex, nextIndex));
-  if (nextIndex != span.side(forward, dir)) return state_dist/* EditorSelection */.jT.cursor(nextIndex + line.from, indexForward ? -1 : 1, span.level);
+  if (nextIndex > span.from && nextIndex < span.to) return state_dist/* EditorSelection */.jT.cursor(nextIndex + line.from, indexForward ? -1 : 1, span.level);
   let nextSpan = spanI == (forward ? order.length - 1 : 0) ? null : order[spanI + (forward ? 1 : -1)];
   if (!nextSpan && span.level != dir) return state_dist/* EditorSelection */.jT.cursor(forward ? line.to : line.from, forward ? -1 : 1, dir);
   if (nextSpan && nextSpan.level < span.level) return state_dist/* EditorSelection */.jT.cursor(nextSpan.side(!forward, dir) + line.from, forward ? 1 : -1, nextSpan.level);
@@ -19552,10 +19564,10 @@ class ViewState {
     let result = 0,
       bias = 0;
     if (domRect.width && domRect.height) {
-      let scaleX = domRect.width / dom.offsetWidth;
-      let scaleY = domRect.height / dom.offsetHeight;
-      if (scaleX > 0.995 && scaleX < 1.005 || !isFinite(scaleX) || Math.abs(domRect.width - dom.offsetWidth) < 1) scaleX = 1;
-      if (scaleY > 0.995 && scaleY < 1.005 || !isFinite(scaleY) || Math.abs(domRect.height - dom.offsetHeight) < 1) scaleY = 1;
+      let {
+        scaleX,
+        scaleY
+      } = getScale(dom, domRect);
       if (this.scaleX != scaleX || this.scaleY != scaleY) {
         this.scaleX = scaleX;
         this.scaleY = scaleY;
@@ -21280,6 +21292,7 @@ class EditorView {
             if (this.viewState.scrollTarget) {
               this.docView.scrollIntoView(this.viewState.scrollTarget);
               this.viewState.scrollTarget = null;
+              scrollAnchorHeight = -1;
               continue;
             } else {
               let newAnchorHeight = scrollAnchorPos < 0 ? this.viewState.heightMap.height : this.viewState.lineBlockAt(scrollAnchorPos).top;
@@ -25566,17 +25579,13 @@ function materialize(cursor) {
       node
     } = cursor,
     stack = [];
+  let buffer = node.context.buffer;
   do {
     stack.push(cursor.index);
     cursor.parent();
   } while (!cursor.tree);
-  let i = 0,
-    base = cursor.tree,
-    off = 0;
-  for (;; i++) {
-    off = base.positions[i] + cursor.from;
-    if (off <= node.from && off + base.children[i].length >= node.to) break;
-  }
+  let base = cursor.tree,
+    i = base.children.indexOf(buffer);
   let buf = base.children[i],
     b = buf.buffer,
     newStack = [i];
@@ -34674,7 +34683,7 @@ function createControl(parent, owner, control, params, options) {
   loadControl(control, options).done(constructor => {
     const instance = new constructor(parent, owner);
     if (typeof patch === 'function') {
-      patch(instance);
+      patch(instance, instance._instanceTwigVariables);
     }
     _internal_then(constructor.prototype.render.apply(instance, params), function () {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -35793,6 +35802,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       this.ctx = {};
       this._parent = parent || this;
       this._owner = owner || this;
+      this._instanceTwigVariables = {};
       this._instanceScope = ami.Control._instanceScopeCnt++;
     },
     onReady: function () {},
@@ -35830,10 +35840,10 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
-      if (!('dict' in options)) {
+      if (!isMap(options['dict'])) {
         options['dict'] = {};
       }
-      options.ctx = this.ctx;
+      Object.assign(options.dict, this._instanceTwigVariables);
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
@@ -35841,10 +35851,10 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
-      if (!('dict' in options)) {
+      if (!isMap(options['dict'])) {
         options['dict'] = {};
       }
-      options.ctx = this.ctx;
+      Object.assign(options.dict, this._instanceTwigVariables);
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
@@ -35852,10 +35862,10 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
-      if (!('dict' in options)) {
+      if (!isMap(options['dict'])) {
         options['dict'] = {};
       }
-      options.ctx = this.ctx;
+      Object.assign(options.dict, this._instanceTwigVariables);
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
@@ -38315,7 +38325,7 @@ class AMIWebApp {
     }, {
       "name": "replaceHTML",
       "alias": "",
-      "desc": "Puts a HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "desc": "Puts an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
       "params": [{
         "name": "selector",
         "type": ["string"],
@@ -38345,7 +38355,7 @@ class AMIWebApp {
     }, {
       "name": "prependHTML",
       "alias": "",
-      "desc": "Prepends a HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "desc": "Prepends an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
       "params": [{
         "name": "selector",
         "type": ["string"],
@@ -38375,7 +38385,7 @@ class AMIWebApp {
     }, {
       "name": "appendHTML",
       "alias": "",
-      "desc": "Appends a HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "desc": "Appends an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
       "params": [{
         "name": "selector",
         "type": ["string"],
@@ -38636,7 +38646,7 @@ class AMIWebApp {
     }, {
       "name": "replaceHTML",
       "alias": "",
-      "desc": "Puts a HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "desc": "Puts an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
       "params": [{
         "name": "selector",
         "type": ["string"],
@@ -38666,7 +38676,7 @@ class AMIWebApp {
     }, {
       "name": "prependHTML",
       "alias": "",
-      "desc": "Prepends a HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "desc": "Prepends an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
       "params": [{
         "name": "selector",
         "type": ["string"],
@@ -38696,7 +38706,7 @@ class AMIWebApp {
     }, {
       "name": "appendHTML",
       "alias": "",
-      "desc": "Appends a HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "desc": "Appends an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
       "params": [{
         "name": "selector",
         "type": ["string"],
