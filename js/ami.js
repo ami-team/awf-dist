@@ -21035,6 +21035,7 @@ class EditorView {
     this.dom = document.createElement("div");
     this.dom.appendChild(this.announceDOM);
     this.dom.appendChild(this.scrollDOM);
+    if (config.parent) config.parent.appendChild(this.dom);
     let {
       dispatch
     } = config;
@@ -21056,7 +21057,6 @@ class EditorView {
     this.updateAttrs();
     this.updateState = 0;
     this.requestMeasure();
-    if (config.parent) config.parent.appendChild(this.dom);
   }
   dispatch() {
     for (var _len = arguments.length, input = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -22891,13 +22891,9 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       } = this.manager.tooltipViews[0];
       if (browser.gecko) {
         makeAbsolute = dom.offsetParent != this.container.ownerDocument.body;
-      } else {
-        if (this.view.scaleX != 1 || this.view.scaleY != 1) {
-          makeAbsolute = true;
-        } else if (dom.style.top == Outside && dom.style.left == "0px") {
-          let rect = dom.getBoundingClientRect();
-          makeAbsolute = Math.abs(rect.top + 10000) > 1 || Math.abs(rect.left) > 1;
-        }
+      } else if (dom.style.top == Outside && dom.style.left == "0px") {
+        let rect = dom.getBoundingClientRect();
+        makeAbsolute = Math.abs(rect.top + 10000) > 1 || Math.abs(rect.left) > 1;
       }
     }
     if (makeAbsolute || this.position == "absolute") {
@@ -34264,6 +34260,7 @@ function formatTWIG(twig, dict, twigs) {
     if (!isMap(twigs)) {
       twigs = {};
     }
+    Object.assign(dict, window.ami.awf.globalTwigDict);
     dict['ORIGIN_URL'] = js_AMIRouter.getOriginURL();
     dict['WEBAPP_URL'] = js_AMIRouter.getWebAppURL();
     dict['BOOTSTRAP_VERSION'] = js_AMIWebApp.bootstrapVersion;
@@ -34683,7 +34680,7 @@ function createControl(parent, owner, control, params, options) {
   loadControl(control, options).done(constructor => {
     const instance = new constructor(parent, owner);
     if (typeof patch === 'function') {
-      patch(instance, ami.awf.tempTwigDict);
+      patch(instance, window.ami.awf.globalTwigDict);
     }
     _internal_then(constructor.prototype.render.apply(instance, params), function () {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -35839,10 +35836,6 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
-      if (!isMap(options['dict'])) {
-        options['dict'] = {};
-      }
-      Object.assign(options['dict'], ami.awf.tempTwigDict);
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
@@ -35850,10 +35843,6 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
-      if (!isMap(options['dict'])) {
-        options['dict'] = {};
-      }
-      Object.assign(options['dict'], ami.awf.tempTwigDict);
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
@@ -35861,10 +35850,6 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
-      if (!isMap(options['dict'])) {
-        options['dict'] = {};
-      }
-      Object.assign(options['dict'], ami.awf.tempTwigDict);
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
@@ -35977,7 +35962,7 @@ class AMIWebApp {
       awf: {
         buildVersion: '2.0.0',
         commitIdAbbrev: '{{AMI_COMMIT_ID}}',
-        tempTwigDict: {},
+        globalTwigDict: {},
         command: js_AMICommand,
         router: js_AMIRouter,
         webapp: this,
