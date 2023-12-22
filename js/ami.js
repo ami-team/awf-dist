@@ -34260,7 +34260,6 @@ function formatTWIG(twig, dict, twigs) {
     if (!isMap(twigs)) {
       twigs = {};
     }
-    Object.assign(dict, window.ami.awf.globalTwigDict);
     dict['ORIGIN_URL'] = js_AMIRouter.getOriginURL();
     dict['WEBAPP_URL'] = js_AMIRouter.getWebAppURL();
     dict['BOOTSTRAP_VERSION'] = js_AMIWebApp.bootstrapVersion;
@@ -34680,7 +34679,7 @@ function createControl(parent, owner, control, params, options) {
   loadControl(control, options).done(constructor => {
     const instance = new constructor(parent, owner);
     if (typeof patch === 'function') {
-      patch(instance, window.ami.awf.globalTwigDict);
+      patch(instance, instance._twigDict);
     }
     _internal_then(constructor.prototype.render.apply(instance, params), function () {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -35799,6 +35798,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       this.ctx = {};
       this._parent = parent || this;
       this._owner = owner || this;
+      this._twigDict = {};
       this._instanceScope = ami.Control._instanceScopeCnt++;
     },
     onReady: function () {},
@@ -35836,6 +35836,10 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
+      if (!isMap(options['dict'])) {
+        options['dict'] = {};
+      }
+      Object.assign(options['dict'], this._twigDict);
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
@@ -35843,6 +35847,10 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
+      if (!isMap(options['dict'])) {
+        options['dict'] = {};
+      }
+      Object.assign(options['dict'], this._twigDict);
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
@@ -35850,6 +35858,10 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
       if (!isMap(options)) {
         options = {};
       }
+      if (!isMap(options['dict'])) {
+        options['dict'] = {};
+      }
+      Object.assign(options['dict'], this._twigDict);
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
@@ -35962,7 +35974,6 @@ class AMIWebApp {
       awf: {
         buildVersion: '2.0.0',
         commitIdAbbrev: '{{AMI_COMMIT_ID}}',
-        globalTwigDict: {},
         command: js_AMICommand,
         router: js_AMIRouter,
         webapp: this,
