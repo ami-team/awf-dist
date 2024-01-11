@@ -34451,6 +34451,7 @@ function formatTWIG(twig, dict, twigs) {
     dict['ORIGIN_URL'] = js_AMIRouter.getOriginURL();
     dict['WEBAPP_URL'] = js_AMIRouter.getWebAppURL();
     dict['BOOTSTRAP_VERSION'] = js_AMIWebApp.bootstrapVersion;
+    Object.assign(dict, window.ami.awf.globalTwigDict);
     return ami_twig/* default */.Z.engine.render(twig, dict, twigs);
   };
   asArray(dict).forEach(DICT => {
@@ -36028,7 +36029,6 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
         options['dict'] = {};
       }
       Object.assign(options['dict'], this._twigDict);
-      Object.assign(options['dict'], window.ami.awf.globalTwigDict);
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
@@ -36040,7 +36040,6 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
         options['dict'] = {};
       }
       Object.assign(options['dict'], this._twigDict);
-      Object.assign(options['dict'], window.ami.awf.globalTwigDict);
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
@@ -36052,7 +36051,6 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
         options['dict'] = {};
       }
       Object.assign(options['dict'], this._twigDict);
-      Object.assign(options['dict'], window.ami.awf.globalTwigDict);
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
@@ -36165,11 +36163,14 @@ class AMIWebApp {
       awf: {
         buildVersion: '2.0.0',
         commitIdAbbrev: '{{AMI_COMMIT_ID}}',
+        globalTwigDict: {
+          'BUILD_VERSION': '2.0.0',
+          'COMMIT_ID_ABBREV': '{{AMI_COMMIT_ID}}'
+        },
         command: js_AMICommand,
         router: js_AMIRouter,
         webapp: this,
-        auth: js_AMIAuth,
-        globalTwigDict: {}
+        auth: js_AMIAuth
       },
       vue: {
         version: 'N/A'
