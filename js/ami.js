@@ -34867,7 +34867,7 @@ function createControl(parent, owner, control, params, options) {
   loadControl(control, options).done(constructor => {
     const instance = new constructor(parent, owner);
     if (typeof patch === 'function') {
-      patch(instance, instance._twigDict, window.ami.twigGlobal);
+      patch(instance, instance._twigDict, window.ami.awf.globalTwigDict);
     }
     _internal_then(constructor.prototype.render.apply(instance, params), function () {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -36028,7 +36028,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
         options['dict'] = {};
       }
       Object.assign(options['dict'], this._twigDict);
-      Object.assign(options['dict'], window.ami.twigGlobal);
+      Object.assign(options['dict'], window.ami.awf.globalTwigDict);
       options.scope = this._instanceScope;
       return replaceHTML(selector, twig, options);
     },
@@ -36040,7 +36040,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
         options['dict'] = {};
       }
       Object.assign(options['dict'], this._twigDict);
-      Object.assign(options['dict'], window.ami.twigGlobal);
+      Object.assign(options['dict'], window.ami.awf.globalTwigDict);
       options.scope = this._instanceScope;
       return prependHTML(selector, twig, options);
     },
@@ -36052,7 +36052,7 @@ function _setupCtx(ctxImmutables, ctxDefaults, ctxOptions, ctx, immutables, defa
         options['dict'] = {};
       }
       Object.assign(options['dict'], this._twigDict);
-      Object.assign(options['dict'], window.ami.twigGlobal);
+      Object.assign(options['dict'], window.ami.awf.globalTwigDict);
       options.scope = this._instanceScope;
       return appendHTML(selector, twig, options);
     },
@@ -36169,7 +36169,7 @@ class AMIWebApp {
         router: js_AMIRouter,
         webapp: this,
         auth: js_AMIAuth,
-        twigGlobal: {}
+        globalTwigDict: {}
       },
       vue: {
         version: 'N/A'
