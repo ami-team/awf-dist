@@ -25,12 +25,12 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 14:
+/***/ 3154:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* module decorator */ module = __webpack_require__.hmd(module);
 const amiTwig = {
@@ -1667,7 +1667,7 @@ amiTwig.expr.interpreter = {
 
 /***/ }),
 
-/***/ 6920:
+/***/ 5530:
 /***/ (function(module) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -2242,7 +2242,7 @@ amiTwig.expr.interpreter = {
 
 /***/ }),
 
-/***/ 9279:
+/***/ 7968:
 /***/ ((module) => {
 
 "use strict";
@@ -2325,7 +2325,7 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ 5767:
+/***/ 2187:
 /***/ ((module) => {
 
 "use strict";
@@ -2353,7 +2353,7 @@ module.exports = function (url, options) {
 
 /***/ }),
 
-/***/ 1368:
+/***/ 8095:
 /***/ ((module) => {
 
 "use strict";
@@ -2365,7 +2365,7 @@ module.exports = function (i) {
 
 /***/ }),
 
-/***/ 3980:
+/***/ 4758:
 /***/ ((module) => {
 
 "use strict";
@@ -2459,7 +2459,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 3315:
+/***/ 8675:
 /***/ ((module) => {
 
 "use strict";
@@ -2506,7 +2506,7 @@ module.exports = function encodeUtf8(input) {
 
 /***/ }),
 
-/***/ 4212:
+/***/ 5252:
 /***/ (() => {
 
 "use strict";
@@ -2538,14 +2538,14 @@ if (typeof Object.assign !== "function") {
 
 /***/ }),
 
-/***/ 3400:
+/***/ 6967:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__(8938);
+module.exports = __webpack_require__(2691);
 
 /***/ }),
 
-/***/ 8938:
+/***/ 2691:
 /***/ ((module, exports, __webpack_require__) => {
 
 "use strict";
@@ -3551,12 +3551,12 @@ var __WEBPACK_AMD_DEFINE_RESULT__;
 
 /***/ }),
 
-/***/ 3340:
+/***/ 6693:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function loadMomentJS(root, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(8488)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(8123)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -3705,7 +3705,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 1772:
+/***/ 2725:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 (function ExportLibrary(root, factory) {
@@ -5225,13 +5225,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 379:
+/***/ 6877:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const canPromise = __webpack_require__(4575);
-const QRCode = __webpack_require__(7540);
-const CanvasRenderer = __webpack_require__(6471);
-const SvgRenderer = __webpack_require__(1439);
+const canPromise = __webpack_require__(2063);
+const QRCode = __webpack_require__(7503);
+const CanvasRenderer = __webpack_require__(4165);
+const SvgRenderer = __webpack_require__(7146);
 function renderCanvas(renderFunc, canvas, text, opts, cb) {
   const args = [].slice.call(arguments, 1);
   const argsNum = args.length;
@@ -5295,7 +5295,7 @@ exports.toString = renderCanvas.bind(null, function (data, _, opts) {
 
 /***/ }),
 
-/***/ 4575:
+/***/ 2063:
 /***/ ((module) => {
 
 module.exports = function () {
@@ -5304,10 +5304,10 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ 1407:
+/***/ 3099:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const getSymbolSize = (__webpack_require__(2643).getSymbolSize);
+const getSymbolSize = (__webpack_require__(3340).getSymbolSize);
 exports.getRowColCoords = function getRowColCoords(version) {
   if (version === 1) return [];
   const posCount = Math.floor(version / 7) + 2;
@@ -5337,10 +5337,10 @@ exports.getPositions = function getPositions(version) {
 
 /***/ }),
 
-/***/ 1656:
+/***/ 5367:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-const Mode = __webpack_require__(7076);
+const Mode = __webpack_require__(8674);
 const ALPHA_NUM_CHARS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', '$', '%', '*', '+', '-', '.', '/', ':'];
 function AlphanumericData(data) {
   this.mode = Mode.ALPHANUMERIC;
@@ -5370,7 +5370,7 @@ module.exports = AlphanumericData;
 
 /***/ }),
 
-/***/ 6812:
+/***/ 93:
 /***/ ((module) => {
 
 function BitBuffer() {
@@ -5405,7 +5405,7 @@ module.exports = BitBuffer;
 
 /***/ }),
 
-/***/ 5716:
+/***/ 5458:
 /***/ ((module) => {
 
 function BitMatrix(size) {
@@ -5434,11 +5434,11 @@ module.exports = BitMatrix;
 
 /***/ }),
 
-/***/ 2086:
+/***/ 8148:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-const encodeUtf8 = __webpack_require__(3315);
-const Mode = __webpack_require__(7076);
+const encodeUtf8 = __webpack_require__(8675);
+const Mode = __webpack_require__(8674);
 function ByteData(data) {
   this.mode = Mode.BYTE;
   if (typeof data === 'string') {
@@ -5464,10 +5464,10 @@ module.exports = ByteData;
 
 /***/ }),
 
-/***/ 3897:
+/***/ 3020:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const ECLevel = __webpack_require__(774);
+const ECLevel = __webpack_require__(151);
 const EC_BLOCKS_TABLE = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 2, 2, 4, 1, 2, 4, 4, 2, 4, 4, 4, 2, 4, 6, 5, 2, 4, 6, 6, 2, 5, 8, 8, 4, 5, 8, 8, 4, 5, 8, 11, 4, 8, 10, 11, 4, 9, 12, 16, 4, 9, 16, 16, 6, 10, 12, 18, 6, 10, 17, 16, 6, 11, 16, 19, 6, 13, 18, 21, 7, 14, 21, 25, 8, 16, 20, 25, 8, 17, 23, 25, 9, 17, 23, 34, 9, 18, 25, 30, 10, 20, 27, 32, 12, 21, 29, 35, 12, 23, 34, 37, 12, 25, 34, 40, 13, 26, 35, 42, 14, 28, 38, 45, 15, 29, 40, 48, 16, 31, 43, 51, 17, 33, 45, 54, 18, 35, 48, 57, 19, 37, 51, 60, 19, 38, 53, 63, 20, 40, 56, 66, 21, 43, 59, 70, 22, 45, 62, 74, 24, 47, 65, 77, 25, 49, 68, 81];
 const EC_CODEWORDS_TABLE = [7, 10, 13, 17, 10, 16, 22, 28, 15, 26, 36, 44, 20, 36, 52, 64, 26, 48, 72, 88, 36, 64, 96, 112, 40, 72, 108, 130, 48, 88, 132, 156, 60, 110, 160, 192, 72, 130, 192, 224, 80, 150, 224, 264, 96, 176, 260, 308, 104, 198, 288, 352, 120, 216, 320, 384, 132, 240, 360, 432, 144, 280, 408, 480, 168, 308, 448, 532, 180, 338, 504, 588, 196, 364, 546, 650, 224, 416, 600, 700, 224, 442, 644, 750, 252, 476, 690, 816, 270, 504, 750, 900, 300, 560, 810, 960, 312, 588, 870, 1050, 336, 644, 952, 1110, 360, 700, 1020, 1200, 390, 728, 1050, 1260, 420, 784, 1140, 1350, 450, 812, 1200, 1440, 480, 868, 1290, 1530, 510, 924, 1350, 1620, 540, 980, 1440, 1710, 570, 1036, 1530, 1800, 570, 1064, 1590, 1890, 600, 1120, 1680, 1980, 630, 1204, 1770, 2100, 660, 1260, 1860, 2220, 720, 1316, 1950, 2310, 750, 1372, 2040, 2430];
 exports.getBlocksCount = function getBlocksCount(version, errorCorrectionLevel) {
@@ -5501,7 +5501,7 @@ exports.getTotalCodewordsCount = function getTotalCodewordsCount(version, errorC
 
 /***/ }),
 
-/***/ 774:
+/***/ 151:
 /***/ ((__unused_webpack_module, exports) => {
 
 exports.L = {
@@ -5554,10 +5554,10 @@ exports.from = function from(value, defaultValue) {
 
 /***/ }),
 
-/***/ 262:
+/***/ 4726:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const getSymbolSize = (__webpack_require__(2643).getSymbolSize);
+const getSymbolSize = (__webpack_require__(3340).getSymbolSize);
 const FINDER_PATTERN_SIZE = 7;
 exports.getPositions = function getPositions(version) {
   const size = getSymbolSize(version);
@@ -5566,10 +5566,10 @@ exports.getPositions = function getPositions(version) {
 
 /***/ }),
 
-/***/ 4228:
+/***/ 3487:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const Utils = __webpack_require__(2643);
+const Utils = __webpack_require__(3340);
 const G15 = 1 << 10 | 1 << 8 | 1 << 5 | 1 << 4 | 1 << 2 | 1 << 1 | 1 << 0;
 const G15_MASK = 1 << 14 | 1 << 12 | 1 << 10 | 1 << 4 | 1 << 1;
 const G15_BCH = Utils.getBCHDigit(G15);
@@ -5584,7 +5584,7 @@ exports.getEncodedBits = function getEncodedBits(errorCorrectionLevel, mask) {
 
 /***/ }),
 
-/***/ 755:
+/***/ 7009:
 /***/ ((__unused_webpack_module, exports) => {
 
 const EXP_TABLE = new Uint8Array(512);
@@ -5617,11 +5617,11 @@ exports.mul = function mul(x, y) {
 
 /***/ }),
 
-/***/ 4438:
+/***/ 4271:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-const Mode = __webpack_require__(7076);
-const Utils = __webpack_require__(2643);
+const Mode = __webpack_require__(8674);
+const Utils = __webpack_require__(3340);
 function KanjiData(data) {
   this.mode = Mode.KANJI;
   this.data = data;
@@ -5654,7 +5654,7 @@ module.exports = KanjiData;
 
 /***/ }),
 
-/***/ 6051:
+/***/ 5106:
 /***/ ((__unused_webpack_module, exports) => {
 
 exports.Patterns = {
@@ -5796,11 +5796,11 @@ exports.getBestMask = function getBestMask(data, setupFormatFunc) {
 
 /***/ }),
 
-/***/ 7076:
+/***/ 8674:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const VersionCheck = __webpack_require__(9834);
-const Regex = __webpack_require__(751);
+const VersionCheck = __webpack_require__(7432);
+const Regex = __webpack_require__(4846);
 exports.NUMERIC = {
   id: 'Numeric',
   bit: 1 << 0,
@@ -5873,10 +5873,10 @@ exports.from = function from(value, defaultValue) {
 
 /***/ }),
 
-/***/ 2624:
+/***/ 2127:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-const Mode = __webpack_require__(7076);
+const Mode = __webpack_require__(8674);
 function NumericData(data) {
   this.mode = Mode.NUMERIC;
   this.data = data.toString();
@@ -5908,10 +5908,10 @@ module.exports = NumericData;
 
 /***/ }),
 
-/***/ 4990:
+/***/ 3075:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const GF = __webpack_require__(755);
+const GF = __webpack_require__(7009);
 exports.mul = function mul(p1, p2) {
   const coeff = new Uint8Array(p1.length + p2.length - 1);
   for (let i = 0; i < p1.length; i++) {
@@ -5944,22 +5944,22 @@ exports.generateECPolynomial = function generateECPolynomial(degree) {
 
 /***/ }),
 
-/***/ 7540:
+/***/ 7503:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const Utils = __webpack_require__(2643);
-const ECLevel = __webpack_require__(774);
-const BitBuffer = __webpack_require__(6812);
-const BitMatrix = __webpack_require__(5716);
-const AlignmentPattern = __webpack_require__(1407);
-const FinderPattern = __webpack_require__(262);
-const MaskPattern = __webpack_require__(6051);
-const ECCode = __webpack_require__(3897);
-const ReedSolomonEncoder = __webpack_require__(5373);
-const Version = __webpack_require__(9466);
-const FormatInfo = __webpack_require__(4228);
-const Mode = __webpack_require__(7076);
-const Segments = __webpack_require__(9504);
+const Utils = __webpack_require__(3340);
+const ECLevel = __webpack_require__(151);
+const BitBuffer = __webpack_require__(93);
+const BitMatrix = __webpack_require__(5458);
+const AlignmentPattern = __webpack_require__(3099);
+const FinderPattern = __webpack_require__(4726);
+const MaskPattern = __webpack_require__(5106);
+const ECCode = __webpack_require__(3020);
+const ReedSolomonEncoder = __webpack_require__(9394);
+const Version = __webpack_require__(5617);
+const FormatInfo = __webpack_require__(3487);
+const Mode = __webpack_require__(8674);
+const Segments = __webpack_require__(6351);
 function setupFinderPattern(matrix, version) {
   const size = matrix.size;
   const pos = FinderPattern.getPositions(version);
@@ -6200,10 +6200,10 @@ exports.create = function create(data, options) {
 
 /***/ }),
 
-/***/ 5373:
+/***/ 9394:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-const Polynomial = __webpack_require__(4990);
+const Polynomial = __webpack_require__(3075);
 function ReedSolomonEncoder(degree) {
   this.genPoly = undefined;
   this.degree = degree;
@@ -6232,7 +6232,7 @@ module.exports = ReedSolomonEncoder;
 
 /***/ }),
 
-/***/ 751:
+/***/ 4846:
 /***/ ((__unused_webpack_module, exports) => {
 
 const numeric = '[0-9]+';
@@ -6260,17 +6260,17 @@ exports.testAlphanumeric = function testAlphanumeric(str) {
 
 /***/ }),
 
-/***/ 9504:
+/***/ 6351:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const Mode = __webpack_require__(7076);
-const NumericData = __webpack_require__(2624);
-const AlphanumericData = __webpack_require__(1656);
-const ByteData = __webpack_require__(2086);
-const KanjiData = __webpack_require__(4438);
-const Regex = __webpack_require__(751);
-const Utils = __webpack_require__(2643);
-const dijkstra = __webpack_require__(3980);
+const Mode = __webpack_require__(8674);
+const NumericData = __webpack_require__(2127);
+const AlphanumericData = __webpack_require__(5367);
+const ByteData = __webpack_require__(8148);
+const KanjiData = __webpack_require__(4271);
+const Regex = __webpack_require__(4846);
+const Utils = __webpack_require__(3340);
+const dijkstra = __webpack_require__(4758);
 function getStringByteLength(str) {
   return unescape(encodeURIComponent(str)).length;
 }
@@ -6460,7 +6460,7 @@ exports.rawSplit = function rawSplit(data) {
 
 /***/ }),
 
-/***/ 2643:
+/***/ 3340:
 /***/ ((__unused_webpack_module, exports) => {
 
 let toSJISFunction;
@@ -6496,7 +6496,7 @@ exports.toSJIS = function toSJIS(kanji) {
 
 /***/ }),
 
-/***/ 9834:
+/***/ 7432:
 /***/ ((__unused_webpack_module, exports) => {
 
 exports.isValid = function isValid(version) {
@@ -6505,14 +6505,14 @@ exports.isValid = function isValid(version) {
 
 /***/ }),
 
-/***/ 9466:
+/***/ 5617:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const Utils = __webpack_require__(2643);
-const ECCode = __webpack_require__(3897);
-const ECLevel = __webpack_require__(774);
-const Mode = __webpack_require__(7076);
-const VersionCheck = __webpack_require__(9834);
+const Utils = __webpack_require__(3340);
+const ECCode = __webpack_require__(3020);
+const ECLevel = __webpack_require__(151);
+const Mode = __webpack_require__(8674);
+const VersionCheck = __webpack_require__(7432);
 const G18 = 1 << 12 | 1 << 11 | 1 << 10 | 1 << 9 | 1 << 8 | 1 << 5 | 1 << 2 | 1 << 0;
 const G18_BCH = Utils.getBCHDigit(G18);
 function getBestVersionForDataLength(mode, length, errorCorrectionLevel) {
@@ -6600,10 +6600,10 @@ exports.getEncodedBits = function getEncodedBits(version) {
 
 /***/ }),
 
-/***/ 6471:
+/***/ 4165:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const Utils = __webpack_require__(5832);
+const Utils = __webpack_require__(9984);
 function clearCanvas(ctx, canvas, size) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   if (!canvas.style) canvas.style = {};
@@ -6653,10 +6653,10 @@ exports.renderToDataURL = function renderToDataURL(qrData, canvas, options) {
 
 /***/ }),
 
-/***/ 1439:
+/***/ 7146:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-const Utils = __webpack_require__(5832);
+const Utils = __webpack_require__(9984);
 function getColorAttrib(color, attrib) {
   const alpha = color.a / 255;
   const str = attrib + '="' + color.hex + '"';
@@ -6711,7 +6711,7 @@ exports.render = function render(qrData, options, cb) {
 
 /***/ }),
 
-/***/ 5832:
+/***/ 9984:
 /***/ ((__unused_webpack_module, exports) => {
 
 function hex2rgba(hex) {
@@ -6791,25 +6791,25 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 
 /***/ }),
 
-/***/ 8184:
+/***/ 6142:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1368);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8095);
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9279);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7968);
 /* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5767);
+/* harmony import */ var _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2187);
 /* harmony import */ var _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(2976), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(6527), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(3258), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(6411), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
@@ -8899,16 +8899,16 @@ url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("woff");
 
 /***/ }),
 
-/***/ 8001:
+/***/ 2211:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1368);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8095);
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9279);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7968);
 /* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -8934,46 +8934,46 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.flatpickr-calendar{background:transpa
 
 /***/ }),
 
-/***/ 683:
+/***/ 7399:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1368);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8095);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9279);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7968);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_bootstrap_icons_font_bootstrap_icons_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8184);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5767);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_bootstrap_icons_font_bootstrap_icons_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6142);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2187);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3__);
 // Imports
 
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(7446), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(414), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(7058), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(9824), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(6929), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(2196), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(1480), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(619), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(2989), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(5512), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(5501), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_11___ = new URL(/* asset import */ __webpack_require__(6758), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_12___ = new URL(/* asset import */ __webpack_require__(9604), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_13___ = new URL(/* asset import */ __webpack_require__(5463), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_14___ = new URL(/* asset import */ __webpack_require__(8427), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_15___ = new URL(/* asset import */ __webpack_require__(2883), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_16___ = new URL(/* asset import */ __webpack_require__(7404), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_17___ = new URL(/* asset import */ __webpack_require__(6592), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_18___ = new URL(/* asset import */ __webpack_require__(349), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(4491), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(9419), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(3363), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(2045), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(2221), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(1683), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(5299), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(2907), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(2213), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(805), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(8078), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL(/* asset import */ __webpack_require__(410), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL(/* asset import */ __webpack_require__(8232), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL(/* asset import */ __webpack_require__(4996), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL(/* asset import */ __webpack_require__(8456), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL(/* asset import */ __webpack_require__(3819), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL(/* asset import */ __webpack_require__(1712), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL(/* asset import */ __webpack_require__(3552), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL(/* asset import */ __webpack_require__(1195), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_node_modules_bootstrap_icons_font_bootstrap_icons_css__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_node_modules_bootstrap_icons_font_bootstrap_icons_css__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_0___, { hash: "?#iefix" });
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_1___);
@@ -9004,7 +9004,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Open Sans";fon
 
 /***/ }),
 
-/***/ 7371:
+/***/ 850:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9012,19 +9012,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5072);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7825);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7659);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5056);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(540);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1113);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(683);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7399);
 
       
       
@@ -9046,17 +9046,17 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A, options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A.locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A.locals : undefined);
 
 
 /***/ }),
 
-/***/ 3379:
+/***/ 5072:
 /***/ ((module) => {
 
 "use strict";
@@ -9147,7 +9147,7 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ 569:
+/***/ 7659:
 /***/ ((module) => {
 
 "use strict";
@@ -9188,7 +9188,7 @@ module.exports = insertBySelector;
 
 /***/ }),
 
-/***/ 9216:
+/***/ 540:
 /***/ ((module) => {
 
 "use strict";
@@ -9205,7 +9205,7 @@ module.exports = insertStyleElement;
 
 /***/ }),
 
-/***/ 3565:
+/***/ 5056:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9222,7 +9222,7 @@ module.exports = setAttributesWithoutAttributes;
 
 /***/ }),
 
-/***/ 7795:
+/***/ 7825:
 /***/ ((module) => {
 
 "use strict";
@@ -9290,7 +9290,7 @@ module.exports = domAPI;
 
 /***/ }),
 
-/***/ 4589:
+/***/ 1113:
 /***/ ((module) => {
 
 "use strict";
@@ -9311,7 +9311,7 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 2976:
+/***/ 3258:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9319,7 +9319,7 @@ module.exports = __webpack_require__.p + "assets/fonts/bootstrap-icons.woff2";
 
 /***/ }),
 
-/***/ 6527:
+/***/ 6411:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9327,7 +9327,7 @@ module.exports = __webpack_require__.p + "assets/fonts/bootstrap-icons.woff";
 
 /***/ }),
 
-/***/ 2196:
+/***/ 1683:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9335,7 +9335,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Light-webfont.eo
 
 /***/ }),
 
-/***/ 2989:
+/***/ 2213:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9343,7 +9343,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Light-webfont.sv
 
 /***/ }),
 
-/***/ 5512:
+/***/ 805:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9351,7 +9351,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Light-webfont.tt
 
 /***/ }),
 
-/***/ 619:
+/***/ 2907:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9359,7 +9359,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Light-webfont.wo
 
 /***/ }),
 
-/***/ 1480:
+/***/ 5299:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9367,7 +9367,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Light-webfont.wo
 
 /***/ }),
 
-/***/ 7446:
+/***/ 4491:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9375,7 +9375,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Regular-webfont.
 
 /***/ }),
 
-/***/ 9824:
+/***/ 2045:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9383,7 +9383,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Regular-webfont.
 
 /***/ }),
 
-/***/ 6929:
+/***/ 2221:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9391,7 +9391,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Regular-webfont.
 
 /***/ }),
 
-/***/ 7058:
+/***/ 3363:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9399,7 +9399,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Regular-webfont.
 
 /***/ }),
 
-/***/ 414:
+/***/ 9419:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9407,7 +9407,7 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Regular-webfont.
 
 /***/ }),
 
-/***/ 2883:
+/***/ 3819:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9415,7 +9415,7 @@ module.exports = __webpack_require__.p + "assets/fonts/Trochut-Regular.ttf";
 
 /***/ }),
 
-/***/ 5501:
+/***/ 8078:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9423,7 +9423,7 @@ module.exports = __webpack_require__.p + "assets/fonts/ami.eot";
 
 /***/ }),
 
-/***/ 5463:
+/***/ 4996:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9431,7 +9431,7 @@ module.exports = __webpack_require__.p + "assets/fonts/ami.svg";
 
 /***/ }),
 
-/***/ 8427:
+/***/ 8456:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9439,7 +9439,7 @@ module.exports = __webpack_require__.p + "assets/fonts/ami.ttf";
 
 /***/ }),
 
-/***/ 9604:
+/***/ 8232:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9447,7 +9447,7 @@ module.exports = __webpack_require__.p + "assets/fonts/ami.woff";
 
 /***/ }),
 
-/***/ 6758:
+/***/ 410:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9455,7 +9455,7 @@ module.exports = __webpack_require__.p + "assets/fonts/ami.woff2";
 
 /***/ }),
 
-/***/ 7404:
+/***/ 1712:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9463,7 +9463,7 @@ module.exports = __webpack_require__.p + "assets/images/blueprint-dark.png";
 
 /***/ }),
 
-/***/ 6592:
+/***/ 3552:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9471,7 +9471,7 @@ module.exports = __webpack_require__.p + "assets/images/stripe1.png";
 
 /***/ }),
 
-/***/ 349:
+/***/ 1195:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9479,7 +9479,7 @@ module.exports = __webpack_require__.p + "assets/images/stripe2.png";
 
 /***/ }),
 
-/***/ 8488:
+/***/ 8123:
 /***/ ((module) => {
 
 "use strict";
@@ -9487,7 +9487,7 @@ module.exports = moment;
 
 /***/ }),
 
-/***/ 5782:
+/***/ 2866:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9502,23 +9502,23 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 // EXTERNAL MODULE: ./node_modules/@lezer/lr/dist/index.js
-var dist = __webpack_require__(7941);
+var dist = __webpack_require__(2612);
 // EXTERNAL MODULE: ./node_modules/@lezer/highlight/dist/index.js
-var highlight_dist = __webpack_require__(3740);
+var highlight_dist = __webpack_require__(5016);
 ;// CONCATENATED MODULE: ./node_modules/@lezer/json/dist/index.js
 
 
-const jsonHighlighting = (0,highlight_dist/* styleTags */.Gv)({
-  String: highlight_dist/* tags */.pJ.string,
-  Number: highlight_dist/* tags */.pJ.number,
-  "True False": highlight_dist/* tags */.pJ.bool,
-  PropertyName: highlight_dist/* tags */.pJ.propertyName,
-  Null: highlight_dist/* tags */.pJ.null,
-  ",": highlight_dist/* tags */.pJ.separator,
-  "[ ]": highlight_dist/* tags */.pJ.squareBracket,
-  "{ }": highlight_dist/* tags */.pJ.brace
+const jsonHighlighting = (0,highlight_dist/* styleTags */.pn)({
+  String: highlight_dist/* tags */._A.string,
+  Number: highlight_dist/* tags */._A.number,
+  "True False": highlight_dist/* tags */._A.bool,
+  PropertyName: highlight_dist/* tags */._A.propertyName,
+  Null: highlight_dist/* tags */._A.null,
+  ",": highlight_dist/* tags */._A.separator,
+  "[ ]": highlight_dist/* tags */._A.squareBracket,
+  "{ }": highlight_dist/* tags */._A.brace
 });
-const parser = dist/* LRParser */.WQ.deserialize({
+const parser = dist/* LRParser */.U1.deserialize({
   version: 14,
   states: "$bOVQPOOOOQO'#Cb'#CbOnQPO'#CeOvQPO'#CjOOQO'#Cp'#CpQOQPOOOOQO'#Cg'#CgO}QPO'#CfO!SQPO'#CrOOQO,59P,59PO![QPO,59PO!aQPO'#CuOOQO,59U,59UO!iQPO,59UOVQPO,59QOqQPO'#CkO!nQPO,59^OOQO1G.k1G.kOVQPO'#ClO!vQPO,59aOOQO1G.p1G.pOOQO1G.l1G.lOOQO,59V,59VOOQO-E6i-E6iOOQO,59W,59WOOQO-E6j-E6j",
   stateData: "#O~OcOS~OQSORSOSSOTSOWQO]ROePO~OVXOeUO~O[[O~PVOg^O~Oh_OVfX~OVaO~OhbO[iX~O[dO~Oh_OVfa~OhbO[ia~O",
@@ -9538,7 +9538,7 @@ const parser = dist/* LRParser */.WQ.deserialize({
 });
 
 // EXTERNAL MODULE: ./node_modules/@codemirror/language/dist/index.js
-var language_dist = __webpack_require__(626);
+var language_dist = __webpack_require__(4658);
 ;// CONCATENATED MODULE: ./node_modules/@codemirror/lang-json/dist/index.js
 
 
@@ -9563,18 +9563,18 @@ function getErrorPosition(error, doc) {
   if (m = error.message.match(/at line (\d+) column (\d+)/)) return Math.min(doc.line(+m[1]).from + +m[2] - 1, doc.length);
   return 0;
 }
-const jsonLanguage = language_dist/* LRLanguage */.qp.define({
+const jsonLanguage = language_dist/* LRLanguage */.bj.define({
   name: "json",
   parser: parser.configure({
-    props: [language_dist/* indentNodeProp */.uj.add({
-      Object: (0,language_dist/* continuedIndent */.tC)({
+    props: [language_dist/* indentNodeProp */.Oh.add({
+      Object: (0,language_dist/* continuedIndent */.mz)({
         except: /^\s*\}/
       }),
-      Array: (0,language_dist/* continuedIndent */.tC)({
+      Array: (0,language_dist/* continuedIndent */.mz)({
         except: /^\s*\]/
       })
-    }), language_dist/* foldNodeProp */.x0.add({
-      "Object Array": language_dist/* foldInside */.Dv
+    }), language_dist/* foldNodeProp */.b_.add({
+      "Object Array": language_dist/* foldInside */.yd
     })]
   }),
   languageData: {
@@ -9585,51 +9585,51 @@ const jsonLanguage = language_dist/* LRLanguage */.qp.define({
   }
 });
 function json() {
-  return new language_dist/* LanguageSupport */.ri(jsonLanguage);
+  return new language_dist/* LanguageSupport */.Yy(jsonLanguage);
 }
 
 
 /***/ }),
 
-/***/ 626:
+/***/ 4658:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Be: () => (/* binding */ ParseContext),
-/* harmony export */   Dv: () => (/* binding */ foldInside),
-/* harmony export */   Gn: () => (/* binding */ IndentContext),
-/* harmony export */   K0: () => (/* binding */ getIndentation),
-/* harmony export */   KC: () => (/* binding */ sublanguageProp),
-/* harmony export */   R_: () => (/* binding */ defaultHighlightStyle),
-/* harmony export */   SQ: () => (/* binding */ Language),
-/* harmony export */   SS: () => (/* binding */ indentString),
-/* harmony export */   Um: () => (/* binding */ matchBrackets),
-/* harmony export */   a0: () => (/* binding */ bracketMatchingHandle),
-/* harmony export */   c: () => (/* binding */ indentUnit),
-/* harmony export */   c6: () => (/* binding */ LanguageDescription),
-/* harmony export */   il: () => (/* binding */ StreamLanguage),
-/* harmony export */   kU: () => (/* binding */ defineLanguageFacet),
-/* harmony export */   mi: () => (/* binding */ foldGutter),
-/* harmony export */   nF: () => (/* binding */ syntaxHighlighting),
-/* harmony export */   pp: () => (/* binding */ languageDataProp),
-/* harmony export */   qp: () => (/* binding */ LRLanguage),
-/* harmony export */   qz: () => (/* binding */ syntaxTree),
-/* harmony export */   ri: () => (/* binding */ LanguageSupport),
-/* harmony export */   rs: () => (/* binding */ foldService),
-/* harmony export */   tC: () => (/* binding */ continuedIndent),
-/* harmony export */   uj: () => (/* binding */ indentNodeProp),
-/* harmony export */   vw: () => (/* binding */ delimitedIndent),
-/* harmony export */   x0: () => (/* binding */ foldNodeProp),
-/* harmony export */   y1: () => (/* binding */ getIndentUnit),
-/* harmony export */   ze: () => (/* binding */ flatIndent)
+/* harmony export */   Ay: () => (/* binding */ delimitedIndent),
+/* harmony export */   EI: () => (/* binding */ indentString),
+/* harmony export */   KB: () => (/* binding */ IndentContext),
+/* harmony export */   Lv: () => (/* binding */ foldGutter),
+/* harmony export */   Oh: () => (/* binding */ indentNodeProp),
+/* harmony export */   Q0: () => (/* binding */ sublanguageProp),
+/* harmony export */   Q_: () => (/* binding */ bracketMatchingHandle),
+/* harmony export */   TM: () => (/* binding */ Language),
+/* harmony export */   Tg: () => (/* binding */ StreamLanguage),
+/* harmony export */   Xt: () => (/* binding */ indentUnit),
+/* harmony export */   Yy: () => (/* binding */ LanguageSupport),
+/* harmony export */   Zt: () => (/* binding */ defaultHighlightStyle),
+/* harmony export */   _Y: () => (/* binding */ flatIndent),
+/* harmony export */   _v: () => (/* binding */ getIndentation),
+/* harmony export */   b_: () => (/* binding */ foldNodeProp),
+/* harmony export */   bj: () => (/* binding */ LRLanguage),
+/* harmony export */   iB: () => (/* binding */ languageDataProp),
+/* harmony export */   jU: () => (/* binding */ matchBrackets),
+/* harmony export */   mv: () => (/* binding */ syntaxTree),
+/* harmony export */   mz: () => (/* binding */ continuedIndent),
+/* harmony export */   nq: () => (/* binding */ ParseContext),
+/* harmony export */   p9: () => (/* binding */ defineLanguageFacet),
+/* harmony export */   t: () => (/* binding */ foldService),
+/* harmony export */   t$: () => (/* binding */ LanguageDescription),
+/* harmony export */   tp: () => (/* binding */ getIndentUnit),
+/* harmony export */   y9: () => (/* binding */ syntaxHighlighting),
+/* harmony export */   yd: () => (/* binding */ foldInside)
 /* harmony export */ });
 /* unused harmony exports DocInput, HighlightStyle, StringStream, TreeIndentContext, bidiIsolates, bracketMatching, codeFolding, ensureSyntaxTree, foldAll, foldCode, foldEffect, foldKeymap, foldState, foldable, foldedRanges, forceParsing, highlightingFor, indentOnInput, indentRange, indentService, language, syntaxParserRunning, syntaxTreeAvailable, toggleFold, unfoldAll, unfoldCode, unfoldEffect */
-/* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2064);
-/* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5854);
-/* harmony import */ var _codemirror_view__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8335);
-/* harmony import */ var _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3740);
-/* harmony import */ var style_mod__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5882);
+/* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(413);
+/* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5817);
+/* harmony import */ var _codemirror_view__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5177);
+/* harmony import */ var _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5016);
+/* harmony import */ var style_mod__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1785);
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
@@ -9639,13 +9639,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 var _a;
-const languageDataProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
+const languageDataProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 function defineLanguageFacet(baseData) {
-  return _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
+  return _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
     combine: baseData ? values => values.concat(baseData) : undefined
   });
 }
-const sublanguageProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
+const sublanguageProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 class Language {
   constructor(data, parser, extraExtensions, name) {
     if (extraExtensions === void 0) {
@@ -9656,13 +9656,13 @@ class Language {
     }
     this.data = data;
     this.name = name;
-    if (!_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .yy.prototype.hasOwnProperty("tree")) Object.defineProperty(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .yy.prototype, "tree", {
+    if (!_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t.prototype.hasOwnProperty("tree")) Object.defineProperty(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t.prototype, "tree", {
       get() {
         return syntaxTree(this);
       }
     });
     this.parser = parser;
-    this.extension = [language.of(this), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .yy.languageData.of((state, pos, side) => {
+    this.extension = [language.of(this), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t.languageData.of((state, pos, side) => {
       let top = topNodeAt(state, pos, side),
         data = top.type.prop(languageDataProp);
       if (!data) return [];
@@ -9703,7 +9703,7 @@ class Language {
         });
         return;
       }
-      let mount = tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.mounted);
+      let mount = tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.mounted);
       if (mount) {
         if (mount.tree.prop(languageDataProp) == this.data) {
           if (mount.overlay) {
@@ -9727,7 +9727,7 @@ class Language {
       }
       for (let i = 0; i < tree.children.length; i++) {
         let ch = tree.children[i];
-        if (ch instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp) explore(ch, tree.positions[i] + from);
+        if (ch instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH) explore(ch, tree.positions[i] + from);
       }
     };
     explore(syntaxTree(state), 0);
@@ -9737,12 +9737,12 @@ class Language {
     return true;
   }
 }
-Language.setState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.define();
+Language.setState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.define();
 function topNodeAt(state, pos, side) {
   let topLang = state.facet(language),
     tree = syntaxTree(state).topNode;
   if (!topLang || topLang.allowsNesting) {
-    for (let node = tree; node; node = node.enter(pos, side, _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode */ .vj.ExcludeBuffers)) if (node.type.isTop) tree = node;
+    for (let node = tree; node; node = node.enter(pos, side, _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode */ .Qj.ExcludeBuffers)) if (node.type.isTop) tree = node;
   }
   return tree;
 }
@@ -9766,7 +9766,7 @@ class LRLanguage extends Language {
 }
 function syntaxTree(state) {
   let field = state.field(Language.state, false);
-  return field ? field.tree : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty;
+  return field ? field.tree : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH.empty;
 }
 function ensureSyntaxTree(state, upto, timeout) {
   if (timeout === void 0) {
@@ -9851,14 +9851,14 @@ class ParseContext {
     this.tempSkipped = [];
   }
   static create(parser, state, viewport) {
-    return new ParseContext(parser, state, [], _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty, 0, viewport, [], null);
+    return new ParseContext(parser, state, [], _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH.empty, 0, viewport, [], null);
   }
   startParse() {
     return this.parser.startParse(new DocInput(this.state.doc), this.fragments);
   }
   work(until, upto) {
     if (upto != null && upto >= this.state.doc.length) upto = undefined;
-    if (this.tree != _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty && this.isDone(upto !== null && upto !== void 0 ? upto : this.state.doc.length)) {
+    if (this.tree != _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH.empty && this.isDone(upto !== null && upto !== void 0 ? upto : this.state.doc.length)) {
       this.takeTree();
       return true;
     }
@@ -9873,7 +9873,7 @@ class ParseContext {
       for (;;) {
         let done = this.parse.advance();
         if (done) {
-          this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.addTree(done, this.fragments, this.parse.stoppedAt != null));
+          this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .rr.addTree(done, this.fragments, this.parse.stoppedAt != null));
           this.treeLen = (_a = this.parse.stoppedAt) !== null && _a !== void 0 ? _a : this.state.doc.length;
           this.tree = done;
           this.parse = null;
@@ -9892,7 +9892,7 @@ class ParseContext {
       });
       this.treeLen = pos;
       this.tree = tree;
-      this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.addTree(this.tree, this.fragments, true));
+      this.fragments = this.withoutTempSkipped(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .rr.addTree(this.tree, this.fragments, true));
       this.parse = null;
     }
   }
@@ -9926,8 +9926,8 @@ class ParseContext {
         fromB,
         toB
       }));
-      fragments = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.applyChanges(fragments, ranges);
-      tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty;
+      fragments = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .rr.applyChanges(fragments, ranges);
+      tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH.empty;
       treeLen = 0;
       viewport = {
         from: changes.mapPos(viewport.from, -1),
@@ -9979,7 +9979,7 @@ class ParseContext {
     });
   }
   static getSkippingParser(until) {
-    return new class extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ ._b {
+    return new class extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .iX {
       createParse(input, fragments, ranges) {
         let from = ranges[0].from,
           to = ranges[ranges.length - 1].to;
@@ -9995,7 +9995,7 @@ class ParseContext {
               if (until) cx.scheduleOn = cx.scheduleOn ? Promise.all([cx.scheduleOn, until]) : until;
             }
             this.parsedPos = to;
-            return new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.none, [], [], to - from);
+            return new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Z6.none, [], [], to - from);
           },
           stoppedAt: null,
           stopAt() {}
@@ -10014,7 +10014,7 @@ class ParseContext {
   }
 }
 function cutFragments(fragments, from, to) {
-  return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .i9.applyChanges(fragments, [{
+  return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .TreeFragment */ .rr.applyChanges(fragments, [{
     fromA: from,
     toA: to,
     fromB: from,
@@ -10043,7 +10043,7 @@ class LanguageState {
     return new LanguageState(parseState);
   }
 }
-Language.state = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .QQ.define({
+Language.state = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .sU.define({
   create: LanguageState.init,
   update(value, tr) {
     for (var _iterator5 = _createForOfIteratorHelperLoose(tr.effects), _step5; !(_step5 = _iterator5()).done;) {
@@ -10068,7 +10068,7 @@ if (typeof requestIdleCallback != "undefined") requestIdle = callback => {
   return () => idle < 0 ? clearTimeout(timeout) : cancelIdleCallback(idle);
 };
 const isInputPending = typeof navigator != "undefined" && ((_a = navigator.scheduling) === null || _a === void 0 ? void 0 : _a.isInputPending) ? () => navigator.scheduling.isInputPending() : null;
-const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .lg.fromClass(class ParseWorker {
+const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(class ParseWorker {
   constructor(view) {
     this.view = view;
     this.working = null;
@@ -10129,7 +10129,7 @@ const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin 
   checkAsyncSchedule(cx) {
     if (cx.scheduleOn) {
       this.workScheduled++;
-      cx.scheduleOn.then(() => this.scheduleWork()).catch(err => (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .logException */ .OO)(this.view.state, err)).then(() => this.workScheduled--);
+      cx.scheduleOn.then(() => this.scheduleWork()).catch(err => (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .logException */ .c_)(this.view.state, err)).then(() => this.workScheduled--);
       cx.scheduleOn = null;
     }
   }
@@ -10146,11 +10146,11 @@ const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin 
     }
   }
 });
-const language = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
+const language = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
   combine(languages) {
     return languages.length ? languages[0] : null;
   },
-  enables: language => [Language.state, parseWorker, _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.contentAttributes.compute([language], state => {
+  enables: language => [Language.state, parseWorker, _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.contentAttributes.compute([language], state => {
     let lang = state.facet(language);
     return lang && lang.name ? {
       "data-language": lang.name
@@ -10233,8 +10233,8 @@ class LanguageDescription {
     return null;
   }
 }
-const indentService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define();
-const indentUnit = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
+const indentService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define();
+const indentUnit = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
   combine: values => {
     if (!values.length) return "  ";
     let unit = values[0];
@@ -10261,7 +10261,7 @@ function indentString(state, cols) {
   return result;
 }
 function getIndentation(context, pos) {
-  if (context instanceof _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .yy) context = new IndentContext(context);
+  if (context instanceof _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t) context = new IndentContext(context);
   for (var _iterator11 = _createForOfIteratorHelperLoose(context.state.facet(indentService)), _step11; !(_step11 = _iterator11()).done;) {
     let service = _step11.value;
     let result = service(context, pos);
@@ -10358,7 +10358,7 @@ class IndentContext {
     if (pos === void 0) {
       pos = line.length;
     }
-    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .countColumn */ .IS)(line, this.state.tabSize, pos);
+    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .countColumn */ .y$)(line, this.state.tabSize, pos);
   }
   lineIndent(pos, bias) {
     if (bias === void 0) {
@@ -10379,7 +10379,7 @@ class IndentContext {
     return this.options.simulateBreak || null;
   }
 }
-const indentNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
+const indentNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 function syntaxIndentation(cx, ast, pos) {
   let stack = ast.resolveStack(pos);
   let inner = stack.node.enterUnfinishedNodesBefore(pos);
@@ -10408,7 +10408,7 @@ function indentStrategy(tree) {
   if (strategy) return strategy;
   let first = tree.firstChild,
     close;
-  if (first && (close = first.type.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.closedBy))) {
+  if (first && (close = first.type.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.closedBy))) {
     let last = tree.lastChild,
       closed = last && close.indexOf(last.name) > -1;
     return cx => delimitedStrategy(cx, true, 1, undefined, closed && !ignoreClosed(cx) ? last.from : undefined);
@@ -10539,8 +10539,8 @@ function indentOnInput() {
     }] : tr;
   });
 }
-const foldService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define();
-const foldNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
+const foldService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define();
+const foldNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 function foldInside(node) {
   let first = node.firstChild,
     last = node.lastChild;
@@ -10586,10 +10586,10 @@ function mapRange(range, mapping) {
     to
   };
 }
-const foldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.define({
+const foldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.define({
   map: mapRange
 });
-const unfoldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.define({
+const unfoldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.define({
   map: mapRange
 });
 function selectedLines(view) {
@@ -10603,9 +10603,9 @@ function selectedLines(view) {
   }
   return lines;
 }
-const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .QQ.define({
+const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .sU.define({
   create() {
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.none;
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
   },
   update(folded, tr) {
     folded = folded.map(tr.changes);
@@ -10615,7 +10615,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField *
         let {
           preparePlaceholder
         } = tr.state.facet(foldConfig);
-        let widget = !preparePlaceholder ? foldWidget : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.replace({
+        let widget = !preparePlaceholder ? foldWidget : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.replace({
           widget: new PreparedFoldWidget(preparePlaceholder(tr.state, e.value))
         });
         folded = folded.update({
@@ -10645,7 +10645,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField *
     }
     return folded;
   },
-  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.decorations.from(f),
+  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.decorations.from(f),
   toJSON(folded, state) {
     let ranges = [];
     folded.between(0, state.doc.length, (from, to) => {
@@ -10662,7 +10662,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField *
       if (typeof from != "number" || typeof to != "number") throw new RangeError("Invalid JSON for fold state");
       ranges.push(foldWidget.range(from, to));
     }
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.set(ranges, true);
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.set(ranges, true);
   }
 });
 function foldedRanges(state) {
@@ -10687,7 +10687,7 @@ function foldExists(folded, from, to) {
   return found;
 }
 function maybeEnable(state, other) {
-  return state.field(foldState, false) ? other : other.concat(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Py.appendConfig.of(codeFolding()));
+  return state.field(foldState, false) ? other : other.concat(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.appendConfig.of(codeFolding()));
 }
 const foldCode = view => {
   for (var _iterator16 = _createForOfIteratorHelperLoose(selectedLines(view)), _step16; !(_step16 = _iterator16()).done;) {
@@ -10721,7 +10721,7 @@ function announceFold(view, range, fold) {
   }
   let lineFrom = view.state.doc.lineAt(range.from).number,
     lineTo = view.state.doc.lineAt(range.to).number;
-  return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.announce.of(`${view.state.phrase(fold ? "Folded lines" : "Unfolded lines")} ${lineFrom} ${view.state.phrase("to")} ${lineTo}.`);
+  return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.announce.of(`${view.state.phrase(fold ? "Folded lines" : "Unfolded lines")} ${lineFrom} ${view.state.phrase("to")} ${lineTo}.`);
 }
 const foldAll = view => {
   let {
@@ -10799,9 +10799,9 @@ const defaultConfig = {
   preparePlaceholder: null,
   placeholderText: "…"
 };
-const foldConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
+const foldConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
   combine(values) {
-    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .BO)(values, defaultConfig);
+    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .QR)(values, defaultConfig);
   }
 });
 function codeFolding(config) {
@@ -10831,14 +10831,14 @@ function widgetToDOM(view, prepared) {
   element.onclick = onclick;
   return element;
 }
-const foldWidget = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.replace({
-  widget: new class extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .WidgetType */ .l9 {
+const foldWidget = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.replace({
+  widget: new class extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .WidgetType */ .xO {
     toDOM(view) {
       return widgetToDOM(view, null);
     }
   }()
 });
-class PreparedFoldWidget extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .WidgetType */ .l9 {
+class PreparedFoldWidget extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .WidgetType */ .xO {
   constructor(value) {
     super();
     this.value = value;
@@ -10857,7 +10857,7 @@ const foldGutterDefaults = {
   domEventHandlers: {},
   foldingChanged: () => false
 };
-class FoldMarker extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .GutterMarker */ .SJ {
+class FoldMarker extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .GutterMarker */ .wJ {
   constructor(config, open) {
     super();
     this.config = config;
@@ -10881,7 +10881,7 @@ function foldGutter(config) {
   let fullConfig = Object.assign(Object.assign({}, foldGutterDefaults), config);
   let canFold = new FoldMarker(fullConfig, true),
     canUnfold = new FoldMarker(fullConfig, false);
-  let markers = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .lg.fromClass(class {
+  let markers = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(class {
     constructor(view) {
       this.from = view.viewport.from;
       this.markers = this.buildMarkers(view);
@@ -10890,7 +10890,7 @@ function foldGutter(config) {
       if (update.docChanged || update.viewportChanged || update.startState.facet(language) != update.state.facet(language) || update.startState.field(foldState, false) != update.state.field(foldState, false) || syntaxTree(update.startState) != syntaxTree(update.state) || fullConfig.foldingChanged(update)) this.markers = this.buildMarkers(update.view);
     }
     buildMarkers(view) {
-      let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .f_();
+      let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .vB();
       for (var _iterator19 = _createForOfIteratorHelperLoose(view.viewportLineBlocks), _step19; !(_step19 = _iterator19()).done;) {
         let line = _step19.value;
         let mark = findFold(view.state, line.from, line.to) ? canUnfold : foldable(view.state, line.from, line.to) ? canFold : null;
@@ -10902,11 +10902,11 @@ function foldGutter(config) {
   let {
     domEventHandlers
   } = fullConfig;
-  return [markers, (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .gutter */ .v5)({
+  return [markers, (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .gutter */ .cU)({
     class: "cm-foldGutter",
     markers(view) {
       var _a;
-      return ((_a = view.plugin(markers)) === null || _a === void 0 ? void 0 : _a.markers) || _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSet */ .Xs.empty;
+      return ((_a = view.plugin(markers)) === null || _a === void 0 ? void 0 : _a.markers) || _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSet */ .om.empty;
     },
     initialSpacer() {
       return new FoldMarker(fullConfig, false);
@@ -10933,7 +10933,7 @@ function foldGutter(config) {
     })
   }), codeFolding()];
 }
-const baseTheme$1 = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.baseTheme({
+const baseTheme$1 = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.baseTheme({
   ".cm-foldPlaceholder": {
     backgroundColor: "#eee",
     border: "1px solid #ddd",
@@ -10953,14 +10953,14 @@ class HighlightStyle {
     this.specs = specs;
     let modSpec;
     function def(spec) {
-      let cls = style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule */ .V.newName();
+      let cls = style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule */ .G.newName();
       (modSpec || (modSpec = Object.create(null)))["." + cls] = spec;
       return cls;
     }
     const all = typeof options.all == "string" ? options.all : options.all ? def(options.all) : undefined;
     const scopeOpt = options.scope;
     this.scope = scopeOpt instanceof Language ? type => type.prop(languageDataProp) == scopeOpt.data : scopeOpt ? type => type == scopeOpt : undefined;
-    this.style = (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tagHighlighter */ .QR)(specs.map(style => ({
+    this.style = (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tagHighlighter */ .az)(specs.map(style => ({
       tag: style.tag,
       class: style.class || def(Object.assign({}, style, {
         tag: null
@@ -10968,15 +10968,15 @@ class HighlightStyle {
     })), {
       all
     }).style;
-    this.module = modSpec ? new style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule */ .V(modSpec) : null;
+    this.module = modSpec ? new style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule */ .G(modSpec) : null;
     this.themeType = options.themeType;
   }
   static define(specs, options) {
     return new HighlightStyle(specs, options || {});
   }
 }
-const highlighterFacet = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define();
-const fallbackHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
+const highlighterFacet = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define();
+const fallbackHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
   combine(values) {
     return values.length ? [values[0]] : null;
   }
@@ -10989,11 +10989,11 @@ function syntaxHighlighting(highlighter, options) {
   let ext = [treeHighlighter],
     themeType;
   if (highlighter instanceof HighlightStyle) {
-    if (highlighter.module) ext.push(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.styleModule.of(highlighter.module));
+    if (highlighter.module) ext.push(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.styleModule.of(highlighter.module));
     themeType = highlighter.themeType;
   }
-  if (options === null || options === void 0 ? void 0 : options.fallback) ext.push(fallbackHighlighter.of(highlighter));else if (themeType) ext.push(highlighterFacet.computeN([_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.darkTheme], state => {
-    return state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.darkTheme) == (themeType == "dark") ? [highlighter] : [];
+  if (options === null || options === void 0 ? void 0 : options.fallback) ext.push(fallbackHighlighter.of(highlighter));else if (themeType) ext.push(highlighterFacet.computeN([_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.darkTheme], state => {
+    return state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.darkTheme) == (themeType == "dark") ? [highlighter] : [];
   }));else ext.push(highlighterFacet.of(highlighter));
   return ext;
 }
@@ -11016,28 +11016,35 @@ class TreeHighlighter {
     this.markCache = Object.create(null);
     this.tree = syntaxTree(view.state);
     this.decorations = this.buildDeco(view, getHighlighters(view.state));
+    this.decoratedTo = view.viewport.to;
   }
   update(update) {
     let tree = syntaxTree(update.state),
       highlighters = getHighlighters(update.state);
     let styleChange = highlighters != getHighlighters(update.startState);
-    if (tree.length < update.view.viewport.to && !styleChange && tree.type == this.tree.type) {
+    let {
+        viewport
+      } = update.view,
+      decoratedToMapped = update.changes.mapPos(this.decoratedTo, 1);
+    if (tree.length < viewport.to && !styleChange && tree.type == this.tree.type && decoratedToMapped >= viewport.to) {
       this.decorations = this.decorations.map(update.changes);
+      this.decoratedTo = decoratedToMapped;
     } else if (tree != this.tree || update.viewportChanged || styleChange) {
       this.tree = tree;
       this.decorations = this.buildDeco(update.view, highlighters);
+      this.decoratedTo = viewport.to;
     }
   }
   buildDeco(view, highlighters) {
-    if (!highlighters || !this.tree.length) return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.none;
-    let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .f_();
+    if (!highlighters || !this.tree.length) return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
+    let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .vB();
     for (var _iterator21 = _createForOfIteratorHelperLoose(view.visibleRanges), _step21; !(_step21 = _iterator21()).done;) {
       let {
         from,
         to
       } = _step21.value;
-      (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .highlightTree */ .bW)(this.tree, highlighters, (from, to, style) => {
-        builder.add(from, to, this.markCache[style] || (this.markCache[style] = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
+      (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .highlightTree */ .DM)(this.tree, highlighters, (from, to, style) => {
+        builder.add(from, to, this.markCache[style] || (this.markCache[style] = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
           class: style
         })));
       }, from, to);
@@ -11045,69 +11052,69 @@ class TreeHighlighter {
     return builder.finish();
   }
 }
-const treeHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec */ .Wl.high(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .lg.fromClass(TreeHighlighter, {
+const treeHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec */ .Nb.high(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(TreeHighlighter, {
   decorations: v => v.decorations
 }));
 const defaultHighlightStyle = HighlightStyle.define([{
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.meta,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.meta,
   color: "#404740"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.link,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.link,
   textDecoration: "underline"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.heading,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.heading,
   textDecoration: "underline",
   fontWeight: "bold"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.emphasis,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.emphasis,
   fontStyle: "italic"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.strong,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.strong,
   fontWeight: "bold"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.strikethrough,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.strikethrough,
   textDecoration: "line-through"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.keyword,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.keyword,
   color: "#708"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.atom, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.bool, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.url, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.contentSeparator, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.labelName],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.atom, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.bool, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.url, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.contentSeparator, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.labelName],
   color: "#219"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.literal, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.inserted],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.literal, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.inserted],
   color: "#164"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.string, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.deleted],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.string, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.deleted],
   color: "#a11"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.regexp, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.escape, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.string)],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.regexp, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.escape, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.string)],
   color: "#e40"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.variableName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.variableName),
   color: "#00f"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.local(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.variableName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.local(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.variableName),
   color: "#30a"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.typeName, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.namespace],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.typeName, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.namespace],
   color: "#085"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.className,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.className,
   color: "#167"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.variableName), _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.macroName],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.variableName), _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.macroName],
   color: "#256"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.propertyName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.propertyName),
   color: "#00c"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.comment,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.comment,
   color: "#940"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ.invalid,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.invalid,
   color: "#f00"
 }]);
-const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.baseTheme({
+const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.baseTheme({
   "&.cm-focused .cm-matchingBracket": {
     backgroundColor: "#328c8252"
   },
@@ -11117,9 +11124,9 @@ const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */
 });
 const DefaultScanDist = 10000,
   DefaultBrackets = "()[]{}";
-const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
+const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
   combine(configs) {
-    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .BO)(configs, {
+    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .QR)(configs, {
       afterCursor: true,
       brackets: DefaultBrackets,
       maxScanDistance: DefaultScanDist,
@@ -11127,10 +11134,10 @@ const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .
     });
   }
 });
-const matchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
+const matchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
     class: "cm-matchingBracket"
   }),
-  nonmatchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
+  nonmatchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
     class: "cm-nonmatchingBracket"
   });
 function defaultRenderMatch(match) {
@@ -11140,9 +11147,9 @@ function defaultRenderMatch(match) {
   if (match.end) decorations.push(mark.range(match.end.from, match.end.to));
   return decorations;
 }
-const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .QQ.define({
+const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .sU.define({
   create() {
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.none;
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
   },
   update(deco, tr) {
     if (!tr.docChanged && !tr.selection) return deco;
@@ -11154,9 +11161,9 @@ const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .S
       let match = matchBrackets(tr.state, range.head, -1, config) || range.head > 0 && matchBrackets(tr.state, range.head - 1, 1, config) || config.afterCursor && (matchBrackets(tr.state, range.head, 1, config) || range.head < tr.state.doc.length && matchBrackets(tr.state, range.head + 1, -1, config));
       if (match) decorations = decorations.concat(config.renderMatch(match, tr.state));
     }
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.set(decorations, true);
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.set(decorations, true);
   },
-  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.decorations.from(f)
+  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.decorations.from(f)
 });
 const bracketMatchingUnique = [bracketMatchingState, baseTheme];
 function bracketMatching(config) {
@@ -11165,9 +11172,9 @@ function bracketMatching(config) {
   }
   return [bracketMatchingConfig.of(config), bracketMatchingUnique];
 }
-const bracketMatchingHandle = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
+const bracketMatchingHandle = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 function matchingNodes(node, dir, brackets) {
-  let byProp = node.prop(dir < 0 ? _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.openedBy : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.closedBy);
+  let byProp = node.prop(dir < 0 ? _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.openedBy : _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.closedBy);
   if (byProp) return byProp;
   if (node.name.length == 1) {
     let index = brackets.indexOf(node.name);
@@ -11407,7 +11414,7 @@ class StreamLanguage extends Language {
     let data = defineLanguageFacet(parser.languageData);
     let p = fullParser(parser),
       self;
-    let impl = new class extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ ._b {
+    let impl = new class extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .iX {
       createParse(input, fragments, ranges) {
         return new Parse(self, input, fragments, ranges);
       }
@@ -11416,7 +11423,7 @@ class StreamLanguage extends Language {
     this.topNode = docID(data);
     self = this;
     this.streamParser = p;
-    this.stateAfter = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md({
+    this.stateAfter = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY({
       perNode: true
     });
     this.tokenTable = parser.tokenTable ? new TokenTable(p.tokenTable) : defaultTokenTable;
@@ -11478,7 +11485,7 @@ function findState(lang, tree, off, startPos, before) {
   for (let i = tree.children.length - 1; i >= 0; i--) {
     let child = tree.children[i],
       pos = off + tree.positions[i];
-    let found = child instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp && pos < before && findState(lang, child, pos, startPos, before);
+    let found = child instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH && pos < before && findState(lang, child, pos, startPos, before);
     if (found) return found;
   }
   return null;
@@ -11490,9 +11497,9 @@ function cutTree(lang, tree, from, to, inside) {
     let pos = tree.positions[i],
       child = tree.children[i],
       inner;
-    if (pos < to && child instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp) {
+    if (pos < to && child instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH) {
       if (!(inner = cutTree(lang, child, from - pos, to - pos, inside))) break;
-      return !inside ? inner : new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp(tree.type, tree.children.slice(0, i).concat(inner), tree.positions.slice(0, i + 1), pos + inner.length);
+      return !inside ? inner : new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH(tree.type, tree.children.slice(0, i).concat(inner), tree.positions.slice(0, i + 1), pos + inner.length);
     }
   }
   return null;
@@ -11511,7 +11518,7 @@ function findStartInFragments(lang, fragments, startPos, editorState) {
   }
   return {
     state: lang.streamParser.startState(editorState ? getIndentUnit(editorState) : 4),
-    tree: _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.empty
+    tree: _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH.empty
   };
 }
 class Parse {
@@ -11642,7 +11649,7 @@ class Parse {
     if (this.parsedPos < this.to) this.parsedPos++;
   }
   finishChunk() {
-    let tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.build({
+    let tree = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH.build({
       buffer: this.chunk,
       start: this.chunkStart,
       length: this.parsedPos - this.chunkStart,
@@ -11651,7 +11658,7 @@ class Parse {
       maxBufferLength: 2048,
       reused: this.chunkReused
     });
-    tree = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp(tree.type, tree.children, tree.positions, tree.length, [[this.lang.stateAfter, this.lang.streamParser.copyState(this.state)]]);
+    tree = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH(tree.type, tree.children, tree.positions, tree.length, [[this.lang.stateAfter, this.lang.streamParser.copyState(this.state)]]);
     this.chunks.push(tree);
     this.chunkPos.push(this.chunkStart - this.ranges[0].from);
     this.chunk = [];
@@ -11659,7 +11666,7 @@ class Parse {
     this.chunkStart = this.parsedPos;
   }
   finish() {
-    return new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp(this.lang.topNode, this.chunks, this.chunkPos, this.parsedPos - this.ranges[0].from).balance();
+    return new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH(this.lang.topNode, this.chunks, this.chunkPos, this.parsedPos - this.ranges[0].from).balance();
   }
 }
 function readToken(token, stream, state) {
@@ -11671,8 +11678,8 @@ function readToken(token, stream, state) {
   throw new Error("Stream parser failed to advance stream.");
 }
 const noTokens = Object.create(null);
-const typeArray = [_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.none];
-const nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .Lj(typeArray);
+const typeArray = [_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Z6.none];
+const nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .fI(typeArray);
 const warned = [];
 const byTag = Object.create(null);
 const defaultTable = Object.create(null);
@@ -11702,7 +11709,7 @@ function createTokenType(extra, tagStr) {
     let found = [];
     for (var _iterator25 = _createForOfIteratorHelperLoose(name.split(".")), _step25; !(_step25 = _iterator25()).done;) {
       let part = _step25.value;
-      let value = extra[part] || _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ .pJ[part];
+      let value = extra[part] || _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A[part];
       if (!value) {
         warnForPart(part, `Unknown highlighting tag ${part}`);
       } else if (typeof value == "function") {
@@ -11721,10 +11728,10 @@ function createTokenType(extra, tagStr) {
     key = name + " " + tags$1.map(t => t.id);
   let known = byTag[key];
   if (known) return known.id;
-  let type = byTag[key] = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
+  let type = byTag[key] = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Z6.define({
     id: typeArray.length,
     name,
-    props: [(0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .styleTags */ .Gv)({
+    props: [(0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .styleTags */ .pn)({
       [name]: tags$1
     })]
   });
@@ -11732,7 +11739,7 @@ function createTokenType(extra, tagStr) {
   return type.id;
 }
 function docID(data) {
-  let type = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
+  let type = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Z6.define({
     id: typeArray.length,
     name: "Document",
     props: [languageDataProp.add(() => data)],
@@ -11755,7 +11762,7 @@ function changeAddsRTL(change) {
   });
   return added;
 }
-const alwaysIsolate = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .r$.define({
+const alwaysIsolate = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
   combine: values => values.some(x => x)
 });
 function bidiIsolates(options) {
@@ -11766,15 +11773,15 @@ function bidiIsolates(options) {
   if (options.alwaysIsolate) extensions.push(alwaysIsolate.of(true));
   return extensions;
 }
-const isolateMarks = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .lg.fromClass(class {
+const isolateMarks = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(class {
   constructor(view) {
-    this.always = view.state.facet(alwaysIsolate) || view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .Nm.LTR || view.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.perLineTextDirection);
+    this.always = view.state.facet(alwaysIsolate) || view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.LTR || view.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.perLineTextDirection);
     this.hasRTL = !this.always && textHasRTL(view.state.doc);
     this.tree = syntaxTree(view.state);
-    this.decorations = buildDeco(view, this.tree, this.always);
+    this.decorations = this.always || this.hasRTL ? buildDeco(view, this.tree, this.always) : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
   }
   update(update) {
-    let always = update.state.facet(alwaysIsolate) || update.view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .Nm.LTR || update.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.perLineTextDirection);
+    let always = update.state.facet(alwaysIsolate) || update.view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.LTR || update.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.perLineTextDirection);
     if (!always && !this.hasRTL && changeAddsRTL(update.changes)) this.hasRTL = true;
     if (!always && !this.hasRTL) return;
     let tree = syntaxTree(update.state);
@@ -11788,13 +11795,13 @@ const isolateMarks = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin
   provide: plugin => {
     function access(view) {
       var _a, _b;
-      return (_b = (_a = view.plugin(plugin)) === null || _a === void 0 ? void 0 : _a.decorations) !== null && _b !== void 0 ? _b : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.none;
+      return (_b = (_a = view.plugin(plugin)) === null || _a === void 0 ? void 0 : _a.decorations) !== null && _b !== void 0 ? _b : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
     }
-    return [_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.outerDecorations.of(access), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec */ .Wl.lowest(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .tk.bidiIsolatedRanges.of(access))];
+    return [_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.outerDecorations.of(access), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec */ .Nb.lowest(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.bidiIsolatedRanges.of(access))];
   }
 });
 function buildDeco(view, tree, always) {
-  let deco = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .f_();
+  let deco = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .vB();
   let ranges = view.visibleRanges;
   if (!always) ranges = clipRTLLines(ranges, view.state.doc);
   for (var _iterator27 = _createForOfIteratorHelperLoose(ranges), _step27; !(_step27 = _iterator27()).done;) {
@@ -11804,7 +11811,7 @@ function buildDeco(view, tree, always) {
     } = _step27.value;
     tree.iterate({
       enter: node => {
-        let iso = node.type.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.isolate);
+        let iso = node.type.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.isolate);
         if (iso) deco.add(node.from, node.to, marks[iso]);
       },
       from,
@@ -11844,23 +11851,23 @@ function clipRTLLines(ranges, doc) {
   return result;
 }
 const marks = {
-  rtl: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
+  rtl: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
     class: "cm-iso",
     inclusive: true,
     attributes: {
       dir: "rtl"
     },
-    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .Nm.RTL
+    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.RTL
   }),
-  ltr: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
+  ltr: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
     class: "cm-iso",
     inclusive: true,
     attributes: {
       dir: "ltr"
     },
-    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .Nm.LTR
+    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.LTR
   }),
-  auto: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .p.mark({
+  auto: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
     class: "cm-iso",
     inclusive: true,
     attributes: {
@@ -11873,35 +11880,35 @@ const marks = {
 
 /***/ }),
 
-/***/ 5854:
+/***/ 5817:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   BO: () => (/* binding */ combineConfig),
-/* harmony export */   D0: () => (/* binding */ CharCategory),
-/* harmony export */   F6: () => (/* binding */ Compartment),
-/* harmony export */   Gz: () => (/* binding */ findColumn),
-/* harmony export */   IS: () => (/* binding */ countColumn),
-/* harmony export */   Py: () => (/* binding */ StateEffect),
-/* harmony export */   QQ: () => (/* binding */ StateField),
-/* harmony export */   Wl: () => (/* binding */ Prec),
-/* harmony export */   Xs: () => (/* binding */ RangeSet),
-/* harmony export */   YW: () => (/* binding */ Transaction),
-/* harmony export */   as: () => (/* binding */ ChangeSet),
-/* harmony export */   bg: () => (/* binding */ fromCodePoint),
-/* harmony export */   cp: () => (/* binding */ findClusterBreak),
-/* harmony export */   f_: () => (/* binding */ RangeSetBuilder),
-/* harmony export */   gc: () => (/* binding */ MapMode),
-/* harmony export */   gm: () => (/* binding */ codePointAt),
-/* harmony export */   jT: () => (/* binding */ EditorSelection),
-/* harmony export */   n0: () => (/* binding */ ChangeDesc),
-/* harmony export */   nZ: () => (/* binding */ codePointSize),
-/* harmony export */   q6: () => (/* binding */ Annotation),
-/* harmony export */   r$: () => (/* binding */ Facet),
-/* harmony export */   uU: () => (/* binding */ RangeValue),
-/* harmony export */   xv: () => (/* binding */ Text),
-/* harmony export */   yy: () => (/* binding */ EditorState)
+/* harmony export */   $t: () => (/* binding */ EditorState),
+/* harmony export */   EY: () => (/* binding */ Text),
+/* harmony export */   FB: () => (/* binding */ RangeValue),
+/* harmony export */   Fh: () => (/* binding */ codePointSize),
+/* harmony export */   Gu: () => (/* binding */ ChangeDesc),
+/* harmony export */   Je: () => (/* binding */ CharCategory),
+/* harmony export */   MK: () => (/* binding */ fromCodePoint),
+/* harmony export */   Nb: () => (/* binding */ Prec),
+/* harmony export */   OF: () => (/* binding */ EditorSelection),
+/* harmony export */   Pe: () => (/* binding */ StateEffect),
+/* harmony export */   QR: () => (/* binding */ combineConfig),
+/* harmony export */   VR: () => (/* binding */ ChangeSet),
+/* harmony export */   YH: () => (/* binding */ Annotation),
+/* harmony export */   ZX: () => (/* binding */ Transaction),
+/* harmony export */   iR: () => (/* binding */ MapMode),
+/* harmony export */   kn: () => (/* binding */ findColumn),
+/* harmony export */   om: () => (/* binding */ RangeSet),
+/* harmony export */   sU: () => (/* binding */ StateField),
+/* harmony export */   sj: () => (/* binding */ Facet),
+/* harmony export */   vB: () => (/* binding */ RangeSetBuilder),
+/* harmony export */   vS: () => (/* binding */ codePointAt),
+/* harmony export */   xx: () => (/* binding */ Compartment),
+/* harmony export */   y$: () => (/* binding */ countColumn),
+/* harmony export */   zK: () => (/* binding */ findClusterBreak)
 /* harmony export */ });
 /* unused harmony exports AnnotationType, Line, Range, SelectionRange, StateEffectType */
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -14749,34 +14756,34 @@ function findColumn(string, col, tabSize, strict) {
 
 /***/ }),
 
-/***/ 8335:
+/***/ 5177:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  p: () => (/* binding */ Decoration),
-  Nm: () => (/* binding */ Direction),
-  tk: () => (/* binding */ EditorView),
-  SJ: () => (/* binding */ GutterMarker),
-  lg: () => (/* binding */ ViewPlugin),
-  l9: () => (/* binding */ WidgetType),
-  gB: () => (/* binding */ getTooltip),
-  v5: () => (/* binding */ gutter),
-  AE: () => (/* binding */ highlightSpecialChars),
-  $f: () => (/* binding */ keymap),
-  Eu: () => (/* binding */ lineNumbers),
-  OO: () => (/* binding */ logException),
-  hJ: () => (/* binding */ showTooltip)
+  NZ: () => (/* binding */ Decoration),
+  OP: () => (/* binding */ Direction),
+  Lz: () => (/* binding */ EditorView),
+  wJ: () => (/* binding */ GutterMarker),
+  Z9: () => (/* binding */ ViewPlugin),
+  xO: () => (/* binding */ WidgetType),
+  Eg: () => (/* binding */ getTooltip),
+  cU: () => (/* binding */ gutter),
+  N$: () => (/* binding */ highlightSpecialChars),
+  w4: () => (/* binding */ keymap),
+  $K: () => (/* binding */ lineNumbers),
+  c_: () => (/* binding */ logException),
+  DK: () => (/* binding */ showTooltip)
 });
 
 // UNUSED EXPORTS: BidiSpan, BlockInfo, BlockType, MatchDecorator, RectangleMarker, ViewUpdate, __test, closeHoverTooltips, crosshairCursor, drawSelection, dropCursor, getDrawSelectionConfig, getPanel, gutterLineClass, gutters, hasHoverTooltips, highlightActiveLine, highlightActiveLineGutter, highlightTrailingWhitespace, highlightWhitespace, hoverTooltip, layer, lineNumberMarkers, panels, placeholder, rectangularSelection, repositionTooltips, runScopeHandlers, scrollPastEnd, showPanel, tooltips
 
 // EXTERNAL MODULE: ./node_modules/@codemirror/state/dist/index.js
-var state_dist = __webpack_require__(5854);
+var state_dist = __webpack_require__(5817);
 // EXTERNAL MODULE: ./node_modules/style-mod/src/style-mod.js
-var style_mod = __webpack_require__(5882);
+var style_mod = __webpack_require__(1785);
 ;// CONCATENATED MODULE: ./node_modules/w3c-keyname/index.js
 var base = {
   8: "Backspace",
@@ -15759,7 +15766,7 @@ class WidgetView extends ContentView {
     return this.widget.ignoreEvent(event);
   }
   get overrideDOMText() {
-    if (this.length == 0) return state_dist/* Text */.xv.empty;
+    if (this.length == 0) return state_dist/* Text */.EY.empty;
     let top = this;
     while (top.parent) top = top.parent;
     let {
@@ -15767,7 +15774,7 @@ class WidgetView extends ContentView {
       } = top,
       text = view && view.state.doc,
       start = this.posAtStart;
-    return text ? text.slice(start, start + this.length) : state_dist/* Text */.xv.empty;
+    return text ? text.slice(start, start + this.length) : state_dist/* Text */.EY.empty;
   }
   domAtPos(pos) {
     return (this.length ? pos == 0 : this.side > 0) ? DOMPos.before(this.dom) : DOMPos.after(this.dom, pos == this.length);
@@ -15843,7 +15850,7 @@ class WidgetBufferView extends ContentView {
     return this.dom.getBoundingClientRect();
   }
   get overrideDOMText() {
-    return state_dist/* Text */.xv.empty;
+    return state_dist/* Text */.EY.empty;
   }
   get isHidden() {
     return true;
@@ -16153,7 +16160,7 @@ class BlockWidgetView extends ContentView {
     }
   }
   get overrideDOMText() {
-    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : state_dist/* Text */.xv.empty;
+    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : state_dist/* Text */.EY.empty;
   }
   domBoundsAround() {
     return null;
@@ -16234,7 +16241,7 @@ var BlockType = function (BlockType) {
   BlockType[BlockType["WidgetRange"] = 3] = "WidgetRange";
   return BlockType;
 }(BlockType || (BlockType = {}));
-class Decoration extends state_dist/* RangeValue */.uU {
+class Decoration extends state_dist/* RangeValue */.FB {
   constructor(startSide, endSide, widget, spec) {
     super();
     this.startSide = startSide;
@@ -16278,13 +16285,13 @@ class Decoration extends state_dist/* RangeValue */.uU {
     if (sort === void 0) {
       sort = false;
     }
-    return state_dist/* RangeSet */.Xs.of(of, sort);
+    return state_dist/* RangeSet */.om.of(of, sort);
   }
   hasHeight() {
     return this.widget ? this.widget.estimatedHeight > -1 : false;
   }
 }
-Decoration.none = state_dist/* RangeSet */.Xs.empty;
+Decoration.none = state_dist/* RangeSet */.om.empty;
 class MarkDecoration extends Decoration {
   constructor(spec) {
     let {
@@ -16324,14 +16331,14 @@ class LineDecoration extends Decoration {
     return super.range(from, to);
   }
 }
-LineDecoration.prototype.mapMode = state_dist/* MapMode */.gc.TrackBefore;
+LineDecoration.prototype.mapMode = state_dist/* MapMode */.iR.TrackBefore;
 LineDecoration.prototype.point = true;
 class PointDecoration extends Decoration {
   constructor(spec, startSide, endSide, block, widget, isReplace) {
     super(startSide, endSide, widget, spec);
     this.block = block;
     this.isReplace = isReplace;
-    this.mapMode = !block ? state_dist/* MapMode */.gc.TrackDel : startSide <= 0 ? state_dist/* MapMode */.gc.TrackBefore : state_dist/* MapMode */.gc.TrackAfter;
+    this.mapMode = !block ? state_dist/* MapMode */.iR.TrackDel : startSide <= 0 ? state_dist/* MapMode */.iR.TrackBefore : state_dist/* MapMode */.iR.TrackAfter;
   }
   get type() {
     return this.startSide != this.endSide ? BlockType.WidgetRange : this.startSide <= 0 ? BlockType.WidgetBefore : BlockType.WidgetAfter;
@@ -16506,7 +16513,7 @@ class ContentBuilder {
   }
   static build(text, from, to, decorations, dynamicDecorationMap) {
     let builder = new ContentBuilder(text, from, to, dynamicDecorationMap);
-    builder.openEnd = state_dist/* RangeSet */.Xs.spans(decorations, from, to, builder);
+    builder.openEnd = state_dist/* RangeSet */.om.spans(decorations, from, to, builder);
     if (builder.openStart < 0) builder.openStart = builder.openEnd;
     builder.finish(builder.openEnd);
     return builder;
@@ -16828,12 +16835,12 @@ function moveVisually(line, order, dir, start, forward) {
     startIndex = span.side(!forward, dir);
     spanEnd = span.side(forward, dir);
   }
-  let nextIndex = (0,state_dist/* findClusterBreak */.cp)(line.text, startIndex, span.forward(forward, dir));
+  let nextIndex = (0,state_dist/* findClusterBreak */.zK)(line.text, startIndex, span.forward(forward, dir));
   if (nextIndex < span.from || nextIndex > span.to) nextIndex = spanEnd;
   movedOver = line.text.slice(Math.min(startIndex, nextIndex), Math.max(startIndex, nextIndex));
   let nextSpan = spanI == (forward ? order.length - 1 : 0) ? null : order[spanI + (forward ? 1 : -1)];
-  if (nextSpan && nextIndex == spanEnd && nextSpan.level + (forward ? 0 : 1) < span.level) return state_dist/* EditorSelection */.jT.cursor(nextSpan.side(!forward, dir) + line.from, nextSpan.forward(forward, dir) ? 1 : -1, nextSpan.level);
-  return state_dist/* EditorSelection */.jT.cursor(nextIndex + line.from, span.forward(forward, dir) ? -1 : 1, span.level);
+  if (nextSpan && nextIndex == spanEnd && nextSpan.level + (forward ? 0 : 1) < span.level) return state_dist/* EditorSelection */.OF.cursor(nextSpan.side(!forward, dir) + line.from, nextSpan.forward(forward, dir) ? 1 : -1, nextSpan.level);
+  return state_dist/* EditorSelection */.OF.cursor(nextIndex + line.from, span.forward(forward, dir) ? -1 : 1, span.level);
 }
 function autoDirection(text, from, to) {
   for (let i = from; i < to; i++) {
@@ -16843,17 +16850,17 @@ function autoDirection(text, from, to) {
   }
   return LTR;
 }
-const clickAddsSelectionRange = state_dist/* Facet */.r$.define();
-const dragMovesSelection$1 = state_dist/* Facet */.r$.define();
-const mouseSelectionStyle = state_dist/* Facet */.r$.define();
-const exceptionSink = state_dist/* Facet */.r$.define();
-const updateListener = state_dist/* Facet */.r$.define();
-const inputHandler = state_dist/* Facet */.r$.define();
-const focusChangeEffect = state_dist/* Facet */.r$.define();
-const perLineTextDirection = state_dist/* Facet */.r$.define({
+const clickAddsSelectionRange = state_dist/* Facet */.sj.define();
+const dragMovesSelection$1 = state_dist/* Facet */.sj.define();
+const mouseSelectionStyle = state_dist/* Facet */.sj.define();
+const exceptionSink = state_dist/* Facet */.sj.define();
+const updateListener = state_dist/* Facet */.sj.define();
+const inputHandler = state_dist/* Facet */.sj.define();
+const focusChangeEffect = state_dist/* Facet */.sj.define();
+const perLineTextDirection = state_dist/* Facet */.sj.define({
   combine: values => values.some(x => x)
 });
-const nativeSelectionHidden = state_dist/* Facet */.r$.define({
+const nativeSelectionHidden = state_dist/* Facet */.sj.define({
   combine: values => values.some(x => x)
 });
 class ScrollTarget {
@@ -16884,21 +16891,21 @@ class ScrollTarget {
     return changes.empty ? this : new ScrollTarget(this.range.map(changes), this.y, this.x, this.yMargin, this.xMargin, this.isSnapshot);
   }
   clip(state) {
-    return this.range.to <= state.doc.length ? this : new ScrollTarget(state_dist/* EditorSelection */.jT.cursor(state.doc.length), this.y, this.x, this.yMargin, this.xMargin, this.isSnapshot);
+    return this.range.to <= state.doc.length ? this : new ScrollTarget(state_dist/* EditorSelection */.OF.cursor(state.doc.length), this.y, this.x, this.yMargin, this.xMargin, this.isSnapshot);
   }
 }
-const scrollIntoView = state_dist/* StateEffect */.Py.define({
+const scrollIntoView = state_dist/* StateEffect */.Pe.define({
   map: (t, ch) => t.map(ch)
 });
 function logException(state, exception, context) {
   let handler = state.facet(exceptionSink);
   if (handler.length) handler[0](exception);else if (window.onerror) window.onerror(String(exception), context, undefined, undefined, exception);else if (context) console.error(context + ":", exception);else console.error(exception);
 }
-const editable = state_dist/* Facet */.r$.define({
+const editable = state_dist/* Facet */.sj.define({
   combine: values => values.length ? values[0] : true
 });
 let nextPluginID = 0;
-const viewPlugin = state_dist/* Facet */.r$.define();
+const viewPlugin = state_dist/* Facet */.sj.define();
 class ViewPlugin {
   constructor(id, create, domEventHandlers, domEventObservers, buildExtensions) {
     this.id = id;
@@ -16975,18 +16982,18 @@ class PluginInstance {
     this.spec = this.value = null;
   }
 }
-const editorAttributes = state_dist/* Facet */.r$.define();
-const contentAttributes = state_dist/* Facet */.r$.define();
-const decorations = state_dist/* Facet */.r$.define();
-const outerDecorations = state_dist/* Facet */.r$.define();
-const atomicRanges = state_dist/* Facet */.r$.define();
-const bidiIsolatedRanges = state_dist/* Facet */.r$.define();
+const editorAttributes = state_dist/* Facet */.sj.define();
+const contentAttributes = state_dist/* Facet */.sj.define();
+const decorations = state_dist/* Facet */.sj.define();
+const outerDecorations = state_dist/* Facet */.sj.define();
+const atomicRanges = state_dist/* Facet */.sj.define();
+const bidiIsolatedRanges = state_dist/* Facet */.sj.define();
 function getIsolatedRanges(view, line) {
   let isolates = view.state.facet(bidiIsolatedRanges);
   if (!isolates.length) return isolates;
   let sets = isolates.map(i => i instanceof Function ? i(view) : i);
   let result = [];
-  state_dist/* RangeSet */.Xs.spans(sets, line.from, line.to, {
+  state_dist/* RangeSet */.om.spans(sets, line.from, line.to, {
     point() {},
     span(fromDoc, toDoc, active, open) {
       let from = fromDoc - line.from,
@@ -17014,7 +17021,7 @@ function getIsolatedRanges(view, line) {
   });
   return result;
 }
-const scrollMargins = state_dist/* Facet */.r$.define();
+const scrollMargins = state_dist/* Facet */.sj.define();
 function getScrollMargins(view) {
   let left = 0,
     right = 0,
@@ -17037,7 +17044,7 @@ function getScrollMargins(view) {
     bottom
   };
 }
-const styleModule = state_dist/* Facet */.r$.define();
+const styleModule = state_dist/* Facet */.sj.define();
 class ChangedRange {
   constructor(fromA, toA, fromB, toB) {
     this.fromA = fromA;
@@ -17090,7 +17097,7 @@ class ViewUpdate {
     this.transactions = transactions;
     this.flags = 0;
     this.startState = view.state;
-    this.changes = state_dist/* ChangeSet */.as.empty(this.startState.doc.length);
+    this.changes = state_dist/* ChangeSet */.VR.empty(this.startState.doc.length);
     for (var _iterator11 = _createForOfIteratorHelperLoose(transactions), _step11; !(_step11 = _iterator11()).done;) {
       let tr = _step11.value;
       this.changes = this.changes.compose(tr.changes);
@@ -17478,7 +17485,7 @@ class DocView extends ContentView {
       off = childOff;
     }
     if (!(child instanceof TextView)) return null;
-    let end = (0,state_dist/* findClusterBreak */.cp)(child.text, off);
+    let end = (0,state_dist/* findClusterBreak */.zK)(child.text, off);
     if (end == off) return null;
     let rects = textRange(child.dom, off, end).getClientRects();
     for (let i = 0; i < rects.length; i++) {
@@ -17600,7 +17607,7 @@ class DocView extends ContentView {
       });
     if (outerDeco.length) {
       this.dynamicDecorationMap[allDeco.length] = dynamicOuter;
-      allDeco.push(state_dist/* RangeSet */.Xs.join(outerDeco));
+      allDeco.push(state_dist/* RangeSet */.om.join(outerDeco));
     }
     for (let i = allDeco.length; i < allDeco.length + 3; i++) this.dynamicDecorationMap[i] = false;
     return this.decorations = [...allDeco, this.computeBlockGapDeco(), this.view.viewState.lineGapDeco];
@@ -17664,6 +17671,9 @@ class BlockGapWidget extends WidgetType {
   }
   get estimatedHeight() {
     return this.height;
+  }
+  ignoreEvent() {
+    return false;
   }
 }
 function findCompositionNode(view, headPos) {
@@ -17755,7 +17765,7 @@ let DecorationComparator$1 = class DecorationComparator {
 };
 function findChangedDeco(a, b, diff) {
   let comp = new DecorationComparator$1();
-  state_dist/* RangeSet */.Xs.compare(a, b, diff, comp);
+  state_dist/* RangeSet */.om.compare(a, b, diff, comp);
   return comp.changes;
 }
 function inUneditable(node, inside) {
@@ -17780,23 +17790,23 @@ function groupAt(state, pos, bias) {
   let categorize = state.charCategorizer(pos);
   let line = state.doc.lineAt(pos),
     linePos = pos - line.from;
-  if (line.length == 0) return state_dist/* EditorSelection */.jT.cursor(pos);
+  if (line.length == 0) return state_dist/* EditorSelection */.OF.cursor(pos);
   if (linePos == 0) bias = 1;else if (linePos == line.length) bias = -1;
   let from = linePos,
     to = linePos;
-  if (bias < 0) from = (0,state_dist/* findClusterBreak */.cp)(line.text, linePos, false);else to = (0,state_dist/* findClusterBreak */.cp)(line.text, linePos);
+  if (bias < 0) from = (0,state_dist/* findClusterBreak */.zK)(line.text, linePos, false);else to = (0,state_dist/* findClusterBreak */.zK)(line.text, linePos);
   let cat = categorize(line.text.slice(from, to));
   while (from > 0) {
-    let prev = (0,state_dist/* findClusterBreak */.cp)(line.text, from, false);
+    let prev = (0,state_dist/* findClusterBreak */.zK)(line.text, from, false);
     if (categorize(line.text.slice(prev, from)) != cat) break;
     from = prev;
   }
   while (to < line.length) {
-    let next = (0,state_dist/* findClusterBreak */.cp)(line.text, to);
+    let next = (0,state_dist/* findClusterBreak */.zK)(line.text, to);
     if (categorize(line.text.slice(to, next)) != cat) break;
     to = next;
   }
-  return state_dist/* EditorSelection */.jT.range(from + line.from, to + line.from);
+  return state_dist/* EditorSelection */.OF.range(from + line.from, to + line.from);
 }
 function getdx(x, rect) {
   return rect.left > x ? rect.left - x : Math.max(0, x - rect.right);
@@ -18001,7 +18011,7 @@ function posAtCoordsImprecise(view, contentRect, block, x, y) {
     into += line * view.viewState.heightOracle.lineLength;
   }
   let content = view.state.sliceDoc(block.from, block.to);
-  return block.from + (0,state_dist/* findColumn */.Gz)(content, into, view.state.tabSize);
+  return block.from + (0,state_dist/* findColumn */.kn)(content, into, view.state.tabSize);
 }
 function isSuspiciousSafariCaretResult(node, offset, x) {
   let len;
@@ -18040,9 +18050,9 @@ function moveToLineBoundary(view, start, forward, includeWrap) {
       x: forward == (direction == Direction.LTR) ? editorRect.right - 1 : editorRect.left + 1,
       y: (coords.top + coords.bottom) / 2
     });
-    if (pos != null) return state_dist/* EditorSelection */.jT.cursor(pos, forward ? -1 : 1);
+    if (pos != null) return state_dist/* EditorSelection */.OF.cursor(pos, forward ? -1 : 1);
   }
-  return state_dist/* EditorSelection */.jT.cursor(forward ? line.to : line.from, forward ? -1 : 1);
+  return state_dist/* EditorSelection */.OF.cursor(forward ? line.to : line.from, forward ? -1 : 1);
 }
 function moveByChar(view, start, forward, by) {
   let line = view.state.doc.lineAt(start.head),
@@ -18072,14 +18082,14 @@ function byGroup(view, pos, start) {
   let cat = categorize(start);
   return next => {
     let nextCat = categorize(next);
-    if (cat == state_dist/* CharCategory */.D0.Space) cat = nextCat;
+    if (cat == state_dist/* CharCategory */.Je.Space) cat = nextCat;
     return cat == nextCat;
   };
 }
 function moveVertically(view, start, forward, distance) {
   let startPos = start.head,
     dir = forward ? 1 : -1;
-  if (startPos == (forward ? view.state.doc.length : 0)) return state_dist/* EditorSelection */.jT.cursor(startPos, start.assoc);
+  if (startPos == (forward ? view.state.doc.length : 0)) return state_dist/* EditorSelection */.OF.cursor(startPos, start.assoc);
   let goal = start.goalColumn,
     startY;
   let rect = view.contentDOM.getBoundingClientRect();
@@ -18104,7 +18114,7 @@ function moveVertically(view, start, forward, distance) {
     if (curY < rect.top || curY > rect.bottom || (dir < 0 ? pos < startPos : pos > startPos)) {
       let charRect = view.docView.coordsForChar(pos);
       let assoc = !charRect || curY < charRect.top ? -1 : 1;
-      return state_dist/* EditorSelection */.jT.cursor(pos, assoc, undefined, goal);
+      return state_dist/* EditorSelection */.OF.cursor(pos, assoc, undefined, goal);
     }
   }
 }
@@ -18126,7 +18136,7 @@ function skipAtomicRanges(atoms, pos, bias) {
 }
 function skipAtoms(view, oldPos, pos) {
   let newPos = skipAtomicRanges(view.state.facet(atomicRanges).map(f => f(view)), pos.from, oldPos.head > pos.from ? -1 : 1);
-  return newPos == pos.from ? pos : state_dist/* EditorSelection */.jT.cursor(newPos, newPos < pos.from ? 1 : -1);
+  return newPos == pos.from ? pos : state_dist/* EditorSelection */.OF.cursor(newPos, newPos < pos.from ? 1 : -1);
 }
 class InputState {
   setSelectionOrigin(origin) {
@@ -18323,7 +18333,7 @@ class MouseSelection {
     doc.addEventListener("mousemove", this.move = this.move.bind(this));
     doc.addEventListener("mouseup", this.up = this.up.bind(this));
     this.extend = startEvent.shiftKey;
-    this.multiple = view.state.facet(state_dist/* EditorState */.yy.allowMultipleSelections) && addsSelectionRange(view, startEvent);
+    this.multiple = view.state.facet(state_dist/* EditorState */.$t.allowMultipleSelections) && addsSelectionRange(view, startEvent);
     this.dragging = isInPrimarySelection(view, startEvent) && getClickType(startEvent) == 1 ? null : false;
   }
   start(event) {
@@ -18387,18 +18397,18 @@ class MouseSelection {
         updated = null;
       if (range.empty) {
         let pos = skipAtomicRanges(this.atoms, range.from, 0);
-        if (pos != range.from) updated = state_dist/* EditorSelection */.jT.cursor(pos, -1);
+        if (pos != range.from) updated = state_dist/* EditorSelection */.OF.cursor(pos, -1);
       } else {
         let from = skipAtomicRanges(this.atoms, range.from, -1);
         let to = skipAtomicRanges(this.atoms, range.to, 1);
-        if (from != range.from || to != range.to) updated = state_dist/* EditorSelection */.jT.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
+        if (from != range.from || to != range.to) updated = state_dist/* EditorSelection */.OF.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
       }
       if (updated) {
         if (!ranges) ranges = sel.ranges.slice();
         ranges[i] = updated;
       }
     }
-    return ranges ? state_dist/* EditorSelection */.jT.create(ranges, sel.mainIndex) : sel;
+    return ranges ? state_dist/* EditorSelection */.OF.create(ranges, sel.mainIndex) : sel;
   }
   select(event) {
     let {
@@ -18481,7 +18491,7 @@ function doPaste(view, input) {
           from: line.from,
           insert
         },
-        range: state_dist/* EditorSelection */.jT.cursor(range.from + insert.length)
+        range: state_dist/* EditorSelection */.OF.cursor(range.from + insert.length)
       };
     });
   } else if (byLine) {
@@ -18493,7 +18503,7 @@ function doPaste(view, input) {
           to: range.to,
           insert: line.text
         },
-        range: state_dist/* EditorSelection */.jT.cursor(range.from + line.length)
+        range: state_dist/* EditorSelection */.OF.cursor(range.from + line.length)
       };
     });
   } else {
@@ -18544,7 +18554,7 @@ handlers.mousedown = (view, event) => {
 };
 function rangeForClick(view, pos, bias, type) {
   if (type == 1) {
-    return state_dist/* EditorSelection */.jT.cursor(pos, bias);
+    return state_dist/* EditorSelection */.OF.cursor(pos, bias);
   } else if (type == 2) {
     return groupAt(view.state, pos, bias);
   } else {
@@ -18553,7 +18563,7 @@ function rangeForClick(view, pos, bias, type) {
     let from = visual ? visual.posAtStart : line.from,
       to = visual ? visual.posAtEnd : line.to;
     if (to < view.state.doc.length && to == line.to) to++;
-    return state_dist/* EditorSelection */.jT.range(from, to);
+    return state_dist/* EditorSelection */.OF.range(from, to);
   }
 }
 let insideY = (y, rect) => y >= rect.top && y <= rect.bottom;
@@ -18611,9 +18621,9 @@ function basicMouseSelection(view, event) {
         let startRange = rangeForClick(view, start.pos, start.bias, type);
         let from = Math.min(startRange.from, range.from),
           to = Math.max(startRange.to, range.to);
-        range = from < range.from ? state_dist/* EditorSelection */.jT.range(from, to) : state_dist/* EditorSelection */.jT.range(to, from);
+        range = from < range.from ? state_dist/* EditorSelection */.OF.range(from, to) : state_dist/* EditorSelection */.OF.range(to, from);
       }
-      if (extend) return startSel.replaceRange(startSel.main.extend(range.from, range.to));else if (multiple && type == 1 && startSel.ranges.length > 1 && (removed = removeRangeAround(startSel, cur.pos))) return removed;else if (multiple) return startSel.addRange(range);else return state_dist/* EditorSelection */.jT.create([range]);
+      if (extend) return startSel.replaceRange(startSel.main.extend(range.from, range.to));else if (multiple && type == 1 && startSel.ranges.length > 1 && (removed = removeRangeAround(startSel, cur.pos))) return removed;else if (multiple) return startSel.addRange(range);else return state_dist/* EditorSelection */.OF.create([range]);
     }
   };
 }
@@ -18623,7 +18633,7 @@ function removeRangeAround(sel, pos) {
       from,
       to
     } = sel.ranges[i];
-    if (from <= pos && to >= pos) return state_dist/* EditorSelection */.jT.create(sel.ranges.slice(0, i).concat(sel.ranges.slice(i + 1)), sel.mainIndex == i ? 0 : sel.mainIndex - (sel.mainIndex > i ? 1 : 0));
+    if (from <= pos && to >= pos) return state_dist/* EditorSelection */.OF.create(sel.ranges.slice(0, i).concat(sel.ranges.slice(i + 1)), sel.mainIndex == i ? 0 : sel.mainIndex - (sel.mainIndex > i ? 1 : 0));
   }
   return null;
 }
@@ -18638,7 +18648,7 @@ handlers.dragstart = (view, event) => {
     if (cView && cView.isWidget) {
       let from = cView.posAtStart,
         to = from + cView.length;
-      if (from >= range.to || to <= range.from) range = state_dist/* EditorSelection */.jT.range(from, to);
+      if (from >= range.to || to <= range.from) range = state_dist/* EditorSelection */.OF.range(from, to);
     }
   }
   let {
@@ -18799,7 +18809,7 @@ handlers.copy = handlers.cut = (view, event) => {
     return false;
   }
 };
-const isFocusChange = state_dist/* Annotation */.q6.define();
+const isFocusChange = state_dist/* Annotation */.YH.define();
 function focusChangeTransaction(state, focus) {
   let effects = [];
   for (var _iterator23 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step23; !(_step23 = _iterator23()).done;) {
@@ -18888,7 +18898,7 @@ const wrappingWhiteSpace = ["pre-wrap", "normal", "pre-line", "break-spaces"];
 class HeightOracle {
   constructor(lineWrapping) {
     this.lineWrapping = lineWrapping;
-    this.doc = state_dist/* Text */.xv.empty;
+    this.doc = state_dist/* Text */.EY.empty;
     this.heightSamples = {};
     this.lineHeight = 14;
     this.charWidth = 7;
@@ -19507,13 +19517,13 @@ class NodeBuilder {
   }
   static build(oracle, decorations, from, to) {
     let builder = new NodeBuilder(from, oracle);
-    state_dist/* RangeSet */.Xs.spans(decorations, from, to, builder, 0);
+    state_dist/* RangeSet */.om.spans(decorations, from, to, builder, 0);
     return builder.finish(from);
   }
 }
 function heightRelevantDecoChanges(a, b, diff) {
   let comp = new DecorationComparator();
-  state_dist/* RangeSet */.Xs.compare(a, b, diff, comp, 0);
+  state_dist/* RangeSet */.om.compare(a, b, diff, comp, 0);
   return comp.changes;
 }
 class DecorationComparator {
@@ -19644,7 +19654,7 @@ class ViewState {
     let guessWrapping = state.facet(contentAttributes).some(v => typeof v != "function" && v.class == "cm-lineWrapping");
     this.heightOracle = new HeightOracle(guessWrapping);
     this.stateDeco = state.facet(decorations).filter(d => typeof d != "function");
-    this.heightMap = HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.xv.empty, this.heightOracle.setDoc(state.doc), [new ChangedRange(0, 0, 0, state.doc.length)]);
+    this.heightMap = HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.EY.empty, this.heightOracle.setDoc(state.doc), [new ChangedRange(0, 0, 0, state.doc.length)]);
     this.viewport = this.getViewport(0, null);
     this.updateViewportLines();
     this.updateForViewport();
@@ -19690,7 +19700,7 @@ class ViewState {
     let prevDeco = this.stateDeco;
     this.stateDeco = this.state.facet(decorations).filter(d => typeof d != "function");
     let contentChanges = update.changedRanges;
-    let heightChanges = ChangedRange.extendWithRanges(contentChanges, heightRelevantDecoChanges(prevDeco, this.stateDeco, update ? update.changes : state_dist/* ChangeSet */.as.empty(this.state.doc.length)));
+    let heightChanges = ChangedRange.extendWithRanges(contentChanges, heightRelevantDecoChanges(prevDeco, this.stateDeco, update ? update.changes : state_dist/* ChangeSet */.VR.empty(this.state.doc.length)));
     let prevHeight = this.heightMap.height;
     let scrollAnchor = this.scrolledToBottom ? null : this.scrollAnchorAt(this.scrollTop);
     this.heightMap = this.heightMap.applyChanges(this.stateDeco, update.startState.doc, this.heightOracle.setDoc(this.state.doc), heightChanges);
@@ -19792,7 +19802,7 @@ class ViewState {
       for (var _iterator26 = _createForOfIteratorHelperLoose(this.viewports), _step26; !(_step26 = _iterator26()).done;) {
         let vp = _step26.value;
         let heights = vp.from == this.viewport.from ? lineHeights : view.docView.measureVisibleLineHeights(vp);
-        this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.xv.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
+        this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.EY.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
       }
       if (oracle.heightChanged) result |= 2;
     }
@@ -19895,7 +19905,7 @@ class ViewState {
       let gap = find(current, gap => gap.from >= line.from && gap.to <= line.to && Math.abs(gap.from - from) < halfMargin && Math.abs(gap.to - to) < halfMargin && !avoid.some(pos => gap.from < pos && gap.to > pos));
       if (!gap) {
         if (to < line.to && mayMeasure && wrapping && mayMeasure.visibleRanges.some(r => r.from <= to && r.to >= to)) {
-          let lineStart = mayMeasure.moveToLineBoundary(state_dist/* EditorSelection */.jT.cursor(to), false, true).head;
+          let lineStart = mayMeasure.moveToLineBoundary(state_dist/* EditorSelection */.OF.cursor(to), false, true).head;
           if (lineStart > from) to = lineStart;
         }
         gap = new LineGap(from, to, this.gapSize(line, from, to, structure));
@@ -19962,7 +19972,7 @@ class ViewState {
     let deco = this.stateDeco;
     if (this.lineGaps.length) deco = deco.concat(this.lineGapDeco);
     let ranges = [];
-    state_dist/* RangeSet */.Xs.spans(deco, this.viewport.from, this.viewport.to, {
+    state_dist/* RangeSet */.om.spans(deco, this.viewport.from, this.viewport.to, {
       span(from, to) {
         ranges.push({
           from,
@@ -20005,7 +20015,7 @@ function lineStructure(from, to, stateDeco) {
   let ranges = [],
     pos = from,
     total = 0;
-  state_dist/* RangeSet */.Xs.spans(stateDeco, from, to, {
+  state_dist/* RangeSet */.om.spans(stateDeco, from, to, {
     span() {},
     point(from, to) {
       if (from > pos) {
@@ -20134,21 +20144,21 @@ function scaleBlock(block, scaler) {
     bBottom = scaler.toDOM(block.bottom);
   return new BlockInfo(block.from, block.length, bTop, bBottom - bTop, Array.isArray(block._content) ? block._content.map(b => scaleBlock(b, scaler)) : block._content);
 }
-const theme = state_dist/* Facet */.r$.define({
+const theme = state_dist/* Facet */.sj.define({
   combine: strs => strs.join(" ")
 });
-const darkTheme = state_dist/* Facet */.r$.define({
+const darkTheme = state_dist/* Facet */.sj.define({
   combine: values => values.indexOf(true) > -1
 });
-const baseThemeID = style_mod/* StyleModule */.V.newName(),
-  baseLightID = style_mod/* StyleModule */.V.newName(),
-  baseDarkID = style_mod/* StyleModule */.V.newName();
+const baseThemeID = style_mod/* StyleModule */.G.newName(),
+  baseLightID = style_mod/* StyleModule */.G.newName(),
+  baseDarkID = style_mod/* StyleModule */.G.newName();
 const lightDarkIDs = {
   "&light": "." + baseLightID,
   "&dark": "." + baseDarkID
 };
 function buildTheme(main, spec, scopes) {
-  return new style_mod/* StyleModule */.V(spec, {
+  return new style_mod/* StyleModule */.G(spec, {
     finish(sel) {
       return /&/.test(sel) ? sel.replace(/&\w*/, m => {
         if (m == "&") return main;
@@ -20424,7 +20434,7 @@ class DOMReader {
   constructor(points, state) {
     this.points = points;
     this.text = "";
-    this.lineSeparator = state.facet(state_dist/* EditorState */.yy.lineSeparator);
+    this.lineSeparator = state.facet(state_dist/* EditorState */.$t.lineSeparator);
   }
   append(text) {
     this.text += text;
@@ -20548,15 +20558,17 @@ class DOMChange {
       let head = iHead && iHead.node == domSel.focusNode && iHead.offset == domSel.focusOffset || !contains(view.contentDOM, domSel.focusNode) ? view.state.selection.main.head : view.docView.posFromDOM(domSel.focusNode, domSel.focusOffset);
       let anchor = iAnchor && iAnchor.node == domSel.anchorNode && iAnchor.offset == domSel.anchorOffset || !contains(view.contentDOM, domSel.anchorNode) ? view.state.selection.main.anchor : view.docView.posFromDOM(domSel.anchorNode, domSel.anchorOffset);
       let vp = view.viewport;
-      if (browser.ios && view.state.selection.main.empty && head != anchor && (vp.from > 0 || vp.to < view.state.doc.length)) {
-        let offFrom = vp.from - Math.min(head, anchor),
-          offTo = vp.to - Math.max(head, anchor);
-        if ((offFrom == 0 || offFrom == 1) && (offTo == 0 || offTo == -1)) {
+      if ((browser.ios || browser.chrome) && view.state.selection.main.empty && head != anchor && (vp.from > 0 || vp.to < view.state.doc.length)) {
+        let from = Math.min(head, anchor),
+          to = Math.max(head, anchor);
+        let offFrom = vp.from - from,
+          offTo = vp.to - to;
+        if ((offFrom == 0 || offFrom == 1 || from == 0) && (offTo == 0 || offTo == -1 || to == view.state.doc.length)) {
           head = 0;
           anchor = view.state.doc.length;
         }
       }
-      this.newSel = state_dist/* EditorSelection */.jT.single(anchor, head);
+      this.newSel = state_dist/* EditorSelection */.OF.single(anchor, head);
     }
   }
 }
@@ -20584,7 +20596,7 @@ function applyDOMChange(view, domChange) {
       change = {
         from: from + diff.from,
         to: from + diff.toA,
-        insert: state_dist/* Text */.xv.of(domChange.text.slice(diff.from, diff.toB).split(LineBreakPlaceholder))
+        insert: state_dist/* Text */.EY.of(domChange.text.slice(diff.from, diff.toB).split(LineBreakPlaceholder))
       };
     }
   } else if (newSel && (!view.hasFocus && view.state.facet(editable) || newSel.main.eq(sel))) {
@@ -20604,18 +20616,18 @@ function applyDOMChange(view, domChange) {
       insert: view.state.doc.slice(sel.from, change.from).append(change.insert).append(view.state.doc.slice(change.to, sel.to))
     };
   } else if ((browser.mac || browser.android) && change && change.from == change.to && change.from == sel.head - 1 && /^\. ?$/.test(change.insert.toString()) && view.contentDOM.getAttribute("autocorrect") == "off") {
-    if (newSel && change.insert.length == 2) newSel = state_dist/* EditorSelection */.jT.single(newSel.main.anchor - 1, newSel.main.head - 1);
+    if (newSel && change.insert.length == 2) newSel = state_dist/* EditorSelection */.OF.single(newSel.main.anchor - 1, newSel.main.head - 1);
     change = {
       from: sel.from,
       to: sel.to,
-      insert: state_dist/* Text */.xv.of([" "])
+      insert: state_dist/* Text */.EY.of([" "])
     };
   } else if (browser.chrome && change && change.from == change.to && change.from == sel.head && change.insert.toString() == "\n " && view.lineWrapping) {
-    if (newSel) newSel = state_dist/* EditorSelection */.jT.single(newSel.main.anchor - 1, newSel.main.head - 1);
+    if (newSel) newSel = state_dist/* EditorSelection */.OF.single(newSel.main.anchor - 1, newSel.main.head - 1);
     change = {
       from: sel.from,
       to: sel.to,
-      insert: state_dist/* Text */.xv.of([" "])
+      insert: state_dist/* Text */.EY.of([" "])
     };
   }
   if (change) {
@@ -20688,7 +20700,7 @@ function applyDefaultInsert(view, change, newSel) {
           selOff = range.to - sel.to;
         return {
           changes: rangeChanges,
-          range: !mainSel ? range.map(rangeChanges) : state_dist/* EditorSelection */.jT.range(Math.max(0, mainSel.anchor + selOff), Math.max(0, mainSel.head + selOff))
+          range: !mainSel ? range.map(rangeChanges) : state_dist/* EditorSelection */.OF.range(Math.max(0, mainSel.anchor + selOff), Math.max(0, mainSel.head + selOff))
         };
       });
     } else {
@@ -20763,7 +20775,7 @@ function selectionFromPoints(points, base) {
   if (points.length == 0) return null;
   let anchor = points[0].pos,
     head = points.length == 2 ? points[1].pos : anchor;
-  return anchor > -1 && head > -1 ? state_dist/* EditorSelection */.jT.single(anchor + base, head + base) : null;
+  return anchor > -1 && head > -1 ? state_dist/* EditorSelection */.OF.single(anchor + base, head + base) : null;
 }
 const observeOptions = {
   childList: true,
@@ -21217,7 +21229,7 @@ class EditorView {
     this.dispatchTransactions = config.dispatchTransactions || dispatch && (trs => trs.forEach(tr => dispatch(tr, this))) || (trs => this.update(trs));
     this.dispatch = this.dispatch.bind(this);
     this._root = config.root || getRoot(config.parent) || document;
-    this.viewState = new ViewState(config.state || state_dist/* EditorState */.yy.create(config));
+    this.viewState = new ViewState(config.state || state_dist/* EditorState */.$t.create(config));
     if (config.scrollTo && config.scrollTo.is(scrollIntoView)) this.viewState.scrollTarget = config.scrollTo.value.clip(this.viewState.state);
     this.plugins = this.state.facet(viewPlugin).map(spec => new PluginInstance(spec));
     for (var _iterator43 = _createForOfIteratorHelperLoose(this.plugins), _step43; !(_step43 = _iterator43()).done;) {
@@ -21237,7 +21249,7 @@ class EditorView {
     for (var _len = arguments.length, input = new Array(_len), _key = 0; _key < _len; _key++) {
       input[_key] = arguments[_key];
     }
-    let trs = input.length == 1 && input[0] instanceof state_dist/* Transaction */.YW ? input : input.length == 1 && Array.isArray(input[0]) ? input[0] : [this.state.update(...input)];
+    let trs = input.length == 1 && input[0] instanceof state_dist/* Transaction */.ZX ? input : input.length == 1 && Array.isArray(input[0]) ? input[0] : [this.state.update(...input)];
     this.dispatchTransactions(trs, this);
   }
   update(transactions) {
@@ -21275,7 +21287,7 @@ class EditorView {
     } else {
       this.observer.clear();
     }
-    if (state.facet(state_dist/* EditorState */.yy.phrases) != this.state.facet(state_dist/* EditorState */.yy.phrases)) return this.setState(state);
+    if (state.facet(state_dist/* EditorState */.$t.phrases) != this.state.facet(state_dist/* EditorState */.$t.phrases)) return this.setState(state);
     update = ViewUpdate.create(this, state, transactions);
     update.flags |= focusFlag;
     let scrollTarget = this.viewState.scrollTarget;
@@ -21288,7 +21300,7 @@ class EditorView {
           let {
             main
           } = tr.state.selection;
-          scrollTarget = new ScrollTarget(main.empty ? main : state_dist/* EditorSelection */.jT.cursor(main.head, main.head > main.anchor ? -1 : 1));
+          scrollTarget = new ScrollTarget(main.empty ? main : state_dist/* EditorSelection */.OF.cursor(main.head, main.head > main.anchor ? -1 : 1));
         }
         for (var _iterator46 = _createForOfIteratorHelperLoose(tr.effects), _step46; !(_step46 = _iterator46()).done;) {
           let e = _step46.value;
@@ -21541,7 +21553,7 @@ class EditorView {
   mountStyles() {
     this.styleModules = this.state.facet(styleModule);
     let nonce = this.state.facet(EditorView.cspNonce);
-    style_mod/* StyleModule */.V.mount(this.root, this.styleModules.concat(baseTheme$1).reverse(), nonce ? {
+    style_mod/* StyleModule */.G.mount(this.root, this.styleModules.concat(baseTheme$1).reverse(), nonce ? {
       nonce
     } : undefined);
   }
@@ -21609,7 +21621,7 @@ class EditorView {
     let order = this.bidiSpans(line),
       dir = this.textDirectionAt(line.from);
     let span = order[end ? order.length - 1 : 0];
-    return state_dist/* EditorSelection */.jT.cursor(span.side(end, dir) + line.from, span.forward(!end, dir) ? 1 : -1);
+    return state_dist/* EditorSelection */.OF.cursor(span.side(end, dir) + line.from, span.forward(!end, dir) ? 1 : -1);
   }
   moveToLineBoundary(start, forward, includeWrap) {
     if (includeWrap === void 0) {
@@ -21717,7 +21729,7 @@ class EditorView {
     if (options === void 0) {
       options = {};
     }
-    return scrollIntoView.of(new ScrollTarget(typeof pos == "number" ? state_dist/* EditorSelection */.jT.cursor(pos) : pos, options.y, options.x, options.yMargin, options.xMargin));
+    return scrollIntoView.of(new ScrollTarget(typeof pos == "number" ? state_dist/* EditorSelection */.OF.cursor(pos) : pos, options.y, options.x, options.yMargin, options.xMargin));
   }
   scrollSnapshot() {
     let {
@@ -21725,7 +21737,7 @@ class EditorView {
       scrollLeft
     } = this.scrollDOM;
     let ref = this.viewState.scrollAnchorAt(scrollTop);
-    return scrollIntoView.of(new ScrollTarget(state_dist/* EditorSelection */.jT.cursor(ref.from), "start", "start", ref.top - scrollTop, scrollLeft, true));
+    return scrollIntoView.of(new ScrollTarget(state_dist/* EditorSelection */.OF.cursor(ref.from), "start", "start", ref.top - scrollTop, scrollLeft, true));
   }
   static domEventHandlers(handlers) {
     return ViewPlugin.define(() => ({}), {
@@ -21738,13 +21750,13 @@ class EditorView {
     });
   }
   static theme(spec, options) {
-    let prefix = style_mod/* StyleModule */.V.newName();
+    let prefix = style_mod/* StyleModule */.G.newName();
     let result = [theme.of(prefix), styleModule.of(buildTheme(`.${prefix}`, spec))];
     if (options && options.dark) result.push(darkTheme.of(true));
     return result;
   }
   static baseTheme(spec) {
-    return state_dist/* Prec */.Wl.lowest(styleModule.of(buildTheme("." + baseThemeID, spec, lightDarkIDs)));
+    return state_dist/* Prec */.Nb.lowest(styleModule.of(buildTheme("." + baseThemeID, spec, lightDarkIDs)));
   }
   static findFromDOM(dom) {
     var _a;
@@ -21769,7 +21781,7 @@ EditorView.atomicRanges = atomicRanges;
 EditorView.bidiIsolatedRanges = bidiIsolatedRanges;
 EditorView.scrollMargins = scrollMargins;
 EditorView.darkTheme = darkTheme;
-EditorView.cspNonce = state_dist/* Facet */.r$.define({
+EditorView.cspNonce = state_dist/* Facet */.sj.define({
   combine: values => values.length ? values[0] : ""
 });
 EditorView.contentAttributes = contentAttributes;
@@ -21777,7 +21789,7 @@ EditorView.editorAttributes = editorAttributes;
 EditorView.lineWrapping = EditorView.contentAttributes.of({
   "class": "cm-lineWrapping"
 });
-EditorView.announce = state_dist/* StateEffect */.Py.define();
+EditorView.announce = state_dist/* StateEffect */.Pe.define();
 const MaxBidiLine = 4096;
 const BadMeasure = {};
 class CachedOrder {
@@ -21833,12 +21845,12 @@ function modifiers(name, event, shift) {
   if (shift !== false && event.shiftKey) name = "Shift-" + name;
   return name;
 }
-const handleKeyEvents = state_dist/* Prec */.Wl.default(EditorView.domEventHandlers({
+const handleKeyEvents = state_dist/* Prec */.Nb.default(EditorView.domEventHandlers({
   keydown(event, view) {
     return runHandlers(getKeymap(view.state), event, view, "editor");
   }
 }));
-const keymap = state_dist/* Facet */.r$.define({
+const keymap = state_dist/* Facet */.sj.define({
   enables: handleKeyEvents
 });
 const Keymaps = new WeakMap();
@@ -21924,8 +21936,8 @@ function buildKeymap(bindings, platform) {
 }
 function runHandlers(map, event, view, scope) {
   let name = keyName(event);
-  let charCode = (0,state_dist/* codePointAt */.gm)(name, 0),
-    isChar = (0,state_dist/* codePointSize */.nZ)(charCode) == name.length && name != " ";
+  let charCode = (0,state_dist/* codePointAt */.vS)(name, 0),
+    isChar = (0,state_dist/* codePointSize */.Fh)(charCode) == name.length && name != " ";
   let prefix = "",
     handled = false,
     prevented = false,
@@ -22026,7 +22038,7 @@ function getBase(view) {
   };
 }
 function wrappedLine(view, pos, inside) {
-  let range = state_dist/* EditorSelection */.jT.cursor(pos);
+  let range = state_dist/* EditorSelection */.OF.cursor(pos);
   return {
     from: Math.max(inside.from, view.moveToLineBoundary(range, false, true).from),
     to: Math.min(inside.to, view.moveToLineBoundary(range, true, true).from),
@@ -22197,14 +22209,14 @@ class LayerView {
     this.dom.remove();
   }
 }
-const layerOrder = state_dist/* Facet */.r$.define();
+const layerOrder = state_dist/* Facet */.sj.define();
 function dist_layer(config) {
   return [ViewPlugin.define(v => new LayerView(v, config)), layerOrder.of(config)];
 }
 const CanHidePrimary = !browser.ios;
-const selectionConfig = state_dist/* Facet */.r$.define({
+const selectionConfig = state_dist/* Facet */.sj.define({
   combine(configs) {
-    return (0,state_dist/* combineConfig */.BO)(configs, {
+    return (0,state_dist/* combineConfig */.QR)(configs, {
       cursorBlinkRate: 1200,
       drawRangeCursor: true
     }, {
@@ -22238,7 +22250,7 @@ const cursorLayer = dist_layer({
       let prim = r == state.selection.main;
       if (r.empty ? !prim || CanHidePrimary : conf.drawRangeCursor) {
         let className = prim ? "cm-cursor cm-cursor-primary" : "cm-cursor cm-cursor-secondary";
-        let cursor = r.empty ? r : state_dist/* EditorSelection */.jT.cursor(r.head, r.head > r.anchor ? -1 : 1);
+        let cursor = r.empty ? r : state_dist/* EditorSelection */.OF.cursor(r.head, r.head > r.anchor ? -1 : 1);
         for (var _iterator66 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, className, cursor)), _step66; !(_step66 = _iterator66()).done;) {
           let piece = _step66.value;
           cursors.push(piece);
@@ -22287,13 +22299,13 @@ if (CanHidePrimary) {
     caretColor: "transparent !important"
   };
 }
-const hideNativeSelection = state_dist/* Prec */.Wl.highest(EditorView.theme(themeSpec));
-const setDropCursorPos = state_dist/* StateEffect */.Py.define({
+const hideNativeSelection = state_dist/* Prec */.Nb.highest(EditorView.theme(themeSpec));
+const setDropCursorPos = state_dist/* StateEffect */.Pe.define({
   map(pos, mapping) {
     return pos == null ? null : mapping.mapPos(pos);
   }
 });
-const dropCursorPos = state_dist/* StateField */.QQ.define({
+const dropCursorPos = state_dist/* StateField */.sU.define({
   create() {
     return null;
   },
@@ -22437,7 +22449,7 @@ class MatchDecorator {
     this.maxLength = maxLength;
   }
   createDeco(view) {
-    let build = new state_dist/* RangeSetBuilder */.f_(),
+    let build = new state_dist/* RangeSetBuilder */.vB(),
       add = build.add.bind(build);
     for (var _iterator68 = _createForOfIteratorHelperLoose(matchRanges(view, this.maxLength)), _step68; !(_step68 = _iterator68()).done;) {
       let {
@@ -22535,9 +22547,9 @@ function supportsTabSize() {
   }
   return _supportsTabSize || false;
 }
-const specialCharConfig = state_dist/* Facet */.r$.define({
+const specialCharConfig = state_dist/* Facet */.sj.define({
   combine(configs) {
-    let config = (0,state_dist/* combineConfig */.BO)(configs, {
+    let config = (0,state_dist/* combineConfig */.QR)(configs, {
       render: null,
       specialChars: Specials,
       addSpecialChars: null
@@ -22570,11 +22582,11 @@ function specialCharPlugin() {
           let {
             doc
           } = view.state;
-          let code = (0,state_dist/* codePointAt */.gm)(m[0], 0);
+          let code = (0,state_dist/* codePointAt */.vS)(m[0], 0);
           if (code == 9) {
             let line = doc.lineAt(pos);
             let size = view.state.tabSize,
-              col = (0,state_dist/* countColumn */.IS)(line.text, size, pos - line.from);
+              col = (0,state_dist/* countColumn */.y$)(line.text, size, pos - line.from);
             return Decoration.replace({
               widget: new TabWidget((size - col % size) * this.view.defaultCharacterWidth / this.view.scaleX)
             });
@@ -22704,7 +22716,7 @@ const activeLineHighlighter = ViewPlugin.fromClass(class {
 }, {
   decorations: v => v.decorations
 });
-class Placeholder extends (/* unused pure expression or super */ null && (WidgetType)) {
+class Placeholder extends WidgetType {
   constructor(content) {
     super();
     this.content = content;
@@ -22872,12 +22884,14 @@ function crosshairCursor(options) {
 }
 const Outside = "-10000px";
 class TooltipViewManager {
-  constructor(view, facet, createTooltipView) {
+  constructor(view, facet, createTooltipView, removeTooltipView) {
     this.facet = facet;
     this.createTooltipView = createTooltipView;
+    this.removeTooltipView = removeTooltipView;
     this.input = view.state.facet(facet);
     this.tooltips = this.input.filter(t => t);
-    this.tooltipViews = this.tooltips.map(createTooltipView);
+    let prev = null;
+    this.tooltipViews = this.tooltips.map(t => prev = createTooltipView(t, prev));
   }
   update(update, above) {
     var _a;
@@ -22901,7 +22915,7 @@ class TooltipViewManager {
         if (other && other.create == tip.create) known = i;
       }
       if (known < 0) {
-        tooltipViews[i] = this.createTooltipView(tip);
+        tooltipViews[i] = this.createTooltipView(tip, i ? tooltipViews[i - 1] : null);
         if (newAbove) newAbove[i] = !!tip.above;
       } else {
         let tooltipView = tooltipViews[i] = this.tooltipViews[known];
@@ -22912,7 +22926,7 @@ class TooltipViewManager {
     for (var _iterator72 = _createForOfIteratorHelperLoose(this.tooltipViews), _step72; !(_step72 = _iterator72()).done;) {
       let t = _step72.value;
       if (tooltipViews.indexOf(t) < 0) {
-        t.dom.remove();
+        this.removeTooltipView(t);
         (_a = t.destroy) === null || _a === void 0 ? void 0 : _a.call(t);
       }
     }
@@ -22943,7 +22957,7 @@ function windowSpace(view) {
     right: win.innerWidth
   };
 }
-const tooltipConfig = state_dist/* Facet */.r$.define({
+const tooltipConfig = state_dist/* Facet */.sj.define({
   combine: values => {
     var _a, _b, _c;
     return {
@@ -22972,7 +22986,12 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       write: this.writeMeasure.bind(this),
       key: this
     };
-    this.manager = new TooltipViewManager(view, showTooltip, t => this.createTooltip(t));
+    this.resizeObserver = typeof ResizeObserver == "function" ? new ResizeObserver(() => this.measureSoon()) : null;
+    this.manager = new TooltipViewManager(view, showTooltip, (t, p) => this.createTooltip(t, p), t => {
+      if (this.resizeObserver) this.resizeObserver.unobserve(t.dom);
+      t.dom.remove();
+    });
+    this.above = this.manager.tooltips.map(t => !!t.above);
     this.intersectionObserver = typeof IntersectionObserver == "function" ? new IntersectionObserver(entries => {
       if (Date.now() > this.lastTransaction - 50 && entries.length > 0 && entries[entries.length - 1].intersectionRatio < 1) this.measureSoon();
     }, {
@@ -23035,23 +23054,25 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
     }
     if (shouldMeasure) this.maybeMeasure();
   }
-  createTooltip(tooltip) {
+  createTooltip(tooltip, prev) {
     let tooltipView = tooltip.create(this.view);
+    let before = prev ? prev.dom : null;
     tooltipView.dom.classList.add("cm-tooltip");
     if (tooltip.arrow && !tooltipView.dom.querySelector(".cm-tooltip > .cm-tooltip-arrow")) {
       let arrow = document.createElement("div");
       arrow.className = "cm-tooltip-arrow";
-      tooltipView.dom.appendChild(arrow);
+      tooltipView.dom.insertBefore(arrow, before);
     }
     tooltipView.dom.style.position = this.position;
     tooltipView.dom.style.top = Outside;
     tooltipView.dom.style.left = "0px";
-    this.container.appendChild(tooltipView.dom);
+    this.container.insertBefore(tooltipView.dom, before);
     if (tooltipView.mount) tooltipView.mount(this.view);
+    if (this.resizeObserver) this.resizeObserver.observe(tooltipView.dom);
     return tooltipView;
   }
   destroy() {
-    var _a, _b;
+    var _a, _b, _c;
     this.view.win.removeEventListener("resize", this.measureSoon);
     for (var _iterator76 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step76; !(_step76 = _iterator76()).done;) {
       let tooltipView = _step76.value;
@@ -23059,7 +23080,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       (_a = tooltipView.destroy) === null || _a === void 0 ? void 0 : _a.call(tooltipView);
     }
     if (this.parent) this.container.remove();
-    (_b = this.intersectionObserver) === null || _b === void 0 ? void 0 : _b.disconnect();
+    (_b = this.resizeObserver) === null || _b === void 0 ? void 0 : _b.disconnect();
+    (_c = this.intersectionObserver) === null || _c === void 0 ? void 0 : _c.disconnect();
     clearTimeout(this.measureTimeout);
   }
   readMeasure() {
@@ -23277,10 +23299,12 @@ const noOffset = {
   x: 0,
   y: 0
 };
-const showTooltip = state_dist/* Facet */.r$.define({
+const showTooltip = state_dist/* Facet */.sj.define({
   enables: [tooltipPlugin, baseTheme]
 });
-const showHoverTooltip = state_dist/* Facet */.r$.define();
+const showHoverTooltip = state_dist/* Facet */.sj.define({
+  combine: inputs => inputs.reduce((a, i) => a.concat(i), [])
+});
 class HoverTooltipHost {
   static create(view) {
     return new HoverTooltipHost(view);
@@ -23290,12 +23314,12 @@ class HoverTooltipHost {
     this.mounted = false;
     this.dom = document.createElement("div");
     this.dom.classList.add("cm-tooltip-hover");
-    this.manager = new TooltipViewManager(view, showHoverTooltip, t => this.createHostedView(t));
+    this.manager = new TooltipViewManager(view, showHoverTooltip, (t, p) => this.createHostedView(t, p), t => t.dom.remove());
   }
-  createHostedView(tooltip) {
+  createHostedView(tooltip, prev) {
     let hostedView = tooltip.create(this.view);
     hostedView.dom.classList.add("cm-tooltip-section");
-    this.dom.appendChild(hostedView.dom);
+    this.dom.insertBefore(hostedView.dom, prev ? prev.dom.nextSibling : this.dom.firstChild);
     if (this.mounted && hostedView.mount) hostedView.mount(this.view);
     return hostedView;
   }
@@ -23347,7 +23371,7 @@ class HoverTooltipHost {
   }
 }
 const showHoverTooltipHost = showTooltip.compute([showHoverTooltip], state => {
-  let tooltips = state.facet(showHoverTooltip).filter(t => t);
+  let tooltips = state.facet(showHoverTooltip);
   if (tooltips.length === 0) return null;
   return {
     pos: Math.min(...tooltips.map(t => t.pos)),
@@ -23392,7 +23416,7 @@ class HoverPlugin {
   }
   checkHover() {
     this.hoverTimeout = -1;
-    if (this.active) return;
+    if (this.active.length) return;
     let hovered = Date.now() - this.lastMove.time;
     if (hovered < this.hoverTime) this.hoverTimeout = setTimeout(this.checkHover, this.hoverTime - hovered);else this.startHover();
   }
@@ -23425,14 +23449,14 @@ class HoverPlugin {
       open.then(result => {
         if (this.pending == pending) {
           this.pending = null;
-          if (result) view.dispatch({
-            effects: this.setHover.of(result)
+          if (result && !(Array.isArray(result) && !result.length)) view.dispatch({
+            effects: this.setHover.of(Array.isArray(result) ? result : [result])
           });
         }
       }, e => logException(view.state, e, "hover tooltip"));
-    } else if (open) {
+    } else if (open && !(Array.isArray(open) && !open.length)) {
       view.dispatch({
-        effects: this.setHover.of(open)
+        effects: this.setHover.of(Array.isArray(open) ? open : [open])
       });
     }
   }
@@ -23442,7 +23466,7 @@ class HoverPlugin {
     return index > -1 ? plugin.manager.tooltipViews[index] : null;
   }
   mousemove(event) {
-    var _a;
+    var _a, _b;
     this.lastMove = {
       x: event.clientX,
       y: event.clientY,
@@ -23454,14 +23478,14 @@ class HoverPlugin {
       active,
       tooltip
     } = this;
-    if (active && tooltip && !isInTooltip(tooltip.dom, event) || this.pending) {
+    if (active.length && tooltip && !isInTooltip(tooltip.dom, event) || this.pending) {
       let {
           pos
-        } = active || this.pending,
-        end = (_a = active === null || active === void 0 ? void 0 : active.end) !== null && _a !== void 0 ? _a : pos;
+        } = active[0] || this.pending,
+        end = (_b = (_a = active[0]) === null || _a === void 0 ? void 0 : _a.end) !== null && _b !== void 0 ? _b : pos;
       if (pos == end ? this.view.posAtCoords(this.lastMove) != pos : !isOverRange(this.view, pos, end, event.clientX, event.clientY)) {
         this.view.dispatch({
-          effects: this.setHover.of(null)
+          effects: this.setHover.of([])
         });
         this.pending = null;
       }
@@ -23473,21 +23497,21 @@ class HoverPlugin {
     let {
       active
     } = this;
-    if (active) {
+    if (active.length) {
       let {
         tooltip
       } = this;
       let inTooltip = tooltip && tooltip.dom.contains(event.relatedTarget);
       if (!inTooltip) this.view.dispatch({
-        effects: this.setHover.of(null)
+        effects: this.setHover.of([])
       });else this.watchTooltipLeave(tooltip.dom);
     }
   }
   watchTooltipLeave(tooltip) {
     let watch = event => {
       tooltip.removeEventListener("mouseleave", watch);
-      if (this.active && !this.view.dom.contains(event.relatedTarget)) this.view.dispatch({
-        effects: this.setHover.of(null)
+      if (this.active.length && !this.view.dom.contains(event.relatedTarget)) this.view.dispatch({
+        effects: this.setHover.of([])
       });
     };
     tooltip.addEventListener("mouseleave", watch);
@@ -23520,22 +23544,27 @@ function hoverTooltip(source, options) {
   let setHover = StateEffect.define();
   let hoverState = StateField.define({
     create() {
-      return null;
+      return [];
     },
     update(value, tr) {
-      if (value && (options.hideOnChange && (tr.docChanged || tr.selection) || options.hideOn && options.hideOn(tr, value))) return null;
-      if (value && tr.docChanged) {
-        let newPos = tr.changes.mapPos(value.pos, -1, MapMode.TrackDel);
-        if (newPos == null) return null;
-        let copy = Object.assign(Object.create(null), value);
-        copy.pos = newPos;
-        if (value.end != null) copy.end = tr.changes.mapPos(value.end);
-        value = copy;
+      if (value.length) {
+        if (options.hideOnChange && (tr.docChanged || tr.selection)) value = [];else if (options.hideOn) value = value.filter(v => !options.hideOn(tr, v));
+        if (tr.docChanged) {
+          for (var _iterator84 = _createForOfIteratorHelperLoose(value), _step84; !(_step84 = _iterator84()).done;) {
+            let tooltip = _step84.value;
+            let newPos = tr.changes.mapPos(tooltip.pos, -1, MapMode.TrackDel);
+            if (newPos != null) {
+              let copy = Object.assign(Object.create(null), tooltip);
+              copy.pos = newPos;
+              if (copy.end != null) copy.end = tr.changes.mapPos(copy.end);
+            }
+          }
+        }
       }
-      for (var _iterator84 = _createForOfIteratorHelperLoose(tr.effects), _step84; !(_step84 = _iterator84()).done;) {
-        let effect = _step84.value;
+      for (var _iterator85 = _createForOfIteratorHelperLoose(tr.effects), _step85; !(_step85 = _iterator85()).done;) {
+        let effect = _step85.value;
         if (effect.is(setHover)) value = effect.value;
-        if (effect.is(closeHoverTooltipEffect)) value = null;
+        if (effect.is(closeHoverTooltipEffect)) value = [];
       }
       return value;
     },
@@ -23552,17 +23581,17 @@ function getTooltip(view, tooltip) {
 function hasHoverTooltips(state) {
   return state.facet(showHoverTooltip).some(x => x);
 }
-const closeHoverTooltipEffect = state_dist/* StateEffect */.Py.define();
+const closeHoverTooltipEffect = state_dist/* StateEffect */.Pe.define();
 const closeHoverTooltips = closeHoverTooltipEffect.of(null);
 function repositionTooltips(view) {
   let plugin = view.plugin(tooltipPlugin);
   if (plugin) plugin.maybeMeasure();
 }
-const panelConfig = state_dist/* Facet */.r$.define({
+const panelConfig = state_dist/* Facet */.sj.define({
   combine(configs) {
     let topContainer, bottomContainer;
-    for (var _iterator85 = _createForOfIteratorHelperLoose(configs), _step85; !(_step85 = _iterator85()).done;) {
-      let c = _step85.value;
+    for (var _iterator86 = _createForOfIteratorHelperLoose(configs), _step86; !(_step86 = _iterator86()).done;) {
+      let c = _step86.value;
       topContainer = topContainer || c.topContainer;
       bottomContainer = bottomContainer || c.bottomContainer;
     }
@@ -23590,8 +23619,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
     this.bottom = new PanelGroup(view, false, conf.bottomContainer);
     this.top.sync(this.panels.filter(p => p.top));
     this.bottom.sync(this.panels.filter(p => !p.top));
-    for (var _iterator86 = _createForOfIteratorHelperLoose(this.panels), _step86; !(_step86 = _iterator86()).done;) {
-      let p = _step86.value;
+    for (var _iterator87 = _createForOfIteratorHelperLoose(this.panels), _step87; !(_step87 = _iterator87()).done;) {
+      let p = _step87.value;
       p.dom.classList.add("cm-panel");
       if (p.mount) p.mount();
     }
@@ -23615,8 +23644,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         top = [],
         bottom = [],
         mount = [];
-      for (var _iterator87 = _createForOfIteratorHelperLoose(specs), _step87; !(_step87 = _iterator87()).done;) {
-        let spec = _step87.value;
+      for (var _iterator88 = _createForOfIteratorHelperLoose(specs), _step88; !(_step88 = _iterator88()).done;) {
+        let spec = _step88.value;
         let known = this.specs.indexOf(spec),
           panel;
         if (known < 0) {
@@ -23639,8 +23668,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         if (p.mount) p.mount();
       }
     } else {
-      for (var _iterator88 = _createForOfIteratorHelperLoose(this.panels), _step88; !(_step88 = _iterator88()).done;) {
-        let p = _step88.value;
+      for (var _iterator89 = _createForOfIteratorHelperLoose(this.panels), _step89; !(_step89 = _iterator89()).done;) {
+        let p = _step89.value;
         if (p.update) p.update(update);
       }
     }
@@ -23669,8 +23698,8 @@ class PanelGroup {
     this.syncClasses();
   }
   sync(panels) {
-    for (var _iterator89 = _createForOfIteratorHelperLoose(this.panels), _step89; !(_step89 = _iterator89()).done;) {
-      let p = _step89.value;
+    for (var _iterator90 = _createForOfIteratorHelperLoose(this.panels), _step90; !(_step90 = _iterator90()).done;) {
+      let p = _step90.value;
       if (p.destroy && panels.indexOf(p) < 0) p.destroy();
     }
     this.panels = panels;
@@ -23692,8 +23721,8 @@ class PanelGroup {
       parent.insertBefore(this.dom, this.top ? parent.firstChild : null);
     }
     let curDOM = this.dom.firstChild;
-    for (var _iterator90 = _createForOfIteratorHelperLoose(this.panels), _step90; !(_step90 = _iterator90()).done;) {
-      let panel = _step90.value;
+    for (var _iterator91 = _createForOfIteratorHelperLoose(this.panels), _step91; !(_step91 = _iterator91()).done;) {
+      let panel = _step91.value;
       if (panel.dom.parentNode == this.dom) {
         while (curDOM != panel.dom) curDOM = rm(curDOM);
         curDOM = curDOM.nextSibling;
@@ -23708,12 +23737,12 @@ class PanelGroup {
   }
   syncClasses() {
     if (!this.container || this.classes == this.view.themeClasses) return;
-    for (var _iterator91 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step91; !(_step91 = _iterator91()).done;) {
-      let cls = _step91.value;
+    for (var _iterator92 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step92; !(_step92 = _iterator92()).done;) {
+      let cls = _step92.value;
       if (cls) this.container.classList.remove(cls);
     }
-    for (var _iterator92 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step92; !(_step92 = _iterator92()).done;) {
-      let cls = _step92.value;
+    for (var _iterator93 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step93; !(_step93 = _iterator93()).done;) {
+      let cls = _step93.value;
       if (cls) this.container.classList.add(cls);
     }
   }
@@ -23723,10 +23752,10 @@ function rm(node) {
   node.remove();
   return next;
 }
-const showPanel = state_dist/* Facet */.r$.define({
+const showPanel = state_dist/* Facet */.sj.define({
   enables: panelPlugin
 });
-class GutterMarker extends state_dist/* RangeValue */.uU {
+class GutterMarker extends state_dist/* RangeValue */.FB {
   compare(other) {
     return this == other || this.constructor == other.constructor && this.eq(other);
   }
@@ -23737,15 +23766,15 @@ class GutterMarker extends state_dist/* RangeValue */.uU {
 }
 GutterMarker.prototype.elementClass = "";
 GutterMarker.prototype.toDOM = undefined;
-GutterMarker.prototype.mapMode = state_dist/* MapMode */.gc.TrackBefore;
+GutterMarker.prototype.mapMode = state_dist/* MapMode */.iR.TrackBefore;
 GutterMarker.prototype.startSide = GutterMarker.prototype.endSide = -1;
 GutterMarker.prototype.point = true;
-const gutterLineClass = state_dist/* Facet */.r$.define();
+const gutterLineClass = state_dist/* Facet */.sj.define();
 const defaults = {
   class: "",
   renderEmptyElements: false,
   elementStyle: "",
-  markers: () => state_dist/* RangeSet */.Xs.empty,
+  markers: () => state_dist/* RangeSet */.om.empty,
   lineMarker: () => null,
   widgetMarker: () => null,
   lineMarkerChange: null,
@@ -23753,11 +23782,11 @@ const defaults = {
   updateSpacer: null,
   domEventHandlers: {}
 };
-const activeGutters = state_dist/* Facet */.r$.define();
+const activeGutters = state_dist/* Facet */.sj.define();
 function gutter(config) {
   return [gutters(), activeGutters.of(Object.assign(Object.assign({}, defaults), config))];
 }
-const unfixGutters = state_dist/* Facet */.r$.define({
+const unfixGutters = state_dist/* Facet */.sj.define({
   combine: values => values.some(x => x)
 });
 function gutters(config) {
@@ -23774,8 +23803,8 @@ const gutterView = ViewPlugin.fromClass(class {
     this.dom.setAttribute("aria-hidden", "true");
     this.dom.style.minHeight = this.view.contentHeight / this.view.scaleY + "px";
     this.gutters = view.state.facet(activeGutters).map(conf => new SingleGutterView(view, conf));
-    for (var _iterator93 = _createForOfIteratorHelperLoose(this.gutters), _step93; !(_step93 = _iterator93()).done;) {
-      let gutter = _step93.value;
+    for (var _iterator94 = _createForOfIteratorHelperLoose(this.gutters), _step94; !(_step94 = _iterator94()).done;) {
+      let gutter = _step94.value;
       this.dom.appendChild(gutter.dom);
     }
     this.fixed = !view.state.facet(unfixGutters);
@@ -23802,45 +23831,45 @@ const gutterView = ViewPlugin.fromClass(class {
   syncGutters(detach) {
     let after = this.dom.nextSibling;
     if (detach) this.dom.remove();
-    let lineClasses = state_dist/* RangeSet */.Xs.iter(this.view.state.facet(gutterLineClass), this.view.viewport.from);
+    let lineClasses = state_dist/* RangeSet */.om.iter(this.view.state.facet(gutterLineClass), this.view.viewport.from);
     let classSet = [];
     let contexts = this.gutters.map(gutter => new UpdateContext(gutter, this.view.viewport, -this.view.documentPadding.top));
-    for (var _iterator94 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step94; !(_step94 = _iterator94()).done;) {
-      let line = _step94.value;
+    for (var _iterator95 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step95; !(_step95 = _iterator95()).done;) {
+      let line = _step95.value;
       if (classSet.length) classSet = [];
       if (Array.isArray(line.type)) {
         let first = true;
-        for (var _iterator96 = _createForOfIteratorHelperLoose(line.type), _step96; !(_step96 = _iterator96()).done;) {
-          let b = _step96.value;
+        for (var _iterator97 = _createForOfIteratorHelperLoose(line.type), _step97; !(_step97 = _iterator97()).done;) {
+          let b = _step97.value;
           if (b.type == BlockType.Text && first) {
             advanceCursor(lineClasses, classSet, b.from);
-            for (var _iterator97 = _createForOfIteratorHelperLoose(contexts), _step97; !(_step97 = _iterator97()).done;) {
-              let cx = _step97.value;
+            for (var _iterator98 = _createForOfIteratorHelperLoose(contexts), _step98; !(_step98 = _iterator98()).done;) {
+              let cx = _step98.value;
               cx.line(this.view, b, classSet);
             }
             first = false;
           } else if (b.widget) {
-            for (var _iterator98 = _createForOfIteratorHelperLoose(contexts), _step98; !(_step98 = _iterator98()).done;) {
-              let cx = _step98.value;
+            for (var _iterator99 = _createForOfIteratorHelperLoose(contexts), _step99; !(_step99 = _iterator99()).done;) {
+              let cx = _step99.value;
               cx.widget(this.view, b);
             }
           }
         }
       } else if (line.type == BlockType.Text) {
         advanceCursor(lineClasses, classSet, line.from);
-        for (var _iterator99 = _createForOfIteratorHelperLoose(contexts), _step99; !(_step99 = _iterator99()).done;) {
-          let cx = _step99.value;
+        for (var _iterator100 = _createForOfIteratorHelperLoose(contexts), _step100; !(_step100 = _iterator100()).done;) {
+          let cx = _step100.value;
           cx.line(this.view, line, classSet);
         }
       } else if (line.widget) {
-        for (var _iterator100 = _createForOfIteratorHelperLoose(contexts), _step100; !(_step100 = _iterator100()).done;) {
-          let cx = _step100.value;
+        for (var _iterator101 = _createForOfIteratorHelperLoose(contexts), _step101; !(_step101 = _iterator101()).done;) {
+          let cx = _step101.value;
           cx.widget(this.view, line);
         }
       }
     }
-    for (var _iterator95 = _createForOfIteratorHelperLoose(contexts), _step95; !(_step95 = _iterator95()).done;) {
-      let cx = _step95.value;
+    for (var _iterator96 = _createForOfIteratorHelperLoose(contexts), _step96; !(_step96 = _iterator96()).done;) {
+      let cx = _step96.value;
       cx.finish();
     }
     if (detach) this.view.scrollDOM.insertBefore(this.dom, after);
@@ -23848,17 +23877,17 @@ const gutterView = ViewPlugin.fromClass(class {
   updateGutters(update) {
     let prev = update.startState.facet(activeGutters),
       cur = update.state.facet(activeGutters);
-    let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet */.Xs.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
+    let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet */.om.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
     if (prev == cur) {
-      for (var _iterator101 = _createForOfIteratorHelperLoose(this.gutters), _step101; !(_step101 = _iterator101()).done;) {
-        let gutter = _step101.value;
+      for (var _iterator102 = _createForOfIteratorHelperLoose(this.gutters), _step102; !(_step102 = _iterator102()).done;) {
+        let gutter = _step102.value;
         if (gutter.update(update)) change = true;
       }
     } else {
       change = true;
       let gutters = [];
-      for (var _iterator102 = _createForOfIteratorHelperLoose(cur), _step102; !(_step102 = _iterator102()).done;) {
-        let conf = _step102.value;
+      for (var _iterator103 = _createForOfIteratorHelperLoose(cur), _step103; !(_step103 = _iterator103()).done;) {
+        let conf = _step103.value;
         let known = prev.indexOf(conf);
         if (known < 0) {
           gutters.push(new SingleGutterView(this.view, conf));
@@ -23867,8 +23896,8 @@ const gutterView = ViewPlugin.fromClass(class {
           gutters.push(this.gutters[known]);
         }
       }
-      for (var _iterator103 = _createForOfIteratorHelperLoose(this.gutters), _step103; !(_step103 = _iterator103()).done;) {
-        let g = _step103.value;
+      for (var _iterator104 = _createForOfIteratorHelperLoose(this.gutters), _step104; !(_step104 = _iterator104()).done;) {
+        let g = _step104.value;
         g.dom.remove();
         if (gutters.indexOf(g) < 0) g.destroy();
       }
@@ -23881,8 +23910,8 @@ const gutterView = ViewPlugin.fromClass(class {
     return change;
   }
   destroy() {
-    for (var _iterator104 = _createForOfIteratorHelperLoose(this.gutters), _step104; !(_step104 = _iterator104()).done;) {
-      let view = _step104.value;
+    for (var _iterator105 = _createForOfIteratorHelperLoose(this.gutters), _step105; !(_step105 = _iterator105()).done;) {
+      let view = _step105.value;
       view.destroy();
     }
     this.dom.remove();
@@ -23912,7 +23941,7 @@ class UpdateContext {
     this.gutter = gutter;
     this.height = height;
     this.i = 0;
-    this.cursor = state_dist/* RangeSet */.Xs.iter(gutter.markers, viewport.from);
+    this.cursor = state_dist/* RangeSet */.om.iter(gutter.markers, viewport.from);
   }
   addElement(view, block, markers) {
     let {
@@ -23991,11 +24020,11 @@ class SingleGutterView {
       if (updated != this.spacer.markers[0]) this.spacer.update(update.view, 0, 0, [updated]);
     }
     let vp = update.view.viewport;
-    return !state_dist/* RangeSet */.Xs.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
+    return !state_dist/* RangeSet */.om.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
   }
   destroy() {
-    for (var _iterator105 = _createForOfIteratorHelperLoose(this.elements), _step105; !(_step105 = _iterator105()).done;) {
-      let elt = _step105.value;
+    for (var _iterator106 = _createForOfIteratorHelperLoose(this.elements), _step106; !(_step106 = _iterator106()).done;) {
+      let elt = _step106.value;
       elt.destroy();
     }
   }
@@ -24062,10 +24091,10 @@ function sameMarkers(a, b) {
   for (let i = 0; i < a.length; i++) if (!a[i].compare(b[i])) return false;
   return true;
 }
-const lineNumberMarkers = state_dist/* Facet */.r$.define();
-const lineNumberConfig = state_dist/* Facet */.r$.define({
+const lineNumberMarkers = state_dist/* Facet */.sj.define();
+const lineNumberConfig = state_dist/* Facet */.sj.define({
   combine(values) {
-    return (0,state_dist/* combineConfig */.BO)(values, {
+    return (0,state_dist/* combineConfig */.QR)(values, {
       formatNumber: String,
       domEventHandlers: {}
     }, {
@@ -24137,15 +24166,15 @@ const activeLineGutterMarker = new class extends GutterMarker {
 const activeLineGutterHighlighter = gutterLineClass.compute(["selection"], state => {
   let marks = [],
     last = -1;
-  for (var _iterator106 = _createForOfIteratorHelperLoose(state.selection.ranges), _step106; !(_step106 = _iterator106()).done;) {
-    let range = _step106.value;
+  for (var _iterator107 = _createForOfIteratorHelperLoose(state.selection.ranges), _step107; !(_step107 = _iterator107()).done;) {
+    let range = _step107.value;
     let linePos = state.doc.lineAt(range.head).from;
     if (linePos > last) {
       last = linePos;
       marks.push(activeLineGutterMarker.range(linePos));
     }
   }
-  return state_dist/* RangeSet */.Xs.of(marks);
+  return state_dist/* RangeSet */.om.of(marks);
 });
 function highlightActiveLineGutter() {
   return activeLineGutterHighlighter;
@@ -24204,21 +24233,21 @@ const __test = {
 
 /***/ }),
 
-/***/ 2064:
+/***/ 413:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   FE: () => (/* binding */ parseMixed),
-/* harmony export */   Jq: () => (/* binding */ NodeType),
-/* harmony export */   L3: () => (/* binding */ DefaultBufferLength),
-/* harmony export */   Lj: () => (/* binding */ NodeSet),
-/* harmony export */   _b: () => (/* binding */ Parser),
-/* harmony export */   hr: () => (/* binding */ NodeWeakMap),
-/* harmony export */   i9: () => (/* binding */ TreeFragment),
-/* harmony export */   md: () => (/* binding */ NodeProp),
-/* harmony export */   mp: () => (/* binding */ Tree),
-/* harmony export */   vj: () => (/* binding */ IterMode)
+/* harmony export */   $g: () => (/* binding */ parseMixed),
+/* harmony export */   PH: () => (/* binding */ Tree),
+/* harmony export */   Qj: () => (/* binding */ IterMode),
+/* harmony export */   RY: () => (/* binding */ NodeWeakMap),
+/* harmony export */   Z6: () => (/* binding */ NodeType),
+/* harmony export */   cF: () => (/* binding */ DefaultBufferLength),
+/* harmony export */   fI: () => (/* binding */ NodeSet),
+/* harmony export */   iX: () => (/* binding */ Parser),
+/* harmony export */   rr: () => (/* binding */ TreeFragment),
+/* harmony export */   uY: () => (/* binding */ NodeProp)
 /* harmony export */ });
 /* unused harmony exports MountedTree, TreeBuffer, TreeCursor */
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -24788,7 +24817,10 @@ function getChildren(node, type, before, after) {
   let cur = node.cursor(),
     result = [];
   if (!cur.firstChild()) return result;
-  if (before != null) while (!cur.type.is(before)) if (!cur.nextSibling()) return result;
+  if (before != null) for (let found = false; !found;) {
+    found = cur.type.is(before);
+    if (!cur.nextSibling()) return result;
+  }
   for (;;) {
     if (after != null && cur.type.is(after)) return result;
     if (cur.type.is(type)) result.push(cur.node);
@@ -25960,19 +25992,19 @@ function enterFragments(mounts, ranges) {
 
 /***/ }),
 
-/***/ 3740:
+/***/ 5016:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Gv: () => (/* binding */ styleTags),
-/* harmony export */   QR: () => (/* binding */ tagHighlighter),
-/* harmony export */   Vp: () => (/* binding */ Tag),
-/* harmony export */   bW: () => (/* binding */ highlightTree),
-/* harmony export */   pJ: () => (/* binding */ tags)
+/* harmony export */   DM: () => (/* binding */ highlightTree),
+/* harmony export */   _A: () => (/* binding */ tags),
+/* harmony export */   az: () => (/* binding */ tagHighlighter),
+/* harmony export */   pn: () => (/* binding */ styleTags),
+/* harmony export */   vw: () => (/* binding */ Tag)
 /* harmony export */ });
 /* unused harmony exports classHighlighter, getStyleTags, highlightCode */
-/* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2064);
+/* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(413);
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
@@ -26085,7 +26117,7 @@ function styleTags(spec) {
   }
   return ruleNodeProp.add(byName);
 }
-const ruleNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md();
+const ruleNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 class Rule {
   constructor(tags, mode, context, next) {
     this.tags = tags;
@@ -26227,7 +26259,7 @@ class HighlightBuilder {
     }
     this.startSpan(Math.max(from, start), cls);
     if (rule.opaque) return;
-    let mounted = cursor.tree && cursor.tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.mounted);
+    let mounted = cursor.tree && cursor.tree.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.mounted);
     if (mounted && mounted.overlay) {
       let inner = cursor.node.enter(mounted.overlay[0].from + start, 1);
       let innerHighlighters = this.highlighters.filter(h => !h.scope || h.scope(mounted.tree.type));
@@ -26465,18 +26497,18 @@ const classHighlighter = tagHighlighter([{
 
 /***/ }),
 
-/***/ 7941:
+/***/ 2612:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IK: () => (/* binding */ ContextTracker),
-/* harmony export */   Jq: () => (/* binding */ ExternalTokenizer),
-/* harmony export */   RA: () => (/* binding */ LocalTokenGroup),
-/* harmony export */   WQ: () => (/* binding */ LRParser)
+/* harmony export */   Aj: () => (/* binding */ ContextTracker),
+/* harmony export */   Lu: () => (/* binding */ ExternalTokenizer),
+/* harmony export */   U1: () => (/* binding */ LRParser),
+/* harmony export */   uC: () => (/* binding */ LocalTokenGroup)
 /* harmony export */ });
 /* unused harmony exports InputStream, Stack */
-/* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2064);
+/* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(413);
 function _createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
@@ -26985,6 +27017,10 @@ class InputStream {
     this.token.value = token;
     this.token.end = end;
   }
+  acceptTokenTo(token, endPos) {
+    this.token.value = token;
+    this.token.end = endPos;
+  }
   getChunk() {
     if (this.pos >= this.chunk2Pos && this.pos < this.chunk2Pos + this.chunk2.length) {
       let {
@@ -27172,7 +27208,7 @@ function overrides(token, prev, tableData, tableOffset) {
 const verbose = typeof process != "undefined" && process.env && /\bparse\b/.test(process.env.LOG);
 let stackIDs = null;
 function cutAt(tree, pos, side) {
-  let cursor = tree.cursor(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode */ .vj.IncludeAnonymous);
+  let cursor = tree.cursor(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .IterMode */ .Qj.IncludeAnonymous);
   cursor.moveTo(pos);
   for (;;) {
     if (!(side < 0 ? cursor.childBefore(pos) : cursor.childAfter(pos))) for (;;) {
@@ -27237,12 +27273,12 @@ class FragmentCursor {
         this.nextStart = start;
         return null;
       }
-      if (next instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp) {
+      if (next instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH) {
         if (start == pos) {
           if (start < this.safeFrom) return null;
           let end = start + next.length;
           if (end <= this.safeTo) {
-            let lookAhead = next.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.lookAhead);
+            let lookAhead = next.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.lookAhead);
             if (!lookAhead || end + lookAhead < this.fragment.to) return next;
           }
         }
@@ -27493,14 +27529,14 @@ class Parse {
         cxHash = strictCx ? stack.curContext.hash : 0;
       for (let cached = this.fragments.nodeAt(start); cached;) {
         let match = this.parser.nodeSet.types[cached.type.id] == cached.type ? parser.getGoto(stack.state, cached.type.id) : -1;
-        if (match > -1 && cached.length && (!strictCx || (cached.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md.contextHash) || 0) == cxHash)) {
+        if (match > -1 && cached.length && (!strictCx || (cached.prop(_lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY.contextHash) || 0) == cxHash)) {
           stack.useNode(cached, match);
           if (verbose) console.log(base + this.stackID(stack) + ` (via reuse of ${parser.getName(cached.type.id)})`);
           return true;
         }
-        if (!(cached instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp) || cached.children.length == 0 || cached.positions[0] > 0) break;
+        if (!(cached instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH) || cached.children.length == 0 || cached.positions[0] > 0) break;
         let inner = cached.children[0];
-        if (inner instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp && cached.positions[0] == 0) cached = inner;else break;
+        if (inner instanceof _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH && cached.positions[0] == 0) cached = inner;else break;
       }
     }
     let defaultReduce = parser.stateSlot(stack.state, 4);
@@ -27581,7 +27617,7 @@ class Parse {
   }
   stackToTree(stack) {
     stack.close();
-    return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .mp.build({
+    return _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH.build({
       buffer: StackBufferCursor.create(stack),
       nodeSet: this.parser.nodeSet,
       topID: this.topTerm,
@@ -27629,7 +27665,7 @@ class ContextTracker {
     this.strict = spec.strict !== false;
   }
 }
-class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ ._b {
+class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .iX {
   constructor(spec) {
     super();
     this.wrappers = [];
@@ -27647,7 +27683,7 @@ class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .
       for (var _iterator4 = _createForOfIteratorHelperLoose(spec.nodeProps), _step4; !(_step4 = _iterator4()).done;) {
         let propSpec = _step4.value;
         let prop = propSpec[0];
-        if (typeof prop == "string") prop = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .md[prop];
+        if (typeof prop == "string") prop = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY[prop];
         for (let i = 1; i < propSpec.length;) {
           let next = propSpec[i++];
           if (next >= 0) {
@@ -27660,7 +27696,7 @@ class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .
         }
       }
     }
-    this.nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .Lj(nodeNames.map((name, i) => _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Jq.define({
+    this.nodeSet = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeSet */ .fI(nodeNames.map((name, i) => _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Z6.define({
       name: i >= this.minRepeatTerm ? undefined : name,
       id: i,
       props: nodeProps[i],
@@ -27670,7 +27706,7 @@ class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .
     })));
     if (spec.propSources) this.nodeSet = this.nodeSet.extend(...spec.propSources);
     this.strict = false;
-    this.bufferLength = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .DefaultBufferLength */ .L3;
+    this.bufferLength = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .DefaultBufferLength */ .cF;
     let tokenArray = decodeArray(spec.tokenData);
     this.context = spec.context;
     this.specializerSpecs = spec.specialized || [];
@@ -27849,12 +27885,12 @@ function getSpecializer(spec) {
 
 /***/ }),
 
-/***/ 5882:
+/***/ 1785:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   V: () => (/* binding */ StyleModule)
+/* harmony export */   G: () => (/* binding */ StyleModule)
 /* harmony export */ });
 const C = "\u037c";
 const COUNT = typeof Symbol == "undefined" ? "__" + C : Symbol.for(C);
@@ -28143,7 +28179,7 @@ class StyleSet {
 /******/ 				var scripts = document.getElementsByTagName("script");
 /******/ 				if(scripts.length) {
 /******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
 /******/ 				}
 /******/ 			}
 /******/ 		}
@@ -28162,8 +28198,8 @@ class StyleSet {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			1072: 0,
-/******/ 			5990: 0
+/******/ 			7802: 0,
+/******/ 			2548: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -28393,7 +28429,7 @@ if (typeof jQuery !== 'undefined') {
   jQuery.Class = $AMIClass;
 }
 // EXTERNAL MODULE: ./node_modules/jspath/index.js
-var jspath = __webpack_require__(3400);
+var jspath = __webpack_require__(6967);
 var jspath_default = /*#__PURE__*/__webpack_require__.n(jspath);
 ;// CONCATENATED MODULE: ./node_modules/ami-http-client/src/client.js
 
@@ -28656,7 +28692,7 @@ if (typeof window !== 'undefined') window.AMIHTTPClient = AMIHTTPClient;
 
 /* harmony default export */ const ami_http_client = (client);
 // EXTERNAL MODULE: ./node_modules/paho-mqtt/paho-mqtt.js
-var paho_mqtt = __webpack_require__(1772);
+var paho_mqtt = __webpack_require__(2725);
 ;// CONCATENATED MODULE: ./node_modules/ami-mqtt-client/src/client.js
 
 
@@ -29079,7 +29115,7 @@ class AMICommand {
 }
 /* harmony default export */ const js_AMICommand = (new AMICommand());
 // EXTERNAL MODULE: ./node_modules/ami-twig/index.js
-var ami_twig = __webpack_require__(14);
+var ami_twig = __webpack_require__(3154);
 ;// CONCATENATED MODULE: ./src/js/utilities/tools.js
 
 
@@ -29103,19 +29139,19 @@ function typeOf(x) {
   return name.startsWith('[object ') ? name.substring(8, name.length - 1) : '';
 }
 function isString(x) {
-  return ami_twig/* default */.Z.stdlib.isString(x);
+  return ami_twig/* default */.A.stdlib.isString(x);
 }
 function isArray(x) {
-  return ami_twig/* default */.Z.stdlib.isArray(x);
+  return ami_twig/* default */.A.stdlib.isArray(x);
 }
 function isObject(x) {
-  return ami_twig/* default */.Z.stdlib.isObject(x);
+  return ami_twig/* default */.A.stdlib.isObject(x);
 }
 function isSet(x) {
-  return ami_twig/* default */.Z.stdlib.isSet(x);
+  return ami_twig/* default */.A.stdlib.isSet(x);
 }
 function isMap(x) {
-  return ami_twig/* default */.Z.stdlib.isMap(x);
+  return ami_twig/* default */.A.stdlib.isMap(x);
 }
 function asArray(x) {
   return Array.isArray(x) ? x : [x];
@@ -29397,7 +29433,7 @@ function base64Decode(s) {
     return `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`;
   }).join(''));
 }
-const _replace = ami_twig/* default */.Z.stdlib._replace;
+const _replace = ami_twig/* default */.A.stdlib._replace;
 const _textToHtmlX = ['&', '"', '<', '>'];
 const _textToHtmlY = ['&amp;', '&quot;', '&lt;', '&gt;'];
 function textToHtml(s) {
@@ -29486,25 +29522,25 @@ function flush() {
   $('#ami_alert_content').empty();
 }
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag = __webpack_require__(5072);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
-var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI = __webpack_require__(7825);
 var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
-var insertBySelector = __webpack_require__(569);
+var insertBySelector = __webpack_require__(7659);
 var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
-var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes = __webpack_require__(5056);
 var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
-var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement = __webpack_require__(540);
 var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
-var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform = __webpack_require__(1113);
 var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/flatpickr/dist/flatpickr.min.css
-var flatpickr_min = __webpack_require__(8001);
+var flatpickr_min = __webpack_require__(2211);
 ;// CONCATENATED MODULE: ./node_modules/flatpickr/dist/flatpickr.min.css
 
       
@@ -29527,12 +29563,12 @@ options.setAttributes = (setAttributesWithoutAttributes_default());
 options.domAPI = (styleDomAPI_default());
 options.insertStyleElement = (insertStyleElement_default());
 
-var update = injectStylesIntoStyleTag_default()(flatpickr_min/* default */.Z, options);
+var update = injectStylesIntoStyleTag_default()(flatpickr_min/* default */.A, options);
 
 
 
 
-       /* harmony default export */ const dist_flatpickr_min = (flatpickr_min/* default */.Z && flatpickr_min/* default */.Z.locals ? flatpickr_min/* default */.Z.locals : undefined);
+       /* harmony default export */ const dist_flatpickr_min = (flatpickr_min/* default */.A && flatpickr_min/* default */.A.locals ? flatpickr_min/* default */.A.locals : undefined);
 
 ;// CONCATENATED MODULE: ./node_modules/flatpickr/dist/esm/types/options.js
 var HOOKS = ["onChange", "onClose", "onDayCreate", "onDestroy", "onKeyDown", "onMonthChange", "onOpen", "onParseConfig", "onReady", "onValueUpdate", "onYearChange", "onPreCalendarPosition"];
@@ -30014,7 +30050,7 @@ function getDefaultHours(config) {
   };
 }
 // EXTERNAL MODULE: ./node_modules/flatpickr/dist/esm/utils/polyfills.js
-var polyfills = __webpack_require__(4212);
+var polyfills = __webpack_require__(5252);
 ;// CONCATENATED MODULE: ./node_modules/flatpickr/dist/esm/index.js
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
@@ -31664,13 +31700,13 @@ if (typeof window !== "undefined") {
 }
 /* harmony default export */ const esm = (flatpickr);
 // EXTERNAL MODULE: ./node_modules/@codemirror/view/dist/index.js + 1 modules
-var dist = __webpack_require__(8335);
+var dist = __webpack_require__(5177);
 // EXTERNAL MODULE: ./node_modules/@codemirror/state/dist/index.js
-var state_dist = __webpack_require__(5854);
+var state_dist = __webpack_require__(5817);
 // EXTERNAL MODULE: ./node_modules/@codemirror/language/dist/index.js
-var language_dist = __webpack_require__(626);
+var language_dist = __webpack_require__(4658);
 // EXTERNAL MODULE: ./node_modules/@lezer/common/dist/index.js
-var common_dist = __webpack_require__(2064);
+var common_dist = __webpack_require__(413);
 ;// CONCATENATED MODULE: ./node_modules/@codemirror/commands/dist/index.js
 function dist_createForOfIteratorHelperLoose(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (it) return (it = it.call(o)).next.bind(it); if (Array.isArray(o) || (it = dist_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; return function () { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function dist_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return dist_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return dist_arrayLikeToArray(o, minLen); }
@@ -31895,12 +31931,12 @@ function changeLineComment(option, state, ranges) {
   }
   return null;
 }
-const fromHistory = state_dist/* Annotation */.q6.define();
-const isolateHistory = state_dist/* Annotation */.q6.define();
-const invertedEffects = state_dist/* Facet */.r$.define();
-const historyConfig = state_dist/* Facet */.r$.define({
+const fromHistory = state_dist/* Annotation */.YH.define();
+const isolateHistory = state_dist/* Annotation */.YH.define();
+const invertedEffects = state_dist/* Facet */.sj.define();
+const historyConfig = state_dist/* Facet */.sj.define({
   combine(configs) {
-    return (0,state_dist/* combineConfig */.BO)(configs, {
+    return (0,state_dist/* combineConfig */.QR)(configs, {
       minDepth: 100,
       newGroupDelay: 500,
       joinToEvent: (_t, isAdjacent) => isAdjacent
@@ -31911,7 +31947,7 @@ const historyConfig = state_dist/* Facet */.r$.define({
     });
   }
 });
-const historyField_ = state_dist/* StateField */.QQ.define({
+const historyField_ = state_dist/* StateField */.sU.define({
   create() {
     return HistoryState.empty;
   },
@@ -31927,10 +31963,10 @@ const historyField_ = state_dist/* StateField */.QQ.define({
     }
     let isolate = tr.annotation(isolateHistory);
     if (isolate == "full" || isolate == "before") state = state.isolate();
-    if (tr.annotation(state_dist/* Transaction */.YW.addToHistory) === false) return !tr.changes.empty ? state.addMapping(tr.changes.desc) : state;
+    if (tr.annotation(state_dist/* Transaction */.ZX.addToHistory) === false) return !tr.changes.empty ? state.addMapping(tr.changes.desc) : state;
     let event = HistEvent.fromTransaction(tr);
-    let time = tr.annotation(state_dist/* Transaction */.YW.time),
-      userEvent = tr.annotation(state_dist/* Transaction */.YW.userEvent);
+    let time = tr.annotation(state_dist/* Transaction */.ZX.time),
+      userEvent = tr.annotation(state_dist/* Transaction */.ZX.userEvent);
     if (event) state = state.addChanges(event, time, userEvent, config, tr);else if (tr.selection) state = state.addSelection(tr.startState.selection, time, userEvent, config.newGroupDelay);
     if (isolate == "full" || isolate == "after") state = state.isolate();
     return state;
@@ -31949,7 +31985,7 @@ function dist_history(config) {
   if (config === void 0) {
     config = {};
   }
-  return [historyField_, historyConfig.of(config), dist/* EditorView */.tk.domEventHandlers({
+  return [historyField_, historyConfig.of(config), dist/* EditorView */.Lz.domEventHandlers({
     beforeinput(e, view) {
       let command = e.inputType == "historyUndo" ? undo : e.inputType == "historyRedo" ? redo : null;
       if (!command) return false;
@@ -32009,7 +32045,7 @@ class HistEvent {
     };
   }
   static fromJSON(json) {
-    return new HistEvent(json.changes && state_dist/* ChangeSet */.as.fromJSON(json.changes), [], json.mapped && state_dist/* ChangeDesc */.n0.fromJSON(json.mapped), json.startSelection && state_dist/* EditorSelection */.jT.fromJSON(json.startSelection), json.selectionsAfter.map(state_dist/* EditorSelection */.jT.fromJSON));
+    return new HistEvent(json.changes && state_dist/* ChangeSet */.VR.fromJSON(json.changes), [], json.mapped && state_dist/* ChangeDesc */.Gu.fromJSON(json.mapped), json.startSelection && state_dist/* EditorSelection */.OF.fromJSON(json.startSelection), json.selectionsAfter.map(state_dist/* EditorSelection */.OF.fromJSON));
   }
   static fromTransaction(tr, selection) {
     let effects = none;
@@ -32093,7 +32129,7 @@ function mapEvent(event, mapping, extraSelections) {
   let mappedChanges = event.changes.map(mapping),
     before = mapping.mapDesc(event.changes, true);
   let fullMapping = event.mapped ? event.mapped.composeDesc(before) : before;
-  return new HistEvent(mappedChanges, state_dist/* StateEffect */.Py.mapEffects(event.effects, mapping), fullMapping, event.startSelection.map(before), selections);
+  return new HistEvent(mappedChanges, state_dist/* StateEffect */.Pe.mapEffects(event.effects, mapping), fullMapping, event.startSelection.map(before), selections);
 }
 const joinableUserEvent = /^(input\.type|delete)($|\.)/;
 class HistoryState {
@@ -32192,7 +32228,7 @@ const historyKeymap = [{
   preventDefault: true
 }];
 function updateSel(sel, by) {
-  return state_dist/* EditorSelection */.jT.create(sel.ranges.map(by), sel.mainIndex);
+  return state_dist/* EditorSelection */.OF.create(sel.ranges.map(by), sel.mainIndex);
 }
 function setSel(state, selection) {
   return state.update({
@@ -32212,13 +32248,13 @@ function moveSel(_ref4, how) {
   return true;
 }
 function rangeEnd(range, forward) {
-  return state_dist/* EditorSelection */.jT.cursor(forward ? range.to : range.from);
+  return state_dist/* EditorSelection */.OF.cursor(forward ? range.to : range.from);
 }
 function cursorByChar(view, forward) {
   return moveSel(view, range => range.empty ? view.moveByChar(range, forward) : rangeEnd(range, forward));
 }
 function ltrAtCursor(view) {
-  return view.textDirectionAt(view.state.selection.main.head) == dist/* Direction */.Nm.LTR;
+  return view.textDirectionAt(view.state.selection.main.head) == dist/* Direction */.OP.LTR;
 }
 const cursorCharLeft = view => cursorByChar(view, !ltrAtCursor(view));
 const cursorCharRight = view => cursorByChar(view, ltrAtCursor(view));
@@ -32294,8 +32330,8 @@ function interestingNode(state, node, bracketProp) {
   return len && (len > 2 || /[^\s,.;:]/.test(state.sliceDoc(node.from, node.to))) || node.firstChild;
 }
 function moveBySyntax(state, start, forward) {
-  let pos = (0,language_dist/* syntaxTree */.qz)(state).resolveInner(start.head);
-  let bracketProp = forward ? common_dist/* NodeProp */.md.closedBy : common_dist/* NodeProp */.md.openedBy;
+  let pos = (0,language_dist/* syntaxTree */.mv)(state).resolveInner(start.head);
+  let bracketProp = forward ? common_dist/* NodeProp */.uY.closedBy : common_dist/* NodeProp */.uY.openedBy;
   for (let at = start.head;;) {
     let next = forward ? pos.childAfter(at) : pos.childBefore(at);
     if (!next) break;
@@ -32304,8 +32340,8 @@ function moveBySyntax(state, start, forward) {
   let bracket = pos.type.prop(bracketProp),
     match,
     newPos;
-  if (bracket && (match = forward ? (0,language_dist/* matchBrackets */.Um)(state, pos.from, 1) : (0,language_dist/* matchBrackets */.Um)(state, pos.to, -1)) && match.matched) newPos = forward ? match.end.to : match.end.from;else newPos = forward ? pos.to : pos.from;
-  return state_dist/* EditorSelection */.jT.cursor(newPos, forward ? -1 : 1);
+  if (bracket && (match = forward ? (0,language_dist/* matchBrackets */.jU)(state, pos.from, 1) : (0,language_dist/* matchBrackets */.jU)(state, pos.to, -1)) && match.matched) newPos = forward ? match.end.to : match.end.from;else newPos = forward ? pos.to : pos.from;
+  return state_dist/* EditorSelection */.OF.cursor(newPos, forward ? -1 : 1);
 }
 const cursorSyntaxLeft = view => moveSel(view, range => moveBySyntax(view.state, range, !ltrAtCursor(view)));
 const cursorSyntaxRight = view => moveSel(view, range => moveBySyntax(view.state, range, ltrAtCursor(view)));
@@ -32324,7 +32360,7 @@ function pageInfo(view) {
     marginBottom = 0,
     height;
   if (selfScroll) {
-    for (var _iterator6 = dist_createForOfIteratorHelperLoose(view.state.facet(dist/* EditorView */.tk.scrollMargins)), _step6; !(_step6 = _iterator6()).done;) {
+    for (var _iterator6 = dist_createForOfIteratorHelperLoose(view.state.facet(dist/* EditorView */.Lz.scrollMargins)), _step6; !(_step6 = _iterator6()).done;) {
       let source = _step6.value;
       let margins = source(view);
       if (margins === null || margins === void 0 ? void 0 : margins.top) marginTop = Math.max(margins === null || margins === void 0 ? void 0 : margins.top, marginTop);
@@ -32356,7 +32392,7 @@ function cursorByPage(view, forward) {
     let scrollRect = view.scrollDOM.getBoundingClientRect();
     let scrollTop = scrollRect.top + page.marginTop,
       scrollBottom = scrollRect.bottom - page.marginBottom;
-    if (startPos && startPos.top > scrollTop && startPos.bottom < scrollBottom) effect = dist/* EditorView */.tk.scrollIntoView(selection.main.head, {
+    if (startPos && startPos.top > scrollTop && startPos.bottom < scrollBottom) effect = dist/* EditorView */.Lz.scrollIntoView(selection.main.head, {
       y: "start",
       yMargin: startPos.top - scrollTop
     });
@@ -32374,7 +32410,7 @@ function moveByLineBoundary(view, start, forward) {
   if (moved.head == start.head && moved.head != (forward ? line.to : line.from)) moved = view.moveToLineBoundary(start, forward, false);
   if (!forward && moved.head == line.from && line.length) {
     let space = /^\s*/.exec(view.state.sliceDoc(line.from, Math.min(line.from + 100, line.to)))[0].length;
-    if (space && start.head != line.from + space) moved = state_dist/* EditorSelection */.jT.cursor(line.from + space);
+    if (space && start.head != line.from + space) moved = state_dist/* EditorSelection */.OF.cursor(line.from + space);
   }
   return moved;
 }
@@ -32382,16 +32418,16 @@ const cursorLineBoundaryForward = view => moveSel(view, range => moveByLineBound
 const cursorLineBoundaryBackward = view => moveSel(view, range => moveByLineBoundary(view, range, false));
 const cursorLineBoundaryLeft = view => moveSel(view, range => moveByLineBoundary(view, range, !ltrAtCursor(view)));
 const cursorLineBoundaryRight = view => moveSel(view, range => moveByLineBoundary(view, range, ltrAtCursor(view)));
-const cursorLineStart = view => moveSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).from, 1));
-const cursorLineEnd = view => moveSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).to, -1));
+const cursorLineStart = view => moveSel(view, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).from, 1));
+const cursorLineEnd = view => moveSel(view, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).to, -1));
 function toMatchingBracket(state, dispatch, extend) {
   let found = false,
     selection = updateSel(state.selection, range => {
-      let matching = (0,language_dist/* matchBrackets */.Um)(state, range.head, -1) || (0,language_dist/* matchBrackets */.Um)(state, range.head, 1) || range.head > 0 && (0,language_dist/* matchBrackets */.Um)(state, range.head - 1, 1) || range.head < state.doc.length && (0,language_dist/* matchBrackets */.Um)(state, range.head + 1, -1);
+      let matching = (0,language_dist/* matchBrackets */.jU)(state, range.head, -1) || (0,language_dist/* matchBrackets */.jU)(state, range.head, 1) || range.head > 0 && (0,language_dist/* matchBrackets */.jU)(state, range.head - 1, 1) || range.head < state.doc.length && (0,language_dist/* matchBrackets */.jU)(state, range.head + 1, -1);
       if (!matching || !matching.end) return range;
       found = true;
       let head = matching.start.from == range.head ? matching.end.to : matching.end.from;
-      return extend ? state_dist/* EditorSelection */.jT.range(range.anchor, head) : state_dist/* EditorSelection */.jT.cursor(head);
+      return extend ? state_dist/* EditorSelection */.OF.range(range.anchor, head) : state_dist/* EditorSelection */.OF.cursor(head);
     });
   if (!found) return false;
   dispatch(setSel(state, selection));
@@ -32414,7 +32450,7 @@ const selectMatchingBracket = _ref6 => {
 function extendSel(view, how) {
   let selection = updateSel(view.state.selection, range => {
     let head = how(range);
-    return state_dist/* EditorSelection */.jT.range(range.anchor, head.head, head.goalColumn, head.bidiLevel || undefined);
+    return state_dist/* EditorSelection */.OF.range(range.anchor, head.head, head.goalColumn, head.bidiLevel || undefined);
   });
   if (selection.eq(view.state.selection)) return false;
   view.dispatch(setSel(view.state, selection));
@@ -32455,8 +32491,8 @@ const selectLineBoundaryForward = view => extendSel(view, range => moveByLineBou
 const selectLineBoundaryBackward = view => extendSel(view, range => moveByLineBoundary(view, range, false));
 const selectLineBoundaryLeft = view => extendSel(view, range => moveByLineBoundary(view, range, !ltrAtCursor(view)));
 const selectLineBoundaryRight = view => extendSel(view, range => moveByLineBoundary(view, range, ltrAtCursor(view)));
-const selectLineStart = view => extendSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).from));
-const selectLineEnd = view => extendSel(view, range => state_dist/* EditorSelection */.jT.cursor(view.lineBlockAt(range.head).to));
+const selectLineStart = view => extendSel(view, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).from));
+const selectLineEnd = view => extendSel(view, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).to));
 const cursorDocStart = _ref7 => {
   let {
     state,
@@ -32523,10 +32559,10 @@ const selectLine = _ref12 => {
       from,
       to
     } = _ref13;
-    return state_dist/* EditorSelection */.jT.range(from, Math.min(to + 1, state.doc.length));
+    return state_dist/* EditorSelection */.OF.range(from, Math.min(to + 1, state.doc.length));
   });
   dispatch(state.update({
-    selection: state_dist/* EditorSelection */.jT.create(ranges),
+    selection: state_dist/* EditorSelection */.OF.create(ranges),
     userEvent: "select"
   }));
   return true;
@@ -32538,12 +32574,12 @@ const selectParentSyntax = _ref14 => {
   } = _ref14;
   let selection = updateSel(state.selection, range => {
     var _a;
-    let stack = (0,language_dist/* syntaxTree */.qz)(state).resolveStack(range.from, 1);
+    let stack = (0,language_dist/* syntaxTree */.mv)(state).resolveStack(range.from, 1);
     for (let cur = stack; cur; cur = cur.next) {
       let {
         node
       } = cur;
-      if ((node.from < range.from && node.to >= range.to || node.to > range.to && node.from <= range.from) && ((_a = node.parent) === null || _a === void 0 ? void 0 : _a.parent)) return state_dist/* EditorSelection */.jT.range(node.to, node.from);
+      if ((node.from < range.from && node.to >= range.to || node.to > range.to && node.from <= range.from) && ((_a = node.parent) === null || _a === void 0 ? void 0 : _a.parent)) return state_dist/* EditorSelection */.OF.range(node.to, node.from);
     }
     return range;
   });
@@ -32557,7 +32593,7 @@ const simplifySelection = _ref15 => {
   } = _ref15;
   let cur = state.selection,
     selection = null;
-  if (cur.ranges.length > 1) selection = state_dist/* EditorSelection */.jT.create([cur.main]);else if (!cur.main.empty) selection = state_dist/* EditorSelection */.jT.create([state_dist/* EditorSelection */.jT.cursor(cur.main.head)]);
+  if (cur.ranges.length > 1) selection = state_dist/* EditorSelection */.OF.create([cur.main]);else if (!cur.main.empty) selection = state_dist/* EditorSelection */.OF.create([state_dist/* EditorSelection */.OF.cursor(cur.main.head)]);
   if (!selection) return false;
   dispatch(setSel(state, selection));
   return true;
@@ -32595,20 +32631,20 @@ function deleteBy(target, by) {
         from,
         to
       },
-      range: state_dist/* EditorSelection */.jT.cursor(from, from < range.head ? -1 : 1)
+      range: state_dist/* EditorSelection */.OF.cursor(from, from < range.head ? -1 : 1)
     };
   });
   if (changes.changes.empty) return false;
   target.dispatch(state.update(changes, {
     scrollIntoView: true,
     userEvent: event,
-    effects: event == "delete.selection" ? dist/* EditorView */.tk.announce.of(state.phrase("Selection deleted")) : undefined
+    effects: event == "delete.selection" ? dist/* EditorView */.Lz.announce.of(state.phrase("Selection deleted")) : undefined
   }));
   return true;
 }
 function skipAtomic(target, pos, forward) {
-  if (target instanceof dist/* EditorView */.tk) {
-    for (var _iterator7 = dist_createForOfIteratorHelperLoose(target.state.facet(dist/* EditorView */.tk.atomicRanges).map(f => f(target))), _step7; !(_step7 = _iterator7()).done;) {
+  if (target instanceof dist/* EditorView */.Lz) {
+    for (var _iterator7 = dist_createForOfIteratorHelperLoose(target.state.facet(dist/* EditorView */.Lz.atomicRanges).map(f => f(target))), _step7; !(_step7 = _iterator7()).done;) {
       let ranges = _step7.value;
       ranges.between(pos, pos, (from, to) => {
         if (from < pos && to > pos) pos = forward ? to : from;
@@ -32627,13 +32663,13 @@ const deleteByChar = (target, forward) => deleteBy(target, range => {
     targetPos;
   if (!forward && pos > line.from && pos < line.from + 200 && !/[^ \t]/.test(before = line.text.slice(0, pos - line.from))) {
     if (before[before.length - 1] == "\t") return pos - 1;
-    let col = (0,state_dist/* countColumn */.IS)(before, state.tabSize),
-      drop = col % (0,language_dist/* getIndentUnit */.y1)(state) || (0,language_dist/* getIndentUnit */.y1)(state);
+    let col = (0,state_dist/* countColumn */.y$)(before, state.tabSize),
+      drop = col % (0,language_dist/* getIndentUnit */.tp)(state) || (0,language_dist/* getIndentUnit */.tp)(state);
     for (let i = 0; i < drop && before[before.length - 1 - i] == " "; i++) pos--;
     targetPos = pos;
   } else {
-    targetPos = (0,state_dist/* findClusterBreak */.cp)(line.text, pos - line.from, forward, forward) + line.from;
-    if (targetPos == pos && line.number != (forward ? state.doc.lines : 1)) targetPos += forward ? 1 : -1;else if (!forward && /[\ufe00-\ufe0f]/.test(line.text.slice(targetPos - line.from, pos - line.from))) targetPos = (0,state_dist/* findClusterBreak */.cp)(line.text, targetPos - line.from, false, false) + line.from;
+    targetPos = (0,state_dist/* findClusterBreak */.zK)(line.text, pos - line.from, forward, forward) + line.from;
+    if (targetPos == pos && line.number != (forward ? state.doc.lines : 1)) targetPos += forward ? 1 : -1;else if (!forward && /[\ufe00-\ufe0f]/.test(line.text.slice(targetPos - line.from, pos - line.from))) targetPos = (0,state_dist/* findClusterBreak */.zK)(line.text, targetPos - line.from, false, false) + line.from;
   }
   return targetPos;
 });
@@ -32651,7 +32687,7 @@ const deleteByGroup = (target, forward) => deleteBy(target, range => {
       if (pos == range.head && line.number != (forward ? state.doc.lines : 1)) pos += forward ? 1 : -1;
       break;
     }
-    let next = (0,state_dist/* findClusterBreak */.cp)(line.text, pos - line.from, forward) + line.from;
+    let next = (0,state_dist/* findClusterBreak */.zK)(line.text, pos - line.from, forward) + line.from;
     let nextChar = line.text.slice(Math.min(pos, next) - line.from, Math.max(pos, next) - line.from);
     let nextCat = categorize(nextChar);
     if (cat != null && nextCat != cat) break;
@@ -32718,9 +32754,9 @@ const splitLine = _ref17 => {
       changes: {
         from: range.from,
         to: range.to,
-        insert: state_dist/* Text */.xv.of(["", ""])
+        insert: state_dist/* Text */.EY.of(["", ""])
       },
-      range: state_dist/* EditorSelection */.jT.cursor(range.from)
+      range: state_dist/* EditorSelection */.OF.cursor(range.from)
     };
   });
   dispatch(state.update(changes, {
@@ -32741,15 +32777,15 @@ const transposeChars = _ref18 => {
     };
     let pos = range.from,
       line = state.doc.lineAt(pos);
-    let from = pos == line.from ? pos - 1 : (0,state_dist/* findClusterBreak */.cp)(line.text, pos - line.from, false) + line.from;
-    let to = pos == line.to ? pos + 1 : (0,state_dist/* findClusterBreak */.cp)(line.text, pos - line.from, true) + line.from;
+    let from = pos == line.from ? pos - 1 : (0,state_dist/* findClusterBreak */.zK)(line.text, pos - line.from, false) + line.from;
+    let to = pos == line.to ? pos + 1 : (0,state_dist/* findClusterBreak */.zK)(line.text, pos - line.from, true) + line.from;
     return {
       changes: {
         from,
         to,
         insert: state.doc.slice(pos, to).append(state.doc.slice(from, pos))
       },
-      range: state_dist/* EditorSelection */.jT.cursor(to)
+      range: state_dist/* EditorSelection */.OF.cursor(to)
     };
   });
   if (changes.changes.empty) return false;
@@ -32801,7 +32837,7 @@ function moveLine(state, dispatch, forward) {
       });
       for (var _iterator10 = dist_createForOfIteratorHelperLoose(block.ranges), _step10; !(_step10 = _iterator10()).done;) {
         let r = _step10.value;
-        ranges.push(state_dist/* EditorSelection */.jT.range(Math.min(state.doc.length, r.anchor + size), Math.min(state.doc.length, r.head + size)));
+        ranges.push(state_dist/* EditorSelection */.OF.range(Math.min(state.doc.length, r.anchor + size), Math.min(state.doc.length, r.head + size)));
       }
     } else {
       changes.push({
@@ -32813,7 +32849,7 @@ function moveLine(state, dispatch, forward) {
       });
       for (var _iterator11 = dist_createForOfIteratorHelperLoose(block.ranges), _step11; !(_step11 = _iterator11()).done;) {
         let r = _step11.value;
-        ranges.push(state_dist/* EditorSelection */.jT.range(r.anchor - size, r.head - size));
+        ranges.push(state_dist/* EditorSelection */.OF.range(r.anchor - size, r.head - size));
       }
     }
   }
@@ -32821,7 +32857,7 @@ function moveLine(state, dispatch, forward) {
   dispatch(state.update({
     changes,
     scrollIntoView: true,
-    selection: state_dist/* EditorSelection */.jT.create(ranges, state.selection.mainIndex),
+    selection: state_dist/* EditorSelection */.OF.create(ranges, state.selection.mainIndex),
     userEvent: "move.line"
   }));
   return true;
@@ -32915,11 +32951,11 @@ function isBetweenBrackets(state, pos) {
     from: pos,
     to: pos
   };
-  let context = (0,language_dist/* syntaxTree */.qz)(state).resolveInner(pos);
+  let context = (0,language_dist/* syntaxTree */.mv)(state).resolveInner(pos);
   let before = context.childBefore(pos),
     after = context.childAfter(pos),
     closedBy;
-  if (before && after && before.to <= pos && after.from >= pos && (closedBy = before.type.prop(common_dist/* NodeProp */.md.closedBy)) && closedBy.indexOf(after.name) > -1 && state.doc.lineAt(before.to).from == state.doc.lineAt(after.from).from && !/\S/.test(state.sliceDoc(before.to, after.from))) return {
+  if (before && after && before.to <= pos && after.from >= pos && (closedBy = before.type.prop(common_dist/* NodeProp */.uY.closedBy)) && closedBy.indexOf(after.name) > -1 && state.doc.lineAt(before.to).from == state.doc.lineAt(after.from).from && !/\S/.test(state.sliceDoc(before.to, after.from))) return {
     from: before.to,
     to: after.from
   };
@@ -32942,26 +32978,26 @@ function newlineAndIndent(atEof) {
         line = state.doc.lineAt(from);
       let explode = !atEof && from == to && isBetweenBrackets(state, from);
       if (atEof) from = to = (to <= line.to ? line : state.doc.lineAt(to)).to;
-      let cx = new language_dist/* IndentContext */.Gn(state, {
+      let cx = new language_dist/* IndentContext */.KB(state, {
         simulateBreak: from,
         simulateDoubleBreak: !!explode
       });
-      let indent = (0,language_dist/* getIndentation */.K0)(cx, from);
-      if (indent == null) indent = (0,state_dist/* countColumn */.IS)(/^\s*/.exec(state.doc.lineAt(from).text)[0], state.tabSize);
+      let indent = (0,language_dist/* getIndentation */._v)(cx, from);
+      if (indent == null) indent = (0,state_dist/* countColumn */.y$)(/^\s*/.exec(state.doc.lineAt(from).text)[0], state.tabSize);
       while (to < line.to && /\s/.test(line.text[to - line.from])) to++;
       if (explode) ({
         from,
         to
       } = explode);else if (from > line.from && from < line.from + 100 && !/\S/.test(line.text.slice(0, from))) from = line.from;
-      let insert = ["", (0,language_dist/* indentString */.SS)(state, indent)];
-      if (explode) insert.push((0,language_dist/* indentString */.SS)(state, cx.lineIndent(line.from, -1)));
+      let insert = ["", (0,language_dist/* indentString */.EI)(state, indent)];
+      if (explode) insert.push((0,language_dist/* indentString */.EI)(state, cx.lineIndent(line.from, -1)));
       return {
         changes: {
           from,
           to,
-          insert: state_dist/* Text */.xv.of(insert)
+          insert: state_dist/* Text */.EY.of(insert)
         },
-        range: state_dist/* EditorSelection */.jT.cursor(from + 1 + insert[1].length)
+        range: state_dist/* EditorSelection */.OF.cursor(from + 1 + insert[1].length)
       };
     });
     dispatch(state.update(changes, {
@@ -32986,7 +33022,7 @@ function changeBySelectedLine(state, f) {
     let changeSet = state.changes(changes);
     return {
       changes,
-      range: state_dist/* EditorSelection */.jT.range(changeSet.mapPos(range.anchor, 1), changeSet.mapPos(range.head, 1))
+      range: state_dist/* EditorSelection */.OF.range(changeSet.mapPos(range.anchor, 1), changeSet.mapPos(range.head, 1))
     };
   });
 }
@@ -32997,18 +33033,18 @@ const indentSelection = _ref26 => {
   } = _ref26;
   if (state.readOnly) return false;
   let updated = Object.create(null);
-  let context = new language_dist/* IndentContext */.Gn(state, {
+  let context = new language_dist/* IndentContext */.KB(state, {
     overrideIndentation: start => {
       let found = updated[start];
       return found == null ? -1 : found;
     }
   });
   let changes = changeBySelectedLine(state, (line, changes, range) => {
-    let indent = (0,language_dist/* getIndentation */.K0)(context, line.from);
+    let indent = (0,language_dist/* getIndentation */._v)(context, line.from);
     if (indent == null) return;
     if (!/\S/.test(line.text)) indent = 0;
     let cur = /^\s*/.exec(line.text)[0];
-    let norm = (0,language_dist/* indentString */.SS)(state, indent);
+    let norm = (0,language_dist/* indentString */.EI)(state, indent);
     if (cur != norm || range.from < line.from + cur.length) {
       updated[line.from] = indent;
       changes.push({
@@ -33032,7 +33068,7 @@ const indentMore = _ref27 => {
   dispatch(state.update(changeBySelectedLine(state, (line, changes) => {
     changes.push({
       from: line.from,
-      insert: state.facet(language_dist/* indentUnit */.c)
+      insert: state.facet(language_dist/* indentUnit */.Xt)
     });
   }), {
     userEvent: "input.indent"
@@ -33048,9 +33084,9 @@ const indentLess = _ref28 => {
   dispatch(state.update(changeBySelectedLine(state, (line, changes) => {
     let space = /^\s*/.exec(line.text)[0];
     if (!space) return;
-    let col = (0,state_dist/* countColumn */.IS)(space, state.tabSize),
+    let col = (0,state_dist/* countColumn */.y$)(space, state.tabSize),
       keep = 0;
-    let insert = (0,language_dist/* indentString */.SS)(state, Math.max(0, col - (0,language_dist/* getIndentUnit */.y1)(state)));
+    let insert = (0,language_dist/* indentString */.EI)(state, Math.max(0, col - (0,language_dist/* getIndentUnit */.tp)(state)));
     while (keep < space.length && keep < insert.length && space.charCodeAt(keep) == insert.charCodeAt(keep)) keep++;
     changes.push({
       from: line.from + keep,
@@ -33307,885 +33343,891 @@ const indentWithTab = {
 ;// CONCATENATED MODULE: ./node_modules/@codemirror/language-data/dist/index.js
 
 function legacy(parser) {
-  return new language_dist/* LanguageSupport */.ri(language_dist/* StreamLanguage */.il.define(parser));
+  return new language_dist/* LanguageSupport */.Yy(language_dist/* StreamLanguage */.Tg.define(parser));
 }
 function sql(dialectName) {
-  return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3409)]).then(__webpack_require__.bind(__webpack_require__, 3409)).then(m => m.sql({
+  return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(7859)]).then(__webpack_require__.bind(__webpack_require__, 7859)).then(m => m.sql({
     dialect: m[dialectName]
   }));
 }
-const languages = [language_dist/* LanguageDescription */.c6.of({
+const languages = [language_dist/* LanguageDescription */.t$.of({
   name: "C",
   extensions: ["c", "h", "ino"],
   load() {
-    return __webpack_require__.e(/* import() */ 2214).then(__webpack_require__.bind(__webpack_require__, 2214)).then(m => m.cpp());
+    return __webpack_require__.e(/* import() */ 5178).then(__webpack_require__.bind(__webpack_require__, 5178)).then(m => m.cpp());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "C++",
   alias: ["cpp"],
   extensions: ["cpp", "c++", "cc", "cxx", "hpp", "h++", "hh", "hxx"],
   load() {
-    return __webpack_require__.e(/* import() */ 2214).then(__webpack_require__.bind(__webpack_require__, 2214)).then(m => m.cpp());
+    return __webpack_require__.e(/* import() */ 5178).then(__webpack_require__.bind(__webpack_require__, 5178)).then(m => m.cpp());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "CQL",
   alias: ["cassandra"],
   extensions: ["cql"],
   load() {
     return sql("Cassandra");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "CSS",
   extensions: ["css"],
   load() {
-    return __webpack_require__.e(/* import() */ 4033).then(__webpack_require__.bind(__webpack_require__, 4033)).then(m => m.css());
+    return __webpack_require__.e(/* import() */ 6025).then(__webpack_require__.bind(__webpack_require__, 6025)).then(m => m.css());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "HTML",
   alias: ["xhtml"],
   extensions: ["html", "htm", "handlebars", "hbs"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(4033), __webpack_require__.e(3341), __webpack_require__.e(8823)]).then(__webpack_require__.bind(__webpack_require__, 8823)).then(m => m.html());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464)]).then(__webpack_require__.bind(__webpack_require__, 5464)).then(m => m.html());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Java",
   extensions: ["java"],
   load() {
-    return __webpack_require__.e(/* import() */ 8524).then(__webpack_require__.bind(__webpack_require__, 8524)).then(m => m.java());
+    return __webpack_require__.e(/* import() */ 1972).then(__webpack_require__.bind(__webpack_require__, 1972)).then(m => m.java());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "JavaScript",
   alias: ["ecmascript", "js", "node"],
   extensions: ["js", "mjs", "cjs"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3341)]).then(__webpack_require__.bind(__webpack_require__, 3341)).then(m => m.javascript());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(4527)]).then(__webpack_require__.bind(__webpack_require__, 4527)).then(m => m.javascript());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "JSON",
   alias: ["json5"],
   extensions: ["json", "map"],
   load() {
-    return Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 5782)).then(m => m.json());
+    return Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 2866)).then(m => m.json());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "JSX",
   extensions: ["jsx"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3341)]).then(__webpack_require__.bind(__webpack_require__, 3341)).then(m => m.javascript({
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(4527)]).then(__webpack_require__.bind(__webpack_require__, 4527)).then(m => m.javascript({
       jsx: true
     }));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "LESS",
   extensions: ["less"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4033), __webpack_require__.e(652)]).then(__webpack_require__.bind(__webpack_require__, 652)).then(m => m.less());
+    return Promise.all(/* import() */[__webpack_require__.e(6025), __webpack_require__.e(4128)]).then(__webpack_require__.bind(__webpack_require__, 4128)).then(m => m.less());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
+  name: "Liquid",
+  extensions: ["liquid"],
+  load() {
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464), __webpack_require__.e(1863)]).then(__webpack_require__.bind(__webpack_require__, 1863)).then(m => m.liquid());
+  }
+}), language_dist/* LanguageDescription */.t$.of({
   name: "MariaDB SQL",
   load() {
     return sql("MariaSQL");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Markdown",
   extensions: ["md", "markdown", "mkd"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(4033), __webpack_require__.e(3341), __webpack_require__.e(8823), __webpack_require__.e(5022)]).then(__webpack_require__.bind(__webpack_require__, 5022)).then(m => m.markdown());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464), __webpack_require__.e(4912)]).then(__webpack_require__.bind(__webpack_require__, 4912)).then(m => m.markdown());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "MS SQL",
   load() {
     return sql("MSSQL");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "MySQL",
   load() {
     return sql("MySQL");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "PHP",
   extensions: ["php", "php3", "php4", "php5", "php7", "phtml"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(4033), __webpack_require__.e(3341), __webpack_require__.e(8823), __webpack_require__.e(2487)]).then(__webpack_require__.bind(__webpack_require__, 2487)).then(m => m.php());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464), __webpack_require__.e(8783)]).then(__webpack_require__.bind(__webpack_require__, 8783)).then(m => m.php());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "PLSQL",
   extensions: ["pls"],
   load() {
     return sql("PLSQL");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "PostgreSQL",
   load() {
     return sql("PostgreSQL");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Python",
   extensions: ["BUILD", "bzl", "py", "pyw"],
   filename: /^(BUCK|BUILD)$/,
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(5057)]).then(__webpack_require__.bind(__webpack_require__, 5057)).then(m => m.python());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(5679)]).then(__webpack_require__.bind(__webpack_require__, 5679)).then(m => m.python());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Rust",
   extensions: ["rs"],
   load() {
-    return __webpack_require__.e(/* import() */ 2536).then(__webpack_require__.bind(__webpack_require__, 2536)).then(m => m.rust());
+    return __webpack_require__.e(/* import() */ 390).then(__webpack_require__.bind(__webpack_require__, 390)).then(m => m.rust());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Sass",
   extensions: ["sass"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4033), __webpack_require__.e(1978)]).then(__webpack_require__.bind(__webpack_require__, 1978)).then(m => m.sass({
+    return Promise.all(/* import() */[__webpack_require__.e(6025), __webpack_require__.e(2495)]).then(__webpack_require__.bind(__webpack_require__, 2495)).then(m => m.sass({
       indented: true
     }));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "SCSS",
   extensions: ["scss"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4033), __webpack_require__.e(1978)]).then(__webpack_require__.bind(__webpack_require__, 1978)).then(m => m.sass());
+    return Promise.all(/* import() */[__webpack_require__.e(6025), __webpack_require__.e(2495)]).then(__webpack_require__.bind(__webpack_require__, 2495)).then(m => m.sass());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "SQL",
   extensions: ["sql"],
   load() {
     return sql("StandardSQL");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "SQLite",
   load() {
     return sql("SQLite");
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "TSX",
   extensions: ["tsx"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3341)]).then(__webpack_require__.bind(__webpack_require__, 3341)).then(m => m.javascript({
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(4527)]).then(__webpack_require__.bind(__webpack_require__, 4527)).then(m => m.javascript({
       jsx: true,
       typescript: true
     }));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "TypeScript",
   alias: ["ts"],
-  extensions: ["ts"],
+  extensions: ["ts", "mts", "cts"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(3341)]).then(__webpack_require__.bind(__webpack_require__, 3341)).then(m => m.javascript({
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(4527)]).then(__webpack_require__.bind(__webpack_require__, 4527)).then(m => m.javascript({
       typescript: true
     }));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "WebAssembly",
   extensions: ["wat", "wast"],
   load() {
-    return __webpack_require__.e(/* import() */ 5414).then(__webpack_require__.bind(__webpack_require__, 5414)).then(m => m.wast());
+    return __webpack_require__.e(/* import() */ 9818).then(__webpack_require__.bind(__webpack_require__, 9818)).then(m => m.wast());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "XML",
   alias: ["rss", "wsdl", "xsd"],
   extensions: ["xml", "xsl", "xsd", "svg"],
   load() {
-    return __webpack_require__.e(/* import() */ 2011).then(__webpack_require__.bind(__webpack_require__, 2011)).then(m => m.xml());
+    return __webpack_require__.e(/* import() */ 6090).then(__webpack_require__.bind(__webpack_require__, 6090)).then(m => m.xml());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
+  name: "YAML",
+  alias: ["yml"],
+  extensions: ["yaml", "yml"],
+  load() {
+    return __webpack_require__.e(/* import() */ 3655).then(__webpack_require__.bind(__webpack_require__, 3655)).then(m => m.yaml());
+  }
+}), language_dist/* LanguageDescription */.t$.of({
   name: "APL",
   extensions: ["dyalog", "apl"],
   load() {
-    return __webpack_require__.e(/* import() */ 1378).then(__webpack_require__.bind(__webpack_require__, 1378)).then(m => legacy(m.apl));
+    return __webpack_require__.e(/* import() */ 5854).then(__webpack_require__.bind(__webpack_require__, 5854)).then(m => legacy(m.apl));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "PGP",
   alias: ["asciiarmor"],
   extensions: ["asc", "pgp", "sig"],
   load() {
-    return __webpack_require__.e(/* import() */ 2058).then(__webpack_require__.bind(__webpack_require__, 2058)).then(m => legacy(m.asciiArmor));
+    return __webpack_require__.e(/* import() */ 7175).then(__webpack_require__.bind(__webpack_require__, 7175)).then(m => legacy(m.asciiArmor));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "ASN.1",
   extensions: ["asn", "asn1"],
   load() {
-    return __webpack_require__.e(/* import() */ 4192).then(__webpack_require__.bind(__webpack_require__, 4192)).then(m => legacy(m.asn1({})));
+    return __webpack_require__.e(/* import() */ 1336).then(__webpack_require__.bind(__webpack_require__, 1336)).then(m => legacy(m.asn1({})));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Asterisk",
   filename: /^extensions\.conf$/i,
   load() {
-    return __webpack_require__.e(/* import() */ 4600).then(__webpack_require__.bind(__webpack_require__, 4600)).then(m => legacy(m.asterisk));
+    return __webpack_require__.e(/* import() */ 4809).then(__webpack_require__.bind(__webpack_require__, 4809)).then(m => legacy(m.asterisk));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Brainfuck",
   extensions: ["b", "bf"],
   load() {
-    return __webpack_require__.e(/* import() */ 7410).then(__webpack_require__.bind(__webpack_require__, 7410)).then(m => legacy(m.brainfuck));
+    return __webpack_require__.e(/* import() */ 1646).then(__webpack_require__.bind(__webpack_require__, 1646)).then(m => legacy(m.brainfuck));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Cobol",
   extensions: ["cob", "cpy"],
   load() {
-    return __webpack_require__.e(/* import() */ 7363).then(__webpack_require__.bind(__webpack_require__, 7363)).then(m => legacy(m.cobol));
+    return __webpack_require__.e(/* import() */ 8114).then(__webpack_require__.bind(__webpack_require__, 8114)).then(m => legacy(m.cobol));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "C#",
   alias: ["csharp", "cs"],
   extensions: ["cs"],
   load() {
-    return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.csharp));
+    return __webpack_require__.e(/* import() */ 6095).then(__webpack_require__.bind(__webpack_require__, 6095)).then(m => legacy(m.csharp));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Clojure",
   extensions: ["clj", "cljc", "cljx"],
   load() {
-    return __webpack_require__.e(/* import() */ 5371).then(__webpack_require__.bind(__webpack_require__, 5371)).then(m => legacy(m.clojure));
+    return __webpack_require__.e(/* import() */ 4613).then(__webpack_require__.bind(__webpack_require__, 4613)).then(m => legacy(m.clojure));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "ClojureScript",
   extensions: ["cljs"],
   load() {
-    return __webpack_require__.e(/* import() */ 5371).then(__webpack_require__.bind(__webpack_require__, 5371)).then(m => legacy(m.clojure));
+    return __webpack_require__.e(/* import() */ 4613).then(__webpack_require__.bind(__webpack_require__, 4613)).then(m => legacy(m.clojure));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Closure Stylesheets (GSS)",
   extensions: ["gss"],
   load() {
-    return __webpack_require__.e(/* import() */ 7718).then(__webpack_require__.bind(__webpack_require__, 7718)).then(m => legacy(m.gss));
+    return __webpack_require__.e(/* import() */ 3506).then(__webpack_require__.bind(__webpack_require__, 3506)).then(m => legacy(m.gss));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "CMake",
   extensions: ["cmake", "cmake.in"],
   filename: /^CMakeLists\.txt$/,
   load() {
-    return __webpack_require__.e(/* import() */ 4358).then(__webpack_require__.bind(__webpack_require__, 4358)).then(m => legacy(m.cmake));
+    return __webpack_require__.e(/* import() */ 8058).then(__webpack_require__.bind(__webpack_require__, 8058)).then(m => legacy(m.cmake));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "CoffeeScript",
   alias: ["coffee", "coffee-script"],
   extensions: ["coffee"],
   load() {
-    return __webpack_require__.e(/* import() */ 5100).then(__webpack_require__.bind(__webpack_require__, 5100)).then(m => legacy(m.coffeeScript));
+    return __webpack_require__.e(/* import() */ 2934).then(__webpack_require__.bind(__webpack_require__, 2934)).then(m => legacy(m.coffeeScript));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Common Lisp",
   alias: ["lisp"],
   extensions: ["cl", "lisp", "el"],
   load() {
-    return __webpack_require__.e(/* import() */ 5576).then(__webpack_require__.bind(__webpack_require__, 5576)).then(m => legacy(m.commonLisp));
+    return __webpack_require__.e(/* import() */ 5732).then(__webpack_require__.bind(__webpack_require__, 5732)).then(m => legacy(m.commonLisp));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Cypher",
   extensions: ["cyp", "cypher"],
   load() {
-    return __webpack_require__.e(/* import() */ 9352).then(__webpack_require__.bind(__webpack_require__, 9352)).then(m => legacy(m.cypher));
+    return __webpack_require__.e(/* import() */ 4842).then(__webpack_require__.bind(__webpack_require__, 4842)).then(m => legacy(m.cypher));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Cython",
   extensions: ["pyx", "pxd", "pxi"],
   load() {
-    return __webpack_require__.e(/* import() */ 1674).then(__webpack_require__.bind(__webpack_require__, 1674)).then(m => legacy(m.cython));
+    return __webpack_require__.e(/* import() */ 9563).then(__webpack_require__.bind(__webpack_require__, 9563)).then(m => legacy(m.cython));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Crystal",
   extensions: ["cr"],
   load() {
-    return __webpack_require__.e(/* import() */ 3424).then(__webpack_require__.bind(__webpack_require__, 3424)).then(m => legacy(m.crystal));
+    return __webpack_require__.e(/* import() */ 8243).then(__webpack_require__.bind(__webpack_require__, 8243)).then(m => legacy(m.crystal));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "D",
   extensions: ["d"],
   load() {
-    return __webpack_require__.e(/* import() */ 7161).then(__webpack_require__.bind(__webpack_require__, 7161)).then(m => legacy(m.d));
+    return __webpack_require__.e(/* import() */ 2717).then(__webpack_require__.bind(__webpack_require__, 2717)).then(m => legacy(m.d));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Dart",
   extensions: ["dart"],
   load() {
-    return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.dart));
+    return __webpack_require__.e(/* import() */ 6095).then(__webpack_require__.bind(__webpack_require__, 6095)).then(m => legacy(m.dart));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "diff",
   extensions: ["diff", "patch"],
   load() {
-    return __webpack_require__.e(/* import() */ 9223).then(__webpack_require__.bind(__webpack_require__, 9223)).then(m => legacy(m.diff));
+    return __webpack_require__.e(/* import() */ 4274).then(__webpack_require__.bind(__webpack_require__, 4274)).then(m => legacy(m.diff));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Dockerfile",
   filename: /^Dockerfile$/,
   load() {
-    return __webpack_require__.e(/* import() */ 1062).then(__webpack_require__.bind(__webpack_require__, 1062)).then(m => legacy(m.dockerFile));
+    return __webpack_require__.e(/* import() */ 5671).then(__webpack_require__.bind(__webpack_require__, 5671)).then(m => legacy(m.dockerFile));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "DTD",
   extensions: ["dtd"],
   load() {
-    return __webpack_require__.e(/* import() */ 2260).then(__webpack_require__.bind(__webpack_require__, 2260)).then(m => legacy(m.dtd));
+    return __webpack_require__.e(/* import() */ 1661).then(__webpack_require__.bind(__webpack_require__, 1661)).then(m => legacy(m.dtd));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Dylan",
   extensions: ["dylan", "dyl", "intr"],
   load() {
-    return __webpack_require__.e(/* import() */ 8409).then(__webpack_require__.bind(__webpack_require__, 8409)).then(m => legacy(m.dylan));
+    return __webpack_require__.e(/* import() */ 6643).then(__webpack_require__.bind(__webpack_require__, 6643)).then(m => legacy(m.dylan));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "EBNF",
   load() {
-    return __webpack_require__.e(/* import() */ 6713).then(__webpack_require__.bind(__webpack_require__, 6713)).then(m => legacy(m.ebnf));
+    return __webpack_require__.e(/* import() */ 2294).then(__webpack_require__.bind(__webpack_require__, 2294)).then(m => legacy(m.ebnf));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "ECL",
   extensions: ["ecl"],
   load() {
-    return __webpack_require__.e(/* import() */ 6463).then(__webpack_require__.bind(__webpack_require__, 6463)).then(m => legacy(m.ecl));
+    return __webpack_require__.e(/* import() */ 6589).then(__webpack_require__.bind(__webpack_require__, 6589)).then(m => legacy(m.ecl));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "edn",
   extensions: ["edn"],
   load() {
-    return __webpack_require__.e(/* import() */ 5371).then(__webpack_require__.bind(__webpack_require__, 5371)).then(m => legacy(m.clojure));
+    return __webpack_require__.e(/* import() */ 4613).then(__webpack_require__.bind(__webpack_require__, 4613)).then(m => legacy(m.clojure));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Eiffel",
   extensions: ["e"],
   load() {
-    return __webpack_require__.e(/* import() */ 6665).then(__webpack_require__.bind(__webpack_require__, 6665)).then(m => legacy(m.eiffel));
+    return __webpack_require__.e(/* import() */ 1874).then(__webpack_require__.bind(__webpack_require__, 1874)).then(m => legacy(m.eiffel));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Elm",
   extensions: ["elm"],
   load() {
-    return __webpack_require__.e(/* import() */ 461).then(__webpack_require__.bind(__webpack_require__, 461)).then(m => legacy(m.elm));
+    return __webpack_require__.e(/* import() */ 7693).then(__webpack_require__.bind(__webpack_require__, 7693)).then(m => legacy(m.elm));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Erlang",
   extensions: ["erl"],
   load() {
-    return __webpack_require__.e(/* import() */ 3448).then(__webpack_require__.bind(__webpack_require__, 3448)).then(m => legacy(m.erlang));
+    return __webpack_require__.e(/* import() */ 782).then(__webpack_require__.bind(__webpack_require__, 782)).then(m => legacy(m.erlang));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Esper",
   load() {
-    return __webpack_require__.e(/* import() */ 3405).then(__webpack_require__.bind(__webpack_require__, 3405)).then(m => legacy(m.esper));
+    return __webpack_require__.e(/* import() */ 8177).then(__webpack_require__.bind(__webpack_require__, 8177)).then(m => legacy(m.esper));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Factor",
   extensions: ["factor"],
   load() {
-    return __webpack_require__.e(/* import() */ 8414).then(__webpack_require__.bind(__webpack_require__, 8414)).then(m => legacy(m.factor));
+    return __webpack_require__.e(/* import() */ 1366).then(__webpack_require__.bind(__webpack_require__, 1366)).then(m => legacy(m.factor));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "FCL",
   load() {
-    return __webpack_require__.e(/* import() */ 3674).then(__webpack_require__.bind(__webpack_require__, 3674)).then(m => legacy(m.fcl));
+    return __webpack_require__.e(/* import() */ 7064).then(__webpack_require__.bind(__webpack_require__, 7064)).then(m => legacy(m.fcl));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Forth",
   extensions: ["forth", "fth", "4th"],
   load() {
-    return __webpack_require__.e(/* import() */ 1613).then(__webpack_require__.bind(__webpack_require__, 1613)).then(m => legacy(m.forth));
+    return __webpack_require__.e(/* import() */ 4926).then(__webpack_require__.bind(__webpack_require__, 4926)).then(m => legacy(m.forth));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Fortran",
   extensions: ["f", "for", "f77", "f90", "f95"],
   load() {
-    return __webpack_require__.e(/* import() */ 3530).then(__webpack_require__.bind(__webpack_require__, 3530)).then(m => legacy(m.fortran));
+    return __webpack_require__.e(/* import() */ 2219).then(__webpack_require__.bind(__webpack_require__, 2219)).then(m => legacy(m.fortran));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "F#",
   alias: ["fsharp"],
   extensions: ["fs"],
   load() {
-    return __webpack_require__.e(/* import() */ 1635).then(__webpack_require__.bind(__webpack_require__, 1635)).then(m => legacy(m.fSharp));
+    return __webpack_require__.e(/* import() */ 8551).then(__webpack_require__.bind(__webpack_require__, 8551)).then(m => legacy(m.fSharp));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Gas",
   extensions: ["s"],
   load() {
-    return __webpack_require__.e(/* import() */ 1061).then(__webpack_require__.bind(__webpack_require__, 1061)).then(m => legacy(m.gas));
+    return __webpack_require__.e(/* import() */ 2472).then(__webpack_require__.bind(__webpack_require__, 2472)).then(m => legacy(m.gas));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Gherkin",
   extensions: ["feature"],
   load() {
-    return __webpack_require__.e(/* import() */ 7247).then(__webpack_require__.bind(__webpack_require__, 7247)).then(m => legacy(m.gherkin));
+    return __webpack_require__.e(/* import() */ 4827).then(__webpack_require__.bind(__webpack_require__, 4827)).then(m => legacy(m.gherkin));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Go",
   extensions: ["go"],
   load() {
-    return __webpack_require__.e(/* import() */ 1874).then(__webpack_require__.bind(__webpack_require__, 1874)).then(m => legacy(m.go));
+    return __webpack_require__.e(/* import() */ 519).then(__webpack_require__.bind(__webpack_require__, 519)).then(m => legacy(m.go));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Groovy",
   extensions: ["groovy", "gradle"],
   filename: /^Jenkinsfile$/,
   load() {
-    return __webpack_require__.e(/* import() */ 582).then(__webpack_require__.bind(__webpack_require__, 582)).then(m => legacy(m.groovy));
+    return __webpack_require__.e(/* import() */ 3191).then(__webpack_require__.bind(__webpack_require__, 3191)).then(m => legacy(m.groovy));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Haskell",
   extensions: ["hs"],
   load() {
-    return __webpack_require__.e(/* import() */ 5481).then(__webpack_require__.bind(__webpack_require__, 5481)).then(m => legacy(m.haskell));
+    return __webpack_require__.e(/* import() */ 4669).then(__webpack_require__.bind(__webpack_require__, 4669)).then(m => legacy(m.haskell));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Haxe",
   extensions: ["hx"],
   load() {
-    return __webpack_require__.e(/* import() */ 6975).then(__webpack_require__.bind(__webpack_require__, 6975)).then(m => legacy(m.haxe));
+    return __webpack_require__.e(/* import() */ 9929).then(__webpack_require__.bind(__webpack_require__, 9929)).then(m => legacy(m.haxe));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "HXML",
   extensions: ["hxml"],
   load() {
-    return __webpack_require__.e(/* import() */ 6975).then(__webpack_require__.bind(__webpack_require__, 6975)).then(m => legacy(m.hxml));
+    return __webpack_require__.e(/* import() */ 9929).then(__webpack_require__.bind(__webpack_require__, 9929)).then(m => legacy(m.hxml));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "HTTP",
   load() {
-    return __webpack_require__.e(/* import() */ 937).then(__webpack_require__.bind(__webpack_require__, 937)).then(m => legacy(m.http));
+    return __webpack_require__.e(/* import() */ 1877).then(__webpack_require__.bind(__webpack_require__, 1877)).then(m => legacy(m.http));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "IDL",
   extensions: ["pro"],
   load() {
-    return __webpack_require__.e(/* import() */ 6432).then(__webpack_require__.bind(__webpack_require__, 6432)).then(m => legacy(m.idl));
+    return __webpack_require__.e(/* import() */ 2325).then(__webpack_require__.bind(__webpack_require__, 4706)).then(m => legacy(m.idl));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "JSON-LD",
   alias: ["jsonld"],
   extensions: ["jsonld"],
   load() {
-    return __webpack_require__.e(/* import() */ 1886).then(__webpack_require__.bind(__webpack_require__, 1886)).then(m => legacy(m.jsonld));
+    return __webpack_require__.e(/* import() */ 8170).then(__webpack_require__.bind(__webpack_require__, 8170)).then(m => legacy(m.jsonld));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Jinja2",
   extensions: ["j2", "jinja", "jinja2"],
   load() {
-    return __webpack_require__.e(/* import() */ 9081).then(__webpack_require__.bind(__webpack_require__, 9081)).then(m => legacy(m.jinja2));
+    return __webpack_require__.e(/* import() */ 4783).then(__webpack_require__.bind(__webpack_require__, 4783)).then(m => legacy(m.jinja2));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Julia",
   extensions: ["jl"],
   load() {
-    return __webpack_require__.e(/* import() */ 7375).then(__webpack_require__.bind(__webpack_require__, 7375)).then(m => legacy(m.julia));
+    return __webpack_require__.e(/* import() */ 5440).then(__webpack_require__.bind(__webpack_require__, 5440)).then(m => legacy(m.julia));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Kotlin",
-  extensions: ["kt"],
+  extensions: ["kt", "kts"],
   load() {
-    return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.kotlin));
+    return __webpack_require__.e(/* import() */ 6095).then(__webpack_require__.bind(__webpack_require__, 6095)).then(m => legacy(m.kotlin));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "LiveScript",
   alias: ["ls"],
   extensions: ["ls"],
   load() {
-    return __webpack_require__.e(/* import() */ 3702).then(__webpack_require__.bind(__webpack_require__, 3702)).then(m => legacy(m.liveScript));
+    return __webpack_require__.e(/* import() */ 6072).then(__webpack_require__.bind(__webpack_require__, 6072)).then(m => legacy(m.liveScript));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Lua",
   extensions: ["lua"],
   load() {
-    return __webpack_require__.e(/* import() */ 6565).then(__webpack_require__.bind(__webpack_require__, 6565)).then(m => legacy(m.lua));
+    return __webpack_require__.e(/* import() */ 203).then(__webpack_require__.bind(__webpack_require__, 203)).then(m => legacy(m.lua));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "mIRC",
   extensions: ["mrc"],
   load() {
-    return __webpack_require__.e(/* import() */ 7621).then(__webpack_require__.bind(__webpack_require__, 7621)).then(m => legacy(m.mirc));
+    return __webpack_require__.e(/* import() */ 5744).then(__webpack_require__.bind(__webpack_require__, 5744)).then(m => legacy(m.mirc));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Mathematica",
   extensions: ["m", "nb", "wl", "wls"],
   load() {
-    return __webpack_require__.e(/* import() */ 2362).then(__webpack_require__.bind(__webpack_require__, 2362)).then(m => legacy(m.mathematica));
+    return __webpack_require__.e(/* import() */ 9413).then(__webpack_require__.bind(__webpack_require__, 9413)).then(m => legacy(m.mathematica));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Modelica",
   extensions: ["mo"],
   load() {
-    return __webpack_require__.e(/* import() */ 3159).then(__webpack_require__.bind(__webpack_require__, 3159)).then(m => legacy(m.modelica));
+    return __webpack_require__.e(/* import() */ 8545).then(__webpack_require__.bind(__webpack_require__, 8545)).then(m => legacy(m.modelica));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "MUMPS",
   extensions: ["mps"],
   load() {
-    return __webpack_require__.e(/* import() */ 3746).then(__webpack_require__.bind(__webpack_require__, 3746)).then(m => legacy(m.mumps));
+    return __webpack_require__.e(/* import() */ 5845).then(__webpack_require__.bind(__webpack_require__, 5845)).then(m => legacy(m.mumps));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Mbox",
   extensions: ["mbox"],
   load() {
-    return __webpack_require__.e(/* import() */ 5346).then(__webpack_require__.bind(__webpack_require__, 5346)).then(m => legacy(m.mbox));
+    return __webpack_require__.e(/* import() */ 3269).then(__webpack_require__.bind(__webpack_require__, 3269)).then(m => legacy(m.mbox));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Nginx",
   filename: /nginx.*\.conf$/i,
   load() {
-    return __webpack_require__.e(/* import() */ 3447).then(__webpack_require__.bind(__webpack_require__, 3447)).then(m => legacy(m.nginx));
+    return __webpack_require__.e(/* import() */ 1289).then(__webpack_require__.bind(__webpack_require__, 1289)).then(m => legacy(m.nginx));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "NSIS",
   extensions: ["nsh", "nsi"],
   load() {
-    return __webpack_require__.e(/* import() */ 6864).then(__webpack_require__.bind(__webpack_require__, 6864)).then(m => legacy(m.nsis));
+    return __webpack_require__.e(/* import() */ 5238).then(__webpack_require__.bind(__webpack_require__, 5238)).then(m => legacy(m.nsis));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "NTriples",
   extensions: ["nt", "nq"],
   load() {
-    return __webpack_require__.e(/* import() */ 9195).then(__webpack_require__.bind(__webpack_require__, 9195)).then(m => legacy(m.ntriples));
+    return __webpack_require__.e(/* import() */ 9670).then(__webpack_require__.bind(__webpack_require__, 9670)).then(m => legacy(m.ntriples));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Objective-C",
   alias: ["objective-c", "objc"],
   extensions: ["m"],
   load() {
-    return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.objectiveC));
+    return __webpack_require__.e(/* import() */ 6095).then(__webpack_require__.bind(__webpack_require__, 6095)).then(m => legacy(m.objectiveC));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Objective-C++",
   alias: ["objective-c++", "objc++"],
   extensions: ["mm"],
   load() {
-    return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.objectiveCpp));
+    return __webpack_require__.e(/* import() */ 6095).then(__webpack_require__.bind(__webpack_require__, 6095)).then(m => legacy(m.objectiveCpp));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "OCaml",
   extensions: ["ml", "mli", "mll", "mly"],
   load() {
-    return __webpack_require__.e(/* import() */ 1635).then(__webpack_require__.bind(__webpack_require__, 1635)).then(m => legacy(m.oCaml));
+    return __webpack_require__.e(/* import() */ 8551).then(__webpack_require__.bind(__webpack_require__, 8551)).then(m => legacy(m.oCaml));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Octave",
   extensions: ["m"],
   load() {
-    return __webpack_require__.e(/* import() */ 797).then(__webpack_require__.bind(__webpack_require__, 797)).then(m => legacy(m.octave));
+    return __webpack_require__.e(/* import() */ 6777).then(__webpack_require__.bind(__webpack_require__, 6777)).then(m => legacy(m.octave));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Oz",
   extensions: ["oz"],
   load() {
-    return __webpack_require__.e(/* import() */ 270).then(__webpack_require__.bind(__webpack_require__, 270)).then(m => legacy(m.oz));
+    return __webpack_require__.e(/* import() */ 4196).then(__webpack_require__.bind(__webpack_require__, 4196)).then(m => legacy(m.oz));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Pascal",
   extensions: ["p", "pas"],
   load() {
-    return __webpack_require__.e(/* import() */ 194).then(__webpack_require__.bind(__webpack_require__, 194)).then(m => legacy(m.pascal));
+    return __webpack_require__.e(/* import() */ 6137).then(__webpack_require__.bind(__webpack_require__, 6137)).then(m => legacy(m.pascal));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Perl",
   extensions: ["pl", "pm"],
   load() {
-    return __webpack_require__.e(/* import() */ 6653).then(__webpack_require__.bind(__webpack_require__, 6653)).then(m => legacy(m.perl));
+    return __webpack_require__.e(/* import() */ 6655).then(__webpack_require__.bind(__webpack_require__, 9036)).then(m => legacy(m.perl));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Pig",
   extensions: ["pig"],
   load() {
-    return __webpack_require__.e(/* import() */ 529).then(__webpack_require__.bind(__webpack_require__, 529)).then(m => legacy(m.pig));
+    return __webpack_require__.e(/* import() */ 161).then(__webpack_require__.bind(__webpack_require__, 161)).then(m => legacy(m.pig));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "PowerShell",
   extensions: ["ps1", "psd1", "psm1"],
   load() {
-    return __webpack_require__.e(/* import() */ 5176).then(__webpack_require__.bind(__webpack_require__, 5176)).then(m => legacy(m.powerShell));
+    return __webpack_require__.e(/* import() */ 1676).then(__webpack_require__.bind(__webpack_require__, 1676)).then(m => legacy(m.powerShell));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Properties files",
   alias: ["ini", "properties"],
   extensions: ["properties", "ini", "in"],
   load() {
-    return __webpack_require__.e(/* import() */ 8337).then(__webpack_require__.bind(__webpack_require__, 8337)).then(m => legacy(m.properties));
+    return __webpack_require__.e(/* import() */ 9156).then(__webpack_require__.bind(__webpack_require__, 9156)).then(m => legacy(m.properties));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "ProtoBuf",
   extensions: ["proto"],
   load() {
-    return __webpack_require__.e(/* import() */ 2661).then(__webpack_require__.bind(__webpack_require__, 2661)).then(m => legacy(m.protobuf));
+    return __webpack_require__.e(/* import() */ 7958).then(__webpack_require__.bind(__webpack_require__, 7958)).then(m => legacy(m.protobuf));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Puppet",
   extensions: ["pp"],
   load() {
-    return __webpack_require__.e(/* import() */ 8542).then(__webpack_require__.bind(__webpack_require__, 8542)).then(m => legacy(m.puppet));
+    return __webpack_require__.e(/* import() */ 4615).then(__webpack_require__.bind(__webpack_require__, 4615)).then(m => legacy(m.puppet));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Q",
   extensions: ["q"],
   load() {
-    return __webpack_require__.e(/* import() */ 5298).then(__webpack_require__.bind(__webpack_require__, 5298)).then(m => legacy(m.q));
+    return __webpack_require__.e(/* import() */ 4706).then(__webpack_require__.bind(__webpack_require__, 2325)).then(m => legacy(m.q));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "R",
   alias: ["rscript"],
   extensions: ["r", "R"],
   load() {
-    return __webpack_require__.e(/* import() */ 5241).then(__webpack_require__.bind(__webpack_require__, 5241)).then(m => legacy(m.r));
+    return __webpack_require__.e(/* import() */ 6959).then(__webpack_require__.bind(__webpack_require__, 6959)).then(m => legacy(m.r));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "RPM Changes",
   load() {
-    return __webpack_require__.e(/* import() */ 6521).then(__webpack_require__.bind(__webpack_require__, 6521)).then(m => legacy(m.rpmChanges));
+    return __webpack_require__.e(/* import() */ 5564).then(__webpack_require__.bind(__webpack_require__, 5564)).then(m => legacy(m.rpmChanges));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "RPM Spec",
   extensions: ["spec"],
   load() {
-    return __webpack_require__.e(/* import() */ 6521).then(__webpack_require__.bind(__webpack_require__, 6521)).then(m => legacy(m.rpmSpec));
+    return __webpack_require__.e(/* import() */ 5564).then(__webpack_require__.bind(__webpack_require__, 5564)).then(m => legacy(m.rpmSpec));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Ruby",
   alias: ["jruby", "macruby", "rake", "rb", "rbx"],
   extensions: ["rb"],
   filename: /^(Gemfile|Rakefile)$/,
   load() {
-    return __webpack_require__.e(/* import() */ 9463).then(__webpack_require__.bind(__webpack_require__, 9463)).then(m => legacy(m.ruby));
+    return __webpack_require__.e(/* import() */ 2557).then(__webpack_require__.bind(__webpack_require__, 2557)).then(m => legacy(m.ruby));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "SAS",
   extensions: ["sas"],
   load() {
-    return __webpack_require__.e(/* import() */ 6031).then(__webpack_require__.bind(__webpack_require__, 6031)).then(m => legacy(m.sas));
+    return __webpack_require__.e(/* import() */ 9036).then(__webpack_require__.bind(__webpack_require__, 6655)).then(m => legacy(m.sas));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Scala",
   extensions: ["scala"],
   load() {
-    return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.scala));
+    return __webpack_require__.e(/* import() */ 6095).then(__webpack_require__.bind(__webpack_require__, 6095)).then(m => legacy(m.scala));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Scheme",
   extensions: ["scm", "ss"],
   load() {
-    return __webpack_require__.e(/* import() */ 4435).then(__webpack_require__.bind(__webpack_require__, 4435)).then(m => legacy(m.scheme));
+    return __webpack_require__.e(/* import() */ 938).then(__webpack_require__.bind(__webpack_require__, 938)).then(m => legacy(m.scheme));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Shell",
   alias: ["bash", "sh", "zsh"],
   extensions: ["sh", "ksh", "bash"],
   filename: /^PKGBUILD$/,
   load() {
-    return __webpack_require__.e(/* import() */ 9281).then(__webpack_require__.bind(__webpack_require__, 9281)).then(m => legacy(m.shell));
+    return __webpack_require__.e(/* import() */ 4595).then(__webpack_require__.bind(__webpack_require__, 4595)).then(m => legacy(m.shell));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Sieve",
   extensions: ["siv", "sieve"],
   load() {
-    return __webpack_require__.e(/* import() */ 2518).then(__webpack_require__.bind(__webpack_require__, 2518)).then(m => legacy(m.sieve));
+    return __webpack_require__.e(/* import() */ 7415).then(__webpack_require__.bind(__webpack_require__, 7415)).then(m => legacy(m.sieve));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Smalltalk",
   extensions: ["st"],
   load() {
-    return __webpack_require__.e(/* import() */ 167).then(__webpack_require__.bind(__webpack_require__, 167)).then(m => legacy(m.smalltalk));
+    return __webpack_require__.e(/* import() */ 2232).then(__webpack_require__.bind(__webpack_require__, 2232)).then(m => legacy(m.smalltalk));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Solr",
   load() {
-    return __webpack_require__.e(/* import() */ 1201).then(__webpack_require__.bind(__webpack_require__, 1201)).then(m => legacy(m.solr));
+    return __webpack_require__.e(/* import() */ 1249).then(__webpack_require__.bind(__webpack_require__, 1249)).then(m => legacy(m.solr));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "SML",
   extensions: ["sml", "sig", "fun", "smackspec"],
   load() {
-    return __webpack_require__.e(/* import() */ 1635).then(__webpack_require__.bind(__webpack_require__, 1635)).then(m => legacy(m.sml));
+    return __webpack_require__.e(/* import() */ 8551).then(__webpack_require__.bind(__webpack_require__, 8551)).then(m => legacy(m.sml));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "SPARQL",
   alias: ["sparul"],
   extensions: ["rq", "sparql"],
   load() {
-    return __webpack_require__.e(/* import() */ 7702).then(__webpack_require__.bind(__webpack_require__, 7702)).then(m => legacy(m.sparql));
+    return __webpack_require__.e(/* import() */ 3608).then(__webpack_require__.bind(__webpack_require__, 3608)).then(m => legacy(m.sparql));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Spreadsheet",
   alias: ["excel", "formula"],
   load() {
-    return __webpack_require__.e(/* import() */ 8384).then(__webpack_require__.bind(__webpack_require__, 8384)).then(m => legacy(m.spreadsheet));
+    return __webpack_require__.e(/* import() */ 9019).then(__webpack_require__.bind(__webpack_require__, 9019)).then(m => legacy(m.spreadsheet));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Squirrel",
   extensions: ["nut"],
   load() {
-    return __webpack_require__.e(/* import() */ 7287).then(__webpack_require__.bind(__webpack_require__, 7287)).then(m => legacy(m.squirrel));
+    return __webpack_require__.e(/* import() */ 6095).then(__webpack_require__.bind(__webpack_require__, 6095)).then(m => legacy(m.squirrel));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Stylus",
   extensions: ["styl"],
   load() {
-    return __webpack_require__.e(/* import() */ 1611).then(__webpack_require__.bind(__webpack_require__, 1611)).then(m => legacy(m.stylus));
+    return __webpack_require__.e(/* import() */ 6307).then(__webpack_require__.bind(__webpack_require__, 6307)).then(m => legacy(m.stylus));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Swift",
   extensions: ["swift"],
   load() {
-    return __webpack_require__.e(/* import() */ 2923).then(__webpack_require__.bind(__webpack_require__, 2923)).then(m => legacy(m.swift));
+    return __webpack_require__.e(/* import() */ 2950).then(__webpack_require__.bind(__webpack_require__, 2950)).then(m => legacy(m.swift));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "sTeX",
   load() {
-    return __webpack_require__.e(/* import() */ 726).then(__webpack_require__.bind(__webpack_require__, 726)).then(m => legacy(m.stex));
+    return __webpack_require__.e(/* import() */ 9631).then(__webpack_require__.bind(__webpack_require__, 9631)).then(m => legacy(m.stex));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "LaTeX",
   alias: ["tex"],
   extensions: ["text", "ltx", "tex"],
   load() {
-    return __webpack_require__.e(/* import() */ 726).then(__webpack_require__.bind(__webpack_require__, 726)).then(m => legacy(m.stex));
+    return __webpack_require__.e(/* import() */ 9631).then(__webpack_require__.bind(__webpack_require__, 9631)).then(m => legacy(m.stex));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "SystemVerilog",
   extensions: ["v", "sv", "svh"],
   load() {
-    return __webpack_require__.e(/* import() */ 9014).then(__webpack_require__.bind(__webpack_require__, 9014)).then(m => legacy(m.verilog));
+    return __webpack_require__.e(/* import() */ 6651).then(__webpack_require__.bind(__webpack_require__, 6651)).then(m => legacy(m.verilog));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Tcl",
   extensions: ["tcl"],
   load() {
-    return __webpack_require__.e(/* import() */ 8864).then(__webpack_require__.bind(__webpack_require__, 8864)).then(m => legacy(m.tcl));
+    return __webpack_require__.e(/* import() */ 4014).then(__webpack_require__.bind(__webpack_require__, 4014)).then(m => legacy(m.tcl));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Textile",
   extensions: ["textile"],
   load() {
-    return __webpack_require__.e(/* import() */ 3771).then(__webpack_require__.bind(__webpack_require__, 3771)).then(m => legacy(m.textile));
+    return __webpack_require__.e(/* import() */ 9792).then(__webpack_require__.bind(__webpack_require__, 9792)).then(m => legacy(m.textile));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "TiddlyWiki",
   load() {
-    return __webpack_require__.e(/* import() */ 5944).then(__webpack_require__.bind(__webpack_require__, 5944)).then(m => legacy(m.tiddlyWiki));
+    return __webpack_require__.e(/* import() */ 3881).then(__webpack_require__.bind(__webpack_require__, 3881)).then(m => legacy(m.tiddlyWiki));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Tiki wiki",
   load() {
-    return __webpack_require__.e(/* import() */ 4810).then(__webpack_require__.bind(__webpack_require__, 4810)).then(m => legacy(m.tiki));
+    return __webpack_require__.e(/* import() */ 9766).then(__webpack_require__.bind(__webpack_require__, 9766)).then(m => legacy(m.tiki));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "TOML",
   extensions: ["toml"],
   load() {
-    return __webpack_require__.e(/* import() */ 9627).then(__webpack_require__.bind(__webpack_require__, 9627)).then(m => legacy(m.toml));
+    return __webpack_require__.e(/* import() */ 7273).then(__webpack_require__.bind(__webpack_require__, 7273)).then(m => legacy(m.toml));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Troff",
   extensions: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
   load() {
-    return __webpack_require__.e(/* import() */ 4052).then(__webpack_require__.bind(__webpack_require__, 4052)).then(m => legacy(m.troff));
+    return __webpack_require__.e(/* import() */ 5590).then(__webpack_require__.bind(__webpack_require__, 5590)).then(m => legacy(m.troff));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "TTCN",
   extensions: ["ttcn", "ttcn3", "ttcnpp"],
   load() {
-    return __webpack_require__.e(/* import() */ 5604).then(__webpack_require__.bind(__webpack_require__, 5604)).then(m => legacy(m.ttcn));
+    return __webpack_require__.e(/* import() */ 6980).then(__webpack_require__.bind(__webpack_require__, 6980)).then(m => legacy(m.ttcn));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "TTCN_CFG",
   extensions: ["cfg"],
   load() {
-    return __webpack_require__.e(/* import() */ 2082).then(__webpack_require__.bind(__webpack_require__, 2082)).then(m => legacy(m.ttcnCfg));
+    return __webpack_require__.e(/* import() */ 8187).then(__webpack_require__.bind(__webpack_require__, 8187)).then(m => legacy(m.ttcnCfg));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Turtle",
   extensions: ["ttl"],
   load() {
-    return __webpack_require__.e(/* import() */ 5102).then(__webpack_require__.bind(__webpack_require__, 5102)).then(m => legacy(m.turtle));
+    return __webpack_require__.e(/* import() */ 6391).then(__webpack_require__.bind(__webpack_require__, 6391)).then(m => legacy(m.turtle));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Web IDL",
   extensions: ["webidl"],
   load() {
-    return __webpack_require__.e(/* import() */ 4470).then(__webpack_require__.bind(__webpack_require__, 4470)).then(m => legacy(m.webIDL));
+    return __webpack_require__.e(/* import() */ 7396).then(__webpack_require__.bind(__webpack_require__, 7396)).then(m => legacy(m.webIDL));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "VB.NET",
   extensions: ["vb"],
   load() {
-    return __webpack_require__.e(/* import() */ 2131).then(__webpack_require__.bind(__webpack_require__, 2131)).then(m => legacy(m.vb));
+    return __webpack_require__.e(/* import() */ 5949).then(__webpack_require__.bind(__webpack_require__, 5949)).then(m => legacy(m.vb));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "VBScript",
   extensions: ["vbs"],
   load() {
-    return __webpack_require__.e(/* import() */ 7330).then(__webpack_require__.bind(__webpack_require__, 7330)).then(m => legacy(m.vbScript));
+    return __webpack_require__.e(/* import() */ 1026).then(__webpack_require__.bind(__webpack_require__, 1026)).then(m => legacy(m.vbScript));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Velocity",
   extensions: ["vtl"],
   load() {
-    return __webpack_require__.e(/* import() */ 8317).then(__webpack_require__.bind(__webpack_require__, 8317)).then(m => legacy(m.velocity));
+    return __webpack_require__.e(/* import() */ 6530).then(__webpack_require__.bind(__webpack_require__, 6530)).then(m => legacy(m.velocity));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Verilog",
   extensions: ["v"],
   load() {
-    return __webpack_require__.e(/* import() */ 9014).then(__webpack_require__.bind(__webpack_require__, 9014)).then(m => legacy(m.verilog));
+    return __webpack_require__.e(/* import() */ 6651).then(__webpack_require__.bind(__webpack_require__, 6651)).then(m => legacy(m.verilog));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "VHDL",
   extensions: ["vhd", "vhdl"],
   load() {
-    return __webpack_require__.e(/* import() */ 7069).then(__webpack_require__.bind(__webpack_require__, 7069)).then(m => legacy(m.vhdl));
+    return __webpack_require__.e(/* import() */ 3859).then(__webpack_require__.bind(__webpack_require__, 3859)).then(m => legacy(m.vhdl));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "XQuery",
   extensions: ["xy", "xquery"],
   load() {
-    return __webpack_require__.e(/* import() */ 5723).then(__webpack_require__.bind(__webpack_require__, 5723)).then(m => legacy(m.xQuery));
+    return __webpack_require__.e(/* import() */ 9421).then(__webpack_require__.bind(__webpack_require__, 9421)).then(m => legacy(m.xQuery));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Yacas",
   extensions: ["ys"],
   load() {
-    return __webpack_require__.e(/* import() */ 6745).then(__webpack_require__.bind(__webpack_require__, 6745)).then(m => legacy(m.yacas));
+    return __webpack_require__.e(/* import() */ 3050).then(__webpack_require__.bind(__webpack_require__, 3050)).then(m => legacy(m.yacas));
   }
-}), language_dist/* LanguageDescription */.c6.of({
-  name: "YAML",
-  alias: ["yml"],
-  extensions: ["yaml", "yml"],
-  load() {
-    return __webpack_require__.e(/* import() */ 5297).then(__webpack_require__.bind(__webpack_require__, 5297)).then(m => legacy(m.yaml));
-  }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Z80",
   extensions: ["z80"],
   load() {
-    return __webpack_require__.e(/* import() */ 2512).then(__webpack_require__.bind(__webpack_require__, 2512)).then(m => legacy(m.z80));
+    return __webpack_require__.e(/* import() */ 2367).then(__webpack_require__.bind(__webpack_require__, 2367)).then(m => legacy(m.z80));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "MscGen",
   extensions: ["mscgen", "mscin", "msc"],
   load() {
-    return __webpack_require__.e(/* import() */ 457).then(__webpack_require__.bind(__webpack_require__, 457)).then(m => legacy(m.mscgen));
+    return __webpack_require__.e(/* import() */ 6188).then(__webpack_require__.bind(__webpack_require__, 6188)).then(m => legacy(m.mscgen));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Xù",
   extensions: ["xu"],
   load() {
-    return __webpack_require__.e(/* import() */ 457).then(__webpack_require__.bind(__webpack_require__, 457)).then(m => legacy(m.xu));
+    return __webpack_require__.e(/* import() */ 6188).then(__webpack_require__.bind(__webpack_require__, 6188)).then(m => legacy(m.xu));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "MsGenny",
   extensions: ["msgenny"],
   load() {
-    return __webpack_require__.e(/* import() */ 457).then(__webpack_require__.bind(__webpack_require__, 457)).then(m => legacy(m.msgenny));
+    return __webpack_require__.e(/* import() */ 6188).then(__webpack_require__.bind(__webpack_require__, 6188)).then(m => legacy(m.msgenny));
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Vue",
   extensions: ["vue"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(4033), __webpack_require__.e(3341), __webpack_require__.e(8823), __webpack_require__.e(7802)]).then(__webpack_require__.bind(__webpack_require__, 7802)).then(m => m.vue());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464), __webpack_require__.e(6839)]).then(__webpack_require__.bind(__webpack_require__, 6839)).then(m => m.vue());
   }
-}), language_dist/* LanguageDescription */.c6.of({
+}), language_dist/* LanguageDescription */.t$.of({
   name: "Angular Template",
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(4801), __webpack_require__.e(4033), __webpack_require__.e(3341), __webpack_require__.e(8823), __webpack_require__.e(4217)]).then(__webpack_require__.bind(__webpack_require__, 4217)).then(m => m.angular());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464), __webpack_require__.e(8245)]).then(__webpack_require__.bind(__webpack_require__, 8245)).then(m => m.angular());
   }
 })];
 
 // EXTERNAL MODULE: ./node_modules/@codemirror/lang-json/dist/index.js + 1 modules
-var lang_json_dist = __webpack_require__(5782);
+var lang_json_dist = __webpack_require__(2866);
 ;// CONCATENATED MODULE: ./src/js/utilities/view.js
 
 
@@ -34235,10 +34277,10 @@ function _injectCodeMirrorStep1(editors) {
     const showBorder = textarea.attr('data-show-border') || 'true';
     const showGutter = textarea.attr('data-show-gutter') || 'true';
     const rounded = textarea.attr('data-rounded') || 'true';
-    const editorLang = new state_dist/* Compartment */.F6();
-    const extensions = [state_dist/* EditorState */.yy.tabSize.of(0x00000000000000004), dist/* EditorView */.tk.editable.of(readOnly !== 'true'), dist/* highlightSpecialChars */.AE(), dist/* keymap */.$f.of([...defaultKeymap, ...historyKeymap]), dist_history(), editorLang.of(dynamicLang), language_dist/* syntaxHighlighting */.nF(language_dist/* defaultHighlightStyle */.R_, {
+    const editorLang = new state_dist/* Compartment */.xx();
+    const extensions = [state_dist/* EditorState */.$t.tabSize.of(0x00000000000000004), dist/* EditorView */.Lz.editable.of(readOnly !== 'true'), dist/* highlightSpecialChars */.N$(), dist/* keymap */.w4.of([...defaultKeymap, ...historyKeymap]), dist_history(), editorLang.of(dynamicLang), language_dist/* syntaxHighlighting */.y9(language_dist/* defaultHighlightStyle */.Zt, {
       fallback: true
-    }), dist/* EditorView */.tk.theme({
+    }), dist/* EditorView */.Lz.theme({
       '&.cm-editor': {
         'fontSize': '13px'
       },
@@ -34246,7 +34288,7 @@ function _injectCodeMirrorStep1(editors) {
         'border-top-left-radius': rounded === 'true' ? '0.25rem' : '0',
         'border-bottom-left-radius': rounded === 'true' ? '0.25rem' : '0'
       }
-    }), dist/* EditorView */.tk.updateListener.of(update => {
+    }), dist/* EditorView */.Lz.updateListener.of(update => {
       if (textarea[0].value !== update.state.doc.toString()) {
         textarea[0].value = update.state.doc.toString();
         textarea.trigger('change');
@@ -34259,17 +34301,17 @@ function _injectCodeMirrorStep1(editors) {
       div.addClass('rounded');
     }
     if (showGutter === 'true') {
-      extensions.push(dist/* lineNumbers */.Eu());
-      extensions.push(language_dist/* foldGutter */.mi());
+      extensions.push(dist/* lineNumbers */.$K());
+      extensions.push(language_dist/* foldGutter */.Lv());
     }
     if (wordWrap === 'true') {
-      extensions.push(dist/* EditorView */.tk.lineWrapping);
+      extensions.push(dist/* EditorView */.Lz.lineWrapping);
     }
-    const editorState = state_dist/* EditorState */.yy.create({
+    const editorState = state_dist/* EditorState */.$t.create({
       extensions: extensions,
       doc: textarea.val()
     });
-    const editorView = new dist/* EditorView */.tk({
+    const editorView = new dist/* EditorView */.Lz({
       state: editorState,
       parent: div[0]
     });
@@ -34283,7 +34325,7 @@ function _injectCodeMirrorStep1(editors) {
       'style': textarea.attr('style')
     });
     div.insertAfter(textarea).promise().done(() => {
-      const descr = language_dist/* LanguageDescription */.c6.matchLanguageName(languages, textarea.attr('data-lang') || 'json');
+      const descr = language_dist/* LanguageDescription */.t$.matchLanguageName(languages, textarea.attr('data-lang') || 'json');
       if (descr) {
         descr.load().then(dynamicLang => {
           _injectCodeMirrorStep2(div, textarea, dynamicLang);
@@ -34452,7 +34494,7 @@ function formatTWIG(twig, dict, twigs) {
     dict['WEBAPP_URL'] = js_AMIRouter.getWebAppURL();
     dict['BOOTSTRAP_VERSION'] = js_AMIWebApp.bootstrapVersion;
     Object.assign(dict, window.ami.awf.globalTwigDict);
-    return ami_twig/* default */.Z.engine.render(twig, dict, twigs);
+    return ami_twig/* default */.A.engine.render(twig, dict, twigs);
   };
   asArray(dict).forEach(DICT => {
     try {
@@ -35143,9 +35185,9 @@ const certificate_green_namespaceObject = __webpack_require__.p + "assets/images
 ;// CONCATENATED MODULE: ./src/images/certificate-pink.png
 const certificate_pink_namespaceObject = __webpack_require__.p + "assets/images/certificate-pink.png";
 // EXTERNAL MODULE: ./node_modules/qrcode/lib/browser.js
-var browser = __webpack_require__(379);
+var browser = __webpack_require__(6877);
 // EXTERNAL MODULE: ./node_modules/clipboard/dist/clipboard.js
-var clipboard = __webpack_require__(6920);
+var clipboard = __webpack_require__(5530);
 var clipboard_default = /*#__PURE__*/__webpack_require__.n(clipboard);
 ;// CONCATENATED MODULE: ./src/js/AMIAuth.js
 
@@ -35886,7 +35928,7 @@ function loadSubAppByURL(defaultSubApp, defaultUserData) {
           const editorLang = this.data('editorLang');
           const editorView = this.data('editorView');
           if (editorLang && editorView) {
-            const descr = language_dist/* LanguageDescription */.c6.matchLanguageName(languages, this.attr('data-lang') || 'json');
+            const descr = language_dist/* LanguageDescription */.t$.matchLanguageName(languages, this.attr('data-lang') || 'json');
             if (descr) {
               descr.load().then(dynamicLang => {
                 editorView.dispatch(editorView.state.update({
@@ -36214,8 +36256,8 @@ class AMIWebApp {
       cache: true
     }).done(resources => {
       window.JSPath = (jspath_default());
-      __webpack_require__(7371);
-      __webpack_require__(3340)(window.moment);
+      __webpack_require__(850);
+      __webpack_require__(6693)(window.moment);
       this.#globalDeferred.resolve(resources);
     }).fail(message => {
       this.#globalDeferred.reject(message);
