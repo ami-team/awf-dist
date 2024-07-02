@@ -38594,7 +38594,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, defaultSubApp, hash, cache)",
+        "desc": "dictionary of optional parameters (context, hash, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
@@ -38624,7 +38624,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, defaultSubApp, hash, cache)",
+        "desc": "dictionary of optional parameters (context, hash, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
