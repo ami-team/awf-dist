@@ -28771,7 +28771,7 @@ class AMIHTTPClient {
   version = '{{VERSION}}';
   #endpoint = '';
   #converter = 'AMIXmlToJson.xsl';
-  #paramRegExp = new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\s*=\\s*\\?', 'g');
+  #paramRegExp = new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g');
   #errorMessage = 'resource temporarily unreachable';
   constructor(endpoint) {
     this.#endpoint = endpoint;
@@ -28944,15 +28944,15 @@ class AMIHTTPClient {
           bookmarkInfo[hash] = bookmark;
         });
         jspath_default().apply('..rowset{.@type==="dashboard"}.row', response.data).forEach(row => {
-          let hash = '';
+          let name = '';
           const dashboard = {};
           row.field.forEach(field => {
             dashboard[field['@name']] = field['$'];
-            if (field['@name'] === 'hash') {
-              hash = field['$'];
+            if (field['@name'] === 'name') {
+              name = field['$'];
             }
           });
-          dashboardInfo[hash] = dashboard;
+          dashboardInfo[name] = dashboard;
         });
         resolve({
           data: response.data,
