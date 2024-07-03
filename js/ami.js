@@ -21394,6 +21394,7 @@ class EditContextManager {
         if (pending.from == fromA && pending.to == toA && pending.insert.eq(insert)) {
           pending = this.pendingContextChange = null;
           off += dLen;
+          this.to += dLen;
           return;
         } else {
           pending = null;
