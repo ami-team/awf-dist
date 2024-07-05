@@ -36762,7 +36762,7 @@ class AMIWebApp {
               CONTACT_EMAIL: contactEmail,
               ABOUT_URL: aboutURL
             };
-            const themeURL = (js_AMIRouter.getWebAppArgs()['subapp'] || '').toLowerCase() === 'userdashboard' ? dashboardThemeURL : defaultThemeURL;
+            const themeURL = (js_AMIRouter.getWebAppArgs()['subapp'] || '').toLowerCase() === 'userdashboard' || js_AMIRouter.getWebAppArgs()['u'] ? dashboardThemeURL : defaultThemeURL;
             $.ajax({
               url: themeURL,
               cache: true,
