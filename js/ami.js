@@ -18217,6 +18217,359 @@ function skipAtoms(view, oldPos, pos) {
   let newPos = skipAtomicRanges(view.state.facet(atomicRanges).map(f => f(view)), pos.from, oldPos.head > pos.from ? -1 : 1);
   return newPos == pos.from ? pos : state_dist/* EditorSelection */.OF.cursor(newPos, newPos < pos.from ? 1 : -1);
 }
+const LineBreakPlaceholder = "\uffff";
+class DOMReader {
+  constructor(points, state) {
+    this.points = points;
+    this.text = "";
+    this.lineSeparator = state.facet(state_dist/* EditorState */.$t.lineSeparator);
+  }
+  append(text) {
+    this.text += text;
+  }
+  lineBreak() {
+    this.text += LineBreakPlaceholder;
+  }
+  readRange(start, end) {
+    if (!start) return this;
+    let parent = start.parentNode;
+    for (let cur = start;;) {
+      this.findPointBefore(parent, cur);
+      let oldLen = this.text.length;
+      this.readNode(cur);
+      let next = cur.nextSibling;
+      if (next == end) break;
+      let view = ContentView.get(cur),
+        nextView = ContentView.get(next);
+      if (view && nextView ? view.breakAfter : (view ? view.breakAfter : isBlockElement(cur)) || isBlockElement(next) && (cur.nodeName != "BR" || cur.cmIgnore) && this.text.length > oldLen) this.lineBreak();
+      cur = next;
+    }
+    this.findPointBefore(parent, end);
+    return this;
+  }
+  readTextNode(node) {
+    let text = node.nodeValue;
+    for (var _iterator20 = _createForOfIteratorHelperLoose(this.points), _step20; !(_step20 = _iterator20()).done;) {
+      let point = _step20.value;
+      if (point.node == node) point.pos = this.text.length + Math.min(point.offset, text.length);
+    }
+    for (let off = 0, re = this.lineSeparator ? null : /\r\n?|\n/g;;) {
+      let nextBreak = -1,
+        breakSize = 1,
+        m;
+      if (this.lineSeparator) {
+        nextBreak = text.indexOf(this.lineSeparator, off);
+        breakSize = this.lineSeparator.length;
+      } else if (m = re.exec(text)) {
+        nextBreak = m.index;
+        breakSize = m[0].length;
+      }
+      this.append(text.slice(off, nextBreak < 0 ? text.length : nextBreak));
+      if (nextBreak < 0) break;
+      this.lineBreak();
+      if (breakSize > 1) {
+        for (var _iterator21 = _createForOfIteratorHelperLoose(this.points), _step21; !(_step21 = _iterator21()).done;) {
+          let point = _step21.value;
+          if (point.node == node && point.pos > this.text.length) point.pos -= breakSize - 1;
+        }
+      }
+      off = nextBreak + breakSize;
+    }
+  }
+  readNode(node) {
+    if (node.cmIgnore) return;
+    let view = ContentView.get(node);
+    let fromView = view && view.overrideDOMText;
+    if (fromView != null) {
+      this.findPointInside(node, fromView.length);
+      for (let i = fromView.iter(); !i.next().done;) {
+        if (i.lineBreak) this.lineBreak();else this.append(i.value);
+      }
+    } else if (node.nodeType == 3) {
+      this.readTextNode(node);
+    } else if (node.nodeName == "BR") {
+      if (node.nextSibling) this.lineBreak();
+    } else if (node.nodeType == 1) {
+      this.readRange(node.firstChild, null);
+    }
+  }
+  findPointBefore(node, next) {
+    for (var _iterator22 = _createForOfIteratorHelperLoose(this.points), _step22; !(_step22 = _iterator22()).done;) {
+      let point = _step22.value;
+      if (point.node == node && node.childNodes[point.offset] == next) point.pos = this.text.length;
+    }
+  }
+  findPointInside(node, length) {
+    for (var _iterator23 = _createForOfIteratorHelperLoose(this.points), _step23; !(_step23 = _iterator23()).done;) {
+      let point = _step23.value;
+      if (node.nodeType == 3 ? point.node == node : node.contains(point.node)) point.pos = this.text.length + (isAtEnd(node, point.node, point.offset) ? length : 0);
+    }
+  }
+}
+function isAtEnd(parent, node, offset) {
+  for (;;) {
+    if (!node || offset < maxOffset(node)) return false;
+    if (node == parent) return true;
+    offset = domIndex(node) + 1;
+    node = node.parentNode;
+  }
+}
+class DOMPoint {
+  constructor(node, offset) {
+    this.node = node;
+    this.offset = offset;
+    this.pos = -1;
+  }
+}
+class DOMChange {
+  constructor(view, start, end, typeOver) {
+    this.typeOver = typeOver;
+    this.bounds = null;
+    this.text = "";
+    this.domChanged = start > -1;
+    let {
+      impreciseHead: iHead,
+      impreciseAnchor: iAnchor
+    } = view.docView;
+    if (view.state.readOnly && start > -1) {
+      this.newSel = null;
+    } else if (start > -1 && (this.bounds = view.docView.domBoundsAround(start, end, 0))) {
+      let selPoints = iHead || iAnchor ? [] : selectionPoints(view);
+      let reader = new DOMReader(selPoints, view.state);
+      reader.readRange(this.bounds.startDOM, this.bounds.endDOM);
+      this.text = reader.text;
+      this.newSel = selectionFromPoints(selPoints, this.bounds.from);
+    } else {
+      let domSel = view.observer.selectionRange;
+      let head = iHead && iHead.node == domSel.focusNode && iHead.offset == domSel.focusOffset || !contains(view.contentDOM, domSel.focusNode) ? view.state.selection.main.head : view.docView.posFromDOM(domSel.focusNode, domSel.focusOffset);
+      let anchor = iAnchor && iAnchor.node == domSel.anchorNode && iAnchor.offset == domSel.anchorOffset || !contains(view.contentDOM, domSel.anchorNode) ? view.state.selection.main.anchor : view.docView.posFromDOM(domSel.anchorNode, domSel.anchorOffset);
+      let vp = view.viewport;
+      if ((browser.ios || browser.chrome) && view.state.selection.main.empty && head != anchor && (vp.from > 0 || vp.to < view.state.doc.length)) {
+        let from = Math.min(head, anchor),
+          to = Math.max(head, anchor);
+        let offFrom = vp.from - from,
+          offTo = vp.to - to;
+        if ((offFrom == 0 || offFrom == 1 || from == 0) && (offTo == 0 || offTo == -1 || to == view.state.doc.length)) {
+          head = 0;
+          anchor = view.state.doc.length;
+        }
+      }
+      this.newSel = state_dist/* EditorSelection */.OF.single(anchor, head);
+    }
+  }
+}
+function applyDOMChange(view, domChange) {
+  let change;
+  let {
+      newSel
+    } = domChange,
+    sel = view.state.selection.main;
+  let lastKey = view.inputState.lastKeyTime > Date.now() - 100 ? view.inputState.lastKeyCode : -1;
+  if (domChange.bounds) {
+    let {
+      from,
+      to
+    } = domChange.bounds;
+    let preferredPos = sel.from,
+      preferredSide = null;
+    if (lastKey === 8 || browser.android && domChange.text.length < to - from) {
+      preferredPos = sel.to;
+      preferredSide = "end";
+    }
+    let diff = findDiff(view.state.doc.sliceString(from, to, LineBreakPlaceholder), domChange.text, preferredPos - from, preferredSide);
+    if (diff) {
+      if (browser.chrome && lastKey == 13 && diff.toB == diff.from + 2 && domChange.text.slice(diff.from, diff.toB) == LineBreakPlaceholder + LineBreakPlaceholder) diff.toB--;
+      change = {
+        from: from + diff.from,
+        to: from + diff.toA,
+        insert: state_dist/* Text */.EY.of(domChange.text.slice(diff.from, diff.toB).split(LineBreakPlaceholder))
+      };
+    }
+  } else if (newSel && (!view.hasFocus && view.state.facet(editable) || newSel.main.eq(sel))) {
+    newSel = null;
+  }
+  if (!change && !newSel) return false;
+  if (!change && domChange.typeOver && !sel.empty && newSel && newSel.main.empty) {
+    change = {
+      from: sel.from,
+      to: sel.to,
+      insert: view.state.doc.slice(sel.from, sel.to)
+    };
+  } else if (change && change.from >= sel.from && change.to <= sel.to && (change.from != sel.from || change.to != sel.to) && sel.to - sel.from - (change.to - change.from) <= 4) {
+    change = {
+      from: sel.from,
+      to: sel.to,
+      insert: view.state.doc.slice(sel.from, change.from).append(change.insert).append(view.state.doc.slice(change.to, sel.to))
+    };
+  } else if ((browser.mac || browser.android) && change && change.from == change.to && change.from == sel.head - 1 && /^\. ?$/.test(change.insert.toString()) && view.contentDOM.getAttribute("autocorrect") == "off") {
+    if (newSel && change.insert.length == 2) newSel = state_dist/* EditorSelection */.OF.single(newSel.main.anchor - 1, newSel.main.head - 1);
+    change = {
+      from: sel.from,
+      to: sel.to,
+      insert: state_dist/* Text */.EY.of([" "])
+    };
+  } else if (browser.chrome && change && change.from == change.to && change.from == sel.head && change.insert.toString() == "\n " && view.lineWrapping) {
+    if (newSel) newSel = state_dist/* EditorSelection */.OF.single(newSel.main.anchor - 1, newSel.main.head - 1);
+    change = {
+      from: sel.from,
+      to: sel.to,
+      insert: state_dist/* Text */.EY.of([" "])
+    };
+  }
+  if (change) {
+    return applyDOMChangeInner(view, change, newSel, lastKey);
+  } else if (newSel && !newSel.main.eq(sel)) {
+    let scrollIntoView = false,
+      userEvent = "select";
+    if (view.inputState.lastSelectionTime > Date.now() - 50) {
+      if (view.inputState.lastSelectionOrigin == "select") scrollIntoView = true;
+      userEvent = view.inputState.lastSelectionOrigin;
+    }
+    view.dispatch({
+      selection: newSel,
+      scrollIntoView,
+      userEvent
+    });
+    return true;
+  } else {
+    return false;
+  }
+}
+function applyDOMChangeInner(view, change, newSel, lastKey) {
+  if (lastKey === void 0) {
+    lastKey = -1;
+  }
+  if (browser.ios && view.inputState.flushIOSKey(change)) return true;
+  let sel = view.state.selection.main;
+  if (browser.android && (change.to == sel.to && (change.from == sel.from || change.from == sel.from - 1 && view.state.sliceDoc(change.from, sel.from) == " ") && change.insert.length == 1 && change.insert.lines == 2 && dispatchKey(view.contentDOM, "Enter", 13) || (change.from == sel.from - 1 && change.to == sel.to && change.insert.length == 0 || lastKey == 8 && change.insert.length < change.to - change.from && change.to > sel.head) && dispatchKey(view.contentDOM, "Backspace", 8) || change.from == sel.from && change.to == sel.to + 1 && change.insert.length == 0 && dispatchKey(view.contentDOM, "Delete", 46))) return true;
+  let text = change.insert.toString();
+  if (view.inputState.composing >= 0) view.inputState.composing++;
+  let defaultTr;
+  let defaultInsert = () => defaultTr || (defaultTr = applyDefaultInsert(view, change, newSel));
+  if (!view.state.facet(inputHandler).some(h => h(view, change.from, change.to, text, defaultInsert))) view.dispatch(defaultInsert());
+  return true;
+}
+function applyDefaultInsert(view, change, newSel) {
+  let tr,
+    startState = view.state,
+    sel = startState.selection.main;
+  if (change.from >= sel.from && change.to <= sel.to && change.to - change.from >= (sel.to - sel.from) / 3 && (!newSel || newSel.main.empty && newSel.main.from == change.from + change.insert.length) && view.inputState.composing < 0) {
+    let before = sel.from < change.from ? startState.sliceDoc(sel.from, change.from) : "";
+    let after = sel.to > change.to ? startState.sliceDoc(change.to, sel.to) : "";
+    tr = startState.replaceSelection(view.state.toText(before + change.insert.sliceString(0, undefined, view.state.lineBreak) + after));
+  } else {
+    let changes = startState.changes(change);
+    let mainSel = newSel && newSel.main.to <= changes.newLength ? newSel.main : undefined;
+    if (startState.selection.ranges.length > 1 && view.inputState.composing >= 0 && change.to <= sel.to && change.to >= sel.to - 10) {
+      let replaced = view.state.sliceDoc(change.from, change.to);
+      let compositionRange,
+        composition = newSel && findCompositionNode(view, newSel.main.head);
+      if (composition) {
+        let dLen = change.insert.length - (change.to - change.from);
+        compositionRange = {
+          from: composition.from,
+          to: composition.to - dLen
+        };
+      } else {
+        compositionRange = view.state.doc.lineAt(sel.head);
+      }
+      let offset = sel.to - change.to,
+        size = sel.to - sel.from;
+      tr = startState.changeByRange(range => {
+        if (range.from == sel.from && range.to == sel.to) return {
+          changes,
+          range: mainSel || range.map(changes)
+        };
+        let to = range.to - offset,
+          from = to - replaced.length;
+        if (range.to - range.from != size || view.state.sliceDoc(from, to) != replaced || range.to >= compositionRange.from && range.from <= compositionRange.to) return {
+          range
+        };
+        let rangeChanges = startState.changes({
+            from,
+            to,
+            insert: change.insert
+          }),
+          selOff = range.to - sel.to;
+        return {
+          changes: rangeChanges,
+          range: !mainSel ? range.map(rangeChanges) : state_dist/* EditorSelection */.OF.range(Math.max(0, mainSel.anchor + selOff), Math.max(0, mainSel.head + selOff))
+        };
+      });
+    } else {
+      tr = {
+        changes,
+        selection: mainSel && startState.selection.replaceRange(mainSel)
+      };
+    }
+  }
+  let userEvent = "input.type";
+  if (view.composing || view.inputState.compositionPendingChange && view.inputState.compositionEndedAt > Date.now() - 50) {
+    view.inputState.compositionPendingChange = false;
+    userEvent += ".compose";
+    if (view.inputState.compositionFirstChange) {
+      userEvent += ".start";
+      view.inputState.compositionFirstChange = false;
+    }
+  }
+  return startState.update(tr, {
+    userEvent,
+    scrollIntoView: true
+  });
+}
+function findDiff(a, b, preferredPos, preferredSide) {
+  let minLen = Math.min(a.length, b.length);
+  let from = 0;
+  while (from < minLen && a.charCodeAt(from) == b.charCodeAt(from)) from++;
+  if (from == minLen && a.length == b.length) return null;
+  let toA = a.length,
+    toB = b.length;
+  while (toA > 0 && toB > 0 && a.charCodeAt(toA - 1) == b.charCodeAt(toB - 1)) {
+    toA--;
+    toB--;
+  }
+  if (preferredSide == "end") {
+    let adjust = Math.max(0, from - Math.min(toA, toB));
+    preferredPos -= toA + adjust - from;
+  }
+  if (toA < from && a.length < b.length) {
+    let move = preferredPos <= from && preferredPos >= toA ? from - preferredPos : 0;
+    from -= move;
+    toB = from + (toB - toA);
+    toA = from;
+  } else if (toB < from) {
+    let move = preferredPos <= from && preferredPos >= toB ? from - preferredPos : 0;
+    from -= move;
+    toA = from + (toA - toB);
+    toB = from;
+  }
+  return {
+    from,
+    toA,
+    toB
+  };
+}
+function selectionPoints(view) {
+  let result = [];
+  if (view.root.activeElement != view.contentDOM) return result;
+  let {
+    anchorNode,
+    anchorOffset,
+    focusNode,
+    focusOffset
+  } = view.observer.selectionRange;
+  if (anchorNode) {
+    result.push(new DOMPoint(anchorNode, anchorOffset));
+    if (focusNode != anchorNode || focusOffset != anchorOffset) result.push(new DOMPoint(focusNode, focusOffset));
+  }
+  return result;
+}
+function selectionFromPoints(points, base) {
+  if (points.length == 0) return null;
+  let anchor = points[0].pos,
+    head = points.length == 2 ? points[1].pos : anchor;
+  return anchor > -1 && head > -1 ? state_dist/* EditorSelection */.OF.single(anchor + base, head + base) : null;
+}
 class InputState {
   setSelectionOrigin(origin) {
     this.lastSelectionOrigin = origin;
@@ -18257,12 +18610,12 @@ class InputState {
   runHandlers(type, event) {
     let handlers = this.handlers[type];
     if (handlers) {
-      for (var _iterator20 = _createForOfIteratorHelperLoose(handlers.observers), _step20; !(_step20 = _iterator20()).done;) {
-        let observer = _step20.value;
+      for (var _iterator24 = _createForOfIteratorHelperLoose(handlers.observers), _step24; !(_step24 = _iterator24()).done;) {
+        let observer = _step24.value;
         observer(this.view, event);
       }
-      for (var _iterator21 = _createForOfIteratorHelperLoose(handlers.handlers), _step21; !(_step21 = _iterator21()).done;) {
-        let handler = _step21.value;
+      for (var _iterator25 = _createForOfIteratorHelperLoose(handlers.handlers), _step25; !(_step25 = _iterator25()).done;) {
+        let handler = _step25.value;
         if (event.defaultPrevented) break;
         if (handler(this.view, event)) {
           event.preventDefault();
@@ -18354,8 +18707,8 @@ function computeHandlers(plugins) {
       handlers: []
     });
   }
-  for (var _iterator22 = _createForOfIteratorHelperLoose(plugins), _step22; !(_step22 = _iterator22()).done;) {
-    let plugin = _step22.value;
+  for (var _iterator26 = _createForOfIteratorHelperLoose(plugins), _step26; !(_step26 = _iterator26()).done;) {
+    let plugin = _step26.value;
     let spec = plugin.spec;
     if (spec && spec.domEventHandlers) for (let type in spec.domEventHandlers) {
       let f = spec.domEventHandlers[type];
@@ -18627,8 +18980,8 @@ handlers.mousedown = (view, event) => {
   view.observer.flush();
   if (view.inputState.lastTouchTime > Date.now() - 2000) return false;
   let style = null;
-  for (var _iterator23 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step23; !(_step23 = _iterator23()).done;) {
-    let makeStyle = _step23.value;
+  for (var _iterator27 = _createForOfIteratorHelperLoose(view.state.facet(mouseSelectionStyle)), _step27; !(_step27 = _iterator27()).done;) {
+    let makeStyle = _step27.value;
     style = makeStyle(view, event);
     if (style) break;
   }
@@ -18850,8 +19203,8 @@ function copiedRange(state) {
   let content = [],
     ranges = [],
     linewise = false;
-  for (var _iterator24 = _createForOfIteratorHelperLoose(state.selection.ranges), _step24; !(_step24 = _iterator24()).done;) {
-    let range = _step24.value;
+  for (var _iterator28 = _createForOfIteratorHelperLoose(state.selection.ranges), _step28; !(_step28 = _iterator28()).done;) {
+    let range = _step28.value;
     if (!range.empty) {
       content.push(state.sliceDoc(range.from, range.to));
       ranges.push(range);
@@ -18859,10 +19212,10 @@ function copiedRange(state) {
   }
   if (!content.length) {
     let upto = -1;
-    for (var _iterator25 = _createForOfIteratorHelperLoose(state.selection.ranges), _step25; !(_step25 = _iterator25()).done;) {
+    for (var _iterator29 = _createForOfIteratorHelperLoose(state.selection.ranges), _step29; !(_step29 = _iterator29()).done;) {
       let {
         from
-      } = _step25.value;
+      } = _step29.value;
       let line = state.doc.lineAt(from);
       if (line.number > upto) {
         content.push(line.text);
@@ -18908,8 +19261,8 @@ handlers.copy = handlers.cut = (view, event) => {
 const isFocusChange = state_dist/* Annotation */.YH.define();
 function focusChangeTransaction(state, focus) {
   let effects = [];
-  for (var _iterator26 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step26; !(_step26 = _iterator26()).done;) {
-    let getEffect = _step26.value;
+  for (var _iterator30 = _createForOfIteratorHelperLoose(state.facet(focusChangeEffect)), _step30; !(_step30 = _iterator30()).done;) {
+    let getEffect = _step30.value;
     let effect = getEffect(state, focus);
     if (effect) effects.push(effect);
   }
@@ -18967,12 +19320,27 @@ observers.contextmenu = view => {
   view.inputState.lastContextMenu = Date.now();
 };
 handlers.beforeinput = (view, event) => {
-  var _a;
+  var _a, _b;
+  if (event.inputType == "insertReplacementText" && view.observer.editContext) {
+    let text = (_a = event.dataTransfer) === null || _a === void 0 ? void 0 : _a.getData("text/plain"),
+      ranges = event.getTargetRanges();
+    if (text && ranges.length) {
+      let r = ranges[0];
+      let from = view.posAtDOM(r.startContainer, r.startOffset),
+        to = view.posAtDOM(r.endContainer, r.endOffset);
+      applyDOMChangeInner(view, {
+        from,
+        to,
+        insert: view.state.toText(text)
+      }, null);
+      return true;
+    }
+  }
   let pending;
   if (browser.chrome && browser.android && (pending = PendingKeys.find(key => key.inputType == event.inputType))) {
     view.observer.delayAndroidKey(pending.key, pending.keyCode);
     if (pending.key == "Backspace" || pending.key == "Delete") {
-      let startViewHeight = ((_a = window.visualViewport) === null || _a === void 0 ? void 0 : _a.height) || 0;
+      let startViewHeight = ((_b = window.visualViewport) === null || _b === void 0 ? void 0 : _b.height) || 0;
       setTimeout(() => {
         var _a;
         if ((((_a = window.visualViewport) === null || _a === void 0 ? void 0 : _a.height) || 0) > startViewHeight + 10 && view.hasFocus) {
@@ -19460,8 +19828,8 @@ class HeightMapBranch extends HeightMap {
     let result = [];
     if (from > 0) this.decomposeLeft(from, result);
     let left = result.length;
-    for (var _iterator27 = _createForOfIteratorHelperLoose(nodes), _step27; !(_step27 = _iterator27()).done;) {
-      let node = _step27.value;
+    for (var _iterator31 = _createForOfIteratorHelperLoose(nodes), _step31; !(_step31 = _iterator31()).done;) {
+      let node = _step31.value;
       result.push(node);
     }
     if (from > 0) mergeGaps(result, left - 1);
@@ -19620,8 +19988,8 @@ class NodeBuilder {
     let last = this.nodes.length == 0 ? null : this.nodes[this.nodes.length - 1];
     if (this.lineStart > -1 && !(last instanceof HeightMapText) && !this.isCovered) this.nodes.push(new HeightMapText(0, -1));else if (this.writtenTo < this.pos || last == null) this.nodes.push(this.blankContent(this.writtenTo, this.pos));
     let pos = from;
-    for (var _iterator28 = _createForOfIteratorHelperLoose(this.nodes), _step28; !(_step28 = _iterator28()).done;) {
-      let node = _step28.value;
+    for (var _iterator32 = _createForOfIteratorHelperLoose(this.nodes), _step32; !(_step32 = _iterator32()).done;) {
+      let node = _step32.value;
       if (node instanceof HeightMapText) node.updateHeight(this.oracle, pos);
       pos += node ? node.length : 1;
     }
@@ -19919,8 +20287,8 @@ class ViewState {
       }
       if (dTop > 0 && dBottom > 0) bias = Math.max(dTop, dBottom);else if (dTop < 0 && dBottom < 0) bias = Math.min(dTop, dBottom);
       clearHeightChangeFlag();
-      for (var _iterator29 = _createForOfIteratorHelperLoose(this.viewports), _step29; !(_step29 = _iterator29()).done;) {
-        let vp = _step29.value;
+      for (var _iterator33 = _createForOfIteratorHelperLoose(this.viewports), _step33; !(_step33 = _iterator33()).done;) {
+        let vp = _step33.value;
         let heights = vp.from == this.viewport.from ? lineHeights : view.docView.measureVisibleLineHeights(vp);
         this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.EY.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
       }
@@ -19999,8 +20367,8 @@ class ViewState {
   mapLineGaps(gaps, changes) {
     if (!gaps.length || changes.empty) return gaps;
     let mapped = [];
-    for (var _iterator30 = _createForOfIteratorHelperLoose(gaps), _step30; !(_step30 = _iterator30()).done;) {
-      let gap = _step30.value;
+    for (var _iterator34 = _createForOfIteratorHelperLoose(gaps), _step34; !(_step34 = _iterator34()).done;) {
+      let gap = _step34.value;
       if (!changes.touchesRange(gap.from, gap.to)) mapped.push(new LineGap(changes.mapPos(gap.from), changes.mapPos(gap.to), gap.size));
     }
     return mapped;
@@ -20074,8 +20442,8 @@ class ViewState {
       if (viewFrom > line.from) addGap(line.from, viewFrom, line, structure);
       if (viewTo < line.to) addGap(viewTo, line.to, line, structure);
     };
-    for (var _iterator31 = _createForOfIteratorHelperLoose(this.viewportLines), _step31; !(_step31 = _iterator31()).done;) {
-      let line = _step31.value;
+    for (var _iterator35 = _createForOfIteratorHelperLoose(this.viewportLines), _step35; !(_step35 = _iterator35()).done;) {
+      let line = _step35.value;
       if (Array.isArray(line.type)) line.type.forEach(checkLine);else checkLine(line);
     }
     return gaps;
@@ -20186,11 +20554,11 @@ function findPosition(_ref4, ratio) {
 }
 function findFraction(structure, pos) {
   let counted = 0;
-  for (var _iterator32 = _createForOfIteratorHelperLoose(structure.ranges), _step32; !(_step32 = _iterator32()).done;) {
+  for (var _iterator36 = _createForOfIteratorHelperLoose(structure.ranges), _step36; !(_step36 = _iterator36()).done;) {
     let {
       from,
       to
-    } = _step32.value;
+    } = _step36.value;
     if (pos <= to) {
       counted += pos - from;
       break;
@@ -20200,8 +20568,8 @@ function findFraction(structure, pos) {
   return counted / structure.total;
 }
 function find(array, f) {
-  for (var _iterator33 = _createForOfIteratorHelperLoose(array), _step33; !(_step33 = _iterator33()).done;) {
-    let val = _step33.value;
+  for (var _iterator37 = _createForOfIteratorHelperLoose(array), _step37; !(_step37 = _iterator37()).done;) {
+    let val = _step37.value;
     if (f(val)) return val;
   }
   return undefined;
@@ -20241,8 +20609,8 @@ class BigScaler {
       };
     });
     this.scale = (7000000 - vpHeight) / (heightMap.height - vpHeight);
-    for (var _iterator34 = _createForOfIteratorHelperLoose(this.viewports), _step34; !(_step34 = _iterator34()).done;) {
-      let obj = _step34.value;
+    for (var _iterator38 = _createForOfIteratorHelperLoose(this.viewports), _step38; !(_step38 = _iterator38()).done;) {
+      let obj = _step38.value;
       obj.domTop = domBase + (obj.top - base) * this.scale;
       domBase = obj.domBottom = obj.domTop + (obj.bottom - obj.top);
       base = obj.bottom;
@@ -20562,359 +20930,6 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
     backgroundColor: "inherit"
   }
 }, lightDarkIDs);
-const LineBreakPlaceholder = "\uffff";
-class DOMReader {
-  constructor(points, state) {
-    this.points = points;
-    this.text = "";
-    this.lineSeparator = state.facet(state_dist/* EditorState */.$t.lineSeparator);
-  }
-  append(text) {
-    this.text += text;
-  }
-  lineBreak() {
-    this.text += LineBreakPlaceholder;
-  }
-  readRange(start, end) {
-    if (!start) return this;
-    let parent = start.parentNode;
-    for (let cur = start;;) {
-      this.findPointBefore(parent, cur);
-      let oldLen = this.text.length;
-      this.readNode(cur);
-      let next = cur.nextSibling;
-      if (next == end) break;
-      let view = ContentView.get(cur),
-        nextView = ContentView.get(next);
-      if (view && nextView ? view.breakAfter : (view ? view.breakAfter : isBlockElement(cur)) || isBlockElement(next) && (cur.nodeName != "BR" || cur.cmIgnore) && this.text.length > oldLen) this.lineBreak();
-      cur = next;
-    }
-    this.findPointBefore(parent, end);
-    return this;
-  }
-  readTextNode(node) {
-    let text = node.nodeValue;
-    for (var _iterator35 = _createForOfIteratorHelperLoose(this.points), _step35; !(_step35 = _iterator35()).done;) {
-      let point = _step35.value;
-      if (point.node == node) point.pos = this.text.length + Math.min(point.offset, text.length);
-    }
-    for (let off = 0, re = this.lineSeparator ? null : /\r\n?|\n/g;;) {
-      let nextBreak = -1,
-        breakSize = 1,
-        m;
-      if (this.lineSeparator) {
-        nextBreak = text.indexOf(this.lineSeparator, off);
-        breakSize = this.lineSeparator.length;
-      } else if (m = re.exec(text)) {
-        nextBreak = m.index;
-        breakSize = m[0].length;
-      }
-      this.append(text.slice(off, nextBreak < 0 ? text.length : nextBreak));
-      if (nextBreak < 0) break;
-      this.lineBreak();
-      if (breakSize > 1) {
-        for (var _iterator36 = _createForOfIteratorHelperLoose(this.points), _step36; !(_step36 = _iterator36()).done;) {
-          let point = _step36.value;
-          if (point.node == node && point.pos > this.text.length) point.pos -= breakSize - 1;
-        }
-      }
-      off = nextBreak + breakSize;
-    }
-  }
-  readNode(node) {
-    if (node.cmIgnore) return;
-    let view = ContentView.get(node);
-    let fromView = view && view.overrideDOMText;
-    if (fromView != null) {
-      this.findPointInside(node, fromView.length);
-      for (let i = fromView.iter(); !i.next().done;) {
-        if (i.lineBreak) this.lineBreak();else this.append(i.value);
-      }
-    } else if (node.nodeType == 3) {
-      this.readTextNode(node);
-    } else if (node.nodeName == "BR") {
-      if (node.nextSibling) this.lineBreak();
-    } else if (node.nodeType == 1) {
-      this.readRange(node.firstChild, null);
-    }
-  }
-  findPointBefore(node, next) {
-    for (var _iterator37 = _createForOfIteratorHelperLoose(this.points), _step37; !(_step37 = _iterator37()).done;) {
-      let point = _step37.value;
-      if (point.node == node && node.childNodes[point.offset] == next) point.pos = this.text.length;
-    }
-  }
-  findPointInside(node, length) {
-    for (var _iterator38 = _createForOfIteratorHelperLoose(this.points), _step38; !(_step38 = _iterator38()).done;) {
-      let point = _step38.value;
-      if (node.nodeType == 3 ? point.node == node : node.contains(point.node)) point.pos = this.text.length + (isAtEnd(node, point.node, point.offset) ? length : 0);
-    }
-  }
-}
-function isAtEnd(parent, node, offset) {
-  for (;;) {
-    if (!node || offset < maxOffset(node)) return false;
-    if (node == parent) return true;
-    offset = domIndex(node) + 1;
-    node = node.parentNode;
-  }
-}
-class DOMPoint {
-  constructor(node, offset) {
-    this.node = node;
-    this.offset = offset;
-    this.pos = -1;
-  }
-}
-class DOMChange {
-  constructor(view, start, end, typeOver) {
-    this.typeOver = typeOver;
-    this.bounds = null;
-    this.text = "";
-    this.domChanged = start > -1;
-    let {
-      impreciseHead: iHead,
-      impreciseAnchor: iAnchor
-    } = view.docView;
-    if (view.state.readOnly && start > -1) {
-      this.newSel = null;
-    } else if (start > -1 && (this.bounds = view.docView.domBoundsAround(start, end, 0))) {
-      let selPoints = iHead || iAnchor ? [] : selectionPoints(view);
-      let reader = new DOMReader(selPoints, view.state);
-      reader.readRange(this.bounds.startDOM, this.bounds.endDOM);
-      this.text = reader.text;
-      this.newSel = selectionFromPoints(selPoints, this.bounds.from);
-    } else {
-      let domSel = view.observer.selectionRange;
-      let head = iHead && iHead.node == domSel.focusNode && iHead.offset == domSel.focusOffset || !contains(view.contentDOM, domSel.focusNode) ? view.state.selection.main.head : view.docView.posFromDOM(domSel.focusNode, domSel.focusOffset);
-      let anchor = iAnchor && iAnchor.node == domSel.anchorNode && iAnchor.offset == domSel.anchorOffset || !contains(view.contentDOM, domSel.anchorNode) ? view.state.selection.main.anchor : view.docView.posFromDOM(domSel.anchorNode, domSel.anchorOffset);
-      let vp = view.viewport;
-      if ((browser.ios || browser.chrome) && view.state.selection.main.empty && head != anchor && (vp.from > 0 || vp.to < view.state.doc.length)) {
-        let from = Math.min(head, anchor),
-          to = Math.max(head, anchor);
-        let offFrom = vp.from - from,
-          offTo = vp.to - to;
-        if ((offFrom == 0 || offFrom == 1 || from == 0) && (offTo == 0 || offTo == -1 || to == view.state.doc.length)) {
-          head = 0;
-          anchor = view.state.doc.length;
-        }
-      }
-      this.newSel = state_dist/* EditorSelection */.OF.single(anchor, head);
-    }
-  }
-}
-function applyDOMChange(view, domChange) {
-  let change;
-  let {
-      newSel
-    } = domChange,
-    sel = view.state.selection.main;
-  let lastKey = view.inputState.lastKeyTime > Date.now() - 100 ? view.inputState.lastKeyCode : -1;
-  if (domChange.bounds) {
-    let {
-      from,
-      to
-    } = domChange.bounds;
-    let preferredPos = sel.from,
-      preferredSide = null;
-    if (lastKey === 8 || browser.android && domChange.text.length < to - from) {
-      preferredPos = sel.to;
-      preferredSide = "end";
-    }
-    let diff = findDiff(view.state.doc.sliceString(from, to, LineBreakPlaceholder), domChange.text, preferredPos - from, preferredSide);
-    if (diff) {
-      if (browser.chrome && lastKey == 13 && diff.toB == diff.from + 2 && domChange.text.slice(diff.from, diff.toB) == LineBreakPlaceholder + LineBreakPlaceholder) diff.toB--;
-      change = {
-        from: from + diff.from,
-        to: from + diff.toA,
-        insert: state_dist/* Text */.EY.of(domChange.text.slice(diff.from, diff.toB).split(LineBreakPlaceholder))
-      };
-    }
-  } else if (newSel && (!view.hasFocus && view.state.facet(editable) || newSel.main.eq(sel))) {
-    newSel = null;
-  }
-  if (!change && !newSel) return false;
-  if (!change && domChange.typeOver && !sel.empty && newSel && newSel.main.empty) {
-    change = {
-      from: sel.from,
-      to: sel.to,
-      insert: view.state.doc.slice(sel.from, sel.to)
-    };
-  } else if (change && change.from >= sel.from && change.to <= sel.to && (change.from != sel.from || change.to != sel.to) && sel.to - sel.from - (change.to - change.from) <= 4) {
-    change = {
-      from: sel.from,
-      to: sel.to,
-      insert: view.state.doc.slice(sel.from, change.from).append(change.insert).append(view.state.doc.slice(change.to, sel.to))
-    };
-  } else if ((browser.mac || browser.android) && change && change.from == change.to && change.from == sel.head - 1 && /^\. ?$/.test(change.insert.toString()) && view.contentDOM.getAttribute("autocorrect") == "off") {
-    if (newSel && change.insert.length == 2) newSel = state_dist/* EditorSelection */.OF.single(newSel.main.anchor - 1, newSel.main.head - 1);
-    change = {
-      from: sel.from,
-      to: sel.to,
-      insert: state_dist/* Text */.EY.of([" "])
-    };
-  } else if (browser.chrome && change && change.from == change.to && change.from == sel.head && change.insert.toString() == "\n " && view.lineWrapping) {
-    if (newSel) newSel = state_dist/* EditorSelection */.OF.single(newSel.main.anchor - 1, newSel.main.head - 1);
-    change = {
-      from: sel.from,
-      to: sel.to,
-      insert: state_dist/* Text */.EY.of([" "])
-    };
-  }
-  if (change) {
-    return applyDOMChangeInner(view, change, newSel, lastKey);
-  } else if (newSel && !newSel.main.eq(sel)) {
-    let scrollIntoView = false,
-      userEvent = "select";
-    if (view.inputState.lastSelectionTime > Date.now() - 50) {
-      if (view.inputState.lastSelectionOrigin == "select") scrollIntoView = true;
-      userEvent = view.inputState.lastSelectionOrigin;
-    }
-    view.dispatch({
-      selection: newSel,
-      scrollIntoView,
-      userEvent
-    });
-    return true;
-  } else {
-    return false;
-  }
-}
-function applyDOMChangeInner(view, change, newSel, lastKey) {
-  if (lastKey === void 0) {
-    lastKey = -1;
-  }
-  if (browser.ios && view.inputState.flushIOSKey(change)) return true;
-  let sel = view.state.selection.main;
-  if (browser.android && (change.to == sel.to && (change.from == sel.from || change.from == sel.from - 1 && view.state.sliceDoc(change.from, sel.from) == " ") && change.insert.length == 1 && change.insert.lines == 2 && dispatchKey(view.contentDOM, "Enter", 13) || (change.from == sel.from - 1 && change.to == sel.to && change.insert.length == 0 || lastKey == 8 && change.insert.length < change.to - change.from && change.to > sel.head) && dispatchKey(view.contentDOM, "Backspace", 8) || change.from == sel.from && change.to == sel.to + 1 && change.insert.length == 0 && dispatchKey(view.contentDOM, "Delete", 46))) return true;
-  let text = change.insert.toString();
-  if (view.inputState.composing >= 0) view.inputState.composing++;
-  let defaultTr;
-  let defaultInsert = () => defaultTr || (defaultTr = applyDefaultInsert(view, change, newSel));
-  if (!view.state.facet(inputHandler).some(h => h(view, change.from, change.to, text, defaultInsert))) view.dispatch(defaultInsert());
-  return true;
-}
-function applyDefaultInsert(view, change, newSel) {
-  let tr,
-    startState = view.state,
-    sel = startState.selection.main;
-  if (change.from >= sel.from && change.to <= sel.to && change.to - change.from >= (sel.to - sel.from) / 3 && (!newSel || newSel.main.empty && newSel.main.from == change.from + change.insert.length) && view.inputState.composing < 0) {
-    let before = sel.from < change.from ? startState.sliceDoc(sel.from, change.from) : "";
-    let after = sel.to > change.to ? startState.sliceDoc(change.to, sel.to) : "";
-    tr = startState.replaceSelection(view.state.toText(before + change.insert.sliceString(0, undefined, view.state.lineBreak) + after));
-  } else {
-    let changes = startState.changes(change);
-    let mainSel = newSel && newSel.main.to <= changes.newLength ? newSel.main : undefined;
-    if (startState.selection.ranges.length > 1 && view.inputState.composing >= 0 && change.to <= sel.to && change.to >= sel.to - 10) {
-      let replaced = view.state.sliceDoc(change.from, change.to);
-      let compositionRange,
-        composition = newSel && findCompositionNode(view, newSel.main.head);
-      if (composition) {
-        let dLen = change.insert.length - (change.to - change.from);
-        compositionRange = {
-          from: composition.from,
-          to: composition.to - dLen
-        };
-      } else {
-        compositionRange = view.state.doc.lineAt(sel.head);
-      }
-      let offset = sel.to - change.to,
-        size = sel.to - sel.from;
-      tr = startState.changeByRange(range => {
-        if (range.from == sel.from && range.to == sel.to) return {
-          changes,
-          range: mainSel || range.map(changes)
-        };
-        let to = range.to - offset,
-          from = to - replaced.length;
-        if (range.to - range.from != size || view.state.sliceDoc(from, to) != replaced || range.to >= compositionRange.from && range.from <= compositionRange.to) return {
-          range
-        };
-        let rangeChanges = startState.changes({
-            from,
-            to,
-            insert: change.insert
-          }),
-          selOff = range.to - sel.to;
-        return {
-          changes: rangeChanges,
-          range: !mainSel ? range.map(rangeChanges) : state_dist/* EditorSelection */.OF.range(Math.max(0, mainSel.anchor + selOff), Math.max(0, mainSel.head + selOff))
-        };
-      });
-    } else {
-      tr = {
-        changes,
-        selection: mainSel && startState.selection.replaceRange(mainSel)
-      };
-    }
-  }
-  let userEvent = "input.type";
-  if (view.composing || view.inputState.compositionPendingChange && view.inputState.compositionEndedAt > Date.now() - 50) {
-    view.inputState.compositionPendingChange = false;
-    userEvent += ".compose";
-    if (view.inputState.compositionFirstChange) {
-      userEvent += ".start";
-      view.inputState.compositionFirstChange = false;
-    }
-  }
-  return startState.update(tr, {
-    userEvent,
-    scrollIntoView: true
-  });
-}
-function findDiff(a, b, preferredPos, preferredSide) {
-  let minLen = Math.min(a.length, b.length);
-  let from = 0;
-  while (from < minLen && a.charCodeAt(from) == b.charCodeAt(from)) from++;
-  if (from == minLen && a.length == b.length) return null;
-  let toA = a.length,
-    toB = b.length;
-  while (toA > 0 && toB > 0 && a.charCodeAt(toA - 1) == b.charCodeAt(toB - 1)) {
-    toA--;
-    toB--;
-  }
-  if (preferredSide == "end") {
-    let adjust = Math.max(0, from - Math.min(toA, toB));
-    preferredPos -= toA + adjust - from;
-  }
-  if (toA < from && a.length < b.length) {
-    let move = preferredPos <= from && preferredPos >= toA ? from - preferredPos : 0;
-    from -= move;
-    toB = from + (toB - toA);
-    toA = from;
-  } else if (toB < from) {
-    let move = preferredPos <= from && preferredPos >= toB ? from - preferredPos : 0;
-    from -= move;
-    toA = from + (toA - toB);
-    toB = from;
-  }
-  return {
-    from,
-    toA,
-    toB
-  };
-}
-function selectionPoints(view) {
-  let result = [];
-  if (view.root.activeElement != view.contentDOM) return result;
-  let {
-    anchorNode,
-    anchorOffset,
-    focusNode,
-    focusOffset
-  } = view.observer.selectionRange;
-  if (anchorNode) {
-    result.push(new DOMPoint(anchorNode, anchorOffset));
-    if (focusNode != anchorNode || focusOffset != anchorOffset) result.push(new DOMPoint(focusNode, focusOffset));
-  }
-  return result;
-}
-function selectionFromPoints(points, base) {
-  if (points.length == 0) return null;
-  let anchor = points[0].pos,
-    head = points.length == 2 ? points[1].pos : anchor;
-  return anchor > -1 && head > -1 ? state_dist/* EditorSelection */.OF.single(anchor + base, head + base) : null;
-}
 const observeOptions = {
   childList: true,
   characterData: true,
@@ -23944,7 +23959,10 @@ function hoverTooltip(source, options) {
     },
     provide: f => showHoverTooltip.from(f)
   });
-  return [hoverState, ViewPlugin.define(view => new HoverPlugin(view, source, hoverState, setHover, options.hoverTime || 300)), showHoverTooltipHost];
+  return {
+    active: hoverState,
+    extension: [hoverState, ViewPlugin.define(view => new HoverPlugin(view, source, hoverState, setHover, options.hoverTime || 300)), showHoverTooltipHost]
+  };
 }
 function getTooltip(view, tooltip) {
   let plugin = view.plugin(tooltipPlugin);
@@ -24603,7 +24621,9 @@ const __test = {
   QueryType,
   ChangedRange,
   computeOrder,
-  moveVisually
+  moveVisually,
+  clearHeightChangeFlag,
+  getHeightChangeFlag: () => heightChangeFlag
 };
 
 
