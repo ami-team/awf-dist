@@ -9040,9 +9040,7 @@ var options = {};
 
 options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
 options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
+options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
@@ -15083,13 +15081,16 @@ function scrollRectIntoView(dom, rect, side, x, y, xMargin, yMargin, ltr) {
     }
   }
 }
-function scrollableParent(dom) {
-  let doc = dom.ownerDocument;
+function scrollableParents(dom) {
+  let doc = dom.ownerDocument,
+    x,
+    y;
   for (let cur = dom.parentNode; cur;) {
-    if (cur == doc.body) {
+    if (cur == doc.body || x && y) {
       break;
     } else if (cur.nodeType == 1) {
-      if (cur.scrollHeight > cur.clientHeight || cur.scrollWidth > cur.clientWidth) return cur;
+      if (!y && cur.scrollHeight > cur.clientHeight) y = cur;
+      if (!x && cur.scrollWidth > cur.clientWidth) x = cur;
       cur = cur.assignedSlot || cur.parentNode;
     } else if (cur.nodeType == 11) {
       cur = cur.host;
@@ -15097,7 +15098,10 @@ function scrollableParent(dom) {
       break;
     }
   }
-  return null;
+  return {
+    x,
+    y
+  };
 }
 class DOMSelectionState {
   constructor() {
@@ -15607,7 +15611,7 @@ const ie_11up = /Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(nav.userAgent);
 const dist_ie = !!(ie_upto10 || ie_11up || ie_edge);
 const gecko = !dist_ie && /gecko\/(\d+)/i.test(nav.userAgent);
 const chrome = !dist_ie && /Chrome\/(\d+)/.exec(nav.userAgent);
-const webkit = ("webkitFontSmoothing" in doc.documentElement.style);
+const webkit = "webkitFontSmoothing" in doc.documentElement.style;
 const safari = !dist_ie && /Apple Computer/.test(nav.vendor);
 const ios = safari && (/Mobile\/\w+/.test(nav.userAgent) || nav.maxTouchPoints > 2);
 var browser = {
@@ -18404,7 +18408,7 @@ class MouseSelection {
     };
     this.scrolling = -1;
     this.lastEvent = startEvent;
-    this.scrollParent = scrollableParent(view.contentDOM);
+    this.scrollParents = scrollableParents(view.contentDOM);
     this.atoms = view.state.facet(atomicRanges).map(f => f(view));
     let doc = view.contentDOM.ownerDocument;
     doc.addEventListener("mousemove", this.move = this.move.bind(this));
@@ -18417,21 +18421,26 @@ class MouseSelection {
     if (this.dragging === false) this.select(event);
   }
   move(event) {
-    var _a;
     if (event.buttons == 0) return this.destroy();
     if (this.dragging || this.dragging == null && dist(this.startEvent, event) < 10) return;
     this.select(this.lastEvent = event);
     let sx = 0,
       sy = 0;
-    let rect = ((_a = this.scrollParent) === null || _a === void 0 ? void 0 : _a.getBoundingClientRect()) || {
-      left: 0,
-      top: 0,
-      right: this.view.win.innerWidth,
-      bottom: this.view.win.innerHeight
-    };
+    let left = 0,
+      top = 0,
+      right = this.view.win.innerWidth,
+      bottom = this.view.win.innerHeight;
+    if (this.scrollParents.x) ({
+      left,
+      right
+    } = this.scrollParents.x.getBoundingClientRect());
+    if (this.scrollParents.y) ({
+      top,
+      bottom
+    } = this.scrollParents.y.getBoundingClientRect());
     let margins = getScrollMargins(this.view);
-    if (event.clientX - margins.left <= rect.left + dragScrollMargin) sx = -dragScrollSpeed(rect.left - event.clientX);else if (event.clientX + margins.right >= rect.right - dragScrollMargin) sx = dragScrollSpeed(event.clientX - rect.right);
-    if (event.clientY - margins.top <= rect.top + dragScrollMargin) sy = -dragScrollSpeed(rect.top - event.clientY);else if (event.clientY + margins.bottom >= rect.bottom - dragScrollMargin) sy = dragScrollSpeed(event.clientY - rect.bottom);
+    if (event.clientX - margins.left <= left + dragScrollMargin) sx = -dragScrollSpeed(left - event.clientX);else if (event.clientX + margins.right >= right - dragScrollMargin) sx = dragScrollSpeed(event.clientX - right);
+    if (event.clientY - margins.top <= top + dragScrollMargin) sy = -dragScrollSpeed(top - event.clientY);else if (event.clientY + margins.bottom >= bottom - dragScrollMargin) sy = dragScrollSpeed(event.clientY - bottom);
     this.setScrollSpeed(sx, sy);
   }
   up(event) {
@@ -18459,12 +18468,19 @@ class MouseSelection {
     }
   }
   scroll() {
-    if (this.scrollParent) {
-      this.scrollParent.scrollLeft += this.scrollSpeed.x;
-      this.scrollParent.scrollTop += this.scrollSpeed.y;
-    } else {
-      this.view.win.scrollBy(this.scrollSpeed.x, this.scrollSpeed.y);
+    let {
+      x,
+      y
+    } = this.scrollSpeed;
+    if (x && this.scrollParents.x) {
+      this.scrollParents.x.scrollLeft += x;
+      x = 0;
     }
+    if (y && this.scrollParents.y) {
+      this.scrollParents.y.scrollTop += y;
+      y = 0;
+    }
+    if (x || y) this.view.win.scrollBy(x, y);
     if (this.dragging === false) this.select(this.lastEvent);
   }
   skipAtoms(sel) {
@@ -18647,8 +18663,7 @@ function rangeForClick(view, pos, bias, type) {
     return state_dist/* EditorSelection */.OF.range(from, to);
   }
 }
-let insideY = (y, rect) => y >= rect.top && y <= rect.bottom;
-let inside = (x, y, rect) => insideY(y, rect) && x >= rect.left && x <= rect.right;
+let inside = (x, y, rect) => y >= rect.top && y <= rect.bottom && x >= rect.left && x <= rect.right;
 function findPositionSide(view, pos, x, y) {
   let line = LineView.find(view.docView, pos);
   if (!line) return 1;
@@ -18659,7 +18674,7 @@ function findPositionSide(view, pos, x, y) {
   if (before && inside(x, y, before)) return -1;
   let after = line.coordsAt(off, 1);
   if (after && inside(x, y, after)) return 1;
-  return before && insideY(y, before) ? -1 : 1;
+  return before && before.bottom >= y ? -1 : 1;
 }
 function queryPos(view, event) {
   let pos = view.posAtCoords({
@@ -18984,6 +18999,10 @@ function firefoxCopyCutHack(doc) {
   }
 }
 const wrappingWhiteSpace = ["pre-wrap", "normal", "pre-line", "break-spaces"];
+let heightChangeFlag = false;
+function clearHeightChangeFlag() {
+  heightChangeFlag = false;
+}
 class HeightOracle {
   constructor(lineWrapping) {
     this.lineWrapping = lineWrapping;
@@ -18993,7 +19012,6 @@ class HeightOracle {
     this.charWidth = 7;
     this.textHeight = 14;
     this.lineLength = 30;
-    this.heightChanged = false;
   }
   heightForGap(from, to) {
     let lines = this.doc.lineAt(to).number - this.doc.lineAt(from).number + 1;
@@ -19103,9 +19121,9 @@ class HeightMap {
   set outdated(value) {
     this.flags = (value ? 2 : 0) | this.flags & ~2;
   }
-  setHeight(oracle, height) {
+  setHeight(height) {
     if (this.height != height) {
-      if (Math.abs(this.height - height) > Epsilon) oracle.heightChanged = true;
+      if (Math.abs(this.height - height) > Epsilon) heightChangeFlag = true;
       this.height = height;
     }
   }
@@ -19141,7 +19159,7 @@ class HeightMap {
       fromB += start.from - fromA;
       fromA = start.from;
       let nodes = NodeBuilder.build(oracle.setDoc(doc), decorations, fromB, toB);
-      me = me.replace(fromA, toA, nodes);
+      me = replace(me, me.replace(fromA, toA, nodes));
     }
     return me.updateHeight(oracle, 0);
   }
@@ -19188,6 +19206,11 @@ class HeightMap {
     return new HeightMapBranch(HeightMap.of(nodes.slice(0, i)), brk, HeightMap.of(nodes.slice(j)));
   }
 }
+function replace(old, val) {
+  if (old == val) return old;
+  if (old.constructor != val.constructor) heightChangeFlag = true;
+  return val;
+}
 HeightMap.prototype.size = 1;
 class HeightMapBlock extends HeightMap {
   constructor(length, height, deco) {
@@ -19210,7 +19233,7 @@ class HeightMapBlock extends HeightMap {
     if (_force === void 0) {
       _force = false;
     }
-    if (measured && measured.from <= offset && measured.more) this.setHeight(oracle, measured.heights[measured.index++]);
+    if (measured && measured.from <= offset && measured.more) this.setHeight(measured.heights[measured.index++]);
     this.outdated = false;
     return this;
   }
@@ -19245,7 +19268,7 @@ class HeightMapText extends HeightMapBlock {
     if (force === void 0) {
       force = false;
     }
-    if (measured && measured.from <= offset && measured.more) this.setHeight(oracle, measured.heights[measured.index++]);else if (force || this.outdated) this.setHeight(oracle, Math.max(this.widgetHeight, oracle.heightForLine(this.length - this.collapsed)) + this.breaks * oracle.lineHeight);
+    if (measured && measured.from <= offset && measured.more) this.setHeight(measured.heights[measured.index++]);else if (force || this.outdated) this.setHeight(Math.max(this.widgetHeight, oracle.heightForLine(this.length - this.collapsed)) + this.breaks * oracle.lineHeight);
     this.outdated = false;
     return this;
   }
@@ -19382,10 +19405,10 @@ class HeightMapGap extends HeightMap {
       }
       if (pos <= end) nodes.push(null, new HeightMapGap(end - pos).updateHeight(oracle, pos));
       let result = HeightMap.of(nodes);
-      if (singleHeight < 0 || Math.abs(result.height - this.height) >= Epsilon || Math.abs(singleHeight - this.heightMetrics(oracle, offset).perLine) >= Epsilon) oracle.heightChanged = true;
-      return result;
+      if (singleHeight < 0 || Math.abs(result.height - this.height) >= Epsilon || Math.abs(singleHeight - this.heightMetrics(oracle, offset).perLine) >= Epsilon) heightChangeFlag = true;
+      return replace(this, result);
     } else if (force || this.outdated) {
-      this.setHeight(oracle, oracle.heightForGap(offset, offset + this.length));
+      this.setHeight(oracle.heightForGap(offset, offset + this.length));
       this.outdated = false;
     }
     return this;
@@ -19469,9 +19492,9 @@ class HeightMapBranch extends HeightMap {
   }
   balanced(left, right) {
     if (left.size > 2 * right.size || right.size > 2 * left.size) return HeightMap.of(this.break ? [left, null, right] : [left, right]);
-    this.left = left;
-    this.right = right;
-    this.height = left.height + right.height;
+    this.left = replace(this.left, left);
+    this.right = replace(this.right, right);
+    this.setHeight(left.height + right.height);
     this.outdated = left.outdated || right.outdated;
     this.size = left.size + right.size;
     this.length = left.length + this.break + right.length;
@@ -19799,8 +19822,9 @@ class ViewState {
     let heightChanges = ChangedRange.extendWithRanges(contentChanges, heightRelevantDecoChanges(prevDeco, this.stateDeco, update ? update.changes : state_dist/* ChangeSet */.VR.empty(this.state.doc.length)));
     let prevHeight = this.heightMap.height;
     let scrollAnchor = this.scrolledToBottom ? null : this.scrollAnchorAt(this.scrollTop);
+    clearHeightChangeFlag();
     this.heightMap = this.heightMap.applyChanges(this.stateDeco, update.startState.doc, this.heightOracle.setDoc(this.state.doc), heightChanges);
-    if (this.heightMap.height != prevHeight) update.flags |= 2;
+    if (this.heightMap.height != prevHeight || heightChangeFlag) update.flags |= 2;
     if (scrollAnchor) {
       this.scrollAnchorPos = update.changes.mapPos(scrollAnchor.from, -1);
       this.scrollAnchorHeight = scrollAnchor.top;
@@ -19894,13 +19918,13 @@ class ViewState {
         }
       }
       if (dTop > 0 && dBottom > 0) bias = Math.max(dTop, dBottom);else if (dTop < 0 && dBottom < 0) bias = Math.min(dTop, dBottom);
-      oracle.heightChanged = false;
+      clearHeightChangeFlag();
       for (var _iterator29 = _createForOfIteratorHelperLoose(this.viewports), _step29; !(_step29 = _iterator29()).done;) {
         let vp = _step29.value;
         let heights = vp.from == this.viewport.from ? lineHeights : view.docView.measureVisibleLineHeights(vp);
         this.heightMap = (refresh ? HeightMap.empty().applyChanges(this.stateDeco, state_dist/* Text */.EY.empty, this.heightOracle, [new ChangedRange(0, 0, 0, view.state.doc.length)]) : this.heightMap).updateHeight(oracle, 0, refresh, new MeasuredHeights(vp.from, heights));
       }
-      if (oracle.heightChanged) result |= 2;
+      if (heightChangeFlag) result |= 2;
     }
     let viewportChange = !this.viewportIsAppropriate(this.viewport, bias) || this.scrollTarget && (this.scrollTarget.range.head < this.viewport.from || this.scrollTarget.range.head > this.viewport.to);
     if (viewportChange) {
@@ -20988,7 +21012,7 @@ class DOMObserver {
     }, 50);
   }
   onPrint(event) {
-    if (event.type == "change" && !event.matches) return;
+    if ((event.type == "change" || !event.type) && !event.matches) return;
     this.view.viewState.printing = true;
     this.view.measure();
     setTimeout(() => {
@@ -21238,14 +21262,18 @@ class DOMObserver {
   }
   addWindowListeners(win) {
     win.addEventListener("resize", this.onResize);
-    if (this.printQuery) this.printQuery.addEventListener("change", this.onPrint);else win.addEventListener("beforeprint", this.onPrint);
+    if (this.printQuery) {
+      if (this.printQuery.addEventListener) this.printQuery.addEventListener("change", this.onPrint);else this.printQuery.addListener(this.onPrint);
+    } else win.addEventListener("beforeprint", this.onPrint);
     win.addEventListener("scroll", this.onScroll);
     win.document.addEventListener("selectionchange", this.onSelectionChange);
   }
   removeWindowListeners(win) {
     win.removeEventListener("scroll", this.onScroll);
     win.removeEventListener("resize", this.onResize);
-    if (this.printQuery) this.printQuery.removeEventListener("change", this.onPrint);else win.removeEventListener("beforeprint", this.onPrint);
+    if (this.printQuery) {
+      if (this.printQuery.removeEventListener) this.printQuery.removeEventListener("change", this.onPrint);else this.printQuery.removeListener(this.onPrint);
+    } else win.removeEventListener("beforeprint", this.onPrint);
     win.document.removeEventListener("selectionchange", this.onSelectionChange);
   }
   update(update) {
@@ -21269,6 +21297,10 @@ class DOMObserver {
     clearTimeout(this.resizeTimeout);
     this.win.cancelAnimationFrame(this.delayedFlush);
     this.win.cancelAnimationFrame(this.flushingAndroidKey);
+    if (this.editContext) {
+      this.view.contentDOM.editContext = null;
+      this.editContext.destroy();
+    }
   }
 }
 function findChild(cView, dom, dir) {
@@ -21315,13 +21347,14 @@ class EditContextManager {
     this.from = 0;
     this.to = 0;
     this.pendingContextChange = null;
+    this.handlers = Object.create(null);
     this.resetRange(view.state);
     let context = this.editContext = new window.EditContext({
       text: view.state.doc.sliceString(this.from, this.to),
       selectionStart: this.toContextPos(Math.max(this.from, Math.min(this.to, view.state.selection.main.anchor))),
       selectionEnd: this.toContextPos(view.state.selection.main.head)
     });
-    context.addEventListener("textupdate", e => {
+    this.handlers.textupdate = e => {
       let {
         anchor
       } = view.state.selection.main;
@@ -21333,10 +21366,13 @@ class EditContextManager {
       if (change.from == this.from && anchor < this.from) change.from = anchor;else if (change.to == this.to && anchor > this.to) change.to = anchor;
       if (change.from == change.to && !change.insert.length) return;
       this.pendingContextChange = change;
-      applyDOMChangeInner(view, change, state_dist/* EditorSelection */.OF.single(this.toEditorPos(e.selectionStart), this.toEditorPos(e.selectionEnd)));
-      if (this.pendingContextChange) this.revertPending(view.state);
-    });
-    context.addEventListener("characterboundsupdate", e => {
+      if (!view.state.readOnly) applyDOMChangeInner(view, change, state_dist/* EditorSelection */.OF.single(this.toEditorPos(e.selectionStart), this.toEditorPos(e.selectionEnd)));
+      if (this.pendingContextChange) {
+        this.revertPending(view.state);
+        this.setSelection(view.state);
+      }
+    };
+    this.handlers.characterboundsupdate = e => {
       let rects = [],
         prev = null;
       for (let i = this.toEditorPos(e.rangeStart), end = this.toEditorPos(e.rangeEnd); i < end; i++) {
@@ -21345,8 +21381,8 @@ class EditContextManager {
         rects.push(prev);
       }
       context.updateCharacterBounds(e.rangeStart, rects);
-    });
-    context.addEventListener("textformatupdate", e => {
+    };
+    this.handlers.textformatupdate = e => {
       let deco = [];
       for (var _iterator46 = _createForOfIteratorHelperLoose(e.getTextFormats()), _step46; !(_step46 = _iterator46()).done;) {
         let format = _step46.value;
@@ -21364,17 +21400,18 @@ class EditContextManager {
       view.dispatch({
         effects: setEditContextFormatting.of(Decoration.set(deco))
       });
-    });
-    context.addEventListener("compositionstart", () => {
+    };
+    this.handlers.compositionstart = () => {
       if (view.inputState.composing < 0) {
         view.inputState.composing = 0;
         view.inputState.compositionFirstChange = true;
       }
-    });
-    context.addEventListener("compositionend", () => {
+    };
+    this.handlers.compositionend = () => {
       view.inputState.composing = -1;
       view.inputState.compositionFirstChange = null;
-    });
+    };
+    for (let event in this.handlers) context.addEventListener(event, this.handlers[event]);
     this.measureReq = {
       read: view => {
         this.editContext.updateControlBounds(view.contentDOM.getBoundingClientRect());
@@ -21420,12 +21457,13 @@ class EditContextManager {
     return !abort;
   }
   update(update) {
+    let reverted = this.pendingContextChange;
     if (!this.applyEdits(update) || !this.rangeIsValid(update.state)) {
       this.pendingContextChange = null;
       this.resetRange(update.state);
       this.editContext.updateText(0, this.editContext.text.length, update.state.doc.sliceString(this.from, this.to));
       this.setSelection(update.state);
-    } else if (update.docChanged || update.selectionSet) {
+    } else if (update.docChanged || update.selectionSet || reverted) {
       this.setSelection(update.state);
     }
     if (update.geometryChanged || update.docChanged || update.selectionSet) update.view.requestMeasure(this.measureReq);
@@ -21440,7 +21478,7 @@ class EditContextManager {
   revertPending(state) {
     let pending = this.pendingContextChange;
     this.pendingContextChange = null;
-    this.editContext.updateText(this.toContextPos(pending.from), this.toContextPos(pending.to + pending.insert.length), state.doc.sliceString(pending.from, pending.to));
+    this.editContext.updateText(this.toContextPos(pending.from), this.toContextPos(pending.from + pending.insert.length), state.doc.sliceString(pending.from, pending.to));
   }
   setSelection(state) {
     let {
@@ -21461,6 +21499,9 @@ class EditContextManager {
   }
   toContextPos(editorPos) {
     return editorPos - this.from;
+  }
+  destroy() {
+    for (let event in this.handlers) this.editContext.removeEventListener(event, this.handlers[event]);
   }
 }
 class EditorView {
@@ -23498,7 +23539,7 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
         height = (_a = knownHeight.get(tView)) !== null && _a !== void 0 ? _a : size.bottom - size.top;
       let offset = tView.offset || noOffset,
         ltr = this.view.textDirection == Direction.LTR;
-      let left = size.width > space.right - space.left ? ltr ? space.left : space.right - size.width : ltr ? Math.min(pos.left - (arrow ? 14 : 0) + offset.x, space.right - width) : Math.max(space.left, pos.left - width + (arrow ? 14 : 0) - offset.x);
+      let left = size.width > space.right - space.left ? ltr ? space.left : space.right - size.width : ltr ? Math.max(space.left, Math.min(pos.left - (arrow ? 14 : 0) + offset.x, space.right - width)) : Math.min(Math.max(space.left, pos.left - width + (arrow ? 14 : 0) - offset.x), space.right - width);
       let above = this.above[i];
       if (!tooltip.strictSide && (above ? pos.top - (size.bottom - size.top) - offset.y < space.top : pos.bottom + (size.bottom - size.top) + offset.y > space.bottom) && above == space.bottom - pos.bottom > pos.top - space.top) above = this.above[i] = !above;
       let spaceVert = (above ? pos.top - space.top : space.bottom - pos.bottom) - arrowHeight;
@@ -26889,12 +26930,13 @@ class Stack {
     let {
       parser
     } = this.p;
-    if (this.reducePos < this.pos - 25) this.setLookAhead(this.pos);
+    let lookaheadRecord = this.reducePos < this.pos - 25;
+    if (lookaheadRecord) this.setLookAhead(this.pos);
     let dPrec = parser.dynamicPrecedence(type);
     if (dPrec) this.score += dPrec;
     if (depth == 0) {
       this.pushState(parser.getGoto(this.state, type, true), this.reducePos);
-      if (type < parser.minRepeatTerm) this.storeNode(type, this.reducePos, this.reducePos, 4, true);
+      if (type < parser.minRepeatTerm) this.storeNode(type, this.reducePos, this.reducePos, lookaheadRecord ? 8 : 4, true);
       this.reduceContext(type, this.reducePos);
       return;
     }
@@ -26926,12 +26968,12 @@ class Stack {
     while (this.stack.length > base) this.stack.pop();
     this.reduceContext(type, start);
   }
-  storeNode(term, start, end, size, isReduce) {
+  storeNode(term, start, end, size, mustSink) {
     if (size === void 0) {
       size = 4;
     }
-    if (isReduce === void 0) {
-      isReduce = false;
+    if (mustSink === void 0) {
+      mustSink = false;
     }
     if (term == 0 && (!this.stack.length || this.stack[this.stack.length - 1] < this.buffer.length + this.bufferBase)) {
       let cur = this,
@@ -26948,17 +26990,26 @@ class Stack {
         }
       }
     }
-    if (!isReduce || this.pos == end) {
+    if (!mustSink || this.pos == end) {
       this.buffer.push(term, start, end, size);
     } else {
       let index = this.buffer.length;
-      if (index > 0 && this.buffer[index - 4] != 0) while (index > 0 && this.buffer[index - 2] > end) {
-        this.buffer[index] = this.buffer[index - 4];
-        this.buffer[index + 1] = this.buffer[index - 3];
-        this.buffer[index + 2] = this.buffer[index - 2];
-        this.buffer[index + 3] = this.buffer[index - 1];
-        index -= 4;
-        if (size > 4) size -= 4;
+      if (index > 0 && this.buffer[index - 4] != 0) {
+        let mustMove = false;
+        for (let scan = index; scan > 0 && this.buffer[scan - 2] > end; scan -= 4) {
+          if (this.buffer[scan - 1] >= 0) {
+            mustMove = true;
+            break;
+          }
+        }
+        if (mustMove) while (index > 0 && this.buffer[index - 2] > end) {
+          this.buffer[index] = this.buffer[index - 4];
+          this.buffer[index + 1] = this.buffer[index - 3];
+          this.buffer[index + 2] = this.buffer[index - 2];
+          this.buffer[index + 3] = this.buffer[index - 1];
+          index -= 4;
+          if (size > 4) size -= 4;
+        }
       }
       this.buffer[index] = term;
       this.buffer[index + 1] = start;
@@ -28772,7 +28823,7 @@ class AMIHTTPClient {
   version = '{{VERSION}}';
   #endpoint = '';
   #converter = 'AMIXmlToJson.xsl';
-  #paramRegExp = new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g');
+  #paramRegExp = (() => new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g'))();
   #errorMessage = 'resource temporarily unreachable';
   constructor(endpoint) {
     this.#endpoint = endpoint;
@@ -29052,8 +29103,8 @@ class AMIMQTTClient {
   #cnt = 0x01;
   #connected = false;
   #converter = 'AMIXmlToJson.xsl';
-  #paramRegExp = new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g');
-  #responseRegExp = new RegExp('AMI-RESPONSE<([0-9]+),(true|false)>(.*)', 's');
+  #paramRegExp = (() => new RegExp('-\\W*([a-zA-Z][a-zA-Z0-9]*)\\W*=\\W*\\?', 'g'))();
+  #responseRegExp = (() => new RegExp('AMI-RESPONSE<([0-9]+),(true|false)>(.*)', 's'))();
   constructor(endpoint, options) {
     var _this = this;
     options = options || {};
@@ -29891,9 +29942,7 @@ var options = {};
 
 options.styleTagTransform = (styleTagTransform_default());
 options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      options.insert = insertBySelector_default().bind(null, "head");
-    
+options.insert = insertBySelector_default().bind(null, "head");
 options.domAPI = (styleDomAPI_default());
 options.insertStyleElement = (insertStyleElement_default());
 
@@ -35552,7 +35601,7 @@ const day_night_button_namespaceObject = "<li class=\"nav-item\">\n\t<input clas
 ;// CONCATENATED MODULE: ./src/twigs/sign_in_button.twig
 const sign_in_button_namespaceObject = "<li class=\"nav-item xxxxxxxx\">\n\t{% if ssoAuthenticationAllowed %}\n\t<button class=\"btn btn-outline-secondary\" type=\"button\" onclick=\"amiAuth.sso()\">\n\t\t<i class=\"bi bi-box-arrow-in-right\"></i> {{ awfInfo.ssoLabel|default('Single Sign-On') }}\n\t</button>\n\t{% endif %}\n\t<button class=\"btn btn-primary\" type=\"button\" onclick=\"amiAuth.signIn()\"><i class=\"bi bi-box-arrow-in-right\"></i> Sign In</button>\n</li>\n";
 ;// CONCATENATED MODULE: ./src/twigs/sign_out_button.twig
-const sign_out_button_namespaceObject = "<li class=\"nav-item xxxxxxxx\">\n\t{{ icon }}\n</li>\n{% if bookmarksAllowed %}\n<li class=\"nav-item dropdown\">\n\t<a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\">\n\t\t<i class=\"bi bi-star-fill\"></i>\n\t</a>\n\t<div class=\"dropdown-menu\" id=\"ami_bookmark_menu_content\">\n\t\t<a class=\"dropdown-item xxxxxxxx\" href=\"{{WEBAPP_URL}}?subapp=BookmarkEditor&userdata=bookmarks\" target=\"_blank\">Edit bookmarks</a>\n\t\t<div class=\"dropdown-divider\"></div>\n\t\t{% for hash, bookmark in bookmarkInfo %}\n\t\t<a class=\"dropdown-item\" href=\"{{WEBAPP_URL}}?v={{ hash|e }}\" target=\"_blank\">{{ bookmark.name|e }}</a>\n\t\t{% else %}\n\t\t<div class=\"dropdown-item text-muted\">-- empty --</div>\n\t\t{% endfor %}\n\t</div>\n</li>\n{% endif %}\n{% if dashboardsAllowed %}\n\t<li class=\"nav-item dropdown\">\n\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\">\n\t\t\t<i class=\"bi bi-speedometer\"></i>\n\t\t</a>\n\t\t<div class=\"dropdown-menu\" id=\"ami_dashboard_menu_content\">\n\t\t\t<a class=\"dropdown-item xxxxxxxx\" href=\"{{WEBAPP_URL}}?subapp=BookmarkEditor&userdata=dashboards\" target=\"_blank\">Edit dashboards</a>\n\t\t\t<div class=\"dropdown-divider\"></div>\n\t\t\t{% for hash, dashboard in dashboardInfo %}\n\t\t\t<a class=\"dropdown-item\" href=\"{{WEBAPP_URL}}?v={{ hash|e }}\" target=\"_blank\">{{ dashboard.name|e }}</a>\n\t\t\t{% else %}\n\t\t\t<div class=\"dropdown-item text-muted\">-- empty --</div>\n\t\t\t{% endfor %}\n\t\t</div>\n\t</li>\n{% endif %}\n<li class=\"nav-item dropdown\">\n\t<a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\">\n\t\t<i class=\"bi bi-person-circle\"></i> {{ userInfo.AMIUser|e }}\n\t</a>\n\t<div class=\"dropdown-menu\">\n\t\t{% if changeInfoAllowed %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.changeInfo();\">Change Information</a>\n\t\t{% endif %}\n\t\t{% if changePasswordAllowed %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.changePass();\">Change Password</a>\n\t\t{% endif %}\n\t\t{% if changeCertificateAllowed %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.changeCertificate();\">Change Certificate</a>\n\t\t{% endif %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.accountStatus();\">Account Status</a>\n\t\t<div id=\"ami_user_menu_content\"></div>\n\t</div>\n</li>\n{% if signOutAllowed %}\n<li class=\"nav-item xxxxxxxx\">\n\t<button class=\"btn btn-outline-primary mt-1 mt-lg-0 ms-0 ms-lg-1\" type=\"button\" onclick=\"window.amiAuth.signOut();\">\n\t\t<i class=\"bi bi-box-arrow-right\"></i> Sign Out\n\t</button>\n</li>\n{% endif %}\n";
+const sign_out_button_namespaceObject = "<li class=\"nav-item xxxxxxxx\">\n\t{{ icon }}\n</li>\n{% if bookmarksAllowed %}\n<li class=\"nav-item dropdown\">\n\t<a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\">\n\t\t<i class=\"bi bi-star-fill\"></i>\n\t</a>\n\t<div class=\"dropdown-menu\" id=\"ami_bookmark_menu_content\">\n\t\t<a class=\"dropdown-item xxxxxxxx\" href=\"{{WEBAPP_URL}}?subapp=BookmarkEditor&userdata=bookmarks\" target=\"_blank\">Edit bookmarks</a>\n\t\t<div class=\"dropdown-divider\"></div>\n\t\t{% for hash, bookmark in bookmarkInfo %}\n\t\t<a class=\"dropdown-item\" href=\"{{WEBAPP_URL}}?v={{ hash|e }}\" target=\"_blank\">{{ bookmark.name|e }}</a>\n\t\t{% else %}\n\t\t<div class=\"dropdown-item text-muted\">-- empty --</div>\n\t\t{% endfor %}\n\t</div>\n</li>\n{% endif %}\n{% if dashboardsAllowed %}\n\t<li class=\"nav-item dropdown\">\n\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\">\n\t\t\t<i class=\"bi bi-speedometer\"></i>\n\t\t</a>\n\t\t<div class=\"dropdown-menu\" id=\"ami_dashboard_menu_content\">\n\t\t\t<a class=\"dropdown-item xxxxxxxx\" href=\"{{WEBAPP_URL}}?subapp=BookmarkEditor&userdata=dashboards\" target=\"_blank\">Edit dashboards</a>\n\t\t\t<div class=\"dropdown-divider\"></div>\n\t\t\t{% for hash, dashboard in dashboardInfo %}\n\t\t\t<a class=\"dropdown-item\" href=\"{{WEBAPP_URL}}?u={{ hash|e }}\" target=\"_blank\">{{ dashboard.name|e }}</a>\n\t\t\t{% else %}\n\t\t\t<div class=\"dropdown-item text-muted\">-- empty --</div>\n\t\t\t{% endfor %}\n\t\t</div>\n\t</li>\n{% endif %}\n<li class=\"nav-item dropdown\">\n\t<a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\">\n\t\t<i class=\"bi bi-person-circle\"></i> {{ userInfo.AMIUser|e }}\n\t</a>\n\t<div class=\"dropdown-menu\">\n\t\t{% if changeInfoAllowed %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.changeInfo();\">Change Information</a>\n\t\t{% endif %}\n\t\t{% if changePasswordAllowed %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.changePass();\">Change Password</a>\n\t\t{% endif %}\n\t\t{% if changeCertificateAllowed %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.changeCertificate();\">Change Certificate</a>\n\t\t{% endif %}\n\t\t<a class=\"dropdown-item\" href=\"javascript:window.amiAuth.accountStatus();\">Account Status</a>\n\t\t<div id=\"ami_user_menu_content\"></div>\n\t</div>\n</li>\n{% if signOutAllowed %}\n<li class=\"nav-item xxxxxxxx\">\n\t<button class=\"btn btn-outline-primary mt-1 mt-lg-0 ms-0 ms-lg-1\" type=\"button\" onclick=\"window.amiAuth.signOut();\">\n\t\t<i class=\"bi bi-box-arrow-right\"></i> Sign Out\n\t</button>\n</li>\n{% endif %}\n";
 ;// CONCATENATED MODULE: ./src/twigs/Modals/sign_in_modal.twig
 const sign_in_modal_namespaceObject = "<div class=\"modal fade\" tabindex=\"-1\" id=\"D2B5FADE_97A3_4B8C_8561_7A9AEACDBE5B\">\n\t<div class=\"modal-dialog modal-dialog-centered modal-{% if signInImageURL %}xl{% else %}lg{% endif %}\">\n\t\t<div class=\"modal-content\">\n\t\t\t<div class=\"modal-body row m-0 p-0\">\n\n\t\t\t\t{% if signInImageURL %}\n\t\t\t\t<div class=\"col-lg-6 m-0 p-0\"\n\t\t\t\t\tstyle=\"background: url('{{ signInImageURL|e }}') center center; background-size: auto 100%;\">\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-lg-6 m-0 p-0\">\n\t\t\t\t{% else %}\n\t\t\t\t<div class=\"col-lg-12 m-0 p-0\">\n\t\t\t\t{% endif %}\n\n\t\t\t\t\t<nav class=\"p-3\">\n\t\t\t\t\t\t<div class=\"nav nav-tabs\" role=\"tablist\">\n\t\t\t\t\t\t\t<button class=\"nav-link active\" data-bs-toggle=\"tab\" data-bs-target=\"#B7894CC1_1DAA_4A7E_B7D1_DBDF6F06AC73\" type=\"button\" role=\"tab\"><i class=\"bi bi-box-arrow-in-right\"></i> Sign In</button>\n\t\t\t\t\t\t\t{% if createAccountAllowed %}\n\t\t\t\t\t\t\t<button class=\"nav-link xxxxxx\" data-bs-toggle=\"tab\" data-bs-target=\"#EE055CD4_E58F_4834_8020_986AE3F8D67D\" type=\"button\" role=\"tab\"><i class=\"bi bi-person-plus\"></i> Sign Up</button>\n\t\t\t\t\t\t\t{% endif %}\n\t\t\t\t\t\t\t{% if changePasswordAllowed %}\n\t\t\t\t\t\t\t<button class=\"nav-link xxxxxx\" data-bs-toggle=\"tab\" data-bs-target=\"#DA2047A2_9E5D_420D_B6E7_FA261D2EF10F\" type=\"button\" role=\"tab\"><i class=\"bi bi-bandaid\"></i> Reset Password</button>\n\t\t\t\t\t\t\t{% endif %}\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</nav>\n\n\t\t\t\t\t<div class=\"tab-content px-3 pb-3\" style=\"height: 390px; overflow-y: scroll;\">\n\n\t\t\t\t\t\t<!-- *************************************************************************************** -->\n\n\t\t\t\t\t\t<form class=\"tab-pane fade show active\" role=\"tabpanel\" id=\"B7894CC1_1DAA_4A7E_B7D1_DBDF6F06AC73\">\n\n\t\t\t\t\t\t\t<h1 class=\"fw-bold\">{{ signInText|e }}</h1>\n\n\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t<label for=\"E64F24B2_33E6_4DED_9B24_28BE04219613\">Username<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"text\" name=\"username\" id=\"E64F24B2_33E6_4DED_9B24_28BE04219613\" required=\"required\" autocomplete=\"off\" autocapitalize=\"off\" spellcheck=\"false\" placeholder=\"Type your username...\" />\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t<label for=\"A4DFD039_034F_4D10_9668_385AEF4FBBB9\">Password<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"password\" name=\"password\" id=\"A4DFD039_034F_4D10_9668_385AEF4FBBB9\" required=\"required\" autocomplete=\"off\" autocapitalize=\"off\" spellcheck=\"false\" placeholder=\"Type your password...\" />\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t{% if passwordAuthenticationAllowed %}\n\t\t\t\t\t\t\t<button class=\"btn btn-primary shadow w-100 mt-3\" type=\"submit\">\n\t\t\t\t\t\t\t\tSign In by Username\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t{% endif %}\n\n\t\t\t\t\t\t\t{% if certificateAuthenticationAllowed %}\n\t\t\t\t\t\t\t<button class=\"btn btn-primary shadow w-100 mt-3\" type=\"button\" onclick=\"amiAuth.form_login2();\">\n\t\t\t\t\t\t\t\tSign In by Certificate\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t{% endif %}\n\n\t\t\t\t\t\t\t{% if ssoAuthenticationAllowed %}\n\t\t\t\t\t\t\t<button class=\"btn btn-light shadow w-100 mt-3\" type=\"button\" onclick=\"amiAuth.sso();\">\n\t\t\t\t\t\t\t\tSingle Sign-On\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t{% endif %}\n\n\t\t\t\t\t\t</form>\n\n\t\t\t\t\t\t<!-- *************************************************************************************** -->\n\n\t\t\t\t\t\t{% if createAccountAllowed %}\n\t\t\t\t\t\t<form class=\"tab-pane fade xxxx xxxxxx\" role=\"tabpanel\" id=\"EE055CD4_E58F_4834_8020_986AE3F8D67D\">\n\n\t\t\t\t\t\t\t<h1 class=\"fw-bold\">Sign Up</h1>\n\n\t\t\t\t\t\t\t{% if captchaAllowed %}\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"captcha_hash\" id=\"FD95B3FA_C808_0E08_2D1E_0FE0E3871101\" />\n\t\t\t\t\t\t\t{% endif %}\n\n\t\t\t\t\t\t\t<div class=\"bg-light2 p-2 mb-3\">\n\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"D752CE80_49C3_4BDC_8B1A_8ED6BD57C538\">First name<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"text\" name=\"first_name\" id=\"D752CE80_49C3_4BDC_8B1A_8ED6BD57C538\" tabindex=\"1\" required=\"required\" placeholder=\"Type your first name...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"A9A08864_6A32_45A4_8898_C167564DB8BB\">Username<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"text\" name=\"username\" id=\"A9A08864_6A32_45A4_8898_C167564DB8BB\" tabindex=\"3\" required=\"required\" placeholder=\"Choose a username...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"E6E30EEC_15EE_4FCF_9809_2B8EC2FEF388\">Password<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"password\" name=\"password\" id=\"E6E30EEC_15EE_4FCF_9809_2B8EC2FEF388\" tabindex=\"5\" required=\"required\" placeholder=\"Choose a password...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t{% if captchaAllowed %}\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Captcha</label>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-control form-control-sm\" id=\"AC9836E6_2A20_8711_39D5_0E8340561078\" style=\"background-size: 100% 100%;\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t{% endif %}\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"B3E6D18C_ABA3_402C_88A2_55FA99555A7A\">Last name<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"text\" name=\"last_name\" id=\"B3E6D18C_ABA3_402C_88A2_55FA99555A7A\" tabindex=\"2\" required=\"required\" placeholder=\"Type your last name...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"D1007165_B40F_4DAE_BA50_853F2C9DA32D\">Email<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"email\" class=\"form-control form-control-sm\" name=\"email\" id=\"D1007165_B40F_4DAE_BA50_853F2C9DA32D\" tabindex=\"4\" required=\"required\" placeholder=\"Type your email...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"CCD8E6F1_6DF8_4BDD_A0EC_C3C380830187\">Password<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"password\" name=\"xxxx\" id=\"CCD8E6F1_6DF8_4BDD_A0EC_C3C380830187\" tabindex=\"6\" required=\"required\" placeholder=\"Confirm the password...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t{% if captchaAllowed %}\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"F36FED50_1ACC_CD15_ABEC_6E06247BE2DD\">Captcha<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"text\" name=\"captcha_text\" id=\"F36FED50_1ACC_CD15_ABEC_6E06247BE2DD\" tabindex=\"7\" required=\"required\" placeholder=\"Confirm the captcha...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t{% endif %}\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"mb-1 text-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"custom-control custom-checkbox\">\n\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" class=\"custom-control-input\" name=\"attachCert\" id=\"A09AE316_7068_4BC1_96A9_6B87D28863FE\" tabindex=\"8\" checked=\"checked\" />\n\t\t\t\t\t\t\t\t\t\t<label class=\"custom-control-label\" for=\"A09AE316_7068_4BC1_96A9_6B87D28863FE\">Attach the current certificate</label>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<iframe class=\"form-control form-control-sm mb-3\" id=\"C3E94F6D_48E0_86C0_3534_691728E492F4\" style=\"padding: 1px; height: 220px; width: 100%;\"></iframe>\n\n\t\t\t\t\t\t\t<div class=\"text-end mb-3\">\n\t\t\t\t\t\t\t\t<div class=\"custom-control custom-checkbox\">\n\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" class=\"custom-control-input\" name=\"agree\" id=\"C443738D_16BD_469F_1430_84EC13924118\" tabindex=\"9\" xxxxxxx=\"xxxxxxx\" />\n\t\t\t\t\t\t\t\t\t<label class=\"custom-control-label\" for=\"C443738D_16BD_469F_1430_84EC13924118\">I agree with the privacy policy</label>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<div class=\"text-end mb-0\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-outline-secondary\" type=\"button\" data-bs-dismiss=\"modal\">Close</button>\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary shadowed\" type=\"submit\">Create</button>\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t</form>\n\t\t\t\t\t\t{% endif %}\n\n\t\t\t\t\t\t<!-- *************************************************************************************** -->\n\n\t\t\t\t\t\t{% if changePasswordAllowed %}\n\t\t\t\t\t\t<form class=\"tab-pane fade xxxx xxxxxx\" role=\"tabpanel\" id=\"DA2047A2_9E5D_420D_B6E7_FA261D2EF10F\">\n\n\t\t\t\t\t\t\t<h1 class=\"fw-bold\">Reset Password</h1>\n\n\t\t\t\t\t\t\t{% if captchaAllowed %}\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"captcha_hash\" id=\"A63C0110_E591_6FCE_6D7A_02EEBC094199\" />\n\t\t\t\t\t\t\t{% endif %}\n\n\t\t\t\t\t\t\t<div class=\"bg-light2 p-2 mb-3\">\n\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"mb-{% if captchaAllowed %}3{% else %}1{% endif %}\">\n\t\t\t\t\t\t\t\t\t\t\t<label for=\"F0B93AF7_6049_4271_B1C9_C494A012D6D0\">Username<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"text\" name=\"username\" id=\"F0B93AF7_6049_4271_B1C9_C494A012D6D0\" required=\"required\" placeholder=\"Type your username...\" />\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t{% if captchaAllowed %}\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mb-1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"EA79605C_6EFF_4C77_9D70_88254B00FD52\">Captcha<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-control form-control-sm\" id=\"EA79605C_6EFF_4C77_9D70_88254B00FD52\" style=\"background-size: 100% 100%;\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"mb-1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"ECCBE7F1_1D33_169C_313E_C462B19DCDA0\">Captcha<span class=\"text-danger\">*</span></label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-control form-control-sm\" type=\"text\" name=\"captcha_text\" id=\"ECCBE7F1_1D33_169C_313E_C462B19DCDA0\" tabindex=\"7\" required=\"required\" placeholder=\"Confirm the captcha...\" />\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t{% endif %}\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<div class=\"text-end\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-outline-secondary\" type=\"button\" data-bs-dismiss=\"modal\">Close</button>\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary shadowed\" type=\"submit\">Reset</button>\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t</form>\n\t\t\t\t\t\t{% endif %}\n\n\t\t\t\t\t\t<!-- *************************************************************************************** -->\n\n\t\t\t\t\t</div>\n\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n";
 ;// CONCATENATED MODULE: ./src/twigs/Modals/change_info_modal.twig
@@ -36213,13 +36262,17 @@ function loadSubAppByURL(defaultSubApp, defaultUserData) {
       }
       const subapp = json['subapp'] || defaultSubApp;
       const userdata = json['userdata'] || defaultUserData;
-      loadSubApp(subapp, userdata, {
-        defaultSubApp: defaultSubApp
-      }).then(() => {
+      loadSubApp(subapp, userdata).then(() => {
         result.resolve();
       }, message => {
         result.reject(message);
       });
+    });
+  } else if (args['u']) {
+    loadSubApp('UserDashboard', args['u']).then(() => {
+      result.resolve();
+    }, message => {
+      result.reject(message);
     });
   } else {
     if (!js_AMIRouter.check()) {
@@ -36575,7 +36628,7 @@ class AMIWebApp {
   #noBootstrap = false;
   #noMoment = false;
   #noSelect2 = false;
-  #globalDeferred = $.Deferred();
+  #globalDeferred = (() => $.Deferred())();
   _isReady = false;
   webAppURL = '';
   scriptURL = '';
@@ -36649,64 +36702,64 @@ class AMIWebApp {
   isEmbedded() {
     return this.#embedded;
   }
-  _internal_then = _internal_then;
-  _internal_always = _internal_always;
-  typeOf = typeOf;
-  asArray = asArray;
-  isString = isString;
-  isArray = isArray;
-  isObject = isObject;
-  isSet = isSet;
-  isMap = isMap;
-  setupParams = setupParams;
-  setup = setup;
-  getStack = getStack;
-  lock = lock;
-  unlock = unlock;
-  modalEnter = modalEnter;
-  modalLeave = modalLeave;
-  canLeave = canLeave;
-  error = error;
-  info = info;
-  success = success;
-  warning = warning;
-  flush = flush;
-  base64Encode = base64Encode;
-  base64Decode = base64Decode;
-  textToHtml = textToHtml;
-  htmlToText = htmlToText;
-  textToString = textToString;
-  stringToText = stringToText;
-  htmlToString = htmlToString;
-  stringToHtml = stringToHtml;
-  textToSQL = textToSQL;
-  sqlToText = sqlToText;
-  fillBreadcrumb = fillBreadcrumb;
-  replaceHTML = replaceHTML;
-  prependHTML = prependHTML;
-  appendHTML = appendHTML;
-  parentHTML = parentHTML;
-  formatTWIG = formatTWIG;
-  renderJSDoc = renderJSDoc;
-  jspath = (jspath_default()).apply;
-  loadResources = loadResources;
-  loadSheets = loadSheets;
-  loadScripts = loadScripts;
-  loadJSONs = loadJSONs;
-  loadXMLs = loadXMLs;
-  loadHTMLs = loadHTMLs;
-  loadTWIGs = loadTWIGs;
-  loadTexts = loadTexts;
-  _subapps = _subapps;
-  loadSubApp = loadSubApp;
-  loadSubAppAlt = loadSubAppAlt;
-  loadSubAppByURL = loadSubAppByURL;
-  _controls = _controls;
-  loadControl = loadControl;
-  createControl = createControl;
-  createControlInBody = createControlInBody;
-  createControlInContainer = createControlInContainer;
-  createControlFromWebLink = createControlFromWebLink;
+  _internal_then = (() => _internal_then)();
+  _internal_always = (() => _internal_always)();
+  typeOf = (() => typeOf)();
+  asArray = (() => asArray)();
+  isString = (() => isString)();
+  isArray = (() => isArray)();
+  isObject = (() => isObject)();
+  isSet = (() => isSet)();
+  isMap = (() => isMap)();
+  setupParams = (() => setupParams)();
+  setup = (() => setup)();
+  getStack = (() => getStack)();
+  lock = (() => lock)();
+  unlock = (() => unlock)();
+  modalEnter = (() => modalEnter)();
+  modalLeave = (() => modalLeave)();
+  canLeave = (() => canLeave)();
+  error = (() => error)();
+  info = (() => info)();
+  success = (() => success)();
+  warning = (() => warning)();
+  flush = (() => flush)();
+  base64Encode = (() => base64Encode)();
+  base64Decode = (() => base64Decode)();
+  textToHtml = (() => textToHtml)();
+  htmlToText = (() => htmlToText)();
+  textToString = (() => textToString)();
+  stringToText = (() => stringToText)();
+  htmlToString = (() => htmlToString)();
+  stringToHtml = (() => stringToHtml)();
+  textToSQL = (() => textToSQL)();
+  sqlToText = (() => sqlToText)();
+  fillBreadcrumb = (() => fillBreadcrumb)();
+  replaceHTML = (() => replaceHTML)();
+  prependHTML = (() => prependHTML)();
+  appendHTML = (() => appendHTML)();
+  parentHTML = (() => parentHTML)();
+  formatTWIG = (() => formatTWIG)();
+  renderJSDoc = (() => renderJSDoc)();
+  jspath = (() => (jspath_default()).apply)();
+  loadResources = (() => loadResources)();
+  loadSheets = (() => loadSheets)();
+  loadScripts = (() => loadScripts)();
+  loadJSONs = (() => loadJSONs)();
+  loadXMLs = (() => loadXMLs)();
+  loadHTMLs = (() => loadHTMLs)();
+  loadTWIGs = (() => loadTWIGs)();
+  loadTexts = (() => loadTexts)();
+  _subapps = (() => _subapps)();
+  loadSubApp = (() => loadSubApp)();
+  loadSubAppAlt = (() => loadSubAppAlt)();
+  loadSubAppByURL = (() => loadSubAppByURL)();
+  _controls = (() => _controls)();
+  loadControl = (() => loadControl)();
+  createControl = (() => createControl)();
+  createControlInBody = (() => createControlInBody)();
+  createControlInContainer = (() => createControlInContainer)();
+  createControlFromWebLink = (() => createControlFromWebLink)();
   onReady(userdata) {
     if (!this.#embedded) {
       alert('error: \'amiWebApp.onReady()\' must be overloaded!');
@@ -36762,7 +36815,7 @@ class AMIWebApp {
               CONTACT_EMAIL: contactEmail,
               ABOUT_URL: aboutURL
             };
-            const themeURL = (js_AMIRouter.getWebAppArgs()['subapp'] || '').toLowerCase() === 'userdashboard' ? dashboardThemeURL : defaultThemeURL;
+            const themeURL = (js_AMIRouter.getWebAppArgs()['subapp'] || '').toLowerCase() === 'userdashboard' || js_AMIRouter.getWebAppArgs()['u'] ? dashboardThemeURL : defaultThemeURL;
             $.ajax({
               url: themeURL,
               cache: true,
@@ -38591,7 +38644,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, defaultSubApp, hash, cache)",
+        "desc": "dictionary of optional parameters (context, hash, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
@@ -38621,7 +38674,7 @@ class AMIWebApp {
       }, {
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (context, defaultSubApp, hash, cache)",
+        "desc": "dictionary of optional parameters (context, hash, cache)",
         "default": "{}",
         "optional": true,
         "nullable": ""
