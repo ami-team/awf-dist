@@ -9577,7 +9577,7 @@ function json() {
 /* harmony export */ });
 /* unused harmony exports DocInput, HighlightStyle, StringStream, TreeIndentContext, bidiIsolates, bracketMatching, codeFolding, ensureSyntaxTree, foldAll, foldCode, foldEffect, foldKeymap, foldState, foldable, foldedRanges, forceParsing, highlightingFor, indentOnInput, indentRange, indentService, language, syntaxParserRunning, syntaxTreeAvailable, toggleFold, unfoldAll, unfoldCode, unfoldEffect */
 /* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(413);
-/* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5817);
+/* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1001);
 /* harmony import */ var _codemirror_view__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5177);
 /* harmony import */ var _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5016);
 /* harmony import */ var style_mod__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1785);
@@ -11840,40 +11840,128 @@ const marks = {
 
 /***/ }),
 
-/***/ 5817:
+/***/ 1001:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   $t: () => (/* binding */ EditorState),
-/* harmony export */   EY: () => (/* binding */ Text),
-/* harmony export */   FB: () => (/* binding */ RangeValue),
-/* harmony export */   Fh: () => (/* binding */ codePointSize),
-/* harmony export */   Gu: () => (/* binding */ ChangeDesc),
-/* harmony export */   Je: () => (/* binding */ CharCategory),
-/* harmony export */   MK: () => (/* binding */ fromCodePoint),
-/* harmony export */   Nb: () => (/* binding */ Prec),
-/* harmony export */   OF: () => (/* binding */ EditorSelection),
-/* harmony export */   Pe: () => (/* binding */ StateEffect),
-/* harmony export */   QR: () => (/* binding */ combineConfig),
-/* harmony export */   VR: () => (/* binding */ ChangeSet),
-/* harmony export */   YH: () => (/* binding */ Annotation),
-/* harmony export */   ZX: () => (/* binding */ Transaction),
-/* harmony export */   iR: () => (/* binding */ MapMode),
-/* harmony export */   kn: () => (/* binding */ findColumn),
-/* harmony export */   om: () => (/* binding */ RangeSet),
-/* harmony export */   sU: () => (/* binding */ StateField),
-/* harmony export */   sj: () => (/* binding */ Facet),
-/* harmony export */   vB: () => (/* binding */ RangeSetBuilder),
-/* harmony export */   vS: () => (/* binding */ codePointAt),
-/* harmony export */   xx: () => (/* binding */ Compartment),
-/* harmony export */   y$: () => (/* binding */ countColumn),
-/* harmony export */   zK: () => (/* binding */ findClusterBreak)
-/* harmony export */ });
-/* unused harmony exports AnnotationType, Line, Range, SelectionRange, StateEffectType */
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  YH: () => (/* binding */ Annotation),
+  Gu: () => (/* binding */ ChangeDesc),
+  VR: () => (/* binding */ ChangeSet),
+  Je: () => (/* binding */ CharCategory),
+  xx: () => (/* binding */ Compartment),
+  OF: () => (/* binding */ EditorSelection),
+  $t: () => (/* binding */ EditorState),
+  sj: () => (/* binding */ Facet),
+  iR: () => (/* binding */ MapMode),
+  Nb: () => (/* binding */ Prec),
+  om: () => (/* binding */ RangeSet),
+  vB: () => (/* binding */ RangeSetBuilder),
+  FB: () => (/* binding */ RangeValue),
+  Pe: () => (/* binding */ StateEffect),
+  sU: () => (/* binding */ StateField),
+  EY: () => (/* binding */ Text),
+  ZX: () => (/* binding */ Transaction),
+  vS: () => (/* binding */ dist_codePointAt),
+  Fh: () => (/* binding */ dist_codePointSize),
+  QR: () => (/* binding */ combineConfig),
+  y$: () => (/* binding */ countColumn),
+  zK: () => (/* binding */ dist_findClusterBreak),
+  kn: () => (/* binding */ findColumn),
+  MK: () => (/* binding */ fromCodePoint)
+});
+
+// UNUSED EXPORTS: AnnotationType, Line, Range, SelectionRange, StateEffectType
+
+;// ./node_modules/@marijn/find-cluster-break/src/index.js
+let rangeFrom = [],
+  rangeTo = [];
+(() => {
+  let numbers = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map(s => s ? parseInt(s, 36) : 1);
+  for (let i = 0, n = 0; i < numbers.length; i++) (i % 2 ? rangeTo : rangeFrom).push(n = n + numbers[i]);
+})();
+function isExtendingChar(code) {
+  if (code < 768) return false;
+  for (let from = 0, to = rangeFrom.length;;) {
+    let mid = from + to >> 1;
+    if (code < rangeFrom[mid]) to = mid;else if (code >= rangeTo[mid]) from = mid + 1;else return true;
+    if (from == to) return false;
+  }
+}
+function isRegionalIndicator(code) {
+  return code >= 0x1F1E6 && code <= 0x1F1FF;
+}
+function check(code) {
+  for (let i = 0; i < rangeFrom.length; i++) {
+    if (rangeTo[i] > code) return rangeFrom[i] <= code;
+  }
+  return false;
+}
+const ZWJ = 0x200d;
+function findClusterBreak(str, pos, forward, includeExtending) {
+  if (forward === void 0) {
+    forward = true;
+  }
+  if (includeExtending === void 0) {
+    includeExtending = true;
+  }
+  return (forward ? nextClusterBreak : prevClusterBreak)(str, pos, includeExtending);
+}
+function nextClusterBreak(str, pos, includeExtending) {
+  if (pos == str.length) return pos;
+  if (pos && surrogateLow(str.charCodeAt(pos)) && surrogateHigh(str.charCodeAt(pos - 1))) pos--;
+  let prev = codePointAt(str, pos);
+  pos += codePointSize(prev);
+  while (pos < str.length) {
+    let next = codePointAt(str, pos);
+    if (prev == ZWJ || next == ZWJ || includeExtending && isExtendingChar(next)) {
+      pos += codePointSize(next);
+      prev = next;
+    } else if (isRegionalIndicator(next)) {
+      let countBefore = 0,
+        i = pos - 2;
+      while (i >= 0 && isRegionalIndicator(codePointAt(str, i))) {
+        countBefore++;
+        i -= 2;
+      }
+      if (countBefore % 2 == 0) break;else pos += 2;
+    } else {
+      break;
+    }
+  }
+  return pos;
+}
+function prevClusterBreak(str, pos, includeExtending) {
+  while (pos > 0) {
+    let found = nextClusterBreak(str, pos - 2, includeExtending);
+    if (found < pos) return found;
+    pos--;
+  }
+  return 0;
+}
+function codePointAt(str, pos) {
+  let code0 = str.charCodeAt(pos);
+  if (!surrogateHigh(code0) || pos + 1 == str.length) return code0;
+  let code1 = str.charCodeAt(pos + 1);
+  if (!surrogateLow(code1)) return code0;
+  return (code0 - 0xd800 << 10) + (code1 - 0xdc00) + 0x10000;
+}
+function surrogateLow(ch) {
+  return ch >= 0xDC00 && ch < 0xE000;
+}
+function surrogateHigh(ch) {
+  return ch >= 0xD800 && ch < 0xDC00;
+}
+function codePointSize(code) {
+  return code < 0x10000 ? 1 : 2;
+}
+;// ./node_modules/@codemirror/state/dist/index.js
 function _createForOfIteratorHelperLoose(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (t) return (t = t.call(r)).next.bind(t); if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var o = 0; return function () { return o >= r.length ? { done: !0 } : { done: !1, value: r[o++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+
 class Text {
   lineAt(pos) {
     if (pos < 0 || pos > this.length) throw new RangeError(`Invalid position ${pos} in document of length ${this.length}`);
@@ -12397,68 +12485,26 @@ function clip(text, from, to) {
   from = Math.max(0, Math.min(text.length, from));
   return [from, Math.max(from, Math.min(text.length, to))];
 }
-let extend = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map(s => s ? parseInt(s, 36) : 1);
-for (let i = 1; i < extend.length; i++) extend[i] += extend[i - 1];
-function isExtendingChar(code) {
-  for (let i = 1; i < extend.length; i += 2) if (extend[i] > code) return extend[i - 1] <= code;
-  return false;
-}
-function isRegionalIndicator(code) {
-  return code >= 0x1F1E6 && code <= 0x1F1FF;
-}
-const ZWJ = 0x200d;
-function findClusterBreak(str, pos, forward, includeExtending) {
+function dist_findClusterBreak(str, pos, forward, includeExtending) {
   if (forward === void 0) {
     forward = true;
   }
   if (includeExtending === void 0) {
     includeExtending = true;
   }
-  return (forward ? nextClusterBreak : prevClusterBreak)(str, pos, includeExtending);
+  return findClusterBreak(str, pos, forward, includeExtending);
 }
-function nextClusterBreak(str, pos, includeExtending) {
-  if (pos == str.length) return pos;
-  if (pos && surrogateLow(str.charCodeAt(pos)) && surrogateHigh(str.charCodeAt(pos - 1))) pos--;
-  let prev = codePointAt(str, pos);
-  pos += codePointSize(prev);
-  while (pos < str.length) {
-    let next = codePointAt(str, pos);
-    if (prev == ZWJ || next == ZWJ || includeExtending && isExtendingChar(next)) {
-      pos += codePointSize(next);
-      prev = next;
-    } else if (isRegionalIndicator(next)) {
-      let countBefore = 0,
-        i = pos - 2;
-      while (i >= 0 && isRegionalIndicator(codePointAt(str, i))) {
-        countBefore++;
-        i -= 2;
-      }
-      if (countBefore % 2 == 0) break;else pos += 2;
-    } else {
-      break;
-    }
-  }
-  return pos;
-}
-function prevClusterBreak(str, pos, includeExtending) {
-  while (pos > 0) {
-    let found = nextClusterBreak(str, pos - 2, includeExtending);
-    if (found < pos) return found;
-    pos--;
-  }
-  return 0;
-}
-function surrogateLow(ch) {
+function dist_surrogateLow(ch) {
   return ch >= 0xDC00 && ch < 0xE000;
 }
-function surrogateHigh(ch) {
+function dist_surrogateHigh(ch) {
   return ch >= 0xD800 && ch < 0xDC00;
 }
-function codePointAt(str, pos) {
+function dist_codePointAt(str, pos) {
   let code0 = str.charCodeAt(pos);
-  if (!surrogateHigh(code0) || pos + 1 == str.length) return code0;
+  if (!dist_surrogateHigh(code0) || pos + 1 == str.length) return code0;
   let code1 = str.charCodeAt(pos + 1);
-  if (!surrogateLow(code1)) return code0;
+  if (!dist_surrogateLow(code1)) return code0;
   return (code0 - 0xd800 << 10) + (code1 - 0xdc00) + 0x10000;
 }
 function fromCodePoint(code) {
@@ -12466,7 +12512,7 @@ function fromCodePoint(code) {
   code -= 0x10000;
   return String.fromCharCode((code >> 10) + 0xd800, (code & 1023) + 0xdc00);
 }
-function codePointSize(code) {
+function dist_codePointSize(code) {
   return code < 0x10000 ? 1 : 2;
 }
 const DefaultSplit = /\r\n?|\n/;
@@ -12766,7 +12812,7 @@ function addSection(sections, len, ins, forceJoin) {
   }
   if (len == 0 && ins <= 0) return;
   let last = sections.length - 2;
-  if (last >= 0 && ins <= 0 && ins == sections[last + 1]) sections[last] += len;else if (len == 0 && sections[last] == 0) sections[last + 1] += ins;else if (forceJoin) {
+  if (last >= 0 && ins <= 0 && ins == sections[last + 1]) sections[last] += len;else if (last >= 0 && len == 0 && sections[last] == 0) sections[last + 1] += ins;else if (forceJoin) {
     sections[last] += len;
     sections[last + 1] += ins;
   } else sections.push(len, ins);
@@ -12816,7 +12862,9 @@ function mapSet(setA, setB, before, mkSet) {
   let a = new SectionIter(setA),
     b = new SectionIter(setB);
   for (let inserted = -1;;) {
-    if (a.ins == -1 && b.ins == -1) {
+    if (a.done && b.len || b.done && a.len) {
+      throw new Error("Mismatched change set lengths");
+    } else if (a.ins == -1 && b.ins == -1) {
       let len = Math.min(a.len, b.len);
       addSection(sections, len, -1);
       a.forward(len);
@@ -13961,12 +14009,12 @@ class EditorState {
     let start = pos - from,
       end = pos - from;
     while (start > 0) {
-      let prev = findClusterBreak(text, start, false);
+      let prev = dist_findClusterBreak(text, start, false);
       if (cat(text.slice(prev, start)) != CharCategory.Word) break;
       start = prev;
     }
     while (end < length) {
-      let next = findClusterBreak(text, end);
+      let next = dist_findClusterBreak(text, end);
       if (cat(text.slice(end, next)) != CharCategory.Word) break;
       end = next;
     }
@@ -14651,7 +14699,8 @@ function compare(a, startA, b, startB, length, comparator) {
   let pos = startB,
     dPos = startB - startA;
   for (;;) {
-    let diff = a.to + dPos - b.to || a.endSide - b.endSide;
+    let dEnd = a.to + dPos - b.to,
+      diff = dEnd || a.endSide - b.endSide;
     let end = diff < 0 ? a.to + dPos : b.to,
       clipEnd = Math.min(end, endB);
     if (a.point || b.point) {
@@ -14660,6 +14709,7 @@ function compare(a, startA, b, startB, length, comparator) {
       if (clipEnd > pos && !sameValues(a.active, b.active)) comparator.compareRange(pos, clipEnd, a.active, b.active);
     }
     if (end > endB) break;
+    if ((dEnd || a.openEnd != b.openEnd) && comparator.boundChange) comparator.boundChange(end);
     pos = end;
     if (diff <= 0) a.next();
     if (diff >= 0) b.next();
@@ -14698,7 +14748,7 @@ function countColumn(string, tabSize, to) {
       i++;
     } else {
       n++;
-      i = findClusterBreak(string, i);
+      i = dist_findClusterBreak(string, i);
     }
   }
   return n;
@@ -14708,7 +14758,7 @@ function findColumn(string, col, tabSize, strict) {
     if (n >= col) return i;
     if (i == string.length) break;
     n += string.charCodeAt(i) == 9 ? tabSize - n % tabSize : 1;
-    i = findClusterBreak(string, i);
+    i = dist_findClusterBreak(string, i);
   }
   return strict === true ? -1 : string.length;
 }
@@ -14740,8 +14790,8 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: BidiSpan, BlockInfo, BlockType, MatchDecorator, RectangleMarker, ViewUpdate, __test, closeHoverTooltips, crosshairCursor, drawSelection, dropCursor, getDrawSelectionConfig, getPanel, gutterLineClass, gutterWidgetClass, gutters, hasHoverTooltips, highlightActiveLine, highlightActiveLineGutter, highlightTrailingWhitespace, highlightWhitespace, hoverTooltip, layer, lineNumberMarkers, lineNumberWidgetMarker, panels, placeholder, rectangularSelection, repositionTooltips, runScopeHandlers, scrollPastEnd, showPanel, tooltips
 
-// EXTERNAL MODULE: ./node_modules/@codemirror/state/dist/index.js
-var state_dist = __webpack_require__(5817);
+// EXTERNAL MODULE: ./node_modules/@codemirror/state/dist/index.js + 1 modules
+var state_dist = __webpack_require__(1001);
 // EXTERNAL MODULE: ./node_modules/style-mod/src/style-mod.js
 var style_mod = __webpack_require__(1785);
 ;// ./node_modules/w3c-keyname/index.js
@@ -32173,8 +32223,8 @@ if (typeof window !== "undefined") {
 /* harmony default export */ const esm = (flatpickr);
 // EXTERNAL MODULE: ./node_modules/@codemirror/view/dist/index.js + 1 modules
 var dist = __webpack_require__(5177);
-// EXTERNAL MODULE: ./node_modules/@codemirror/state/dist/index.js
-var state_dist = __webpack_require__(5817);
+// EXTERNAL MODULE: ./node_modules/@codemirror/state/dist/index.js + 1 modules
+var state_dist = __webpack_require__(1001);
 // EXTERNAL MODULE: ./node_modules/@codemirror/language/dist/index.js
 var language_dist = __webpack_require__(4658);
 // EXTERNAL MODULE: ./node_modules/@lezer/common/dist/index.js
