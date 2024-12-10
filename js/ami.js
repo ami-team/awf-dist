@@ -17442,7 +17442,7 @@ class DocView extends ContentView {
     if (mustRead || !this.view.observer.selectionRange.focusNode) this.view.observer.readSelectionRange();
     let activeElt = this.view.root.activeElement,
       focused = activeElt == this.dom;
-    let selectionNotFocus = !focused && hasSelection(this.dom, this.view.observer.selectionRange) && !(activeElt && this.dom.contains(activeElt));
+    let selectionNotFocus = !focused && !(this.view.state.facet(editable) || this.dom.tabIndex > -1) && hasSelection(this.dom, this.view.observer.selectionRange) && !(activeElt && this.dom.contains(activeElt));
     if (!(focused || fromPointer || selectionNotFocus)) return;
     let force = this.forceSelection;
     this.forceSelection = false;
@@ -17848,6 +17848,9 @@ let DecorationComparator$1 = class DecorationComparator {
   }
   comparePoint(from, to) {
     addRange(from, to, this.changes);
+  }
+  boundChange(pos) {
+    addRange(pos, pos, this.changes);
   }
 };
 function findChangedDeco(a, b, diff) {
@@ -21944,6 +21947,7 @@ class EditorView {
       spellcheck: "false",
       autocorrect: "off",
       autocapitalize: "off",
+      writingsuggestions: "false",
       translate: "no",
       contenteditable: !this.state.facet(editable) ? "false" : "true",
       class: "cm-content",
