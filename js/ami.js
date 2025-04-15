@@ -12961,7 +12961,8 @@ function fullParser(spec) {
     copyState: spec.copyState || defaultCopyState,
     indent: spec.indent || (() => null),
     languageData: spec.languageData || {},
-    tokenTable: spec.tokenTable || noTokens
+    tokenTable: spec.tokenTable || noTokens,
+    mergeTokens: spec.mergeTokens !== false
   };
 }
 function defaultCopyState(state) {
@@ -13185,7 +13186,7 @@ class Parse {
       size += this.chunk.length - len0;
     }
     let last = this.chunk.length - 4;
-    if (size == 4 && last >= 0 && this.chunk[last] == id && this.chunk[last + 2] == from) this.chunk[last + 2] = to;else this.chunk.push(id, from, to, size);
+    if (this.lang.streamParser.mergeTokens && size == 4 && last >= 0 && this.chunk[last] == id && this.chunk[last + 2] == from) this.chunk[last + 2] = to;else this.chunk.push(id, from, to, size);
     return offset;
   }
   parseLine(context) {
@@ -15573,7 +15574,7 @@ function coordsInChildren(view, pos, side) {
       if (end >= pos) {
         if (child.children.length) {
           scan(child, pos - off);
-        } else if ((!after || after.isHidden && side > 0) && (end > pos || off == end && child.getSide() > 0)) {
+        } else if ((!after || after.isHidden && (side > 0 || onSameLine(after, child))) && (end > pos || off == end && child.getSide() > 0)) {
           after = child;
           afterPos = pos - off;
         } else if (off < pos || off == end && child.getSide() < 0 && !child.isHidden) {
@@ -15594,6 +15595,11 @@ function fallbackRect(view) {
   if (!last) return view.dom.getBoundingClientRect();
   let rects = clientRectsFor(last);
   return rects[rects.length - 1] || null;
+}
+function onSameLine(a, b) {
+  let posA = a.coordsAt(0, 1),
+    posB = b.coordsAt(0, 1);
+  return posA && posB && posB.top < posA.bottom;
 }
 function combineAttrs(source, target) {
   for (let name in source) {
@@ -20534,7 +20540,8 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
   ".cm-placeholder": {
     color: "#888",
     display: "inline-block",
-    verticalAlign: "top"
+    verticalAlign: "top",
+    userSelect: "none"
   },
   ".cm-highlightSpace": {
     backgroundImage: "radial-gradient(circle at 50% 55%, #aaa 20%, transparent 5%)",
@@ -22308,7 +22315,6 @@ const layerOrder = state_dist/* Facet */.sj.define();
 function dist_layer(config) {
   return [ViewPlugin.define(v => new LayerView(v, config)), layerOrder.of(config)];
 }
-const CanHidePrimary = !(browser.ios && browser.webkit && browser.webkit_version < 534);
 const selectionConfig = state_dist/* Facet */.sj.define({
   combine(configs) {
     return (0,state_dist/* combineConfig */.QR)(configs, {
@@ -22343,7 +22349,7 @@ const cursorLayer = dist_layer({
     for (var _iterator72 = _createForOfIteratorHelperLoose(state.selection.ranges), _step72; !(_step72 = _iterator72()).done;) {
       let r = _step72.value;
       let prim = r == state.selection.main;
-      if (r.empty ? !prim || CanHidePrimary : conf.drawRangeCursor) {
+      if (r.empty || conf.drawRangeCursor) {
         let className = prim ? "cm-cursor cm-cursor-primary" : "cm-cursor cm-cursor-secondary";
         let cursor = r.empty ? r : state_dist/* EditorSelection */.OF.cursor(r.head, r.head > r.anchor ? -1 : 1);
         for (var _iterator73 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, className, cursor)), _step73; !(_step73 = _iterator73()).done;) {
@@ -22378,13 +22384,15 @@ const selectionLayer = dist_layer({
   },
   class: "cm-selectionLayer"
 });
-const themeSpec = {
+const hideNativeSelection = state_dist/* Prec */.Nb.highest(EditorView.theme({
   ".cm-line": {
     "& ::selection, &::selection": {
       backgroundColor: "transparent !important"
-    }
+    },
+    caretColor: "transparent !important"
   },
   ".cm-content": {
+    caretColor: "transparent !important",
     "& :focus": {
       caretColor: "initial !important",
       "&::selection, & ::selection": {
@@ -22392,9 +22400,7 @@ const themeSpec = {
       }
     }
   }
-};
-if (CanHidePrimary) themeSpec[".cm-line"].caretColor = themeSpec[".cm-content"].caretColor = "transparent !important";
-const hideNativeSelection = state_dist/* Prec */.Nb.highest(EditorView.theme(themeSpec));
+}));
 const setDropCursorPos = state_dist/* StateEffect */.Pe.define({
   map(pos, mapping) {
     return pos == null ? null : mapping.mapPos(pos);
@@ -32316,7 +32322,7 @@ const blockComment = command(changeBlockComment, 1);
 const blockUncomment = command(changeBlockComment, 2);
 const toggleBlockCommentByLine = command((o, s) => changeBlockComment(o, s, selectedLineRanges(s)), 0);
 function getConfig(state, pos) {
-  let data = state.languageDataAt("commentTokens", pos);
+  let data = state.languageDataAt("commentTokens", pos, 1);
   return data.length ? data[0] : {};
 }
 const SearchMargin = 50;
