@@ -10826,10 +10826,10 @@ module.exports = __webpack_require__.p + "assets/fonts/OpenSans-Regular-webfont.
 /* harmony export */ });
 /* unused harmony exports DocInput, HighlightStyle, StringStream, TreeIndentContext, bidiIsolates, bracketMatching, codeFolding, ensureSyntaxTree, foldAll, foldCode, foldEffect, foldKeymap, foldState, foldable, foldedRanges, forceParsing, highlightingFor, indentOnInput, indentRange, indentService, language, syntaxParserRunning, syntaxTreeAvailable, toggleFold, unfoldAll, unfoldCode, unfoldEffect */
 /* harmony import */ var _lezer_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(413);
-/* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1001);
-/* harmony import */ var _codemirror_view__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5177);
-/* harmony import */ var _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5016);
-/* harmony import */ var style_mod__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1785);
+/* harmony import */ var _codemirror_state__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1001);
+/* harmony import */ var _codemirror_view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5177);
+/* harmony import */ var _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5016);
+/* harmony import */ var style_mod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1785);
 function _createForOfIteratorHelperLoose(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (t) return (t = t.call(r)).next.bind(t); if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var o = 0; return function () { return o >= r.length ? { done: !0 } : { done: !1, value: r[o++] }; }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
@@ -10841,7 +10841,7 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
 var _a;
 const languageDataProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 function defineLanguageFacet(baseData) {
-  return _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
+  return _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define({
     combine: baseData ? values => values.concat(baseData) : undefined
   });
 }
@@ -10850,13 +10850,13 @@ class Language {
   constructor(data, parser, extraExtensions = [], name = "") {
     this.data = data;
     this.name = name;
-    if (!_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t.prototype.hasOwnProperty("tree")) Object.defineProperty(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t.prototype, "tree", {
+    if (!_codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .EditorState */ .$t.prototype.hasOwnProperty("tree")) Object.defineProperty(_codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .EditorState */ .$t.prototype, "tree", {
       get() {
         return syntaxTree(this);
       }
     });
     this.parser = parser;
-    this.extension = [language.of(this), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t.languageData.of((state, pos, side) => {
+    this.extension = [language.of(this), _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .EditorState */ .$t.languageData.of((state, pos, side) => {
       let top = topNodeAt(state, pos, side),
         data = top.type.prop(languageDataProp);
       if (!data) return [];
@@ -10928,7 +10928,7 @@ class Language {
     return true;
   }
 }
-Language.setState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.define();
+Language.setState = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateEffect */ .Pe.define();
 function topNodeAt(state, pos, side) {
   let topLang = state.facet(language),
     tree = syntaxTree(state).topNode;
@@ -11219,7 +11219,7 @@ class LanguageState {
     return new LanguageState(parseState);
   }
 }
-Language.state = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .sU.define({
+Language.state = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateField */ .sU.define({
   create: LanguageState.init,
   update(value, tr) {
     for (var _iterator5 = _createForOfIteratorHelperLoose(tr.effects), _step5; !(_step5 = _iterator5()).done;) {
@@ -11244,7 +11244,7 @@ if (typeof requestIdleCallback != "undefined") requestIdle = callback => {
   return () => idle < 0 ? clearTimeout(timeout) : cancelIdleCallback(idle);
 };
 const isInputPending = typeof navigator != "undefined" && ((_a = navigator.scheduling) === null || _a === void 0 ? void 0 : _a.isInputPending) ? () => navigator.scheduling.isInputPending() : null;
-const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(class ParseWorker {
+const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .ViewPlugin */ .Z9.fromClass(class ParseWorker {
   constructor(view) {
     this.view = view;
     this.working = null;
@@ -11305,7 +11305,7 @@ const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin 
   checkAsyncSchedule(cx) {
     if (cx.scheduleOn) {
       this.workScheduled++;
-      cx.scheduleOn.then(() => this.scheduleWork()).catch(err => (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .logException */ .c_)(this.view.state, err)).then(() => this.workScheduled--);
+      cx.scheduleOn.then(() => this.scheduleWork()).catch(err => (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .logException */ .c_)(this.view.state, err)).then(() => this.workScheduled--);
       cx.scheduleOn = null;
     }
   }
@@ -11322,11 +11322,11 @@ const parseWorker = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin 
     }
   }
 });
-const language = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
+const language = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define({
   combine(languages) {
     return languages.length ? languages[0] : null;
   },
-  enables: language => [Language.state, parseWorker, _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.contentAttributes.compute([language], state => {
+  enables: language => [Language.state, parseWorker, _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.contentAttributes.compute([language], state => {
     let lang = state.facet(language);
     return lang && lang.name ? {
       "data-language": lang.name
@@ -11400,8 +11400,8 @@ class LanguageDescription {
     return null;
   }
 }
-const indentService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define();
-const indentUnit = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
+const indentService = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define();
+const indentUnit = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define({
   combine: values => {
     if (!values.length) return "  ";
     let unit = values[0];
@@ -11428,7 +11428,7 @@ function indentString(state, cols) {
   return result;
 }
 function getIndentation(context, pos) {
-  if (context instanceof _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .EditorState */ .$t) context = new IndentContext(context);
+  if (context instanceof _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .EditorState */ .$t) context = new IndentContext(context);
   for (var _iterator1 = _createForOfIteratorHelperLoose(context.state.facet(indentService)), _step1; !(_step1 = _iterator1()).done;) {
     let service = _step1.value;
     let result = service(context, pos);
@@ -11510,7 +11510,7 @@ class IndentContext {
     return result;
   }
   countColumn(line, pos = line.length) {
-    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .countColumn */ .y$)(line, this.state.tabSize, pos);
+    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .countColumn */ .y$)(line, this.state.tabSize, pos);
   }
   lineIndent(pos, bias = 1) {
     let {
@@ -11693,7 +11693,7 @@ function indentOnInput() {
     }] : tr;
   });
 }
-const foldService = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define();
+const foldService = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define();
 const foldNodeProp = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeProp */ .uY();
 function foldInside(node) {
   let first = node.firstChild,
@@ -11740,10 +11740,10 @@ function mapRange(range, mapping) {
     to
   };
 }
-const foldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.define({
+const foldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateEffect */ .Pe.define({
   map: mapRange
 });
-const unfoldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.define({
+const unfoldEffect = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateEffect */ .Pe.define({
   map: mapRange
 });
 function selectedLines(view) {
@@ -11757,9 +11757,9 @@ function selectedLines(view) {
   }
   return lines;
 }
-const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .sU.define({
+const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateField */ .sU.define({
   create() {
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.none;
   },
   update(folded, tr) {
     if (tr.isUserEvent("delete")) tr.changes.iterChangedRanges((fromA, toA) => folded = clearTouchedFolds(folded, fromA, toA));
@@ -11770,7 +11770,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField *
         let {
           preparePlaceholder
         } = tr.state.facet(foldConfig);
-        let widget = !preparePlaceholder ? foldWidget : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.replace({
+        let widget = !preparePlaceholder ? foldWidget : _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.replace({
           widget: new PreparedFoldWidget(preparePlaceholder(tr.state, e.value))
         });
         folded = folded.update({
@@ -11787,7 +11787,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField *
     if (tr.selection) folded = clearTouchedFolds(folded, tr.selection.main.head);
     return folded;
   },
-  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.decorations.from(f),
+  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.decorations.from(f),
   toJSON(folded, state) {
     let ranges = [];
     folded.between(0, state.doc.length, (from, to) => {
@@ -11804,7 +11804,7 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField *
       if (typeof from != "number" || typeof to != "number") throw new RangeError("Invalid JSON for fold state");
       ranges.push(foldWidget.range(from, to));
     }
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.set(ranges, true);
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.set(ranges, true);
   }
 });
 function clearTouchedFolds(folded, from, to = from) {
@@ -11840,7 +11840,7 @@ function foldExists(folded, from, to) {
   return found;
 }
 function maybeEnable(state, other) {
-  return state.field(foldState, false) ? other : other.concat(_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateEffect */ .Pe.appendConfig.of(codeFolding()));
+  return state.field(foldState, false) ? other : other.concat(_codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateEffect */ .Pe.appendConfig.of(codeFolding()));
 }
 const foldCode = view => {
   for (var _iterator14 = _createForOfIteratorHelperLoose(selectedLines(view)), _step14; !(_step14 = _iterator14()).done;) {
@@ -11871,7 +11871,7 @@ const unfoldCode = view => {
 function announceFold(view, range, fold = true) {
   let lineFrom = view.state.doc.lineAt(range.from).number,
     lineTo = view.state.doc.lineAt(range.to).number;
-  return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.announce.of(`${view.state.phrase(fold ? "Folded lines" : "Unfolded lines")} ${lineFrom} ${view.state.phrase("to")} ${lineTo}.`);
+  return _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.announce.of(`${view.state.phrase(fold ? "Folded lines" : "Unfolded lines")} ${lineFrom} ${view.state.phrase("to")} ${lineTo}.`);
 }
 const foldAll = view => {
   let {
@@ -11949,9 +11949,9 @@ const defaultConfig = {
   preparePlaceholder: null,
   placeholderText: "…"
 };
-const foldConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
+const foldConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define({
   combine(values) {
-    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .QR)(values, defaultConfig);
+    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .combineConfig */ .QR)(values, defaultConfig);
   }
 });
 function codeFolding(config) {
@@ -11981,14 +11981,14 @@ function widgetToDOM(view, prepared) {
   element.onclick = onclick;
   return element;
 }
-const foldWidget = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.replace({
-  widget: new class extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .WidgetType */ .xO {
+const foldWidget = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.replace({
+  widget: new class extends _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .WidgetType */ .xO {
     toDOM(view) {
       return widgetToDOM(view, null);
     }
   }()
 });
-class PreparedFoldWidget extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .WidgetType */ .xO {
+class PreparedFoldWidget extends _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .WidgetType */ .xO {
   constructor(value) {
     super();
     this.value = value;
@@ -12007,7 +12007,7 @@ const foldGutterDefaults = {
   domEventHandlers: {},
   foldingChanged: () => false
 };
-class FoldMarker extends _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .GutterMarker */ .wJ {
+class FoldMarker extends _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .GutterMarker */ .wJ {
   constructor(config, open) {
     super();
     this.config = config;
@@ -12031,7 +12031,7 @@ function foldGutter(config = {}) {
   };
   let canFold = new FoldMarker(fullConfig, true),
     canUnfold = new FoldMarker(fullConfig, false);
-  let markers = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(class {
+  let markers = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .ViewPlugin */ .Z9.fromClass(class {
     constructor(view) {
       this.from = view.viewport.from;
       this.markers = this.buildMarkers(view);
@@ -12040,7 +12040,7 @@ function foldGutter(config = {}) {
       if (update.docChanged || update.viewportChanged || update.startState.facet(language) != update.state.facet(language) || update.startState.field(foldState, false) != update.state.field(foldState, false) || syntaxTree(update.startState) != syntaxTree(update.state) || fullConfig.foldingChanged(update)) this.markers = this.buildMarkers(update.view);
     }
     buildMarkers(view) {
-      let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .vB();
+      let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .RangeSetBuilder */ .vB();
       for (var _iterator17 = _createForOfIteratorHelperLoose(view.viewportLineBlocks), _step17; !(_step17 = _iterator17()).done;) {
         let line = _step17.value;
         let mark = findFold(view.state, line.from, line.to) ? canUnfold : foldable(view.state, line.from, line.to) ? canFold : null;
@@ -12052,11 +12052,11 @@ function foldGutter(config = {}) {
   let {
     domEventHandlers
   } = fullConfig;
-  return [markers, (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .gutter */ .cU)({
+  return [markers, (0,_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .gutter */ .cU)({
     class: "cm-foldGutter",
     markers(view) {
       var _a;
-      return ((_a = view.plugin(markers)) === null || _a === void 0 ? void 0 : _a.markers) || _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSet */ .om.empty;
+      return ((_a = view.plugin(markers)) === null || _a === void 0 ? void 0 : _a.markers) || _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .RangeSet */ .om.empty;
     },
     initialSpacer() {
       return new FoldMarker(fullConfig, false);
@@ -12084,7 +12084,7 @@ function foldGutter(config = {}) {
     }
   }), codeFolding()];
 }
-const baseTheme$1 = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.baseTheme({
+const baseTheme$1 = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.baseTheme({
   ".cm-foldPlaceholder": {
     backgroundColor: "#eee",
     border: "1px solid #ddd",
@@ -12104,14 +12104,14 @@ class HighlightStyle {
     this.specs = specs;
     let modSpec;
     function def(spec) {
-      let cls = style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule */ .G.newName();
+      let cls = style_mod__WEBPACK_IMPORTED_MODULE_4__/* .StyleModule */ .G.newName();
       (modSpec || (modSpec = Object.create(null)))["." + cls] = spec;
       return cls;
     }
     const all = typeof options.all == "string" ? options.all : options.all ? def(options.all) : undefined;
     const scopeOpt = options.scope;
     this.scope = scopeOpt instanceof Language ? type => type.prop(languageDataProp) == scopeOpt.data : scopeOpt ? type => type == scopeOpt : undefined;
-    this.style = (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tagHighlighter */ .az)(specs.map(style => ({
+    this.style = (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tagHighlighter */ .az)(specs.map(style => ({
       tag: style.tag,
       class: style.class || def(Object.assign({}, style, {
         tag: null
@@ -12119,15 +12119,15 @@ class HighlightStyle {
     })), {
       all
     }).style;
-    this.module = modSpec ? new style_mod__WEBPACK_IMPORTED_MODULE_2__/* .StyleModule */ .G(modSpec) : null;
+    this.module = modSpec ? new style_mod__WEBPACK_IMPORTED_MODULE_4__/* .StyleModule */ .G(modSpec) : null;
     this.themeType = options.themeType;
   }
   static define(specs, options) {
     return new HighlightStyle(specs, options || {});
   }
 }
-const highlighterFacet = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define();
-const fallbackHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
+const highlighterFacet = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define();
+const fallbackHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define({
   combine(values) {
     return values.length ? [values[0]] : null;
   }
@@ -12140,11 +12140,11 @@ function syntaxHighlighting(highlighter, options) {
   let ext = [treeHighlighter],
     themeType;
   if (highlighter instanceof HighlightStyle) {
-    if (highlighter.module) ext.push(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.styleModule.of(highlighter.module));
+    if (highlighter.module) ext.push(_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.styleModule.of(highlighter.module));
     themeType = highlighter.themeType;
   }
-  if (options === null || options === void 0 ? void 0 : options.fallback) ext.push(fallbackHighlighter.of(highlighter));else if (themeType) ext.push(highlighterFacet.computeN([_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.darkTheme], state => {
-    return state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.darkTheme) == (themeType == "dark") ? [highlighter] : [];
+  if (options === null || options === void 0 ? void 0 : options.fallback) ext.push(fallbackHighlighter.of(highlighter));else if (themeType) ext.push(highlighterFacet.computeN([_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.darkTheme], state => {
+    return state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.darkTheme) == (themeType == "dark") ? [highlighter] : [];
   }));else ext.push(highlighterFacet.of(highlighter));
   return ext;
 }
@@ -12187,15 +12187,15 @@ class TreeHighlighter {
     }
   }
   buildDeco(view, highlighters) {
-    if (!highlighters || !this.tree.length) return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
-    let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .vB();
+    if (!highlighters || !this.tree.length) return _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.none;
+    let builder = new _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .RangeSetBuilder */ .vB();
     for (var _iterator19 = _createForOfIteratorHelperLoose(view.visibleRanges), _step19; !(_step19 = _iterator19()).done;) {
       let {
         from,
         to
       } = _step19.value;
-      (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .highlightTree */ .DM)(this.tree, highlighters, (from, to, style) => {
-        builder.add(from, to, this.markCache[style] || (this.markCache[style] = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
+      (0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .highlightTree */ .DM)(this.tree, highlighters, (from, to, style) => {
+        builder.add(from, to, this.markCache[style] || (this.markCache[style] = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.mark({
           class: style
         })));
       }, from, to);
@@ -12203,69 +12203,69 @@ class TreeHighlighter {
     return builder.finish();
   }
 }
-const treeHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec */ .Nb.high(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(TreeHighlighter, {
+const treeHighlighter = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Prec */ .Nb.high(_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .ViewPlugin */ .Z9.fromClass(TreeHighlighter, {
   decorations: v => v.decorations
 }));
 const defaultHighlightStyle = HighlightStyle.define([{
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.meta,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.meta,
   color: "#404740"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.link,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.link,
   textDecoration: "underline"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.heading,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.heading,
   textDecoration: "underline",
   fontWeight: "bold"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.emphasis,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.emphasis,
   fontStyle: "italic"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.strong,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.strong,
   fontWeight: "bold"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.strikethrough,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.strikethrough,
   textDecoration: "line-through"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.keyword,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.keyword,
   color: "#708"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.atom, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.bool, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.url, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.contentSeparator, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.labelName],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.atom, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.bool, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.url, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.contentSeparator, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.labelName],
   color: "#219"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.literal, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.inserted],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.literal, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.inserted],
   color: "#164"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.string, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.deleted],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.string, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.deleted],
   color: "#a11"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.regexp, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.escape, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.string)],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.regexp, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.escape, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.string)],
   color: "#e40"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.variableName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.variableName),
   color: "#00f"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.local(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.variableName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.local(_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.variableName),
   color: "#30a"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.typeName, _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.namespace],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.typeName, _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.namespace],
   color: "#085"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.className,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.className,
   color: "#167"
 }, {
-  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.variableName), _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.macroName],
+  tag: [_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.special(_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.variableName), _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.macroName],
   color: "#256"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.propertyName),
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.definition(_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.propertyName),
   color: "#00c"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.comment,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.comment,
   color: "#940"
 }, {
-  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A.invalid,
+  tag: _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A.invalid,
   color: "#f00"
 }]);
-const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.baseTheme({
+const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.baseTheme({
   "&.cm-focused .cm-matchingBracket": {
     backgroundColor: "#328c8252"
   },
@@ -12275,9 +12275,9 @@ const baseTheme = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */
 });
 const DefaultScanDist = 10000,
   DefaultBrackets = "()[]{}";
-const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
+const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define({
   combine(configs) {
-    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .combineConfig */ .QR)(configs, {
+    return (0,_codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .combineConfig */ .QR)(configs, {
       afterCursor: true,
       brackets: DefaultBrackets,
       maxScanDistance: DefaultScanDist,
@@ -12285,10 +12285,10 @@ const bracketMatchingConfig = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .
     });
   }
 });
-const matchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
+const matchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.mark({
     class: "cm-matchingBracket"
   }),
-  nonmatchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
+  nonmatchingMark = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.mark({
     class: "cm-nonmatchingBracket"
   });
 function defaultRenderMatch(match) {
@@ -12298,9 +12298,9 @@ function defaultRenderMatch(match) {
   if (match.end) decorations.push(mark.range(match.end.from, match.end.to));
   return decorations;
 }
-const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .StateField */ .sU.define({
+const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateField */ .sU.define({
   create() {
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.none;
   },
   update(deco, tr) {
     if (!tr.docChanged && !tr.selection) return deco;
@@ -12312,9 +12312,9 @@ const bracketMatchingState = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .S
       let match = matchBrackets(tr.state, range.head, -1, config) || range.head > 0 && matchBrackets(tr.state, range.head - 1, 1, config) || config.afterCursor && (matchBrackets(tr.state, range.head, 1, config) || range.head < tr.state.doc.length && matchBrackets(tr.state, range.head + 1, -1, config));
       if (match) decorations = decorations.concat(config.renderMatch(match, tr.state));
     }
-    return _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.set(decorations, true);
+    return _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.set(decorations, true);
   },
-  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.decorations.from(f)
+  provide: f => _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.decorations.from(f)
 });
 const bracketMatchingUnique = [bracketMatchingState, baseTheme];
 function bracketMatching(config = {}) {
@@ -12847,7 +12847,7 @@ function createTokenType(extra, tagStr) {
     let found = [];
     for (var _iterator23 = _createForOfIteratorHelperLoose(name.split(".")), _step23; !(_step23 = _iterator23()).done;) {
       let part = _step23.value;
-      let value = extra[part] || _lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .tags */ ._A[part];
+      let value = extra[part] || _lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .tags */ ._A[part];
       if (!value) {
         warnForPart(part, `Unknown highlighting tag ${part}`);
       } else if (typeof value == "function") {
@@ -12869,7 +12869,7 @@ function createTokenType(extra, tagStr) {
   let type = byTag[key] = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .NodeType */ .Z6.define({
     id: typeArray.length,
     name,
-    props: [(0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_1__/* .styleTags */ .pn)({
+    props: [(0,_lezer_highlight__WEBPACK_IMPORTED_MODULE_3__/* .styleTags */ .pn)({
       [name]: tags$1
     })]
   });
@@ -12900,7 +12900,7 @@ function changeAddsRTL(change) {
   });
   return added;
 }
-const alwaysIsolate = _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Facet */ .sj.define({
+const alwaysIsolate = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Facet */ .sj.define({
   combine: values => values.some(x => x)
 });
 function bidiIsolates(options = {}) {
@@ -12908,15 +12908,15 @@ function bidiIsolates(options = {}) {
   if (options.alwaysIsolate) extensions.push(alwaysIsolate.of(true));
   return extensions;
 }
-const isolateMarks = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin */ .Z9.fromClass(class {
+const isolateMarks = _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .ViewPlugin */ .Z9.fromClass(class {
   constructor(view) {
-    this.always = view.state.facet(alwaysIsolate) || view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.LTR || view.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.perLineTextDirection);
+    this.always = view.state.facet(alwaysIsolate) || view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Direction */ .OP.LTR || view.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.perLineTextDirection);
     this.hasRTL = !this.always && textHasRTL(view.state.doc);
     this.tree = syntaxTree(view.state);
-    this.decorations = this.always || this.hasRTL ? buildDeco(view, this.tree, this.always) : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
+    this.decorations = this.always || this.hasRTL ? buildDeco(view, this.tree, this.always) : _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.none;
   }
   update(update) {
-    let always = update.state.facet(alwaysIsolate) || update.view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.LTR || update.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.perLineTextDirection);
+    let always = update.state.facet(alwaysIsolate) || update.view.textDirection != _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Direction */ .OP.LTR || update.state.facet(_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.perLineTextDirection);
     if (!always && !this.hasRTL && changeAddsRTL(update.changes)) this.hasRTL = true;
     if (!always && !this.hasRTL) return;
     let tree = syntaxTree(update.state);
@@ -12930,13 +12930,13 @@ const isolateMarks = _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .ViewPlugin
   provide: plugin => {
     function access(view) {
       var _a, _b;
-      return (_b = (_a = view.plugin(plugin)) === null || _a === void 0 ? void 0 : _a.decorations) !== null && _b !== void 0 ? _b : _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.none;
+      return (_b = (_a = view.plugin(plugin)) === null || _a === void 0 ? void 0 : _a.decorations) !== null && _b !== void 0 ? _b : _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.none;
     }
-    return [_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.outerDecorations.of(access), _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .Prec */ .Nb.lowest(_codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .EditorView */ .Lz.bidiIsolatedRanges.of(access))];
+    return [_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.outerDecorations.of(access), _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .Prec */ .Nb.lowest(_codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .EditorView */ .Lz.bidiIsolatedRanges.of(access))];
   }
 });
 function buildDeco(view, tree, always) {
-  let deco = new _codemirror_state__WEBPACK_IMPORTED_MODULE_3__/* .RangeSetBuilder */ .vB();
+  let deco = new _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .RangeSetBuilder */ .vB();
   let ranges = view.visibleRanges;
   if (!always) ranges = clipRTLLines(ranges, view.state.doc);
   for (var _iterator25 = _createForOfIteratorHelperLoose(ranges), _step25; !(_step25 = _iterator25()).done;) {
@@ -12990,23 +12990,23 @@ function clipRTLLines(ranges, doc) {
   return result;
 }
 const marks = {
-  rtl: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
+  rtl: _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.mark({
     class: "cm-iso",
     inclusive: true,
     attributes: {
       dir: "rtl"
     },
-    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.RTL
+    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Direction */ .OP.RTL
   }),
-  ltr: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
+  ltr: _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.mark({
     class: "cm-iso",
     inclusive: true,
     attributes: {
       dir: "ltr"
     },
-    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Direction */ .OP.LTR
+    bidiIsolate: _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Direction */ .OP.LTR
   }),
-  auto: _codemirror_view__WEBPACK_IMPORTED_MODULE_4__/* .Decoration */ .NZ.mark({
+  auto: _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.mark({
     class: "cm-iso",
     inclusive: true,
     attributes: {
@@ -18530,7 +18530,7 @@ class HeightOracle {
   }
   heightForLine(length) {
     if (!this.lineWrapping) return this.lineHeight;
-    let lines = 1 + Math.max(0, Math.ceil((length - this.lineLength) / (this.lineLength - 5)));
+    let lines = 1 + Math.max(0, Math.ceil((length - this.lineLength) / Math.max(1, this.lineLength - 5)));
     return lines * this.lineHeight;
   }
   setDoc(doc) {
@@ -19394,7 +19394,7 @@ class ViewState {
           charWidth,
           textHeight
         } = view.docView.measureTextSize();
-        refresh = lineHeight > 0 && oracle.refresh(whiteSpace, lineHeight, charWidth, textHeight, contentWidth / charWidth, lineHeights);
+        refresh = lineHeight > 0 && oracle.refresh(whiteSpace, lineHeight, charWidth, textHeight, Math.max(5, contentWidth / charWidth), lineHeights);
         if (refresh) {
           view.docView.minWidth = 0;
           result |= 16;
@@ -21528,7 +21528,7 @@ function runHandlers(map, event, view, scope) {
   if (scopeObj) {
     if (runFor(scopeObj[prefix + modifiers(name, event, !isChar)])) {
       handled = true;
-    } else if (isChar && (event.altKey || event.metaKey || event.ctrlKey) && !(browser.windows && event.ctrlKey && event.altKey) && (baseName = base[event.keyCode]) && baseName != name) {
+    } else if (isChar && (event.altKey || event.metaKey || event.ctrlKey) && !(browser.windows && event.ctrlKey && event.altKey) && !(browser.mac && event.altKey && !event.ctrlKey) && (baseName = base[event.keyCode]) && baseName != name) {
       if (runFor(scopeObj[prefix + modifiers(baseName, event, true)])) {
         handled = true;
       } else if (event.shiftKey && (shiftName = shift[event.keyCode]) != name && shiftName != baseName && runFor(scopeObj[prefix + modifiers(shiftName, event, false)])) {
