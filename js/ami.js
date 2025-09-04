@@ -12692,7 +12692,7 @@ class Parse {
   advance() {
     let context = ParseContext.get();
     let parseEnd = this.stoppedAt == null ? this.to : Math.min(this.to, this.stoppedAt);
-    let end = Math.min(parseEnd, this.chunkStart + 2048);
+    let end = Math.min(parseEnd, this.chunkStart + 512);
     if (context) end = Math.min(end, context.viewport.to);
     while (this.parsedPos < end) this.parseLine(context);
     if (this.chunkStart < this.parsedPos) this.finishChunk();
@@ -12793,7 +12793,7 @@ class Parse {
       length: this.parsedPos - this.chunkStart,
       nodeSet,
       topID: 0,
-      maxBufferLength: 2048,
+      maxBufferLength: 512,
       reused: this.chunkReused
     });
     tree = new _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Tree */ .PH(tree.type, tree.children, tree.positions, tree.length, [[this.lang.stateAfter, this.lang.streamParser.copyState(this.state)]]);
@@ -17347,6 +17347,26 @@ function skipAtomicRanges(atoms, pos, bias) {
     if (!moved) return pos;
   }
 }
+function skipAtomsForSelection(atoms, sel) {
+  let ranges = null;
+  for (let i = 0; i < sel.ranges.length; i++) {
+    let range = sel.ranges[i],
+      updated = null;
+    if (range.empty) {
+      let pos = skipAtomicRanges(atoms, range.from, 0);
+      if (pos != range.from) updated = state_dist/* EditorSelection */.OF.cursor(pos, -1);
+    } else {
+      let from = skipAtomicRanges(atoms, range.from, -1);
+      let to = skipAtomicRanges(atoms, range.to, 1);
+      if (from != range.from || to != range.to) updated = state_dist/* EditorSelection */.OF.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
+    }
+    if (updated) {
+      if (!ranges) ranges = sel.ranges.slice();
+      ranges[i] = updated;
+    }
+  }
+  return ranges ? state_dist/* EditorSelection */.OF.create(ranges, sel.mainIndex) : sel;
+}
 function skipAtoms(view, oldPos, pos) {
   let newPos = skipAtomicRanges(view.state.facet(atomicRanges).map(f => f(view)), pos.from, oldPos.head > pos.from ? -1 : 1);
   return newPos == pos.from ? pos : state_dist/* EditorSelection */.OF.cursor(newPos, newPos < pos.from ? 1 : -1);
@@ -17558,6 +17578,7 @@ function applyDOMChange(view, domChange) {
     if (view.inputState.lastSelectionTime > Date.now() - 50) {
       if (view.inputState.lastSelectionOrigin == "select") scrollIntoView = true;
       userEvent = view.inputState.lastSelectionOrigin;
+      if (userEvent == "select.pointer") newSel = skipAtomsForSelection(view.state.facet(atomicRanges).map(f => f(view)), newSel);
     }
     view.dispatch({
       selection: newSel,
@@ -17969,31 +17990,11 @@ class MouseSelection {
     if (x || y) this.view.win.scrollBy(x, y);
     if (this.dragging === false) this.select(this.lastEvent);
   }
-  skipAtoms(sel) {
-    let ranges = null;
-    for (let i = 0; i < sel.ranges.length; i++) {
-      let range = sel.ranges[i],
-        updated = null;
-      if (range.empty) {
-        let pos = skipAtomicRanges(this.atoms, range.from, 0);
-        if (pos != range.from) updated = state_dist/* EditorSelection */.OF.cursor(pos, -1);
-      } else {
-        let from = skipAtomicRanges(this.atoms, range.from, -1);
-        let to = skipAtomicRanges(this.atoms, range.to, 1);
-        if (from != range.from || to != range.to) updated = state_dist/* EditorSelection */.OF.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
-      }
-      if (updated) {
-        if (!ranges) ranges = sel.ranges.slice();
-        ranges[i] = updated;
-      }
-    }
-    return ranges ? state_dist/* EditorSelection */.OF.create(ranges, sel.mainIndex) : sel;
-  }
   select(event) {
     let {
         view
       } = this,
-      selection = this.skipAtoms(this.style.get(event, this.extend, this.multiple));
+      selection = skipAtomsForSelection(this.atoms, this.style.get(event, this.extend, this.multiple));
     if (this.mustSelect || !selection.eq(view.state.selection, this.dragging === false)) this.view.dispatch({
       selection,
       userEvent: "select.pointer"
@@ -18140,6 +18141,8 @@ handlers.mousedown = (view, event) => {
       mouseSel.start(event);
       return mouseSel.dragging === false;
     }
+  } else {
+    view.inputState.setSelectionOrigin("select.pointer");
   }
   return false;
 };
@@ -21528,7 +21531,7 @@ function runHandlers(map, event, view, scope) {
   if (scopeObj) {
     if (runFor(scopeObj[prefix + modifiers(name, event, !isChar)])) {
       handled = true;
-    } else if (isChar && (event.altKey || event.metaKey || event.ctrlKey) && !(browser.windows && event.ctrlKey && event.altKey) && !(browser.mac && event.altKey && !event.ctrlKey) && (baseName = base[event.keyCode]) && baseName != name) {
+    } else if (isChar && (event.altKey || event.metaKey || event.ctrlKey) && !(browser.windows && event.ctrlKey && event.altKey) && !(browser.mac && event.altKey && !(event.ctrlKey || event.metaKey)) && (baseName = base[event.keyCode]) && baseName != name) {
       if (runFor(scopeObj[prefix + modifiers(baseName, event, true)])) {
         handled = true;
       } else if (event.shiftKey && (shiftName = shift[event.keyCode]) != name && shiftName != baseName && runFor(scopeObj[prefix + modifiers(shiftName, event, false)])) {
