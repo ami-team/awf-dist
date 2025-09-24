@@ -15669,13 +15669,14 @@ class ContentBuilder {
           this.textOff = 0;
         }
       }
-      let take = Math.min(this.text.length - this.textOff, length, 512);
+      let remaining = Math.min(this.text.length - this.textOff, length);
+      let take = Math.min(remaining, 512);
       this.flushBuffer(active.slice(active.length - openStart));
       this.getLine().append(wrapMarks(new TextView(this.text.slice(this.textOff, this.textOff + take)), active), openStart);
       this.atCursorPos = true;
       this.textOff += take;
       length -= take;
-      openStart = 0;
+      openStart = remaining <= take ? 0 : active.length;
     }
   }
   span(from, to, active, openStart) {
@@ -17173,14 +17174,12 @@ function posAtCoords(view, coords, precise, bias = -1) {
       } = pos);
     } else if (doc.caretRangeFromPoint) {
       let range = doc.caretRangeFromPoint(x, y);
-      if (range) {
-        ({
-          startContainer: node,
-          startOffset: offset
-        } = range);
-        if (!view.contentDOM.contains(node) || browser.safari && isSuspiciousSafariCaretResult(node, offset, x) || browser.chrome && isSuspiciousChromeCaretResult(node, offset, x)) node = undefined;
-      }
+      if (range) ({
+        startContainer: node,
+        startOffset: offset
+      } = range);
     }
+    if (node && (!view.contentDOM.contains(node) || browser.safari && isSuspiciousSafariCaretResult(node, offset, x) || browser.chrome && isSuspiciousChromeCaretResult(node, offset, x))) node = undefined;
     if (node) offset = Math.min(maxOffset(node), offset);
   }
   if (!node || !view.docView.dom.contains(node)) {
@@ -17210,7 +17209,7 @@ function posAtCoordsImprecise(view, contentRect, block, x, y) {
   let content = view.state.sliceDoc(block.from, block.to);
   return block.from + (0,state_dist/* findColumn */.kn)(content, into, view.state.tabSize);
 }
-function isSuspiciousSafariCaretResult(node, offset, x) {
+function isEndOfLineBefore(node, offset, x) {
   let len,
     scan = node;
   if (node.nodeType != 3 || offset != (len = node.nodeValue.length)) return false;
@@ -17227,8 +17226,11 @@ function isSuspiciousSafariCaretResult(node, offset, x) {
   }
   return textRange(node, len - 1, len).getBoundingClientRect().right > x;
 }
+function isSuspiciousSafariCaretResult(node, offset, x) {
+  return isEndOfLineBefore(node, offset, x);
+}
 function isSuspiciousChromeCaretResult(node, offset, x) {
-  if (offset != 0) return false;
+  if (offset != 0) return isEndOfLineBefore(node, offset, x);
   for (let cur = node;;) {
     let parent = cur.parentNode;
     if (!parent || parent.nodeType != 1 || parent.firstChild != cur) return false;
@@ -17604,8 +17606,20 @@ function applyDOMChangeInner(view, change, newSel, lastKey = -1) {
 function applyDefaultInsert(view, change, newSel) {
   let tr,
     startState = view.state,
-    sel = startState.selection.main;
-  if (change.from >= sel.from && change.to <= sel.to && change.to - change.from >= (sel.to - sel.from) / 3 && (!newSel || newSel.main.empty && newSel.main.from == change.from + change.insert.length) && view.inputState.composing < 0) {
+    sel = startState.selection.main,
+    inAtomic = -1;
+  if (change.from == change.to && change.from < sel.from || change.from > sel.to) {
+    let side = change.from < sel.from ? -1 : 1,
+      pos = side < 0 ? sel.from : sel.to;
+    let moved = skipAtomicRanges(startState.facet(atomicRanges).map(f => f(view)), pos, side);
+    if (change.from == moved) inAtomic = moved;
+  }
+  if (inAtomic > -1) {
+    tr = {
+      changes: change,
+      selection: state_dist/* EditorSelection */.OF.cursor(change.from + change.insert.length, -1)
+    };
+  } else if (change.from >= sel.from && change.to <= sel.to && change.to - change.from >= (sel.to - sel.from) / 3 && (!newSel || newSel.main.empty && newSel.main.from == change.from + change.insert.length) && view.inputState.composing < 0) {
     let before = sel.from < change.from ? startState.sliceDoc(sel.from, change.from) : "";
     let after = sel.to > change.to ? startState.sliceDoc(change.to, sel.to) : "";
     tr = startState.replaceSelection(view.state.toText(before + change.insert.sliceString(0, undefined, view.state.lineBreak) + after));
@@ -21772,6 +21786,7 @@ class LayerView {
         old = next;
       }
       this.drawn = markers;
+      if (browser.ios) this.dom.style.display = this.dom.firstChild ? "" : "none";
     }
   }
   destroy() {
@@ -33645,7 +33660,7 @@ const languages = [language_dist/* LanguageDescription */.t$.of({
   name: "PHP",
   extensions: ["php", "php3", "php4", "php5", "php7", "phtml"],
   load() {
-    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464), __webpack_require__.e(8783)]).then(__webpack_require__.bind(__webpack_require__, 8783)).then(m => m.php());
+    return Promise.all(/* import() */[__webpack_require__.e(9932), __webpack_require__.e(6025), __webpack_require__.e(4527), __webpack_require__.e(5464), __webpack_require__.e(7255)]).then(__webpack_require__.bind(__webpack_require__, 7255)).then(m => m.php());
   }
 }), language_dist/* LanguageDescription */.t$.of({
   name: "PLSQL",
