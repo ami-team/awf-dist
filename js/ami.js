@@ -20586,6 +20586,7 @@ class EditContextManager {
         this.revertPending(view.state);
         this.setSelection(view.state);
       }
+      if (change.from < change.to && !change.insert.length && view.inputState.composing >= 0 && !/[\\p{Alphabetic}\\p{Number}_]/.test(context.text.slice(Math.max(0, e.updateRangeStart - 1), Math.min(context.text.length, e.updateRangeStart + 1)))) this.handlers.compositionend(e);
     };
     this.handlers.characterboundsupdate = e => {
       let rects = [],
@@ -20603,11 +20604,11 @@ class EditContextManager {
         let format = _step46.value;
         let lineStyle = format.underlineStyle,
           thickness = format.underlineThickness;
-        if (lineStyle != "None" && thickness != "None") {
+        if (!/none/i.test(lineStyle) && !/none/i.test(thickness)) {
           let from = this.toEditorPos(format.rangeStart),
             to = this.toEditorPos(format.rangeEnd);
           if (from < to) {
-            let style = `text-decoration: underline ${lineStyle == "Dashed" ? "dashed " : lineStyle == "Squiggle" ? "wavy " : ""}${thickness == "Thin" ? 1 : 2}px`;
+            let style = `text-decoration: underline ${/^[a-z]/.test(lineStyle) ? lineStyle + " " : lineStyle == "Dashed" ? "dashed " : lineStyle == "Squiggle" ? "wavy " : ""}${/thin/i.test(thickness) ? 1 : 2}px`;
             deco.push(Decoration.mark({
               attributes: {
                 style
