@@ -8789,15 +8789,13 @@ var __WEBPACK_AMD_DEFINE_RESULT__;
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  json: () => (/* binding */ json),
-  jsonLanguage: () => (/* binding */ jsonLanguage),
-  jsonParseLinter: () => (/* binding */ jsonParseLinter)
+  json: () => (/* binding */ json)
 });
+
+// UNUSED EXPORTS: jsonLanguage, jsonParseLinter
 
 // EXTERNAL MODULE: ./node_modules/@lezer/lr/dist/index.js
 var dist = __webpack_require__(2612);
@@ -28346,7 +28344,6 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 /******/ 				script = document.createElement('script');
 /******/ 		
 /******/ 				script.charset = 'utf-8';
-/******/ 				script.timeout = 120;
 /******/ 				if (__webpack_require__.nc) {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
@@ -28408,7 +28405,7 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		__webpack_require__.b = (document && document.baseURI) || self.location.href;
 /******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
@@ -32774,6 +32771,33 @@ const selectParentSyntax = ({
   dispatch(setSel(state, selection));
   return true;
 };
+function addCursorVertically(view, forward) {
+  let {
+      state
+    } = view,
+    sel = state.selection,
+    ranges = state.selection.ranges.slice();
+  for (var _iterator7 = dist_createForOfIteratorHelperLoose(state.selection.ranges), _step7; !(_step7 = _iterator7()).done;) {
+    let range = _step7.value;
+    let line = state.doc.lineAt(range.head);
+    if (forward ? line.to < view.state.doc.length : line.from > 0) for (let cur = range;;) {
+      let next = view.moveVertically(cur, forward);
+      if (next.head < line.from || next.head > line.to) {
+        if (!ranges.some(r => r.head == next.head)) ranges.push(next);
+        break;
+      } else if (next.head == cur.head) {
+        break;
+      } else {
+        cur = next;
+      }
+    }
+  }
+  if (ranges.length == sel.ranges.length) return false;
+  view.dispatch(setSel(state, state_dist/* EditorSelection */.OF.create(ranges, ranges.length - 1)));
+  return true;
+}
+const addCursorAbove = view => addCursorVertically(view, false);
+const addCursorBelow = view => addCursorVertically(view, true);
 const simplifySelection = ({
   state,
   dispatch
@@ -32831,8 +32855,8 @@ function deleteBy(target, by) {
 }
 function skipAtomic(target, pos, forward) {
   if (target instanceof dist/* EditorView */.Lz) {
-    for (var _iterator7 = dist_createForOfIteratorHelperLoose(target.state.facet(dist/* EditorView */.Lz.atomicRanges).map(f => f(target))), _step7; !(_step7 = _iterator7()).done;) {
-      let ranges = _step7.value;
+    for (var _iterator8 = dist_createForOfIteratorHelperLoose(target.state.facet(dist/* EditorView */.Lz.atomicRanges).map(f => f(target))), _step8; !(_step8 = _iterator8()).done;) {
+      let ranges = _step8.value;
       ranges.between(pos, pos, (from, to) => {
         if (from < pos && to > pos) pos = forward ? to : from;
       });
@@ -32983,8 +33007,8 @@ const transposeChars = ({
 function selectedLineBlocks(state) {
   let blocks = [],
     upto = -1;
-  for (var _iterator8 = dist_createForOfIteratorHelperLoose(state.selection.ranges), _step8; !(_step8 = _iterator8()).done;) {
-    let range = _step8.value;
+  for (var _iterator9 = dist_createForOfIteratorHelperLoose(state.selection.ranges), _step9; !(_step9 = _iterator9()).done;) {
+    let range = _step9.value;
     let startLine = state.doc.lineAt(range.from),
       endLine = state.doc.lineAt(range.to);
     if (!range.empty && range.to == endLine.from) endLine = state.doc.lineAt(range.to - 1);
@@ -33007,8 +33031,8 @@ function moveLine(state, dispatch, forward) {
   if (state.readOnly) return false;
   let changes = [],
     ranges = [];
-  for (var _iterator9 = dist_createForOfIteratorHelperLoose(selectedLineBlocks(state)), _step9; !(_step9 = _iterator9()).done;) {
-    let block = _step9.value;
+  for (var _iterator0 = dist_createForOfIteratorHelperLoose(selectedLineBlocks(state)), _step0; !(_step0 = _iterator0()).done;) {
+    let block = _step0.value;
     if (forward ? block.to == state.doc.length : block.from == 0) continue;
     let nextLine = state.doc.lineAt(forward ? block.to + 1 : block.from - 1);
     let size = nextLine.length + 1;
@@ -33020,8 +33044,8 @@ function moveLine(state, dispatch, forward) {
         from: block.from,
         insert: nextLine.text + state.lineBreak
       });
-      for (var _iterator0 = dist_createForOfIteratorHelperLoose(block.ranges), _step0; !(_step0 = _iterator0()).done;) {
-        let r = _step0.value;
+      for (var _iterator1 = dist_createForOfIteratorHelperLoose(block.ranges), _step1; !(_step1 = _iterator1()).done;) {
+        let r = _step1.value;
         ranges.push(state_dist/* EditorSelection */.OF.range(Math.min(state.doc.length, r.anchor + size), Math.min(state.doc.length, r.head + size)));
       }
     } else {
@@ -33032,8 +33056,8 @@ function moveLine(state, dispatch, forward) {
         from: block.to,
         insert: state.lineBreak + nextLine.text
       });
-      for (var _iterator1 = dist_createForOfIteratorHelperLoose(block.ranges), _step1; !(_step1 = _iterator1()).done;) {
-        let r = _step1.value;
+      for (var _iterator10 = dist_createForOfIteratorHelperLoose(block.ranges), _step10; !(_step10 = _iterator10()).done;) {
+        let r = _step10.value;
         ranges.push(state_dist/* EditorSelection */.OF.range(r.anchor - size, r.head - size));
       }
     }
@@ -33058,8 +33082,8 @@ const moveLineDown = ({
 function copyLine(state, dispatch, forward) {
   if (state.readOnly) return false;
   let changes = [];
-  for (var _iterator10 = dist_createForOfIteratorHelperLoose(selectedLineBlocks(state)), _step10; !(_step10 = _iterator10()).done;) {
-    let block = _step10.value;
+  for (var _iterator11 = dist_createForOfIteratorHelperLoose(selectedLineBlocks(state)), _step11; !(_step11 = _iterator11()).done;) {
+    let block = _step11.value;
     if (forward) changes.push({
       from: block.from,
       insert: state.doc.slice(block.from, block.to) + state.lineBreak
@@ -33456,24 +33480,30 @@ const standardKeymap = [{
 }, {
   key: "Backspace",
   run: deleteCharBackward,
-  shift: deleteCharBackward
+  shift: deleteCharBackward,
+  preventDefault: true
 }, {
   key: "Delete",
-  run: deleteCharForward
+  run: deleteCharForward,
+  preventDefault: true
 }, {
   key: "Mod-Backspace",
   mac: "Alt-Backspace",
-  run: deleteGroupBackward
+  run: deleteGroupBackward,
+  preventDefault: true
 }, {
   key: "Mod-Delete",
   mac: "Alt-Delete",
-  run: deleteGroupForward
+  run: deleteGroupForward,
+  preventDefault: true
 }, {
   mac: "Mod-Backspace",
-  run: deleteLineBoundaryBackward
+  run: deleteLineBoundaryBackward,
+  preventDefault: true
 }, {
   mac: "Mod-Delete",
-  run: deleteLineBoundaryForward
+  run: deleteLineBoundaryForward,
+  preventDefault: true
 }].concat(emacsStyleKeymap.map(b => ({
   mac: b.key,
   run: b.run,
@@ -33501,6 +33531,12 @@ const defaultKeymap = [{
 }, {
   key: "Shift-Alt-ArrowDown",
   run: copyLineDown
+}, {
+  key: "Mod-Alt-ArrowUp",
+  run: addCursorAbove
+}, {
+  key: "Mod-Alt-ArrowDown",
+  run: addCursorBelow
 }, {
   key: "Escape",
   run: simplifySelection
