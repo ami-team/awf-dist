@@ -610,6 +610,9 @@ class TreeNode extends BaseNode {
   childBefore(pos) {
     return this.nextChild(this._tree.children.length - 1, -1, pos, -2);
   }
+  prop(prop) {
+    return this._tree.prop(prop);
+  }
   enter(pos, side, mode = 0) {
     let mounted;
     if (!(mode & IterMode.IgnoreOverlays) && (mounted = MountedTree.get(this._tree)) && mounted.overlay) {
@@ -715,6 +718,9 @@ class BufferNode extends BaseNode {
   }
   childBefore(pos) {
     return this.child(-1, pos, -2);
+  }
+  prop(prop) {
+    return this.type.prop(prop);
   }
   enter(pos, side, mode = 0) {
     if (mode & IterMode.ExcludeBuffers) return null;
@@ -1215,7 +1221,7 @@ function buildTree(data) {
       fork.next();
       while (fork.pos > startPos) {
         if (fork.size < 0) {
-          if (fork.size == -3) localSkipped += 4;else break scan;
+          if (fork.size == -3 || fork.size == -4) localSkipped += 4;else break scan;
         } else if (fork.id >= minRepeatType) {
           localSkipped += 4;
         }
@@ -4947,8 +4953,7 @@ class Stack {
     let {
       parser
     } = this.p;
-    let lookaheadRecord = this.reducePos < this.pos - 25;
-    if (lookaheadRecord) this.setLookAhead(this.pos);
+    let lookaheadRecord = this.reducePos < this.pos - 25 && this.setLookAhead(this.pos);
     let dPrec = parser.dynamicPrecedence(type);
     if (dPrec) this.score += dPrec;
     if (depth == 0) {
@@ -5216,10 +5221,10 @@ class Stack {
     }
   }
   setLookAhead(lookAhead) {
-    if (lookAhead > this.lookAhead) {
-      this.emitLookAhead();
-      this.lookAhead = lookAhead;
-    }
+    if (lookAhead <= this.lookAhead) return false;
+    this.emitLookAhead();
+    this.lookAhead = lookAhead;
+    return true;
   }
   close() {
     if (this.curContext && this.curContext.tracker.strict) this.emitContext();
@@ -28659,6 +28664,7 @@ __webpack_require__.d(vue_runtime_esm_bundler_namespaceObject, {
   mergeModels: () => (mergeModels),
   mergeProps: () => (mergeProps),
   nextTick: () => (nextTick),
+  nodeOps: () => (nodeOps),
   normalizeClass: () => (normalizeClass),
   normalizeProps: () => (normalizeProps),
   normalizeStyle: () => (normalizeStyle),
@@ -28677,6 +28683,7 @@ __webpack_require__.d(vue_runtime_esm_bundler_namespaceObject, {
   onUpdated: () => (onUpdated),
   onWatcherCleanup: () => (onWatcherCleanup),
   openBlock: () => (openBlock),
+  patchProp: () => (patchProp),
   popScopeId: () => (popScopeId),
   provide: () => (provide),
   proxyRefs: () => (proxyRefs),
@@ -30910,17 +30917,23 @@ function shallowReadArray(arr) {
   reactivity_esm_bundler_track(arr = reactivity_esm_bundler_toRaw(arr), "iterate", ARRAY_ITERATE_KEY);
   return arr;
 }
+function toWrapped(target, item) {
+  if (isReadonly(target)) {
+    return isReactive(target) ? toReadonly(toReactive(item)) : toReadonly(item);
+  }
+  return toReactive(item);
+}
 const arrayInstrumentations = {
   __proto__: null,
   [Symbol.iterator]() {
-    return iterator(this, Symbol.iterator, toReactive);
+    return iterator(this, Symbol.iterator, item => toWrapped(this, item));
   },
   concat(...args) {
     return reactiveReadArray(this).concat(...args.map(x => shared_esm_bundler_isArray(x) ? reactiveReadArray(x) : x));
   },
   entries() {
     return iterator(this, "entries", value => {
-      value[1] = toReactive(value[1]);
+      value[1] = toWrapped(this, value[1]);
       return value;
     });
   },
@@ -30928,16 +30941,16 @@ const arrayInstrumentations = {
     return apply(this, "every", fn, thisArg, void 0, arguments);
   },
   filter(fn, thisArg) {
-    return apply(this, "filter", fn, thisArg, v => v.map(toReactive), arguments);
+    return apply(this, "filter", fn, thisArg, v => v.map(item => toWrapped(this, item)), arguments);
   },
   find(fn, thisArg) {
-    return apply(this, "find", fn, thisArg, toReactive, arguments);
+    return apply(this, "find", fn, thisArg, item => toWrapped(this, item), arguments);
   },
   findIndex(fn, thisArg) {
     return apply(this, "findIndex", fn, thisArg, void 0, arguments);
   },
   findLast(fn, thisArg) {
-    return apply(this, "findLast", fn, thisArg, toReactive, arguments);
+    return apply(this, "findLast", fn, thisArg, item => toWrapped(this, item), arguments);
   },
   findLastIndex(fn, thisArg) {
     return apply(this, "findLastIndex", fn, thisArg, void 0, arguments);
@@ -30994,7 +31007,7 @@ const arrayInstrumentations = {
     return noTracking(this, "unshift", args);
   },
   values() {
-    return iterator(this, "values", toReactive);
+    return iterator(this, "values", item => toWrapped(this, item));
   }
 };
 function iterator(self, method, wrapValue) {
@@ -31025,7 +31038,7 @@ function apply(self, method, fn, thisArg, wrappedRetFn, args) {
   if (arr !== self) {
     if (needsWrap) {
       wrappedFn = function (item, index) {
-        return fn.call(this, toReactive(item), index, self);
+        return fn.call(this, toWrapped(self, item), index, self);
       };
     } else if (fn.length > 2) {
       wrappedFn = function (item, index) {
@@ -31042,7 +31055,7 @@ function reduce(self, method, fn, args) {
   if (arr !== self) {
     if (!isShallow(self)) {
       wrappedFn = function (acc, item, index) {
-        return fn.call(this, acc, toReactive(item), index, self);
+        return fn.call(this, acc, toWrapped(self, item), index, self);
       };
     } else if (fn.length > 3) {
       wrappedFn = function (acc, item, index) {
@@ -31135,13 +31148,14 @@ class MutableReactiveHandler extends BaseReactiveHandler {
   }
   set(target, key, value, receiver) {
     let oldValue = target[key];
+    const isArrayWithIntegerKey = shared_esm_bundler_isArray(target) && isIntegerKey(key);
     if (!this._isShallow) {
       const isOldValueReadonly = isReadonly(oldValue);
       if (!isShallow(value) && !isReadonly(value)) {
         oldValue = reactivity_esm_bundler_toRaw(oldValue);
         value = reactivity_esm_bundler_toRaw(value);
       }
-      if (!shared_esm_bundler_isArray(target) && reactivity_esm_bundler_isRef(oldValue) && !reactivity_esm_bundler_isRef(value)) {
+      if (!isArrayWithIntegerKey && reactivity_esm_bundler_isRef(oldValue) && !reactivity_esm_bundler_isRef(value)) {
         if (isOldValueReadonly) {
           if (false) // removed by dead control flow
 {}
@@ -31152,7 +31166,7 @@ class MutableReactiveHandler extends BaseReactiveHandler {
         }
       }
     }
-    const hadKey = shared_esm_bundler_isArray(target) && isIntegerKey(key) ? Number(key) < target.length : hasOwn(target, key);
+    const hadKey = isArrayWithIntegerKey ? Number(key) < target.length : hasOwn(target, key);
     const result = Reflect.set(target, key, value, reactivity_esm_bundler_isRef(target) ? target : receiver);
     if (target === reactivity_esm_bundler_toRaw(receiver)) {
       if (!hadKey) {
@@ -31601,16 +31615,35 @@ class ObjectRefImpl {
     this._defaultValue = _defaultValue;
     this["__v_isRef"] = true;
     this._value = void 0;
+    this._raw = reactivity_esm_bundler_toRaw(_object);
+    let shallow = true;
+    let obj = _object;
+    if (!shared_esm_bundler_isArray(_object) || !isIntegerKey(String(_key))) {
+      do {
+        shallow = !isProxy(obj) || isShallow(obj);
+      } while (shallow && (obj = obj["__v_raw"]));
+    }
+    this._shallow = shallow;
   }
   get value() {
-    const val = this._object[this._key];
+    let val = this._object[this._key];
+    if (this._shallow) {
+      val = unref(val);
+    }
     return this._value = val === void 0 ? this._defaultValue : val;
   }
   set value(newVal) {
+    if (this._shallow && reactivity_esm_bundler_isRef(this._raw[this._key])) {
+      const nestedRef = this._object[this._key];
+      if (reactivity_esm_bundler_isRef(nestedRef)) {
+        nestedRef.value = newVal;
+        return;
+      }
+    }
     this._object[this._key] = newVal;
   }
   get dep() {
-    return getDepFromReactive(reactivity_esm_bundler_toRaw(this._object), this._key);
+    return getDepFromReactive(this._raw, this._key);
   }
 }
 class GetterRefImpl {
@@ -31636,8 +31669,7 @@ function toRef(source, key, defaultValue) {
   }
 }
 function propertyToRef(source, key, defaultValue) {
-  const val = source[key];
-  return reactivity_esm_bundler_isRef(val) ? val : new ObjectRefImpl(source, key, defaultValue);
+  return new ObjectRefImpl(source, key, defaultValue);
 }
 class ComputedRefImpl {
   constructor(fn, setter, isSSR) {
@@ -34622,7 +34654,6 @@ const PublicInstanceProxyHandlers = {
     } = instance;
     if (false) // removed by dead control flow
 {}
-    let normalizedProps;
     if (key[0] !== "$") {
       const n = accessCache[key];
       if (n !== void 0) {
@@ -34642,7 +34673,7 @@ const PublicInstanceProxyHandlers = {
       } else if (__VUE_OPTIONS_API__ && data !== EMPTY_OBJ && hasOwn(data, key)) {
         accessCache[key] = 2;
         return data[key];
-      } else if ((normalizedProps = instance.propsOptions[0]) && hasOwn(normalizedProps, key)) {
+      } else if (hasOwn(props, key)) {
         accessCache[key] = 3;
         return props[key];
       } else if (ctx !== EMPTY_OBJ && hasOwn(ctx, key)) {
@@ -34710,12 +34741,12 @@ const PublicInstanceProxyHandlers = {
       accessCache,
       ctx,
       appContext,
-      propsOptions,
+      props,
       type
     }
   }, key) {
-    let normalizedProps, cssModules;
-    return !!(accessCache[key] || __VUE_OPTIONS_API__ && data !== EMPTY_OBJ && key[0] !== "$" && hasOwn(data, key) || hasSetupBinding(setupState, key) || (normalizedProps = propsOptions[0]) && hasOwn(normalizedProps, key) || hasOwn(ctx, key) || hasOwn(publicPropertiesMap, key) || hasOwn(appContext.config.globalProperties, key) || (cssModules = type.__cssModules) && cssModules[key]);
+    let cssModules;
+    return !!(accessCache[key] || __VUE_OPTIONS_API__ && data !== EMPTY_OBJ && key[0] !== "$" && hasOwn(data, key) || hasSetupBinding(setupState, key) || hasOwn(props, key) || hasOwn(ctx, key) || hasOwn(publicPropertiesMap, key) || hasOwn(appContext.config.globalProperties, key) || (cssModules = type.__cssModules) && cssModules[key]);
   },
   defineProperty(target, key, descriptor) {
     if (descriptor.get != null) {
@@ -35414,10 +35445,9 @@ function createAppAPI(render, hydrate) {
 }
 let currentApp = null;
 function provide(key, value) {
-  if (!currentInstance) {
-    if (false) // removed by dead control flow
+  if (false) // removed by dead control flow
 {}
-  } else {
+  if (currentInstance) {
     let provides = currentInstance.provides;
     const parentProvides = currentInstance.parent && currentInstance.parent.provides;
     if (parentProvides === provides) {
@@ -35441,6 +35471,514 @@ function inject(key, defaultValue, treatDefaultAsFactory = false) {
 }
 function hasInjectionContext() {
   return !!(getCurrentInstance() || currentApp);
+}
+const ssrContextKey = Symbol.for("v-scx");
+const useSSRContext = () => {
+  {
+    const ctx = inject(ssrContextKey);
+    if (!ctx) {
+       false && 0;
+    }
+    return ctx;
+  }
+};
+function watchEffect(effect, options) {
+  return doWatch(effect, null, options);
+}
+function watchPostEffect(effect, options) {
+  return doWatch(effect, null,  false ? 0 : {
+    flush: "post"
+  });
+}
+function watchSyncEffect(effect, options) {
+  return doWatch(effect, null,  false ? 0 : {
+    flush: "sync"
+  });
+}
+function runtime_core_esm_bundler_watch(source, cb, options) {
+  if (false) // removed by dead control flow
+{}
+  return doWatch(source, cb, options);
+}
+function doWatch(source, cb, options = EMPTY_OBJ) {
+  const {
+    immediate,
+    deep,
+    flush,
+    once
+  } = options;
+  if (false) // removed by dead control flow
+{}
+  const baseWatchOptions = shared_esm_bundler_extend({}, options);
+  if (false) // removed by dead control flow
+{}
+  const runsImmediately = cb && immediate || !cb && flush !== "post";
+  let ssrCleanup;
+  if (isInSSRComponentSetup) {
+    if (flush === "sync") {
+      const ctx = useSSRContext();
+      ssrCleanup = ctx.__watcherHandles || (ctx.__watcherHandles = []);
+    } else if (!runsImmediately) {
+      const watchStopHandle = () => {};
+      watchStopHandle.stop = shared_esm_bundler_NOOP;
+      watchStopHandle.resume = shared_esm_bundler_NOOP;
+      watchStopHandle.pause = shared_esm_bundler_NOOP;
+      return watchStopHandle;
+    }
+  }
+  const instance = currentInstance;
+  baseWatchOptions.call = (fn, type, args) => callWithAsyncErrorHandling(fn, instance, type, args);
+  let isPre = false;
+  if (flush === "post") {
+    baseWatchOptions.scheduler = job => {
+      queuePostRenderEffect(job, instance && instance.suspense);
+    };
+  } else if (flush !== "sync") {
+    isPre = true;
+    baseWatchOptions.scheduler = (job, isFirstRun) => {
+      if (isFirstRun) {
+        job();
+      } else {
+        queueJob(job);
+      }
+    };
+  }
+  baseWatchOptions.augmentJob = job => {
+    if (cb) {
+      job.flags |= 4;
+    }
+    if (isPre) {
+      job.flags |= 2;
+      if (instance) {
+        job.id = instance.uid;
+        job.i = instance;
+      }
+    }
+  };
+  const watchHandle = watch(source, cb, baseWatchOptions);
+  if (isInSSRComponentSetup) {
+    if (ssrCleanup) {
+      ssrCleanup.push(watchHandle);
+    } else if (runsImmediately) {
+      watchHandle();
+    }
+  }
+  return watchHandle;
+}
+function instanceWatch(source, value, options) {
+  const publicThis = this.proxy;
+  const getter = shared_esm_bundler_isString(source) ? source.includes(".") ? createPathGetter(publicThis, source) : () => publicThis[source] : source.bind(publicThis, publicThis);
+  let cb;
+  if (shared_esm_bundler_isFunction(value)) {
+    cb = value;
+  } else {
+    cb = value.handler;
+    options = value;
+  }
+  const reset = setCurrentInstance(this);
+  const res = doWatch(getter, cb.bind(publicThis), options);
+  reset();
+  return res;
+}
+function createPathGetter(ctx, path) {
+  const segments = path.split(".");
+  return () => {
+    let cur = ctx;
+    for (let i = 0; i < segments.length && cur; i++) {
+      cur = cur[segments[i]];
+    }
+    return cur;
+  };
+}
+function useModel(props, name, options = EMPTY_OBJ) {
+  const i = getCurrentInstance();
+  if (false) // removed by dead control flow
+{}
+  const camelizedName = shared_esm_bundler_camelize(name);
+  if (false) // removed by dead control flow
+{}
+  const hyphenatedName = hyphenate(name);
+  const modifiers = getModelModifiers(props, camelizedName);
+  const res = customRef((track, trigger) => {
+    let localValue;
+    let prevSetValue = EMPTY_OBJ;
+    let prevEmittedValue;
+    watchSyncEffect(() => {
+      const propValue = props[camelizedName];
+      if (hasChanged(localValue, propValue)) {
+        localValue = propValue;
+        trigger();
+      }
+    });
+    return {
+      get() {
+        track();
+        return options.get ? options.get(localValue) : localValue;
+      },
+      set(value) {
+        const emittedValue = options.set ? options.set(value) : value;
+        if (!hasChanged(emittedValue, localValue) && !(prevSetValue !== EMPTY_OBJ && hasChanged(value, prevSetValue))) {
+          return;
+        }
+        const rawProps = i.vnode.props;
+        if (!(rawProps && (name in rawProps || camelizedName in rawProps || hyphenatedName in rawProps) && (`onUpdate:${name}` in rawProps || `onUpdate:${camelizedName}` in rawProps || `onUpdate:${hyphenatedName}` in rawProps))) {
+          localValue = value;
+          trigger();
+        }
+        i.emit(`update:${name}`, emittedValue);
+        if (hasChanged(value, emittedValue) && hasChanged(value, prevSetValue) && !hasChanged(emittedValue, prevEmittedValue)) {
+          trigger();
+        }
+        prevSetValue = value;
+        prevEmittedValue = emittedValue;
+      }
+    };
+  });
+  res[Symbol.iterator] = () => {
+    let i2 = 0;
+    return {
+      next() {
+        if (i2 < 2) {
+          return {
+            value: i2++ ? modifiers || EMPTY_OBJ : res,
+            done: false
+          };
+        } else {
+          return {
+            done: true
+          };
+        }
+      }
+    };
+  };
+  return res;
+}
+const getModelModifiers = (props, modelName) => {
+  return modelName === "modelValue" || modelName === "model-value" ? props.modelModifiers : props[`${modelName}Modifiers`] || props[`${shared_esm_bundler_camelize(modelName)}Modifiers`] || props[`${hyphenate(modelName)}Modifiers`];
+};
+function emit(instance, event, ...rawArgs) {
+  if (instance.isUnmounted) return;
+  const props = instance.vnode.props || EMPTY_OBJ;
+  if (false) // removed by dead control flow
+{}
+  let args = rawArgs;
+  const isModelListener = event.startsWith("update:");
+  const modifiers = isModelListener && getModelModifiers(props, event.slice(7));
+  if (modifiers) {
+    if (modifiers.trim) {
+      args = rawArgs.map(a => shared_esm_bundler_isString(a) ? a.trim() : a);
+    }
+    if (modifiers.number) {
+      args = rawArgs.map(looseToNumber);
+    }
+  }
+  if ( false || __VUE_PROD_DEVTOOLS__) {
+    devtoolsComponentEmit(instance, event, args);
+  }
+  if (false) // removed by dead control flow
+{}
+  let handlerName;
+  let handler = props[handlerName = toHandlerKey(event)] || props[handlerName = toHandlerKey(shared_esm_bundler_camelize(event))];
+  if (!handler && isModelListener) {
+    handler = props[handlerName = toHandlerKey(hyphenate(event))];
+  }
+  if (handler) {
+    callWithAsyncErrorHandling(handler, instance, 6, args);
+  }
+  const onceHandler = props[handlerName + `Once`];
+  if (onceHandler) {
+    if (!instance.emitted) {
+      instance.emitted = {};
+    } else if (instance.emitted[handlerName]) {
+      return;
+    }
+    instance.emitted[handlerName] = true;
+    callWithAsyncErrorHandling(onceHandler, instance, 6, args);
+  }
+}
+const mixinEmitsCache = new WeakMap();
+function normalizeEmitsOptions(comp, appContext, asMixin = false) {
+  const cache = __VUE_OPTIONS_API__ && asMixin ? mixinEmitsCache : appContext.emitsCache;
+  const cached = cache.get(comp);
+  if (cached !== void 0) {
+    return cached;
+  }
+  const raw = comp.emits;
+  let normalized = {};
+  let hasExtends = false;
+  if (__VUE_OPTIONS_API__ && !shared_esm_bundler_isFunction(comp)) {
+    const extendEmits = raw2 => {
+      const normalizedFromExtend = normalizeEmitsOptions(raw2, appContext, true);
+      if (normalizedFromExtend) {
+        hasExtends = true;
+        shared_esm_bundler_extend(normalized, normalizedFromExtend);
+      }
+    };
+    if (!asMixin && appContext.mixins.length) {
+      appContext.mixins.forEach(extendEmits);
+    }
+    if (comp.extends) {
+      extendEmits(comp.extends);
+    }
+    if (comp.mixins) {
+      comp.mixins.forEach(extendEmits);
+    }
+  }
+  if (!raw && !hasExtends) {
+    if (shared_esm_bundler_isObject(comp)) {
+      cache.set(comp, null);
+    }
+    return null;
+  }
+  if (shared_esm_bundler_isArray(raw)) {
+    raw.forEach(key => normalized[key] = null);
+  } else {
+    shared_esm_bundler_extend(normalized, raw);
+  }
+  if (shared_esm_bundler_isObject(comp)) {
+    cache.set(comp, normalized);
+  }
+  return normalized;
+}
+function isEmitListener(options, key) {
+  if (!options || !isOn(key)) {
+    return false;
+  }
+  key = key.slice(2).replace(/Once$/, "");
+  return hasOwn(options, key[0].toLowerCase() + key.slice(1)) || hasOwn(options, hyphenate(key)) || hasOwn(options, key);
+}
+let accessedAttrs = false;
+function markAttrsAccessed() {
+  accessedAttrs = true;
+}
+function renderComponentRoot(instance) {
+  const {
+    type: Component,
+    vnode,
+    proxy,
+    withProxy,
+    propsOptions: [propsOptions],
+    slots,
+    attrs,
+    emit,
+    render,
+    renderCache,
+    props,
+    data,
+    setupState,
+    ctx,
+    inheritAttrs
+  } = instance;
+  const prev = setCurrentRenderingInstance(instance);
+  let result;
+  let fallthroughAttrs;
+  if (false) // removed by dead control flow
+{}
+  try {
+    if (vnode.shapeFlag & 4) {
+      const proxyToUse = withProxy || proxy;
+      const thisProxy =  false ? 0 : proxyToUse;
+      result = normalizeVNode(render.call(thisProxy, proxyToUse, renderCache,  false ? 0 : props, setupState, data, ctx));
+      fallthroughAttrs = attrs;
+    } else {
+      const render2 = Component;
+      if (false) // removed by dead control flow
+{}
+      result = normalizeVNode(render2.length > 1 ? render2( false ? 0 : props,  false ? 0 : {
+        attrs,
+        slots,
+        emit
+      }) : render2( false ? 0 : props, null));
+      fallthroughAttrs = Component.props ? attrs : getFunctionalFallthrough(attrs);
+    }
+  } catch (err) {
+    blockStack.length = 0;
+    handleError(err, instance, 1);
+    result = createVNode(Comment);
+  }
+  let root = result;
+  let setRoot = void 0;
+  if (false) // removed by dead control flow
+{}
+  if (fallthroughAttrs && inheritAttrs !== false) {
+    const keys = Object.keys(fallthroughAttrs);
+    const {
+      shapeFlag
+    } = root;
+    if (keys.length) {
+      if (shapeFlag & (1 | 6)) {
+        if (propsOptions && keys.some(isModelListener)) {
+          fallthroughAttrs = filterModelListeners(fallthroughAttrs, propsOptions);
+        }
+        root = cloneVNode(root, fallthroughAttrs, false, true);
+      } else if (false) // removed by dead control flow
+{}
+    }
+  }
+  if (vnode.dirs) {
+    if (false) // removed by dead control flow
+{}
+    root = cloneVNode(root, null, false, true);
+    root.dirs = root.dirs ? root.dirs.concat(vnode.dirs) : vnode.dirs;
+  }
+  if (vnode.transition) {
+    if (false) // removed by dead control flow
+{}
+    setTransitionHooks(root, vnode.transition);
+  }
+  if (false) // removed by dead control flow
+{} else {
+    result = root;
+  }
+  setCurrentRenderingInstance(prev);
+  return result;
+}
+const getChildRoot = vnode => {
+  const rawChildren = vnode.children;
+  const dynamicChildren = vnode.dynamicChildren;
+  const childRoot = filterSingleRoot(rawChildren, false);
+  if (!childRoot) {
+    return [vnode, void 0];
+  } else if (false) // removed by dead control flow
+{}
+  const index = rawChildren.indexOf(childRoot);
+  const dynamicIndex = dynamicChildren ? dynamicChildren.indexOf(childRoot) : -1;
+  const setRoot = updatedRoot => {
+    rawChildren[index] = updatedRoot;
+    if (dynamicChildren) {
+      if (dynamicIndex > -1) {
+        dynamicChildren[dynamicIndex] = updatedRoot;
+      } else if (updatedRoot.patchFlag > 0) {
+        vnode.dynamicChildren = [...dynamicChildren, updatedRoot];
+      }
+    }
+  };
+  return [normalizeVNode(childRoot), setRoot];
+};
+function filterSingleRoot(children, recurse = true) {
+  let singleRoot;
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    if (isVNode(child)) {
+      if (child.type !== Comment || child.children === "v-if") {
+        if (singleRoot) {
+          return;
+        } else {
+          singleRoot = child;
+          if (false) // removed by dead control flow
+{}
+        }
+      }
+    } else {
+      return;
+    }
+  }
+  return singleRoot;
+}
+const getFunctionalFallthrough = attrs => {
+  let res;
+  for (const key in attrs) {
+    if (key === "class" || key === "style" || isOn(key)) {
+      (res || (res = {}))[key] = attrs[key];
+    }
+  }
+  return res;
+};
+const filterModelListeners = (attrs, props) => {
+  const res = {};
+  for (const key in attrs) {
+    if (!isModelListener(key) || !(key.slice(9) in props)) {
+      res[key] = attrs[key];
+    }
+  }
+  return res;
+};
+const isElementRoot = vnode => {
+  return vnode.shapeFlag & (6 | 1) || vnode.type === Comment;
+};
+function shouldUpdateComponent(prevVNode, nextVNode, optimized) {
+  const {
+    props: prevProps,
+    children: prevChildren,
+    component
+  } = prevVNode;
+  const {
+    props: nextProps,
+    children: nextChildren,
+    patchFlag
+  } = nextVNode;
+  const emits = component.emitsOptions;
+  if (false) // removed by dead control flow
+{}
+  if (nextVNode.dirs || nextVNode.transition) {
+    return true;
+  }
+  if (optimized && patchFlag >= 0) {
+    if (patchFlag & 1024) {
+      return true;
+    }
+    if (patchFlag & 16) {
+      if (!prevProps) {
+        return !!nextProps;
+      }
+      return hasPropsChanged(prevProps, nextProps, emits);
+    } else if (patchFlag & 8) {
+      const dynamicProps = nextVNode.dynamicProps;
+      for (let i = 0; i < dynamicProps.length; i++) {
+        const key = dynamicProps[i];
+        if (nextProps[key] !== prevProps[key] && !isEmitListener(emits, key)) {
+          return true;
+        }
+      }
+    }
+  } else {
+    if (prevChildren || nextChildren) {
+      if (!nextChildren || !nextChildren.$stable) {
+        return true;
+      }
+    }
+    if (prevProps === nextProps) {
+      return false;
+    }
+    if (!prevProps) {
+      return !!nextProps;
+    }
+    if (!nextProps) {
+      return true;
+    }
+    return hasPropsChanged(prevProps, nextProps, emits);
+  }
+  return false;
+}
+function hasPropsChanged(prevProps, nextProps, emitsOptions) {
+  const nextKeys = Object.keys(nextProps);
+  if (nextKeys.length !== Object.keys(prevProps).length) {
+    return true;
+  }
+  for (let i = 0; i < nextKeys.length; i++) {
+    const key = nextKeys[i];
+    if (nextProps[key] !== prevProps[key] && !isEmitListener(emitsOptions, key)) {
+      return true;
+    }
+  }
+  return false;
+}
+function updateHOCHostEl({
+  vnode,
+  parent
+}, el) {
+  while (parent) {
+    const root = parent.subTree;
+    if (root.suspense && root.suspense.activeBranch === vnode) {
+      root.el = vnode.el;
+    }
+    if (root === vnode) {
+      (vnode = parent.vnode).el = el;
+      parent = parent.parent;
+    } else {
+      break;
+    }
+  }
 }
 const internalObjectProto = {};
 const createInternalObject = () => Object.create(internalObjectProto);
@@ -37095,514 +37633,6 @@ function invalidateMount(hooks) {
     for (let i = 0; i < hooks.length; i++) hooks[i].flags |= 8;
   }
 }
-const ssrContextKey = Symbol.for("v-scx");
-const useSSRContext = () => {
-  {
-    const ctx = inject(ssrContextKey);
-    if (!ctx) {
-       false && 0;
-    }
-    return ctx;
-  }
-};
-function watchEffect(effect, options) {
-  return doWatch(effect, null, options);
-}
-function watchPostEffect(effect, options) {
-  return doWatch(effect, null,  false ? 0 : {
-    flush: "post"
-  });
-}
-function watchSyncEffect(effect, options) {
-  return doWatch(effect, null,  false ? 0 : {
-    flush: "sync"
-  });
-}
-function runtime_core_esm_bundler_watch(source, cb, options) {
-  if (false) // removed by dead control flow
-{}
-  return doWatch(source, cb, options);
-}
-function doWatch(source, cb, options = EMPTY_OBJ) {
-  const {
-    immediate,
-    deep,
-    flush,
-    once
-  } = options;
-  if (false) // removed by dead control flow
-{}
-  const baseWatchOptions = shared_esm_bundler_extend({}, options);
-  if (false) // removed by dead control flow
-{}
-  const runsImmediately = cb && immediate || !cb && flush !== "post";
-  let ssrCleanup;
-  if (isInSSRComponentSetup) {
-    if (flush === "sync") {
-      const ctx = useSSRContext();
-      ssrCleanup = ctx.__watcherHandles || (ctx.__watcherHandles = []);
-    } else if (!runsImmediately) {
-      const watchStopHandle = () => {};
-      watchStopHandle.stop = shared_esm_bundler_NOOP;
-      watchStopHandle.resume = shared_esm_bundler_NOOP;
-      watchStopHandle.pause = shared_esm_bundler_NOOP;
-      return watchStopHandle;
-    }
-  }
-  const instance = currentInstance;
-  baseWatchOptions.call = (fn, type, args) => callWithAsyncErrorHandling(fn, instance, type, args);
-  let isPre = false;
-  if (flush === "post") {
-    baseWatchOptions.scheduler = job => {
-      queuePostRenderEffect(job, instance && instance.suspense);
-    };
-  } else if (flush !== "sync") {
-    isPre = true;
-    baseWatchOptions.scheduler = (job, isFirstRun) => {
-      if (isFirstRun) {
-        job();
-      } else {
-        queueJob(job);
-      }
-    };
-  }
-  baseWatchOptions.augmentJob = job => {
-    if (cb) {
-      job.flags |= 4;
-    }
-    if (isPre) {
-      job.flags |= 2;
-      if (instance) {
-        job.id = instance.uid;
-        job.i = instance;
-      }
-    }
-  };
-  const watchHandle = watch(source, cb, baseWatchOptions);
-  if (isInSSRComponentSetup) {
-    if (ssrCleanup) {
-      ssrCleanup.push(watchHandle);
-    } else if (runsImmediately) {
-      watchHandle();
-    }
-  }
-  return watchHandle;
-}
-function instanceWatch(source, value, options) {
-  const publicThis = this.proxy;
-  const getter = shared_esm_bundler_isString(source) ? source.includes(".") ? createPathGetter(publicThis, source) : () => publicThis[source] : source.bind(publicThis, publicThis);
-  let cb;
-  if (shared_esm_bundler_isFunction(value)) {
-    cb = value;
-  } else {
-    cb = value.handler;
-    options = value;
-  }
-  const reset = setCurrentInstance(this);
-  const res = doWatch(getter, cb.bind(publicThis), options);
-  reset();
-  return res;
-}
-function createPathGetter(ctx, path) {
-  const segments = path.split(".");
-  return () => {
-    let cur = ctx;
-    for (let i = 0; i < segments.length && cur; i++) {
-      cur = cur[segments[i]];
-    }
-    return cur;
-  };
-}
-function useModel(props, name, options = EMPTY_OBJ) {
-  const i = getCurrentInstance();
-  if (false) // removed by dead control flow
-{}
-  const camelizedName = shared_esm_bundler_camelize(name);
-  if (false) // removed by dead control flow
-{}
-  const hyphenatedName = hyphenate(name);
-  const modifiers = getModelModifiers(props, camelizedName);
-  const res = customRef((track, trigger) => {
-    let localValue;
-    let prevSetValue = EMPTY_OBJ;
-    let prevEmittedValue;
-    watchSyncEffect(() => {
-      const propValue = props[camelizedName];
-      if (hasChanged(localValue, propValue)) {
-        localValue = propValue;
-        trigger();
-      }
-    });
-    return {
-      get() {
-        track();
-        return options.get ? options.get(localValue) : localValue;
-      },
-      set(value) {
-        const emittedValue = options.set ? options.set(value) : value;
-        if (!hasChanged(emittedValue, localValue) && !(prevSetValue !== EMPTY_OBJ && hasChanged(value, prevSetValue))) {
-          return;
-        }
-        const rawProps = i.vnode.props;
-        if (!(rawProps && (name in rawProps || camelizedName in rawProps || hyphenatedName in rawProps) && (`onUpdate:${name}` in rawProps || `onUpdate:${camelizedName}` in rawProps || `onUpdate:${hyphenatedName}` in rawProps))) {
-          localValue = value;
-          trigger();
-        }
-        i.emit(`update:${name}`, emittedValue);
-        if (hasChanged(value, emittedValue) && hasChanged(value, prevSetValue) && !hasChanged(emittedValue, prevEmittedValue)) {
-          trigger();
-        }
-        prevSetValue = value;
-        prevEmittedValue = emittedValue;
-      }
-    };
-  });
-  res[Symbol.iterator] = () => {
-    let i2 = 0;
-    return {
-      next() {
-        if (i2 < 2) {
-          return {
-            value: i2++ ? modifiers || EMPTY_OBJ : res,
-            done: false
-          };
-        } else {
-          return {
-            done: true
-          };
-        }
-      }
-    };
-  };
-  return res;
-}
-const getModelModifiers = (props, modelName) => {
-  return modelName === "modelValue" || modelName === "model-value" ? props.modelModifiers : props[`${modelName}Modifiers`] || props[`${shared_esm_bundler_camelize(modelName)}Modifiers`] || props[`${hyphenate(modelName)}Modifiers`];
-};
-function emit(instance, event, ...rawArgs) {
-  if (instance.isUnmounted) return;
-  const props = instance.vnode.props || EMPTY_OBJ;
-  if (false) // removed by dead control flow
-{}
-  let args = rawArgs;
-  const isModelListener = event.startsWith("update:");
-  const modifiers = isModelListener && getModelModifiers(props, event.slice(7));
-  if (modifiers) {
-    if (modifiers.trim) {
-      args = rawArgs.map(a => shared_esm_bundler_isString(a) ? a.trim() : a);
-    }
-    if (modifiers.number) {
-      args = rawArgs.map(looseToNumber);
-    }
-  }
-  if ( false || __VUE_PROD_DEVTOOLS__) {
-    devtoolsComponentEmit(instance, event, args);
-  }
-  if (false) // removed by dead control flow
-{}
-  let handlerName;
-  let handler = props[handlerName = toHandlerKey(event)] || props[handlerName = toHandlerKey(shared_esm_bundler_camelize(event))];
-  if (!handler && isModelListener) {
-    handler = props[handlerName = toHandlerKey(hyphenate(event))];
-  }
-  if (handler) {
-    callWithAsyncErrorHandling(handler, instance, 6, args);
-  }
-  const onceHandler = props[handlerName + `Once`];
-  if (onceHandler) {
-    if (!instance.emitted) {
-      instance.emitted = {};
-    } else if (instance.emitted[handlerName]) {
-      return;
-    }
-    instance.emitted[handlerName] = true;
-    callWithAsyncErrorHandling(onceHandler, instance, 6, args);
-  }
-}
-const mixinEmitsCache = new WeakMap();
-function normalizeEmitsOptions(comp, appContext, asMixin = false) {
-  const cache = __VUE_OPTIONS_API__ && asMixin ? mixinEmitsCache : appContext.emitsCache;
-  const cached = cache.get(comp);
-  if (cached !== void 0) {
-    return cached;
-  }
-  const raw = comp.emits;
-  let normalized = {};
-  let hasExtends = false;
-  if (__VUE_OPTIONS_API__ && !shared_esm_bundler_isFunction(comp)) {
-    const extendEmits = raw2 => {
-      const normalizedFromExtend = normalizeEmitsOptions(raw2, appContext, true);
-      if (normalizedFromExtend) {
-        hasExtends = true;
-        shared_esm_bundler_extend(normalized, normalizedFromExtend);
-      }
-    };
-    if (!asMixin && appContext.mixins.length) {
-      appContext.mixins.forEach(extendEmits);
-    }
-    if (comp.extends) {
-      extendEmits(comp.extends);
-    }
-    if (comp.mixins) {
-      comp.mixins.forEach(extendEmits);
-    }
-  }
-  if (!raw && !hasExtends) {
-    if (shared_esm_bundler_isObject(comp)) {
-      cache.set(comp, null);
-    }
-    return null;
-  }
-  if (shared_esm_bundler_isArray(raw)) {
-    raw.forEach(key => normalized[key] = null);
-  } else {
-    shared_esm_bundler_extend(normalized, raw);
-  }
-  if (shared_esm_bundler_isObject(comp)) {
-    cache.set(comp, normalized);
-  }
-  return normalized;
-}
-function isEmitListener(options, key) {
-  if (!options || !isOn(key)) {
-    return false;
-  }
-  key = key.slice(2).replace(/Once$/, "");
-  return hasOwn(options, key[0].toLowerCase() + key.slice(1)) || hasOwn(options, hyphenate(key)) || hasOwn(options, key);
-}
-let accessedAttrs = false;
-function markAttrsAccessed() {
-  accessedAttrs = true;
-}
-function renderComponentRoot(instance) {
-  const {
-    type: Component,
-    vnode,
-    proxy,
-    withProxy,
-    propsOptions: [propsOptions],
-    slots,
-    attrs,
-    emit,
-    render,
-    renderCache,
-    props,
-    data,
-    setupState,
-    ctx,
-    inheritAttrs
-  } = instance;
-  const prev = setCurrentRenderingInstance(instance);
-  let result;
-  let fallthroughAttrs;
-  if (false) // removed by dead control flow
-{}
-  try {
-    if (vnode.shapeFlag & 4) {
-      const proxyToUse = withProxy || proxy;
-      const thisProxy =  false ? 0 : proxyToUse;
-      result = normalizeVNode(render.call(thisProxy, proxyToUse, renderCache,  false ? 0 : props, setupState, data, ctx));
-      fallthroughAttrs = attrs;
-    } else {
-      const render2 = Component;
-      if (false) // removed by dead control flow
-{}
-      result = normalizeVNode(render2.length > 1 ? render2( false ? 0 : props,  false ? 0 : {
-        attrs,
-        slots,
-        emit
-      }) : render2( false ? 0 : props, null));
-      fallthroughAttrs = Component.props ? attrs : getFunctionalFallthrough(attrs);
-    }
-  } catch (err) {
-    blockStack.length = 0;
-    handleError(err, instance, 1);
-    result = createVNode(Comment);
-  }
-  let root = result;
-  let setRoot = void 0;
-  if (false) // removed by dead control flow
-{}
-  if (fallthroughAttrs && inheritAttrs !== false) {
-    const keys = Object.keys(fallthroughAttrs);
-    const {
-      shapeFlag
-    } = root;
-    if (keys.length) {
-      if (shapeFlag & (1 | 6)) {
-        if (propsOptions && keys.some(isModelListener)) {
-          fallthroughAttrs = filterModelListeners(fallthroughAttrs, propsOptions);
-        }
-        root = cloneVNode(root, fallthroughAttrs, false, true);
-      } else if (false) // removed by dead control flow
-{}
-    }
-  }
-  if (vnode.dirs) {
-    if (false) // removed by dead control flow
-{}
-    root = cloneVNode(root, null, false, true);
-    root.dirs = root.dirs ? root.dirs.concat(vnode.dirs) : vnode.dirs;
-  }
-  if (vnode.transition) {
-    if (false) // removed by dead control flow
-{}
-    setTransitionHooks(root, vnode.transition);
-  }
-  if (false) // removed by dead control flow
-{} else {
-    result = root;
-  }
-  setCurrentRenderingInstance(prev);
-  return result;
-}
-const getChildRoot = vnode => {
-  const rawChildren = vnode.children;
-  const dynamicChildren = vnode.dynamicChildren;
-  const childRoot = filterSingleRoot(rawChildren, false);
-  if (!childRoot) {
-    return [vnode, void 0];
-  } else if (false) // removed by dead control flow
-{}
-  const index = rawChildren.indexOf(childRoot);
-  const dynamicIndex = dynamicChildren ? dynamicChildren.indexOf(childRoot) : -1;
-  const setRoot = updatedRoot => {
-    rawChildren[index] = updatedRoot;
-    if (dynamicChildren) {
-      if (dynamicIndex > -1) {
-        dynamicChildren[dynamicIndex] = updatedRoot;
-      } else if (updatedRoot.patchFlag > 0) {
-        vnode.dynamicChildren = [...dynamicChildren, updatedRoot];
-      }
-    }
-  };
-  return [normalizeVNode(childRoot), setRoot];
-};
-function filterSingleRoot(children, recurse = true) {
-  let singleRoot;
-  for (let i = 0; i < children.length; i++) {
-    const child = children[i];
-    if (isVNode(child)) {
-      if (child.type !== Comment || child.children === "v-if") {
-        if (singleRoot) {
-          return;
-        } else {
-          singleRoot = child;
-          if (false) // removed by dead control flow
-{}
-        }
-      }
-    } else {
-      return;
-    }
-  }
-  return singleRoot;
-}
-const getFunctionalFallthrough = attrs => {
-  let res;
-  for (const key in attrs) {
-    if (key === "class" || key === "style" || isOn(key)) {
-      (res || (res = {}))[key] = attrs[key];
-    }
-  }
-  return res;
-};
-const filterModelListeners = (attrs, props) => {
-  const res = {};
-  for (const key in attrs) {
-    if (!isModelListener(key) || !(key.slice(9) in props)) {
-      res[key] = attrs[key];
-    }
-  }
-  return res;
-};
-const isElementRoot = vnode => {
-  return vnode.shapeFlag & (6 | 1) || vnode.type === Comment;
-};
-function shouldUpdateComponent(prevVNode, nextVNode, optimized) {
-  const {
-    props: prevProps,
-    children: prevChildren,
-    component
-  } = prevVNode;
-  const {
-    props: nextProps,
-    children: nextChildren,
-    patchFlag
-  } = nextVNode;
-  const emits = component.emitsOptions;
-  if (false) // removed by dead control flow
-{}
-  if (nextVNode.dirs || nextVNode.transition) {
-    return true;
-  }
-  if (optimized && patchFlag >= 0) {
-    if (patchFlag & 1024) {
-      return true;
-    }
-    if (patchFlag & 16) {
-      if (!prevProps) {
-        return !!nextProps;
-      }
-      return hasPropsChanged(prevProps, nextProps, emits);
-    } else if (patchFlag & 8) {
-      const dynamicProps = nextVNode.dynamicProps;
-      for (let i = 0; i < dynamicProps.length; i++) {
-        const key = dynamicProps[i];
-        if (nextProps[key] !== prevProps[key] && !isEmitListener(emits, key)) {
-          return true;
-        }
-      }
-    }
-  } else {
-    if (prevChildren || nextChildren) {
-      if (!nextChildren || !nextChildren.$stable) {
-        return true;
-      }
-    }
-    if (prevProps === nextProps) {
-      return false;
-    }
-    if (!prevProps) {
-      return !!nextProps;
-    }
-    if (!nextProps) {
-      return true;
-    }
-    return hasPropsChanged(prevProps, nextProps, emits);
-  }
-  return false;
-}
-function hasPropsChanged(prevProps, nextProps, emitsOptions) {
-  const nextKeys = Object.keys(nextProps);
-  if (nextKeys.length !== Object.keys(prevProps).length) {
-    return true;
-  }
-  for (let i = 0; i < nextKeys.length; i++) {
-    const key = nextKeys[i];
-    if (nextProps[key] !== prevProps[key] && !isEmitListener(emitsOptions, key)) {
-      return true;
-    }
-  }
-  return false;
-}
-function updateHOCHostEl({
-  vnode,
-  parent
-}, el) {
-  while (parent) {
-    const root = parent.subTree;
-    if (root.suspense && root.suspense.activeBranch === vnode) {
-      root.el = vnode.el;
-    }
-    if (root === vnode) {
-      (vnode = parent.vnode).el = el;
-      parent = parent.parent;
-    } else {
-      break;
-    }
-  }
-}
 const isSuspense = type => type.__isSuspense;
 let suspenseId = 0;
 const SuspenseImpl = {
@@ -37819,7 +37849,7 @@ function createSuspenseBoundary(vnode, parentSuspense, parentComponent, containe
           }
           unmount(activeBranch, parentComponent2, suspense, true);
           if (!delayEnter && isInFallback && vnode2.ssFallback) {
-            vnode2.ssFallback.el = null;
+            queuePostRenderEffect(() => vnode2.ssFallback.el = null, suspense);
           }
         }
         if (!delayEnter) {
@@ -38464,7 +38494,6 @@ function setupComponent(instance, isSSR = false, optimized = false) {
   return setupResult;
 }
 function setupStatefulComponent(instance, isSSR) {
-  var _a;
   const Component = instance.type;
   if (false) // removed by dead control flow
 {}
@@ -38641,7 +38670,7 @@ function formatComponentName(instance, Component, isRoot = false) {
       name = match[1];
     }
   }
-  if (!name && instance && instance.parent) {
+  if (!name && instance) {
     const inferFromRegistry = registry => {
       for (const key in registry) {
         if (registry[key] === Component) {
@@ -38649,7 +38678,7 @@ function formatComponentName(instance, Component, isRoot = false) {
         }
       }
     };
-    name = inferFromRegistry(instance.components || instance.parent.type.components) || inferFromRegistry(instance.appContext.components);
+    name = inferFromRegistry(instance.components) || instance.parent && inferFromRegistry(instance.parent.type.components) || inferFromRegistry(instance.appContext.components);
   }
   return name ? classify(name) : isRoot ? `App` : `Anonymous`;
 }
@@ -38819,7 +38848,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-const version = "3.5.24";
+const version = "3.5.25";
 const runtime_core_esm_bundler_warn =  false ? 0 : shared_esm_bundler_NOOP;
 const ErrorTypeStrings = ErrorTypeStrings$1;
 const devtools =  true ? devtools$1 : 0;
