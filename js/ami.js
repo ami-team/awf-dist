@@ -46499,6 +46499,7 @@ function createControlInContainer(parent, owner, control, controlParams, control
 }
 const _parseJSON = (s, _default) => isString(s) ? JSON.parse(s.replace('\\\'', '\'')) : _default;
 function createControlFromWebLink(parent, owner, el, ownerOptions, options) {
+  lock();
   try {
     const dataCtrl = el.hasAttribute('data-ctrl') ? el.getAttribute('data-ctrl') : '';
     const dataCtrlLocation = el.hasAttribute('data-ctrl-location') ? el.getAttribute('data-ctrl-location') : '';
@@ -46506,7 +46507,6 @@ function createControlFromWebLink(parent, owner, el, ownerOptions, options) {
     const dataOptions = el.hasAttribute('data-options') ? _parseJSON(el.getAttribute('data-options'), {}) : el.hasAttribute('data-settings') ? _parseJSON(el.getAttribute('data-settings'), {}) : {};
     const dataIcon = el.hasAttribute('data-icon') ? el.getAttribute('data-icon') : 'question';
     const dataTitle = el.hasAttribute('data-title') ? el.getAttribute('data-title') : 'Unknown';
-    lock();
     if (dataCtrlLocation === 'body') {
       return createControlInBody(parent, owner, dataCtrl, dataParams, dataOptions, ownerOptions, options).done(() => {
         unlock();
