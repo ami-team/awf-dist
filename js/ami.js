@@ -46521,7 +46521,7 @@ function createControlFromWebLink(parent, owner, el, ownerOptions, options) {
       });
     }
   } catch (e) {
-    console.error(e);
+    error(`Error parsing JSON in HTML attributes: ${e}`);
   }
 }
 ;// ./src/js/utilities/resources.js
