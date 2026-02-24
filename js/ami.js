@@ -46010,6 +46010,7 @@ function _xxxHTML(selector, twig, mode, options) {
     }
     _find('input.form-datetime').each((_, element) => {
       esm(element, {
+        allowInput: true,
         time_24hr: true,
         enableTime: true,
         enableSeconds: true,
@@ -46021,6 +46022,7 @@ function _xxxHTML(selector, twig, mode, options) {
     });
     _find('input.form-date').each((_, element) => {
       esm(element, {
+        allowInput: true,
         time_24hr: true,
         enableTime: false,
         enableSeconds: false,
@@ -46032,6 +46034,7 @@ function _xxxHTML(selector, twig, mode, options) {
     });
     _find('input.form-time').each((_, element) => {
       esm(element, {
+        allowInput: true,
         time_24hr: true,
         enableTime: true,
         enableSeconds: true,
@@ -46043,6 +46046,7 @@ function _xxxHTML(selector, twig, mode, options) {
     });
     _find('input.form-time-hm').each((_, element) => {
       esm(element, {
+        allowInput: true,
         time_24hr: true,
         enableTime: true,
         enableSeconds: false,
