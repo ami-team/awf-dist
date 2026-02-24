@@ -16917,7 +16917,7 @@ class TileUpdate {
     for (let parent = text.parentNode;; parent = parent.parentNode) {
       let tile = Tile.get(parent);
       if (parent == this.view.contentDOM) break;
-      if (tile instanceof MarkTile) marks.push(tile);else if (tile === null || tile === void 0 ? void 0 : tile.isLine()) line = tile;else if (parent.nodeName == "DIV" && !line && parent != this.view.contentDOM) line = new LineTile(parent, lineBaseAttrs);else marks.push(MarkTile.of(new MarkDecoration({
+      if (tile instanceof MarkTile) marks.push(tile);else if (tile === null || tile === void 0 ? void 0 : tile.isLine()) line = tile;else if (tile instanceof BlockWrapperTile) ;else if (parent.nodeName == "DIV" && !line && parent != this.view.contentDOM) line = new LineTile(parent, lineBaseAttrs);else if (!line) marks.push(MarkTile.of(new MarkDecoration({
         tagName: parent.nodeName.toLowerCase(),
         attributes: getAttrs(parent)
       }), parent));
@@ -17508,6 +17508,12 @@ class DocView {
       offsetHeight
     } = this.view.scrollDOM;
     scrollRectIntoView(this.view.scrollDOM, targetRect, range.head < range.anchor ? -1 : 1, target.x, target.y, Math.max(Math.min(target.xMargin, offsetWidth), -offsetWidth), Math.max(Math.min(target.yMargin, offsetHeight), -offsetHeight), this.view.textDirection == Direction.LTR);
+    if (window.visualViewport && window.innerHeight - window.visualViewport.height > 1 && (rect.top > window.pageYOffset + window.visualViewport.offsetTop + window.visualViewport.height || rect.bottom < window.pageYOffset + window.visualViewport.offsetTop)) {
+      let line = this.view.docView.lineAt(range.head, 1);
+      if (line) line.dom.scrollIntoView({
+        block: "nearest"
+      });
+    }
   }
   lineHasWidget(pos) {
     let scan = child => child.isWidget() || child.children.some(scan);
@@ -17850,67 +17856,135 @@ function posAtCoords(view, coords, precise, scanY) {
   if (block.type != BlockType.Text) return yOffset < (block.top + block.bottom) / 2 ? new PosAssoc(block.from, 1) : new PosAssoc(block.to, -1);
   let line = view.docView.lineAt(block.from, 2);
   if (!line || line.length != block.length) line = view.docView.lineAt(block.from, -2);
-  return posAtCoordsInline(view, line, block.from, x, y);
+  return new InlineCoordsScan(view, x, y, view.textDirectionAt(block.from)).scanTile(line, block.from);
 }
-function posAtCoordsInline(view, tile, offset, x, y) {
-  let closest = -1,
-    closestRect = null;
-  let dxClosest = 1e9,
-    dyClosest = 1e9;
-  let rowTop = y,
-    rowBot = y;
-  let checkRects = (rects, index) => {
-    for (let i = 0; i < rects.length; i++) {
-      let rect = rects[i];
-      if (rect.top == rect.bottom) continue;
-      let dx = rect.left > x ? rect.left - x : rect.right < x ? x - rect.right : 0;
-      let dy = rect.top > y ? rect.top - y : rect.bottom < y ? y - rect.bottom : 0;
-      if (rect.top <= rowBot && rect.bottom >= rowTop) {
-        rowTop = Math.min(rect.top, rowTop);
-        rowBot = Math.max(rect.bottom, rowBot);
-        dy = 0;
-      }
-      if (closest < 0 || (dy - dyClosest || dx - dxClosest) < 0) {
-        if (closest >= 0 && dyClosest && dxClosest < dx && closestRect.top <= rowBot - 2 && closestRect.bottom >= rowTop + 2) {
-          dyClosest = 0;
-        } else {
-          closest = index;
-          dxClosest = dx;
-          dyClosest = dy;
-          closestRect = rect;
-        }
-      }
-    }
-  };
-  if (tile.isText()) {
-    for (let i = 0; i < tile.length;) {
-      let next = (0,state_dist/* findClusterBreak */.zK)(tile.text, i);
-      checkRects(textRange(tile.dom, i, next).getClientRects(), i);
-      if (!dxClosest && !dyClosest) break;
-      i = next;
-    }
-    let after = x > (closestRect.left + closestRect.right) / 2 == (dirAt(view, closest + offset) == Direction.LTR);
-    return after ? new PosAssoc(offset + (0,state_dist/* findClusterBreak */.zK)(tile.text, closest), -1) : new PosAssoc(offset + closest, 1);
-  } else {
-    if (!tile.length) return new PosAssoc(offset, 1);
-    for (let i = 0; i < tile.children.length; i++) {
-      let child = tile.children[i];
-      if (child.flags & 48) continue;
-      let rects = (child.dom.nodeType == 1 ? child.dom : textRange(child.dom, 0, child.length)).getClientRects();
-      checkRects(rects, i);
-      if (!dxClosest && !dyClosest) break;
-    }
-    let inner = tile.children[closest],
-      innerOff = tile.posBefore(inner, offset);
-    if (inner.isComposite() || inner.isText()) return posAtCoordsInline(view, inner, innerOff, Math.max(closestRect.left, Math.min(closestRect.right, x)), y);
-    let after = x > (closestRect.left + closestRect.right) / 2 == (dirAt(view, closest + offset) == Direction.LTR);
-    return after ? new PosAssoc(innerOff + inner.length, -1) : new PosAssoc(innerOff, 1);
+class InlineCoordsScan {
+  constructor(view, x, y, baseDir) {
+    this.view = view;
+    this.x = x;
+    this.y = y;
+    this.baseDir = baseDir;
+    this.line = null;
+    this.spans = null;
   }
-}
-function dirAt(view, pos) {
-  let line = view.state.doc.lineAt(pos),
-    spans = view.bidiSpans(line);
-  return spans[BidiSpan.find(view.bidiSpans(line), pos - line.from, -1, 1)].dir;
+  bidiSpansAt(pos) {
+    if (!this.line || this.line.from > pos || this.line.to < pos) {
+      this.line = this.view.state.doc.lineAt(pos);
+      this.spans = this.view.bidiSpans(this.line);
+    }
+    return this;
+  }
+  baseDirAt(pos, side) {
+    let {
+      line,
+      spans
+    } = this.bidiSpansAt(pos);
+    let level = spans[BidiSpan.find(spans, pos - line.from, -1, side)].level;
+    return level == this.baseDir;
+  }
+  dirAt(pos, side) {
+    let {
+      line,
+      spans
+    } = this.bidiSpansAt(pos);
+    return spans[BidiSpan.find(spans, pos - line.from, -1, side)].dir;
+  }
+  bidiIn(from, to) {
+    let {
+      spans,
+      line
+    } = this.bidiSpansAt(from);
+    return spans.length > 1 || spans.length && (spans[0].level != this.baseDir || spans[0].to + line.from < to);
+  }
+  scan(positions, getRects) {
+    let lo = 0,
+      hi = positions.length - 1,
+      seen = new Set();
+    let bidi = this.bidiIn(positions[0], positions[hi]);
+    let above, below;
+    let closestI = -1,
+      closestDx = 1e9,
+      closestRect;
+    search: while (lo < hi) {
+      let dist = hi - lo,
+        mid = lo + hi >> 1;
+      adjust: if (seen.has(mid)) {
+        let scan = lo + Math.floor(Math.random() * dist);
+        for (let i = 0; i < dist; i++) {
+          if (!seen.has(scan)) {
+            mid = scan;
+            break adjust;
+          }
+          scan++;
+          if (scan == hi) scan = lo;
+        }
+        break search;
+      }
+      seen.add(mid);
+      let rects = getRects(mid);
+      if (rects) for (let i = 0; i < rects.length; i++) {
+        let rect = rects[i],
+          side = 0;
+        if (rect.bottom < this.y) {
+          if (!above || above.bottom < rect.bottom) above = rect;
+          side = 1;
+        } else if (rect.top > this.y) {
+          if (!below || below.top > rect.top) below = rect;
+          side = -1;
+        } else {
+          let off = rect.left > this.x ? this.x - rect.left : rect.right < this.x ? this.x - rect.right : 0;
+          let dx = Math.abs(off);
+          if (dx < closestDx) {
+            closestI = mid;
+            closestDx = dx;
+            closestRect = rect;
+          }
+          if (off) side = off < 0 == (this.baseDir == Direction.LTR) ? -1 : 1;
+        }
+        if (side == -1 && (!bidi || this.baseDirAt(positions[mid], 1))) hi = mid;else if (side == 1 && (!bidi || this.baseDirAt(positions[mid + 1], -1))) lo = mid + 1;
+      }
+    }
+    if (!closestRect) {
+      let side = above && (!below || this.y - above.bottom < below.top - this.y) ? above : below;
+      this.y = (side.top + side.bottom) / 2;
+      return this.scan(positions, getRects);
+    }
+    let ltr = (bidi ? this.dirAt(positions[closestI], 1) : this.baseDir) == Direction.LTR;
+    return {
+      i: closestI,
+      after: this.x > (closestRect.left + closestRect.right) / 2 == ltr
+    };
+  }
+  scanText(tile, offset) {
+    let positions = [];
+    for (let i = 0; i < tile.length; i = (0,state_dist/* findClusterBreak */.zK)(tile.text, i)) positions.push(offset + i);
+    positions.push(offset + tile.length);
+    let scan = this.scan(positions, i => {
+      let off = positions[i] - offset,
+        end = positions[i + 1] - offset;
+      return textRange(tile.dom, off, end).getClientRects();
+    });
+    return scan.after ? new PosAssoc(positions[scan.i + 1], -1) : new PosAssoc(positions[scan.i], 1);
+  }
+  scanTile(tile, offset) {
+    if (!tile.length) return new PosAssoc(offset, 1);
+    if (tile.children.length == 1) {
+      let child = tile.children[0];
+      if (child.isText()) return this.scanText(child, offset);else if (child.isComposite()) return this.scanTile(child, offset);
+    }
+    let positions = [offset];
+    for (let i = 0, pos = offset; i < tile.children.length; i++) positions.push(pos += tile.children[i].length);
+    let scan = this.scan(positions, i => {
+      let child = tile.children[i];
+      if (child.flags & 48) return null;
+      return (child.dom.nodeType == 1 ? child.dom : textRange(child.dom, 0, child.length)).getClientRects();
+    });
+    let child = tile.children[scan.i],
+      pos = positions[scan.i];
+    if (child.isText()) return this.scanText(child, pos);
+    if (child.isComposite()) return this.scanTile(child, pos);
+    return scan.after ? new PosAssoc(positions[scan.i + 1], -1) : new PosAssoc(pos, 1);
+  }
 }
 const LineBreakPlaceholder = "\uffff";
 class DOMReader {
@@ -18986,8 +19060,7 @@ function copiedRange(state) {
 }
 let lastLinewiseCopy = null;
 handlers.copy = handlers.cut = (view, event) => {
-  let domSel = getSelection(view.root);
-  if (domSel && !hasSelection(view.contentDOM, domSel)) return false;
+  if (!hasSelection(view.contentDOM, view.observer.selectionRange)) return false;
   let {
     text,
     ranges,
@@ -19973,7 +20046,7 @@ class ViewState {
     let oracle = this.heightOracle;
     let whiteSpace = style.whiteSpace;
     this.defaultTextDirection = style.direction == "rtl" ? Direction.RTL : Direction.LTR;
-    let refresh = this.heightOracle.mustRefreshForWrapping(whiteSpace) || this.mustMeasureContent;
+    let refresh = this.heightOracle.mustRefreshForWrapping(whiteSpace) || this.mustMeasureContent === "refresh";
     let domRect = dom.getBoundingClientRect();
     let measureContent = refresh || this.mustMeasureContent || this.contentDOMHeight != domRect.height;
     this.contentDOMHeight = domRect.height;
@@ -21442,7 +21515,7 @@ class EditorView {
     this.updateState = 0;
     this.requestMeasure();
     if ((_a = document.fonts) === null || _a === void 0 ? void 0 : _a.ready) document.fonts.ready.then(() => {
-      this.viewState.mustMeasureContent = true;
+      this.viewState.mustMeasureContent = "refresh";
       this.requestMeasure();
     });
   }
@@ -33296,6 +33369,7 @@ function resolveTransitionHooks(vnode, props, state, instance, postClone) {
       callHook(hook, [el]);
     },
     enter(el) {
+      if (leavingVNodesCache[key] === vnode) return;
       let hook = onEnter;
       let afterHook = onAfterEnter;
       let cancelHook = onEnterCancelled;
@@ -35133,13 +35207,21 @@ function withAsyncContext(getAwaitable) {
 {}
   let awaitable = getAwaitable();
   unsetCurrentInstance();
+  const cleanup = () => {
+    if (getCurrentInstance() !== ctx) ctx.scope.off();
+    unsetCurrentInstance();
+  };
   if (isPromise(awaitable)) {
     awaitable = awaitable.catch(e => {
       setCurrentInstance(ctx);
+      Promise.resolve().then(() => Promise.resolve().then(cleanup));
       throw e;
     });
   }
-  return [awaitable, () => setCurrentInstance(ctx)];
+  return [awaitable, () => {
+    setCurrentInstance(ctx);
+    Promise.resolve().then(cleanup);
+  }];
 }
 function createDuplicateChecker() {
   const cache = Object.create(null);
@@ -38935,7 +39017,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-const version = "3.5.28";
+const version = "3.5.29";
 const runtime_core_esm_bundler_warn =  false ? 0 : NOOP;
 const ErrorTypeStrings = ErrorTypeStrings$1;
 const devtools =  true ? devtools$1 : 0;
