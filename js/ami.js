@@ -46747,31 +46747,33 @@ function createControlInContainer(parent, owner, control, controlParams, control
   }
   return result.promise();
 }
-const _parseJSON = (s, _default) => isString(s) ? JSON.parse(s.replace('\\\'', '\'')) : _default;
-function createControlFromWebLink(parent, owner, el, ownerOptions, options) {
-  lock();
+function _parseJSON(s, _default) {
   try {
-    const dataCtrl = el.hasAttribute('data-ctrl') ? el.getAttribute('data-ctrl') : '';
-    const dataCtrlLocation = el.hasAttribute('data-ctrl-location') ? el.getAttribute('data-ctrl-location') : '';
-    const dataParams = el.hasAttribute('data-params') ? _parseJSON(el.getAttribute('data-params'), []) : [];
-    const dataOptions = el.hasAttribute('data-options') ? _parseJSON(el.getAttribute('data-options'), {}) : el.hasAttribute('data-settings') ? _parseJSON(el.getAttribute('data-settings'), {}) : {};
-    const dataIcon = el.hasAttribute('data-icon') ? el.getAttribute('data-icon') : 'question';
-    const dataTitle = el.hasAttribute('data-title') ? el.getAttribute('data-title') : 'Unknown';
-    if (dataCtrlLocation === 'body') {
-      return createControlInBody(parent, owner, dataCtrl, dataParams, dataOptions, ownerOptions, options).done(() => {
-        unlock();
-      }).fail(message => {
-        error(message);
-      });
-    } else {
-      return createControlInContainer(parent, owner, dataCtrl, dataParams, dataOptions, ownerOptions, dataIcon, dataTitle, options).done(() => {
-        unlock();
-      }).fail(message => {
-        error(message);
-      });
-    }
+    return JSON.parse(s);
   } catch (e) {
-    error(`Error parsing JSON in HTML attributes: ${e}`);
+    return _default;
+  }
+}
+function createControlFromWebLink(parent, owner, el, ownerOptions, options) {
+  const dataCtrl = el.hasAttribute('data-ctrl') ? el.getAttribute('data-ctrl') : '';
+  const dataCtrlLocation = el.hasAttribute('data-ctrl-location') ? el.getAttribute('data-ctrl-location') : '';
+  const dataParams = el.hasAttribute('data-params') ? _parseJSON(el.getAttribute('data-params'), []) : [];
+  const dataOptions = el.hasAttribute('data-options') ? _parseJSON(el.getAttribute('data-options'), {}) : el.hasAttribute('data-settings') ? _parseJSON(el.getAttribute('data-settings'), {}) : {};
+  const dataIcon = el.hasAttribute('data-icon') ? el.getAttribute('data-icon') : 'question';
+  const dataTitle = el.hasAttribute('data-title') ? el.getAttribute('data-title') : 'Unknown';
+  lock();
+  if (dataCtrlLocation === 'body') {
+    return createControlInBody(parent, owner, dataCtrl, dataParams, dataOptions, ownerOptions, options).done(() => {
+      unlock();
+    }).fail(message => {
+      error(message);
+    });
+  } else {
+    return createControlInContainer(parent, owner, dataCtrl, dataParams, dataOptions, ownerOptions, dataIcon, dataTitle, options).done(() => {
+      unlock();
+    }).fail(message => {
+      error(message);
+    });
   }
 }
 ;// ./src/js/utilities/resources.js
@@ -48105,7 +48107,6 @@ class AMIWebApp {
     }
     return null;
   }
-  onTableRefresh(table) {}
   start(options) {
     amiWebApp.themeSet(localStorage.getItem('theme') || 'light');
     this.#globalDeferred.done(() => {
@@ -49082,7 +49083,7 @@ class AMIWebApp {
       "params": [{
         "name": "userdata",
         "type": ["*"],
-        "desc": "indicates if the user is authenticated",
+        "desc": "the user data",
         "default": "",
         "optional": "",
         "nullable": true
@@ -49094,19 +49095,7 @@ class AMIWebApp {
       "params": [{
         "name": "isAuth",
         "type": ["boolean"],
-        "desc": "indicates if the user is authenticated",
-        "default": "",
-        "optional": "",
-        "nullable": ""
-      }]
-    }, {
-      "name": "onTableRefresh",
-      "alias": "",
-      "desc": "This method must be overloaded and is called each time a table is refreshed.",
-      "params": [{
-        "name": "table",
-        "type": ["boolean"],
-        "desc": "the table that has just been refreshed",
+        "desc": "is the user authenticated",
         "default": "",
         "optional": "",
         "nullable": ""
