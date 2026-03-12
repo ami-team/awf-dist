@@ -49082,7 +49082,7 @@ class AMIWebApp {
       "params": [{
         "name": "userdata",
         "type": ["*"],
-        "desc": "the user data",
+        "desc": "indicates if the user is authenticated",
         "default": "",
         "optional": "",
         "nullable": true
@@ -49094,7 +49094,19 @@ class AMIWebApp {
       "params": [{
         "name": "isAuth",
         "type": ["boolean"],
-        "desc": "is the user authenticated",
+        "desc": "indicates if the user is authenticated",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }]
+    }, {
+      "name": "onTableRefresh",
+      "alias": "",
+      "desc": "This method must be overloaded and is called each time a table is refreshed.",
+      "params": [{
+        "name": "table",
+        "type": ["boolean"],
+        "desc": "the table that has just been refreshed",
         "default": "",
         "optional": "",
         "nullable": ""
