@@ -48078,8 +48078,8 @@ class AMIWebApp {
         version: version
       },
       bootstrap: {
-        Bootstrap: window.bootstrap,
-        version: window.bootstrap?.Modal?.VERSION
+        Bootstrap: null,
+        version: null
       }
     });
     AMIExtension();
@@ -48120,6 +48120,8 @@ class AMIWebApp {
       cache: true
     }).done(resources => {
       window.JSPath = (jspath_default());
+      ami.bootstrap.Bootstrap = window.bootstrap;
+      ami.bootstrap.version = window.bootstrap?.Modal?.VERSION;
       __webpack_require__(850);
       __webpack_require__(6693)(window.moment);
       this.#globalDeferred.resolve(resources);
