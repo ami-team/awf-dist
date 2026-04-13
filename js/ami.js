@@ -11157,6 +11157,7 @@ function matchMarkedBrackets(_state, _pos, dir, token, handle, matching, bracket
   };
 }
 function matchPlainBrackets(state, pos, dir, tree, tokenType, maxScanDistance, brackets) {
+  if (dir < 0 ? !pos : pos == state.doc.length) return null;
   let startCh = dir < 0 ? state.sliceDoc(pos - 1, pos) : state.sliceDoc(pos, pos + 1);
   let bracket = brackets.indexOf(startCh);
   if (bracket < 0 || bracket % 2 == 0 != dir > 0) return null;
@@ -15053,10 +15054,10 @@ function scrollRectIntoView(dom, rect, side, x, y, xMargin, yMargin, ltr) {
       let moveX = 0,
         moveY = 0;
       if (y == "nearest") {
-        if (rect.top < bounding.top) {
+        if (rect.top < bounding.top + yMargin) {
           moveY = rect.top - (bounding.top + yMargin);
           if (side > 0 && rect.bottom > bounding.bottom + moveY) moveY = rect.bottom - bounding.bottom + yMargin;
-        } else if (rect.bottom > bounding.bottom) {
+        } else if (rect.bottom > bounding.bottom - yMargin) {
           moveY = rect.bottom - bounding.bottom + yMargin;
           if (side < 0 && rect.top - moveY < bounding.top) moveY = rect.top - (bounding.top + yMargin);
         }
@@ -15067,10 +15068,10 @@ function scrollRectIntoView(dom, rect, side, x, y, xMargin, yMargin, ltr) {
         moveY = targetTop - bounding.top;
       }
       if (x == "nearest") {
-        if (rect.left < bounding.left) {
+        if (rect.left < bounding.left + xMargin) {
           moveX = rect.left - (bounding.left + xMargin);
           if (side > 0 && rect.right > bounding.right + moveX) moveX = rect.right - bounding.right + xMargin;
-        } else if (rect.right > bounding.right) {
+        } else if (rect.right > bounding.right - xMargin) {
           moveX = rect.right - bounding.right + xMargin;
           if (side < 0 && rect.left < bounding.left + moveX) moveX = rect.left - (bounding.left + xMargin);
         }
@@ -15629,7 +15630,7 @@ const nativeSelectionHidden = state_dist/* Facet */.sj.define({
 });
 const scrollHandler = state_dist/* Facet */.sj.define();
 class ScrollTarget {
-  constructor(range, y = "nearest", x = "nearest", yMargin = 5, xMargin = 5, isSnapshot = false) {
+  constructor(range, y, x, yMargin, xMargin, isSnapshot = false) {
     this.range = range;
     this.y = y;
     this.x = x;
@@ -17972,6 +17973,16 @@ class InlineCoordsScan {
       let side = above && (!below || this.y - above.bottom < below.top - this.y) ? above : below;
       this.y = (side.top + side.bottom) / 2;
       return this.scan(positions, getRects);
+    }
+    if (closestDx) {
+      if (above && above.bottom > closestRect.top) {
+        this.y = above.bottom - 1;
+        return this.scan(positions, getRects);
+      }
+      if (below && below.top < closestRect.bottom) {
+        this.y = below.top + 1;
+        return this.scan(positions, getRects);
+      }
     }
     let ltr = (bidi ? this.dirAt(positions[closestI], 1) : this.baseDir) == Direction.LTR;
     return {
@@ -21650,7 +21661,11 @@ class EditorView {
           let {
             main
           } = tr.state.selection;
-          scrollTarget = new ScrollTarget(main.empty ? main : state_dist/* EditorSelection */.OF.cursor(main.head, main.head > main.anchor ? -1 : 1));
+          let {
+            x,
+            y
+          } = this.state.facet(EditorView.cursorScrollMargin);
+          scrollTarget = new ScrollTarget(main.empty ? main : state_dist/* EditorSelection */.OF.cursor(main.head, main.head > main.anchor ? -1 : 1), "nearest", "nearest", y, x);
         }
         for (var _iterator48 = _createForOfIteratorHelperLoose(tr.effects), _step48; !(_step48 = _iterator48()).done;) {
           let e = _step48.value;
@@ -22083,7 +22098,8 @@ class EditorView {
     this.destroyed = true;
   }
   static scrollIntoView(pos, options = {}) {
-    return scrollIntoView.of(new ScrollTarget(typeof pos == "number" ? state_dist/* EditorSelection */.OF.cursor(pos) : pos, options.y, options.x, options.yMargin, options.xMargin));
+    var _a, _b, _c, _d;
+    return scrollIntoView.of(new ScrollTarget(typeof pos == "number" ? state_dist/* EditorSelection */.OF.cursor(pos) : pos, (_a = options.y) !== null && _a !== void 0 ? _a : "nearest", (_b = options.x) !== null && _b !== void 0 ? _b : "nearest", (_c = options.yMargin) !== null && _c !== void 0 ? _c : 5, (_d = options.xMargin) !== null && _d !== void 0 ? _d : 5));
   }
   scrollSnapshot() {
     let {
@@ -22140,6 +22156,23 @@ EditorView.blockWrappers = blockWrappers;
 EditorView.outerDecorations = outerDecorations;
 EditorView.atomicRanges = atomicRanges;
 EditorView.bidiIsolatedRanges = bidiIsolatedRanges;
+EditorView.cursorScrollMargin = state_dist/* Facet */.sj.define({
+  combine: inputs => {
+    let x = 5,
+      y = 5;
+    for (var _iterator61 = _createForOfIteratorHelperLoose(inputs), _step61; !(_step61 = _iterator61()).done;) {
+      let i = _step61.value;
+      if (typeof i == "number") x = y = i;else ({
+        x,
+        y
+      } = i);
+    }
+    return {
+      x,
+      y
+    };
+  }
+});
 EditorView.scrollMargins = scrollMargins;
 EditorView.darkTheme = darkTheme;
 EditorView.cspNonce = state_dist/* Facet */.sj.define({
@@ -22267,12 +22300,12 @@ function buildKeymap(bindings, platform = currentPlatform) {
     if (preventDefault) binding.preventDefault = true;
     if (stopPropagation) binding.stopPropagation = true;
   };
-  for (var _iterator61 = _createForOfIteratorHelperLoose(bindings), _step61; !(_step61 = _iterator61()).done;) {
-    let b = _step61.value;
+  for (var _iterator62 = _createForOfIteratorHelperLoose(bindings), _step62; !(_step62 = _iterator62()).done;) {
+    let b = _step62.value;
     let scopes = b.scope ? b.scope.split(" ") : ["editor"];
     if (b.any) {
-      for (var _iterator62 = _createForOfIteratorHelperLoose(scopes), _step62; !(_step62 = _iterator62()).done;) {
-        let scope = _step62.value;
+      for (var _iterator63 = _createForOfIteratorHelperLoose(scopes), _step63; !(_step63 = _iterator63()).done;) {
+        let scope = _step63.value;
         let scopeObj = bound[scope] || (bound[scope] = Object.create(null));
         if (!scopeObj._any) scopeObj._any = {
           preventDefault: false,
@@ -22287,8 +22320,8 @@ function buildKeymap(bindings, platform = currentPlatform) {
     }
     let name = b[platform] || b.key;
     if (!name) continue;
-    for (var _iterator63 = _createForOfIteratorHelperLoose(scopes), _step63; !(_step63 = _iterator63()).done;) {
-      let scope = _step63.value;
+    for (var _iterator64 = _createForOfIteratorHelperLoose(scopes), _step64; !(_step64 = _iterator64()).done;) {
+      let scope = _step64.value;
       add(scope, name, b.run, b.preventDefault, b.stopPropagation);
       if (b.shift) add(scope, "Shift-" + name, b.shift, b.preventDefault, b.stopPropagation);
     }
@@ -22315,8 +22348,8 @@ function runHandlers(map, event, view, scope) {
   let ran = new Set();
   let runFor = binding => {
     if (binding) {
-      for (var _iterator64 = _createForOfIteratorHelperLoose(binding.run), _step64; !(_step64 = _iterator64()).done;) {
-        let cmd = _step64.value;
+      for (var _iterator65 = _createForOfIteratorHelperLoose(binding.run), _step65; !(_step65 = _iterator65()).done;) {
+        let cmd = _step65.value;
         if (!ran.has(cmd)) {
           ran.add(cmd);
           if (cmd(view)) {
@@ -22473,13 +22506,13 @@ function rectanglesForRange(view, className, range) {
     }
     let start = from !== null && from !== void 0 ? from : line.from,
       end = to !== null && to !== void 0 ? to : line.to;
-    for (var _iterator65 = _createForOfIteratorHelperLoose(view.visibleRanges), _step65; !(_step65 = _iterator65()).done;) {
-      let r = _step65.value;
+    for (var _iterator66 = _createForOfIteratorHelperLoose(view.visibleRanges), _step66; !(_step66 = _iterator66()).done;) {
+      let r = _step66.value;
       if (r.to > start && r.from < end) {
         for (let pos = Math.max(r.from, start), endPos = Math.min(r.to, end);;) {
           let docLine = view.state.doc.lineAt(pos);
-          for (var _iterator66 = _createForOfIteratorHelperLoose(view.bidiSpans(docLine)), _step66; !(_step66 = _iterator66()).done;) {
-            let span = _step66.value;
+          for (var _iterator67 = _createForOfIteratorHelperLoose(view.bidiSpans(docLine)), _step67; !(_step67 = _iterator67()).done;) {
+            let span = _step67.value;
             let spanFrom = span.from + docLine.from,
               spanTo = span.to + docLine.from;
             if (spanFrom >= endPos) break;
@@ -22564,8 +22597,8 @@ class LayerView {
     if (markers.length != this.drawn.length || markers.some((p, i) => !sameMarker(p, this.drawn[i]))) {
       let old = this.dom.firstChild,
         oldI = 0;
-      for (var _iterator67 = _createForOfIteratorHelperLoose(markers), _step67; !(_step67 = _iterator67()).done;) {
-        let marker = _step67.value;
+      for (var _iterator68 = _createForOfIteratorHelperLoose(markers), _step68; !(_step68 = _iterator68()).done;) {
+        let marker = _step68.value;
         if (marker.update && old && marker.constructor && this.drawn[oldI].constructor && marker.update(old, this.drawn[oldI])) {
           old = old.nextSibling;
           oldI++;
@@ -22579,7 +22612,7 @@ class LayerView {
         old = next;
       }
       this.drawn = markers;
-      if (browser.safari && browser.safari_version >= 26) this.dom.style.display = this.dom.firstChild ? "" : "none";
+      if (browser.webkit) this.dom.style.display = this.dom.firstChild ? "" : "none";
     }
   }
   destroy() {
@@ -22620,14 +22653,14 @@ const cursorLayer = dist_layer({
       } = view,
       conf = state.facet(selectionConfig);
     let cursors = [];
-    for (var _iterator68 = _createForOfIteratorHelperLoose(state.selection.ranges), _step68; !(_step68 = _iterator68()).done;) {
-      let r = _step68.value;
+    for (var _iterator69 = _createForOfIteratorHelperLoose(state.selection.ranges), _step69; !(_step69 = _iterator69()).done;) {
+      let r = _step69.value;
       let prim = r == state.selection.main;
       if (r.empty || conf.drawRangeCursor && !(prim && browser.ios && conf.iosSelectionHandles)) {
         let className = prim ? "cm-cursor cm-cursor-primary" : "cm-cursor cm-cursor-secondary";
         let cursor = r.empty ? r : state_dist/* EditorSelection */.OF.cursor(r.head, r.assoc);
-        for (var _iterator69 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, className, cursor)), _step69; !(_step69 = _iterator69()).done;) {
-          let piece = _step69.value;
+        for (var _iterator70 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, className, cursor)), _step70; !(_step70 = _iterator70()).done;) {
+          let piece = _step70.value;
           cursors.push(piece);
         }
       }
@@ -22656,22 +22689,22 @@ const selectionLayer = dist_layer({
         main,
         ranges
       } = view.state.selection;
-    for (var _iterator70 = _createForOfIteratorHelperLoose(ranges), _step70; !(_step70 = _iterator70()).done;) {
-      let r = _step70.value;
+    for (var _iterator71 = _createForOfIteratorHelperLoose(ranges), _step71; !(_step71 = _iterator71()).done;) {
+      let r = _step71.value;
       if (!r.empty) {
-        for (var _iterator73 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, "cm-selectionBackground", r)), _step73; !(_step73 = _iterator73()).done;) {
-          let marker = _step73.value;
+        for (var _iterator74 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, "cm-selectionBackground", r)), _step74; !(_step74 = _iterator74()).done;) {
+          let marker = _step74.value;
           markers.push(marker);
         }
       }
     }
     if (browser.ios && !main.empty && view.state.facet(selectionConfig).iosSelectionHandles) {
-      for (var _iterator71 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, "cm-selectionHandle cm-selectionHandle-start", state_dist/* EditorSelection */.OF.cursor(main.from, 1))), _step71; !(_step71 = _iterator71()).done;) {
-        let piece = _step71.value;
+      for (var _iterator72 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, "cm-selectionHandle cm-selectionHandle-start", state_dist/* EditorSelection */.OF.cursor(main.from, 1))), _step72; !(_step72 = _iterator72()).done;) {
+        let piece = _step72.value;
         markers.push(piece);
       }
-      for (var _iterator72 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, "cm-selectionHandle cm-selectionHandle-end", state_dist/* EditorSelection */.OF.cursor(main.to, 1))), _step72; !(_step72 = _iterator72()).done;) {
-        let piece = _step72.value;
+      for (var _iterator73 = _createForOfIteratorHelperLoose(RectangleMarker.forRange(view, "cm-selectionHandle cm-selectionHandle-end", state_dist/* EditorSelection */.OF.cursor(main.to, 1))), _step73; !(_step73 = _iterator73()).done;) {
+        let piece = _step73.value;
         markers.push(piece);
       }
     }
@@ -22807,11 +22840,11 @@ function matchRanges(view, maxLength) {
   let visible = view.visibleRanges;
   if (visible.length == 1 && visible[0].from == view.viewport.from && visible[0].to == view.viewport.to) return visible;
   let result = [];
-  for (var _iterator74 = _createForOfIteratorHelperLoose(visible), _step74; !(_step74 = _iterator74()).done;) {
+  for (var _iterator75 = _createForOfIteratorHelperLoose(visible), _step75; !(_step75 = _iterator75()).done;) {
     let {
       from,
       to
-    } = _step74.value;
+    } = _step75.value;
     from = Math.max(view.state.doc.lineAt(from).from, from - maxLength);
     to = Math.min(view.state.doc.lineAt(to).to, to + maxLength);
     if (result.length && result[result.length - 1].to >= from) result[result.length - 1].to = to;else result.push({
@@ -22850,11 +22883,11 @@ class MatchDecorator {
   createDeco(view) {
     let build = new state_dist/* RangeSetBuilder */.vB(),
       add = build.add.bind(build);
-    for (var _iterator75 = _createForOfIteratorHelperLoose(matchRanges(view, this.maxLength)), _step75; !(_step75 = _iterator75()).done;) {
+    for (var _iterator76 = _createForOfIteratorHelperLoose(matchRanges(view, this.maxLength)), _step76; !(_step76 = _iterator76()).done;) {
       let {
         from,
         to
-      } = _step75.value;
+      } = _step76.value;
       iterMatches(view.state.doc, this.regexp, from, to, (from, m) => this.addMatch(m, view, from, add));
     }
     return build.finish();
@@ -22873,8 +22906,8 @@ class MatchDecorator {
     return deco;
   }
   updateRange(view, deco, updateFrom, updateTo) {
-    for (var _iterator76 = _createForOfIteratorHelperLoose(view.visibleRanges), _step76; !(_step76 = _iterator76()).done;) {
-      let r = _step76.value;
+    for (var _iterator77 = _createForOfIteratorHelperLoose(view.visibleRanges), _step77; !(_step77 = _iterator77()).done;) {
+      let r = _step77.value;
       let from = Math.max(r.from, updateFrom),
         to = Math.min(r.to, updateTo);
       if (to >= from) {
@@ -23099,8 +23132,8 @@ const activeLineHighlighter = ViewPlugin.fromClass(class {
   getDeco(view) {
     let lastLineStart = -1,
       deco = [];
-    for (var _iterator77 = _createForOfIteratorHelperLoose(view.state.selection.ranges), _step77; !(_step77 = _iterator77()).done;) {
-      let r = _step77.value;
+    for (var _iterator78 = _createForOfIteratorHelperLoose(view.state.selection.ranges), _step78; !(_step78 = _iterator78()).done;) {
+      let r = _step78.value;
       let line = view.lineBlockAt(r.head);
       if (line.from > lastLineStart) {
         deco.push(lineDeco.range(line.from));
@@ -23294,8 +23327,8 @@ class TooltipViewManager {
     let input = update.state.facet(this.facet);
     let tooltips = input.filter(x => x);
     if (input === this.input) {
-      for (var _iterator78 = _createForOfIteratorHelperLoose(this.tooltipViews), _step78; !(_step78 = _iterator78()).done;) {
-        let t = _step78.value;
+      for (var _iterator79 = _createForOfIteratorHelperLoose(this.tooltipViews), _step79; !(_step79 = _iterator79()).done;) {
+        let t = _step79.value;
         if (t.update) t.update(update);
       }
       return false;
@@ -23319,8 +23352,8 @@ class TooltipViewManager {
         if (tooltipView.update) tooltipView.update(update);
       }
     }
-    for (var _iterator79 = _createForOfIteratorHelperLoose(this.tooltipViews), _step79; !(_step79 = _iterator79()).done;) {
-      let t = _step79.value;
+    for (var _iterator80 = _createForOfIteratorHelperLoose(this.tooltipViews), _step80; !(_step80 = _iterator80()).done;) {
+      let t = _step80.value;
       if (tooltipViews.indexOf(t) < 0) {
         this.removeTooltipView(t);
         (_a = t.destroy) === null || _a === void 0 ? void 0 : _a.call(t);
@@ -23405,8 +23438,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
   observeIntersection() {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
-      for (var _iterator80 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step80; !(_step80 = _iterator80()).done;) {
-        let tooltip = _step80.value;
+      for (var _iterator81 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step81; !(_step81 = _iterator81()).done;) {
+        let tooltip = _step81.value;
         this.intersectionObserver.observe(tooltip.dom);
       }
     }
@@ -23425,8 +23458,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
     let newConfig = update.state.facet(tooltipConfig);
     if (newConfig.position != this.position && !this.madeAbsolute) {
       this.position = newConfig.position;
-      for (var _iterator81 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step81; !(_step81 = _iterator81()).done;) {
-        let t = _step81.value;
+      for (var _iterator82 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step82; !(_step82 = _iterator82()).done;) {
+        let t = _step82.value;
         t.dom.style.position = this.position;
       }
       shouldMeasure = true;
@@ -23435,8 +23468,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       if (this.parent) this.container.remove();
       this.parent = newConfig.parent;
       this.createContainer();
-      for (var _iterator82 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step82; !(_step82 = _iterator82()).done;) {
-        let t = _step82.value;
+      for (var _iterator83 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step83; !(_step83 = _iterator83()).done;) {
+        let t = _step83.value;
         this.container.appendChild(t.dom);
       }
       shouldMeasure = true;
@@ -23465,8 +23498,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
   destroy() {
     var _a, _b, _c;
     this.view.win.removeEventListener("resize", this.measureSoon);
-    for (var _iterator83 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step83; !(_step83 = _iterator83()).done;) {
-      let tooltipView = _step83.value;
+    for (var _iterator84 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step84; !(_step84 = _iterator84()).done;) {
+      let tooltipView = _step84.value;
       tooltipView.dom.remove();
       (_a = tooltipView.destroy) === null || _a === void 0 ? void 0 : _a.call(tooltipView);
     }
@@ -23532,8 +23565,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
     if (measured.makeAbsolute) {
       this.madeAbsolute = true;
       this.position = "absolute";
-      for (var _iterator84 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step84; !(_step84 = _iterator84()).done;) {
-        let t = _step84.value;
+      for (var _iterator85 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step85; !(_step85 = _iterator85()).done;) {
+        let t = _step85.value;
         t.dom.style.position = "absolute";
       }
     }
@@ -23579,8 +23612,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       let top = above ? pos.top - height - arrowHeight - offset.y : pos.bottom + arrowHeight + offset.y;
       let right = left + width;
       if (tView.overlap !== true) {
-        for (var _iterator85 = _createForOfIteratorHelperLoose(others), _step85; !(_step85 = _iterator85()).done;) {
-          let r = _step85.value;
+        for (var _iterator86 = _createForOfIteratorHelperLoose(others), _step86; !(_step86 = _iterator86()).done;) {
+          let r = _step86.value;
           if (r.left < right && r.right > left && r.top < top + height && r.bottom > top) top = above ? r.top - height - 2 - arrowHeight : r.bottom + arrowHeight + 2;
         }
       }
@@ -23612,8 +23645,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
       if (this.inView != this.view.inView) {
         this.inView = this.view.inView;
         if (!this.inView) {
-          for (var _iterator86 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step86; !(_step86 = _iterator86()).done;) {
-            let tv = _step86.value;
+          for (var _iterator87 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step87; !(_step87 = _iterator87()).done;) {
+            let tv = _step87.value;
             tv.dom.style.top = Outside;
           }
         }
@@ -23722,15 +23755,15 @@ class HoverTooltipHost {
     return hostedView;
   }
   mount(view) {
-    for (var _iterator87 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step87; !(_step87 = _iterator87()).done;) {
-      let hostedView = _step87.value;
+    for (var _iterator88 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step88; !(_step88 = _iterator88()).done;) {
+      let hostedView = _step88.value;
       if (hostedView.mount) hostedView.mount(view);
     }
     this.mounted = true;
   }
   positioned(space) {
-    for (var _iterator88 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step88; !(_step88 = _iterator88()).done;) {
-      let hostedView = _step88.value;
+    for (var _iterator89 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step89; !(_step89 = _iterator89()).done;) {
+      let hostedView = _step89.value;
       if (hostedView.positioned) hostedView.positioned(space);
     }
   }
@@ -23739,15 +23772,15 @@ class HoverTooltipHost {
   }
   destroy() {
     var _a;
-    for (var _iterator89 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step89; !(_step89 = _iterator89()).done;) {
-      let t = _step89.value;
+    for (var _iterator90 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step90; !(_step90 = _iterator90()).done;) {
+      let t = _step90.value;
       (_a = t.destroy) === null || _a === void 0 ? void 0 : _a.call(t);
     }
   }
   passProp(name) {
     let value = undefined;
-    for (var _iterator90 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step90; !(_step90 = _iterator90()).done;) {
-      let view = _step90.value;
+    for (var _iterator91 = _createForOfIteratorHelperLoose(this.manager.tooltipViews), _step91; !(_step91 = _iterator91()).done;) {
+      let view = _step91.value;
       let given = view[name];
       if (given !== undefined) {
         if (value === undefined) value = given;else if (value !== given) return undefined;
@@ -23958,8 +23991,8 @@ function hoverTooltip(source, options = {}) {
         if (options.hideOnChange && (tr.docChanged || tr.selection)) value = [];else if (options.hideOn) value = value.filter(v => !options.hideOn(tr, v));
         if (tr.docChanged) {
           let mapped = [];
-          for (var _iterator91 = _createForOfIteratorHelperLoose(value), _step91; !(_step91 = _iterator91()).done;) {
-            let tooltip = _step91.value;
+          for (var _iterator92 = _createForOfIteratorHelperLoose(value), _step92; !(_step92 = _iterator92()).done;) {
+            let tooltip = _step92.value;
             let newPos = tr.changes.mapPos(tooltip.pos, -1, MapMode.TrackDel);
             if (newPos != null) {
               let copy = Object.assign(Object.create(null), tooltip);
@@ -23971,8 +24004,8 @@ function hoverTooltip(source, options = {}) {
           value = mapped;
         }
       }
-      for (var _iterator92 = _createForOfIteratorHelperLoose(tr.effects), _step92; !(_step92 = _iterator92()).done;) {
-        let effect = _step92.value;
+      for (var _iterator93 = _createForOfIteratorHelperLoose(tr.effects), _step93; !(_step93 = _iterator93()).done;) {
+        let effect = _step93.value;
         if (effect.is(setHover)) value = effect.value;
         if (effect.is(closeHoverTooltipEffect)) value = [];
       }
@@ -24003,8 +24036,8 @@ function repositionTooltips(view) {
 const panelConfig = state_dist/* Facet */.sj.define({
   combine(configs) {
     let topContainer, bottomContainer;
-    for (var _iterator93 = _createForOfIteratorHelperLoose(configs), _step93; !(_step93 = _iterator93()).done;) {
-      let c = _step93.value;
+    for (var _iterator94 = _createForOfIteratorHelperLoose(configs), _step94; !(_step94 = _iterator94()).done;) {
+      let c = _step94.value;
       topContainer = topContainer || c.topContainer;
       bottomContainer = bottomContainer || c.bottomContainer;
     }
@@ -24032,8 +24065,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
     this.bottom = new PanelGroup(view, false, conf.bottomContainer);
     this.top.sync(this.panels.filter(p => p.top));
     this.bottom.sync(this.panels.filter(p => !p.top));
-    for (var _iterator94 = _createForOfIteratorHelperLoose(this.panels), _step94; !(_step94 = _iterator94()).done;) {
-      let p = _step94.value;
+    for (var _iterator95 = _createForOfIteratorHelperLoose(this.panels), _step95; !(_step95 = _iterator95()).done;) {
+      let p = _step95.value;
       p.dom.classList.add("cm-panel");
       if (p.mount) p.mount();
     }
@@ -24057,8 +24090,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         top = [],
         bottom = [],
         mount = [];
-      for (var _iterator95 = _createForOfIteratorHelperLoose(specs), _step95; !(_step95 = _iterator95()).done;) {
-        let spec = _step95.value;
+      for (var _iterator96 = _createForOfIteratorHelperLoose(specs), _step96; !(_step96 = _iterator96()).done;) {
+        let spec = _step96.value;
         let known = this.specs.indexOf(spec),
           panel;
         if (known < 0) {
@@ -24081,8 +24114,8 @@ const panelPlugin = ViewPlugin.fromClass(class {
         if (p.mount) p.mount();
       }
     } else {
-      for (var _iterator96 = _createForOfIteratorHelperLoose(this.panels), _step96; !(_step96 = _iterator96()).done;) {
-        let p = _step96.value;
+      for (var _iterator97 = _createForOfIteratorHelperLoose(this.panels), _step97; !(_step97 = _iterator97()).done;) {
+        let p = _step97.value;
         if (p.update) p.update(update);
       }
     }
@@ -24111,8 +24144,8 @@ class PanelGroup {
     this.syncClasses();
   }
   sync(panels) {
-    for (var _iterator97 = _createForOfIteratorHelperLoose(this.panels), _step97; !(_step97 = _iterator97()).done;) {
-      let p = _step97.value;
+    for (var _iterator98 = _createForOfIteratorHelperLoose(this.panels), _step98; !(_step98 = _iterator98()).done;) {
+      let p = _step98.value;
       if (p.destroy && panels.indexOf(p) < 0) p.destroy();
     }
     this.panels = panels;
@@ -24134,8 +24167,8 @@ class PanelGroup {
       parent.insertBefore(this.dom, this.top ? parent.firstChild : null);
     }
     let curDOM = this.dom.firstChild;
-    for (var _iterator98 = _createForOfIteratorHelperLoose(this.panels), _step98; !(_step98 = _iterator98()).done;) {
-      let panel = _step98.value;
+    for (var _iterator99 = _createForOfIteratorHelperLoose(this.panels), _step99; !(_step99 = _iterator99()).done;) {
+      let panel = _step99.value;
       if (panel.dom.parentNode == this.dom) {
         while (curDOM != panel.dom) curDOM = rm(curDOM);
         curDOM = curDOM.nextSibling;
@@ -24150,12 +24183,12 @@ class PanelGroup {
   }
   syncClasses() {
     if (!this.container || this.classes == this.view.themeClasses) return;
-    for (var _iterator99 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step99; !(_step99 = _iterator99()).done;) {
-      let cls = _step99.value;
+    for (var _iterator100 = _createForOfIteratorHelperLoose(this.classes.split(" ")), _step100; !(_step100 = _iterator100()).done;) {
+      let cls = _step100.value;
       if (cls) this.container.classList.remove(cls);
     }
-    for (var _iterator100 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step100; !(_step100 = _iterator100()).done;) {
-      let cls = _step100.value;
+    for (var _iterator101 = _createForOfIteratorHelperLoose((this.classes = this.view.themeClasses).split(" ")), _step101; !(_step101 = _iterator101()).done;) {
+      let cls = _step101.value;
       if (cls) this.container.classList.add(cls);
     }
   }
@@ -24197,8 +24230,8 @@ function showDialog(view, config) {
 }
 function getDialog(view, className) {
   let dialogs = view.state.field(dialogField, false) || [];
-  for (var _iterator101 = _createForOfIteratorHelperLoose(dialogs), _step101; !(_step101 = _iterator101()).done;) {
-    let open = _step101.value;
+  for (var _iterator102 = _createForOfIteratorHelperLoose(dialogs), _step102; !(_step102 = _iterator102()).done;) {
+    let open = _step102.value;
     let panel = getPanel(view, open);
     if (panel && panel.dom.classList.contains(className)) return panel;
   }
@@ -24209,8 +24242,8 @@ const dialogField = state_dist/* StateField */.sU.define({
     return [];
   },
   update(dialogs, tr) {
-    for (var _iterator102 = _createForOfIteratorHelperLoose(tr.effects), _step102; !(_step102 = _iterator102()).done;) {
-      let e = _step102.value;
+    for (var _iterator103 = _createForOfIteratorHelperLoose(tr.effects), _step103; !(_step103 = _iterator103()).done;) {
+      let e = _step103.value;
       if (e.is(openDialogEffect)) dialogs = [e.value].concat(dialogs);else if (e.is(closeDialogEffect)) dialogs = dialogs.filter(d => d != e.value);
     }
     return dialogs;
@@ -24333,8 +24366,8 @@ const gutterView = ViewPlugin.fromClass(class {
     this.dom.style.minHeight = this.view.contentHeight / this.view.scaleY + "px";
     this.gutters = view.state.facet(activeGutters).map(conf => new SingleGutterView(view, conf));
     this.fixed = !view.state.facet(unfixGutters);
-    for (var _iterator103 = _createForOfIteratorHelperLoose(this.gutters), _step103; !(_step103 = _iterator103()).done;) {
-      let gutter = _step103.value;
+    for (var _iterator104 = _createForOfIteratorHelperLoose(this.gutters), _step104; !(_step104 = _iterator104()).done;) {
+      let gutter = _step104.value;
       if (gutter.config.side == "after") this.getDOMAfter().appendChild(gutter.dom);else this.dom.appendChild(gutter.dom);
     }
     if (this.fixed) {
@@ -24382,42 +24415,42 @@ const gutterView = ViewPlugin.fromClass(class {
     let lineClasses = state_dist/* RangeSet */.om.iter(this.view.state.facet(gutterLineClass), this.view.viewport.from);
     let classSet = [];
     let contexts = this.gutters.map(gutter => new UpdateContext(gutter, this.view.viewport, -this.view.documentPadding.top));
-    for (var _iterator104 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step104; !(_step104 = _iterator104()).done;) {
-      let line = _step104.value;
+    for (var _iterator105 = _createForOfIteratorHelperLoose(this.view.viewportLineBlocks), _step105; !(_step105 = _iterator105()).done;) {
+      let line = _step105.value;
       if (classSet.length) classSet = [];
       if (Array.isArray(line.type)) {
         let first = true;
-        for (var _iterator106 = _createForOfIteratorHelperLoose(line.type), _step106; !(_step106 = _iterator106()).done;) {
-          let b = _step106.value;
+        for (var _iterator107 = _createForOfIteratorHelperLoose(line.type), _step107; !(_step107 = _iterator107()).done;) {
+          let b = _step107.value;
           if (b.type == BlockType.Text && first) {
             advanceCursor(lineClasses, classSet, b.from);
-            for (var _iterator107 = _createForOfIteratorHelperLoose(contexts), _step107; !(_step107 = _iterator107()).done;) {
-              let cx = _step107.value;
+            for (var _iterator108 = _createForOfIteratorHelperLoose(contexts), _step108; !(_step108 = _iterator108()).done;) {
+              let cx = _step108.value;
               cx.line(this.view, b, classSet);
             }
             first = false;
           } else if (b.widget) {
-            for (var _iterator108 = _createForOfIteratorHelperLoose(contexts), _step108; !(_step108 = _iterator108()).done;) {
-              let cx = _step108.value;
+            for (var _iterator109 = _createForOfIteratorHelperLoose(contexts), _step109; !(_step109 = _iterator109()).done;) {
+              let cx = _step109.value;
               cx.widget(this.view, b);
             }
           }
         }
       } else if (line.type == BlockType.Text) {
         advanceCursor(lineClasses, classSet, line.from);
-        for (var _iterator109 = _createForOfIteratorHelperLoose(contexts), _step109; !(_step109 = _iterator109()).done;) {
-          let cx = _step109.value;
+        for (var _iterator110 = _createForOfIteratorHelperLoose(contexts), _step110; !(_step110 = _iterator110()).done;) {
+          let cx = _step110.value;
           cx.line(this.view, line, classSet);
         }
       } else if (line.widget) {
-        for (var _iterator110 = _createForOfIteratorHelperLoose(contexts), _step110; !(_step110 = _iterator110()).done;) {
-          let cx = _step110.value;
+        for (var _iterator111 = _createForOfIteratorHelperLoose(contexts), _step111; !(_step111 = _iterator111()).done;) {
+          let cx = _step111.value;
           cx.widget(this.view, line);
         }
       }
     }
-    for (var _iterator105 = _createForOfIteratorHelperLoose(contexts), _step105; !(_step105 = _iterator105()).done;) {
-      let cx = _step105.value;
+    for (var _iterator106 = _createForOfIteratorHelperLoose(contexts), _step106; !(_step106 = _iterator106()).done;) {
+      let cx = _step106.value;
       cx.finish();
     }
     if (detach) {
@@ -24430,15 +24463,15 @@ const gutterView = ViewPlugin.fromClass(class {
       cur = update.state.facet(activeGutters);
     let change = update.docChanged || update.heightChanged || update.viewportChanged || !state_dist/* RangeSet */.om.eq(update.startState.facet(gutterLineClass), update.state.facet(gutterLineClass), update.view.viewport.from, update.view.viewport.to);
     if (prev == cur) {
-      for (var _iterator111 = _createForOfIteratorHelperLoose(this.gutters), _step111; !(_step111 = _iterator111()).done;) {
-        let gutter = _step111.value;
+      for (var _iterator112 = _createForOfIteratorHelperLoose(this.gutters), _step112; !(_step112 = _iterator112()).done;) {
+        let gutter = _step112.value;
         if (gutter.update(update)) change = true;
       }
     } else {
       change = true;
       let gutters = [];
-      for (var _iterator112 = _createForOfIteratorHelperLoose(cur), _step112; !(_step112 = _iterator112()).done;) {
-        let conf = _step112.value;
+      for (var _iterator113 = _createForOfIteratorHelperLoose(cur), _step113; !(_step113 = _iterator113()).done;) {
+        let conf = _step113.value;
         let known = prev.indexOf(conf);
         if (known < 0) {
           gutters.push(new SingleGutterView(this.view, conf));
@@ -24447,8 +24480,8 @@ const gutterView = ViewPlugin.fromClass(class {
           gutters.push(this.gutters[known]);
         }
       }
-      for (var _iterator113 = _createForOfIteratorHelperLoose(this.gutters), _step113; !(_step113 = _iterator113()).done;) {
-        let g = _step113.value;
+      for (var _iterator114 = _createForOfIteratorHelperLoose(this.gutters), _step114; !(_step114 = _iterator114()).done;) {
+        let g = _step114.value;
         g.dom.remove();
         if (gutters.indexOf(g) < 0) g.destroy();
       }
@@ -24461,8 +24494,8 @@ const gutterView = ViewPlugin.fromClass(class {
     return change;
   }
   destroy() {
-    for (var _iterator114 = _createForOfIteratorHelperLoose(this.gutters), _step114; !(_step114 = _iterator114()).done;) {
-      let view = _step114.value;
+    for (var _iterator115 = _createForOfIteratorHelperLoose(this.gutters), _step115; !(_step115 = _iterator115()).done;) {
+      let view = _step115.value;
       view.destroy();
     }
     this.dom.remove();
@@ -24528,8 +24561,8 @@ class UpdateContext {
   widget(view, block) {
     let marker = this.gutter.config.widgetMarker(view, block.widget, block),
       markers = marker ? [marker] : null;
-    for (var _iterator115 = _createForOfIteratorHelperLoose(view.state.facet(gutterWidgetClass)), _step115; !(_step115 = _iterator115()).done;) {
-      let cls = _step115.value;
+    for (var _iterator116 = _createForOfIteratorHelperLoose(view.state.facet(gutterWidgetClass)), _step116; !(_step116 = _iterator116()).done;) {
+      let cls = _step116.value;
       let marker = cls(view, block.widget, block);
       if (marker) (markers || (markers = [])).push(marker);
     }
@@ -24585,8 +24618,8 @@ class SingleGutterView {
     return !state_dist/* RangeSet */.om.eq(this.markers, prevMarkers, vp.from, vp.to) || (this.config.lineMarkerChange ? this.config.lineMarkerChange(update) : false);
   }
   destroy() {
-    for (var _iterator116 = _createForOfIteratorHelperLoose(this.elements), _step116; !(_step116 = _iterator116()).done;) {
-      let elt = _step116.value;
+    for (var _iterator117 = _createForOfIteratorHelperLoose(this.elements), _step117; !(_step117 = _iterator117()).done;) {
+      let elt = _step117.value;
       elt.destroy();
     }
   }
@@ -24699,8 +24732,8 @@ const lineNumberGutter = activeGutters.compute([lineNumberConfig], state => ({
     return new NumberMarker(formatNumber(view, view.state.doc.lineAt(line.from).number));
   },
   widgetMarker: (view, widget, block) => {
-    for (var _iterator117 = _createForOfIteratorHelperLoose(view.state.facet(lineNumberWidgetMarker)), _step117; !(_step117 = _iterator117()).done;) {
-      let m = _step117.value;
+    for (var _iterator118 = _createForOfIteratorHelperLoose(view.state.facet(lineNumberWidgetMarker)), _step118; !(_step118 = _iterator118()).done;) {
+      let m = _step118.value;
       let result = m(view, widget, block);
       if (result) return result;
     }
@@ -24734,8 +24767,8 @@ const activeLineGutterMarker = new class extends GutterMarker {
 const activeLineGutterHighlighter = gutterLineClass.compute(["selection"], state => {
   let marks = [],
     last = -1;
-  for (var _iterator118 = _createForOfIteratorHelperLoose(state.selection.ranges), _step118; !(_step118 = _iterator118()).done;) {
-    let range = _step118.value;
+  for (var _iterator119 = _createForOfIteratorHelperLoose(state.selection.ranges), _step119; !(_step119 = _iterator119()).done;) {
+    let range = _step119.value;
     let linePos = state.doc.lineAt(range.head).from;
     if (linePos > last) {
       last = linePos;
@@ -26332,7 +26365,11 @@ class StructureCursor {
       } = this,
       p = pos - this.offset;
     while (!this.done && cursor.from < p) {
-      if (cursor.to >= pos && cursor.enter(p, 1, IterMode.IgnoreOverlays | IterMode.ExcludeBuffers)) ;else if (!cursor.next(false)) this.done = true;
+      if (cursor.to >= pos && cursor.enter(p, 1, IterMode.IgnoreOverlays | IterMode.ExcludeBuffers)) ;else if (cursor.to <= pos) {
+        if (!cursor.next(false)) this.done = true;
+      } else {
+        break;
+      }
     }
   }
   hasNode(cursor) {
@@ -31827,16 +31864,16 @@ function toRefs(object) {
   return ret;
 }
 class ObjectRefImpl {
-  constructor(_object, _key, _defaultValue) {
+  constructor(_object, key, _defaultValue) {
     this._object = _object;
-    this._key = _key;
     this._defaultValue = _defaultValue;
     this["__v_isRef"] = true;
     this._value = void 0;
+    this._key = isSymbol(key) ? key : String(key);
     this._raw = toRaw(_object);
     let shallow = true;
     let obj = _object;
-    if (!shared_esm_bundler_isArray(_object) || !isIntegerKey(String(_key))) {
+    if (!shared_esm_bundler_isArray(_object) || isSymbol(this._key) || !isIntegerKey(this._key)) {
       do {
         shallow = !isProxy(obj) || isShallow(obj);
       } while (shallow && (obj = obj["__v_raw"]));
@@ -32571,6 +32608,13 @@ function checkRecursiveUpdates(seen, fn) {
   return false;
 }
 let isHmrUpdating = false;
+const setHmrUpdating = v => {
+  try {
+    return isHmrUpdating;
+  } finally {
+    isHmrUpdating = v;
+  }
+};
 const hmrDirtyComponents = new Map();
 if (false) // removed by dead control flow
 {}
@@ -33001,6 +33045,7 @@ function createPathGetter(ctx, path) {
     return cur;
   };
 }
+const pendingMounts = new WeakMap();
 const TeleportEndKey = Symbol("_vte");
 const isTeleport = type => type.__isTeleport;
 const isTeleportDisabled = props => props && (props.disabled || props.disabled === "");
@@ -33042,64 +33087,73 @@ const TeleportImpl = {
     } = internals;
     const disabled = isTeleportDisabled(n2.props);
     let {
-      shapeFlag,
-      children,
       dynamicChildren
     } = n2;
     if (false) // removed by dead control flow
 {}
+    const mount = (vnode, container2, anchor2) => {
+      if (vnode.shapeFlag & 16) {
+        mountChildren(vnode.children, container2, anchor2, parentComponent, parentSuspense, namespace, slotScopeIds, optimized);
+      }
+    };
+    const mountToTarget = (vnode = n2) => {
+      const disabled2 = isTeleportDisabled(vnode.props);
+      const target = vnode.target = resolveTarget(vnode.props, querySelector);
+      const targetAnchor = prepareAnchor(target, vnode, createText, insert);
+      if (target) {
+        if (namespace !== "svg" && isTargetSVG(target)) {
+          namespace = "svg";
+        } else if (namespace !== "mathml" && isTargetMathML(target)) {
+          namespace = "mathml";
+        }
+        if (parentComponent && parentComponent.isCE) {
+          (parentComponent.ce._teleportTargets || (parentComponent.ce._teleportTargets = new Set())).add(target);
+        }
+        if (!disabled2) {
+          mount(vnode, target, targetAnchor);
+          updateCssVars(vnode, false);
+        }
+      } else if (false) // removed by dead control flow
+{}
+    };
+    const queuePendingMount = vnode => {
+      const mountJob = () => {
+        if (pendingMounts.get(vnode) !== mountJob) return;
+        pendingMounts.delete(vnode);
+        if (isTeleportDisabled(vnode.props)) {
+          mount(vnode, container, vnode.anchor);
+          updateCssVars(vnode, true);
+        }
+        mountToTarget(vnode);
+      };
+      pendingMounts.set(vnode, mountJob);
+      queuePostRenderEffect(mountJob, parentSuspense);
+    };
     if (n1 == null) {
       const placeholder = n2.el =  false ? 0 : createText("");
       const mainAnchor = n2.anchor =  false ? 0 : createText("");
       insert(placeholder, container, anchor);
       insert(mainAnchor, container, anchor);
-      const mount = (container2, anchor2) => {
-        if (shapeFlag & 16) {
-          mountChildren(children, container2, anchor2, parentComponent, parentSuspense, namespace, slotScopeIds, optimized);
-        }
-      };
-      const mountToTarget = () => {
-        const target = n2.target = resolveTarget(n2.props, querySelector);
-        const targetAnchor = prepareAnchor(target, n2, createText, insert);
-        if (target) {
-          if (namespace !== "svg" && isTargetSVG(target)) {
-            namespace = "svg";
-          } else if (namespace !== "mathml" && isTargetMathML(target)) {
-            namespace = "mathml";
-          }
-          if (parentComponent && parentComponent.isCE) {
-            (parentComponent.ce._teleportTargets || (parentComponent.ce._teleportTargets = new Set())).add(target);
-          }
-          if (!disabled) {
-            mount(target, targetAnchor);
-            updateCssVars(n2, false);
-          }
-        } else if (false) // removed by dead control flow
-{}
-      };
-      if (disabled) {
-        mount(container, mainAnchor);
-        updateCssVars(n2, true);
-      }
-      if (isTeleportDeferred(n2.props)) {
-        n2.el.__isMounted = false;
-        queuePostRenderEffect(() => {
-          mountToTarget();
-          delete n2.el.__isMounted;
-        }, parentSuspense);
-      } else {
-        mountToTarget();
-      }
-    } else {
-      if (isTeleportDeferred(n2.props) && n1.el.__isMounted === false) {
-        queuePostRenderEffect(() => {
-          TeleportImpl.process(n1, n2, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized, internals);
-        }, parentSuspense);
+      if (isTeleportDeferred(n2.props) || parentSuspense && parentSuspense.pendingBranch) {
+        queuePendingMount(n2);
         return;
       }
+      if (disabled) {
+        mount(n2, container, mainAnchor);
+        updateCssVars(n2, true);
+      }
+      mountToTarget();
+    } else {
       n2.el = n1.el;
-      n2.targetStart = n1.targetStart;
       const mainAnchor = n2.anchor = n1.anchor;
+      const pendingMount = pendingMounts.get(n1);
+      if (pendingMount) {
+        pendingMount.flags |= 8;
+        pendingMounts.delete(n1);
+        queuePendingMount(n2);
+        return;
+      }
+      n2.targetStart = n1.targetStart;
       const target = n2.target = n1.target;
       const targetAnchor = n2.targetAnchor = n1.targetAnchor;
       const wasDisabled = isTeleportDisabled(n1.props);
@@ -33153,13 +33207,19 @@ const TeleportImpl = {
       target,
       props
     } = vnode;
+    let shouldRemove = doRemove || !isTeleportDisabled(props);
+    const pendingMount = pendingMounts.get(vnode);
+    if (pendingMount) {
+      pendingMount.flags |= 8;
+      pendingMounts.delete(vnode);
+      shouldRemove = false;
+    }
     if (target) {
       hostRemove(targetStart);
       hostRemove(targetAnchor);
     }
     doRemove && hostRemove(anchor);
     if (shapeFlag & 16) {
-      const shouldRemove = doRemove || !isTeleportDisabled(props);
       for (let i = 0; i < children.length; i++) {
         const child = children[i];
         unmount(child, parentComponent, parentSuspense, shouldRemove, !!child.dynamicChildren);
@@ -33480,7 +33540,7 @@ function resolveTransitionHooks(vnode, props, state, instance, postClone) {
       callHook(hook, [el]);
     },
     enter(el) {
-      if (leavingVNodesCache[key] === vnode) return;
+      if (!isHmrUpdating && leavingVNodesCache[key] === vnode) return;
       let hook = onEnter;
       let afterHook = onAfterEnter;
       let cancelHook = onEnterCancelled;
@@ -36244,12 +36304,14 @@ function hasPropValueChanged(nextProps, prevProps, key) {
 }
 function updateHOCHostEl({
   vnode,
-  parent
+  parent,
+  suspense
 }, el) {
   while (parent) {
     const root = parent.subTree;
     if (root.suspense && root.suspense.activeBranch === vnode) {
-      root.el = vnode.el;
+      root.suspense.vnode.el = root.el = el;
+      vnode = root;
     }
     if (root === vnode) {
       (vnode = parent.vnode).el = el;
@@ -36257,6 +36319,9 @@ function updateHOCHostEl({
     } else {
       break;
     }
+  }
+  if (suspense && suspense.activeBranch === vnode) {
+    suspense.vnode.el = el;
   }
 }
 const internalObjectProto = {};
@@ -36985,10 +37050,19 @@ function baseCreateRenderer(options, createHydrationFns) {
     }
     hostInsert(el, container, anchor);
     if ((vnodeHook = props && props.onVnodeMounted) || needCallTransitionHooks || dirs) {
+      const isHmr =  false && 0;
       queuePostRenderEffect(() => {
-        vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
-        needCallTransitionHooks && transition.enter(el);
-        dirs && invokeDirectiveHook(vnode, null, parentComponent, "mounted");
+        let prev;
+        if (false) // removed by dead control flow
+{}
+        try {
+          vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
+          needCallTransitionHooks && transition.enter(el);
+          dirs && invokeDirectiveHook(vnode, null, parentComponent, "mounted");
+        } finally {
+          if (false) // removed by dead control flow
+{}
+        }
       }, parentSuspense);
     }
   };
@@ -37624,7 +37698,8 @@ function baseCreateRenderer(options, createHydrationFns) {
       shapeFlag,
       patchFlag,
       dirs,
-      cacheIndex
+      cacheIndex,
+      memo
     } = vnode;
     if (patchFlag === -2) {
       optimized = false;
@@ -37668,10 +37743,14 @@ function baseCreateRenderer(options, createHydrationFns) {
         remove(vnode);
       }
     }
-    if (shouldInvokeVnodeHook && (vnodeHook = props && props.onVnodeUnmounted) || shouldInvokeDirs) {
+    const shouldInvalidateMemo = memo != null && cacheIndex == null;
+    if (shouldInvokeVnodeHook && (vnodeHook = props && props.onVnodeUnmounted) || shouldInvokeDirs || shouldInvalidateMemo) {
       queuePostRenderEffect(() => {
         vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
         shouldInvokeDirs && invokeDirectiveHook(vnode, null, parentComponent, "unmounted");
+        if (shouldInvalidateMemo) {
+          vnode.el = null;
+        }
       }, parentSuspense);
     }
   };
@@ -38103,6 +38182,7 @@ function createSuspenseBoundary(vnode, parentSuspense, parentComponent, containe
     pendingId: suspenseId++,
     timeout: typeof timeout === "number" ? timeout : -1,
     activeBranch: null,
+    isFallbackMountPending: false,
     pendingBranch: null,
     isInFallback: !isHydrating,
     isHydrating,
@@ -38137,7 +38217,7 @@ function createSuspenseBoundary(vnode, parentSuspense, parentComponent, containe
             }
           };
         }
-        if (activeBranch) {
+        if (activeBranch && !suspense.isFallbackMountPending) {
           if (parentNode(activeBranch.el) === container2) {
             anchor = next(activeBranch);
           }
@@ -38150,6 +38230,7 @@ function createSuspenseBoundary(vnode, parentSuspense, parentComponent, containe
           move(pendingBranch, container2, anchor, 0);
         }
       }
+      suspense.isFallbackMountPending = false;
       setActiveBranch(suspense, pendingBranch);
       suspense.pendingBranch = null;
       suspense.isInFallback = false;
@@ -38191,6 +38272,7 @@ function createSuspenseBoundary(vnode, parentSuspense, parentComponent, containe
       triggerEvent(vnode2, "onFallback");
       const anchor2 = next(activeBranch);
       const mountFallback = () => {
+        suspense.isFallbackMountPending = false;
         if (!suspense.isInFallback) {
           return;
         }
@@ -38199,6 +38281,7 @@ function createSuspenseBoundary(vnode, parentSuspense, parentComponent, containe
       };
       const delayEnter = fallbackVNode.transition && fallbackVNode.transition.mode === "out-in";
       if (delayEnter) {
+        suspense.isFallbackMountPending = true;
         activeBranch.transition.afterLeave = mountFallback;
       }
       suspense.isInFallback = true;
@@ -38226,6 +38309,7 @@ function createSuspenseBoundary(vnode, parentSuspense, parentComponent, containe
         if (instance.isUnmounted || suspense.isUnmounted || suspense.pendingId !== instance.suspenseId) {
           return;
         }
+        unsetCurrentInstance();
         instance.asyncResolved = true;
         const {
           vnode: vnode2
@@ -38643,6 +38727,8 @@ function mergeProps(...args) {
         const incoming = toMerge[key];
         if (incoming && existing !== incoming && !(shared_esm_bundler_isArray(existing) && existing.includes(incoming))) {
           ret[key] = existing ? [].concat(existing, incoming) : incoming;
+        } else if (incoming == null && existing == null && !isModelListener(key)) {
+          ret[key] = incoming;
         }
       } else if (key !== "") {
         ret[key] = toMerge[key];
@@ -39142,7 +39228,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-const version = "3.5.30";
+const version = "3.5.32";
 const runtime_core_esm_bundler_warn =  false ? 0 : NOOP;
 const ErrorTypeStrings = ErrorTypeStrings$1;
 const devtools =  true ? devtools$1 : 0;
@@ -40624,7 +40710,8 @@ const vModelText = {
     if (elValue === newValue) {
       return;
     }
-    if (document.activeElement === el && el.type !== "range") {
+    const rootNode = el.getRootNode();
+    if ((rootNode instanceof Document || rootNode instanceof ShadowRoot) && rootNode.activeElement === el && el.type !== "range") {
       if (lazy && value === oldValue) {
         return;
       }
@@ -47621,6 +47708,7 @@ function loadSubAppByURL(defaultSubApp, defaultUserData) {
   return result.promise();
 }
 ;// ./src/js/AMIExtension.js
+Object.defineProperty(AMIExtension, "name", { value: "default", configurable: true });
 
 
 
@@ -47731,6 +47819,7 @@ function loadSubAppByURL(defaultSubApp, defaultUserData) {
   });
 }
 ;// ./src/js/AMIInterface.js
+Object.defineProperty(AMIInterface, "name", { value: "default", configurable: true });
 
 
 
