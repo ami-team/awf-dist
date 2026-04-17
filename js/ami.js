@@ -27106,14 +27106,16 @@ class Stack {
     let dPrec = parser.dynamicPrecedence(type);
     if (dPrec) this.score += dPrec;
     if (depth == 0) {
+      if (type < parser.minRepeatTerm && this.reducePos < this.pos) this.reducePos = this.pos;
       this.pushState(parser.getGoto(this.state, type, true), this.reducePos);
       if (type < parser.minRepeatTerm) this.storeNode(type, this.reducePos, this.reducePos, lookaheadRecord ? 8 : 4, true);
       this.reduceContext(type, this.reducePos);
       return;
     }
     let base = this.stack.length - (depth - 1) * 3 - (action & 262144 ? 6 : 0);
-    let start = base ? this.stack[base - 2] : this.p.ranges[0].from,
-      size = this.reducePos - start;
+    let start = base ? this.stack[base - 2] : this.p.ranges[0].from;
+    if (type < parser.minRepeatTerm && start == this.reducePos && this.reducePos < this.pos) this.reducePos = this.pos;
+    let size = this.reducePos - start;
     if (size >= 2000 && !((_a = this.p.parser.nodeSet.types[type]) === null || _a === void 0 ? void 0 : _a.isAnonymous)) {
       if (start == this.p.lastBigReductionStart) {
         this.p.bigReductionCount++;
