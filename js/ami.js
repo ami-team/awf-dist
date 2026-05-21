@@ -49300,7 +49300,7 @@ class AMIWebApp {
       "params": [{
         "name": "options",
         "type": ["Object.<string, *>"],
-        "desc": "dictionary of optional parameters (logo_url, background_light_url, background_dark_url, sign_in_image_url, home_url, contact_email, about_url, default_theme_url, dashboard_theme_url, locker_url, endpoint_url, sso_auto_authentication, sso_authentication_allowed, password_authentication_allowed, certificate_authentication_allowed, sign_out_allowed, create_account_allowed, change_info_allowed, change_password_allowed, change_certificate_allowed, captcha_allowed, day_night_allowed, bookmarks_allowed, dashboards_allowed)",
+        "desc": "dictionary of optional parameters (logo_url, background_light_url, background_dark_url, sign_in_image_url, home_url, contact_email, about_url, default_theme_url, dashboard_theme_url, locker_url, endpoint_url, sso_auto_authentication, sso_authentication_allowed, password_authentication_allowed, certificate_authentication_allowed, sign_out_allowed, create_account_allowed, change_info_allowed, change_password_allowed, change_certificate_allowed, captcha_allowed, day_night_allowed, bookmarks_allowed, dashboards_allowed, dashboard_subapp_name)",
         "default": "{}",
         "optional": true,
         "nullable": ""
