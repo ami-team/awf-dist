@@ -50780,8 +50780,807 @@ class AMIWebApp {
         "desc": "A JQuery promise object, deferred object or nothing"
       }]
     }]
+  }, {
+    "name": "ami.native.IControl",
+    "alias": "",
+    "desc": "The AMI control interface",
+    "implements": [],
+    "inherits": []
+  }, {
+    "name": "ami.IContainer",
+    "alias": "",
+    "desc": "The AMI container interface",
+    "implements": [],
+    "inherits": [],
+    "functions": [{
+      "name": "render",
+      "alias": "",
+      "desc": "",
+      "params": [{
+        "name": "selector",
+        "type": ["string"],
+        "desc": "the selector",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (...)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "prependItem",
+      "alias": "",
+      "desc": "Prepends an item",
+      "params": [{
+        "name": "title",
+        "type": ["string"],
+        "desc": "the title",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (...)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object returning the new item's identifier"
+      }]
+    }, {
+      "name": "appendItem",
+      "alias": "",
+      "desc": "Appends an item",
+      "params": [{
+        "name": "title",
+        "type": ["string"],
+        "desc": "the title",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (...)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object returning the new item's identifier"
+      }]
+    }, {
+      "name": "removeItem",
+      "alias": "",
+      "desc": "Removes an item",
+      "params": [{
+        "name": "itemId",
+        "type": ["string"],
+        "desc": "the item identifier",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }]
+    }, {
+      "name": "removeAllItems",
+      "alias": "",
+      "desc": "Removes all items",
+      "params": []
+    }, {
+      "name": "isEmpty",
+      "alias": "",
+      "desc": "Checks whether the container is empty or not",
+      "params": [],
+      "returns": [{
+        "type": ["boolean"],
+        "desc": ""
+      }]
+    }]
+  }, {
+    "name": "ami.ISubApp",
+    "alias": "",
+    "desc": "The AMI sub-application interface",
+    "implements": [],
+    "inherits": [],
+    "functions": [{
+      "name": "onReady",
+      "alias": "",
+      "desc": "Called when the sub-application is ready to run",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "onExit",
+      "alias": "",
+      "desc": "Called when the sub-application is about to exit",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "onLogin",
+      "alias": "",
+      "desc": "Called when logging in",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "onLogout",
+      "alias": "",
+      "desc": "Called when logging out",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }]
   }],
   "classes": [{
+    "name": "ami.Control",
+    "alias": "",
+    "desc": "The basic AMI control",
+    "implements": ["ami.IControl"],
+    "inherits": [],
+    "konstructor": {
+      "name": "Control",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "owner",
+        "type": ["*"],
+        "desc": "the owner entity",
+        "optional": "",
+        "nullable": true
+      }]
+    },
+    "functions": [{
+      "name": "onReady",
+      "alias": "",
+      "desc": "Called when the control is ready to run",
+      "params": [],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "onRemove",
+      "alias": "",
+      "desc": "Called when the control is removed",
+      "params": [],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "patchId",
+      "alias": "",
+      "desc": "Patches an HTML identifier",
+      "params": [{
+        "name": "id",
+        "type": ["string"],
+        "desc": "the not patched HTML identifier",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["string"],
+        "desc": "The patched HTML identifier"
+      }]
+    }, {
+      "name": "replaceHTML",
+      "alias": "",
+      "desc": "Puts an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "params": [{
+        "name": "selector",
+        "type": ["string"],
+        "desc": "the target selector",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "twig",
+        "type": ["string"],
+        "desc": "the TWIG fragment",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, dict, twigs)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "prependHTML",
+      "alias": "",
+      "desc": "Prepends an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "params": [{
+        "name": "selector",
+        "type": ["string"],
+        "desc": "the target selector",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "twig",
+        "type": ["string"],
+        "desc": "the TWIG fragment",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, dict, twigs)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "appendHTML",
+      "alias": "",
+      "desc": "Appends an HTML or TWIG fragment to the given target, see method [formatTWIG]{@link #jsdoc_method_formatTWIG}",
+      "params": [{
+        "name": "selector",
+        "type": ["string"],
+        "desc": "the target selector",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "twig",
+        "type": ["string"],
+        "desc": "the TWIG fragment",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, dict, twigs)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "setupCtx",
+      "alias": "",
+      "desc": "Sets up the control's context",
+      "params": [{
+        "name": "immutables",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of immutable parameters in the control's context",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "defaults",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of default values for optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of values for optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["Object.<string, *>"],
+        "desc": "The resulting control's context"
+      }]
+    }, {
+      "name": "createControl",
+      "alias": "",
+      "desc": "Asynchronously creates a control",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "control",
+        "type": ["string"],
+        "desc": "the control name",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "params",
+        "type": ["Array.<*>"],
+        "desc": "the control's parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "createControlInBody",
+      "alias": "",
+      "desc": "Asynchronously creates a control in the body",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "control",
+        "type": ["string"],
+        "desc": "the control name",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlParams",
+        "type": ["Array.<*>"],
+        "desc": "the control's render method mandatory parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlOptions",
+        "type": ["Object.<string, *>"],
+        "desc": "the control's render method optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "createControlInContainer",
+      "alias": "",
+      "desc": "Asynchronously creates a control in a container",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "control",
+        "type": ["string"],
+        "desc": "the control name",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlParams",
+        "type": ["Array.<*>"],
+        "desc": "the control's render method mandatory parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlOptions",
+        "type": ["Object.<string, *>"],
+        "desc": "the control's render method optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "icon",
+        "type": ["string"],
+        "desc": "the icon",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "title",
+        "type": ["string"],
+        "desc": "the title",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "createControlFromWebLink",
+      "alias": "",
+      "desc": "Asynchronously creates a control in a container from a WEB link",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "el",
+        "type": ["Element"],
+        "desc": "the HTML element",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }]
+  }, {
+    "name": "ami.SubApp",
+    "alias": "",
+    "desc": "The basic AMI sub-application",
+    "implements": ["ami.ISubApp"],
+    "inherits": [],
+    "konstructor": {
+      "name": "SubApp",
+      "params": []
+    },
+    "functions": [{
+      "name": "onReady",
+      "alias": "",
+      "desc": "Called when the sub-application is ready to run",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "onExit",
+      "alias": "",
+      "desc": "Called when the sub-application is about to exit",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "onLogin",
+      "alias": "",
+      "desc": "Called when logging in",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "onLogout",
+      "alias": "",
+      "desc": "Called when logging out",
+      "params": [{
+        "name": "userdata",
+        "type": ["*"],
+        "desc": "the user data",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }],
+      "returns": [{
+        "type": ["$.Promise", "$.Deferred", "undefined"],
+        "desc": "A JQuery promise object, deferred object or nothing"
+      }]
+    }, {
+      "name": "setupCtx",
+      "alias": "",
+      "desc": "Sets up the application's context",
+      "params": [{
+        "name": "immutables",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of immutable parameters in the application's context",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "defaults",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of default values for optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of values for optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["Object.<string, *>"],
+        "desc": "The resulting application's context"
+      }]
+    }, {
+      "name": "createControl",
+      "alias": "",
+      "desc": "Asynchronously creates a control",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "control",
+        "type": ["string"],
+        "desc": "the control name",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "params",
+        "type": ["Array.<*>"],
+        "desc": "the control's parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "createControlInBody",
+      "alias": "",
+      "desc": "Asynchronously creates a control in the body",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "control",
+        "type": ["string"],
+        "desc": "the control name",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlParams",
+        "type": ["Array.<*>"],
+        "desc": "the control's render method mandatory parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlOptions",
+        "type": ["Object.<string, *>"],
+        "desc": "the control's render method optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "createControlInContainer",
+      "alias": "",
+      "desc": "Asynchronously creates a control in a container",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "control",
+        "type": ["string"],
+        "desc": "the control name",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlParams",
+        "type": ["Array.<*>"],
+        "desc": "the control's render method mandatory parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "controlOptions",
+        "type": ["Object.<string, *>"],
+        "desc": "the control's render method optional parameters",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "icon",
+        "type": ["string"],
+        "desc": "the icon",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "title",
+        "type": ["string"],
+        "desc": "the title",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }, {
+      "name": "createControlFromWebLink",
+      "alias": "",
+      "desc": "Asynchronously creates a control in a container from a WEB link",
+      "params": [{
+        "name": "parent",
+        "type": ["*"],
+        "desc": "the parent entity",
+        "default": "",
+        "optional": "",
+        "nullable": true
+      }, {
+        "name": "el",
+        "type": ["Element"],
+        "desc": "the HTML element",
+        "default": "",
+        "optional": "",
+        "nullable": ""
+      }, {
+        "name": "options",
+        "type": ["Object.<string, *>"],
+        "desc": "dictionary of optional parameters (context, cache)",
+        "default": "{}",
+        "optional": true,
+        "nullable": ""
+      }],
+      "returns": [{
+        "type": ["$.Promise"],
+        "desc": "A JQuery promise object"
+      }]
+    }]
+  }, {
     "name": "ami.Control",
     "alias": "",
     "desc": "The basic AMI control",
