@@ -5514,6 +5514,7 @@ exports.getEncodedBits = function getEncodedBits(errorCorrectionLevel, mask) {
 /***/ 7009
 (__unused_webpack_module, exports) {
 
+var __webpack_unused_export__;
 const EXP_TABLE = new Uint8Array(512);
 const LOG_TABLE = new Uint8Array(256);
 (function initTables() {
@@ -5530,7 +5531,7 @@ const LOG_TABLE = new Uint8Array(256);
     EXP_TABLE[i] = EXP_TABLE[i - 255];
   }
 })();
-exports.log = function log(n) {
+__webpack_unused_export__ = function log(n) {
   if (n < 1) throw new Error('log(' + n + ')');
   return LOG_TABLE[n];
 };
