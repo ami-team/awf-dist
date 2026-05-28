@@ -31764,9 +31764,6 @@ function targetTypeMap(rawType) {
       return 0;
   }
 }
-function getTargetType(value) {
-  return value["__v_skip"] || !Object.isExtensible(value) ? 0 : targetTypeMap(toRawType(value));
-}
 function reactive(target) {
   if (isReadonly(target)) {
     return target;
@@ -31791,13 +31788,16 @@ function createReactiveObject(target, isReadonly2, baseHandlers, collectionHandl
   if (target["__v_raw"] && !(isReadonly2 && target["__v_isReactive"])) {
     return target;
   }
-  const targetType = getTargetType(target);
-  if (targetType === 0) {
+  if (target["__v_skip"] || !Object.isExtensible(target)) {
     return target;
   }
   const existingProxy = proxyMap.get(target);
   if (existingProxy) {
     return existingProxy;
+  }
+  const targetType = targetTypeMap(toRawType(target));
+  if (targetType === 0) {
+    return target;
   }
   const proxy = new Proxy(target, targetType === 2 ? collectionHandlers : baseHandlers);
   proxyMap.set(target, proxy);
@@ -33282,19 +33282,18 @@ const TeleportImpl = {
       target,
       props
     } = vnode;
-    let shouldRemove = doRemove || !isTeleportDisabled(props);
+    const shouldRemove = doRemove || !isTeleportDisabled(props);
     const pendingMount = pendingMounts.get(vnode);
     if (pendingMount) {
       pendingMount.flags |= 8;
       pendingMounts.delete(vnode);
-      shouldRemove = false;
     }
     if (target) {
       hostRemove(targetStart);
       hostRemove(targetAnchor);
     }
     doRemove && hostRemove(anchor);
-    if (shapeFlag & 16) {
+    if (!pendingMount && shapeFlag & 16) {
       for (let i = 0; i < children.length; i++) {
         const child = children[i];
         unmount(child, parentComponent, parentSuspense, shouldRemove, !!child.dynamicChildren);
@@ -34111,16 +34110,12 @@ function createHydrationFunctions(rendererInternals) {
       }
       if (shapeFlag & 16 && !(props && (props.innerHTML || props.textContent))) {
         let next = hydrateChildren(el.firstChild, vnode, el, parentComponent, parentSuspense, slotScopeIds, optimized);
-        let hasWarned = false;
-        while (next) {
-          if (!isMismatchAllowed(el, 1)) {
-            if (( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__) && !hasWarned) {
-              warn$1(`Hydration children mismatch on`, el, `
+        if (next && !isMismatchAllowed(el, 1)) {
+          ( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__) && warn$1(`Hydration children mismatch on`, el, `
 Server rendered element contains more child nodes than client vdom.`);
-              hasWarned = true;
-            }
-            logMismatchError();
-          }
+          logMismatchError();
+        }
+        while (next) {
           const cur = next;
           next = next.nextSibling;
           remove(cur);
@@ -34181,7 +34176,7 @@ Server rendered element contains more child nodes than client vdom.`);
     optimized = optimized || !!parentVNode.dynamicChildren;
     const children = parentVNode.children;
     const l = children.length;
-    let hasWarned = false;
+    let hasCheckedMismatch = false;
     for (let i = 0; i < l; i++) {
       const vnode = optimized ? children[i] : children[i] = normalizeVNode(children[i]);
       const isText = vnode.type === Text;
@@ -34196,13 +34191,13 @@ Server rendered element contains more child nodes than client vdom.`);
       } else if (isText && !vnode.children) {
         insert(vnode.el = createText(""), container);
       } else {
-        if (!isMismatchAllowed(container, 1)) {
-          if (( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__) && !hasWarned) {
-            warn$1(`Hydration children mismatch on`, container, `
+        if (!hasCheckedMismatch) {
+          hasCheckedMismatch = true;
+          if (!isMismatchAllowed(container, 1)) {
+            ( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__) && warn$1(`Hydration children mismatch on`, container, `
 Server rendered element contains fewer child nodes than client vdom.`);
-            hasWarned = true;
+            logMismatchError();
           }
-          logMismatchError();
         }
         patch(null, vnode, container, null, parentComponent, parentSuspense, getContainerType(container), slotScopeIds);
       }
@@ -37733,9 +37728,13 @@ function baseCreateRenderer(options, createHydrationFns) {
     const needTransition2 = moveType !== 2 && shapeFlag & 1 && transition;
     if (needTransition2) {
       if (moveType === 0) {
-        transition.beforeEnter(el);
-        hostInsert(el, container, anchor);
-        queuePostRenderEffect(() => transition.enter(el), parentSuspense);
+        if (transition.persisted && !el[leaveCbKey]) {
+          hostInsert(el, container, anchor);
+        } else {
+          transition.beforeEnter(el);
+          hostInsert(el, container, anchor);
+          queuePostRenderEffect(() => transition.enter(el), parentSuspense);
+        }
       } else {
         const {
           leave,
@@ -37750,13 +37749,18 @@ function baseCreateRenderer(options, createHydrationFns) {
           }
         };
         const performLeave = () => {
+          const wasLeaving = el._isLeaving || !!el[leaveCbKey];
           if (el._isLeaving) {
             el[leaveCbKey](true);
           }
-          leave(el, () => {
+          if (transition.persisted && !wasLeaving) {
             remove2();
-            afterLeave && afterLeave();
-          });
+          } else {
+            leave(el, () => {
+              remove2();
+              afterLeave && afterLeave();
+            });
+          }
         };
         if (delayLeave) {
           delayLeave(el, remove2, performLeave);
@@ -39310,7 +39314,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-const version = "3.5.34";
+const version = "3.5.35";
 const runtime_core_esm_bundler_warn =  false ? 0 : NOOP;
 const ErrorTypeStrings = ErrorTypeStrings$1;
 const devtools =  true ? devtools$1 : 0;
@@ -40058,7 +40062,27 @@ function createInvoker(initialValue, instance) {
     } else if (e._vts <= invoker.attached) {
       return;
     }
-    callWithAsyncErrorHandling(patchStopImmediatePropagation(e, invoker.value), instance, 5, [e]);
+    const value = invoker.value;
+    if (shared_esm_bundler_isArray(value)) {
+      const originalStop = e.stopImmediatePropagation;
+      e.stopImmediatePropagation = () => {
+        originalStop.call(e);
+        e._stopped = true;
+      };
+      const handlers = value.slice();
+      const args = [e];
+      for (let i = 0; i < handlers.length; i++) {
+        if (e._stopped) {
+          break;
+        }
+        const handler = handlers[i];
+        if (handler) {
+          callWithAsyncErrorHandling(handler, instance, 5, args);
+        }
+      }
+    } else {
+      callWithAsyncErrorHandling(value, instance, 5, [e]);
+    }
   };
   invoker.value = initialValue;
   invoker.attached = getNow();
@@ -40071,18 +40095,6 @@ function sanitizeEventValue(value, propName) {
   runtime_dom_esm_bundler_warn(`Wrong type passed as event handler to ${propName} - did you forget @ or : in front of your prop?
 Expected function or array of functions, received type ${typeof value}.`);
   return runtime_dom_esm_bundler_NOOP;
-}
-function patchStopImmediatePropagation(e, value) {
-  if (shared_esm_bundler_isArray(value)) {
-    const originalStop = e.stopImmediatePropagation;
-    e.stopImmediatePropagation = () => {
-      originalStop.call(e);
-      e._stopped = true;
-    };
-    return value.map(fn => e2 => !e2._stopped && fn && fn(e2));
-  } else {
-    return value;
-  }
 }
 const isNativeOn = key => key.charCodeAt(0) === 111 && key.charCodeAt(1) === 110 && key.charCodeAt(2) > 96 && key.charCodeAt(2) < 123;
 const patchProp = (el, key, prevValue, nextValue, namespace, parentComponent) => {
