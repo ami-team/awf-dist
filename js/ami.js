@@ -16788,6 +16788,7 @@ class TileUpdate {
       if (composition && next.fromA <= composition.range.fromA && next.toA >= composition.range.toA) {
         this.forward(next.fromA, composition.range.fromA, composition.range.fromA < composition.range.toA ? 1 : -1);
         this.emit(posB, composition.range.fromB);
+        this.builder.flushBuffer();
         this.cache.clear();
         this.builder.addComposition(composition, compositionContext);
         this.text.skip(composition.range.toB - composition.range.fromB);
@@ -17976,6 +17977,10 @@ class InlineCoordsScan {
       }
     }
     if (!closestRect) {
+      if (!below && !above) return {
+        i: positions[0],
+        after: false
+      };
       let side = above && (!below || this.y - above.bottom < below.top - this.y) ? above : below;
       this.y = (side.top + side.bottom) / 2;
       return this.scan(positions, getRects, true);
@@ -20656,6 +20661,7 @@ const baseTheme$1 = buildTheme("." + baseThemeID, {
     padding: "0 2px 0 6px"
   },
   ".cm-layer": {
+    userSelect: "none",
     position: "absolute",
     left: 0,
     top: 0,
