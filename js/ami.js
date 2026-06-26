@@ -6723,9 +6723,6 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 (module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8095);
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7968);
@@ -8852,6 +8849,10 @@ url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("woff");
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
+/* harmony export */ __webpack_require__.d(__webpack_exports__, [
+/* harmony export */   "A", 0, /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ ]);
+
 
 /***/ },
 
@@ -8859,9 +8860,6 @@ url(${___CSS_LOADER_URL_REPLACEMENT_1___}) format("woff");
 (module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8095);
 /* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7968);
@@ -8887,6 +8885,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.flatpickr-calendar{background:transpa
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
+/* harmony export */ __webpack_require__.d(__webpack_exports__, [
+/* harmony export */   "A", 0, /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ ]);
+
 
 /***/ },
 
@@ -8894,9 +8896,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.flatpickr-calendar{background:transpa
 (module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8095);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7968);
@@ -8957,6 +8956,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Open Sans";fon
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
+/* harmony export */ __webpack_require__.d(__webpack_exports__, [
+/* harmony export */   "A", 0, /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ ]);
+
 
 /***/ },
 
@@ -8965,9 +8968,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face{font-family:"Open Sans";fon
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5072);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7825);
@@ -9006,6 +9006,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A.locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_5_use_2_node_modules_sass_loader_dist_cjs_js_ami_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A.locals : undefined);
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, [
+/* harmony export */   "default", 0, /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ ]);
 
 
 /***/ },
@@ -9552,25 +9556,16 @@ function json() {
 /* harmony export */   EI: () => (/* binding */ indentString),
 /* harmony export */   KB: () => (/* binding */ IndentContext),
 /* harmony export */   Lv: () => (/* binding */ foldGutter),
-/* harmony export */   Oh: () => (/* binding */ indentNodeProp),
-/* harmony export */   Q0: () => (/* binding */ sublanguageProp),
-/* harmony export */   Q_: () => (/* binding */ bracketMatchingHandle),
 /* harmony export */   TM: () => (/* binding */ Language),
 /* harmony export */   Tg: () => (/* binding */ StreamLanguage),
-/* harmony export */   Xt: () => (/* binding */ indentUnit),
 /* harmony export */   Yy: () => (/* binding */ LanguageSupport),
-/* harmony export */   Zt: () => (/* binding */ defaultHighlightStyle),
-/* harmony export */   _Y: () => (/* binding */ flatIndent),
 /* harmony export */   _v: () => (/* binding */ getIndentation),
-/* harmony export */   b_: () => (/* binding */ foldNodeProp),
 /* harmony export */   bj: () => (/* binding */ LRLanguage),
-/* harmony export */   iB: () => (/* binding */ languageDataProp),
 /* harmony export */   jU: () => (/* binding */ matchBrackets),
 /* harmony export */   mv: () => (/* binding */ syntaxTree),
 /* harmony export */   mz: () => (/* binding */ continuedIndent),
 /* harmony export */   nq: () => (/* binding */ ParseContext),
 /* harmony export */   p9: () => (/* binding */ defineLanguageFacet),
-/* harmony export */   t: () => (/* binding */ foldService),
 /* harmony export */   t$: () => (/* binding */ LanguageDescription),
 /* harmony export */   tp: () => (/* binding */ getIndentUnit),
 /* harmony export */   y9: () => (/* binding */ syntaxHighlighting),
@@ -10520,18 +10515,11 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateField *
   update(folded, tr) {
     if (tr.isUserEvent("delete")) tr.changes.iterChangedRanges((fromA, toA) => folded = clearTouchedFolds(folded, fromA, toA));
     folded = folded.map(tr.changes);
+    let rangesToFold = [];
     for (var _iterator13 = _createForOfIteratorHelperLoose(tr.effects), _step13; !(_step13 = _iterator13()).done;) {
       let e = _step13.value;
       if (e.is(foldEffect) && !foldExists(folded, e.value.from, e.value.to)) {
-        let {
-          preparePlaceholder
-        } = tr.state.facet(foldConfig);
-        let widget = !preparePlaceholder ? foldWidget : _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.replace({
-          widget: new PreparedFoldWidget(preparePlaceholder(tr.state, e.value))
-        });
-        folded = folded.update({
-          add: [widget.range(e.value.from, e.value.to)]
-        });
+        rangesToFold.push(e.value);
       } else if (e.is(unfoldEffect)) {
         folded = folded.update({
           filter: (from, to) => e.value.from != from || e.value.to != to,
@@ -10539,6 +10527,20 @@ const foldState = _codemirror_state__WEBPACK_IMPORTED_MODULE_1__/* .StateField *
           filterTo: e.value.to
         });
       }
+    }
+    if (rangesToFold.length) {
+      let {
+        preparePlaceholder
+      } = tr.state.facet(foldConfig);
+      let decorations = rangesToFold.map(value => {
+        let widget = !preparePlaceholder ? foldWidget : _codemirror_view__WEBPACK_IMPORTED_MODULE_2__/* .Decoration */ .NZ.replace({
+          widget: new PreparedFoldWidget(preparePlaceholder(tr.state, value))
+        });
+        return widget.range(value.from, value.to);
+      });
+      folded = folded.update({
+        add: decorations
+      });
     }
     if (tr.selection) folded = clearTouchedFolds(folded, tr.selection.main.head);
     return folded;
@@ -11785,6 +11787,18 @@ const marks = {
   })
 };
 
+/* harmony export */ __webpack_require__.d(__webpack_exports__, [
+/* harmony export */   "Oh", 0, /* binding */ indentNodeProp,
+/* harmony export */   "Q0", 0, /* binding */ sublanguageProp,
+/* harmony export */   "Q_", 0, /* binding */ bracketMatchingHandle,
+/* harmony export */   "Xt", 0, /* binding */ indentUnit,
+/* harmony export */   "Zt", 0, /* binding */ defaultHighlightStyle,
+/* harmony export */   "_Y", 0, /* binding */ flatIndent,
+/* harmony export */   "b_", 0, /* binding */ foldNodeProp,
+/* harmony export */   "iB", 0, /* binding */ languageDataProp,
+/* harmony export */   "t", 0, /* binding */ foldService
+/* harmony export */ ]);
+
 
 /***/ },
 
@@ -12858,10 +12872,11 @@ class SectionIter {
   }
 }
 class SelectionRange {
-  constructor(from, to, flags) {
+  constructor(from, to, flags, goalColumn) {
     this.from = from;
     this.to = to;
     this.flags = flags;
+    this.goalColumn = goalColumn;
   }
   get anchor() {
     return this.flags & 32 ? this.to : this.from;
@@ -12875,13 +12890,12 @@ class SelectionRange {
   get assoc() {
     return this.flags & 8 ? -1 : this.flags & 16 ? 1 : 0;
   }
+  get undirectional() {
+    return (this.flags & 64) > 0;
+  }
   get bidiLevel() {
     let level = this.flags & 7;
     return level == 7 ? null : level;
-  }
-  get goalColumn() {
-    let value = this.flags >> 6;
-    return value == 16777215 ? undefined : value;
   }
   map(change, assoc = -1) {
     let from, to;
@@ -12891,7 +12905,7 @@ class SelectionRange {
       from = change.mapPos(this.from, 1);
       to = change.mapPos(this.to, -1);
     }
-    return from == this.from && to == this.to ? this : new SelectionRange(from, to, this.flags);
+    return from == this.from && to == this.to ? this : new SelectionRange(from, to, this.flags, this.goalColumn);
   }
   extend(from, to = from, assoc = 0) {
     if (from <= this.anchor && to >= this.anchor) return EditorSelection.range(from, to, undefined, undefined, assoc);
@@ -12911,8 +12925,8 @@ class SelectionRange {
     if (!json || typeof json.anchor != "number" || typeof json.head != "number") throw new RangeError("Invalid JSON representation for SelectionRange");
     return EditorSelection.range(json.anchor, json.head);
   }
-  static create(from, to, flags) {
-    return new SelectionRange(from, to, flags);
+  static create(from, to, flags, goalColumn) {
+    return new SelectionRange(from, to, flags, goalColumn);
   }
 }
 class EditorSelection {
@@ -12966,12 +12980,16 @@ class EditorSelection {
     return new EditorSelection(ranges, mainIndex);
   }
   static cursor(pos, assoc = 0, bidiLevel, goalColumn) {
-    return SelectionRange.create(pos, pos, (assoc == 0 ? 0 : assoc < 0 ? 8 : 16) | (bidiLevel == null ? 7 : Math.min(6, bidiLevel)) | (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 16777215) << 6);
+    return SelectionRange.create(pos, pos, (assoc == 0 ? 0 : assoc < 0 ? 8 : 16) | (bidiLevel == null ? 7 : Math.min(6, bidiLevel)), goalColumn);
   }
   static range(anchor, head, goalColumn, bidiLevel, assoc) {
-    let flags = (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 16777215) << 6 | (bidiLevel == null ? 7 : Math.min(6, bidiLevel));
+    let flags = bidiLevel == null ? 7 : Math.min(6, bidiLevel);
     if (!assoc && anchor != head) assoc = head < anchor ? 1 : -1;
-    return head < anchor ? SelectionRange.create(head, anchor, 32 | 16 | flags) : SelectionRange.create(anchor, head, (!assoc ? 0 : assoc < 0 ? 8 : 16) | flags);
+    if (assoc) flags |= assoc < 0 ? 8 : 16;
+    return head < anchor ? SelectionRange.create(head, anchor, flags | 32, goalColumn) : SelectionRange.create(anchor, head, flags, goalColumn);
+  }
+  static undirectionalRange(from, to) {
+    return SelectionRange.create(from, to, 64, undefined);
   }
   static normalized(ranges, mainIndex = 0) {
     let main = ranges[mainIndex];
@@ -16920,8 +16938,8 @@ class TileUpdate {
         }
       }
     });
-    b.addLineStartIfNotCovered(pendingLineAttrs);
     this.openWidget = openEnd > markCount;
+    if (!this.openWidget) b.addLineStartIfNotCovered(pendingLineAttrs);
     this.openMarks = openEnd;
   }
   forward(from, to, side = 1) {
@@ -17704,7 +17722,7 @@ function groupAt(state, pos, bias = 1) {
     if (categorize(line.text.slice(to, next)) != cat) break;
     to = next;
   }
-  return state_dist/* EditorSelection */.OF.range(from + line.from, to + line.from);
+  return state_dist/* EditorSelection */.OF.undirectionalRange(from + line.from, to + line.from);
 }
 function posAtCoordsImprecise(view, contentRect, block, x, y) {
   let into = Math.round((x - contentRect.left) * view.defaultCharacterWidth);
@@ -17836,7 +17854,9 @@ function skipAtomsForSelection(atoms, sel) {
     } else {
       let from = skipAtomicRanges(atoms, range.from, -1);
       let to = skipAtomicRanges(atoms, range.to, 1);
-      if (from != range.from || to != range.to) updated = state_dist/* EditorSelection */.OF.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
+      if (from != range.from || to != range.to) {
+        if (range.undirectional) updated = state_dist/* EditorSelection */.OF.undirectionalRange(range.from, range.to);else updated = state_dist/* EditorSelection */.OF.range(range.from == range.anchor ? from : to, range.from == range.head ? from : to);
+      }
     }
     if (updated) {
       if (!ranges) ranges = sel.ranges.slice();
@@ -18184,7 +18204,7 @@ class DOMChange {
       let head = iHead && iHead.node == domSel.focusNode && iHead.offset == domSel.focusOffset || !contains(view.contentDOM, domSel.focusNode) ? curSel.main.head : view.docView.posFromDOM(domSel.focusNode, domSel.focusOffset);
       let anchor = iAnchor && iAnchor.node == domSel.anchorNode && iAnchor.offset == domSel.anchorOffset || !contains(view.contentDOM, domSel.anchorNode) ? curSel.main.anchor : view.docView.posFromDOM(domSel.anchorNode, domSel.anchorOffset);
       let vp = view.viewport;
-      if ((browser.ios || browser.chrome) && curSel.main.empty && head != anchor && (vp.from > 0 || vp.to < view.state.doc.length)) {
+      if ((browser.ios || browser.chrome) && head != anchor && Math.min(head, anchor) <= curSel.main.from && Math.max(head, anchor) >= curSel.main.to && (vp.from > 0 || vp.to < view.state.doc.length)) {
         let from = Math.min(head, anchor),
           to = Math.max(head, anchor);
         let offFrom = vp.from - from,
@@ -18561,9 +18581,19 @@ class InputState {
       this.view.observer.delayAndroidKey(event.key, event.keyCode);
       return true;
     }
-    let pending;
-    if (browser.ios && !event.synthetic && !event.altKey && !event.metaKey && !event.shiftKey && ((pending = PendingKeys.find(key => key.keyCode == event.keyCode)) && !event.ctrlKey || EmacsyPendingKeys.indexOf(event.key) > -1 && event.ctrlKey)) {
-      this.pendingIOSKey = pending || event;
+    if (browser.ios && !event.synthetic && !event.altKey && !event.metaKey && (PendingKeys.some(key => key.keyCode == event.keyCode) && !event.ctrlKey || EmacsyPendingKeys.indexOf(event.key) > -1 && event.ctrlKey)) {
+      let mods = {
+        ctrlKey: event.ctrlKey,
+        altKey: event.altKey,
+        metaKey: event.metaKey,
+        shiftKey: event.shiftKey
+      };
+      if (mods.shiftKey && browser.ios && !/^(off|none)$/.test(this.view.contentDOM.autocapitalize) && iosVirtualKeyboardOpen(this.view.win)) mods.shiftKey = false;
+      this.pendingIOSKey = {
+        key: event.key,
+        keyCode: event.keyCode,
+        mods
+      };
       setTimeout(() => this.flushIOSKey(), 250);
       return true;
     }
@@ -18575,7 +18605,7 @@ class InputState {
     if (!key) return false;
     if (key.key == "Enter" && change && change.from < change.to && /^\S+$/.test(change.insert.toString())) return false;
     this.pendingIOSKey = undefined;
-    return dispatchKey(this.view.contentDOM, key.key, key.keyCode, key instanceof KeyboardEvent ? key : undefined);
+    return dispatchKey(this.view.contentDOM, key.key, key.keyCode, key.mods);
   }
   ignoreDuringComposition(event) {
     if (!/^key/.test(event.type) || event.synthetic) return false;
@@ -18599,6 +18629,10 @@ class InputState {
   destroy() {
     if (this.mouseSelection) this.mouseSelection.destroy();
   }
+}
+function iosVirtualKeyboardOpen(win) {
+  if (!win.visualViewport) return false;
+  return win.visualViewport.height * win.visualViewport.scale / win.document.documentElement.clientHeight < 0.85;
 }
 function bindHandler(plugin, handler) {
   return (view, event) => {
@@ -18924,7 +18958,7 @@ function rangeForClick(view, pos, bias, type) {
     let from = visual ? visual.posAtStart : line.from,
       to = visual ? visual.posAtEnd : line.to;
     if (to < view.state.doc.length && to == line.to) to++;
-    return state_dist/* EditorSelection */.OF.range(from, to);
+    return state_dist/* EditorSelection */.OF.undirectionalRange(from, to);
   }
 }
 const BadMouseDetail = browser.ie && browser.ie_version <= 11;
@@ -18991,7 +19025,7 @@ handlers.dragstart = (view, event) => {
     if (tile && tile.isWidget()) {
       let from = tile.posAtStart,
         to = from + tile.length;
-      if (from >= range.to || to <= range.from) range = state_dist/* EditorSelection */.OF.range(from, to);
+      if (from >= range.to || to <= range.from) range = state_dist/* EditorSelection */.OF.undirectionalRange(from, to);
     }
   }
   let {
@@ -21451,7 +21485,6 @@ class EditContextManager {
     for (let event in this.handlers) context.addEventListener(event, this.handlers[event]);
     this.measureReq = {
       read: view => {
-        this.editContext.updateControlBounds(view.contentDOM.getBoundingClientRect());
         let sel = getSelection(view.root);
         if (sel && sel.rangeCount) this.editContext.updateSelectionBounds(sel.getRangeAt(0).getBoundingClientRect());
       }
@@ -24889,7 +24922,6 @@ const __test = (/* unused pure expression or super */ null && ({
 /* harmony export */   Qj: () => (/* binding */ IterMode),
 /* harmony export */   RY: () => (/* binding */ NodeWeakMap),
 /* harmony export */   Z6: () => (/* binding */ NodeType),
-/* harmony export */   cF: () => (/* binding */ DefaultBufferLength),
 /* harmony export */   fI: () => (/* binding */ NodeSet),
 /* harmony export */   iX: () => (/* binding */ Parser),
 /* harmony export */   rr: () => (/* binding */ TreeFragment),
@@ -26579,7 +26611,6 @@ function enterFragments(mounts, ranges) {
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DM: () => (/* binding */ highlightTree),
-/* harmony export */   _A: () => (/* binding */ tags),
 /* harmony export */   az: () => (/* binding */ tagHighlighter),
 /* harmony export */   pn: () => (/* binding */ styleTags),
 /* harmony export */   vw: () => (/* binding */ Tag)
@@ -27098,6 +27129,10 @@ const classHighlighter = tagHighlighter([{
   tag: tags.punctuation,
   class: "tok-punctuation"
 }]);
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, [
+/* harmony export */   "_A", 0, /* binding */ tags
+/* harmony export */ ]);
 
 
 /***/ },
@@ -28294,7 +28329,7 @@ class LRParser extends _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .Parser */ .
     })));
     if (spec.propSources) this.nodeSet = this.nodeSet.extend(...spec.propSources);
     this.strict = false;
-    this.bufferLength = _lezer_common__WEBPACK_IMPORTED_MODULE_0__/* .DefaultBufferLength */ .cF;
+    this.bufferLength = (/* inlined export .DefaultBufferLength */1024);
     let tokenArray = decodeArray(spec.tokenData);
     this.context = spec.context;
     this.specializerSpecs = spec.specialized || [];
@@ -28585,17 +28620,17 @@ class StyleSet {
 /******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	const __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
 /******/ 			id: moduleId,
 /******/ 			loaded: false,
 /******/ 			exports: {}
@@ -28619,7 +28654,7 @@ class StyleSet {
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
 /******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
+/******/ 			const getter = module && module.__esModule ?
 /******/ 				() => (module['default']) :
 /******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
@@ -28629,11 +28664,26 @@ class StyleSet {
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
+/******/ 		// define getter/value functions for harmony exports
 /******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			if(Array.isArray(definition)) {
+/******/ 				var i = 0;
+/******/ 				while(i < definition.length) {
+/******/ 					var key = definition[i++];
+/******/ 					var binding = definition[i++];
+/******/ 					if(!__webpack_require__.o(exports, key)) {
+/******/ 						if(binding === 0) {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
+/******/ 						} else {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
+/******/ 						}
+/******/ 					} else if(binding === 0) { i++; }
+/******/ 				}
+/******/ 			} else {
+/******/ 				for(var key in definition) {
+/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 					}
 /******/ 				}
 /******/ 			}
 /******/ 		};
@@ -28680,7 +28730,7 @@ class StyleSet {
 /******/ 			if (!module.children) module.children = [];
 /******/ 			Object.defineProperty(module, 'exports', {
 /******/ 				enumerable: true,
-/******/ 				set: () => {
+/******/ 				set() {
 /******/ 					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
 /******/ 				}
 /******/ 			});
@@ -28695,16 +28745,16 @@ class StyleSet {
 /******/ 	
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
-/******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "awf:";
+/******/ 		const inProgress = {};
+/******/ 		const dataWebpackPrefix = "awf:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
-/******/ 			var script, needAttach;
+/******/ 			let script, needAttach;
 /******/ 			if(key !== undefined) {
-/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				const scripts = document.getElementsByTagName("script");
 /******/ 				for(var i = 0; i < scripts.length; i++) {
-/******/ 					var s = scripts[i];
+/******/ 					const s = scripts[i];
 /******/ 					if(s.getAttribute("src") == url || s.getAttribute("data-webpack") == dataWebpackPrefix + key) { script = s; break; }
 /******/ 				}
 /******/ 			}
@@ -28721,17 +28771,17 @@ class StyleSet {
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
-/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 			const onScriptComplete = (prev, event) => {
 /******/ 				// avoid mem leaks in IE.
 /******/ 				script.onerror = script.onload = null;
 /******/ 				clearTimeout(timeout);
-/******/ 				var doneFns = inProgress[url];
+/******/ 				const doneFns = inProgress[url];
 /******/ 				delete inProgress[url];
-/******/ 				script.parentNode && script.parentNode.removeChild(script);
-/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
+/******/ 				script.parentNode?.removeChild(script);
+/******/ 				doneFns?.forEach((fn) => (fn(event)));
 /******/ 				if(prev) return prev(event);
 /******/ 			}
-/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
+/******/ 			const timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
 /******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
 /******/ 			script.onload = onScriptComplete.bind(null, script.onload);
 /******/ 			needAttach && document.head.appendChild(script);
@@ -28742,7 +28792,7 @@ class StyleSet {
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
 /******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			if(Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
@@ -28759,16 +28809,16 @@ class StyleSet {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		var scriptUrl;
+/******/ 		let scriptUrl;
 /******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
+/******/ 		const document = __webpack_require__.g.document;
 /******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 			if (document.currentScript?.tagName.toUpperCase() === 'SCRIPT')
 /******/ 				scriptUrl = document.currentScript.src;
 /******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				const scripts = document.getElementsByTagName("script");
 /******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
+/******/ 					let i = scripts.length - 1;
 /******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
 /******/ 				}
 /******/ 			}
@@ -28787,14 +28837,14 @@ class StyleSet {
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
+/******/ 		const installedChunks = {
 /******/ 			2548: 0,
 /******/ 			7802: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
 /******/ 				// JSONP chunk loading for javascript
-/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				let installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
 /******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
 /******/ 		
 /******/ 					// a Promise means "currently loading".
@@ -28803,20 +28853,20 @@ class StyleSet {
 /******/ 					} else {
 /******/ 						if(true) { // all chunks have JS
 /******/ 							// setup Promise in chunk cache
-/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							const promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
 /******/ 		
 /******/ 							// start chunk loading
-/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							const url = __webpack_require__.p + __webpack_require__.u(chunkId);
 /******/ 							// create error before stack unwound to get useful stacktrace later
-/******/ 							var error = new Error();
-/******/ 							var loadingEnded = (event) => {
+/******/ 							const error = new Error();
+/******/ 							const loadingEnded = (event) => {
 /******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
 /******/ 									installedChunkData = installedChunks[chunkId];
 /******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
 /******/ 									if(installedChunkData) {
-/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 										var realSrc = event && event.target && event.target.src;
+/******/ 										const errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 										const realSrc = event && event.target && event.target.src;
 /******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
 /******/ 										error.name = 'ChunkLoadError';
 /******/ 										error.type = errorType;
@@ -28842,8 +28892,8 @@ class StyleSet {
 /******/ 		// no on chunks loaded
 /******/ 		
 /******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 		const webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			let [chunkIds, moreModules, runtime] = data;
 /******/ 			// add "moreModules" to the modules object,
 /******/ 			// then flag all "chunkIds" as loaded and fire callback
 /******/ 			var moduleId, chunkId, i = 0;
@@ -28866,7 +28916,7 @@ class StyleSet {
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkawf"] = self["webpackChunkawf"] || [];
+/******/ 		const chunkLoadingGlobal = self["webpackChunkawf"] = self["webpackChunkawf"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -28877,19 +28927,19 @@ class StyleSet {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
 
-// NAMESPACE OBJECT: ./node_modules/vue/dist/vue.runtime.esm-bundler.js
+// NAMESPACE OBJECT (decoupled): ./node_modules/vue/dist/vue.runtime.esm-bundler.js
 var vue_runtime_esm_bundler_namespaceObject = {};
 __webpack_require__.r(vue_runtime_esm_bundler_namespaceObject);
 __webpack_require__.d(vue_runtime_esm_bundler_namespaceObject, {
   BaseTransition: () => (BaseTransition),
   BaseTransitionPropsValidators: () => (BaseTransitionPropsValidators),
   Comment: () => (Comment),
-  DeprecationTypes: () => (DeprecationTypes),
+  DeprecationTypes: () => ((/* inlined export .DeprecationTypes */null)),
   EffectScope: () => (EffectScope),
   ErrorCodes: () => (ErrorCodes),
   ErrorTypeStrings: () => (ErrorTypeStrings),
@@ -28911,7 +28961,7 @@ __webpack_require__.d(vue_runtime_esm_bundler_namespaceObject, {
   camelize: () => (camelize),
   capitalize: () => (capitalize),
   cloneVNode: () => (cloneVNode),
-  compatUtils: () => (compatUtils),
+  compatUtils: () => ((/* inlined export .compatUtils */null)),
   compile: () => (vue_runtime_esm_bundler_compile),
   computed: () => (runtime_core_esm_bundler_computed),
   createApp: () => (createApp),
@@ -29005,7 +29055,7 @@ __webpack_require__.d(vue_runtime_esm_bundler_namespaceObject, {
   resolveComponent: () => (resolveComponent),
   resolveDirective: () => (resolveDirective),
   resolveDynamicComponent: () => (resolveDynamicComponent),
-  resolveFilter: () => (resolveFilter),
+  resolveFilter: () => ((/* inlined export .resolveFilter */null)),
   resolveTransitionHooks: () => (resolveTransitionHooks),
   setBlockTracking: () => (setBlockTracking),
   setDevtoolsHook: () => (setDevtoolsHook),
@@ -29043,7 +29093,7 @@ __webpack_require__.d(vue_runtime_esm_bundler_namespaceObject, {
   vModelSelect: () => (vModelSelect),
   vModelText: () => (vModelText),
   vShow: () => (vShow),
-  version: () => (version),
+  version: () => ((/* inlined export .version */"3.5.39")),
   warn: () => (runtime_core_esm_bundler_warn),
   watch: () => (runtime_core_esm_bundler_watch),
   watchEffect: () => (watchEffect),
@@ -31505,7 +31555,7 @@ class MutableReactiveHandler extends BaseReactiveHandler {
     }
     const hadKey = isArrayWithIntegerKey ? Number(key) < target.length : hasOwn(target, key);
     const result = Reflect.set(target, key, value, reactivity_esm_bundler_isRef(target) ? target : receiver);
-    if (target === toRaw(receiver)) {
+    if (target === toRaw(receiver) && result) {
       if (!hadKey) {
         trigger(target, "add", key, value);
       } else if (hasChanged(value, oldValue)) {
@@ -32182,8 +32232,9 @@ function watch(source, cb, options = EMPTY_OBJ) {
   if (once && cb) {
     const _cb = cb;
     cb = (...args) => {
-      _cb(...args);
+      const res = _cb(...args);
       watchHandle();
+      return res;
     };
   }
   let oldValue = isMultiSource ? new Array(source.length).fill(INITIAL_WATCHER_VALUE) : INITIAL_WATCHER_VALUE;
@@ -32193,7 +32244,7 @@ function watch(source, cb, options = EMPTY_OBJ) {
     }
     if (cb) {
       const newValue = effect.run();
-      if (deep || forceTrigger || (isMultiSource ? newValue.some((v, i) => hasChanged(v, oldValue[i])) : hasChanged(newValue, oldValue))) {
+      if (immediateFirstRun || deep || forceTrigger || (isMultiSource ? newValue.some((v, i) => hasChanged(v, oldValue[i])) : hasChanged(newValue, oldValue))) {
         if (cleanup) {
           cleanup();
         }
@@ -33261,8 +33312,9 @@ const TeleportImpl = {
         }
       } else {
         if ((n2.props && n2.props.to) !== (n1.props && n1.props.to)) {
-          const nextTarget = n2.target = resolveTarget(n2.props, querySelector);
+          const nextTarget = resolveTarget(n2.props, querySelector);
           if (nextTarget) {
+            n2.target = nextTarget;
             moveTeleport(n2, nextTarget, null, internals, 0);
           } else if (false) // removed by dead control flow
 {}
@@ -33288,7 +33340,8 @@ const TeleportImpl = {
       target,
       props
     } = vnode;
-    const shouldRemove = doRemove || !isTeleportDisabled(props);
+    const disabled = isTeleportDisabled(props);
+    const shouldRemove = doRemove || !disabled;
     const pendingMount = pendingMounts.get(vnode);
     if (pendingMount) {
       pendingMount.flags |= 8;
@@ -33299,7 +33352,7 @@ const TeleportImpl = {
       hostRemove(targetAnchor);
     }
     doRemove && hostRemove(anchor);
-    if (!pendingMount && shapeFlag & 16) {
+    if (!pendingMount && (disabled || target) && shapeFlag & 16) {
       for (let i = 0; i < children.length; i++) {
         const child = children[i];
         unmount(child, parentComponent, parentSuspense, shouldRemove, !!child.dynamicChildren);
@@ -33856,7 +33909,12 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
     }
   }
   if (isFunction(ref)) {
-    callWithErrorHandling(ref, owner, 12, [value, refs]);
+    pauseTracking();
+    try {
+      callWithErrorHandling(ref, owner, 12, [value, refs]);
+    } finally {
+      resetTracking();
+    }
   } else {
     const _isString = shared_esm_bundler_isString(ref);
     const _isRef = reactivity_esm_bundler_isRef(ref);
@@ -34091,6 +34149,7 @@ function createHydrationFunctions(rendererInternals) {
     optimized = optimized || !!vnode.dynamicChildren;
     const {
       type,
+      dynamicProps,
       props,
       patchFlag,
       shapeFlag,
@@ -34098,7 +34157,8 @@ function createHydrationFunctions(rendererInternals) {
       transition
     } = vnode;
     const forcePatch = type === "input" || type === "option";
-    if ( false || forcePatch || patchFlag !== -1) {
+    const hasDynamicProps = !!dynamicProps;
+    if ( false || forcePatch || hasDynamicProps || patchFlag !== -1) {
       if (dirs) {
         invokeDirectiveHook(vnode, null, parentComponent, "created");
       }
@@ -34145,13 +34205,13 @@ Server rendered element contains more child nodes than client vdom.`);
         }
       }
       if (props) {
-        if ( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__ || forcePatch || !optimized || patchFlag & (16 | 32)) {
+        if ( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__ || forcePatch || hasDynamicProps || !optimized || patchFlag & (16 | 32)) {
           const isCustomElement = el.tagName.includes("-");
           for (const key in props) {
             if (( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__) && !(dirs && dirs.some(d => d.dir.created)) && propHasMismatch(el, key, props[key], vnode, parentComponent)) {
               logMismatchError();
             }
-            if (forcePatch && (key.endsWith("value") || key === "indeterminate") || isOn(key) && !isReservedProp(key) || key[0] === "." || isCustomElement && !isReservedProp(key)) {
+            if (forcePatch && (key.endsWith("value") || key === "indeterminate") || isOn(key) && !isReservedProp(key) || key[0] === "." || isCustomElement && !isReservedProp(key) || dynamicProps && dynamicProps.includes(key)) {
               patchProp(el, key, null, props[key], void 0, parentComponent);
             }
           }
@@ -34228,7 +34288,7 @@ Server rendered element contains fewer child nodes than client vdom.`);
     }
   };
   const handleMismatch = (node, vnode, parentComponent, parentSuspense, slotScopeIds, isFragment) => {
-    if (!isMismatchAllowed(node.parentElement, 1)) {
+    if (!isNodeMismatchAllowed(node, vnode)) {
       ( false || __VUE_PROD_HYDRATION_MISMATCH_DETAILS__) && warn$1(`Hydration node mismatch:
 - rendered on server:`, node, node.nodeType === 3 ? `(text)` : isComment(node) && node.data === "[" ? `(start of fragment)` : ``, `
 - expected on client:`, vnode.type);
@@ -34435,7 +34495,9 @@ function isMismatchAllowed(el, allowedType) {
       el = el.parentElement;
     }
   }
-  const allowedAttr = el && el.getAttribute(allowMismatchAttr);
+  return isMismatchAllowedByAttr(el && el.getAttribute(allowMismatchAttr), allowedType);
+}
+function isMismatchAllowedByAttr(allowedAttr, allowedType) {
   if (allowedAttr == null) {
     return false;
   } else if (allowedAttr === "") {
@@ -34447,6 +34509,18 @@ function isMismatchAllowed(el, allowedType) {
     }
     return list.includes(MismatchTypeString[allowedType]);
   }
+}
+function isNodeMismatchAllowed(node, vnode) {
+  return isMismatchAllowed(node.parentElement, 1) || isMismatchAllowedByNode(node) || isMismatchAllowedByVNode(vnode);
+}
+function isMismatchAllowedByNode(node) {
+  return node.nodeType === 1 && isMismatchAllowedByAttr(node.getAttribute(allowMismatchAttr), 1);
+}
+function isMismatchAllowedByVNode({
+  props
+}) {
+  const allowedAttr = props && props[allowMismatchAttr];
+  return typeof allowedAttr === "string" && isMismatchAllowedByAttr(allowedAttr, 1);
 }
 const index_requestIdleCallback = getGlobalThis().requestIdleCallback || (cb => setTimeout(cb, 1));
 const index_cancelIdleCallback = getGlobalThis().cancelIdleCallback || (id => clearTimeout(id));
@@ -34660,13 +34734,21 @@ function defineAsyncComponent(source) {
       const loaded = ref(false);
       const error = ref();
       const delayed = ref(!!delay);
+      let timeoutTimer;
+      let delayTimer;
+      onUnmounted(() => {
+        if (timeoutTimer != null) clearTimeout(timeoutTimer);
+        if (delayTimer != null) clearTimeout(delayTimer);
+      });
       if (delay) {
-        setTimeout(() => {
+        delayTimer = setTimeout(() => {
+          if (instance.isUnmounted) return;
           delayed.value = false;
         }, delay);
       }
       if (timeout != null) {
-        setTimeout(() => {
+        timeoutTimer = setTimeout(() => {
+          if (instance.isUnmounted) return;
           if (!loaded.value && !error.value) {
             const err = new Error(`Async component timed out after ${timeout}ms.`);
             onError(err);
@@ -34675,11 +34757,16 @@ function defineAsyncComponent(source) {
         }, timeout);
       }
       load().then(() => {
+        if (instance.isUnmounted) return;
         loaded.value = true;
         if (instance.parent && isKeepAlive(instance.parent.vnode)) {
           instance.parent.update();
         }
       }).catch(err => {
+        if (instance.isUnmounted) {
+          pendingRequest = null;
+          return;
+        }
         onError(err);
         error.value = err;
       });
@@ -36028,12 +36115,13 @@ function useModel(props, name, options = EMPTY_OBJ) {
           return;
         }
         const rawProps = i.vnode.props;
-        if (!(rawProps && (name in rawProps || camelizedName in rawProps || hyphenatedName in rawProps) && (`onUpdate:${name}` in rawProps || `onUpdate:${camelizedName}` in rawProps || `onUpdate:${hyphenatedName}` in rawProps))) {
+        const hasVModel = !!(rawProps && (name in rawProps || camelizedName in rawProps || hyphenatedName in rawProps) && (`onUpdate:${name}` in rawProps || `onUpdate:${camelizedName}` in rawProps || `onUpdate:${hyphenatedName}` in rawProps));
+        if (!hasVModel) {
           localValue = value;
           trigger();
         }
         i.emit(`update:${name}`, emittedValue);
-        if (hasChanged(value, emittedValue) && hasChanged(value, prevSetValue) && !hasChanged(emittedValue, prevEmittedValue)) {
+        if (hasChanged(value, prevSetValue) && (hasChanged(value, emittedValue) && !hasChanged(emittedValue, prevEmittedValue) || hasVModel && prevSetValue !== EMPTY_OBJ && !hasChanged(emittedValue, localValue))) {
           trigger();
         }
         prevSetValue = value;
@@ -36151,7 +36239,8 @@ function isEmitListener(options, key) {
   if (!options || !isOn(key)) {
     return false;
   }
-  key = key.slice(2).replace(/Once$/, "");
+  key = key.slice(2);
+  key = key === "Once" ? key : key.replace(/Once$/, "");
   return hasOwn(options, key[0].toLowerCase() + key.slice(1)) || hasOwn(options, hyphenate(key)) || hasOwn(options, key);
 }
 let accessedAttrs = false;
@@ -37194,8 +37283,11 @@ function baseCreateRenderer(options, createHydrationFns) {
       invokeDirectiveHook(n2, n1, parentComponent, "beforeUpdate");
     }
     parentComponent && toggleRecurse(parentComponent, true);
-    if (false) // removed by dead control flow
-{}
+    if ( false || dynamicChildren && (!n1.dynamicChildren || n1.dynamicChildren.length !== dynamicChildren.length)) {
+      patchFlag = 0;
+      optimized = false;
+      dynamicChildren = null;
+    }
     if (oldProps.innerHTML && newProps.innerHTML == null || oldProps.textContent && newProps.textContent == null) {
       hostSetElementText(el, "");
     }
@@ -38786,6 +38878,12 @@ function normalizeChildren(vnode, children) {
       }
     }
   } else if (isFunction(children)) {
+    if (shapeFlag & (1 | 64)) {
+      normalizeChildren(vnode, {
+        default: children
+      });
+      return;
+    }
     children = {
       default: children,
       _ctx: currentRenderingInstance
@@ -39320,7 +39418,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-const version = "3.5.35";
+const version = "3.5.39";
 const runtime_core_esm_bundler_warn =  false ? 0 : NOOP;
 const ErrorTypeStrings = ErrorTypeStrings$1;
 const devtools =  true ? devtools$1 : 0;
@@ -40044,16 +40142,15 @@ function patchEvent(el, rawName, prevValue, nextValue, instance = null) {
     }
   }
 }
-const optionsModifierRE = /(?:Once|Passive|Capture)$/;
+const optionsModifierRE = /(Once|Passive|Capture)$/;
+const optionsModifierEventRE = /^on:?(?:Once|Passive|Capture)$/;
 function parseName(name) {
   let options;
-  if (optionsModifierRE.test(name)) {
-    options = {};
-    let m;
-    while (m = name.match(optionsModifierRE)) {
-      name = name.slice(0, name.length - m[0].length);
-      options[m[0].toLowerCase()] = true;
-    }
+  let m;
+  while ((m = name.match(optionsModifierRE)) && !optionsModifierEventRE.test(name)) {
+    if (!options) options = {};
+    name = name.slice(0, name.length - m[1].length);
+    options[m[1].toLowerCase()] = true;
   }
   const event = name[2] === ":" ? name.slice(3) : hyphenate(name.slice(2));
   return [event, options];
@@ -40675,7 +40772,7 @@ const TransitionGroupImpl = decorate({
       if (children) {
         for (let i = 0; i < children.length; i++) {
           const child = children[i];
-          if (child.el && child.el instanceof Element) {
+          if (child.el && child.el instanceof Element && !child.el[vShowHidden]) {
             prevChildren.push(child);
             setTransitionHooks(child, resolveTransitionHooks(child, cssTransitionProps, state, instance));
             positionMap.set(child, getPosition(child.el));
@@ -44346,8 +44443,9 @@ const selectMatchingBracket = ({
   state,
   dispatch
 }) => toMatchingBracket(state, dispatch, true);
-function extendSel(target, how) {
+function extendSel(target, forward, how) {
   let selection = updateSel(target.state.selection, range => {
+    if (range.undirectional && range.head >= range.anchor != forward) range = state_dist/* EditorSelection */.OF.range(range.head, range.anchor);
     let head = how(range);
     return state_dist/* EditorSelection */.OF.range(range.anchor, head.head, head.goalColumn, head.bidiLevel || undefined, head.assoc);
   });
@@ -44356,47 +44454,59 @@ function extendSel(target, how) {
   return true;
 }
 function selectByChar(view, forward) {
-  return extendSel(view, range => view.moveByChar(range, forward));
+  return extendSel(view, forward, range => view.moveByChar(range, forward));
 }
 const selectCharLeft = view => selectByChar(view, !ltrAtCursor(view));
 const selectCharRight = view => selectByChar(view, ltrAtCursor(view));
 const selectCharForward = view => selectByChar(view, true);
 const selectCharBackward = view => selectByChar(view, false);
-const selectCharForwardLogical = target => extendSel(target, range => byCharLogical(target.state, range, true));
-const selectCharBackwardLogical = target => extendSel(target, range => byCharLogical(target.state, range, false));
+const selectCharForwardLogical = target => extendSel(target, true, range => byCharLogical(target.state, range, true));
+const selectCharBackwardLogical = target => extendSel(target, false, range => byCharLogical(target.state, range, false));
 function selectByGroup(view, forward) {
-  return extendSel(view, range => view.moveByGroup(range, forward));
+  return extendSel(view, forward, range => view.moveByGroup(range, forward));
 }
 const selectGroupLeft = view => selectByGroup(view, !ltrAtCursor(view));
 const selectGroupRight = view => selectByGroup(view, ltrAtCursor(view));
 const selectGroupForward = view => selectByGroup(view, true);
 const selectGroupBackward = view => selectByGroup(view, false);
 const selectGroupForwardWin = view => {
-  return extendSel(view, range => view.moveByChar(range, true, start => toGroupStart(view, range.head, start)));
+  return extendSel(view, true, range => view.moveByChar(range, true, start => toGroupStart(view, range.head, start)));
 };
 function selectBySubword(view, forward) {
-  return extendSel(view, range => moveBySubword(view, range, forward));
+  return extendSel(view, forward, range => moveBySubword(view, range, forward));
 }
 const selectSubwordForward = view => selectBySubword(view, true);
 const selectSubwordBackward = view => selectBySubword(view, false);
-const selectSyntaxLeft = view => extendSel(view, range => moveBySyntax(view.state, range, !ltrAtCursor(view)));
-const selectSyntaxRight = view => extendSel(view, range => moveBySyntax(view.state, range, ltrAtCursor(view)));
+const selectSyntaxLeft = view => {
+  let forward = !ltrAtCursor(view);
+  return extendSel(view, forward, range => moveBySyntax(view.state, range, forward));
+};
+const selectSyntaxRight = view => {
+  let forward = ltrAtCursor(view);
+  return extendSel(view, forward, range => moveBySyntax(view.state, range, forward));
+};
 function selectByLine(view, forward) {
-  return extendSel(view, range => view.moveVertically(range, forward));
+  return extendSel(view, forward, range => view.moveVertically(range, forward));
 }
 const selectLineUp = view => selectByLine(view, false);
 const selectLineDown = view => selectByLine(view, true);
 function selectByPage(view, forward) {
-  return extendSel(view, range => view.moveVertically(range, forward, pageInfo(view).height));
+  return extendSel(view, forward, range => view.moveVertically(range, forward, pageInfo(view).height));
 }
 const selectPageUp = view => selectByPage(view, false);
 const selectPageDown = view => selectByPage(view, true);
-const selectLineBoundaryForward = view => extendSel(view, range => moveByLineBoundary(view, range, true));
-const selectLineBoundaryBackward = view => extendSel(view, range => moveByLineBoundary(view, range, false));
-const selectLineBoundaryLeft = view => extendSel(view, range => moveByLineBoundary(view, range, !ltrAtCursor(view)));
-const selectLineBoundaryRight = view => extendSel(view, range => moveByLineBoundary(view, range, ltrAtCursor(view)));
-const selectLineStart = view => extendSel(view, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).from));
-const selectLineEnd = view => extendSel(view, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).to));
+const selectLineBoundaryForward = view => extendSel(view, true, range => moveByLineBoundary(view, range, true));
+const selectLineBoundaryBackward = view => extendSel(view, false, range => moveByLineBoundary(view, range, false));
+const selectLineBoundaryLeft = view => {
+  let forward = !ltrAtCursor(view);
+  return extendSel(view, forward, range => moveByLineBoundary(view, range, forward));
+};
+const selectLineBoundaryRight = view => {
+  let forward = ltrAtCursor(view);
+  return extendSel(view, forward, range => moveByLineBoundary(view, range, forward));
+};
+const selectLineStart = view => extendSel(view, false, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).from));
+const selectLineEnd = view => extendSel(view, true, range => state_dist/* EditorSelection */.OF.cursor(view.lineBlockAt(range.head).to));
 const cursorDocStart = ({
   state,
   dispatch
@@ -48189,7 +48299,7 @@ class AMIWebApp {
       },
       vue: {
         Vue: vue_runtime_esm_bundler_namespaceObject,
-        version: version
+        version: (/* inlined export .version */"3.5.39")
       },
       bootstrap: {
         Bootstrap: null,
