@@ -11890,7 +11890,7 @@ function nextClusterBreak(str, pos, includeExtending) {
   return pos;
 }
 function prevClusterBreak(str, pos, includeExtending) {
-  while (pos > 0) {
+  while (pos > 1) {
     let found = nextClusterBreak(str, pos - 2, includeExtending);
     if (found < pos) return found;
     pos--;
@@ -16936,6 +16936,7 @@ class TileUpdate {
           }
           pendingLineAttrs = null;
         }
+        markCount = active.length;
       }
     });
     this.openWidget = openEnd > markCount;
